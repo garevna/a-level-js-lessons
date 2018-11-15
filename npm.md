@@ -213,7 +213,19 @@ npm   будет добавлять соответствующие записи 
 
 ***
 ### <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" width="20"/> link
-###### Связывание пакетов
+###### Создание символических ссылок
+
+1. Глобальная символическая ссылка
+
+Когда вы запускаете `npm link` в корневой папке проекта, **`npm`** создает символическую ссылку из вашего каталога **_`global node_modules`_** в папку проекта
+
+###### **`global node_modules`** представляет собой специальную папку, в которой хранятся все глобально установленные модули
+
+    npm install -g
+
+Вы можете найти путь к вашему глобальному каталогу `node_modules`, запустив 
+
+    npm root -g
 
 :coffee:
 
@@ -237,6 +249,10 @@ npm   будет добавлять соответствующие записи 
 
     npm unlink images
 
+
+```
+ls -al $(npm root -g)
+```
 ***
 ## <img src="https://lh5.googleusercontent.com/2FfCuZPJhm_n2X-WXG_jfSFI-KLNUNs2_2FknRMEsD0hZDqLFprSadHU0HWXmHj74VljRiCJ6grDmpMZt-05vjwouVLO_ZZ65F1N_P28hyVzQWn7eMAfq2mWieGiDOxPrNUpaeFHvy8fcQc" width="50"/> package-lock.json
 
