@@ -253,6 +253,6 @@
 
 * [:notebook: **Git Bush**](Git-Bush)
 * [:notebook: **_localhost_**](localhost)
-* [Коды символов](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
+* [:link: **_Коды символов_**](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
 ***
 ###### [:open_file_folder: ECMAScript](ECMAScript)
