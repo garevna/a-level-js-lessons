@@ -178,6 +178,7 @@
 * [Размеры и прокрутка элемента](scroll)
 * [let | const](let-const)
 * [async | await](async-await)
+* [Тесты](https://garevna.github.io/js-quiz/#async%20function)
 * [API](API)
 * [REST | HATEOAS](REST)
 * [💼 Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeJd1VfRPKOkcZoqcybhS9u53MN2i55pTAejoRAgKtOEEVBPA/viewform)
