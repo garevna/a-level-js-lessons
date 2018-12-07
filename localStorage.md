@@ -125,6 +125,7 @@ Storage.prototype.getItemList = function () {
 Это событие может быть перехвачено объектом `window`, если "повесить" прослушивателя события **_`storage`_**:
 ```javascript
 window.addEventListener( 'storage', function(e) {  
-    console.log( 'localStorage content was changed' )
+    console.log( 'localStorage was changed from outside' )
 })
 ```
+Повесьте обработчика и измените содержимое localStorage в консоли
