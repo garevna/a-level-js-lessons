@@ -117,3 +117,14 @@ Storage.prototype.getItemList = function () {
 <img src="https://lh4.googleusercontent.com/7xyx1vvwXZw0F1hQx7dR3HUca227YXbz5ScaTplal2XqZxsVeGT_OIb-JQomW5Ao0ZVqQSeQvdeUBShrPB4_yRioGo_0MnYiu9GU7WiXvd-2-VyiO4Z-IcFhrogdPtz7JM10SQbKg_OU7gA" width="580"/>
 
 ###### Как видите, мы можем расширять функциональность объекта  localStorage
+
+## :mortar_board: Events
+
+При изменении содержимого `localStorage` в браузере генерируется событие  **_`storage`_**
+
+Это событие может быть перехвачено объектом `window`, если "повесить" прослушивателя события **_`storage`_**:
+```javascript
+window.addEventListener( 'storage', function(e) {  
+    console.log( 'localStorage content was changed' )
+})
+```
