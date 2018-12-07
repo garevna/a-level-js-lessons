@@ -152,7 +152,6 @@
 * [CORS](CORS)
 * [cookie](https://docs.google.com/forms/d/e/1FAIpQLSfFS3gfvEDWkj5qU_E9U0LBi3JkHFuqUf44ZeXi9acM7ClJlw/viewform)
 * [:octocat: localStorage](localStorage)
-* [localStorage](https://docs.google.com/forms/d/e/1FAIpQLScGYFPKo9iDtUD52-iMG3AfokQrI0NP2G96nHsCTr_A4EOZww/viewform)
 * [:briefcase: localStorage](https://garevna.github.io/js-quiz/#localStorage)
 * [:briefcase: Homework](hw-09)
 
