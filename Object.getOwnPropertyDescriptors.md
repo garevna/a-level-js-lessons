@@ -1,3 +1,12 @@
+###### <a href="Object.assign">Object.assign()</a>
+###### <a href="">Object.create()</a>
+###### <a href="Object.defineProperty">Object.defineProperty()</a>
+###### <a href="Object.defineProperties">Object.defineProperties()</a>
+###### <a href="Object.entries"></a>Object.entries()
+###### <a href="">Object.freeze()</a>
+###### <a href="Object.getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor()</a>
+###### <a href="Object.getOwnPropertyDescriptors">Object.getOwnPropertyDescriptors()</a>
+***
 ## :mortar_board: Object.getOwnPropertyDescriptors()
 ###### ES8 ( 2017 )
 Получает объект<br/>
@@ -25,3 +34,16 @@ Object.getOwnPropertyDescriptors( obj )
   ► type: {value: "circle", writable: true, enumerable: true, configurable: true}
   ► __proto__: Object
 ```
+***
+###### <a href="Object.getOwnPropertyNames">Object.getOwnPropertyNames()</a>
+###### <a href="">Object.getOwnPropertySymbols()</a>
+###### <a href="">Object.getPrototypeOf()</a>
+###### <a href="">Object.is()</a>
+###### <a href="">Object.isExtensible()</a>
+###### <a href="">Object.isFrozen()</a>
+###### <a href="">Object.isSealed()</a>
+###### <a href="Object.keys">Object.keys()</a>
+###### <a href="">Object.preventExtensions()</a>
+###### <a href="">Object.seal()</a>
+###### <a href="">Object.setPrototypeOf()</a>
+###### <a href="Object.values">Object.values()</a>
