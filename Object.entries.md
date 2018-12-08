@@ -1,4 +1,3 @@
-<a name="top"></a>
 # :mortar_board: Статические методы конструктора  Object
 ###### :radio_button: <a href="Object.assign">Object.assign()</a>
 ###### :radio_button: <a href="">Object.create()</a>
