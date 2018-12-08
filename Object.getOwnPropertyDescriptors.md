@@ -1,3 +1,4 @@
+# :mortar_board: Статические методы конструктора  Object
 ###### <a href="Object.assign">Object.assign()</a>
 ###### <a href="">Object.create()</a>
 ###### <a href="Object.defineProperty">Object.defineProperty()</a>
