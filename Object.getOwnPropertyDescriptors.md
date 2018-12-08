@@ -6,7 +6,6 @@
 ###### :radio_button: <a href="Object.entries">Object.entries()</a>
 ###### :radio_button: <a href="">Object.freeze()</a>
 ###### :radio_button: <a href="Object.getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor()</a>
-###### :radio_button: <a href="Object.getOwnPropertyDescriptors">Object.getOwnPropertyDescriptors()</a>
 ***
 ## :mortar_board: Object.getOwnPropertyDescriptors()
 ###### ES8 ( 2017 )
