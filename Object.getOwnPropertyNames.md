@@ -6,7 +6,7 @@
 | ✅ Object.assign() |  [**`Object.defineProperty()`**](#mortar_board-objectdefineproperty) |
 | ✅ Object.create() | ✅ Object.defineProperties() |
 | Object.freeze() | [**`Object.getOwnPropertyDescriptor()`**](#mortar_board-objectgetownpropertydescriptor) |
-| Object.is() | [**`Object.getOwnPropertyNames()`**](#objectgetownpropertynames-) |
+| Object.is() | [**`Object.getOwnPropertyNames()`**](Object.getOwnPropertyNames) |
 | Object.isExtensible() | Object.getOwnPropertySymbols() |
 | Object.isFrozen() | Object.getPrototypeOf() |
 | Object.isSealed() | [**`Object.keys()`**](#objectkeys) |
