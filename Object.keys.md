@@ -16,8 +16,9 @@
 ###### :radio_button: <a href="">Object.isSealed()</a>
 ***
 ## :mortar_board: Object.keys()
-> ###### возвращает массив всех **_собственных перечислимых_** свойств экземпляра
-> ###### аргумент - ссылка на экземпляр
+возвращает массив всех **_собственных перечислимых_** свойств экземпляра
+
+> аргумент - ссылка на экземпляр
 :coffee:
 ```javascript
 var Human = function () {
@@ -32,12 +33,12 @@ Human.prototype.setSpeciality = function ( spec ) {
 
 var man = new Human ( null )
 ```
-:coffee: <code>Добавим в прототип **Human** новое свойство **_employed_**:</code>
+:coffee: Добавим в прототип **Human** новое свойство **_employed_**:
 ```javascript
 Human.prototype.employed = false
 console.log ( man.employed )  // false
 ```    
-:coffee: <code>выведем в консоль собственные перечислимые свойства экземпляра  **man**</code>
+:coffee: выведем в консоль собственные перечислимые свойства экземпляра  **man**
 ```javascript
 console.log ( Object.keys ( man ) )
 ```
@@ -45,7 +46,7 @@ console.log ( Object.keys ( man ) )
 ```console
 (3) [ "name", "age", "speciality" ]
 ```
-:coffee: <code>выведем перечислимые свойства прототипа:</code>
+:coffee: выведем перечислимые свойства прототипа:
 ```javascript
 console.log ( Object.keys ( Human.prototype ) )
 ```
@@ -53,7 +54,7 @@ console.log ( Object.keys ( Human.prototype ) )
 ```console
 (2) [ "setSpeciality", "employed" ]
 ```
-:coffee: <code>Выполним присваивание:</code>
+:coffee: Выполним присваивание:
 ```javascript
 man.employed = true
 console.log ( Object.keys ( man ) )
@@ -62,7 +63,7 @@ console.log ( Object.keys ( man ) )
 ```console
 (4) [ "name", "age", "speciality", "employed" ]
 ```
-> <code>у экземпляра **man** появилось собственное свойство  **_employed_**, но у прототипа и экземпляра это совершенно различные свойства:</code>
+у экземпляра **man** появилось собственное свойство  **_employed_**, но у прототипа и экземпляра это совершенно различные свойства:
 ```javascript
 console.log ( man.employed )           // true
 console.log ( man.__proto__.employed ) // false
