@@ -211,13 +211,47 @@ Object.defineProperty ( sample, "operation", {
 |-|
 
 ## :mortar_board: Object.defineProperties()
-```javascript
+###### Можно добавить объекту сразу несколько свойств с дескрипторами
+###### Создадим в разметке новый элемент   svg
+```html
+<body>
+    <svg width="400" height="400" 
+         style="border: 1px dotted;"/>
+    </svg>
+</body>
 ```
+###### и добавим сразу два свойства объекту **sample** с помощью метода **_Object.defineProperties()_**:
+```javascript
+Object.defineProperties ( sample, {
+    canvas: {
+        value: document.querySelector ( "svg" ),
+        writable: false,
+        configurable: false,
+        enumerable: false
+    },
+    owner: {
+        get: () => this.owner,
+        set: newOwner => this.owner = newOwner
+    }
+})
+```
+<img src="https://lh3.googleusercontent.com/e2VuWmeLvjOpFj4NoiZN93QXyrZUgr8S8cSxUDvPvaq7FWQEngz0jNtM63z70TOjow4YGiLMQ_a2_77Q6id0Lk93kpqm4MQJKWBzzj1jT-x8jkAKmisADDgnsMuo7F3zc_6yxf-z5jKG0mY" width="700"/>
 
 | [:arrow_double_up:](#top) |
 |-|
 
 ## :mortar_board: Object.assign()
+###### Метод копирует значения всех собственных перечислимых свойств 
+###### из одного или более исходных объектов  `sources`  в целевой объект `target`
+###### Возвращает целевой объект `target`
+```javascript
+Object.assign ( target, ...sources )
+```
+:warning: Копируются только **собственные перечислимые** свойства
+
+> `Object.assign` осуществляет неглубокое копирование
+
+> Если свойства исходного объекта являются массивами или объектами, то в целевой объект будут помещены ссылки на соответствующие свойства исходного объекта
 ```javascript
 ```
 
