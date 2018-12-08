@@ -68,7 +68,6 @@ console.log ( man.employed )           // true
 console.log ( man.__proto__.employed ) // false
 ```
 ***
-###### :radio_button: <a href="Object.keys">Object.keys()</a>
 ###### :radio_button: <a href="">Object.preventExtensions()</a>
 ###### :radio_button: <a href="">Object.seal()</a>
 ###### :radio_button: <a href="">Object.setPrototypeOf()</a>
