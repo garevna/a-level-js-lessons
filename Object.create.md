@@ -300,6 +300,24 @@ console.log (
 ```
 <img src="https://lh4.googleusercontent.com/2yS6OUuP93Plj6Fakv-9ZIO_vcEgDYZr3w_qCvL_BESD2DMtRE5wT1QPFA-REI0GtSxOUqT0ToyEl2BVADmn_ha1Srvr4sJCEdIsRWy3qKSqaplxmfnsoVIqazjGQL4dMWQCInGa1OiT9UU" width="580"/>
 
+Обратите внимание, что ссылка на конструктор задана в явном виде:
+```javascript
+this.__proto__.constructor = Dishes
+```
+Это необходимо потому, что после выполнения присваивания  
+```javascript
+this.__proto__ = new Kitchenware ()  
+```
+имя конструктора прототипа будет  **_Kitchenware_**, а не  **_Dishes_**
+
+Из-за этого мы получили бы в консоли вот такую картинку:
+
+<img src="https://lh5.googleusercontent.com/4dTD4u22uMaShQ2MIj5HqFFlhAQq4JioKL1H9ZdcShLOqIHdVQE76Hjdzzesdj5opetDFiu93XNefBJgNw7G79j6gwEepV_elF621RIHoBl9_YxTVdrbHSo5bbLlWLO6xNWdQVnfOCu_Hsk" width="300"/>
+
+Аналогично мы явно указываем ссылку на функцию-конструктор чашки:
+```javascript
+this.__proto__.constructor = Cup
+```
 ***
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
 ###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
