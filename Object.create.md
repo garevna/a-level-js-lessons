@@ -152,8 +152,153 @@ SuperClass.call ( this )
 ```
 мы передаем ему контекст объекта **_SubClass_**
 
-######
+###### Результат в консоли:
 <img src="https://lh4.googleusercontent.com/vcps-4BeqX1JkOoOAOPJr82l6T9KExwOvfmuguK2nlkGesPz8LUYIX9qyLPI3ZDyHsAtxystJKAvUVY-EeIBQWVxmg77oiEUNUnqMuST214tak36uuCH9DTw6szNi9h8K2Y_LvtZlcLOQDU" width="400"/>
+
+###### :coffee: :six:
+Объявляем конструктор класса:
+```javascript
+function Dishes ( type ) {
+    this.clean = true
+    console.log ( "Конструктор Dishes создал экземпляр посуды: \n", this )
+}
+```
+Создаем свойства и методы прототипа:
+```javascript
+Dishes.prototype.type = "Кухонная утварь"
+
+Dishes.prototype.wash = function () {
+    this.clean = true
+    console.info ( 'Посуда вымыта' )
+}
+Dishes.prototype.use = function () {
+    this.clean = false
+    console.info ( 'Посуда использована, она грязная' )
+}
+```
+<img src="https://lh5.googleusercontent.com/9emXpphmWYWZqJS7ZQb86-2GZSlQWdBLmsF5dG89rKEGBEnAiw1nOMc23_Xkw1hcOvroeW42hGJjHuMrLvseMdbGGJ9mQCXk4njOXuxr5rVqTOcDIg7kYxkxasy4IU4ZjO2AWl_Ic36_o68" width="400"/>
+
+Теперь создадим конструктор класса **Cup**:
+```javascript
+function Cup ( color ) {
+    this.type = "чашка"
+    this.color = color || "синяя"
+}
+```
+Нужно сделать так, класс  **Cup**  был подклассом  класса   **Dishes**
+
+Используем прототип класса  **Dishes**:
+```javascript
+Cup.prototype = Object.create ( Dishes.prototype )
+```
+<img src="https://lh6.googleusercontent.com/LoDNDwWv6NcHOkzhRvqrertyPAvaUik7KpS4rwNj750jXYNqp1q31KqbqzssHgPWTuGZ58OwjmkasVaIu8cfYKHdqTsxs3HiTv4CpZkShQRekiooP_bk0yNfzU-CSvE8dViYsaP4ZRTCTH8" width="500"/>
+
+Для того, чтобы класс **Cup**  унаследовал собственные перечислимые свойства родительского класса **Dishes**, вызовем конструктор класса **Dishes** с передачей ему контекста  **Cup._prototype_**:
+```javascript
+Dishes.call ( Cup.prototype )
+```
+<img src="https://lh3.googleusercontent.com/GUOR-CN9oxPelhTqYSVOm4Ua-bd4dhkExcV9Zodbx1AewdZD-kVUj4xRZhkboUQRwhMZukh2CcgNBGr7zBW1xbgYRpNt74ZvZvgwIeIQ-oVHewFvhind_dAmhDi_zaRsBp0V1cBIUdVS2ig" width="320"/>
+
+Теперь наш конструктор класса   **Cup**  унаследовал свойства и методы  класса  **Dishes**  по созданной нами цепочке прототипов:
+
+Прототип  **Cup**  →  **Dishes**  →  Прототип  **Dishes**  →  Прототип **Object**
+
+Создадим экземпляр класса  Cup:
+```javascript
+var redCup = new Cup ( "красная" )
+```
+<img src="https://lh6.googleusercontent.com/AiRyG_GGd8w5aekMVsfDG_sgkeTL5fXOlXr23A63Gzg9LXQrnmeuuT047146pu7BXREiAbuxgV1pxQ9jFTchTLFHEy7UUiqzypvur_zBk8hpZn6p2YytI2K5w3BjPVGB-e6yjv8LM2ONjF8" width="320"/>
+
+Итак, мы построили цепочку прототипов
+
+Для проверки, что наш экземпляр  **redCup**  принадлежит  одновременно классам  **_Cup_**  и  **_Dishes_**, нужно познакомиться с оператором  **`instanceof`**
+
+### :mortar_board: instanceof
+
+С помощью оператора  **`instanceof`**  строится логическое выражение, которое принимает значение **_`true`_**, если объект является экземпляром класса:
+```javascript
+[объект]  instanceof  [класс]
+```
+Следующие логические выражения будут иметь значение true:
+```javascript
+redCup instanceof Cup
+redCup instanceof Dishes
+greenCup instanceof Object
+```
+поскольку  **redCup** является одновременно экземпляром класса  **_Cup_** и  класса  **_Dishes_**
+
+    Проверьте самостоятельно в консоли
+
+Теперь проверим, как работает наша "машинка"
+
+Мы уже создали экземпляр **redCup**
+
+Давайте используем чашку, а потом помоем ее
+```javascript
+redCup.use ()
+```
+выдаст в консоль сообщение: **_Посуда использована, она грязная_**
+```javascript
+redCup.wash ()
+```
+выдаст в консоль сообщение:  **_Посуда вымыта_**
+
+###### :coffee: :seven: `__proto__`  vs  `Object.create()`
+Аналогичный результат можно получить значительно проще, используя свойство **`__proto__`**
+
+Сейчас мы усложним задачу, удлинив цепочку прототипов еще одним классом - **_Kitchenware_**
+
+Создадим конструктор класса  **_Kitchenware_**:
+```javascript
+var Kitchenware = function () {
+    this.className = "Кухонная утварь"
+    this.__proto__.constructor = Kitchenware
+}
+```
+Теперь создадим конструктор класса  **_Dishes_**, 
+
+и используем конструктор **_Kitchenware_** 
+
+для создания прототипа экземпляров класса  **_Dishes_**:
+```javascript
+var Dishes = function () {
+    this.__proto__ = new Kitchenware ()
+    this.__proto__.constructor = Dishes
+    this.className = "Посуда"
+}
+```
+Теперь создадим конструктор класса  **_Cup_**, 
+
+и используем конструктор **_Dishes_** 
+
+для создания прототипа экземпляров класса  **_Cup_**:
+```javascript
+var Cup = function ( $color ) {
+    this.__proto__ = new Dishes ()
+    this.__proto__.constructor = Cup
+    this.className = "Чашка"
+    this.color = $color || "белая"
+}
+```
+Теперь создадим экземпляр  **yellowCup**  класса  **_Cup_**  и выведем его в консоль:
+```javascript
+var yellowCup = new Cup (  "желтая" )
+console.log ( '*** cup: ', yellowCup )
+```
+А также выведем в консоль цепочку прототипов, используя метод  `Object.getPrototypeOf()`:
+```javascript
+console.log (
+    'yellowCup prototype: ',
+    Object.getPrototypeOf ( yellowCup )
+)
+console.log (
+    'yellowCup prototype of prototype: ', 
+    Object.getPrototypeOf (
+        Object.getPrototypeOf ( yellowCup )
+    )
+)
+```
+<img src="https://lh4.googleusercontent.com/2yS6OUuP93Plj6Fakv-9ZIO_vcEgDYZr3w_qCvL_BESD2DMtRE5wT1QPFA-REI0GtSxOUqT0ToyEl2BVADmn_ha1Srvr4sJCEdIsRWy3qKSqaplxmfnsoVIqazjGQL4dMWQCInGa1OiT9UU" width="580"/>
 
 ***
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
