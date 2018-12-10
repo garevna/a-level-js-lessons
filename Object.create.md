@@ -1,6 +1,14 @@
 # :mortar_board: Статические методы конструктора  Object
 ###### :radio_button: <a href="Object.assign">Object.assign()</a>
 ***
+
+### :mortar_board: instanceof
+
+С помощью оператора  **`instanceof`**  строится логическое выражение, которое принимает значение **_`true`_**, если объект является экземпляром класса:
+```javascript
+[объект]  instanceof  [класс]
+```
+
 ## :mortar_board: Object.create()
 ###### Этот метод использовался для доступа к прототипу объекта до того, как в спецификации ES6 ( 2015 ) появилось свойство **`__proto__`**
 
@@ -169,37 +177,38 @@ function SubClass () {
      this.name = "Дочерний класс"
      this.type = "SubClass"
 }
+
+// Конструктор SuperClass вызывается 
+// в конструкторе SubClass 
+// как обычная функция,
+// однако в контексте экземпляра 
+// ( sample )
 ```
-Конструктор **_SuperClass_** вызывается в конструкторе **_SubClass_** как обычная функция, 
-
-однако в контексте экземпляра ( **sample** )
-
 ```javascript
 var sample = new SubClass()
 ```
 ###### Результат в консоли:
 <img src="https://lh4.googleusercontent.com/vcps-4BeqX1JkOoOAOPJr82l6T9KExwOvfmuguK2nlkGesPz8LUYIX9qyLPI3ZDyHsAtxystJKAvUVY-EeIBQWVxmg77oiEUNUnqMuST214tak36uuCH9DTw6szNi9h8K2Y_LvtZlcLOQDU" width="400"/>
 
-Обратите внимание, что SuperClass
-
+Обратите внимание, что **_SuperClass_** передал унаследованные свойства экземпляру, но при этом сам не появился в цепочке наследования:
 ```javascript
 sample instanceof SubClass    // true
 sample instanceof SuperClass  // false
 sample instanceof Object      // true
 ```
+В данном примере **_SuperClass_** выполняет функцию декоратора
+
 ***
 ###### :coffee: :six:
-Объявляем конструктор класса:
+Объявляем конструктор класса **_Dishes_**:
 ```javascript
 function Dishes ( type ) {
-    this.clean = true
+    this.type = "Посуда"
     console.log ( "Конструктор Dishes создал экземпляр посуды: \n", this )
 }
 ```
 Создаем свойства и методы прототипа:
 ```javascript
-Dishes.prototype.type = "Кухонная утварь"
-
 Dishes.prototype.wash = function () {
     this.clean = true
     console.info ( 'Посуда вымыта' )
@@ -209,61 +218,52 @@ Dishes.prototype.use = function () {
     console.info ( 'Посуда использована, она грязная' )
 }
 ```
-<img src="https://lh5.googleusercontent.com/9emXpphmWYWZqJS7ZQb86-2GZSlQWdBLmsF5dG89rKEGBEnAiw1nOMc23_Xkw1hcOvroeW42hGJjHuMrLvseMdbGGJ9mQCXk4njOXuxr5rVqTOcDIg7kYxkxasy4IU4ZjO2AWl_Ic36_o68" width="400"/>
-
-Теперь создадим конструктор класса **Cup**:
+Теперь создадим конструктор класса **_Cup_**:
 ```javascript
 function Cup ( color ) {
     this.type = "чашка"
     this.color = color || "синяя"
 }
 ```
-Нужно сделать так, класс  **Cup**  был подклассом  класса   **Dishes**
+Нужно сделать так, класс  **_Cup_**  был подклассом  класса   **_Dishes_**
 
-Используем прототип класса  **Dishes**:
+Используем прототип класса  **_Dishes_**:
 ```javascript
 Cup.prototype = Object.create ( Dishes.prototype )
 ```
-<img src="https://lh6.googleusercontent.com/LoDNDwWv6NcHOkzhRvqrertyPAvaUik7KpS4rwNj750jXYNqp1q31KqbqzssHgPWTuGZ58OwjmkasVaIu8cfYKHdqTsxs3HiTv4CpZkShQRekiooP_bk0yNfzU-CSvE8dViYsaP4ZRTCTH8" width="500"/>
-
-Для того, чтобы класс **Cup**  унаследовал собственные перечислимые свойства родительского класса **Dishes**, вызовем конструктор класса **Dishes** с передачей ему контекста  **Cup._prototype_**:
+Для того, чтобы класс **_Cup_**  унаследовал<br/>
+собственные перечислимые свойства родительского класса **_Dishes_**,<br/>
+вызовем конструктор класса **_Dishes_**<br/>
+с передачей ему контекста  **_Cup_.`prototype`**:
 ```javascript
 Dishes.call ( Cup.prototype )
 ```
-<img src="https://lh3.googleusercontent.com/GUOR-CN9oxPelhTqYSVOm4Ua-bd4dhkExcV9Zodbx1AewdZD-kVUj4xRZhkboUQRwhMZukh2CcgNBGr7zBW1xbgYRpNt74ZvZvgwIeIQ-oVHewFvhind_dAmhDi_zaRsBp0V1cBIUdVS2ig" width="320"/>
-
-Теперь наш конструктор класса   **Cup**  унаследовал свойства и методы  класса  **Dishes**  по созданной нами цепочке прототипов:
-
-Прототип  **Cup**  →  **Dishes**  →  Прототип  **Dishes**  →  Прототип **Object**
-
-Создадим экземпляр класса  Cup:
+Создадим экземпляр класса **_Cup_**:
 ```javascript
 var redCup = new Cup ( "красная" )
 ```
-<img src="https://lh6.googleusercontent.com/AiRyG_GGd8w5aekMVsfDG_sgkeTL5fXOlXr23A63Gzg9LXQrnmeuuT047146pu7BXREiAbuxgV1pxQ9jFTchTLFHEy7UUiqzypvur_zBk8hpZn6p2YytI2K5w3BjPVGB-e6yjv8LM2ONjF8" width="320"/>
-
+###### redCup
+```console
+▼ Cup {type: "чашка", color: "красная", clean: true}
+    clean: true
+    color: "красная"
+    type: "чашка"
+  ▼ __proto__: Dishes
+        type: "Посуда"
+      ▼ __proto__:
+          ► use: ƒ ()
+          ► wash: ƒ ()
+          ► constructor: ƒ Dishes( type )
+          ► __proto__: Object
+```
 Итак, мы построили цепочку прототипов
 
-***
-
-Для проверки, что наш экземпляр  **redCup**  принадлежит  одновременно классам  **_Cup_**  и  **_Dishes_**, нужно познакомиться с оператором  **`instanceof`**
-
-### :mortar_board: instanceof
-
-С помощью оператора  **`instanceof`**  строится логическое выражение, которое принимает значение **_`true`_**, если объект является экземпляром класса:
+Для проверки, что наш экземпляр  **redCup**  принадлежит  одновременно классам  **_Cup_**  и  **_Dishes_**, воспользуемся оператором  **`instanceof`**:
 ```javascript
-[объект]  instanceof  [класс]
+redCup instanceof Cup        // true
+redCup instanceof Dishes     // true
+greenCup instanceof Object   // true
 ```
-Следующие логические выражения будут иметь значение true:
-```javascript
-redCup instanceof Cup
-redCup instanceof Dishes
-greenCup instanceof Object
-```
-поскольку  **redCup** является одновременно экземпляром класса  **_Cup_** и  класса  **_Dishes_**
-
-    Проверьте самостоятельно в консоли
-
 Теперь проверим, как работает наша "машинка"
 
 Мы уже создали экземпляр **redCup**
@@ -355,6 +355,15 @@ this.__proto__ = new Kitchenware ()
 ```javascript
 this.__proto__.constructor = Cup
 ```
+Однако воспользуемся теперь оператором **`instanceof`**
+```javascript
+yellowCup instanceof Kitchenware  // true
+yellowCup instanceof Dishes       // false
+yellowCup instanceof Cup          // false
+yellowCup instanceof Object       // true
+```
+Как мы видим, хотя в консоли цепочка прототипов выглядит вполне прилично,<br/>
+на самом деле произошла передача свойств вместо наследования 
 ***
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
 ###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
