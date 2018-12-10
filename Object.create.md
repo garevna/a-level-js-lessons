@@ -37,20 +37,20 @@ var circle = Object.create ( new Figure ( "circle" ), {
     x: {
         value: undefined, 
         writable: true, 
-        configurable: true, 
-        enumerable: true
+        configurable: false, 
+        enumerable: false
     },
     y: {
         value: undefined, 
         writable: true, 
-        configurable: true, 
-        enumerable: true
+        configurable: false, 
+        enumerable: false
     },
     radius: {
         value: undefined, 
         writable: true, 
-        configurable: true, 
-        enumerable: true
+        configurable: false, 
+        enumerable: false
     }
 })
 ```
