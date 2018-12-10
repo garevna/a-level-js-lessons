@@ -1,8 +1,7 @@
 # :mortar_board: Статические методы конструктора  Object
 ###### :radio_button: <a href="Object.assign">Object.assign()</a>
-###### :radio_button: <a href="Object.create">Object.create()</a>
-
 ***
+## :mortar_board: Object.create()
 ###### Этот метод использовался для доступа к прототипу объекта до того, как в спецификации ES6 ( 2015 ) появилось свойство **`__proto__`**
 
 Создает экземпляр объекта на основе прототипа
@@ -11,7 +10,7 @@
 
 Вторым ( опциональным ) аргументом может быть объект-дескриптор свойств создаваемого экземпляра
 
-:coffee: :one:
+###### :coffee: :one:
 ```javascript
 var figure = {
     className: "Figure"
@@ -22,13 +21,19 @@ var circle = Object.create ( figure )
 ```javascript
 var emptyObject = Object.create ( null )
 ```
-Метод Object.create () позволяет задавать дескрипторы свойств объекта 
+***
+###### :coffee: :two:
+Метод `Object.create()` позволяет задавать дескрипторы свойств объекта 
 
-( как это делает метод Object.defineProperty, который добавляет свойство в объект )
-
-:coffee: :two:
+( как это делает метод `Object.defineProperty()`, который добавляет свойство в объект )
 ```javascript
-var circle = Object.create ( figure, {
+function Figure ( figType ) {
+    this.type = figType
+    console.log ( "Instance of Figure created" )
+}
+Figure.prototype.className = "Figure"
+
+var circle = Object.create ( new Figure ( "circle" ), {
     x: {
         value: undefined, 
         writable: true, 
@@ -49,6 +54,7 @@ var circle = Object.create ( figure, {
     }
 })
 ```
+***
 ###### :coffee: :three:
 Создадим экземпляр объекта **proto**:
 ```javascript
@@ -95,6 +101,7 @@ Creator.call ( obj,  "sample",  75 )
 
 <img src="https://lh5.googleusercontent.com/tZ41G5MsrY2Y2XdD9QWEhHKGBdML2mKPKuYs18HjbLu1vScqaZlSy4udqTRyVvabwuv5q4Iyi9RQec_LAejFuYEreIgbhKpUsrU31J3h3Qxyl4DKbZyK7lEzuVUMPXcuZs3T6GpYa6xNc-I" width="300"/>
 
+***
 ###### :coffee: :four:
 ```javascript
 var ppl = {
@@ -128,6 +135,7 @@ var new_ppl = Object.create ( ppl.__proto__ )
 
 Но прототип экземпляра  **ppl**  скопирован полностью
 
+***
 ###### :coffee: :five:
 Объявим конструктор класса **_SuperClass_**
 ```javascript
@@ -155,6 +163,7 @@ SuperClass.call ( this )
 ###### Результат в консоли:
 <img src="https://lh4.googleusercontent.com/vcps-4BeqX1JkOoOAOPJr82l6T9KExwOvfmuguK2nlkGesPz8LUYIX9qyLPI3ZDyHsAtxystJKAvUVY-EeIBQWVxmg77oiEUNUnqMuST214tak36uuCH9DTw6szNi9h8K2Y_LvtZlcLOQDU" width="400"/>
 
+***
 ###### :coffee: :six:
 Объявляем конструктор класса:
 ```javascript
@@ -211,6 +220,8 @@ var redCup = new Cup ( "красная" )
 
 Итак, мы построили цепочку прототипов
 
+***
+
 Для проверки, что наш экземпляр  **redCup**  принадлежит  одновременно классам  **_Cup_**  и  **_Dishes_**, нужно познакомиться с оператором  **`instanceof`**
 
 ### :mortar_board: instanceof
@@ -242,6 +253,8 @@ redCup.use ()
 redCup.wash ()
 ```
 выдаст в консоль сообщение:  **_Посуда вымыта_**
+
+***
 
 ###### :coffee: :seven: `__proto__`  vs  `Object.create()`
 Аналогичный результат можно получить значительно проще, используя свойство **`__proto__`**
@@ -312,7 +325,7 @@ this.__proto__ = new Kitchenware ()
 
 Из-за этого мы получили бы в консоли вот такую картинку:
 
-<img src="https://lh5.googleusercontent.com/4dTD4u22uMaShQ2MIj5HqFFlhAQq4JioKL1H9ZdcShLOqIHdVQE76Hjdzzesdj5opetDFiu93XNefBJgNw7G79j6gwEepV_elF621RIHoBl9_YxTVdrbHSo5bbLlWLO6xNWdQVnfOCu_Hsk" width="300"/>
+<img src="https://lh5.googleusercontent.com/4dTD4u22uMaShQ2MIj5HqFFlhAQq4JioKL1H9ZdcShLOqIHdVQE76Hjdzzesdj5opetDFiu93XNefBJgNw7G79j6gwEepV_elF621RIHoBl9_YxTVdrbHSo5bbLlWLO6xNWdQVnfOCu_Hsk" width="500"/>
 
 Аналогично мы явно указываем ссылку на функцию-конструктор чашки:
 ```javascript
