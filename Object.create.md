@@ -119,38 +119,38 @@ Creator.call ( obj,  "sample",  75 )
 
 ***
 ###### :coffee: :four:
+Создадим конструктор **_Human_** и воспользуемся методом `Object.create()` для создания нового экземпляра  **worker**:
 ```javascript
-var ppl = {
-    name: "Тимофей",
-    hobby: "футбол"
+function Human ( name = "Тимофей", hobby = "футбол" ) {
+    this.name = name,
+    this.hobby = hobby
 }
-```
-Создадим прототипные свойства экземпляра  **ppl**:
-```javascript
-ppl.__proto__.age = 20
-ppl.__proto__.job = "монтажник"
-ppl.__proto__.showProps = function () {
-    console.log (
-        "Собственные свойства: ",
-        Object.keys ( this )
-    )
-    console.log (
-        "__proto__: ",
-        Object.keys ( this.__proto__ )
-    )
+
+Human.prototype = {
+    speciality: "монтажник",
+    age: 20
 }
+
+var worker = Object.create (
+    new Human ( "Иван", "рыбалка" )
+)
 ```
-А теперь воспользуемся методом `Object.create()` для создания нового экземпляра  **new_ppl**:
+Выведем в консоль экземпляр **worker**:
+```console
+▼ {}
+  ▼ __proto__:
+        hobby: "рыбалка"
+        name: "Иван"
+      ▼ __proto__:
+            age: 20
+            speciality: "монтажник"
+          ► __proto__: Object
+```
+А теперь проверим, что **worker** является экземпляром **_Human_**
 ```javascript
-var new_ppl = Object.create ( ppl.__proto__ )
+worker instanceof Human   // true
+worker instanceof Object  // true
 ```
-###### Результат в консоли:
-<img src="https://lh6.googleusercontent.com/pYgNnh7cn2_UabMI7WzrqaRw3zmG5nuQaD07Z9_c0ogcnqZ0hHKcCvGS62dV2opTcfDKIxsbyJiuU519FhcjvuJoGTqejaR6C_Zz7hETT4X_4TJ_FgKDYcoLr4JrF9nCRyEDoSpS-qJysy8" width="400"/>
-
-У экземпляра  **new_ppl**  нет собственных свойств
-
-Но прототип экземпляра  **ppl**  скопирован полностью
-
 ***
 ###### :coffee: :five:
 Объявим конструктор класса **_SuperClass_**
@@ -170,15 +170,23 @@ function SubClass () {
      this.type = "SubClass"
 }
 ```
-Когда мы вызываем конструктор **_SuperClass_** в контексте **_SubClass_**
-```javascript
-SuperClass.call ( this )
-```
-мы передаем ему контекст объекта **_SubClass_**
+Конструктор **_SuperClass_** вызывается в конструкторе **_SubClass_** как обычная функция, 
 
+однако в контексте экземпляра ( **sample** )
+
+```javascript
+var sample = new SubClass()
+```
 ###### Результат в консоли:
 <img src="https://lh4.googleusercontent.com/vcps-4BeqX1JkOoOAOPJr82l6T9KExwOvfmuguK2nlkGesPz8LUYIX9qyLPI3ZDyHsAtxystJKAvUVY-EeIBQWVxmg77oiEUNUnqMuST214tak36uuCH9DTw6szNi9h8K2Y_LvtZlcLOQDU" width="400"/>
 
+Обратите внимание, что SuperClass
+
+```javascript
+sample instanceof SubClass    // true
+sample instanceof SuperClass  // false
+sample instanceof Object      // true
+```
 ***
 ###### :coffee: :six:
 Объявляем конструктор класса:
