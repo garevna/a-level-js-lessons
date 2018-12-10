@@ -54,6 +54,19 @@ var circle = Object.create ( new Figure ( "circle" ), {
     }
 })
 ```
+Выведем в консоль переменную **circle**: 
+```console
+▼ Figure {x: undefined, y: undefined, radius: undefined}
+    radius: undefined
+    x: undefined
+    y: undefined
+  ▼ __proto__: Figure
+        type: "circle"
+      ▼ __proto__:
+            className: "Figure"
+          ► constructor: ƒ Figure( figType )
+          ► __proto__: Object
+```
 ***
 ###### :coffee: :three:
 Создадим экземпляр объекта **proto**:
