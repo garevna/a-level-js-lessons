@@ -67,6 +67,9 @@ var circle = Object.create ( new Figure ( "circle" ), {
           ► constructor: ƒ Figure( figType )
           ► __proto__: Object
 ```
+```javascript
+circle instanceof Figure  // true
+```
 ***
 ###### :coffee: :three:
 Создадим экземпляр объекта **proto**:
