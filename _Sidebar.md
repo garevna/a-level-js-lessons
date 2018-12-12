@@ -254,7 +254,7 @@
 |-|-|-|
 
 ***
-###### [Верстка](https://github.com/garevna/wiki/wiki)
+#### [Верстка](https://github.com/garevna/wiki/wiki)
 ***
 ###### :ledger: Справочная инфо
 
