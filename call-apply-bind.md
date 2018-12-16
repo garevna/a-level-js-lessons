@@ -205,7 +205,7 @@ var sample = {
     name: "sample"
 }
 
-func ()
+func ()               // window
 func.call ( figure )  // figure
 func.call ( sample )  // sample
 ```
