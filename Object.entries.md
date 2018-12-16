@@ -1,6 +1,6 @@
 # :mortar_board: Статические методы конструктора  Object
 ###### :radio_button: <a href="Object.assign">Object.assign()</a>
-###### :radio_button: <a href="">Object.create()</a>
+###### :radio_button: <a href="Object.create">Object.create()</a>
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
 ###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
 ***
