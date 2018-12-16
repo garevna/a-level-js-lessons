@@ -74,25 +74,25 @@ target.attrs.color = "#fa0"
 <img src="https://lh6.googleusercontent.com/S2iEECu3Z_9URDjc_Pry-8fFDfqbXXZG4Cw3xkhbJRM6fgWg5cVRGlXQ9kJDLXyeOH6b7ss3fMl12js3kIaPd30vcgC_-iIcD2fkqAPzJW6NbtBC35PWJ_Y_zLSLn-6tmtjr-WS4xftSpxE" width="500"/>
 
 ***
-###### :radio_button: <a href="Object.create">Object.create()</a>
-###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
-###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
-###### :radio_button: <a href="Object.entries">Object.entries()</a>
-###### :radio_button: Object.freeze()
-###### :radio_button: <a href="Object.getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor()</a>
-###### :radio_button: <a href="Object.getOwnPropertyDescriptors">Object.getOwnPropertyDescriptors()</a>
-###### :radio_button: <a href="Object.getOwnPropertyNames">Object.getOwnPropertyNames()</a>
-###### :radio_button: Object.getOwnPropertySymbols()
-###### :radio_button: <a href="">Object.getPrototypeOf()</a>
-###### :radio_button: Object.is()
-###### :radio_button: Object.isExtensible()
-###### :radio_button: Object.isFrozen()
-###### :radio_button: Object.isSealed()
-###### :radio_button: <a href="Object.keys">Object.keys()</a>
-###### :radio_button: Object.preventExtensions()
-###### :radio_button: Object.seal()
-###### :radio_button: <a href="">Object.setPrototypeOf()</a>
-###### :radio_button: <a href="Object.values">Object.values()</a>
+* <a href="Object.create">`Object.create()`</a>
+* <a href="Object.defineProperty">`Object.defineProperty()`</a>
+* <a href="Object.defineProperties">`Object.defineProperties()`</a>
+* <a href="Object.entries">`Object.entries()`</a>
+* `Object.freeze()`
+* <a href="Object.getOwnPropertyDescriptor">`Object.getOwnPropertyDescriptor()`</a>
+* <a href="Object.getOwnPropertyDescriptors">`Object.getOwnPropertyDescriptors()`</a>
+* <a href="Object.getOwnPropertyNames">`Object.getOwnPropertyNames()`</a>
+* `Object.getOwnPropertySymbols()`
+* <a href="">`Object.getPrototypeOf()`</a>
+* `Object.is()`
+* `Object.isExtensible()`
+* `Object.isFrozen()`
+* `Object.isSealed()`
+* <a href="Object.keys">`Object.keys()`</a>
+* `Object.preventExtensions()`
+* `Object.seal()`
+* <a href="">`Object.setPrototypeOf()`</a>
+* <a href="Object.values">`Object.values()`</a>
 
 ***
 [:link: MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
