@@ -296,7 +296,50 @@ sample
 
 ## :mortar_board: bind()
 
-Можно создать новый экземпляр функции, контекст которой будет установлен жестко и уже никогда не будет изменен
+По сути, метод **`bind()`** является декоратором, поскольку он создает обертку для исходной функции
+
+Функция-wrapper, в которую "заворачивается" исходная функция, вызывает ее в нужном контексте:
+
+```javascript
+function bindContext ( func, context, args ) {
+    func.call ( context, args )
+}
+
+function sample ( message ) {
+    console.log ( `${this.name}: ${message}` )
+}
+
+var user = { name: "Фигаро" }
+
+bindContext ( sample, user, "Hello" )
+```
+Чтобы функция-wrapper возвращала новый экземпляр, немного изменим код,
+
+а так же обеспечим возможность привязки не только контекста вызова,
+
+но и аргументов:
+```javascript
+function bindContext ( func, context, props ) {
+    return function ( args ) {
+        props ? func.call ( context, props, args ) :
+                func.call ( context, args )
+    }
+}
+
+function sample ( message ) {
+    console.log ( `${this.name}: ${message}` )
+}
+
+var user = { name: "Фигаро" }
+
+var userSayHello = bindContext ( sample, user, "Hello" )
+
+var userSay = bindContext ( sample, user )
+
+userSayHello()     // Фигаро: Hello
+userSay ( "Bye" )  // Фигаро: Bye
+```
+Вот и весь механизм работы метода **`bind()`**
 
 :coffee: :three:
 ```javascript
