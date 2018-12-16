@@ -96,6 +96,8 @@
 * [Метод valueOf](valueOf)
 * [Конструктор Error](Error)
 
+***
+
 <a name="toc-6"></a>
 #### Занятие 6
 
