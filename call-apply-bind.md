@@ -206,8 +206,24 @@ var sample = {
 }
 
 func ()
-func.call ( figure )
-func.call ( sample )
+func.call ( figure )  // figure
+func.call ( sample )  // sample
 ```
-Далее могут следовать аргументы
+Далее могут следовать аргументы:
 
+```javascript
+function func () {
+    console.log ( this.name, arguments )
+}
+
+var figure = { name: "figure" }
+var sample = { name: "sample" }
+
+func.call ( figure, 9, false, "Hello" )
+func.call ( sample, 5, 1, "Bye" )
+```
+###### Результат в консоли:
+```console
+figure ► Arguments(3) [ 9, false, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
+sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
+```
