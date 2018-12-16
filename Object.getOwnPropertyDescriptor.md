@@ -4,7 +4,7 @@
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
 ###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
 ###### :radio_button: <a href="Object.entries">Object.entries()</a>
-###### :radio_button: <a href="">Object.freeze()</a>
+###### :radio_button: Object.freeze()
 ***
 ## :mortar_board: Object.getOwnPropertyDescriptor()
 Этот метод позволяет получить дескриптор собственного свойства объекта
@@ -69,15 +69,15 @@ Object.getOwnPropertyDescriptor ( newObject, "getName" )
 ***
 ###### :radio_button: <a href="Object.getOwnPropertyDescriptors">Object.getOwnPropertyDescriptors()</a>
 ###### :radio_button: <a href="Object.getOwnPropertyNames">Object.getOwnPropertyNames()</a>
-###### :radio_button: <a href="">Object.getOwnPropertySymbols()</a>
+###### :radio_button: Object.getOwnPropertySymbols()
 ###### :radio_button: <a href="">Object.getPrototypeOf()</a>
-###### :radio_button: <a href="">Object.is()</a>
-###### :radio_button: <a href="">Object.isExtensible()</a>
-###### :radio_button: <a href="">Object.isFrozen()</a>
-###### :radio_button: <a href="">Object.isSealed()</a>
+###### :radio_button: Object.is()
+###### :radio_button: Object.isExtensible()
+###### :radio_button: Object.isFrozen()
+###### :radio_button: Object.isSealed()
 ###### :radio_button: <a href="Object.keys">Object.keys()</a>
-###### :radio_button: <a href="">Object.preventExtensions()</a>
-###### :radio_button: <a href="">Object.seal()</a>
+###### :radio_button: Object.preventExtensions()
+###### :radio_button: Object.seal()>
 ###### :radio_button: <a href="">Object.setPrototypeOf()</a>
 ###### :radio_button: <a href="Object.values">Object.values()</a>
 
