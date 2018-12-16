@@ -187,7 +187,7 @@ obj.say()   // google
 Кроме этого, **_bind()_** позволяет так же жестко привязать аргументы к новому экземпляру: фактически, указанные аргументы станут постоянными для нового экземпляра функции
 
 ***
-### call()
+### :mortar_board: call()
 
 Первым обязательным аргументом метода является ссылка на объект, в контексте которого будет вызвана функция
 ```javascript
@@ -209,7 +209,7 @@ func ()               // window
 func.call ( figure )  // figure
 func.call ( sample )  // sample
 ```
-Далее могут следовать аргументы:
+Далее может следовать перечень аргументов:
 
 ```javascript
 function func () {
@@ -227,3 +227,56 @@ func.call ( sample, 5, 1, "Bye" )
 figure ► Arguments(3) [ 9, false, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
 sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
 ```
+***
+### :mortar_board: apply()
+
+Метод **_apply()_** отличается от метода **_call()_** только способом передачи аргументов - теперь их нужно передавать массивом:
+
+```javascript
+function func () {
+    console.log ( this.name, arguments )
+}
+
+var figure = { name: "figure" }
+var sample = { name: "sample" }
+
+func.apply ( figure, [ 9, false, "Hello" ] )
+func.apply ( sample, [ 5, 1, "Bye" ] )
+```
+###### Результат в консоли:
+```console
+figure ► Arguments(3) [ 9, false, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
+sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ ]
+```
+:coffee: :two:
+
+Передача массива аргументов вместо перечня их значений обеспечивает определенную гибкость, поскольку массивы передаются по ссылке, и содержимое массива может динамически обновляться от вызова к вызову:
+```javascript
+var args = [0]
+var test = ( function () {
+    var counter = 0
+    return function () {
+        args.push ( this.name )
+        args[0] = ++counter
+    }
+})()
+
+function func () {
+    this.test()
+    var args = Array.from ( arguments )
+    console.warn ( `Who was called before ${this.name} (${args.splice(0, 1)}):` ) 
+    for ( var x of args )
+        console.info ( x )
+}
+
+var figure = { name: "figure", test: test }
+var sample = { name: "sample", test: test }
+var google = { name: "google", test: test }
+
+func.apply ( figure, args )
+func.apply ( sample, args )
+func.apply ( google, args )
+```
+Вызовы функции **_func_** логируются в массиве **args**
+
+Поменяйте местами вызовы функций, или добавьте повторный вызов любой из функций - она получит в аргументах полный отчет о том, сколько раз она была вызвана до этого, и с каким контекстом
