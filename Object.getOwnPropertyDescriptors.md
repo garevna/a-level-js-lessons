@@ -1,11 +1,11 @@
 # :mortar_board: Статические методы конструктора  Object
-###### :radio_button: <a href="Object.assign">Object.assign()</a>
-###### :radio_button: <a href="Object.create">Object.create()</a>
-###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
-###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
-###### :radio_button: <a href="Object.entries">Object.entries()</a>
-###### :radio_button: Object.freeze()
-###### :radio_button: <a href="Object.getOwnPropertyDescriptor">Object.getOwnPropertyDescriptor()</a>
+* <a href="Object.assign">`Object.assign()`</a>
+* <a href="Object.create">`Object.create()`</a>
+* <a href="Object.defineProperty">`Object.defineProperty()`</a>
+* <a href="Object.defineProperties">`Object.defineProperties()`</a>
+* <a href="Object.entries">`Object.entries()`</a>
+* `Object.freeze()`
+* <a href="Object.getOwnPropertyDescriptor">`Object.getOwnPropertyDescriptor()`</a>
 ***
 ## :mortar_board: Object.getOwnPropertyDescriptors()
 ###### ES8 ( 2017 )
@@ -35,15 +35,15 @@ Object.getOwnPropertyDescriptors( obj )
   ► __proto__: Object
 ```
 ***
-###### :radio_button: <a href="Object.getOwnPropertyNames">Object.getOwnPropertyNames()</a>
-###### :radio_button: Object.getOwnPropertySymbols()
-###### :radio_button: <a href="">Object.getPrototypeOf()</a>
-###### :radio_button: Object.is()
-###### :radio_button: Object.isExtensible()
-###### :radio_button: Object.isFrozen()
-###### :radio_button: Object.isSealed()
-###### :radio_button: <a href="Object.keys">Object.keys()</a>
-###### :radio_button: Object.preventExtensions()
-###### :radio_button: Object.seal()
-###### :radio_button: <a href="">Object.setPrototypeOf()</a>
-###### :radio_button: <a href="Object.values">Object.values()</a>
+* <a href="Object.getOwnPropertyNames">`Object.getOwnPropertyNames()`</a>
+* `Object.getOwnPropertySymbols()`
+* <a href="">`Object.getPrototypeOf()`</a>
+* `Object.is()`
+* `Object.isExtensible()`
+* `Object.isFrozen()`
+* `Object.isSealed()`
+* <a href="Object.keys">`Object.keys()`</a>
+* `Object.preventExtensions()`
+* `Object.seal()`
+* <a href="">`Object.setPrototypeOf()`</a>
+* <a href="Object.values">`Object.values()`</a>
