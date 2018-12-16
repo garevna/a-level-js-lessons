@@ -74,7 +74,7 @@ target.attrs.color = "#fa0"
 <img src="https://lh6.googleusercontent.com/S2iEECu3Z_9URDjc_Pry-8fFDfqbXXZG4Cw3xkhbJRM6fgWg5cVRGlXQ9kJDLXyeOH6b7ss3fMl12js3kIaPd30vcgC_-iIcD2fkqAPzJW6NbtBC35PWJ_Y_zLSLn-6tmtjr-WS4xftSpxE" width="500"/>
 
 ***
-###### :radio_button: <a href="">Object.create()</a>
+###### :radio_button: <a href="Object.create">Object.create()</a>
 ###### :radio_button: <a href="Object.defineProperty">Object.defineProperty()</a>
 ###### :radio_button: <a href="Object.defineProperties">Object.defineProperties()</a>
 ###### :radio_button: <a href="Object.entries">Object.entries()</a>
