@@ -29,7 +29,7 @@ obj == 4
 
 Но это не означает, что мы не можем его переопределить
 
-:coffee: 1
+:coffee: :one:
 
 ```javascript
 var human = {
@@ -42,7 +42,9 @@ var human = {
 
 console.info ( human + "!" ) // Ivan: 25!
 ```
-:coffee: 2
+***
+
+:coffee: :two:
 
 Конечно, так делать не стоит, но все-таки интересно :wink:
 
@@ -59,7 +61,9 @@ console.info ( Number + "" )
 ```console
 Это объект, блин, а не игрушка!
 ```
-:coffee: 3
+***
+
+:coffee: :three:
 
 ```javascript
 const test = {
