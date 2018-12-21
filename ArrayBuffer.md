@@ -151,3 +151,26 @@ console.log ( buffer)
     byteLength: (...)
   ► __proto__: ArrayBuffer
 ```
+
+###### :coffee: :four: 
+```javascript
+var picture = document.createElement ( 'img' )
+document.body.appendChild ( picture )
+
+var arrayBuffer, dataView
+
+fetch ( 'https://avatars2.githubusercontent.com/u/46?v=4' )
+    .then ( response => {
+        response.arrayBuffer()
+            .then ( response => {
+                arrayBuffer = response
+                dataView = new DataView ( arrayBuffer )
+                var ind = 90
+                while ( ind < 150 )
+                    dataView.setInt8 ( ind++, 50 )
+    		picture.src = URL.createObjectURL (
+                    new Blob ( [ new Uint8Array ( arrayBuffer ) ] )
+                )
+        })
+    })
+```
