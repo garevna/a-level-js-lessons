@@ -7,7 +7,8 @@
 Доступна для чтения только длина буфера в байтах
 
 ```javascript
-var arrayBuffer  = new ArrayBuffer ( 32 )
+var buffer  = new ArrayBuffer ( 16 )
+console.log ( buffer.byteLength)  // 16
 ```
 
 ## :mortar_board: Акцессоры
