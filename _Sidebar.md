@@ -176,6 +176,7 @@
 
 * [Метод namedItem](namedItem)
 * [ReadableStream](ReadableStream)
+* [ArrayBuffer](ArrayBuffer)
 * [FileReader](FileReader)
 * [File API](https://docs.google.com/forms/d/e/1FAIpQLSfWyl5nx2exEulEAW2LitdvyjSddTEeqP0Y4O5smow4nWc85Q/viewform)
 * [FormData](FormData)
