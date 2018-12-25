@@ -78,4 +78,4 @@ const test = {
 test == 1 && test == 2 && test == 3
 ```
 ***
-### [:briefcase: Упражнения](https://garevna.github.io/js-quiz/#valueOf)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#valueOf)
