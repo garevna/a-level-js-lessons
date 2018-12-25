@@ -120,8 +120,10 @@
 |-|-|-|
 
 * [Элементы форм](https://docs.google.com/forms/d/e/1FAIpQLSe2uALpHzKiId5zdyeceqIrxl3q5_kPYiQcKtHF4ggkMCN23g/viewform)
-* [Рекурсия](recursion)
 * [Замыкание](closure)
+* [:briefcase: Замыкание](https://garevna.github.io/js-quiz/#closures)
+* [Рекурсия](recursion)
+* [:briefcase: Рекурсия](https://garevna.github.io/js-quiz/#recursion)
 * [Итерирующие методы массивов](https://docs.google.com/forms/d/e/1FAIpQLSfs0mRJb0__3zWj07WJeGBvMRUq6zp3NWS6Kik5qK7YBEdP5g/viewform)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](https://docs.google.com/forms/d/e/1FAIpQLSfV6vHH1zsVVNzYU7wwuM8cFpP-S44jBZBwMfCxVG5g6guEOA/viewform)
@@ -135,6 +137,7 @@
 |-|-|-|
 
 * [Стрелочные функции](https://docs.google.com/forms/d/e/1FAIpQLScagd6KJZKArmU74hl913A3zLENlimFRciMcJ6nU63coxPT_Q/viewform)
+* [:briefcase: Стрелочные функции](https://garevna.github.io/js-quiz/#arrowFunctions)
 * [:octocat: Статические методы Object](Object-static-props)
 * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
 * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
@@ -152,6 +155,7 @@
 * [XMLHttpRequest](XMLHttpRequest)
 * [CSRF](CSRF)
 * [Promise](Promise)
+* [:briefcase: Promise](https://garevna.github.io/js-quiz/#promise)
 * [:briefcase: Homework](hw-08)
 
 ***
@@ -162,7 +166,7 @@
 |-|-|-|
 
 * [Fetch API](fetch)
-* [Тесты](https://garevna.github.io/js-quiz/#AJAX%20(%20fetch%20))
+* [:briefcase: fetch](https://garevna.github.io/js-quiz/#fetch)
 * [CORS](CORS)
 * [cookie](https://docs.google.com/forms/d/e/1FAIpQLSfFS3gfvEDWkj5qU_E9U0LBi3JkHFuqUf44ZeXi9acM7ClJlw/viewform)
 * [:octocat: localStorage](localStorage)
@@ -183,7 +187,7 @@
 * [File API](https://docs.google.com/forms/d/e/1FAIpQLSfWyl5nx2exEulEAW2LitdvyjSddTEeqP0Y4O5smow4nWc85Q/viewform)
 * [FormData](FormData)
 * [:coffee: Пример](formData-sample)
-* [💼 Homework](hw-10)
+* [:briefcase: Homework](hw-10)
 
 ***
 <a name="toc-12"></a>
@@ -195,13 +199,14 @@
 * [Размеры и прокрутка элемента](scroll)
 * [let | const](let-const)
 * [async | await](async-await)
+* [:briefcase: async function](https://garevna.github.io/js-quiz/#async)
 * [Тесты](https://garevna.github.io/js-quiz/#async%20function)
 * [API](API)
 * [REST | HATEOAS](REST)
-* [💼 Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeJd1VfRPKOkcZoqcybhS9u53MN2i55pTAejoRAgKtOEEVBPA/viewform)
-* [💼 Практика](JSON-server)
-* [💼 fake chat](Fake-chat)
-* [💼 Homework](hw-11)
+* [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeJd1VfRPKOkcZoqcybhS9u53MN2i55pTAejoRAgKtOEEVBPA/viewform)
+* [:briefcase: Практика](JSON-server)
+* [:briefcase: fake chat](Fake-chat)
+* [:briefcase: Homework](hw-11)
 
 ***
 <a name="toc-13"></a>
@@ -214,7 +219,7 @@
 * [Вычисляемые имена свойств](calculated-prop-names)
 * [Краткий синтаксис методов](short-form-of-method-declaration)
 * [Классы](Class)
-* [💼 Homework](hw-12)
+* [:briefcase: Homework](hw-12)
 
 ***
 <a name="toc-14"></a>
@@ -226,8 +231,8 @@
 * [Фабричные методы](fabric)
 * [Деструктуризация](Destructuring)
 * [Генераторы и итераторы](generators-and-iterators)
-* [Тесты](https://garevna.github.io/js-quiz/#%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B%20%D0%B8%20%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B)
-* [💼 Homework](hw-13)
+* [:briefcase: Генераторы и итераторы](https://garevna.github.io/js-quiz/#gen)
+* [:briefcase: Homework](hw-13)
 
 ***
 <a name="toc-15"></a>
@@ -241,7 +246,7 @@
 * [Custom elements](Custom-elements)
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
-* [💼 Homework](hw-14)
+* [:briefcase: Homework](hw-14)
 
 ***
 <a name="toc-16"></a>
@@ -262,7 +267,7 @@
 * [:briefcase: Упражнение 6](webpack-6)
 * [:briefcase: Упражнение 7](webpack-7)
 * [:briefcase: Упражнение 8](webpack-8)
-* [💼 Homework](hw-15)
+* [:briefcase: Homework](hw-15)
 
 ***
 | [:arrow_heading_up:](#toc-3) | <a name="toc-bottom"><img width="800"/></a> | [:arrow_double_up:](#toc-top) |
