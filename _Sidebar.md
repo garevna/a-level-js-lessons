@@ -110,6 +110,7 @@
 * [Типы узлов дерева DOM](NodeTypes)
 * [Элементы DOM](DOM-elements)
 * [События  DOM](Event)
+* [Элементы форм](https://docs.google.com/forms/d/e/1FAIpQLSe2uALpHzKiId5zdyeceqIrxl3q5_kPYiQcKtHF4ggkMCN23g/viewform)
 * [:briefcase: Homework](hw-05)
 ***
 
@@ -119,12 +120,11 @@
 | [:arrow_heading_up:](#toc-6) | <img width="800"/> | [:arrow_heading_down:](#toc-8) |
 |-|-|-|
 
-* [Элементы форм](https://docs.google.com/forms/d/e/1FAIpQLSe2uALpHzKiId5zdyeceqIrxl3q5_kPYiQcKtHF4ggkMCN23g/viewform)
+* [Функциональщина в JS](functionality)
 * [Замыкание](closure)
 * [:briefcase: Замыкание](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
 * [:briefcase: Рекурсия](https://garevna.github.io/js-quiz/#recursion)
-* [Функциональщина в JS](functionality)
 * [Итерирующие методы массивов](https://docs.google.com/forms/d/e/1FAIpQLSfs0mRJb0__3zWj07WJeGBvMRUq6zp3NWS6Kik5qK7YBEdP5g/viewform)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](https://docs.google.com/forms/d/e/1FAIpQLSfV6vHH1zsVVNzYU7wwuM8cFpP-S44jBZBwMfCxVG5g6guEOA/viewform)
