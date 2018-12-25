@@ -136,6 +136,7 @@
 * [Стрелочные функции](https://docs.google.com/forms/d/e/1FAIpQLScagd6KJZKArmU74hl913A3zLENlimFRciMcJ6nU63coxPT_Q/viewform)
 * [:octocat: Статические методы Object](Object-static-props)
 * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
+* [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
 * [:briefcase: Homework](hw-07)
 
 ***
