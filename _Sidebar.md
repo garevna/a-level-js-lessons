@@ -94,6 +94,7 @@
 
 * [Биндинг и карринг](call-apply-bind)
 * [Метод valueOf](valueOf)
+* [:briefcase: valueOf()](https://garevna.github.io/js-quiz/#valueOf)
 * [Конструктор Error](Error)
 
 ***
