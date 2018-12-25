@@ -64,4 +64,4 @@ functionConstructor()()   // Global Scope
 functionDeclaration()()   // Closured Scope 
 ```
 ***
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLScC1JCRSlsA-4ldgUvslbrXSq0Ta3frOauVv6DujoLoB357iA/viewform)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#closures)
