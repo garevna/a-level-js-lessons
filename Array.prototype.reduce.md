@@ -95,6 +95,7 @@ cards.reduce (
   ► __proto__: Array(0)
 ```
 ###### :coffee: :four:
+Удалим дублирующиеся элементы массива:
 ```javascript
 var arr = [
     "google",
