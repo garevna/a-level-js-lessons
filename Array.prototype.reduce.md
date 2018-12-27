@@ -94,7 +94,39 @@ cards.reduce (
     length: 4
   ► __proto__: Array(0)
 ```
+###### :coffee: :four:
+```javascript
+var arr = [
+    "google",
+    "mozilla",
+    "ie",
+    "mozilla",
+    "mozilla",
+    "google",
+    "mozilla",
+    "ie",
+    "ie",
+    "google"
+]
 
+arr.reduce (
+    function ( result, item ) {
+        result.indexOf ( item ) < 0 ? 
+            result.push ( item ) : null
+        return result
+    },
+    []
+)
+```
+###### Результат в консоли:
+```console
+▼ (3) ["google", "mozilla", "ie"]
+    0: "google"
+    1: "mozilla"
+    2: "ie"
+    length: 3
+  ► __proto__: Array(0)
+```
 ***
 [`reduceRight()`](Array.prototype.reduceRight)<br/>
 [`some()`](Array.prototype.some)<br/>
