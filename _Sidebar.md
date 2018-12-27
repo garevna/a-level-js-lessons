@@ -125,7 +125,10 @@
 * [:briefcase: Замыкание](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
 * [:briefcase: Рекурсия](https://garevna.github.io/js-quiz/#recursion)
-* [Итерирующие методы массивов](https://docs.google.com/forms/d/e/1FAIpQLSfs0mRJb0__3zWj07WJeGBvMRUq6zp3NWS6Kik5qK7YBEdP5g/viewform)
+* Итерирующие методы массивов
+    * [Принцип работы](arrayIterators-principle)
+    * [Методы](arrayIterators-methods)
+    * [Методы](https://docs.google.com/forms/d/e/1FAIpQLSfs0mRJb0__3zWj07WJeGBvMRUq6zp3NWS6Kik5qK7YBEdP5g/viewform)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](https://docs.google.com/forms/d/e/1FAIpQLSfV6vHH1zsVVNzYU7wwuM8cFpP-S44jBZBwMfCxVG5g6guEOA/viewform)
 * [:briefcase: Homework](hw-06)
