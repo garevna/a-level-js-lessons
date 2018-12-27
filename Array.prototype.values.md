@@ -15,5 +15,6 @@
 [`sort()`](Array.prototype.sort)<br/>
 ***
 # :mortar_board: values()
-
+###### [Генератор](generators-and-iterators)
+Возвращает объект итератора
 ***
