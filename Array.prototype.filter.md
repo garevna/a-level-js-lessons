@@ -2,7 +2,29 @@
 
 [`entries()`](Array.prototype.entries)<br/>
 [`every()`](Array.prototype.every)<br/>
-[`filter()`](Array.prototype.filter)<br/>
+***
+## :mortar_board: filter()
+Метод **`filter()`** итерирует массив, проверяя выполнение заданного условия для каждого элемента массива
+
+Метод возвращает новый массив
+
+В результирующий массив попадут только те элементы, которые удовлетворяют условию фильтрации
+```javascript
+var sourceArray = [
+    {  name: "Николай Василенко",  country:  "Украина" },
+    {  name: "Дюк Шейн",  country:  "США" },
+    {  name: "Демид Швейк",  country:  "Франция" },
+    {  name: "Семен Картко",  country:  "Украина" },
+    {  name: "Маргарет Джонсон",  country:  "США" },
+    {  name: "Филипп Данько",  country:  "Украина" },
+    {  name: "Роберт Трамп",  country:  "США" },
+]
+
+var usa = sourceArray.filter ( x => x.country === "США" )
+
+console.log ( usa )
+```
+***
 [`find()`](Array.prototype.find)<br/>
 [`findIndex()`](Array.prototype.findIndex)<br/>
 [`flatMap()`](Array.prototype.flatMap)<br/>
