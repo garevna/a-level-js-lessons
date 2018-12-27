@@ -1,6 +1,6 @@
 # :mortar_board: Итерирующие методы массивов
-
-## entries()
+***
+## :mortar_board: entries()
 ###### [Генератор](generators-and-iterators)
 Возвращает объект итератора
 ***
