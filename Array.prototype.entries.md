@@ -1,7 +1,7 @@
 # :mortar_board: Итерирующие методы массивов
 
 ## entries()
-###### [Генератор]()
+###### [Генератор](generators-and-iterators)
 Возвращает объект итератора
 ***
 [`every()`](Array.prototype.every)<br/>
