@@ -13,4 +13,7 @@
 [`reduceRight()`](Array.prototype.reduceRight)<br/>
 [`some()`](Array.prototype.some)<br/>
 [`sort()`](Array.prototype.sort)<br/>
-[`values()`](Array.prototype.values)<br/>
+***
+# :mortar_board: values()
+
+***
