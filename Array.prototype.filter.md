@@ -24,6 +24,7 @@ var usa = sourceArray.filter ( x => x.country === "США" )
 
 console.log ( usa )
 ```
+###### Результат в консоли:
 ![](https://lh4.googleusercontent.com/dPJ7fo_MpTFLila8yzWxmVCTxW6QRyd44lWhg_fGoAGeg1JTCj4Ni-zfy63rKdodIK017yyAqgSrDeao_QZW4vhCY44EjO7ltOGjoGU0BaR3QlRXv6VmByUKw_HyE4SilpWEaAouNcOPwrs)
 ***
 [`find()`](Array.prototype.find)<br/>
