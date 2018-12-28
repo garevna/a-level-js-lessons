@@ -140,9 +140,9 @@
 | [:arrow_heading_up:](#toc-7) | <img width="800"/> | [:arrow_heading_down:](#toc-9) |
 |-|-|-|
 
-* [:octocat: Стрелочные функции](arrowFunction)
-* [:briefcase: Стрелочные функции](https://garevna.github.io/js-quiz/#arrowFunctions)
-* [:octocat: Статические методы Object](Object-static-props)
+* [Стрелочные функции](arrowFunction)
+* [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+* [Методы Object](Object-static-props)
 * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
 * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
 * [:briefcase: Homework](hw-07)
