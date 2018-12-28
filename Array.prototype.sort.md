@@ -43,25 +43,43 @@ var sourceArray = [
     {  title: "income",  value:  320 },
 ]
 var resArray = sourceArray.sort (
-    ( x, y ) => x.value > y.value
+    function ( x, y ) {
+        return x.value - y.value
+    }
 )
 ```
 ###### Результат в консоли:
-![](https://lh3.googleusercontent.com/_kieTSevJPydMdJvUSTGAQmoLtEipovy2egnkI-OhWoeiEpzmmPvFpN52pWRe_C5Bi3_K7mybJ3pXOc7egWdOlCqrHRXo916ICx9S39_aHNHnH2Pf-2b4b8CMDU-txQ2bYYxDHvLXXoIKOo)
-
+```console
+▼ (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+  ► 0: {title: "bonus", value: 70}
+  ► 1: {title: "fond", value: 100}
+  ► 2: {title: "payments", value: 150}
+  ► 3: {title: "credit", value: 200}
+  ► 4: {title: "income", value: 320}
+  ► 5: {title: "salary", value: 400}
+  ► 6: {title: "debt", value: 700}
+    length: 7
+  ► __proto__: Array(0)
+```
 Для понимания механизма сортировки выведем в консоль значения сравниваемых элементов массива на каждой итерации:
 ```javascript
 var resArray = sourceArray
     .sort (
-        ( x, y ) => {
-            console.log ( x, y )
+        function ( x, y ) {
+            console.log ( `${x.title} - ${y.title} = ${x.value - y.value}` )
             return  x.value - y.value
         }
     )
 ```
 ###### Результат в консоли:
-![](https://lh5.googleusercontent.com/XmbzknCG7kbLJdPV9BeqUAsbzTHjkNk5iGlLHP-HxmrpS4adhF423C9tU5nSbxhYwDfpJcOOQpdRg2otOPquShU_6wojcwZqiFKp53N01KpRYW8gZug0IK_gkMHkF1HKX7gSAzsz5I2j1f8)
-
+```console
+fond - bonus = 30
+payments - fond = 50
+credit - payments = 50
+income - credit = 120
+salary - income = 80
+debt - salary = 300
+```
 или так:
 ```javascript
 var tmp =[]
@@ -76,8 +94,25 @@ var resArray = sourceArray
         }
     )
 ```
-###### Результат в консоли:
-![](https://lh3.googleusercontent.com/u0aPsglhKK5UuoR5jJ-PYaURxvHFysDomO4yhpzGsTq1eLG9BfCDMuAf_kQ3ULL-e2xluQL49PVdgunPTH62i_c_oPtqPaDTWmrqrZobhnUd66v9lRvtWPPEa_SqEWNbf8VbRoV80LyktK4)
+###### tmp:
+```console
+▼ (13) [...]
+  ► 0: "salary - fond = 300"
+  ► 1: "bonus - salary = -330"
+  ► 2: "bonus - salary = -330"
+  ► 3: "bonus - fond = -30"
+  ► 4: "debt - fond = 600"
+  ► 5: "debt - salary = 300"
+  ► 6: "credit - salary = -200"
+  ► 7: "credit - fond = 100"
+  ► 8: "payments - credit = -50"
+  ► 9: "payments - fond = 50"
+  ► 10: "income - credit = 120"
+  ► 11: "income - debt = -380"
+  ► 12: "income - salary = -80"
+    length: 13
+  ► __proto__: Array(0)
+```
 
 Итак, в отличие от других итерирующих методов, функция, передаваемая методу в качестве единственного аргумента, принимает строго два параметра
 
