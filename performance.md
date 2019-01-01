@@ -168,7 +168,7 @@ performance.clearMeasures()
 ###### getEntriesByName()
 ###### getEntriesByType()
 
-:coffee: :one:
+:coffee:
 ```javascript
 performance.mark ( "start" )
 
@@ -199,6 +199,7 @@ console.log (
 ```
 ***
 #### performance.getEntriesByName
+:coffee: :one:
 ```javascript
 performance.getEntriesByName( "start" )
 ```
@@ -214,8 +215,47 @@ performance.getEntriesByName( "start" )
         length: 1
   ► __proto__: Array(0)
 ```
+
+:coffee: :two:
+```javascript
+const pictures = [
+    "http://ogo.ua/images/articles/1567/big/1395958980.jpg",
+    "https://wxpcdn.gcdn.co/dcont/fb/image/crew3_1024.png",
+    "https://mixpix.in/post_imgs/2015/04/10/141025/00009.jpg",
+    "https://mixpix.in/post_imgs/2015/04/10/141025/00006.jpg"
+]
+pictures.forEach (
+    item => {
+        performance.mark ( "start" )
+
+        let elem = document.body.appendChild (
+            document.createElement ( "img" )
+        )
+        elem.src = item
+        elem.width = "200"
+
+        performance.mark ( "end" )
+    }
+)
+
+console.log (
+    performance.getEntriesByName ( "start" )
+)
+```
+###### Результат в консоли:
+```console
+▼ (4) [PerformanceMark, PerformanceMark, PerformanceMark, PerformanceMark]
+  ► 0: PerformanceMark {name: "start", entryType: "mark", startTime: 2465.700000000652, duration: 0}
+  ► 1: PerformanceMark {name: "start", entryType: "mark", startTime: 2467.000000004191, duration: 0}
+  ► 2: PerformanceMark {name: "start", entryType: "mark", startTime: 2467.1000000089407, duration: 0}
+  ► 3: PerformanceMark {name: "start", entryType: "mark", startTime: 2467.30000001844, duration: 0}
+    length: 4
+  ► __proto__: Array(0)
+```
 ***
 #### getEntriesByType
+
+:coffee: :one:
 ```javascript
 console.log (
     performance.getEntriesByType ( "resource" )
@@ -245,6 +285,46 @@ console.log (
         secureConnectionStart: 0
       ► serverTiming: []
         startTime: 19113.49999997765
+        transferSize: 0
+        workerStart: 0
+      ► __proto__: PerformanceResourceTiming
+        length: 1
+  ► __proto__: Array(0)
+```
+
+:coffee: :two:
+```javascript
+fetch ( 'https://httpbin.org/' )
+    .then (
+        response => console.log (
+            performance.getEntriesByType ( "resource" )
+        )
+    )
+```
+###### Результат в консоли:
+```console
+▼ [PerformanceResourceTiming]
+  ▼ 0: PerformanceResourceTiming
+        connectEnd: 0
+        connectStart: 0
+        decodedBodySize: 0
+        domainLookupEnd: 0
+        domainLookupStart: 0
+        duration: 144.70000000437722
+        encodedBodySize: 0
+        entryType: "resource"
+        fetchStart: 24782.19999995781
+        initiatorType: "fetch"
+        name: "https://httpbin.org/"
+        nextHopProtocol: "http/1.1"
+        redirectEnd: 0
+        redirectStart: 0
+        requestStart: 0
+        responseEnd: 24926.89999996219
+        responseStart: 0
+        secureConnectionStart: 0
+      ► serverTiming: []
+        startTime: 24782.19999995781
         transferSize: 0
         workerStart: 0
       ► __proto__: PerformanceResourceTiming
