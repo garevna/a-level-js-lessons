@@ -2,13 +2,12 @@
 
 Для оценки производительности приложения можно использовать встроенный в браузеры интерфейс **performance**
 
-Этот интерфейс обеспечивает доступ к следующим API:
-
-* Performance Timeline API
-* High Resolution Time API
-* Navigation Timing API
-* User Timing API
-* Resource Timing API
+Этот интерфейс обеспечивает доступ к следующим API:<br/>
+> `Performance Timeline API`<br/>
+> `High Resolution Time API`<br/>
+> `Navigation Timing API`<br/>
+> `User Timing API`<br/>
+> `Resource Timing API`<br/>
 
 Если в консоли любой веб-страницы вывести объект **performance**, то можно увидеть примерно следующее:
 
@@ -50,7 +49,7 @@
 ```
 При запуске страницы браузер создает объект **`performance`**, содержащий все временные характеристики процессов загрузки ресурсов и отрисовки страницы с использованием <span title="измеренное в миллисекундах с полуночи 1 января 1970 года (UTC)">_времени высокой точности_</span>
 
-Скрипт может получать данные ( getEntries(), getEntriesByName(), getEntriesByType() ) из этого буфера, а так же динамически создавать и удалять кастомные временные метки ( `mark` ) и измерения ( `measure` )
+Скрипт может получать данные ( `getEntries()`, `getEntriesByName()`, `getEntriesByType()` ) из этого буфера, а так же динамически создавать и удалять кастомные временные метки ( `mark` ) и измерения ( `measure` )
 
 ***
 ## :mortar_board: performance.timing
@@ -209,12 +208,13 @@ performance.clearMeasures()
 Обратите внимание на методы
 ###### clearMarks()
 ###### clearMeasures()
+
 ***
 
 ### :mortar_board: Entries
-###### getEntries()
-###### getEntriesByName()
-###### getEntriesByType()
+        getEntries()
+        getEntriesByName()
+        getEntriesByType()
 
 С помощью этих методов можно получить массив объектов
 
@@ -230,17 +230,18 @@ performance.clearMeasures()
 | `paint` | <code>либо <b>`first-paint`</b>, либо <b>`first-contentful-paint`</b></code> |
 | `frame, navigation` | `URL документа` |
 
-
-###### initiatorType
-###### duration
+***
 
 #### performance.getEntries()
-###### PerformanceResourceTiming
-###### PerformancePaintTiming
-###### PerformanceMark
-###### PerformanceMeasure
 
-Этот метод вернет все объекты, хранящие данные о временных характеристиках процессов, связанных:
+Этот метод вернет все объекты
+
+    PerformanceResourceTiming
+    PerformancePaintTiming
+    PerformanceMark
+    PerformanceMeasure
+
+хранящие данные о временных характеристиках процессов, связанных:
 * с получением ресурсов: экземпляр [**`PerformanceResourceTiming`**](#performanceresourcetiming-1)
 * с отрисовкой страницы: экземпляр **`PerformancePaintTiming`**
 
@@ -248,7 +249,7 @@ performance.clearMeasures()
 * с маркерами, установленными с помощью метода <a href="#performancemark"><b>`performance.mark()`</b></a>: экземпляр **`PerformanceMark`**
 * измерениями, созданными с помощью метода <a href="#performancemeasure"><b>`performance.measure()`</b></a>: экземпляр **`PerformanceMeasure`**
 
-
+:coffee:
 ```javascript
 performance.mark ( "start" )
 
@@ -266,13 +267,87 @@ console.log (
 ```
 ###### Результат в консоли:
 ```console
-▼ (5) [PerformanceMark, PerformanceMark, PerformanceResourceTiming, PerformancePaintTiming, PerformancePaintTiming]
-  ► 0: PerformanceMark {name: "start", entryType: "mark", startTime: 10251.299999945331, duration: 0}
-  ► 1: PerformanceMark {name: "end", entryType: "mark", startTime: 10251.59999995958, duration: 0}
-  ► 2: PerformanceResourceTiming {initiatorType: "img", nextHopProtocol: "h2", workerStart: 0, redirectStart: 0, redirectEnd: 0, …}
-  ► 3: PerformancePaintTiming {name: "first-paint", entryType: "paint", startTime: 10267.59999996284, duration: 0}
-  ► 4: PerformancePaintTiming {name: "first-contentful-paint", entryType: "paint", startTime: 10267.59999996284, duration: 0}
-    length: 5
+▼ (2) [PerformanceMark, PerformanceMark]
+  ▼ 0: PerformanceMark
+        duration: 0
+        entryType: "mark"
+        name: "start"
+        startTime: 3348.8999999826774
+      ► __proto__: PerformanceMark
+  ▼ 1: PerformanceMark
+        duration: 0
+        entryType: "mark"
+        name: "end"
+        startTime: 3349.099999992177
+      ► __proto__: PerformanceMark
+    length: 2
+  ► __proto__: Array(0)
+```
+:coffee:
+```javascript
+performance.mark ( "start" )
+
+fetch ( "https://httpbin.org" )
+    .then (
+        x => {
+            performance.mark ( "end" )
+            performance.measure (
+                "fetchDuration",
+                "start",
+                "end"
+            )
+            console.log (
+                performance.getEntries()
+            )
+        }
+    )
+```
+###### results:
+```console
+▼ (4) [PerformanceMark, PerformanceMeasure, PerformanceResourceTiming, PerformanceMark]
+  ▼ 0: PerformanceMark
+        duration: 0
+        entryType: "mark"
+        name: "start"
+        startTime: 2684.400000027381
+      ► __proto__: PerformanceMark
+  ▼ 1: PerformanceMeasure
+        duration: 453.5999999498017
+        entryType: "measure"
+        name: "fetchDuration"
+        startTime: 2684.400000027381
+      ► __proto__: PerformanceMeasure
+  ▼ 2: PerformanceResourceTiming
+        connectEnd: 0
+        connectStart: 0
+        decodedBodySize: 0
+        domainLookupEnd: 0
+        domainLookupStart: 0
+        duration: 452.70000002346933
+        encodedBodySize: 0
+        entryType: "resource"
+        fetchStart: 2684.5999999786727
+        initiatorType: "fetch"
+        name: "https://httpbin.org/"
+        nextHopProtocol: "http/1.1"
+        redirectEnd: 0
+        redirectStart: 0
+        requestStart: 0
+        responseEnd: 3137.300000002142
+        responseStart: 0
+        secureConnectionStart: 0
+      ► serverTiming: []
+        startTime: 2684.5999999786727
+        transferSize: 0
+        workerStart: 0
+      ► __proto__: PerformanceResourceTiming
+  ▼ 3: PerformanceMark
+        duration: 0
+        entryType: "mark"
+        name: "end"
+        startTime: 3137.9999999771826
+      ► __proto__: PerformanceMark
+    length: 4
   ► __proto__: Array(0)
 ```
 ***
