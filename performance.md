@@ -1,14 +1,5 @@
 # :mortar_board: Performance
 
-Для оценки производительности приложения можно использовать встроенный в браузеры интерфейс **performance**
-
-Этот интерфейс обеспечивает доступ к следующим API:<br/>
-> `Performance Timeline API`<br/>
-> `High Resolution Time API`<br/>
-> `Navigation Timing API`<br/>
-> `User Timing API`<br/>
-> `Resource Timing API`<br/>
-
 | [`performance.timing`](#mortar_board-performancetiming) |
 |:-|
 | [**`Performance.prototype`**](#performanceprototype) |
@@ -18,6 +9,15 @@
 | :wrench: [`метод getEntries()`](#getEntries) |
 | :wrench: [`метод getEntriesByName()`](#getEntriesByName) |
 | [**`PerformanceResourceTiming`**](#PerformanceResourceTiming) | [`метод getEntriesByType()`](#getEntriesByType) |
+
+Для оценки производительности приложения можно использовать встроенный в браузеры интерфейс **performance**
+
+Этот интерфейс обеспечивает доступ к следующим API:<br/>
+> `Performance Timeline API`<br/>
+> `High Resolution Time API`<br/>
+> `Navigation Timing API`<br/>
+> `User Timing API`<br/>
+> `Resource Timing API`<br/>
 
 Если в консоли любой веб-страницы вывести объект **performance**, то можно увидеть примерно следующее:
 
@@ -61,6 +61,8 @@
 
 Скрипт может получать данные ( `getEntries()`, `getEntriesByName()`, `getEntriesByType()` ) из этого буфера, а так же динамически создавать и удалять кастомные временные метки ( `mark` ) и измерения ( `measure` )
 
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
 ***
 ## :mortar_board: performance.timing
 
@@ -80,6 +82,9 @@ console.log (
     performance.timing.domLoading
 )
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 ## :mortar_board: Унаследованные методы **`performance`**
 ###### Performance.prototype
@@ -111,6 +116,9 @@ console.log (
   ► get timing: ƒ timing()
   ► __proto__: EventTarget
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 #### now
 Метод `performance.now()` позволяет получить текущее время высокой точности с момента начала отсчета
@@ -132,6 +140,9 @@ setTimeout (
 ```
 209385.9999999986 - 207385.50000003306 = 2000.499999965541 (ms)
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 #### mark
 Установка временных меток
@@ -165,6 +176,9 @@ console.log ( items )
     length: 2
   ► __proto__: Array(0)
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 #### measure
 Измерение производительности
@@ -219,8 +233,10 @@ performance.clearMeasures()
 ###### clearMarks()
 ###### clearMeasures()
 
-***
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
 
+***
 ### :mortar_board: Entries
         getEntries()
         getEntriesByName()
@@ -360,6 +376,9 @@ fetch ( "https://httpbin.org" )
     length: 4
   ► __proto__: Array(0)
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 #### getEntriesByName
 :coffee: :one:
@@ -448,6 +467,9 @@ console.log (
     length: 4
   ► __proto__: Array(0)
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 #### getEntriesByType
 
@@ -527,6 +549,9 @@ fetch ( 'https://httpbin.org/' )
         length: 1
   ► __proto__: Array(0)
 ```
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
+
 ***
 ### PerformanceResourceTiming
 Для каждого процесса загрузки ресурсов приложения создается свой экземпляр **`PerformanceResourceTiming`**
@@ -610,3 +635,8 @@ Promise.all ( promises )
 </td>
 </tr>
 </table>
+
+***
+
+| [:arrow_double_up:](#mortar_board-performance) | 
+|-|
