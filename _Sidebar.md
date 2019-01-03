@@ -280,6 +280,10 @@
 ***
 ### [:mortar_board: HTML/CSS](https://github.com/garevna/wiki/wiki)
 ***
+
+###### :ledger: Дополнительно
+* [:notebook: **Performance**](performance)
+
 ###### :ledger: Справочная инфо
 
 * [:notebook: **Git Bush**](Git-Bush)
