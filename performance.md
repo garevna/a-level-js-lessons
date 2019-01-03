@@ -48,7 +48,31 @@
       ► __proto__: PerformanceTiming
   ► __proto__: Performance
 ```
-Что наследует объект **`performance`**:
+При запуске страницы браузер создает объект **`performance`**, содержащий все временные характеристики процессов загрузки ресурсов и отрисовки страницы с использованием <span title="измеренное в миллисекундах с полуночи 1 января 1970 года (UTC)">_времени высокой точности_</span>
+
+Скрипт может получать данные ( getEntries(), getEntriesByName(), getEntriesByType() ) из этого буфера, а так же динамически создавать и удалять кастомные временные метки ( `mark` ) и измерения ( `measure` )
+
+***
+## :mortar_board: performance.timing
+
+#### Загрузка документа
+
+| `document.readyState` | `performance.timing` |
+|-|-|
+| <code title="документ в процессе загрузки">loading</code> | `domLoading` |
+| <code title="документ загружен и распарсен, но подключаемые ресурсы ( стили, картинки и т.д. ) еще загружаются">interactive</code> | `domInteractive` |
+| <code title="документ полностью готов ( инициируется событие load )">complete</code> | `domComplete` |
+
+```javascript
+console.log (
+    performance.timing.domComplete - 
+    performance.timing.domInteractive,
+    performance.timing.domInteractive - 
+    performance.timing.domLoading
+)
+```
+***
+## :mortar_board: Унаследованные методы **`performance`**
 ###### Performance.prototype
 ```console
 ▼ Performance {now: ƒ, getEntries: ƒ, getEntriesByType: ƒ, …}
@@ -79,8 +103,31 @@
   ► __proto__: EventTarget
 ```
 ***
-#### :coffee: performance.mark
+#### performance.now
+Метод `performance.now()` позволяет получить текущее время высокой точности с момента начала отсчета
+
+:coffee: 
+```javascript
+console.log ( `Старт: ${performance.now()}` )
+setTimeout (
+    () => console.log ( `Стоп: ${performance.now()}` ),
+    2000
+)
+```
+###### Результат в консоли:
+```console
+Старт: 207385.50000003306
+Стоп: 209385.9999999986
+```
+Таким образом, точное время, которое прошло с момента первого вызова performance.now() до второго вызова этого метода, составляет
+```
+209385.9999999986 - 207385.50000003306 = 2000.499999965541 (ms)
+```
+***
+#### performance.mark
 Установка временных меток
+
+:coffee: 
 ```javascript
 performance.mark ( "start" )
 for ( var x = 0; x < 1000; x++ )
@@ -110,8 +157,10 @@ console.log ( items )
   ► __proto__: Array(0)
 ```
 ***
-#### :coffee: performance.measure
+#### performance.measure
 Измерение производительности
+
+:coffee: 
 ```javascript
 performance.mark ( "start1" )
 
@@ -158,17 +207,48 @@ performance.clearMeasures()
 2: duration: 0.20000000949949026ms
 ```
 Обратите внимание на методы
-* clearMarks()
-* clearMeasures()
+###### clearMarks()
+###### clearMeasures()
 ***
 
-### :mortar_board: performance.getEntries
-
+### :mortar_board: Entries
 ###### getEntries()
 ###### getEntriesByName()
 ###### getEntriesByType()
 
-:coffee:
+С помощью этих методов можно получить массив объектов
+
+Каждый такой объект имеет свойства **`entryType`** и **`name`**
+
+Возможные значения этих свойств:
+
+| `entryType` | `name` |
+|-|-|
+| `resource` | `URL запрошенного ресурса` |
+| `mark` | <code>имя метки, созданной с помощью <a href="#performancemark"><b>`performance.mark()`</b></a></code> |
+| `measure` | <code>имя, использованное при вызове <a href="#performancemeasure"><b>`performance.measure()`</b></a></code> |
+| `paint` | <code>либо <b>`first-paint`</b>, либо <b>`first-contentful-paint`</b></code> |
+| `frame, navigation` | `URL документа` |
+
+
+###### initiatorType
+###### duration
+
+#### performance.getEntries()
+###### PerformanceResourceTiming
+###### PerformancePaintTiming
+###### PerformanceMark
+###### PerformanceMeasure
+
+Этот метод вернет все объекты, хранящие данные о временных характеристиках процессов, связанных:
+* с получением ресурсов: экземпляр [**`PerformanceResourceTiming`**](#performanceresourcetiming-1)
+* с отрисовкой страницы: экземпляр **`PerformancePaintTiming`**
+
+а так же:
+* с маркерами, установленными с помощью метода <a href="#performancemark"><b>`performance.mark()`</b></a>: экземпляр **`PerformanceMark`**
+* измерениями, созданными с помощью метода <a href="#performancemeasure"><b>`performance.measure()`</b></a>: экземпляр **`PerformanceMeasure`**
+
+
 ```javascript
 performance.mark ( "start" )
 
@@ -179,9 +259,7 @@ elem.src = "http://ogo.ua/images/articles/1567/big/1395958980.jpg"
 elem.width = "200"
 
 performance.mark ( "end" )
-```
-#### performance.getEntries
-```javascript
+
 console.log (
     performance.getEntries()
 )
@@ -198,7 +276,7 @@ console.log (
   ► __proto__: Array(0)
 ```
 ***
-#### performance.getEntriesByName
+#### performance.getEntriesByName()
 :coffee: :one:
 ```javascript
 performance.getEntriesByName( "start" )
@@ -331,3 +409,86 @@ fetch ( 'https://httpbin.org/' )
         length: 1
   ► __proto__: Array(0)
 ```
+***
+### PerformanceResourceTiming
+Для каждого процесса загрузки ресурсов приложения создается свой экземпляр **`PerformanceResourceTiming`**
+
+###### initiatorType
+Свойство **_`initiatorType`_** этого экземпляра идентифицирует источник запроса
+
+* <code title="Запрос инициирован элементом <link>"><b>`link`</b></code>
+* <code title="Запрос инициирован элементом <script>"><b>`script`</b></code>
+* <code title="Запрос инициирован элементом <img>"><b>`img`</b></code>
+* <code title="Запрос инициирован элементом <style> ( например, при загрузке шрифтов )"><b>`css`</b></code>
+* <code title="Запрос инициирован объектом XMLHttpRequest"><b>`xmlhttprequest`</b></code>
+###### name
+Свойство **_`name`_** этого экземпляра идентифицирует **`url`** запрошенного ресурса
+
+:coffee:
+```javascript
+const pictures = [
+    "http://ogo.ua/images/articles/1567/big/1395958980.jpg",
+    "https://wxpcdn.gcdn.co/dcont/fb/image/crew3_1024.png",
+    "https://mixpix.in/post_imgs/2015/04/10/141025/00009.jpg",
+    "https://mixpix.in/post_imgs/2015/04/10/141025/00006.jpg"
+]
+
+let promises = []
+
+pictures.forEach (
+    item => 
+        promises.push (
+            new Promise (
+                function ( resolve, reject ) {
+                    let elem = document.createElement ( "img" )
+                    elem.onload = function ( event ) {
+                        let res = performance
+                            .getEntriesByName ( event.target.src )
+                        resolve ({
+                            name: res[0].name,
+                            duration: res[0].duration
+                        })
+                    }
+                    elem.onerror = function ( event ) {
+                        reject ( event.target.src )
+                    }
+                    elem.src = item
+                }
+            )
+        )
+)
+
+Promise.all ( promises )
+    .then (
+        result => {
+            result.forEach (
+                item =>
+                    document.body.innerHTML += `
+                        <img src="${item.name}" width="120"/><br/>
+                        <small>${item.duration} (ms)</small><br/>
+                    `
+            )
+        }
+    )
+    .catch (
+        file => console.error ( `Error loading file: ${file}` )
+    )
+```
+###### Результат на странице:
+<table>
+<tr>
+<td>
+<img src="http://ogo.ua/images/articles/1567/big/1395958980.jpg" width="120"/><br/>
+<code>`2.3999999975785613 (ms)`</code><br/>
+
+<img src="https://wxpcdn.gcdn.co/dcont/fb/image/crew3_1024.png" width="120"/><br/>
+<code>`7.400000002235174 (ms)`</code><br/>
+
+<img src="https://mixpix.in/post_imgs/2015/04/10/141025/00009.jpg" width="120"/><br/>
+<code>`2.5000000023283064 (ms)`</code><br/>
+
+<img src="https://mixpix.in/post_imgs/2015/04/10/141025/00006.jpg" width="120"/><br/>
+<code>`2.900000021327287 (ms)`</code><br/>
+</td>
+</tr>
+</table>
