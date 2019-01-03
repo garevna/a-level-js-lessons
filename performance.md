@@ -9,6 +9,16 @@
 > `User Timing API`<br/>
 > `Resource Timing API`<br/>
 
+| [`performance.timing`](#mortar_board-performancetiming) |
+|:-|
+| [**`Performance.prototype`**](#performanceprototype) |
+| :wrench: [`метод now()`](#now) |
+| :wrench: [`метод mark()`](#mark) |
+| :wrench: [`метод measure()`](#measure) |
+| :wrench: [`метод getEntries()`](#getEntries) |
+| :wrench: [`метод getEntriesByName()`](#getEntriesByName) |
+| [**`PerformanceResourceTiming`**](PerformanceResourceTiming) | [`метод getEntriesByType()`](#getEntriesByType) |
+
 Если в консоли любой веб-страницы вывести объект **performance**, то можно увидеть примерно следующее:
 
 ###### performance
@@ -102,7 +112,7 @@ console.log (
   ► __proto__: EventTarget
 ```
 ***
-#### performance.now
+#### now
 Метод `performance.now()` позволяет получить текущее время высокой точности с момента начала отсчета
 
 :coffee: 
@@ -123,7 +133,7 @@ setTimeout (
 209385.9999999986 - 207385.50000003306 = 2000.499999965541 (ms)
 ```
 ***
-#### performance.mark
+#### mark
 Установка временных меток
 
 :coffee: 
@@ -156,7 +166,7 @@ console.log ( items )
   ► __proto__: Array(0)
 ```
 ***
-#### performance.measure
+#### measure
 Измерение производительности
 
 :coffee: 
@@ -232,7 +242,7 @@ performance.clearMeasures()
 
 ***
 
-#### performance.getEntries()
+#### getEntries
 
 Этот метод вернет все объекты
 
@@ -351,7 +361,7 @@ fetch ( "https://httpbin.org" )
   ► __proto__: Array(0)
 ```
 ***
-#### performance.getEntriesByName()
+#### getEntriesByName
 :coffee: :one:
 ```javascript
 performance.getEntriesByName( "start" )
