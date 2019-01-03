@@ -17,7 +17,7 @@
 | :wrench: [`метод measure()`](#measure) |
 | :wrench: [`метод getEntries()`](#getEntries) |
 | :wrench: [`метод getEntriesByName()`](#getEntriesByName) |
-| [**`PerformanceResourceTiming`**](PerformanceResourceTiming) | [`метод getEntriesByType()`](#getEntriesByType) |
+| [**`PerformanceResourceTiming`**](#PerformanceResourceTiming) | [`метод getEntriesByType()`](#getEntriesByType) |
 
 Если в консоли любой веб-страницы вывести объект **performance**, то можно увидеть примерно следующее:
 
