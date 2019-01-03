@@ -364,18 +364,51 @@ fetch ( "https://httpbin.org" )
 #### getEntriesByName
 :coffee: :one:
 ```javascript
-performance.getEntriesByName( "start" )
+performance.mark ( "start" )
+
+fetch ( "https://httpbin.org" )
+    .then (
+        x => {
+            performance.mark ( "end" )
+            performance.measure (
+                "fetchDuration",
+                "start",
+                "end"
+            )
+            console.log (
+                performance.getEntriesByName( "https://httpbin.org/" )
+            )
+        }
+    )
 ```
 ###### Результат в консоли:
 ```console
-▼ [PerformanceMark]
-  ▼ 0: PerformanceMark
-        duration: 0
-        entryType: "mark"
-        name: "start"
-        startTime: 10251.299999945331
+▼ [ PerformanceResourceTiming ]
+  ▼ 0: PerformanceResourceTiming
+        connectEnd: 0
+        connectStart: 0
+        decodedBodySize: 0
+        domainLookupEnd: 0
+        domainLookupStart: 0
+        duration: 146.99999999720603
+        encodedBodySize: 0
+        entryType: "resource"
+        fetchStart: 6048.500000033528
+        initiatorType: "fetch"
+        name: "https://httpbin.org/"
+        nextHopProtocol: "http/1.1"
+        redirectEnd: 0
+        redirectStart: 0
+        requestStart: 0
+        responseEnd: 6195.500000030734
+        responseStart: 0
+        secureConnectionStart: 0
+      ► serverTiming: []
+        startTime: 6048.500000033528
+        transferSize: 0
+        workerStart: 0
       ► __proto__: PerformanceMark
-        length: 1
+    length: 1
   ► __proto__: Array(0)
 ```
 
