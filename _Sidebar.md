@@ -278,10 +278,9 @@
 |-|-|-|
 
 ***
-### [:mortar_board: HTML/CSS](https://github.com/garevna/wiki/wiki)
-***
 
 ###### :mortar_board: Дополнительно
+
 * [:pushpin: **Performance**](performance)
 * [:pushpin: **Websockets**](websocket)
 
@@ -291,4 +290,8 @@
 * [:notebook: **_localhost_**](localhost)
 * [:link: **_Коды символов_**](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
 ***
+
 ###### [:open_file_folder: ECMAScript](ECMAScript)
+
+***
+### [:mortar_board: HTML/CSS](https://github.com/garevna/wiki/wiki)
