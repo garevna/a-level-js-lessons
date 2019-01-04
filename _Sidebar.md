@@ -283,6 +283,7 @@
 
 ###### :ledger: Дополнительно
 * [:notebook: **Performance**](performance)
+* [:notebook: **Websockets**](websocket)
 
 ###### :ledger: Справочная инфо
 
