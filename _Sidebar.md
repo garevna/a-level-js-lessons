@@ -281,9 +281,9 @@
 ### [:mortar_board: HTML/CSS](https://github.com/garevna/wiki/wiki)
 ***
 
-###### :ledger: Дополнительно
-* [:notebook: **Performance**](performance)
-* [:notebook: **Websockets**](websocket)
+###### :mortar_board: Дополнительно
+* [:pushpin: **Performance**](performance)
+* [:pushpin: **Websockets**](websocket)
 
 ###### :ledger: Справочная инфо
 
