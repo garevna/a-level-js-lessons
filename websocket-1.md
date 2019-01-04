@@ -1,5 +1,8 @@
 ### :briefcase: Упражнение :one:
 
+| [:rewind:](websocket#samples) |
+|-|
+
 ***
 
 <img src="http://websocket.org/img/websocketlogo-medium.png" height="40"/>
@@ -55,5 +58,5 @@ DISCONNECTED
 ![](https://kaazing.com/favicon.ico)
 
 ***
-| [:rewind:]() |
+| [:rewind:](websocket#samples) |
 |-|
