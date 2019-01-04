@@ -53,7 +53,7 @@ Upgrade: websocket
 
 ***
 
-<a href="#samples"></a>
+<a name="samples"></a>
 
 ### Упражнения
 
