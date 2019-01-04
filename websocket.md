@@ -2,14 +2,18 @@
 
 **WebSockets API** позволяет веб-приложениям использовать протокол `WebSockets` для двусторонней связи с удаленным хостом
 
-**_`WebSockets`_**, как и **_`Local Storage`_** и **_`Geolocation`_**, изначально был частью спецификации **`HTML5`**
+> `WebSockets, как и Local Storage и Geolocation, изначально был частью спецификации HTML5`
 
-Cогласно спецификации протокола, соединение WebSocket стартует как HTTP-соединение, гарантируя полную обратную совместимость с миром до `WebSocket`
+> `Cогласно спецификации протокола, 
+> соединение WebSocket стартует как HTTP-соединение, 
+> гарантируя полную обратную совместимость с миром до WebSocket`
 
-Переключение протокола с HTTP на `WebSocket` называется рукопожатием ( handshake ) `WebSocket`
+Переключение протокола с `HTTP` на `WebSocket` называется рукопожатием ( handshake ) `WebSocket`
 
-При отправке запроса на сервер браузер с помощью заголовка **`Upgrade`** сообщает, что он хочет переключиться с протокола `HTTP` на `WebSocket`:
+При отправке запроса на сервер браузер с помощью заголовков **`Connection`** и **`Upgrade`** сообщает, что он хочет переключиться с протокола `HTTP` на `WebSocket`:
+
 ###### Request Headers
+
 <table><tr><td><pre>
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,ru;q=0.8
@@ -25,7 +29,7 @@ Upgrade: websocket
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
 </pre></td></tr></table>
 
-Если сервер поддерживает протокол `WebSocket`, он соглашается на переключение протокола через заголовок **`Upgrade`**
+Если сервер поддерживает протокол `WebSocket`, он соглашается на переключение протокола через те же заголовки **`Connection`** и **`Upgrade`**
 
 ###### Response Headers
 
@@ -43,50 +47,23 @@ Server: Kaazing Gateway
 Upgrade: websocket
 </pre></td></tr></table>
 
-В этот момент соединение HTTP разрывается и заменяется `WebSocket`-соединением через то же TCP/IP
+В этот момент HTTP-соединение разрывается и заменяется `WebSocket`-соединением через то же TCP/IP
 
 `WebSocket`-соединение использует те же порты по умолчанию, что и HTTP (`80`) и HTTPS (`443`)
 
 ***
-<img src="http://websocket.org/img/websocketlogo-medium.png" height="40"/>
 
-###### :briefcase: Упражнение
+<a href="#samples"></a>
 
-Воспользуемся готовым WebSocket-сервером **`ws://echo.websocket.org`**, который возвращает назад сообщение, отправленное ему с клиента
+### Упражнения
 
-Создадим `WebSocket`-соединение прямо в консоли браузера:
-```javascript
-const websocket = new WebSocket( "ws://echo.websocket.org" )
-```
-Созданный с помощью конструктора `WebSocket` экземпляр **_`websocket`_** имеет свойства `onopen`, `onmessage`, `onclose` и `onerror`, а также методы `send()` и `close()`, и всем этим арсеналом мы сейчас воспользуемся:
+| [ :briefcase: :one:](websocket-1) | [ :briefcase: :two:](websocket-2) |
+|-|-|
 
-###### :coffee: :one: websocket.org
-```javascript
-const websocket = new WebSocket( "ws://echo.websocket.org" )
-websocket.onopen = function ( event ) {
-    console.log ( "CONNECTED" )
-    websocket.send( "Happy New Year!" )
-}
-websocket.onclose = function ( event ) {
-    console.log ( "DISCONNECTED" )
-}
-websocket.onmessage = function ( event ) {
-    console.log ( event.data )
-    websocket.close()
-}
-websocket.onerror = function ( event ) {
-    console.error ( `ERROR: ${event.data}` )
-}
-```
-###### Результат в консоли:
-```console
-CONNECTED
-Happy New Year!
-DISCONNECTED
-```
-
-![](https://kaazing.com/favicon.ico)
 ***
+
+### :briefcase: Упражнение :two:
+
 Для получения некоторого экспириенса с веб-сокетами нам придется познакомиться с серверным JS
 
 Не забудьте создать отдельную папку для наших экспериментов и перейти в нее
@@ -126,16 +103,19 @@ const server = new WebSocket
 ```
 Теперь в переменной **_server_** у нас ссылка на объект **_WebSocket_**-сервера
 
-Используя событие `connection` **_WebSocket_**-сервера, 
+Используя событие `connection` **_WebSocket_**-сервера,
 
 создадим обработчика события `message` объекта **_socket_**
 
-Обработчик 
+Обработчик будет отсылать в ответ на полученное сообщение JSON-строку
+
+с именем отправителя "server" и текстом "I listen to you",
+
+а затем выводить в консоль полученное от клиента сообщение:
 
 ```javascript
 server.on ( 'connection', socket => {
     socket.on ( 'message', received => {
-        console.log ( received )
         socket.send(
             JSON.stringify ( {
                 name: "server",
@@ -162,7 +142,6 @@ const server = new WebSocket
 
 server.on ( 'connection', socket => {
     socket.on ( 'message', received => {
-        console.log ( received )
         socket.send(
             JSON.stringify ( {
                 name: "server",
@@ -172,31 +151,94 @@ server.on ( 'connection', socket => {
         let mess = JSON.parse ( received )
         console.log (
             `received from a client:
-                ${mess.user.name}
+                ${mess.name}
                 ${mess.message}`
         )
     })
 ```
+
+<img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" width="20"/> и запустим с помощью консольной команды:
+
+<table><tr><td><pre>
+$ node start.js
+</pre></td></tr></table>
+
 Теперь откроем новую вкладку и введем в адресной строке браузера:
     http://localhost:8080/
 
-Не обращайте внимания на сообщение _`Upgrade Required`_, которое появилось на странице
+На странице появится сообщение _`Upgrade Required`_
 
 Это потому, что мы указали протокол `http`, а запущенный нами на порту `8080` сервер работает по протоколу `ws`
 
+В консоли этой вкладки введем "клиентский" код:
+
+```javascript
+const socket = new WebSocket('ws://localhost:8080')
+
+socket.addEventListener( 'open', () => {
+    socket.send(
+        JSON.stringify ({
+            name: "Admin",
+            message: 'Hello, do you listen to me ?'
+        })
+    )
+})
+
+socket.addEventListener( 'message', event => {
+    console.log ( JSON.parse ( event.data ) )
+})
+```
+
+поскольку мы создаем сервер на локальной машине, 
+
+домен будет `localhost` или `127.0.0.1`
+
+порт мы уже выбрали - 8080
+
+После выполнения кода:
+
+```javascript
+const socket = new WebSocket('ws://localhost:8080')
+```
+
+в переменной **socket** у нас будет ссылка на экземпляр WebSocket-соединения, 
+
+у которого есть событие **`open`** и метод **`send`** 
+
+( как видим, события и методы на стороне сервера и клиента одни и те же, 
+
+поскольку это соединение двух "равноправных" партнеров для обмена сообщениями )
+
+Итак, когда соединение будет открыто, клиент 
+
+( пока из консоли браузера ) 
+
+отправит на сервер сообщение - JSON-строку 
+
+с именем отправителя "_Admin_" и текстом "_Hello, do you listen to me ?_"
+
+###### <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" width="25"/> Результат в консоли
+<table><tr><td><pre>
+$ node start.js
+received from a client:
+                Admin
+                Hello, do you listen to me ?
+</pre></td></tr></table>
+
+###### Результат в консоли браузера
+<table><tr><td><pre>
+▼ { name: "server", message: "I listen to you" }
+    message: "I listen to you"
+    name: "server"
+  ► __proto__: Object
+</pre></td></tr></table>
 ***
 
 ### Клиентская часть
 
 ###### создание объекта WebSocket
 
-При вызове конструктора **_WebSocket_** необходимо передать ему обязательный аргумент 
-```
-протокол://домен:порт
-```
-* протокол может быть `ws` или `wss`
-* поскольку мы создаем сервер на локальной машине, домен будет `localhost` или `127.0.0.1`
-* порт мы уже выбрали - 8080
+
 
 ```javascript
 const socket = new WebSocket('ws://localhost:8080')
