@@ -4,9 +4,6 @@
 ###### ✅ url-loader
 
 ***
-###### [:link: file-loader](https://www.npmjs.com/package/file-loader)
-###### [:link: loaders](https://webpack.js.org/loaders/)
-***
 ### :open_file_folder: images
 
 Создадим папку  :open_file_folder: images в корневой папке нашего проекта<br/>
@@ -224,3 +221,9 @@ module.exports = {
 ![](https://lh6.googleusercontent.com/H1x8wj8f_gxr6uvn__fH1R2XII_xG7VXN7XzEaqeSAsTUxTpaUkcN2OeA4CuXJfBrl7GC0Z1JDBAfSJNfzVA5FMGXbqGKRvDOslSsBXMxE7tTXIOyd3zh0wFCOhFzLzUgV6hmNwQbqnE5Gc)
 
 Файлы были конвертированы в строку base64 и встроены в сборку
+
+
+***
+###### [:link: file-loader](https://www.npmjs.com/package/file-loader)
+###### [:link: url-loader](http://docs.w3cub.com/webpack/loaders/url-loader/)
+###### [:link: loaders](https://webpack.js.org/loaders/)
