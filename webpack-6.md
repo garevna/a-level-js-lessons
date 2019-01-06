@@ -1,6 +1,8 @@
 ## :briefcase: Упражнение 6
 
 ###### ✅ file-loader
+###### ✅ url-loader
+
 ***
 ###### [:link: file-loader](https://www.npmjs.com/package/file-loader)
 ###### [:link: loaders](https://webpack.js.org/loaders/)
