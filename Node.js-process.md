@@ -53,7 +53,7 @@ const fs = require ( 'fs' )
 
 <img src="https://static.victaulic.com/wp-content/uploads/2017/05/Seismic-1.gif" width="300"/>
 
-> Потоки откуда-то "втекают" ( ReadableStream ) и куда-то "вытекают" ( WritadableStream )
+> Потоки откуда-то "втекают" ( ReadableStream ) и куда-то "вытекают" ( WritableStream )
 
 >> Они могут "втекать" ( из файла на сервере ), с клавиатуры ( в консоли ) и т.д.
 
@@ -127,3 +127,55 @@ process >>> Все, я закончил работу
 
 
 </pre></td></tr></table>
+
+***
+
+Теперь введем в игру **`process.stdin`**
+
+Для этого повесим обработчика события **_`data`_** на входящий поток по умолчанию 
+
+###### start.js
+
+```javascript
+process.stdout
+    .write ( 'Please, enter your name\n\n>>>' )
+
+process.stdin.on (
+    'data',
+    data => process.stdout
+        .write ( `Hi, ${data.toString()}\n\n` )
+)
+```
+
+Теперь наш процесс не завершается
+
+Сколько бы раз мы не ввели имя, в консоли каждый раз будет выводиться приветствие
+
+Процесс не может завершиться до тех пор, пока есть хоть один активный обработчик события
+
+Изменим ситуацию с помощью метода `process.exit()`
+
+###### start.js
+
+```javascript
+process.stdout
+    .write ( 'Please, enter your name\n\n>>>' )
+
+process.on ( 'exit', () => {
+    process.stdout
+        .write ( '\n\nprocess >>> Все, я закончил работу\n\n' )
+})
+
+process.stdin.on (
+    'data',
+    data => {
+        process.stdout
+            .write ( `Hi, ${data.toString()}\n\n` )
+        process.exit()
+    }
+)
+```
+
+Теперь после ввода имени и вывода приветствия процесс завершается
+
+Перед этим выводится сообщение "Все, я закончил работу"
