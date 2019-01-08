@@ -30,10 +30,10 @@ Immediately Invoked Function Expression
 :coffee:
 ```javascript
 var func = ( function ( arg ) {
-        var message = arg
-        return function ( name ) {
-                console.log ( `${ message }, ${ name }` )
-        }
+    var message = arg
+    return function ( name ) {
+        console.log ( `${ message }, ${ name }` )
+    }
 }) ( "Hello" )
 
 func ( "Дима" )
