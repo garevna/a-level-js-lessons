@@ -10,6 +10,7 @@
 console.dir ( EventTarget )
 ```
 Более всего нас интересует, конечно, его свойство **_`prototype`_**
+
 ```console
 ▼ ƒ EventTarget()
     arguments: null
@@ -25,6 +26,7 @@ console.dir ( EventTarget )
         ► __proto__: Object
     ► __proto__: ƒ ()
 ```
+
 Здесь мы видим три метода, которые унаследуют все объекты, имеющие в цепочке прототипов  **`EventTarget`**
 
 * [addEventListener](#addEventListener)
@@ -51,12 +53,56 @@ for ( var prop in HTMLElement.prototype ) {
     console.info ( `Event: ${prop.slice(2)}` ) 
 }
 ```
+
 Однако элементы DOM значительно отличаются друг от друга
 
 У каждого html-элемента есть собственный конструктор, который "добавляет" специфические" для этого элемента события
 
 ( например, события **`input`** и **`change`** могут произойти только на элементах форм )
+
 ***
+
+###### :coffee:  DOMNodeInserted
+
+```javascript
+document.body.ondomnodeinserted = 
+    function ( event ) {
+        console.log ( event )
+    }
+
+document.body.appendChild (
+    document.createElement ( "div" )
+)
+```
+
+###### Результат:
+
+```console
+▼ MutationEvent {isTrusted: true, relatedNode: body, prevValue: "", newValue: "", attrName: "", …}
+    attrChange: 0
+    attrName: ""
+    bubbles: true
+    cancelBubble: false
+    cancelable: false
+    composed: false
+    currentTarget: null
+    defaultPrevented: false
+    eventPhase: 0
+    isTrusted: true
+    newValue: ""
+  ► path: (5) [div, body, html, document, Window]
+    prevValue: ""
+  ► relatedNode: body
+    returnValue: true
+  ► srcElement: div
+  ► target: div
+    timeStamp: 12720.100000005914
+    type: "DOMNodeInserted"
+  ► __proto__: MutationEvent
+```
+
+***
+
 :warning: Событие - это объект 😉
 
 каждое событие создается конструктором **`Event`**
@@ -73,14 +119,60 @@ for ( var prop in HTMLElement.prototype ) {
     ✅ keydown
     ✅ keyup
     ...
+
+В примере выше тип события - `DOMNodeInserted`
+
+Кроме того, у каждого объекта события есть свойство `target`, которое является ссылкой на элемент, на котором произошло событие
+
+В большинстве случаев это тот элемент, на который был "повешен" обработчик
+
+:warning: Однако в примере выше обработчик был повешен на элемент `body`,<br/>
+а свойство `target` указывает на созданный элемент
+
+В следующем примере свойство `target` будет ссылкой на тот элемент, на котором произошел клик 
+
+###### :coffee: event.target
+
+```javascript
+const pictures = [
+    "https://www.insidescience.org/sites/default/files/5_heic1808a_crop.jpg",
+    "https://gobelmont.ca/Portals/0/xBlog/uploads/2017/9/6/dancing-156041_960_720.png",
+    "https://i2-prod.mirror.co.uk/incoming/article11840943.ece/ALTERNATES/s615/PAY-MATING-BUGS.jpg",
+    "https://i.redd.it/otqqqga0ip211.jpg"
+]
+
+const divs = pictures.map (
+    picture => {
+        let div = document.body.appendChild (
+            document.createElement ( "div" )
+        )
+        div.style = `
+            width: 100px;
+            height: 100px;
+            border: solid 1px gray;
+        `
+        div.onclick = function ( event ) {
+            let img = event.target.appendChild (
+                document.createElement ( "img" )
+            )
+            img.src = picture
+            img.width = 100
+        }
+        return div
+})
+```
+
 ***
 Полный перечень событий DOM можно найти в спецификации:
 
 [:link: :one:](https://www.w3schools.com/jsref/dom_obj_event.asp)
 [:link: :two:](https://www.w3schools.com/js/js_events.asp)
+
 ***
 
 ## :mortar_board: host-объект Event
+
+***
 
 Конструктор, с помощью которого создаются все события DOM
 
@@ -89,9 +181,14 @@ for ( var prop in HTMLElement.prototype ) {
 ```javascript
 var userEvent = new Event( 'user' )
 ```
+
+***
+
 ## :mortar_board: dispatchEvent
 
 Метод dispatchEvent "отправляет" событие элементу
+
+###### :coffee: dispatchEvent
 
 ```javascript
 document.body.onclick = function ( event ) {
@@ -100,11 +197,14 @@ document.body.onclick = function ( event ) {
 document.body.dispatchEvent ( new Event ( 'click' ) )
 ```
 
+***
+
 ## :mortar_board: CustomEvent
 
 Конструктор CustomEvent создает кастомное событие c дополнительными параметрами
 
-:coffee: 1
+###### :coffee: CustomEvent
+
 ```javascript
 function addElement ( tagName, container ) {
     var _container = 
@@ -142,8 +242,12 @@ btn.onclick = function ( event ) {
     }
 }
 ```
+
 ***
+
 ## :mortar_board: event handler
+
+***
 
 У всех элементов есть свойства с именами, начинающимися с  "**on**"
 
@@ -164,10 +268,16 @@ elem.onmouseover = function ( mev ) { ... }
 ```
 Таким образом объект события становится доступным внутри обработчика
 
+***
+
 #### :mortar_board: event.screenX | event.screenY
+
 Координаты указателя мышки относительно левого верхнего угла физического экрана 
 
+***
+
 #### :mortar_board: event.clientX | event.clientY
+
 Координаты указателя мышки относительно верхнего левого края видимой части окна браузера ( **_viewport_** )
 
 | [:coffee:](https://codepen.io/garevna/pen/jLbaMg) |
@@ -175,18 +285,28 @@ elem.onmouseover = function ( mev ) { ... }
 
 Эти координаты не зависят от положения полосы прокрутки окна браузера
 
+***
+
 #### :mortar_board: event.pageX | event.pageY
+
+***
 
 Координаты указателя мышки относительно верхнего левого края страницы
 
 Эти координаты зависят от положения полосы прокрутки окна браузера
+
+***
 
 #### :mortar_board: eventPhase
 
 | [:coffee:](https://jsfiddle.net/garevna/1cL6nk8j/4/) |
 |-|
 
+***
+
 ## :mortar_board: eventListener
+
+***
 
 Методы добавления и удаления прослушивателей событий:
 
@@ -204,8 +324,12 @@ elem.onmouseover = function ( mev ) { ... }
 
 На  элементе  **`div#sample`**  "сработают" оба обработчика при наведении указателя мышки
 
+***
+
 <a name="addEventListener"></a>
 ### :mortar_board: addEventListener
+
+***
 
 Первый аргумент метода addEventListener - это тип события ( строка ), например:
         "mouseover"
@@ -216,6 +340,8 @@ elem.onmouseover = function ( mev ) { ... }
 
 Второй аргумент - ссылка на функцию ( обработчика события )
 
+***
+
 :coffee: :one:
 ```javascript
 document.getElementById ( '#sample' )
@@ -223,6 +349,9 @@ document.getElementById ( '#sample' )
          console.log ( 'sample click event: ', event )
      })
 ```
+
+***
+
 :coffee: :two:
 ```javascript
 var elem = document.body.appendChild (
@@ -239,6 +368,8 @@ function clickdHandler ( event ) {
 elem.addEventListener ( 'click', clickdHandler )
 ```
 Третий аргумент - логическое значение - будучи установленным в **`true`**, позволяет перехватить событие на фазу погружения ( **_capturing_** )
+
+***
 
 :coffee: :three:
 ```javascript
@@ -262,12 +393,18 @@ document.body.addEventListener ( 'click', function ( event ) {
 }, true )
 ```
 
+***
+
 <a name="removeEventListener"></a>
 ### :mortar_board: removeEventListener
+
+***
 
 Прослушивателей событий нужно удалять, поскольку они не убираются автоматически при удалении элемента
 
 При удалении нужно передавать точно такие же аргументы, какие были переданы методу addEventListener при создании прослушивателя
+
+***
 
 :coffee: :four:
 
@@ -282,6 +419,9 @@ document.getElementById ( 'sample' )
          console.log ( 'sample click event: ', event )
     })
 ```
+
+***
+
 :coffee: :five:
 
 А такой - да:
@@ -292,7 +432,13 @@ function clickHandler ( event ) {
 elem.addEventListener ( 'click', clickHandler )
 elem.removeEventListener ( 'click', clickHandler )
 ```
+
+***
+
 :coffee: :six:
+
+###### Разметка
+
 ```html
 <div id="main-frame" class="wrapper">
     <div id="main-content">
@@ -315,6 +461,9 @@ elem.removeEventListener ( 'click', clickHandler )
    <p id="details">____________________</p>
 </div>
 ```
+
+###### Скрипт
+
 ```javascript
 var collection = document.querySelectorAll ( 'p ~ *' )
 collection.forEach ( x => {
@@ -341,6 +490,8 @@ function clickHandler ( event ) {
 elem.addEventListener ( 'click', clickHandler )
 ```
 
+***
+
 ### :mortar_board: preventDefault()
 
 Иногда мы не хотим, чтобы при наступлении события элемент HTML вел себя так, как он должен себя вести по умолчанию
@@ -351,7 +502,10 @@ elem.addEventListener ( 'click', clickHandler )
 
 Мы можем внутри обработчика события **_`click`_** элемента **`a`** вызвать метод **_`preventDefault()`_**, что предотвратит поведение по умолчанию, и перехода не будет
 
+***
+
 :coffee: :seven:
+
 ```javascript
 var elem = document.body.appendChild ( 
      document.createElement ( 'a' )
@@ -365,11 +519,16 @@ elem.addEventListener ( 'click',
     }
 )
 ```
+
+***
+
 ### :mortar_board: stopPropagation()
 
 Почти все события "всплывают" ( но не все, например, событие *_focus_* не всплывает )
 
 Предотвращает "всплытие" события, т.е. срабатывание обработчиков этого события на элементах, внутри которых находится целевой элемент
+
+***
 
 :coffee: :eight:
 
@@ -417,17 +576,24 @@ for ( var x = 1; x < 5; x++ ) {
    elems [x] = insertElement ( x, elems [ x - 1 ] )
 }
 ```
-Теперь перезагрузите страницу, опять вставьте код, но раскомментируйте строку   
+
+Теперь перезагрузите страницу, опять вставьте код, но раскомментируйте строку
+
 ```javascript
 event.stopPropagation()
 ```
+
 кликните на самом маленьком кружке и посмотрите, что будет выведено в консоль
+
+***
 
 ### :mortar_board: stopImmediatePropagation()
 
 Если у элемента есть несколько прослушивателей одного и того же события, они будут вызваны в том порядке, в котором они были добавлены
 
 Если один из обработчиков, установленных одним из этих listener-ов, вызовет метод **`event.stopImmediatePropagation ()`**, то остальные listener-ы, следующие за ним, уже не сработают
+
+***
 
 :coffee: :nine:
 
@@ -460,15 +626,24 @@ for ( var txt of text ) {
     )
 }
 ```
+
 то при клике на элементе сработают все прослушиватели собятия click элемента в той последовательности, в какой мы их определили
 
 Однако если убрать слеши перед строчкой
+
 ```javascript
 event.stopImmediatePropagation()
 ```
+
 то сработает только один прослушиватель, и выведена в консоль будет только одна строчка
+
 ***
-🔗 https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+[:link: W3S ](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+
+***
+
+
+
 
 ***
 Примеры в песочнице:
