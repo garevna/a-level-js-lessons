@@ -61,7 +61,8 @@ for ( var prop in HTMLElement.prototype ) {
 ( например, события **`input`** и **`change`** могут произойти только на элементах форм )
 
 
-![](https://github.com/garevna/js-course/blob/master/pictures/event-1.svg?raw=true)
+| <img src="https://github.com/garevna/js-course/blob/master/pictures/event-1.png?raw=true" width="300"/> |
+|-|
 
 ***
 
@@ -309,7 +310,8 @@ elem.onmouseover = function ( mev ) { ... }
 
 ## :mortar_board: eventListener
 
-***
+| <img src="https://github.com/garevna/js-course/blob/master/pictures/event-2.png?raw=true" width="400"/> |
+|-|
 
 Методы добавления и удаления прослушивателей событий:
 
