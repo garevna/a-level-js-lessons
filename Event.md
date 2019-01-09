@@ -60,6 +60,9 @@ for ( var prop in HTMLElement.prototype ) {
 
 ( например, события **`input`** и **`change`** могут произойти только на элементах форм )
 
+
+![](https://github.com/garevna/js-course/blob/master/pictures/event-1.svg?raw=true)
+
 ***
 
 ###### :coffee:  DOMNodeInserted
