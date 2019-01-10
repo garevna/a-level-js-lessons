@@ -333,4 +333,4 @@ getAllData ( "figures", "colors", "diameters" )
 |-|
 
 ***
-### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#async)
