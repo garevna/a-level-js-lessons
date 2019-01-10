@@ -205,66 +205,47 @@ data:[<media type>][;base64],<data>
 
 :coffee: :four:
 
-```javascript
-var fileSelector = document.body.appendChild (
-   document.createElement ( 'input' )
-)
-fileSelector.type = "file"
-
-fileSelector.onchange = function ( event ) {
-    let file = this.files[0]
-    if ( file.type.indexOf ( 'image/' ) >= 0 ) {
-        var reader = new FileReader ()
-        reader.readAsArrayBuffer ( file )
-        reader.onload = function ( event ) {
-            fetch ( 'https://httpbin.org/post', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': file.type
-                },
-                body: new Blob ( [ this.result ], { type: file.type } )
-            })
-            .then ( response => console.log ( response ) )
-        }
-    }
-}
-```
-:coffee: :five:
-
 :warning: Для выполнения упражнения перейдем на страницу http://ptsv2.com
 
-###### Загрузим изображение с клиента: 
+`не забудьте заменить _garevna_ на свой идентификатор`
+
+###### Загрузка изображения с клиента
+
 ```javascript
-var fileSelector = document.body.appendChild (
+const fileSelector = document.body.appendChild (
    document.createElement ( 'input' )
 )
 fileSelector.type = "file"
 
+const formData = new FormData()
+
 fileSelector.onchange = function ( event ) {
-    let file = this.files[0]
-    if ( file.type.indexOf ( 'image/' ) >= 0 ) {
-        var reader = new FileReader ()
-        reader.readAsArrayBuffer ( file )
-        reader.onload = function ( event ) {
-            fetch ( 'http://ptsv2.com/t/garevna/post', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': file.type
-                },
-                body: new Blob ( [ this.result ], { type: file.type } )
-            })
-            .then ( response => response.json()
-               .then ( response => console.log ( response ) )
-            )
-        }
-    }
+    formData.append ( "avatar", this.files[0] )
+
+    const request = new XMLHttpRequest()
+    request.open( "POST", "http://ptsv2.com/t/garevna/post" )
+    request.send( formData )
 }
 ```
-###### прочитаем записанное:
+
+###### прочитаем записанное
+
 ```javascript
-fetch ( 'http://ptsv2.com/t/garevna/d/890001/json')
-   .then ( response => {
-      let reader = response.body.getReader()
-      reader.read( response.body )
-         .then ( result => console.log ( result ) )
-   })
+const request = new XMLHttpRequest()
+request.open( "GET", "http://ptsv2.com/t/garevna/d/1110001/json" )
+request.onreadystatechange = function ( event ) {
+    if ( this.readyState < 4 ) return
+    let result = JSON.parse ( this.response )
+    let img = document.querySelector ( "img" )
+    img.src = `data:image/png;base64,${result.Files[0].Content}`   
+}
+request.send()
+```
+
+После выполнения этого кода вы увидите, как на странице изображение
+
+<img src="http://ptsv2.com/static/ToiletLogo.jpg" width="80"/>
+
+было заменено на
+
+<img src="https://github.com/garevna/js-course/blob/master/pictures/squared-menu.png?raw=true"/>
