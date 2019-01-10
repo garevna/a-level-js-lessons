@@ -202,6 +202,8 @@ getUsersData( 'josh' )
 
 :coffee: :three:
 
+Синхронизация асинхронных процессов приводит к увеличению времени выполнения
+
 Предположим, есть две функции, возвращающие промис:
 
 ```javascript
@@ -214,17 +216,18 @@ var getPosts = () =>
         setTimeout ( () => { resolve ( "Success" ) }, 1000 )
     } )
 ```
-Каждый вызов длится 1 секунду<br/>
-Нам нужно получить ответы от этих функций прежде, чем продолжить выполнение кода
 
-Объявим асинхронную функцию:
+Каждый вызов длится 1 секунду
+
+Если мы будем использовать асинхронную функцию для последовательного вызова getNames и getPosts, то суммарная продолжительность выполнения этих двух асинхронных операций составит не менее 2 сек
+
 ```javascript
 async function getData () {
     console.time ( 'time' )
-    var posts = await getPosts ().then ( response => response )
-    var names = await getNames ().then ( response => response )
+    var posts = await getPosts ()
+    var names = await getNames ()
     console.timeEnd ( 'time' )
-    console.info ( `names: ${ names } | posts: ${ posts }` )
+    console.info ( `names: ${ names } | posts: ${ posts }\n\n` )
 }
 ```
 Функция **getData ()** фиксирует время начала операций<br/>
@@ -272,11 +275,11 @@ function getData ( typ ) {
     })
 }
 
-async function getAllData () {
+function getAllData () {
     console.time ( "Total" )
     let promises = Array.from ( arguments )
         .map ( x => getData ( x ) )
-    await Promise.all ( promises )
+    Promise.all ( promises )
          .then ( response => {
              console.timeEnd ( "Total" )
              console.log ( "response: ", response )
