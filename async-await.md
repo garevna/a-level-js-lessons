@@ -322,7 +322,7 @@ getAllData ( "figures", "colors", "diameters" )
 
 Используем  fetch  для получения данных трех типов:  **_JSON_**, **_text_**, **_img_**
 
-| [:coffee: :five:](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview) |
+| [:coffee: :five:](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview "Пример в песочнице") |
 |-|
 
 ***
