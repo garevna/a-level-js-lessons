@@ -78,9 +78,9 @@ test instanceof AsyncFunction  // true
 
 Синхронизируются внутри асинхронной функции промисы
 
-Ключевое слово  **`await`**  выполняет ту же роль, что и метод then() каждого промиса
+Ключевое слово  **`await`**  выполняет ту же роль, что и метод `then()` каждого промиса
 
-Различие в том, что метод then() промиса запускает свой коллбэк асинхронно, 
+Различие в том, что метод `then()` промиса запускает свой коллбэк асинхронно, 
 
 а ключевое слово **`await`** запускает функцию обратного вызова в нужное время
 
@@ -94,9 +94,11 @@ test instanceof AsyncFunction  // true
 ⛔️ Uncaught SyntaxError: await is only valid in async function
 ```
 
+***
+
 :coffee: :one: 
 
-###### 
+###### Асинхронные процессы
 
 ```javascript
 function common ( message ) {
@@ -167,20 +169,38 @@ let test = async () => {
 test()
 ```
 
+Как видно из примера, код асинхронной функции проще, чем цепочка промисов
+
+
 :coffee: :two:
+
+
+
 ```javascript
 async function getUsersData ( userName ) {
-    var userData = await fetch ( `https://api.github.com/users/${userName}` )
+
+    let readJSON = url => fetch ( url )
         .then ( response => response.json() )
-    var userRepos = await fetch ( userData.repos_url )
-        .then ( response => response.json() )
-    return userRepos
+        
+    let userData = await readJSON (
+        `https://api.github.com/users/${userName}`
+    )
+
+    let userRepos = await readJSON ( userData.repos_url )
+
+    return await readJSON ( userRepos[0].events_url )
 }
 
-getUsersData( 'josh' ).then ( repos => console.log ( repos ) )
+getUsersData( 'josh' )
+    .then ( events => console.log ( events ) )
 ```
+
+***
+
 :coffee: :three:
+
 Предположим, есть две функции, возвращающие промис:
+
 ```javascript
 var getNames = () => 
     new Promise ( ( resolve, reject ) => {
