@@ -171,24 +171,27 @@ test()
 
 Как видно из примера, код асинхронной функции проще, чем цепочка промисов
 
+***
 
 :coffee: :two:
-
-
 
 ```javascript
 async function getUsersData ( userName ) {
 
     let readJSON = url => fetch ( url )
         .then ( response => response.json() )
-        
+
     let userData = await readJSON (
         `https://api.github.com/users/${userName}`
     )
 
+    document.body.appendChild (
+        document.createElement ( "img" )
+    ).src = userData.avatar_url
+
     let userRepos = await readJSON ( userData.repos_url )
 
-    return await readJSON ( userRepos[0].events_url )
+    return readJSON ( userRepos[0].events_url )
 }
 
 getUsersData( 'josh' )
