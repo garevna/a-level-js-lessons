@@ -76,7 +76,7 @@ test instanceof AsyncFunction  // true
 
 Однако асинхронная функция делает код линейным и прозрачным
 
-Синхронизируются внутри асинхронной функции промисы
+Внутри асинхронной функции синхронизируются вызовы коллбэков промисов
 
 Ключевое слово  **`await`**  выполняет ту же роль, что и метод `then()` каждого промиса
 
@@ -208,18 +208,25 @@ getUsersData( 'josh' )
 
 ```javascript
 var getNames = () => 
-    new Promise ( ( resolve, reject ) => {
-        setTimeout ( () => { resolve ( "Success" ) }, 1000 )  
-    } )
+    new Promise ( ( resolve, reject ) => 
+        setTimeout (
+            () => resolve ( "Names" ),
+            1000
+        )  
+    )
+
 var getPosts = () => 
-    new Promise ( ( resolve, reject ) => { 
-        setTimeout ( () => { resolve ( "Success" ) }, 1000 )
-    } )
+    new Promise ( ( resolve, reject ) =>  
+        setTimeout (
+            () => resolve ( "Posts" ),
+            1000
+        )
+    )
 ```
 
 Каждый вызов длится 1 секунду
 
-Если мы будем использовать асинхронную функцию для последовательного вызова getNames и getPosts, то суммарная продолжительность выполнения этих двух асинхронных операций составит не менее 2 сек
+Если мы будем использовать асинхронную функцию для последовательного вызова **getNames** и **getPosts**, то суммарная продолжительность выполнения этих двух асинхронных операций составит не менее 2 сек
 
 ```javascript
 async function getData () {
@@ -227,44 +234,53 @@ async function getData () {
     var posts = await getPosts ()
     var names = await getNames ()
     console.timeEnd ( 'time' )
-    console.info ( `names: ${ names } | posts: ${ posts }\n\n` )
+    console.info ( `\n${ names } | ${ posts }\n\n` )
 }
-```
-Функция **getData ()** фиксирует время начала операций<br/>
-затем вызовет функцию **getPosts ()** с ключевым словом  **`await`**,<br/>
-что означает, что пока асинхронный процесс функции **getPosts ()**<br/>
-не завершится тем или иным образом,<br/>
-выполнение кода будет приостановлено
 
-Итак, **getData ()** ждет завершения асинхронной операции **getPosts ()**,<br/>
-которая длится 1 сек.<br/>
-Когда операция будет завершена<br/>
-( т.е. промис функции **getPosts ()** будет разрешен либо resolve, либо reject ),<br/>
-функция **getData ()** вызовет функцию **getNames ()**, <br/>
-опять-таки  с ключевым словом  **`await`**<br/>
-Опять ожидание ( 1 сек ) завершения асинхронного процесса <br/>
-функции getNames (), после чего функция **getData ()** <br/>
-выведет в консоль суммарную продолжительность всех операций <br/>
-и полученные результаты
-
-Теперь вызовем функцию **getData ()**
-```javascript
 getData ()
 ```
-и посмотрим в консоль
+###### Результат в консоли
 ```console
-2 сек. names: Success  | posts: Success
+
+Names | Posts
+
+time: 2002.258056640625ms
 ```
-`Аналогичного результата мы могли достичь с помощью цепочки промисов`
 
 Что плохо?
 
-То, что несвязанные между собой асинхронные процессы выстраиваются в очередь<br/>
-Суммарная продолжительность операций 2 сек
+То, что несвязанные между собой асинхронные процессы выстраиваются в очередь
 
 Посмотрим на альтернативный вариант
 
+```javascript
+function getData () {
+    console.time ( 'time' )
+    Promise.all ([
+        getNames (),
+        getPosts ()
+    ])
+        .then (
+            result => {
+                console.info ( `\n${ result[0] } | ${ result[1] }\n\n` )
+                console.timeEnd ( 'time' )
+            }
+        )
+}
+```
+
+###### Результат в консоли
+```console
+
+Names | Posts
+
+time: 1001.474365234375ms
+```
+
+***
+
 :coffee: :four:
+
 ```javascript
 function getData ( typ ) {
     return new Promise ( function ( resolve, reject ) {
