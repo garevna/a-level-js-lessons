@@ -281,6 +281,13 @@ time: 1001.474365234375ms
 
 :coffee: :four:
 
+```html
+<body>
+    <label for="user">Name of github user:</label>
+    <input id="user"/>
+</body>
+```
+
 ```javascript
 function getData ( typ ) {
     return new Promise ( function ( resolve, reject ) {
@@ -304,15 +311,11 @@ function getAllData () {
 
 getAllData ( "figures", "colors", "diameters" )
 ```
-Функция  **getData ()**  возвращает промис<br/>
+Функция  **getData ()**  возвращает промис
+
 Промис будет разрешен через 1 сек
 
-Асинхронная функция  **getAllData ()**<br/>
-формирует  массив промисов  **promises**<br/>
-и запускает сразу все асинхронные процессы <br/>
-с помощью метода  **_Promise.all ()_**
-
-Перед вызовом метода  **_Promise.all ()_**  стоит ключевое слово  **await`**
+Функция  **getAllData ()** формирует  массив промисов  **promises** и запускает сразу все асинхронные процессы с помощью метода  **_Promise.all ()_**
 
 Что происходит в этом случае:
 
@@ -322,38 +325,12 @@ getAllData ( "figures", "colors", "diameters" )
 
 В нашем примере вместо 3 секунд, которые мы получили бы в случае последовательной обработки запросов ( как в примере 1 ) мы получили общую продолжительность 1 сек
 
+***
+
 Используем  fetch  для получения данных трех типов:  **_JSON_**, **_text_**, **_img_**
 
-[:coffee: :five:](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview)
+| [:coffee: :five:](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview) |
+|-|
 
-:coffee: :six:
-```javascript
-function getData ( typ ) {
-    var __data = {
-        colors: [ "blue", "green", "yellow", "orange", "red" ],
-        figures: [ "triangle", "circle", "elipse", "square" ],
-        diameters: [ 100, 200, 150, 250, 300 ]
-    }
-    return new Promise ( function ( resolve, reject ) {
-        setTimeout ( () => {
-            console.log ( 'Promise resolved: ', typ )
-            Object.keys ( __data ).indexOf ( typ ) < 0 
-                    ? reject ( "Data error" ) 
-                    : resolve ( __data [ typ ] )
-        }, Math.floor ( 2000 * Math.random() ) )
-    })
-}
-
-async function getAllData () {
-    let promises = []
-    for ( var x of arguments ) {
-        promises.push ( getData ( x ) )
-    }
-    return res = await Promise.all ( promises )
-}
-
-getAllData ( "figures", "colors", "diameters" )
-    .then ( response => console.log ( 'response: ', response ) )
-```
 ***
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLScCfkFXktsQVNsDi4VVF8xJuEV_TpZ1bwtzPFHR0eqTbcwxiQ/viewform)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
