@@ -100,9 +100,12 @@ iterator.next()
 ...
 ```
 ***
-## fetch data
 
-:coffee: :three:
+## Отправка данных на сервер
+
+:coffee: :three: 
+
+###### fetch
 
 ```javascript
 var fileSelector = document.body.appendChild (
@@ -114,9 +117,47 @@ let formData = new FormData()
 
 fileSelector.onchange = function ( event ) {
     formData.append ( "avatar", this.files[0] )
-    console.log ( formData.get ( "avatar" ) )
+    
+    fetch ( 'https://httpbin.org/post', {
+        method: 'POST',
+        headers: {
+            'Content-Type': "multipart/form-data"
+        },
+        body: formData
+    })
+    .then (
+        response => response.json()
+            .then (
+                response => console.log ( response )
+            )
+    )
 }
 ```
+
+###### XMLHttpRequest
+
+```javascript
+var fileSelector = document.body.appendChild (
+   document.createElement ( 'input' )
+)
+fileSelector.type = "file"
+
+let formData = new FormData()
+
+fileSelector.onchange = function ( event ) {
+    formData.append ( "avatar", this.files[0] )
+
+    var request = new XMLHttpRequest()
+    request.open( "POST", "https://httpbin.org/post" )
+    request.onreadystatechange = function ( event ) {
+        if ( this.readyState < 4 ) return
+        console.log ( this.status, this.response )
+    }
+    request.send( formData )
+}
+```
+
+
 :coffee: :four:
 
 ```javascript
