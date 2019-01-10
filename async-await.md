@@ -281,13 +281,6 @@ time: 1001.474365234375ms
 
 :coffee: :four:
 
-```html
-<body>
-    <label for="user">Name of github user:</label>
-    <input id="user"/>
-</body>
-```
-
 ```javascript
 function getData ( typ ) {
     return new Promise ( function ( resolve, reject ) {
