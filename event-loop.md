@@ -71,7 +71,7 @@ fetch ( "https://api.github.com/users" )
                 )
         )
 
-setTimeout ( () => message ( timeout 1' ), 0 )
+setTimeout ( () => message ( 'timeout 1' ), 0 )
 
 fetch ( "https://api.github.com/users?since=250" )
         .then (
