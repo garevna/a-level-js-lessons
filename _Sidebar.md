@@ -121,6 +121,7 @@
 |-|-|-|
 
 * [Функциональщина в JS](functionality)
+* [setTimeout](setTimeout)
 * [Замыкание](closure)
 * [:briefcase: Замыкание](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
