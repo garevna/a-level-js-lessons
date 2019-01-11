@@ -242,10 +242,10 @@ request.onreadystatechange = function ( event ) {
 request.send()
 ```
 
-После выполнения этого кода вы увидите, как на странице изображение
+После выполнения этого кода вы увидите, что на странице изображение
 
 <img src="http://ptsv2.com/static/ToiletLogo.jpg" width="80"/>
 
-было заменено на
+будет заменено на
 
 <img src="https://github.com/garevna/js-course/blob/master/pictures/squared-menu.png?raw=true"/>
