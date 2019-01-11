@@ -202,6 +202,7 @@
 
 * [Размеры и прокрутка элемента](scroll)
 * [let | const](let-const)
+* [Event Loop](event-loop)
 * [async | await](async-await)
 * [:briefcase: async function](https://garevna.github.io/js-quiz/#async)
 * [Тесты](https://garevna.github.io/js-quiz/#async%20function)
