@@ -1,5 +1,11 @@
 # :mortar_board: Элементы форм
 
+| `button` | [`input`](#input) | [`select`](#select) | `textarea` |
+|-|-|-|-|
+
+
+<a name="input"></a>
+
 ## :mortar_board: input
 
 Элемент `input` имеет свойства  **`type`** и  **`value`**
@@ -161,6 +167,8 @@ for ( var i = 0; i < 3; i++ ) {
 |-|
 
 ***
+
+<a name="select"></a>
 
 ## :mortar_board: select
 
