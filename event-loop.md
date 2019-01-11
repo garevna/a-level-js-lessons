@@ -59,7 +59,7 @@ function message ( text ) {
     document.body.innerText += `${text}\n\n`
 }
 
-document.body.innerText += 'start 0\n\n'
+message ( 'start 0' )
 
 setTimeout ( () => message ( 'timeout 0' ) , 0 )
 
@@ -71,7 +71,7 @@ fetch ( "https://api.github.com/users" )
                 )
         )
 
-setTimeout ( () => document.body.innerText += 'timeout 1', 0 )
+setTimeout ( () => message ( timeout 1' ), 0 )
 
 fetch ( "https://api.github.com/users?since=250" )
         .then (
@@ -81,7 +81,7 @@ fetch ( "https://api.github.com/users?since=250" )
                 )
         )
 
-setTimeout ( () => document.body.innerText += 'timeout 2\n\n', 0 )
+setTimeout ( () => message ( 'timeout 2' ), 0 )
 
 fetch ( "https://api.github.com/users?since=300" )
         .then (
