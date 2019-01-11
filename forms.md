@@ -162,3 +162,56 @@ for ( var i = 0; i < 3; i++ ) {
 
 ***
 
+## :mortar_board: select
+
+Элемент `select` - выпадающий список
+
+Элемент `option` - элемент выпадающего списка
+
+Элемент `select` является контейнером для элементов `option`
+
+Свойства элементов  `option`
+
+* `value` - значение, которое будет возвращено элементом `select` при выборе этого элемента списка
+* `innerText` - текст, который будет виден пользователю в выпадающем списке
+
+Свойства элемента  `select`
+
+* `value` - значение `value` выбранного `option`
+* `selectedIndex` - порядковый номер выбранного `option`
+
+***
+
+###### :coffee: :five:
+
+```javascript
+var members = [
+    "...",
+    "Алексеенко Валерия",
+    "Андриенко Екатерина",
+    "Бусуйко Кристина",
+    "Велигура Андрей",
+    "Веретельник Егор",
+    "Головахин Андрей",
+    "Денисенко Степан",
+    "Карабут Александр",
+]
+
+var groupMembers = document.createElement ( 'select' )
+document.body.appendChild ( groupMembers )
+
+for ( var member of members ) {
+    var option = document.createElement ( 'option' )
+    groupMembers.appendChild ( option )
+    option.value = option.innerHTML = member
+}
+
+groupMembers.onchange = function ( ev ) {
+    text.innerHTML = ev.target.selectedIndex + ': ' + ev.target.value
+}
+
+var text = document.createElement ( 'p' )
+document.body.appendChild ( text )
+```
+
+### [:briefcase: Тесты]()
