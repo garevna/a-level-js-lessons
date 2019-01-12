@@ -37,3 +37,6 @@
 | <img src="https://lh3.googleusercontent.com/1prRwVOXPAZXwRLps_lEG5K-mm1xc1ES80ThnSc2L17oMYU0GGU-L_8hg1nbWRYeYRHr6riseWVWYRfl-xf7vffnLFNVYOa7ZiCtv_948vXC-gGRNON8wPRgZ-q9twaxIDpBqMmYGA3sbZY" width="580"/> |
 |-|
 
+***
+
+[:briefcase: Тесты](https://garevna.github.io/js-quiz/#file-API)
