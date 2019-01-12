@@ -222,4 +222,6 @@ var text = document.createElement ( 'p' )
 document.body.appendChild ( text )
 ```
 
-### [:briefcase: Тесты]()
+***
+
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#forms)
