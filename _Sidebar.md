@@ -110,7 +110,8 @@
 * [Типы узлов дерева DOM](NodeTypes)
 * [Элементы DOM](DOM-elements)
 * [События  DOM](Event)
-* [Элементы форм](https://docs.google.com/forms/d/e/1FAIpQLSe2uALpHzKiId5zdyeceqIrxl3q5_kPYiQcKtHF4ggkMCN23g/viewform)
+* [:mortar_board: Элементы форм](forms)
+* [:briefcase: Элементы форм](https://garevna.github.io/js-quiz/#forms)
 * [:briefcase: Homework](hw-05)
 ***
 
