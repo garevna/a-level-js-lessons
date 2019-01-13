@@ -262,4 +262,4 @@ users.includes ( {
 |-|-|-|
 
 ***
-[:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLScAPm8aCdd7p86BkYFo9-mgsPtsgaaafv8zCz6RB58G47Skmg/viewform)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
