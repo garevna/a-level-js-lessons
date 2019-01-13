@@ -46,8 +46,21 @@ for ( var x of arr ) {
 
 ###### Онлайн-генераторы цифровой подписи SHA
 
-| [:link:**SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [ :link: **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |[:octocat: **SHA1**](https://github.com/emn178/js-sha1 "repo") |
-|-|-|-|
+| [:link:**SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [ :link: **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |
+|-|-|
+
+***
+
+### :octocat: js-sha1
+
+Вы можете установить пакет [**`js-sha1`**](https://github.com/emn178/js-sha1 "repo") из _CDN_
+
+<table><tr>
+<td><img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" height="20"/></td>
+<td><code>
+$ npm install js-sha1
+</code></td>
+</tr></table>
 
 ***
 
