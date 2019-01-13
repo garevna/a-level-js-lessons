@@ -157,7 +157,7 @@
 |-|-|-|
 
 * [JSON](JSON)
-* [curl](https://docs.google.com/forms/d/e/1FAIpQLSedkOQqHL7gYVxExpEubGlFqWPsX8xe2inxNSPoInOaI1DwCw/viewform)
+* [curl](curl)
 * [XMLHttpRequest](XMLHttpRequest)
 * [CSRF](CSRF)
 * [Promise](Promise)
