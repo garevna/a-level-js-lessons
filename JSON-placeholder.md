@@ -45,6 +45,8 @@ $ curl https://jsonplaceholder.typicode.com/posts/1/comments
 
 <img width="450" src="https://lh6.googleusercontent.com/RRQtfUSawytMqnSDIF4k8wpz1oDzkM8-RxWqBR3XN5PR18HS3jOfGfAyNVYe587xnJL0NoPfy7V1MbovDbOpPuJ0nFj0O-LZinvj2dmdBb1yLKFtRwMcKf7tXimuD0nEB0ZECxD7oPr7liU"/>
 
+***
+
 :coffee: :two:
 
 Получим все комментарии к первому посту прямо в консоли браузера, воспользовавшись методом `fetch`
