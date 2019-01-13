@@ -40,7 +40,7 @@ https://jsonplaceholder.typicode.com/posts
 
 <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" height="20"/> Выполним консольную команду
 ```
-$ curl https://jsonplaceholder.typicode.com/posts/1/comments
+$ curl https://jsonplaceholder.typicode.com/comments?postId=1
 ```
 
 <img width="450" src="https://lh6.googleusercontent.com/RRQtfUSawytMqnSDIF4k8wpz1oDzkM8-RxWqBR3XN5PR18HS3jOfGfAyNVYe587xnJL0NoPfy7V1MbovDbOpPuJ0nFj0O-LZinvj2dmdBb1yLKFtRwMcKf7tXimuD0nEB0ZECxD7oPr7liU"/>
@@ -52,7 +52,7 @@ $ curl https://jsonplaceholder.typicode.com/posts/1/comments
 Получим все комментарии к первому посту прямо в консоли браузера, воспользовавшись методом `fetch`
 
 ```javascript
-fetch ( 'https://jsonplaceholder.typicode.com/posts/1/comments' )
+fetch ( 'https://jsonplaceholder.typicode.com/comments?postId=1' )
     .then ( response => response.json ()
         .then ( json => console.log ( json ) )
     )
