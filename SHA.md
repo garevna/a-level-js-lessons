@@ -53,9 +53,13 @@ for ( var x of arr ) {
 
 ### SHA256
 
-Ссылка на скрипт:
+Вы можете подключить скрипт **`sha256`** к своей странице:
 
-https://cdn.rawgit.com/chrisveness/crypto/4e93a4d/sha256.js
+```html
+<script src="https://cdn.rawgit.com/chrisveness/crypto/4e93a4d/sha256.js"></script>
+```
+
+и использовать функцию **`Sha256.hash()`** для динамической генерации дайджеста любого текста 
 
 ```javascript
 var hash = Sha256.hash ( text )
@@ -63,6 +67,12 @@ var hash = Sha256.hash ( text )
 
 | [:coffee: :one:](https://garevna.github.io/js-samples/#07) |
 |-|
+
+Кроме того, в <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" height="20"/> **Bush** вы можете использовать консольную команду `sha256sum`
+
+###### sha256sum
+
+![](https://lh4.googleusercontent.com/wM_pdlag2wymXBf0vtG0LDwLUPyKPmNI0Z8op0grW79K0LNzSzQMTdOx_1zQtT9Utj6VxtRtNEjJajYfCusV8LejAeXMvtOliRJG_T6btsIShVCe20WkxABN4P2K5zqwp6E9ORQpuRwKF4k)
 
 ***
 
