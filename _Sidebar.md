@@ -211,7 +211,7 @@
 * [Тесты](https://garevna.github.io/js-quiz/#async%20function)
 * [API](API)
 * [REST | HATEOAS](REST)
-* [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeJd1VfRPKOkcZoqcybhS9u53MN2i55pTAejoRAgKtOEEVBPA/viewform)
+* [:briefcase: Упражнения](JSON-placeholder)
 * [:briefcase: Практика](JSON-server)
 * [:briefcase: fake chat](Fake-chat)
 * [:briefcase: Homework](hw-11)
