@@ -52,6 +52,7 @@
 * [Оператор switch](switch)
 * [Методы строк](Strings-methods)
 * [Методы массивов](Array-methods)
+* [:briefcase: Методы массивов](https://garevna.github.io/js-quiz/#arrayMethods)
 * [Date ()](Date-constructor)
 * [📝 Самостоятельная работа](self-work-02)
 * [:briefcase: Практика (XSS)](XSS)
