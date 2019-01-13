@@ -8,10 +8,6 @@
 
 ***
 
-### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
-
-***
-
 <a name="1"></a>
 ### :memo: pop ()
 
