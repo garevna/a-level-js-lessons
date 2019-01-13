@@ -44,11 +44,10 @@ for ( var x of arr ) {
 
 ***
 
-:link: [ Онлайн-генератор цифровой подписи SHA1](https://passwordsgenerator.net/sha1-hash-generator/)
+###### Онлайн-генераторы цифровой подписи SHA
 
-:octocat: [ repo](https://github.com/emn178/js-sha1)
-
-:link: [ Онлайн-генератор цифровой подписи SHA2](https://passwordsgenerator.net/sha256-hash-generator/)
+| [:link:**SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [ :link: **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |[:octocat: **SHA1**](https://github.com/emn178/js-sha1 "repo") |
+|-|-|-|
 
 ***
 
@@ -73,7 +72,7 @@ var hash = Sha256.hash ( text )
 
 В этом окне откройте **_Chrome DevTools_**
 
-Создайте  фрагмент кода ( **snippet** ), как показано на [:movie_camera: видео](https://www.youtube.com/watch?v=xg9qsryE8Hk)
+Создайте  фрагмент кода ( **snippet** ), как показано на видео [<img src="https://github.com/garevna/js-course/blob/master/pictures/logo_small_2x-vfl4_cFqn%5B1%5D.png?raw=true" height="22"/>](https://www.youtube.com/watch?v=xg9qsryE8Hk)
 
 Вставьте следующий код сниппета:
 ```javascript
@@ -86,13 +85,15 @@ document.head.appendChild( script )
 
 ***
 
-# :mortar_board: integrity
+## :mortar_board: integrity
 
 **_Subresource Integrity_** ( **SRI** ) - это функция безопасности, которая позволяет браузерам проверять файлы, загружаемые из внешних источников ( например, из CDN )
 
 Если файл был изменен, то значение атрибута  **`integrity`** ( цифровой подписи файла ) не будет соответствовать новому значению, вычисленному браузером, и загрузка поврежденного файла не произойдет
 
 Для генерации дайджестов файлов используйте [:link: сервис](https://www.srihash.org/)
+
+![](https://lh3.googleusercontent.com/JUoOnSODv-YbGzZ_qsAWeSB4MRjYiAL62kmeb6eOSQZvMbVFKgUzC8XAdJq4GRtoWT-8N4AVAbWnXdZfHmLcGRgI-DOuvqANAPLjvLHfvAsC6m0Yas_mNZQ_Mb-w2dwnVh4Zth6ZOwxUYew)
 
 * Вставьте ссылку на файл в сети
 * Нажмите  кнопку   **`Hash!`**
@@ -104,10 +105,11 @@ document.head.appendChild( script )
 
 ## :briefcase: Самостоятельная работа
 
-Посмотрите код [:coffee: примера](https://garevna.github.io/js-samples/#09) в отладчике
+Посмотрите код [:coffee: **примера**](https://garevna.github.io/js-samples/#09) в отладчике
 
 Установите **`breakpoints`**
-С помощью **`Watch`** отслеживайте, как изменяются значения массива  **users** и переменной **user**
+
+С помощью **`Watch`** отслеживайте, как изменяются значения массива  **_users_** и переменной **_user_**
 
 ###### Задание:
 
@@ -138,7 +140,7 @@ users = [
 
 После ввода _email_ нужно найти пользователя с таким _**email**_ и запросить пароль
 
-После ввода пароля должен быть сгенерирован дайджест, который будет проверяться на совпадение со значением **key**
+После ввода пароля должен быть сгенерирован дайджест, который будет проверяться на совпадение со значением **_key_**
 найденного пользователя
 
 Если значения не совпадут, нужно вывести предупреждение
