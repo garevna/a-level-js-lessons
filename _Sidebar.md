@@ -132,7 +132,7 @@
     * [Методы](arrayIterators-methods)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 * [:coffee: Примеры](lesson-06-samples)
-* [SHA](https://docs.google.com/forms/d/e/1FAIpQLSfV6vHH1zsVVNzYU7wwuM8cFpP-S44jBZBwMfCxVG5g6guEOA/viewform)
+* [SHA](SHA)
 * [:briefcase: Homework](hw-06)
 ***
 
