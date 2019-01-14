@@ -28,9 +28,46 @@
 
 ## Переменные в литералах
 
+:heavy_exclamation_mark: Литерал строки заворачивается в символы обратных кавычек ( **`** )
+
+Литерал может содержать многострочный текст,
+
+т.е. в литерал можно вставлять символ перевода строки
+
+:coffee: :one:
+
+```javascript
+var str = "\nПривет,\nменя зовут Дима\n"
+
+var lit = `
+    Привет,
+    меня зовут Дима
+
+`
+
+console.log ( str )
+console.log ( lit )
+console.log ( str.charCodeAt (0) )
+console.log ( lit.charCodeAt (0) )
+```
+
+###### Результат в консоли:
+
+<img src="https://lh4.googleusercontent.com/hZWmdkrIYfsdLxbDNphnWHBdMWwdK-eP6PIHXU7bNNBMmCC0mRxtpjZKgU71ozT-1WVF-KgtOOTSy0gGQgQDU-_c4m0qhz3mZyK96p7OqjJwHYHKaP9ghEB17YXramEN9GXEw6OSjXCGUx0" width="250"/>
+
+###### 10 - это код символа перевода строки
+
+Обратите внимание, что в обычной строке ( str ) нам пришлось вставлять перевод строки с помощью \n
+
+В литерале мы просто набираем многострочный текст, что улучшает читабельность кода
+
+Но это не все достоинства литерала
+
+***
+
 Конструкция `${ имя_переменной }` позволяет вставлять значения переменных непосредственно в литерал строки
 
-:coffee:
+:coffee: :two:
 
 ```javascript
 var cities = [ "Неаполь", "Вашингтон", "Женева" ]
@@ -49,8 +86,6 @@ for ( var i = 0; i < cities.length; i++ ) {
 2: Вашингтон
 3: Женева
 ```
-
-:heavy_exclamation_mark: Литерал строки заворачивается в символы обратных кавычек ( **`** )
 
 ***
 
