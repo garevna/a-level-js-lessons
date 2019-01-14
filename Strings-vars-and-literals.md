@@ -57,15 +57,15 @@ console.log ( lit.charCodeAt (0) )
 
 ###### 10 - это код символа перевода строки
 
-Обратите внимание, что в обычной строке ( str ) нам пришлось вставлять перевод строки с помощью \n
+Обратите внимание, что в обычной строке ( **str** ) нам пришлось вставлять перевод строки с помощью `\n`
 
-В литерале мы просто набираем многострочный текст, что улучшает читабельность кода
+В литерале ( **lit** ) мы просто набираем многострочный текст, что улучшает читабельность кода
 
 Но это не все достоинства литерала
 
 ***
 
-Конструкция `${ имя_переменной }` позволяет вставлять значения переменных непосредственно в литерал строки
+Конструкция **_`${ имя_переменной }`_** позволяет вставлять значения переменных непосредственно в литерал строки
 
 :coffee: :two:
 
@@ -113,7 +113,7 @@ console.log ( str )
 
 ###### Результат в консоли:
 
-<img width="400" src="https://lh6.googleusercontent.com/DhqLf_YtZbWoqFT2BRMswxpt1ccotkTUkYbVB4r4IUpctgrEuOTJuhycbk4-MaonVYwNzUZvg2hX0h65a75whcI3wem8JzW5Jpmym0Fl1PlNnapQWbabWRZMXeGvKFc0h5RFFld5c28Ku7M"/>
+<img width="450" src="https://lh6.googleusercontent.com/DhqLf_YtZbWoqFT2BRMswxpt1ccotkTUkYbVB4r4IUpctgrEuOTJuhycbk4-MaonVYwNzUZvg2hX0h65a75whcI3wem8JzW5Jpmym0Fl1PlNnapQWbabWRZMXeGvKFc0h5RFFld5c28Ku7M"/>
 
 ***
 
