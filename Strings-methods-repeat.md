@@ -45,6 +45,8 @@ console.log ( str.repeat ( 4 ) )
 * [`String.fromCharCode()`](String-fromCharCode)
 * [`Переменные в литералах`](Strings-vars-and-literals)
 
+***
+
 #### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
 
 ***
