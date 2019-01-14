@@ -53,7 +53,7 @@ console.log ( lit.charCodeAt (0) )
 
 ###### Результат в консоли:
 
-<img src="https://lh4.googleusercontent.com/hZWmdkrIYfsdLxbDNphnWHBdMWwdK-eP6PIHXU7bNNBMmCC0mRxtpjZKgU71ozT-1WVF-KgtOOTSy0gGQgQDU-_c4m0qhz3mZyK96p7OqjJwHYHKaP9ghEB17YXramEN9GXEw6OSjXCGUx0" width="250"/>
+<img src="https://lh4.googleusercontent.com/hZWmdkrIYfsdLxbDNphnWHBdMWwdK-eP6PIHXU7bNNBMmCC0mRxtpjZKgU71ozT-1WVF-KgtOOTSy0gGQgQDU-_c4m0qhz3mZyK96p7OqjJwHYHKaP9ghEB17YXramEN9GXEw6OSjXCGUx0" width="220"/>
 
 ###### 10 - это код символа перевода строки
 
@@ -86,6 +86,34 @@ for ( var i = 0; i < cities.length; i++ ) {
 2: Вашингтон
 3: Женева
 ```
+
+***
+
+Можно использовать выражения, значения которых будут вычислены и вставлены в литерал:
+
+:coffee: :three:
+
+```javascript
+var cities = [
+    "Киев",
+    "Львов",
+    "Харьков",
+    "Одесса",
+    "Днепропетровск"
+]
+
+var str = ""
+
+for ( var x = 0; x < cities.length; x++ ) {
+    str += `${cities[x].charCodeAt(0)}: ${cities[x]}\n`
+}
+
+console.log ( str )
+```
+
+###### Результат в консоли:
+
+<img width="400" src="https://lh6.googleusercontent.com/DhqLf_YtZbWoqFT2BRMswxpt1ccotkTUkYbVB4r4IUpctgrEuOTJuhycbk4-MaonVYwNzUZvg2hX0h65a75whcI3wem8JzW5Jpmym0Fl1PlNnapQWbabWRZMXeGvKFc0h5RFFld5c28Ku7M"/>
 
 ***
 
