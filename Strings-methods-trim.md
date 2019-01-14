@@ -40,6 +40,8 @@ console.log ( str.trim () )  // 54
 * [`String.fromCharCode()`](String-fromCharCode)
 * [`Переменные в литералах`](Strings-vars-and-literals)
 
+***
+
 #### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
 
 ***
