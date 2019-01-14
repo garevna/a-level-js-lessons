@@ -40,6 +40,8 @@ console.log ( str.charAt ( 4 ) )   //  Ш
 * [`String.fromCharCode()`](String-fromCharCode)
 * [`Переменные в литералах`](Strings-vars-and-literals)
 
+***
+
 #### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
 
 ***
