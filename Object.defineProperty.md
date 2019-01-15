@@ -82,6 +82,32 @@ thing.priceUAH = 450
 
 console.log ( thing.priceUDS )
 ```
+
+:coffee: :three:
+
+```javascript
+var course = 28
+
+var thing = {
+    name: "Утюг",
+    mark: "Tefal",
+    priceUSD: 20,
+
+    get priceUAH () {
+        return this.priceUSD * course
+    },
+
+    set priceUAH ( newPriceUAH ) {
+        this.priceUSD = newPriceUAH / course
+    }
+}
+
+console.log ( thing.priceUAH )
+
+thing.priceUAH = 250
+
+console.log ( thing.priceUSD )
+```
 ***
 * <a href="Object.defineProperties">`Object.defineProperties()`</a>
 * <a href="Object.entries">`Object.entries()`</a>
