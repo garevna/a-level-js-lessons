@@ -1,15 +1,22 @@
 # :mortar_board: Статические методы конструктора  Object
+
 * <a href="Object.assign">`Object.assign()`</a>
 * <a href="Object.create">`Object.create()`</a>
+
 ***
+
 ## :mortar_board: Object.defineProperty()
+
 Этот метод позволяет создать объекту свойство с дескриптором
 
 * Первый аргумент метода - ссылка на объект, которому добавляется свойство
 * Второй аргумент - имя свойства ( строка )
 * Третий аргумент - объект дескриптора свойства
 
-:coffee: Добавим свойство **_type_** объекту **sample** и сделаем это свойство неперечислимым
+:coffee: :one:
+
+Добавим свойство **_type_** объекту **sample** и сделаем это свойство неперечислимым
+
 ```javascript
 var sample = {
     name: "figure",
@@ -23,17 +30,26 @@ Object.defineProperty ( sample, 'type', {
 
 Object.keys ( sample )
 ```
+
 ###### Результат:
+
 ```console
 ► (3) ["name", "size", "color"]
 ```
-### :mortar_board: геттер и сеттер свойства
-Добавим еще одно свойство объекту  **sample**<br/>
-Свойство   **_operation_**   будет  с геттером и сеттером<br/>
-:warning: Когда определяются атрибуты _`get()`_  и  _`set()`_ в дескрипторе свойства, <br/>
-нельзя использовать атрибуты  _`writable`_ и _`value`_
 
-:coffee: :one:
+***
+
+### :mortar_board: геттер и сеттер свойства
+
+###### [Вычисляемые свойства](get-and-set)
+
+:coffee: :two:
+
+Добавим еще одно свойство объекту  **sample**
+
+Свойство   **_operation_**   будет  с геттером и сеттером
+
+:warning: Когда определяются атрибуты _`get()`_  и  _`set()`_ в дескрипторе свойства, нельзя использовать атрибуты  _`writable`_ и _`value`_
 
 ```javascript
 Object.defineProperty ( sample, "operation", {
@@ -42,7 +58,9 @@ Object.defineProperty ( sample, "operation", {
     set: newVal => this.operation = newVal + "***"
 })
 ```
+
 ###### Результат:
+
 ```console
 ▼ {name: "figure", size: 100, color: "red", type: "svg"}
     color: "red"
@@ -55,7 +73,9 @@ Object.defineProperty ( sample, "operation", {
   ► __proto__: Object
 ```
 
-:coffee: :two:
+***
+
+:coffee: :three:
 
 ```javascript
 var course = 28
@@ -76,47 +96,39 @@ Object.defineProperty ( thing, "priceUAH", {
 })
 
 console.log ( thing.priceUAH )
+```
 
+###### Результат:
+
+```console
+560
+```
+
+Теперь выполним присваивание значения вычисляемому свойству ( вызывая под капотом сеттер этого свойства ):
+
+```javascript
 thing.priceUAH = 450
 
 console.log ( thing.priceUDS )
 ```
 
-:coffee: :three:
+###### Результат:
+
+```console
+8.928571428571429
+```
+
+Выведем в консоль дескриптор вычисляемого свойства **`priceUAH`**
 
 ```javascript
-var course = 28
-
-var thing = {
-    name: "Утюг",
-    mark: "Tefal",
-    priceUSD: 20,
-
-    get priceUAH () {
-        return this.priceUSD * course
-    },
-    set priceUAH ( newPriceUAH ) {
-        this.priceUSD = newPriceUAH / course
-    }
-}
-
-console.log ( thing.priceUAH )
-
-thing.priceUAH = 250
-
-console.log ( thing.priceUSD )
-
 console.log (
     Object.getOwnPropertyDescriptor ( thing, "priceUAH" )
 )
 ```
 
 ###### Результат:
+
 ```console
-560
-
-8.928571428571429
-
 ▼ {get: ƒ, set: ƒ, enumerable: true, configurable: true}
     configurable: true
     enumerable: true
@@ -126,6 +138,7 @@ console.log (
 ```
 
 ***
+
 * <a href="Object.defineProperties">`Object.defineProperties()`</a>
 * <a href="Object.entries">`Object.entries()`</a>
 * `Object.freeze()`
