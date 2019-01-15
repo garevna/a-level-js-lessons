@@ -73,7 +73,6 @@ Object.defineProperty ( thing, "priceUAH", {
     set: function ( newPriceUAH ) {
         this.priceUSD = newPriceUAH / course
     }
-    
 })
 
 console.log ( thing.priceUAH )
@@ -96,7 +95,6 @@ var thing = {
     get priceUAH () {
         return this.priceUSD * course
     },
-
     set priceUAH ( newPriceUAH ) {
         this.priceUSD = newPriceUAH / course
     }
