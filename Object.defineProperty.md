@@ -32,6 +32,9 @@ Object.keys ( sample )
 Свойство   **_operation_**   будет  с геттером и сеттером<br/>
 :warning: Когда определяются атрибуты _`get()`_  и  _`set()`_ в дескрипторе свойства, <br/>
 нельзя использовать атрибуты  _`writable`_ и _`value`_
+
+:coffee: :one:
+
 ```javascript
 Object.defineProperty ( sample, "operation", {
     get: () => this.operation ? 
@@ -50,6 +53,34 @@ Object.defineProperty ( sample, "operation", {
   ► get operation: () => {…}
   ► set operation: newVal => this.operation = newVal + "***"
   ► __proto__: Object
+```
+
+:coffee: :two:
+
+```javascript
+var course = 28
+
+var thing = {
+    name: "Утюг",
+    mark: "Tefal",
+    priceUSD: 20
+}
+
+Object.defineProperty ( thing, "priceUAH", {
+    get: function () {
+        return this.priceUSD * course
+    },
+    set: function ( newPriceUAH ) {
+        this.priceUSD = newPriceUAH / course
+    }
+    
+})
+
+console.log ( thing.priceUAH )
+
+thing.priceUAH = 450
+
+console.log ( thing.priceUDS )
 ```
 ***
 * <a href="Object.defineProperties">`Object.defineProperties()`</a>
