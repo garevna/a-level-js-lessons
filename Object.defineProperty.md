@@ -105,7 +105,26 @@ console.log ( thing.priceUAH )
 thing.priceUAH = 250
 
 console.log ( thing.priceUSD )
+
+console.log (
+    Object.getOwnPropertyDescriptor ( thing, "priceUAH" )
+)
 ```
+
+###### Результат:
+```console
+560
+
+8.928571428571429
+
+▼ {get: ƒ, set: ƒ, enumerable: true, configurable: true}
+    configurable: true
+    enumerable: true
+  ► get: ƒ priceUAH()
+  ► set: ƒ priceUAH( newPriceUAH )
+  ► __proto__: Object
+```
+
 ***
 * <a href="Object.defineProperties">`Object.defineProperties()`</a>
 * <a href="Object.entries">`Object.entries()`</a>
