@@ -99,11 +99,11 @@ class Picture {
 
 typeof Picture  // "function"
 ```
-> :warning: объявленный класс невозможно удалить динамически, без перезагрузки страницы<br/>
-> В примере :one: идентификатор  **_Picture_**  уже занят, и никакие магические заклинания не помогут переопределить его  содержание
+> :warning: `объявленный класс невозможно удалить динамически, без перезагрузки страницы`<br/>
+> `В примере` :one: `идентификатор`  **_`Picture`_**  `уже занят, и никакие магические заклинания не помогут переопределить его  содержание`
 
-> :warning: если обычный конструктор JS можно вызвать и как функцию, и как конструктор ( с ключевым словом `new` ), 
-то конструктор класса вызвать без ключевого слова `new`  нельзя - будет сгенерировано исключение **_TypeError_**
+> :warning: `если обычный конструктор JS можно вызвать и как функцию, и как конструктор ( с ключевым словом `**`new`**` ), 
+то конструктор класса вызвать без ключевого слова `**`new`**`  нельзя - будет сгенерировано исключение `**_`TypeError`_**`
 ```javascript
 let x = new Picture ( "http://www.radioactiva.cl/wp-content/uploads/2018/05/pikachu.jpg", 200 )
 document.body.appendChild ( x.elem )
@@ -114,57 +114,124 @@ document.body.appendChild ( x.elem )
 | [:arrow_double_up:](#es6--ecmascript-2015-) |
 |-|
 
-###### еще один способ определить класс
 ###### class expression может быть именованным или аниномным
 
 #### Примеры именованных классов
+
 ###### :coffee: :two:
+
 ```javascript
 let Picture = class {
-    constructor () {
-        this.canvas = document.createElement ( 'canvas' )
-        document.body.appendChild ( this.canvas )
-        this.area = this.canvas.getContext ( "2d" )
+    constructor ( url = "https://cdn.pastemagazine.com/www/articles/GrinchPOster_header.jpg" ) {
+        this.elem = document.body.appendChild ( 
+            document.createElement ( 'img' )
+        )
+        this.elem.src = url
     }
 }
 
-Picture.name   // "Picture"
+console.dir ( Picture )
 ```
+
+###### Результат в консоли:
+
+```console
+▼ class Picture
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: "Picture"
+  ► prototype: {constructor: ƒ}
+  ► __proto__: ƒ ()
+```
+
+Однако если мы создадим экземпляр этого класса, и посмотрим на него в консоли, то мы увидим, что имя класса отсутствует
+
+```javascript
+let sample = new Picture
+
+console.log ( sample )
+```
+
+###### Результат в консоли:
+
+```console
+▼ Picture {elem: img}
+    elem: img
+  ▼ __proto__:
+      ► constructor: class
+      ► __proto__: Object
+```
+
 ###### :coffee: :three:
+
 ```javascript
 let Picture = class Canvas {
-    constructor () {
-        this.canvas = document.createElement ( 'canvas' )
-        document.body.appendChild ( this.canvas )
-        this.area = this.canvas.getContext ( "2d" )
+    constructor ( url = "https://cdn.pastemagazine.com/www/articles/GrinchPOster_header.jpg" ) {
+        this.elem = document.body.appendChild ( 
+            document.createElement ( 'img' )
+        )
+        this.elem.src = url
     }
 }
 
-Picture.name   // "Canvas"
+console.dir ( Picture )
 ```
-* Имя _class expression_ является локальным для тела класса
-* Оно доступно как свойство  **_name_**  класса
-* Из экземпляра  picture  класса можно получить имя класса так:
+
+###### Результат в консоли:
+
+```console
+▼ class Canvas
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: "Canvas"
+  ► prototype: {constructor: ƒ}
+  ► __proto__: ƒ ()
+```
+
+А теперь создадим экземпляр этого класса и выведем его в консоль:
+
 ```javascript
-picture.__proto__.constructor.name   // "Canvas"
+let sample = new Picture
+
+console.log ( sample )
 ```
-#### Пример анонимного класса
+
+###### Результат в консоли:
+
+```console
+▼ Canvas {elem: img}
+    elem: img
+  ▼ __proto__:
+      ► constructor: class Canvas
+      ► __proto__: Object
+```
+
+```javascript
+sample instanceof Picture   // true
+```
+
+```javascript
+sample instanceof Canvas
+```
+
+```error
+❌ Uncaught ReferenceError: Canvas is not defined
+```
+
+Итак, при использовании class expression имя класса становится недоступным извне
+
+Точнее говоря, достучаться до него можно только так:
+
+```javascript
+pict.constructor.name
+```
+
+***
+
 ###### :coffee: :four:
-```javascript
-let pict = new class {
-    constructor () {
-        this.canvas = document.createElement ( 'canvas' )
-        document.body.appendChild ( this.canvas )
-        this.area = this.canvas.getContext ( "2d" )
-    }
-} ()
-```
-здесь мы создаем экземпляр  **_pict_**  анонимного класса
-```javascript
-pict.__proto__.constructor.name  // ""
-```
-###### :coffee: :five:
-```javascript
+
 const Sample = class Canvas {
     constructor () {
         this.canvas = document.createElement ( 'canvas' )
@@ -204,31 +271,38 @@ console.log ( Sample.name ) // "Canvas"
 
 :warning: Потеря контекста происходит всегда, если ссылка на метод передается в новую переменную:
 
-###### :coffee: :six:
+###### :coffee: :five:
+
 ```javascript
      let drawLine = pict.drawLine
      drawLine ( [ { x: 50, y: 50 }, { x: 250, y: 250 } ] )
 ```
+
 будет сгенерировано исключение:
+
 ```console
 ⛔️ Uncaught TypeError: Cannot read property 'area' of undefined
 ```
+
 Передачу контекста вызова нужно сделать явным образом:
+
 ```javascript
 let drawLine = pict.drawLine.bind ( pict )
 ```
-> :pushpin: Потеря контекста ( undefined ) происходит вследствие того, что весь код внутри тела класса выполняется в  strict mode, хотя явного указания  'use strict'  в коде класса нет
+
+> :pushpin: Потеря контекста ( undefined ) происходит вследствие того, что весь код внутри тела класса выполняется в  **_strict mode_**, хотя явного указания  'use strict'  в коде класса нет
 
 > При отсутствии явного указания на объект, вызывающий метод, <br/>
 > в строгом режиме `this` не будет ссылкой на глобальный объект  `window`<br/>
 > В строгом режиме `this` будет  `undefined`
 ***
 
-:coffee: :seven:
+:coffee: :six:
 
-В этом примере контекст теряется в функции **_getProp()_**,<br/>
-объявленной внутри метода **_addSomeInfo_**<br/>
-( внутренняя функция не наследует контекст вызова родительской )<br/>
+В этом примере контекст теряется в функции **_getProp()_**,  объявленной внутри метода **_addSomeInfo_**
+
+( внутренняя функция не наследует контекст вызова родительской )
+
 ```javascript
 class User {
     constructor ( name ) {
@@ -245,9 +319,8 @@ class User {
     }
 }
 ```
-Создадим экземпляр **user** класса **User**<br/>
-и вызовем метод **_addSomeInfo_**<br/>
-в контексте объекта **user**
+Создадим экземпляр **user** класса **User** и вызовем метод **_addSomeInfo_** в контексте объекта **user**
+
 ```javascript
 var user = new User ( "Grig" )
 user.addSomeInfo ([
@@ -255,13 +328,17 @@ user.addSomeInfo ([
     { name: "hobby", value: [ "football", "fishing" ] }
 ])
 ```
+
 ###### :scream_cat: Результат
+
 ```console
 ⛔️ Uncaught TypeError: Cannot set property 'age' of undefined
 ```
+
 :heavy_exclamation_mark: Внутри функции **_getProp_** контекст вызова ( **`this`** ) оказался `undefined`
 
 Теперь используем стрелочную функцию **_getProp_**, которая не теряет контекст :wink:
+
 ```javascript
 class User {
     constructor ( name ) {
@@ -276,7 +353,9 @@ class User {
     }
 }
 ```
-Создадим экземпляр **user** и вызовем метод **_addSomeInfo_**<br/>
+
+Создадим экземпляр **user** и вызовем метод **_addSomeInfo_**
+
 ```javascript
 var user = new User ( "Grig" )
 user.addSomeInfo ([
@@ -285,7 +364,9 @@ user.addSomeInfo ([
 ])
 console.log ( user )
 ```
+
 ###### :scream_cat: Результат
+
 ```console
 ▼ User {name: "Grig", age: 25, hobby: Array(2)}
     age: 25
@@ -296,7 +377,9 @@ console.log ( user )
       ► constructor: class User
       ► __proto__: Object
 ```
+
 ***
+
 ### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdQqNcBcLuvW7d7_Msf2a7y1BRbVcUptun6IFQ2ybfqCheTRA/viewform)
 ***
 
