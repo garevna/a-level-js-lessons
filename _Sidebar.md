@@ -230,6 +230,11 @@
 * [Вычисляемые имена свойств](calculated-prop-names)
 * [Краткий синтаксис методов](short-form-of-method-declaration)
 * [Классы](Class)
+    * [extends](Class-extends)
+    * [super](Class-super)
+    * [static](Class-static)
+    * [ get & set ](Class-get-set)
+    * [:coffee:](Class-sample)
 * [:briefcase: Homework](hw-12)
 
 ***
