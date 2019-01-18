@@ -68,6 +68,7 @@
 * [Циклы while и do...while](while)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#while)
 * [Циклы for...of и for...in](for-of-and-for-in)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#for-in-for-of)
 * [Параметры по умолчанию](default-params-values)
 * [Объект function](function-object)
 * [:briefcase: Практика](practice-03)
