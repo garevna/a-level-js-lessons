@@ -49,7 +49,6 @@
 * [NaN | null | Infinity](NaN-null-Infinity)
 * [Функции](function)
 * [Методы](method)
-* [Оператор switch](switch)
 * [Методы строк](Strings-methods)
     * [:briefcase: Упражнения](https://garevna.github.io/js-quiz/#stringMethods)
 * [Методы массивов](Array-methods)
@@ -112,9 +111,11 @@
 * [Oбъект document](document)
 * [Типы узлов дерева DOM](NodeTypes)
 * [Элементы DOM](DOM-elements)
+* [Оператор switch](switch)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
 * [События  DOM](Event)
 * [:mortar_board: Элементы форм](forms)
-* [:briefcase: Элементы форм](https://garevna.github.io/js-quiz/#forms)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#forms)
 * [:briefcase: Homework](hw-05)
 ***
 
