@@ -48,6 +48,7 @@
 * [Приведение типов](data-types-conversion)
 * [NaN | null | Infinity](NaN-null-Infinity)
 * [Функции](function)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#function)
 * [Методы](method)
 * [Методы строк](Strings-methods)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
