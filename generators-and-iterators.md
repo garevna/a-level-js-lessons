@@ -146,28 +146,23 @@ user [ Symbol.iterator ] = function* () {
         yield this.showAvatar ()
 }
 ```
-Теперь наш объект можно итерировать обычным `for...of`
+
+###### Теперь объект **user** можно итерировать обычным `for...of`
+
 ```javascript
 for ( var x of user )
     console.log ( `working...` )
 ```
-✍ Добавим свойство  **_iterator_**  объекту  **user**:
-```javascript
-user.iterator = user [ Symbol.iterator ]()
-```
-✊ Теперь в свойстве  **_iterator_**  объекта  **user** находится ссылка на итератор
 
-Вызовем его:
+###### или воспользоваться оператором `spread`:
+
 ```javascript
-user.iterator.next()
-```
-Чтобы заставить итератор отработать до конца:
-```javascript
-while ( !user.iterator.next().done ) {}
+console.log ( ...user )
 ```
 
-:coffee: :two:
-###### Строка текста
+
+###### :coffee: :two: Строка текста
+
 ```javascript
 function* someGenerator ( startValue, endValue ) {
     var y = startValue
