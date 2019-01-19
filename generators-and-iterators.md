@@ -254,4 +254,4 @@ function* avaGenerator () {
 let getAvatar = avaGenerator ()
 ```
 ***
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSf3HcSENvJodCQjaW_azeh_lMXwCD6HsRq3adiPnyqRFm_6Vg/viewform)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
