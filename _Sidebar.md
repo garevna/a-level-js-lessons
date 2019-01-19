@@ -251,7 +251,7 @@
 * [Фабричные методы](fabric)
 * [Деструктуризация](Destructuring)
 * [Генераторы и итераторы](generators-and-iterators)
-* [:briefcase: Генераторы и итераторы](https://garevna.github.io/js-quiz/#gen)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
 * [:briefcase: Homework](hw-13)
 
 ***
