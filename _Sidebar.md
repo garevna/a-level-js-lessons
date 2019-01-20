@@ -221,7 +221,7 @@
 * [:briefcase: Упражнения](JSON-placeholder)
 * [:briefcase: Практика](JSON-server)
 * [:briefcase: fake chat](Fake-chat)
-* [:briefcase: Homework](hw-11)
+* [:briefcase: Homework](hw-12)
 
 ***
 <a name="toc-13"></a>
