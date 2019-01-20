@@ -216,19 +216,40 @@ console.log ( ...user )
 :coffee: :three:
 
 ```javascript
-function* someGenerator ( startValue, endValue ) {
-    let y = startValue
-    while ( y < endValue ) 
-        yield y += String.fromCharCode ( y.charCodeAt( y.length-1 ) + 1 )
+const elements = [
+    { tagName: "div", attrs: { id: "first", innerText: "first" } },
+    { tagName: "article", attrs: { id: "second", innerText: "second" } },
+    { tagName: "figure", attrs: { id: "third", innerText: "third" } },
+    { tagName: "p", attrs: { id: "forth", innerText: "forth" } }
+]
+
+elements [ Symbol.iterator ] = function* () {
+    let itemNum = 0
+    while ( itemNum < this.length ) {
+        yield ( () => {
+            var elem = document.body.appendChild ( 
+                document.createElement (
+                    this [ itemNum ].tagName
+                )
+            )
+            if ( this [ itemNum ].attrs ) 
+                for ( var x in this [ itemNum ].attrs ) {
+                    elem [ x ] = this [ itemNum ].attrs [ x ]
+                }
+            itemNum++
+            return elem
+        })()
+    }
 }
-const someIterator = someGenerator ( "a", "abcdef" )
+
+for ( let elem of elements ) {}
 ```
 
 ***
 
-:coffee: :four: 
+### Асинхронный генератор
 
-###### Асинхронный генератор
+:coffee: :four: 
 
 Создадим генератор, который выдает по одному символу в секунду из массива, переданного ему в качестве аргумента
 
@@ -278,7 +299,54 @@ showMessage ( "Привет, студент!" )
 
 :coffee: :five:
 
-###### Связные списки
+```javascript
+let circle = document.createElement ( "div" )
+circle.style = `
+    border: solid 2px blue;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.2s;
+    opacity: 1;
+`
+
+circle.bubblesGenerator = ( async function* () {
+    let bubble = () => new Promise (
+        function ( resolve ) {
+            setTimeout ( () => resolve ( "next" ), 100 )
+        }
+    )
+    while ( true ) {
+        let radius = this.offsetWidth > 200 ?
+                     50 : this.offsetWidth + 5
+        console.log ( this.style.opacity ) 
+        await bubble ()
+        this.style.width = `${radius}px`
+        this.style.height = `${radius}px`
+        this.style.opacity = radius === 50 ?
+                          1 : Math.max ( this.style.opacity - 0.02, 0 )
+        yield radius
+    }
+}).call ( circle )
+
+
+document.body.appendChild ( circle )
+
+async function show () {
+    let step = 200
+    while ( step --> 0 )
+        await circle.bubblesGenerator.next()
+}
+
+show()
+```
+
+***
+
+### Связные списки
+
+:coffee: :six:
 
 Пусть у нас есть массив объектов
 
@@ -354,39 +422,7 @@ for ( let obj of objects )
 let [ a, b, c, d ] = objects
 ```
 
-***
 
-:coffee: :six:
-
-```javascript
-const elements = [
-    { tagName: "div", attrs: { id: "first", innerText: "first" } },
-    { tagName: "article", attrs: { id: "second", innerText: "second" } },
-    { tagName: "figure", attrs: { id: "third", innerText: "third" } },
-    { tagName: "p", attrs: { id: "forth", innerText: "forth" } }
-]
-
-elements [ Symbol.iterator ] = function* () {
-    let itemNum = 0
-    while ( itemNum < this.length ) {
-        yield ( () => {
-            var elem = document.body.appendChild ( 
-                document.createElement (
-                    this [ itemNum ].tagName
-                )
-            )
-            if ( this [ itemNum ].attrs ) 
-                for ( var x in this [ itemNum ].attrs ) {
-                    elem [ x ] = this [ itemNum ].attrs [ x ]
-                }
-            itemNum++
-            return elem
-        })()
-    }
-}
-
-for ( let elem of elements ) {}
-```
 
 ***
 
