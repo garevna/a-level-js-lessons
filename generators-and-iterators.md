@@ -343,7 +343,7 @@ show()
 
 ***
 
-| [:coffee: :six:](generators-sample-6) |
+| [:coffee: :six:](generators-sample-6) Слайдер |
 |-|
 
 ***
