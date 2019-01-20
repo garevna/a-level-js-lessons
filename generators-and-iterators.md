@@ -369,7 +369,6 @@ const elements = [
 elements [ Symbol.iterator ] = function* () {
     let itemNum = 0
     while ( itemNum < this.length ) {
-        console.log ( this [ itemNum ] )
         yield ( () => {
             var elem = document.body.appendChild ( 
                 document.createElement (
