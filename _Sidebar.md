@@ -119,7 +119,7 @@
 * [События  DOM](Event)
 * [:mortar_board: Элементы форм](forms)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#forms)
-* [:briefcase: Homework](hw-05)
+* [:briefcase: Homework](hw-06)
 ***
 
 <a name="toc-7"></a>
