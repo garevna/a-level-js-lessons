@@ -9,7 +9,7 @@
 :warning: Неявное приведение типов происходит в процессе вычисления выражений
 
 <a name="string"></a>
-### :mortar_board: Неявное приведение к типу `string`
+#### :mortar_board: Неявное приведение к типу `string`
 
 | [`number`](#number) | [`boolean`](#boolean)|
 |-|-|
@@ -71,7 +71,7 @@ null + +[ 4 ]          // 4
 ***
 
 <a name="number"></a>
-### :mortar_board: Неявное приведение к типу `number`
+#### :mortar_board: Неявное приведение к типу `number`
 
 | [`string`](#string) |  [`boolean`](#boolean) |
 |-|-|
@@ -135,7 +135,7 @@ a == b      // 1 == null  --> false
 ***
 
 <a name="boolean"></a>
-### :mortar_board: Неявное приведение к типу `boolean`
+#### :mortar_board: Неявное приведение к типу `boolean`
 
 | [`string`](#string) |  [`number`](#number) |
 |-|-|
@@ -240,3 +240,9 @@ var y = !!x        // false
 |-|-|-|
 
 ***
+
+#### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
+
+***
+| [:link: w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [:link: Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+|-|-|
