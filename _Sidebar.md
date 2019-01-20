@@ -239,7 +239,7 @@
     * [static](Class-static)
     * [ get & set ](Class-get-set)
     * [:coffee:](Class-sample)
-* [:briefcase: Homework](hw-12)
+* [:briefcase: Homework](hw-13)
 
 ***
 <a name="toc-14"></a>
