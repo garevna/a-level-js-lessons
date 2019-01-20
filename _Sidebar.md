@@ -252,7 +252,7 @@
 * [Деструктуризация](Destructuring)
 * [Генераторы и итераторы](generators-and-iterators)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
-* [:briefcase: Homework](hw-13)
+* [:briefcase: Homework](hw-14)
 
 ***
 <a name="toc-15"></a>
