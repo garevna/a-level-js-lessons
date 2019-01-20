@@ -154,7 +154,7 @@
 * [Методы Object](Object-static-props)
 * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
 * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
-* [:briefcase: Homework](hw-07)
+* [:briefcase: Homework](hw-08)
 
 ***
 <a name="toc-9"></a>
