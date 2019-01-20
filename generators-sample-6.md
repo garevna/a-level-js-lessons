@@ -1,9 +1,7 @@
 | [:rewind:](generators-and-iterators) |
 |-|
 
-:coffee: :six:
-
-Создадим [слайдер](https://garevna.github.io/js-samples/#21) с помощью итератора
+Создадим [:coffee: слайдер](https://garevna.github.io/js-samples/#21) с помощью итератора
 
 Для начала определим массив картинок **pictures**
 
