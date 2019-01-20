@@ -299,6 +299,8 @@ showMessage ( "Привет, студент!" )
 
 :coffee: :five:
 
+###### Асинхронный генератор
+
 ```javascript
 let circle = document.createElement ( "div" )
 circle.style = `
