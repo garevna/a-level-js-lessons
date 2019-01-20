@@ -169,7 +169,7 @@
 * [CSRF](CSRF)
 * [Promise](Promise)
 * [:briefcase: Promise](https://garevna.github.io/js-quiz/#promise)
-* [:briefcase: Homework](hw-08)
+* [:briefcase: Homework](hw-09)
 
 ***
 <a name="toc-10"></a>
