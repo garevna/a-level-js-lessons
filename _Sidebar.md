@@ -140,7 +140,7 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](SHA)
-* [:briefcase: Homework](hw-06)
+* [:briefcase: Homework](hw-07)
 ***
 
 <a name="toc-8"></a>
