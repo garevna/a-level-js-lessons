@@ -71,15 +71,17 @@ for ( var x=0; x < 100; x++ ) {
 Вот так "рождается" итератор со встроенным алгоритмом итерирования массива данных
 
 ```javascript
-var iterator = generator ( ... )
+let iterator = generator ( ... )
 ```
 
 ***
 
 :coffee: :two:
 
+Пусть есть некий объект **user**
+
 ```javascript
-var user = {
+let user = {
     login: "Сергей",
     avatar: "https://www.shareicon.net/data/2015/12/14/207817_face_300x300.png",
     email: "serg789@gmail.com",
@@ -105,29 +107,49 @@ var user = {
         return x
     }
 }
+```
 
+С помощью генератора определим протокол итерирования этого объекта:
+
+```javascript
 user.generator = function* () {
     yield this.showLogin ()
     yield this.showEmail ()
     yield this.showAvatar ()
 }
+```
 
+Теперь создадим объект итератора:
+
+```javascript
 user.iterator = user.generator ()
+```
+
+и запустим цикл итерирования:
+
+```javascript
 while ( !user.iterator.next().done ) {}
 ```
+
+На самом деле такое решение является чрезмерно громоздким
+
+Все значительно упростится с использованием глобального символа **`Symbol.iterator`**
 
 ***
 
 ### Symbol.iterator
 
-Если у объекта есть свойство  **`Symbol.iterator`**, то этот объект является итерабельным<br/>
+Все очень просто:
+
+Если у объекта есть свойство  **`Symbol.iterator`**, то этот объект является итерабельным
+
 ( то есть можно перебирать его свойства оператором for...of )
 
 **`Symbol.iterator`**  является ссылкой на функцию-генератор
 
 ***
 
-Используем `Symbol.iterator` в контексте предыдущего примера 
+Используем **`Symbol.iterator`** в контексте предыдущего примера 
 
 ```javascript
 user [ Symbol.iterator ] = function* () {
@@ -140,8 +162,7 @@ user [ Symbol.iterator ] = function* () {
 Теперь объект **user** можно итерировать обычным `for...of`
 
 ```javascript
-for ( var x of user )
-    console.log ( `working...` )
+for ( var x of user ) {}
 ```
 
 или воспользоваться оператором `spread`:
@@ -156,11 +177,11 @@ console.log ( ...user )
 
 ```javascript
 function* someGenerator ( startValue, endValue ) {
-    var y = startValue
+    let y = startValue
     while ( y < endValue ) 
         yield y += String.fromCharCode ( y.charCodeAt( y.length-1 ) + 1 )
 }
-var someIterator = someGenerator ( "a", "abcdef" )
+const someIterator = someGenerator ( "a", "abcdef" )
 ```
 
 ***
@@ -174,7 +195,7 @@ var someIterator = someGenerator ( "a", "abcdef" )
 ```javascript
 async function* messageGenerator ( arr ) {
     while ( arr.length > 0 ) {
-        var result = await new Promise (
+        let result = await new Promise (
             function ( resolve ) {
                 setTimeout (
                     () => resolve ( arr.shift() ),
@@ -219,10 +240,29 @@ showMessage ( "Привет, студент!" )
 
 ###### Связные списки
 
+Пусть у нас есть массив объектов
+
+```javascript
+const objects = [
+    { val: "first",  nextItem: "second" },
+    { val: "forth",  nextItem: "fifth" },
+    { val: "sixth",  nextItem: null },
+    { val: "third",  nextItem: "forth" },
+    { val: "fifth",  nextItem: "sixth" },
+    { val: "second", nextItem: "third" }
+]
+```
+
+Каждый элемент массива содержит свойство **`nextItem`** - ссылку на другой элемент этого же массива
+
+Создадим протокол итерирования такого массива
+
+Пусть элементы массива перебираются не в том порядке, в котором они расположены в массиве, а по новому протоколу, т.е. следующим будет выбираться элемент, указанный в свойстве **`nextItem`** текущего элемента
+
 ```javascript
 function* someGenerator ( objs ) {
-    var currentItem = objs [ 0 ]
-    var nextItem = objs [ 0 ]
+    let currentItem = objs [ 0 ]
+    let nextItem = objs [ 0 ]
     while ( !!nextItem ) {
         currentItem = nextItem
         nextItem = !!currentItem.nextItem ? 
@@ -231,17 +271,47 @@ function* someGenerator ( objs ) {
         yield currentItem.val
     }
 }
+```
 
-var objects = [
-    { val: "first",  nextItem: "second" },
-    { val: "forth",  nextItem: "fifth" },
-    { val: "sixth",  nextItem: null },
-    { val: "third",  nextItem: "forth" },
-    { val: "fifth",  nextItem: "sixth" },
-    { val: "second", nextItem: "third" }
-]
+Генератор принимает в качестве аргумента ссылку на итерируемый массив
 
+Создадим итератор для массива **objects**
+
+```javascript
 var iterator = someGenerator ( objects )
+```
+
+Теперь можно использовать метод `next()` итератора **_iterator_**
+
+***
+
+:pushpin: Изменим протокол итерирования массива
+
+```javascript
+objects[Symbol.iterator] = function* () {
+    let currentItem = this [ 0 ]
+    let nextItem = this [ 0 ]
+    while ( !!nextItem ) {
+        currentItem = nextItem
+        nextItem = !!currentItem.nextItem ? 
+            this.find ( x => currentItem.nextItem === x.val )
+            : null
+        yield currentItem.val
+    }
+}
+```
+
+Теперь оператор `for...of` будет итерировать массив **objects** в нужном порядке
+
+```javascript
+for ( let obj of objects )
+    console.log ( obj )
+```
+
+Кроме того, при деструктуризации массива **objects** значения будут возвращены в указанном протоколом порядке
+
+```javascript
+let [ a, b, c, d ] = objects
 ```
 
 ***
