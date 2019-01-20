@@ -266,7 +266,7 @@
 * [Custom elements](Custom-elements)
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
-* [:briefcase: Homework](hw-14)
+* [:briefcase: Homework](hw-15)
 
 ***
 <a name="toc-16"></a>
