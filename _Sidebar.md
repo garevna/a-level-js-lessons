@@ -266,7 +266,7 @@
 * [Custom elements](Custom-elements)
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
-* [:coffee:](https://github.com/garevna/game/wiki)
+* [:coffee:](https://github.com/garevna/game/wiki) Пример
 * [:briefcase: Homework](hw-15)
 
 ***
