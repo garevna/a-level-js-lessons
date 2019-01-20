@@ -4,7 +4,7 @@
 
 ***
 
-## :mortar_board: Явное приведение типов
+### :mortar_board: Явное приведение типов
 
 | [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) |
 |-|-|-|-|
@@ -52,7 +52,7 @@ Boolean ( "50" )  // true
 ***
 
 <a name="number"></a>
-### :mortar_board: Явное приведение к типу `number`
+#### :mortar_board: Явное приведение к типу `number`
 
 | [`string`](#string) | [`boolean`](#boolean) | [`object`](#object) |
 |-|-|-|
@@ -126,7 +126,7 @@ parseFloat('3.14/5')    // 3.14
 ***
 
 <a name="boolean"></a>
-### :mortar_board: Явное приведение к типу `boolean`
+#### :mortar_board: Явное приведение к типу `boolean`
 
 | [`string`](#string) | [`number`](#number) | [`object`](#object) |
 |-|-|-|
@@ -152,7 +152,7 @@ Boolean ( false )
 ***
 
 <a name="string"></a>
-### :mortar_board: Явное приведение к типу `string`
+#### :mortar_board: Явное приведение к типу `string`
 
 | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) |
 |-|-|-|
@@ -185,10 +185,10 @@ Number(58).toString(16)  // "3a"
 ***
 
 <a name="object"></a>
-### :mortar_board: Явное приведение к типу `object`
+#### :mortar_board: Явное приведение к типу `object`
 
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) |
-|-|-|-|-|
+| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) |
+|-|-|-|
 
 ```javascript
 Object ( 5 + 8 + false )
