@@ -359,28 +359,34 @@ let [ a, b, c, d ] = objects
 :coffee: :six:
 
 ```javascript
-function* elemsGenerator ( elemsProps ) {
-    for ( let elemData of elemsProps ) {
-        yield ( elem => {
-            var el = document.createElement ( elem.tagName )
-            document.body.appendChild ( el )
-            if ( elem.attrs ) 
-                for ( var x in elem.attrs ) {
-                    el [ x ] = elem.attrs [ x ]
+const elements = [
+    { tagName: "div", attrs: { id: "first", innerText: "first" } },
+    { tagName: "article", attrs: { id: "second", innerText: "second" } },
+    { tagName: "figure", attrs: { id: "third", innerText: "third" } },
+    { tagName: "p", attrs: { id: "forth", innerText: "forth" } }
+]
+
+elements [ Symbol.iterator ] = function* () {
+    let itemNum = 0
+    while ( itemNum < this.length ) {
+        console.log ( this [ itemNum ] )
+        yield ( () => {
+            var elem = document.body.appendChild ( 
+                document.createElement (
+                    this [ itemNum ].tagName
+                )
+            )
+            if ( this [ itemNum ].attrs ) 
+                for ( var x in this [ itemNum ].attrs ) {
+                    elem [ x ] = this [ itemNum ].attrs [ x ]
                 }
-            return el
-        })( elemData )
+            itemNum++
+            return elem
+        })()
     }
 }
 
-var elems = [
-    { tagName: "div", attrs: { id: "first", className: "first" } },
-    { tagName: "article", attrs: { id: "second", className: "second" } },
-    { tagName: "figure", attrs: { id: "third", className: "third" } },
-    { tagName: "p", attrs: { id: "forth", className: "forth" } }
-]
-
-var newElement = elemsGenerator ( elems )
+for ( let elem of elements ) {}
 ```
 
 ***
