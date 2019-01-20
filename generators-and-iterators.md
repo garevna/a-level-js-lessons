@@ -320,12 +320,11 @@ circle.bubblesGenerator = ( async function* () {
     while ( true ) {
         let radius = this.offsetWidth > 200 ?
                      50 : this.offsetWidth + 5
-        console.log ( this.style.opacity ) 
         await bubble ()
         this.style.width = `${radius}px`
         this.style.height = `${radius}px`
         this.style.opacity = radius === 50 ?
-                          1 : Math.max ( this.style.opacity - 0.02, 0 )
+            1 : Math.max ( this.style.opacity - 0.02, 0 )
         yield radius
     }
 }).call ( circle )
