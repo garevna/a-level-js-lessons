@@ -287,7 +287,7 @@
 * [:briefcase: Упражнение 6](webpack-6)
 * [:briefcase: Упражнение 7](webpack-7)
 * [:briefcase: Упражнение 8](webpack-8)
-* [:briefcase: Homework](hw-15)
+* [:briefcase: Homework](hw-16)
 
 ***
 | [:arrow_heading_up:](#toc-3) | <a name="toc-bottom"><img width="800"/></a> | [:arrow_double_up:](#toc-top) |
