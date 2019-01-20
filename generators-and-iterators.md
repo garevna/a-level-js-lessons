@@ -61,9 +61,13 @@ for ( var x=0; x < 100; x++ ) {
 Собственно говоря, алгоритм работы итератора описывается в генераторе
 
 Вот так "рождается" итератор со встроенным алгоритмом итерирования массива данных
+
 ```javascript
 var iterator = generator ( ... )
 ```
+
+:coffee: :one:
+
 ```javascript
 var user = {
     login: "Сергей",
@@ -100,50 +104,24 @@ user.generator = function* () {
 
 user.iterator = user.generator ()
 while ( !user.iterator.next().done ) {}
-// user.iterator.next()  // {value: "Сергей", done: false}
-// user.iterator.next()  // {value: "serg789@gmail.com", done: false}
-// user.iterator.next()  // {value: img, done: false}
-// user.iterator.next()  // {value: undefined, done: true}
 ```
+
+***
+
 #### Symbol.iterator
+
 Если у объекта есть свойство  **`Symbol.iterator`**, то этот объект является итерабельным<br/>
 ( то есть можно перебирать его свойства оператором for...of )
 
 **`Symbol.iterator`**  является ссылкой на функцию-генератор
 
-:coffee: :one:
-```javascript
-var user = {
-    login: "Сергей",
-    avatar: "https://www.shareicon.net/data/2015/12/14/207817_face_300x300.png",
-    email: "serg789@gmail.com",
-    hobby: [ "football", "fishing" ],
-    place: document.body.appendChild (
-        document.createElement ( "figure" )
-    ),
-    showAvatar () {
-        let ava = this.place.appendChild (
-            document.createElement ( "img" )
-        )
-        ava.src = this.avatar
-        ava.width = "70"
-    },
-    showLogin () {
-        this.place.appendChild (
-            document.createElement ( "h3" )
-        ).innerHTML = this.login
-    },
-    showEmail () {
-        this.place.appendChild (
-            document.createElement ( "p" )
-        ).innerHTML = this.email
-    }
-}
+###### Используем `Symbol.iterator` в контексте предыдущего примера 
 
+```javascript
 user [ Symbol.iterator ] = function* () {
-        yield this.showLogin ()
-        yield this.showEmail ()
-        yield this.showAvatar ()
+    yield this.showLogin ()
+    yield this.showEmail ()
+    yield this.showAvatar ()
 }
 ```
 
@@ -160,6 +138,7 @@ for ( var x of user )
 console.log ( ...user )
 ```
 
+***
 
 ###### :coffee: :two: Строка текста
 
@@ -172,8 +151,60 @@ function* someGenerator ( startValue, endValue ) {
 var someIterator = someGenerator ( "a", "abcdef" )
 ```
 
-:coffee: :three:
+***
+
+:coffee: :three: Асинхронный генератор
+
+Создадим генератор, который выдает по одному символу в секунду из массива, переданного ему в качестве аргумента
+
+```javascript
+async function* messageGenerator ( arr ) {
+    while ( arr.length > 0 ) {
+        var result = await new Promise (
+            function ( resolve ) {
+                setTimeout (
+                    () => resolve ( arr.shift() ),
+                    1000
+                )
+            }
+        )
+        yield result
+    }
+}
+```
+
+Поскольку протокол итерирования, заложенный в генераторе, возвращает промис на каждой итерации, для работы с ним объявим асинхронную функцию **showMessage**
+
+**showMessage** создаст итератор с помощью генератора **messageGenerator**, передав ему строку, которая будет выводиться на страницу по одному символу в секунду
+
+**showMessage** будет ждать ( `await` ), когда асинхронный итератор вернет очередное значение, и после этого выведет его на страницу
+
+```javascript
+async function showMessage ( message ) {
+    const iterator = messageGenerator ( [...message] )
+    let finish = false
+
+    while ( !finish ) {
+        let currentState = await iterator.next()
+        document.body.innerText += !currentState.done ?
+            currentState.value : ""
+        finish = currentState.done
+    }
+}
+```
+
+Вызовем асинхронную функцию **showMessage**:
+
+```javascript
+showMessage ( "Привет, студент!" )
+```
+
+***
+
+:coffee: :four:
+
 ###### Связные списки
+
 ```javascript
 function* someGenerator ( objs ) {
     var currentItem = objs [ 0 ]
@@ -199,7 +230,10 @@ var objects = [
 var iterator = someGenerator ( objects )
 ```
 
-:coffee: :four:
+***
+
+:coffee: :five:
+
 ```javascript
 function* elemsGenerator ( elemsProps ) {
     for ( let elemData of elemsProps ) {
@@ -225,7 +259,10 @@ var elems = [
 var newElement = elemsGenerator ( elems )
 ```
 
-:coffee: :five:
+***
+
+:coffee: :six:
+
 ```javascript
 let btn = document.body.appendChild (
     document.createElement ( "button" )
@@ -248,5 +285,7 @@ function* avaGenerator () {
 
 let getAvatar = avaGenerator ()
 ```
+
 ***
+
 ### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
