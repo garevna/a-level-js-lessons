@@ -184,7 +184,7 @@
 * [cookie](cookie)
 * [localStorage](localStorage)
 * [:briefcase: localStorage](https://garevna.github.io/js-quiz/#localStorage)
-* [:briefcase: Homework](hw-09)
+* [:briefcase: Homework](hw-fetch-blob-localStorage)
 
 ***
 <a name="toc-11"></a>
