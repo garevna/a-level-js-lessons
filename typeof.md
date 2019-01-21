@@ -6,12 +6,12 @@
 
 Возможные значения, возвращаемые оператором `typeof`:
 
-* [`string`](#-string)
-* [`number`](#-number)
-* [`boolean`](#-boolean)
-* [`object`](#-object)
-* [`undefined`](#-undefined)
-* [`function`](#-function)
+* [`string`](#string)
+* [`number`](#number)
+* [`boolean`](#boolean)
+* [`object`](#object)
+* [`undefined`](#undefined)
+* [`function`](#function)
 * `symbol`
 
 Оператор  `typeof`  возвращает строку
