@@ -46,6 +46,7 @@ typeof typeof x  // "boolean"
 Строки состоят из символов и заворачиваются в двойные ( *"мама"* ) или одинарные ( *'мама'* ) кавычки
 
 Также можно завернуть строку в обратные кавычки ``` ` ```
+
 ```javascript
 var sample = `This is a sample`
 ```
@@ -116,8 +117,8 @@ var z = x / y
 
 К данным типа object относятся:
 
-* [**`объекты`**](data-structures#-%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)
-* [**`массивы`**](data-structures#-%D0%9C%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D1%8B)
+* [**`объекты`**](data-structures#object)
+* [**`массивы`**](data-structures#array)
 * [**`null`**](NaN-null-Infinity#null)
 
 ***
