@@ -8,6 +8,8 @@
 
 Используя метод `whenDefined`, можно избежать коллизий, связанных с тем, что элементы будут вставлены после того, как определение компонента состоялось
 
+( хотя значительно проще это сделать с помощью [_хуков жизненного цикла_](web-components-hooks) компонента )
+
 Если в коде конструктора класса устанавливаются параметры компонента, которые должны быть переданы через атрибуты тега, то эти параметры не получат значений, потому что элементов еще нет и атрибуты, соответственно, отсутствуют
 
 Рассмотрим простенький пример
@@ -114,34 +116,26 @@ class CircleElement extends HTMLElement {
         this.shadow.appendChild (
             document.createElement ( "div" )
         )
+        this.shadowStyle = document.createElement ( "style" )
+        this.shadow.appendChild ( this.shadowStyle )
+        this.shadowStyle.textContent = ''
+        this.setStyle ()
     }
+    
     setStyle () {
-        this.shadow.appendChild (
-            ( () => {
-                let style = document.createElement ( "style" )
-                style.appendChild (
-                    ( () => {
-                        let css = document.createTextNode(
-                          `
-                              div {
-                                  width: ${this.getAttribute("size")}px;
-                                  height: ${this.getAttribute("size")}px;
-                                  border: inset 1px;
-                                  border-radius: 50%;
-                                  box-shadow: 3px 3px 5px #00000090;
-                                  background-color: ${this.getAttribute("color")};
-                              }
-                              div:hover {
-                                  box-shadow: inset 3px 3px 5px #00000090;
-                              }
-                          `
-                        )
-                        return css
-                    })()
-                )
-                return style
-            })()
-        )
+        this.shadowStyle.textContent = `
+             div {
+                 width: ${ this.getAttribute ( "size" ) }px;
+                 height: ${ this.getAttribute ( "size" ) }px;
+                 border: inset 1px;
+                 border-radius: 50%;
+                 box-shadow: 3px 3px 5px #00000090;
+                 background-color: ${ this.getAttribute ( "color" ) };
+            }
+            div:hover {
+                box-shadow: inset 3px 3px 5px #00000090;
+            }
+        `
     }
 }
 
@@ -150,15 +144,11 @@ customElements.define ( "circle-element", CircleElement )
 
 Обратите внимание, что у веб-компонента **`CircleElement`** определен метод **_`setStyle()`_**
 
-Мы не вызываем сразу этот метод при определении компонента
+Этот метод использует атрибуты **_`size`_** и **_`color`_**  кастомного элемента `<circle-element>`,
 
-Почему?
+но мы не знаем, когда будут вставлены элементы `<circle-element>` в DOM
 
-Потому, что он использует атрибуты **_`size`_** и **_`color`_**  кастомного элемента `<circle-element>`
-
-а когда будут вставлены элементы `<circle-element>` на страницу - мы не знаем
-
-соответственно, значения их атрибутов **_`size`_** и **_`color`_** могут быть еще не определены
+Т.е. значения их атрибутов **_`size`_** и **_`color`_** могут быть еще не определены
 
 ***
 
@@ -177,7 +167,7 @@ customElements.define ( "circle-element", CircleElement )
 
 и после этого определяется веб-компонент, проблем не возникнет - 
 
-можно прямо в веб-компоненте **`CircleElement`** вызвать метод **_`setStyle()`_**
+можно прямо в конструкторе класса **`CircleElement`** вызвать метод **_`setStyle()`_**
 
 **
 
@@ -215,11 +205,10 @@ class CircleElement extends HTMLElement {
         this.shadow.appendChild (
             document.createElement ( "div" )
         )
-        this.setStyle()
+        this.createStyle ()
+        this.setStyle ()
     }
-    setStyle () {
-        ...
-    }
+    ...
 }
 
 customElements.define ( "circle-element", CircleElement )
@@ -244,12 +233,12 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
     <div></div>
     <style>
         div {
-            width: undefinedpx;
-            height: undefinedpx;
+            width: nullpx;
+            height: nullpx;
             border: inset 1px;
             border-radius: 50%;
             box-shadow: 3px 3px 5px #00000090;
-            background-color: undefined;
+            background-color: null;
         }
         div:hover {
             box-shadow: inset 3px 3px 5px #00000090;
@@ -344,7 +333,7 @@ elems.iterator = (
 Функция **`addElem`** 
 
 * получает в аргументах значения **_`size`_** и **_`color`_**
-* вставляет кастомный элемент на страницу и устанавливает ему атрибуты **_`size`_** и **_`backColor`_** ( используя полученные в аргументах значения )
+* вставляет кастомный элемент на страницу и устанавливает ему атрибуты **_`size`_** и **_`color`_** ( используя полученные в аргументах значения )
 * возвращает ссылку на вставленный элемент
 
 ```javascript
