@@ -10,11 +10,99 @@
 
 Если в коде конструктора класса устанавливаются параметры компонента, которые должны быть переданы через атрибуты тега, то эти параметры не получат значений, потому что элементов еще нет и атрибуты, соответственно, отсутствуют
 
+Рассмотрим простенький пример
+
+### :coffee: 1
+
+Пусть наш веб-компонент будет таким:
+
+###### :pencil: defineCustomElement
+
+```javascript
+function defineCustomElement () {
+
+    class SampleElement extends HTMLElement {
+        constructor () {
+            super ()
+            this.style.color = this.getAttribute ( "color" )
+        }
+    }
+
+    customElements.define (
+        'sample-element',
+        SampleElement
+    )
+}
+```
+
+Код вставки кастомных элементов, для примера, будет таким:
+
+###### :pencil: insertCustomElements
+
+```javascript
+finction insertCustomElements () {
+    for ( let clr of [ "red", "green", "blue" ] ) {
+        let elem = document.body.appendChild (
+            document.createElement ( 'sample-element' )
+        )
+        elem.innerHTML = "<h3>test</h3>"
+        elem.setAttribute ( "color", clr )
+    }
+}
+```
+
+Итак, у нас две функции
+
+* **`defineCustomElement`**
+* **`insertCustomElements`**
+
+Предположим, мы вызовем их в таком порядке:
+
+```javascript
+insertCustomElements ()
+defineCustomElement ()
+```
+
+и на странице будут окрашенные в разные цвета элементы
+
+Если же мы вызовем эти функции в другом порядке:
+
+```javascript
+defineCustomElement ()
+insertCustomElements ()
+```
+
+то текст всех элементов будут дефолтным ( черным )
+
+Чтобы избежать таких коллизий, воспользуемся методом **`customElements.whenDefined`**:
+
+###### :pencil: insertCustomElements
+
+```javascript
+function insertCustomElements () {
+    for ( let clr of [ "red", "green", "blue" ] ) {
+        let elem = document.body.appendChild (
+            document.createElement ( 'sample-element' )
+        )
+        elem.innerHTML = "<h3>test</h3>"
+        elem.setAttribute ( "color", clr )
+
+        customElements.whenDefined ( "sample-element" )
+            .then ( () => elem.setStyle () )
+    }
+}
+```
+
+Теперь элементы будут окрашиваться как надо независимо от порядка вызова функций **`defineCustomElement()`** и 
+**`insertCustomElements()`**
+
+:warning: Особенно важно это при асинхронной вставке кастомных элементов на страницу
+
 ***
 
-Далее в примерах мы будем вставлять кастомные элементы `<circle-element>` на страницу
+### :coffee: 2
 
-Для этого мы будем использовать веб-компонент **`CircleElement`**
+Далее в примерах мы будем использовать веб-компонент **`CircleElement`**
 
 ###### :pencil: CircleElement
 
@@ -36,12 +124,12 @@ class CircleElement extends HTMLElement {
                         let css = document.createTextNode(
                           `
                               div {
-                                  width: ${this.size}px;
-                                  height: ${this.size}px;
+                                  width: ${this.getAttribute("size")}px;
+                                  height: ${this.getAttribute("size")}px;
                                   border: inset 1px;
                                   border-radius: 50%;
                                   box-shadow: 3px 3px 5px #00000090;
-                                  background-color: ${this.backColor};
+                                  background-color: ${this.getAttribute("color")};
                               }
                               div:hover {
                                   box-shadow: inset 3px 3px 5px #00000090;
@@ -66,19 +154,24 @@ customElements.define ( "circle-element", CircleElement )
 
 Почему?
 
-Потому, что он использует атрибуты **_`size`_** и **_`backColor`_**  кастомного элемента `<circle-element>`
+Потому, что он использует атрибуты **_`size`_** и **_`color`_**  кастомного элемента `<circle-element>`
 
 а когда будут вставлены элементы `<circle-element>` на страницу - мы не знаем
 
-соответственно, значения их атрибутов **_`size`_** и **_`backColor`_** могут быть еще не определены
+соответственно, значения их атрибутов **_`size`_** и **_`color`_** могут быть еще не определены
+
+***
 
 В случае, если элементы уже заранее вставлены в разметке:
 
+| [:coffee:](https://repl.it/@garevna/whenDefined-1) `Пример в песочнице` |
+|-|
+
 ```html
 <body>
-    <circle-element size="150" backColor="green"></circle-element>
-    <circle-element size="100" backColor="orange"></circle-element>
-    <circle-element size="50" backColor="blue"></circle-element>
+    <circle-element size="150" color="green"></circle-element>
+    <circle-element size="100" color="orange"></circle-element>
+    <circle-element size="50" color="blue"></circle-element>
 </body>
 ```
 
@@ -86,24 +179,33 @@ customElements.define ( "circle-element", CircleElement )
 
 можно прямо в веб-компоненте **`CircleElement`** вызвать метод **_`setStyle()`_**
 
+**
+
 Но если элементы будут вставлены после того, как отработал вышеприведенный код веб-компонента, нам придется для каждого элемента вызывать метод **_`setStyle()`_**
 
 Это тоже не сложно, если мы точно знаем, что определение веб-компонента уже произошло к моменту вставки элементов
+
+```javascript
+let collection = document.getElementsByTagName ( "circle-element" )
+for ( let elem of collection ) elem.setStyle()
+```
+
+***
 
 :bangbang: НО!
 
 Если мы не знаем, когда будут вставлены элементы, и что произойдет раньше - определение веб-компонента **`CircleElement`** или вставка кастомных элементов `<circle-element>` - возникнет проблема:
 
 * мы не можем обратиться к методу **_`setStyle()`_**, не будучи уверены в том, что такой метод уже определен ( т.е. веб-компонент уже объявлен );
-* мы не можем вызвать метод **_`setStyle()`_** при определении компонента, поскольку не знаем, вставлены ли кастомные элементы на страницу и определены ли их атрибуты 
+* мы не можем вызвать метод **_`setStyle()`_** в конструкторе компонента, поскольку не знаем, вставлены ли кастомные элементы на страницу и определены ли их атрибуты 
 
 ***
 
-### :coffee: 1
+### :coffee: 2
 
 В этом примере определение компонента происходит раньше, чем соответствующие кастомные элементы будут вставлены на страницу
 
-Когда вызывается метод `setStyle()`, свойства **`this.size`** и **`this.backColor`** не определены
+Когда вызывается метод `setStyle()`, значения атрибутов **`size`** и **`color`** не определены
 
 ```javascript
 class CircleElement extends HTMLElement {
@@ -130,8 +232,8 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
     let elem = document.body.appendChild (
         document.createElement ( 'circle-element' )
     )
-    elem.backColor = x
-    elem.size = Math.round ( Math.random() * 200 )
+    elem.setAttribute ( "color", x )
+    elem.setAttribute ( "size", Math.round ( Math.random() * 200 ) )
 }
 ```
 
@@ -171,8 +273,9 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
     let elem = document.body.appendChild (
         document.createElement ( 'circle-element' )
     )
-    elem.backColor = x
-    elem.size = Math.round ( Math.random() * 200 )
+    elem.setAttribute ( "color", x )
+    elem.setAttribute ( "size", Math.round ( Math.random() * 200 ) )
+
     customElements.whenDefined ( "circle-element" )
         .then (
             () => elem.setStyle ()
@@ -182,7 +285,7 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
 
 ***
 
-### [:coffee: 2](https://garevna.github.io/js-samples/#22)
+### [:coffee:](https://garevna.github.io/js-samples/#22) Асинхронная вставка кастомных элементов
 
 Разбремся с ситуацией, когда кастомные элементы вставляются на страницу асинхронно
 
@@ -223,9 +326,7 @@ elems.iterator = (
 ).call ( elems )
 ```
 
-Обратите внимание, 
-
-что вызов асинхронной функции-генератора происходит 
+Обратите внимание, что вызов асинхронной функции-генератора происходит 
 
 с передачей ей контекста **`elems`** 
 
@@ -251,8 +352,8 @@ const addElem = ( size, color ) => {
     let elem = document.body.appendChild (
         document.createElement ( "circle-element" )
     )
-    elem.size = size
-    elem.backColor = color
+    elem.setAttribute ( "color", color )
+    elem.setAttribute ( "size", size )
     return elem
 }
 ```
@@ -305,8 +406,8 @@ elems.iterator = (
             let elem = document.body.appendChild (
                 document.createElement ( "circle-element" )
             )
-            elem.size = size
-            elem.backColor = color
+            elem.setAttribute ( "color", color )
+            elem.setAttribute ( "size", size )
 
             return elem
         }
