@@ -264,6 +264,7 @@
 * [:not(:defined)](not-defined)
 * [Shadow DOM](Shadow-DOM)
 * [Custom elements](Custom-elements)
+* [Lifecycle hooks](web-components-hooks)
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
 * [:coffee:](https://github.com/garevna/game/wiki) Пример
