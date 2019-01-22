@@ -4,20 +4,17 @@
 
 Кастомные элементы имеют хуки жизненного цикла
 
-* connectedCallback
-* disconnectedCallback
-* attributeChangedCallback(attrName, oldVal, newVal)
-* adoptedCallback
-
-### connectedCallback()
+#### :pushpin: connectedCallback()
 
 Срабатывает каждый раз при вставке кастомного элемента в DOM
 
-###### disconnectedCallback()
+#### :pushpin: disconnectedCallback()
 
-Срабатывает каждый раз при удалении кастомного элемента
+Срабатывает при удалении кастомного элемента
 
-###### attributeChangedCallback()
+:warning: не сработает при закрытии пользователем вкладки
+
+#### :pushpin: attributeChangedCallback()
 
 Срабатывает каждый раз при изменении значений отслеживаемых html-атрибутов элемента
 
@@ -35,7 +32,9 @@ static get observedAttributes() {
 }
 ```
 
-:coffee:
+Браузер вызывает **`attributeChangedCallback()`** при изменении значения любого атрибута, включенного в массив отслеживаемых атрибутов **_`observedAttributes`_**
+
+:coffee: :one:
 
 ```javascript
 class CircleElement extends HTMLElement {
@@ -91,3 +90,18 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
     elem.setAttribute ( "size", Math.round ( Math.random() * 200 ) )
 }
 ```
+
+Но это не главное
+
+Важный момент заключается в том, что при динамическом изменении значений атрибутов без хука **`attributeChangedCallback`** внешний вид кастомного элемента не изменится
+
+Однако если такой хук есть в определении класса, то результатом выполнения кода
+
+```javascript
+document.getElementsByTagName ( "circle-element" )
+    .setAttribute ( "color", "magenta" )
+```
+
+будет изменение внешнего вида ( цвета фона ) элемента
+
+Аналогично кастомный элемент отреагирует на изменение значения атрибута во вкладке **_Elements_**
