@@ -105,3 +105,6 @@ document.getElementsByTagName ( "circle-element" )
 будет изменение внешнего вида ( цвета фона ) элемента
 
 Аналогично кастомный элемент отреагирует на изменение значения атрибута во вкладке **_Elements_**
+
+| [:coffee:](https://repl.it/@garevna/customElements-lifecycle-hooks) Пример в песочнице |
+|-|
