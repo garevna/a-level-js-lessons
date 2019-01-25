@@ -44,7 +44,6 @@ var request = new XMLHttpRequest ()
 
 ***
 
-* [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
 * [`Метод open()`](XMLHttpRequest-open)
 * [`Метод send()`](XMLHttpRequest-send)
 * [`Свойство readyState`](XMLHttpRequest-readyState)
@@ -54,6 +53,7 @@ var request = new XMLHttpRequest ()
 * [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
 * [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
 * [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
