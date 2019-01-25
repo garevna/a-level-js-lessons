@@ -1,10 +1,8 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
-***
-
-[`Последовательность действий`](XMLHttpRequest-steps)
+* [`Последовательность действий`](XMLHttpRequest-steps)
 
 ***
 
@@ -26,26 +24,36 @@ var request = new XMLHttpRequest ()
 
 | `Методы` | `События` | `Свойства` |
 |-|-|-|
-| [**`open()`**](#open) | **`readystatechange`** | [**`onreadystatechange`**](#onreadystatechange) |
-| [**`send()`**](#send) | | [**`readyState`**](#readystate) |
-|  | | [**`status`**](#status) |
-|  | | [`statusText`](#statustext) |
-|  | `loadstart` | [`onloadstart`](#on) |
-|  | `progress` | [`onprogress`](#on) |
-|  | `loadend` | [`loadend`](#on) |
-|  | `load` | [`onload`](#onload) |
-|  | `error`  | [`onerror`](#onerror) |
-|  | `timeout` | [`ontimeout`](#ontimeout)|
+| [**`open()`**](XMLHttpRequest-open) | [**`readystatechange`**](XMLHttpRequest-readyState) | [**`onreadystatechange`**](XMLHttpRequest-readyState) |
+| [**`send()`**](XMLHttpRequest-send) | | [**`readyState`**](XMLHttpRequest-readyState) |
+|  | | [**`status`**](XMLHttpRequest-status) |
+|  | | [`statusText`](XMLHttpRequest-status) |
+|  | `loadstart` | [`onloadstart`](XMLHttpRequest-events#on) |
+|  | `progress` | [`onprogress`](XMLHttpRequest-events#on) |
+|  | `loadend` | [`loadend`](XMLHttpRequest-events#on) |
+|  | `load` | [`onload`](XMLHttpRequest-events#onload) |
+|  | `error`  | [`onerror`](XMLHttpRequest-events#onerror) |
+|  | `timeout` | [`ontimeout`](XMLHttpRequest-events#ontimeout)|
 | `abort()` | `abort` | `onabort` |
-| [**`setRequestHeader()`**](#setRequestHeader) |  | [**`responseType`**](#responseType) |
-| [`getAllResponseHeaders()`](#getAllResponseHeaders) | | [**`responseText`**](#responseText) |
+|  |  | [`withCredentials`](XMLHttpRequest-withCredentials) |
+| [**`setRequestHeader()`**](XMLHttpRequest-setRequestHeader) |  | [**`responseType`**](XMLHttpRequest-response#responseType) |
+| [`getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders) | | [**`responseText`**](XMLHttpRequest-response#responseText) |
 | `getResponseHeader()` | | `responseURL` |
 
 Ответ сервера имеет заголовок ответа ( **`header`** ) и тело ответа ( **`response`** )
 
 ***
 
-
+* [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
+* [`Метод open()`](XMLHttpRequest-open)
+* [`Метод send()`](XMLHttpRequest-send)
+* [`Свойство readyState`](XMLHttpRequest-readyState)
+* [`Свойство status`](XMLHttpRequest-status)
+* [`Свойство responseText`](XMLHttpRequest-responseText)
+* [`Обработка событий`](XMLHttpRequest-events)
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
 
 ***
 
