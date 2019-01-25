@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 * [`Последовательность действий`](XMLHttpRequest-steps)
 * [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
@@ -180,6 +180,13 @@ transport.onerror = function ( err ) {
 
 | [:coffee:](https://plnkr.co/edit/BqbCvoAnbikBtTFTRBHp?p=preview) `Пример в песочнице` | [:coffee:](https://plnkr.co/edit/DLH49iWObtxqcijNT9oY?p=preview) `Пример в песочнице` |
 |-|-|
+
+***
+
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
