@@ -18,6 +18,15 @@
 
 Тип обрабатываемого события - текст, следующий за **`on`** в имени свойства
 
+* [`readystatechange`](#onreadystatechange)
+* [`ProgressEvent`](#ProgressEvent)
+* [`load`](#onload)
+* [`error`](#onerror)
+* [`loadstart`](#on)
+* [`loadend`](#on)
+* [`progress`](#on)
+* [`timeout`](#ontimeout)
+
 ***
 
 <a name="onreadystatechange"></a>
@@ -26,7 +35,7 @@
 
 Свойство, значение которого является ссылкой на колбэк-функцию, которая будет обрабатывать событие изменения значения  `readyState`
 
-Назначить обработчика нужно обязательно:
+Назначить обработчика:
 
 ```javascript
 var transport = new XMLHttpRequest ()
@@ -64,7 +73,11 @@ transport.onreadystatechange = function ( event ) {
 
 ***
 
-Остальные события ( `loadstart`, `loadend`, `progress`, `load`, `error`, `timeout` ) отличаются от события **`readystatechange`** - они относятся к категории **_`ProgressEvent`_**:
+<a name="ProgressEvent"></a>
+
+#### ProgressEvent
+
+Остальные события ( [`loadstart`](#on), [`loadend`](#on), [`progress`](#on), [`load`](#onload), [`error`](#onerror), [`timeout`](#ontimeout) ) отличаются от события [`readystatechange`](#onreadystatechange) - они относятся к категории **_`ProgressEvent`_**:
 
 ```console
 ▼ ƒ ProgressEvent()
@@ -95,6 +108,7 @@ transport.onload = function () {
 <a name="on"></a>
 
 #### :mortar_board: `onloadstart` | `onprogress` | `onloadend`
+
 ```javascript
 var request = new XMLHttpRequest()
 request.open (
