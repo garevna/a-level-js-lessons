@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: `XMLHttpRequest`
+## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 ***
 
