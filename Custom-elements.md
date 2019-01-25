@@ -331,8 +331,3 @@ document.body.appendChild ( elem )
 
 window.onresize = elem.resizeCanvas.bind ( elem )
 ```
-
-***
-
-| [:coffee:](https://garevna.github.io/js-samples/#18) SVG |
-|-|
