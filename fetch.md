@@ -1,21 +1,25 @@
-# :mortar_board: Fetch API
+# AJAX
+
+## :mortar_board: Fetch API
 
 Интерфейсы Fetch API 
 
-| [:arrow_right_hook: Request](#mortar_board-request) | [:arrow_right_hook: Response](#mortar_board-response) |
+| [**`Request`**](#mortar_board-request) | [**`Response`**](#mortar_board-response) |
 |-|-|
 
-Метод **`fetch`** объекта `window` реализует только асинхронные AJAX-запросы
+:warning: Метод **`fetch`** объекта `window` реализует только асинхронные AJAX-запросы
 
-Метод **`fetch`** возвращает **_промис_**
+:warning: Метод **`fetch`** возвращает **_промис_**
 
-Обязательный первый аргумент метода **`fetch`** - это url ресурса
+:warning: Обязательный первый аргумент метода **`fetch`** - это URI ресурса
+
 ```javascript
 fetch ( "message.txt" )
     .then ( response => {
         ...
     })
 ```
+
 Когда промис завершится, он вернет объект [**`Response`**](#mortar_board-response)
 
 ## :mortar_board: Request
@@ -24,26 +28,47 @@ fetch ( "message.txt" )
 
 | Свойства | Методы |
 |-|-|
-| bodyUsed | arrayBuffer() |
-| cache | blob() |
-| [:information_source: credentials](#information_source-credentials) | clone() |
-| destination | formData() |
-| [:information_source: headers](#information_source-headers) | json() |
-| integrity | text() |
-| isHistoryNavigation |  |
-| keepalive |  |
-| [:information_source: method](#information_source-method) |  |
-| [:information_source: mode](#information_source-mode) |  |
-| redirect |  |
-| referrer |  |
-| referrerPolicy |  |
-| signal |  |
-| [:information_source: url](#url) |  |
+| `bodyUsed` | `arrayBuffer()` |
+| `cache` | `blob()` |
+| [**`credentials`**](#information_source-credentials) | `clone()` |
+| `destination` | `formData()` |
+| [**`headers`**](#information_source-headers) | `json()` |
+| `integrity` | `text()` |
+| `isHistoryNavigation` |  |
+| `keepalive` |  |
+| [**`method`**](#information_source-method) |  |
+| [**`mode`**](#information_source-mode) |  |
+| `redirect` |  |
+| `referrer` |  |
+| `referrerPolicy` |  |
+| `signal` |  |
+| [**`url`**](#url) |  |
+
+***
 
 ### :information_source: method
 
-| [:arrow_heading_up:](#mortar_board-request) | `GET` | `POST` | `PUT` | `DELETE` | `HEAD` |
-|-|-|-|-|-|-|
+| [`Request`](#mortar_board-request) |
+|-|
+
+###### Операция с ресурсом
+
+Метод доступа к ресурсу идентифицирует операцию с ресурсом
+
+Ресурс - это любые данные на стороне сервера, имеющие **URI** ( идентификатор ресурса )
+
+**URI** ( _Uniform Resource Identifier_ ) - 
+
+Ресурсом может быть файл, база данных, запись в базе данных и т.д.
+
+| `GET` | `POST` | `PUT` | `DELETE` | `HEAD` |
+|-|-|-|-|-|
+
+* `GET` - получить данные
+* `POST` - Создание нового ресурса
+* `PUT` - Обновление существующего ресурса
+* `DELETE` - удаление ресурса
+* `HEAD` - получение информации о ресурсе
 
 ```javascript
 var request = new Request( 
@@ -53,6 +78,8 @@ var request = new Request(
     }
 )
 ```
+
+***
 
 ### :information_source: mode
 
