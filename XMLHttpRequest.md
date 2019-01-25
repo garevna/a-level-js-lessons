@@ -28,6 +28,7 @@ XMLHttpRequest - это API,
 * [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
 * [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
 * [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
