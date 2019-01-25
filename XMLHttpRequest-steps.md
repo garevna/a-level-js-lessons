@@ -55,6 +55,7 @@ request.send ( request.body )
 
 ***
 
+* [`Последовательность действий`](XMLHttpRequest-steps)
 * [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
 * [`Метод open()`](XMLHttpRequest-open)
 * [`Метод send()`](XMLHttpRequest-send)
@@ -65,6 +66,7 @@ request.send ( request.body )
 * [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
 * [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
 * [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
