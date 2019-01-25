@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 ***
 
@@ -33,6 +33,15 @@
 если `status === 200`,  то  `statusText` будет `"OK"`
 
 если `status === 404`,  то  `statusText` будет `"Not Found"`
+
+***
+
+* [`Свойство responseText`](XMLHttpRequest-responseText)
+* [`Обработка событий`](XMLHttpRequest-events)
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
