@@ -55,7 +55,6 @@ request.send ( request.body )
 
 ***
 
-* [`Последовательность действий`](XMLHttpRequest-steps)
 * [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
 * [`Метод open()`](XMLHttpRequest-open)
 * [`Метод send()`](XMLHttpRequest-send)
