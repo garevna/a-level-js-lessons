@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 ***
 
@@ -25,6 +25,14 @@
 тот текст, который уже получен от сервера
 
 Свойство `responseText` допустимо только для текстового содержимого
+
+***
+
+* [`Обработка событий`](XMLHttpRequest-events)
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
