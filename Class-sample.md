@@ -226,5 +226,10 @@ canvas.drawFigure ( "line", {
 
 ***
 
+| [:coffee:](https://garevna.github.io/js-samples/#18) SVG |
+|-|
+
+***
+
 | [:rewind:](Class) |
 |-|
