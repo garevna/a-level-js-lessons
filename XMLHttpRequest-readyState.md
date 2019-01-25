@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 ***
 
@@ -24,6 +24,16 @@
 | 2 | `метод `**`send()`**` был вызван, и заголовки ответа сервера получены ( можно читать `**`status`**` )` |
 | 3 | `идет процесс загрузки тела ответа сервера` |
 | 4 | `процесс загрузки ответа завершен` |
+
+***
+
+* [`Свойство status`](XMLHttpRequest-status)
+* [`Свойство responseText`](XMLHttpRequest-responseText)
+* [`Обработка событий`](XMLHttpRequest-events)
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
