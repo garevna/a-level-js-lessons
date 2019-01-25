@@ -1,8 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
-
-***
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 * [`Последовательность действий`](XMLHttpRequest-steps)
 * [`Экземпляр XMLHttpRequest`](XMLHttpRequest-content)
