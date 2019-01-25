@@ -94,5 +94,9 @@ expires: Wed, 09 Oct 2019 00:23:02 GMT
 
 ***
 
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
+
+***
+
 | [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdA3JwhlOTXdZxCO3y1MdLe-pe-cynNVGeboy7IV0aWHliGHA/viewform) | [:link: `Протокол TCP`](https://xakep.ru/2002/04/11/14943/) | [:link: **`RFC793`**](https://www.lissyara.su/doc/rfc/rfc793/) |
 |-|-|-|
