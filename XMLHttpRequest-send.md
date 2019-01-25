@@ -1,6 +1,6 @@
 # AJAX
 
-## :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
+###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
 ***
 
@@ -32,7 +32,14 @@ request.send()
 
 ***
 
-
+* [`Свойство readyState`](XMLHttpRequest-readyState)
+* [`Свойство status`](XMLHttpRequest-status)
+* [`Свойство responseText`](XMLHttpRequest-responseText)
+* [`Обработка событий`](XMLHttpRequest-events)
+* [`Метод setRequestHeader`](XMLHttpRequest-setRequestHeader)
+* [`Метод getAllResponseHeaders()`](XMLHttpRequest-response#getAllResponseHeaders)
+* [`Свойство responseType`](XMLHttpRequest-response#responseType)
+* [`Свойство withCredentials`](XMLHttpRequest-withCredentials)
 
 ***
 
