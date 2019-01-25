@@ -26,6 +26,8 @@
 
 Свойство `responseText` допустимо только для текстового содержимого
 
+:coffee:
+
 ```javascript
 var transport = new XMLHttpRequest ()
 
