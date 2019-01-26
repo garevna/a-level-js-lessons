@@ -366,7 +366,9 @@ figureFunc ()
 sampleFunc ()
 googleFunc ()
 ```
+
 ###### Результат в консоли:
+
 ```console
 ⚠️ ► Функция func вызвана 1 раз в контексте объекта figure
 ⚠️ ► Функция func вызвана 2 раз в контексте объекта sample
@@ -388,7 +390,9 @@ bloom.figure()
 bloom.sample()
 bloom.google()
 ```
+
 ###### Результат в консоли:
+
 ```console
 ⚠️ ► Функция func вызвана 4 раз в контексте объекта figure
 ⚠️ ► Функция func вызвана 5 раз в контексте объекта sample
@@ -396,6 +400,7 @@ bloom.google()
 ```
 
 Несмотря на явное указание контекста при вызове методов:
+
 ```javascript
 bloom.figure()
 bloom.sample()
@@ -405,7 +410,55 @@ bloom.google()
 
 "Прибиндить" можно не только контекст вызова, но также и аргументы 
 
+***
+
+### :mortar_board: Currying
+
+Каррирование заключается в следующем:
+
+если при вызове функции 1 передать ей не все параметры, 
+
+то она вернет функцию 2, параметры которой будут 
+
+недостающими параметрами функции 1, 
+
+а выходные данные - результатом функции 1
+
+```javascript
+function currying ( first, second ) {
+    return arguments.length === 0 ? null :
+        arguments.length === 1 ? 
+            function ( second ) {
+                return arguments.length === 1 ? 
+                    [ first, second ] : null
+            } : [ first, second ]
+}
+
+var curried = currying ( "Google" )
+
+console.log ( curried )
+```
+
+###### Результат в консоли:
+
+```console
+ƒ ( second ) {
+    return arguments.length === 1 ? 
+        [ first, second ] : null
+}
+```
+
+Вызовем функцию `curried`
+
+```javascript
+curried ()               // null
+curried ( "Mozilla" )   // ► (2) ["Google", "Mozilla"]
+```
+
+
 Воспользуемся приемом **_Currying_** для создания функций с заданным контекстом и фиксированным значением первого аргумента
+
+Каррирование - это процесс разбиения функции на серию функций, каждая из которых принимает один аргумент
 
 :coffee: :five:
 
