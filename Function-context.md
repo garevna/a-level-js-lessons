@@ -41,7 +41,7 @@ obj.say()   // google
 
 ***
 
-* `Изменение контекста`
+* [`Изменение контекста`](Function-context-changing)
     * [`call()`](Function-call)
     * [`apply()`](Function-apply)
     * [`bind`](Function-bind)
