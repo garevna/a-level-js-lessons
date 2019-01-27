@@ -1,6 +1,6 @@
-# :mortar_board: Биндинг и каррирование
+## :mortar_board: [Биндинг и каррирование](call-apply-bind)
 
-* [Конструктор Function](Function-constructor)
+* [`Конструктор Function`](Function-constructor)
 
 ***
 
@@ -114,15 +114,13 @@ I'm sample
 I'm figure
 ```
 
-***
-
 :paperclip: Функция в JS всегда вызывается в контексте какого-либо объекта
 
 ***
 
-* [Контекст вызова](Function-context)
-* [Изменение контекста]()
-    * [**`call()`**](Function-call)
-    * [**`apply()`**](Function-apply)
-    * [**`bind`**](Function-bind)
-* [Currying](Function-currying)
+* [`Контекст вызова`](Function-context)
+* `Изменение контекста`
+    * [`call()`](Function-call)
+    * [`apply()`](Function-apply)
+    * [`bind`](Function-bind)
+* [`Currying`](Function-currying)
