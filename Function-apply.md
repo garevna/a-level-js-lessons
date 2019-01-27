@@ -3,6 +3,9 @@
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
 * [`Контекст вызова`](Function-context)
+* [`Изменение контекста`](Function-context-changing)
+    * [`call()`](Function-call)
+    * [`bind`](Function-bind)
 
 ***
 ### :mortar_board: apply()
@@ -80,9 +83,6 @@ sample
 
 ***
 
-* [`Изменение контекста`](Function-context-changing)
-    * [`call()`](Function-call)
-    * [`bind`](Function-bind)
 * [`Currying`](Function-currying)
 
 ***
