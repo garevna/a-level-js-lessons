@@ -3,6 +3,9 @@
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
 * [`Контекст вызова`](Function-context)
+* [`Изменение контекста`](Function-context-changing)
+    * [`apply()`](Function-apply)
+    * [`bind`](Function-bind)
 
 ***
 ### :mortar_board: call()
@@ -52,7 +55,4 @@ sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ 
 
 ***
 
-* [`Изменение контекста`](Function-context-changing)
-    * [`apply()`](Function-apply)
-    * [`bind`](Function-bind)
 * [`Currying`](Function-currying)
