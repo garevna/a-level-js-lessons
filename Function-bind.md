@@ -1,4 +1,4 @@
-# :mortar_board: Биндинг и каррирование
+## :mortar_board: [Биндинг и каррирование](call-apply-bind)
 
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
