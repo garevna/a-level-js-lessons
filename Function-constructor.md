@@ -1,6 +1,6 @@
-# :mortar_board: [Биндинг и каррирование](call-apply-bind)
+## :mortar_board: [Биндинг и каррирование](call-apply-bind)
 
-## :mortar_board: Конструктор Function
+### :mortar_board: Конструктор Function
 
 Функции можно создавать путем явного вызова конструктора **Function** с ключевым словом **_`new`_**:
 
@@ -44,11 +44,11 @@ console.dir ( func )
 
 ***
 
-* [Наследование](Function-inheritance)
-* [Контекст вызова](Function-context)
-* [Изменение контекста]()
-    * [**`call()`**](Function-call)
-    * [**`apply()`**](Function-apply)
-    * [**`bind`**](Function-bind)
-* [Currying](Function-currying)
+* [`Наследование`](Function-inheritance)
+* [`Контекст вызова`](Function-context)
+* `Изменение контекста`
+    * [`call()`](Function-call)
+    * [`apply()`](Function-apply)
+    * [`bind`](Function-bind)
+* [`Currying`](Function-currying)
 
