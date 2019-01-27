@@ -1,7 +1,19 @@
 # :mortar_board: Биндинг и каррирование
 
+* [Конструктор Function](Function-constructor)
+* [Наследование](Function-inheritance)
+* [Контекст вызова](Function-context)
+* [Изменение контекста]()
+    * [**`call()`**](Function-call)
+    * [**`apply()`**](Function-apply)
+    * [**`bind`**](Function-bind)
+* [Currying](Function-currying)
+
+
 ## :mortar_board: Конструктор Function
+
 Функции можно создавать путем явного вызова конструктора **Function** с ключевым словом **_`new`_**:
+
 ```javascript
 var func = new Function ( 
     "x",
@@ -35,7 +47,10 @@ console.dir ( func )
   ► __proto__: ƒ ()
 ```
 
+***
+
 ### :mortar_board: Наследование
+
 Итак, любая функция в JS является _экземпляром_ класса **Function**
 
 Отсюда следует:
