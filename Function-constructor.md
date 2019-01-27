@@ -44,11 +44,11 @@ console.dir ( func )
 
 ***
 
-* [`Наследование`]()
-* [`Контекст вызова`]()
-* [`Изменение контекста`]()
-    * [**`call()`**]()
-    * [**`apply()`**]()
-    * [**`bind`**]()
-* [`Currying`](Currying)
+* [Наследование](Function-inheritance)
+* [Контекст вызова](Function-context)
+* [Изменение контекста]()
+    * [**`call()`**](Function-call)
+    * [**`apply()`**](Function-apply)
+    * [**`bind`**](Function-bind)
+* [Currying](Function-currying)
 
