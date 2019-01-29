@@ -345,14 +345,21 @@ show()
 
 ***
 
-| [:coffee: :six:](generators-sample-6) Слайдер |
+###### Пример асинхронного генератора
+
+| [:coffee: :six:](https://garevna.github.io/js-samples/#23) |
+|-|
+
+***
+
+| [:coffee: :seven:](generators-sample-6) Слайдер |
 |-|
 
 ***
 
 ### Связные списки
 
-:coffee: :seven:
+:coffee: :eight:
 
 Пусть у нас есть массив объектов
 
