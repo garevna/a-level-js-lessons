@@ -297,6 +297,55 @@ or the arguments objects for calls to them
 
 ***
 
+#### :warning: использовать свойство **_caller_**
+
+###### обычный режим:
+
+```javascript
+function test () {
+    ( function () {
+        console.log ( arguments.callee.caller )
+    })()
+}
+
+test ()
+```
+
+###### Результат в консоли:
+
+```
+ƒ test () {
+    ( function () {
+        console.log ( arguments.callee.caller )
+    })()
+}
+```
+
+###### строгий режим:
+
+```javascript
+'use strict'
+
+function test () {
+    ( function () {
+        console.log ( arguments.callee.caller )
+    })()
+}
+
+test ()
+```
+
+###### будет сгенерировано исключение:
+
+```
+⛔️ Uncaught TypeError:
+'caller', 'callee', and 'arguments' properties 
+may not be accessed on strict mode functions 
+or the arguments objects for calls to them
+```
+
+***
+
 #### :warning: использовать выражение _**with**_ 
 
 ###### обычный режим:
