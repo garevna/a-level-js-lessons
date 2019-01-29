@@ -191,6 +191,7 @@ console.log ( rest30 )
 ```
 
 :coffee: :three:
+
 ###### разметка
 ```html
 <body>
@@ -218,4 +219,45 @@ console.log ( third )   // <p class="paragraph">3</p>
 console.log ( forth )   // <p class="paragraph">4</p>
 ```
 ***
+
+:coffee: :four:
+
+###### Разметка
+
+```html
+<body>
+    <button id="registration">Регистрация</button>
+    <button id="sign-in">Вход</button>
+    <h3 id="title">Hello</h3>
+    <div id="demo">
+        <p>User name:</p>
+        <input id="name"/>
+        <p>password:</p>
+        <input id="pass" type="password"/>
+        <button>Submit</button>
+    </div>
+</body>
+```
+
+###### Получить элементы по **`id`**
+
+```javascript
+var demo = document.getElementById ( "demo" )
+var btnReg = document.getElementById ( "registration" )
+var btnSignIn = document.getElementById ( "sign-in" )
+var nameElem = document.getElementById ( "name" )
+var passElem = document.getElementById ( "pass" )
+var title = document.getElementById ( "title" )
+```
+
+###### Альтернативный вариант
+
+```javascript
+var ids = [ "demo", "registration", "sign-in", "name", "pass", "title" ]
+var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] = 
+    ids.map ( item => document.getElementById ( item ) )
+```
+
+***
+
 ### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeSywg6vOrnZ0JJdvqOjB9OSNT3FcBBRJox7Qt2661Nz_C8CA/viewform)
