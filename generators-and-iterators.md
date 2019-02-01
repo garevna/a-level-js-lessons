@@ -350,7 +350,7 @@ show()
 | [:coffee: **6**](https://garevna.github.io/js-samples/#22) | [:coffee: **7**](https://garevna.github.io/js-samples/#23) | [:coffee: **8**](https://garevna.github.io/js-samples/#24) | [:coffee: **9**](https://garevna.github.io/js-samples/#21) |
 |-|-|-|-|
 
-###### [:coffee: 9](generators-sample-6) Описание примера
+###### [:coffee: 9](generators-sample-9) Описание примера
 
 ***
 
