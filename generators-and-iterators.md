@@ -47,7 +47,7 @@ function* generator ( ... ) {
 
 ***
 
-:coffee: :one:
+##### :coffee: 1
 
 ```javascript
 function* colorsGenerator () {
@@ -116,7 +116,7 @@ for ( var x = 0; x < 75; x++ ) {
 
 ***
 
-:coffee: :two:
+##### :coffee: 2
 
 Пусть есть некий объект **user**
 
@@ -213,7 +213,7 @@ console.log ( ...user )
 
 ***
 
-:coffee: :three:
+##### :coffee: 3
 
 ```javascript
 const elements = [
@@ -249,7 +249,7 @@ for ( let elem of elements ) {}
 
 ### Асинхронный генератор
 
-:coffee: :four: 
+##### :coffee: 4 
 
 Создадим генератор, который выдает по одному символу в секунду из массива, переданного ему в качестве аргумента
 
@@ -297,7 +297,7 @@ showMessage ( "Привет, студент!" )
 
 ***
 
-:coffee: :five:
+##### :coffee: 5
 
 ###### Асинхронный генератор
 
@@ -345,21 +345,18 @@ show()
 
 ***
 
-###### Пример асинхронного генератора
+###### Примеры асинхронного генератора
 
-| [:coffee: :six:](https://garevna.github.io/js-samples/#23) |
-|-|
+| [:coffee: **6**](https://garevna.github.io/js-samples/#22) | [:coffee: **7**](https://garevna.github.io/js-samples/#23) | [:coffee: **8**](https://garevna.github.io/js-samples/#24) | [:coffee: **9**](https://garevna.github.io/js-samples/#21) |
+|-|-|-|-|
 
-***
-
-| [:coffee: :seven:](generators-sample-6) Слайдер |
-|-|
+###### [:coffee: 9](generators-sample-6) Описание примера
 
 ***
 
 ### Связные списки
 
-:coffee: :eight:
+##### :coffee: 10
 
 Пусть у нас есть массив объектов
 
@@ -439,7 +436,7 @@ let [ a, b, c, d ] = objects
 
 ***
 
-:coffee: :eight:
+##### :coffee: 11
 
 ```javascript
 let btn = document.body.appendChild (
