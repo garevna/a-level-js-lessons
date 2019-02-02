@@ -68,6 +68,7 @@ server.on ( 'connection', socket => {
                 ${mess.message}`
         )
     })
+})
 ```
 Итак, серверный скрипт готов, сохраним его в файл **start.js**
 ###### start.js
