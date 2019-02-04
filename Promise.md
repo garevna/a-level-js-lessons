@@ -171,5 +171,48 @@ console.log ( "wait for promise" )
 
 Если какой-то фрагмент кода содежит слишком "тяжеловесные" вычисления или операции, которые могут длиться достаточно долго, чтобы заблокировать основной поток - заверните такой код в промис, и он "уйдет" в [**`Event Loop`**](event-loop)
 
+Почти аналогичного результата можно достичь с помощью таймера с нулевой задержкой:
+
+```javascript
+console.log ( "start" )
+
+setTimeout (
+    () => console.log ( "Timeout is over" ),
+    0
+)
+
+console.log ( "Application finished" )
+```
+
+Однако результат с таймером все-таки отличается от результата с промисом
+
+В первом случае ( с промисом ) приложение не завершает работу, пока промис не вернет результат
+
+В случае с таймером приложение завершит работу к тому моменту, когда колбэк таймера сработает
+
+```javascript
+console.log ( "Start" )
+
+setTimeout ( () => console.log ( "Timeout is over" ), 0 )
+
+let promise = new Promise (
+    ( resolve, reject ) => resolve ( "Promise successfully rejected" )
+)
+
+promise.then ( response => console.log ( response ) )
+
+console.log ( "Finish" )
+```
+
+Запустите этот код в консоли и обратие внимание, что таймер сработает после промиса, хотя промис в коде следует за таймером
+
+```console
+Start
+Finish
+Promise successfully rejected
+undefined   // выполнение кода основного потока завершено
+Timeout is over
+```
+
 ***
 
