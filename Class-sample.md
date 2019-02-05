@@ -226,8 +226,8 @@ canvas.drawFigure ( "line", {
 
 ***
 
-| [:coffee:](https://garevna.github.io/js-samples/#18) SVG |
-|-|
+| [:coffee: 1](https://garevna.github.io/js-samples/#18) | [:coffee: 2 (с наворотами)](https://garevna.github.io/js-samples/#06) |
+|-|-|
 
 ***
 
