@@ -55,7 +55,7 @@
 * [Методы массивов](Array-methods)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
 * [Date ()](Date-constructor)
-* [📝 Самостоятельная работа](self-work-02)
+* [:clipboard: Самостоятельная работа](self-work-02)
 * [:briefcase: Практика (XSS)](XSS)
 * [:briefcase: Homework](hw-02)
 ***
@@ -99,7 +99,7 @@
 * [Вычисляемые свойства](get-and-set)
 * [Биндинг и карринг](call-apply-bind)
 * [Метод valueOf](valueOf)
-* [:briefcase: valueOf()](https://garevna.github.io/js-quiz/#valueOf)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#valueOf)
 * [Конструктор Error](Error)
 
 ***
@@ -131,9 +131,9 @@
 * [Функциональщина в JS](functionality)
 * [setTimeout](setTimeout)
 * [Замыкание](closure)
-* [:briefcase: Замыкание](https://garevna.github.io/js-quiz/#closures)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
-* [:briefcase: Рекурсия](https://garevna.github.io/js-quiz/#recursion)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#recursion)
 * Итерирующие методы массивов
     * [Принцип работы](arrayIterators-principle)
     * [Методы](arrayIterators-methods)
@@ -150,10 +150,10 @@
 |-|-|-|
 
 * [Стрелочные функции](arrowFunction)
-* [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
 * [Методы Object](Object-static-props)
-* [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
-* [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
+    * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
 * [:briefcase: Homework](hw-08)
 
 ***
@@ -168,7 +168,7 @@
 * [XMLHttpRequest](XMLHttpRequest)
 * [CSRF](CSRF)
 * [Promise](Promise)
-* [:briefcase: Promise](https://garevna.github.io/js-quiz/#promise)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
 * [:briefcase: Homework](hw-09)
 
 ***
@@ -179,11 +179,11 @@
 |-|-|-|
 
 * [Fetch API](fetch)
-* [:briefcase: fetch](https://garevna.github.io/js-quiz/#fetch)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#fetch)
 * [CORS](CORS)
 * [cookie](cookie)
 * [localStorage](localStorage)
-* [:briefcase: localStorage](https://garevna.github.io/js-quiz/#localStorage)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
 * [:briefcase: Homework](hw-fetch-blob-localStorage)
 
 ***
@@ -198,7 +198,7 @@
 * [ArrayBuffer](ArrayBuffer)
 * [FileReader](FileReader)
 * [:mortar_board: File API](File-API)
-* [:briefcase: File API](https://garevna.github.io/js-quiz/#file-API)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#file-API)
 * [FormData](FormData)
 * [:coffee: Пример](formData-sample)
 * [:briefcase: Homework](hw-10)
@@ -214,8 +214,7 @@
 * [let | const](let-const)
 * [Event Loop](event-loop)
 * [async | await](async-await)
-* [:briefcase: async function](https://garevna.github.io/js-quiz/#async)
-* [Тесты](https://garevna.github.io/js-quiz/#async%20function)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#async)
 * [API](API)
 * [REST | HATEOAS](REST)
 * [:briefcase: Упражнения](JSON-placeholder)
@@ -267,7 +266,7 @@
 * [Lifecycle hooks](web-components-hooks)
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
-* [:coffee:](https://github.com/garevna/game/wiki) Пример
+* [:coffee: Пример](https://github.com/garevna/game/wiki)
 * [:briefcase: Homework](hw-15)
 
 ***
