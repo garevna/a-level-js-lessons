@@ -24,7 +24,7 @@
 
 ###### [padStart | padEnd](Strings-methods#mortar_board-padstart--padend)
 ###### [Object.getOwnPropertyDescriptors()](Object-static-props#mortar_board-objectgetownpropertydescriptors)
-###### [Object.entries()](Object-static-props#mortar_board-objectentries)
+###### [Object.entries()](Object.entries)
 ###### [Object.values()](Object-static-props#mortar_board-objectvalues)
 
 ***
