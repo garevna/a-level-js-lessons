@@ -9,6 +9,7 @@
 ###### [let | const](let-const)
 ###### [Стрелочные функции](https://docs.google.com/forms/d/e/1FAIpQLScagd6KJZKArmU74hl913A3zLENlimFRciMcJ6nU63coxPT_Q/viewform)
 ###### [Объявление методов](short-form-of-method-declaration)
+###### [Promise](Promise)
 ###### [Классы](Class)
 ###### [Деструктуризация](Destructuring)
 ###### [Генераторы и итераторы](generators-and-iterators)
