@@ -10,6 +10,7 @@
 ###### [Стрелочные функции](https://docs.google.com/forms/d/e/1FAIpQLScagd6KJZKArmU74hl913A3zLENlimFRciMcJ6nU63coxPT_Q/viewform)
 ###### [Объявление методов](short-form-of-method-declaration)
 ###### [Классы](Class)
+###### [Деструктуризация](Destructuring)
 
 ***
 ## ES7
