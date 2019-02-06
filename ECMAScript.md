@@ -11,6 +11,7 @@
 ###### [Объявление методов](short-form-of-method-declaration)
 ###### [Классы](Class)
 ###### [Деструктуризация](Destructuring)
+###### [Генераторы и итераторы](generators-and-iterators)
 
 ***
 ## ES7
