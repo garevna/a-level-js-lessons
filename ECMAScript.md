@@ -26,7 +26,7 @@
 ###### [padStart | padEnd](Strings-methods#mortar_board-padstart--padend)
 ###### [Object.getOwnPropertyDescriptors()](Object.getOwnPropertyDescriptors)
 ###### [Object.entries()](Object.entries)
-###### [Object.values()](Object-static-props#mortar_board-objectvalues)
+###### [Object.values()](Object.values)
 
 ***
 ### ES9
