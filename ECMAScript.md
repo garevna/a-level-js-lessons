@@ -14,13 +14,14 @@
 ***
 ## ES7
 ###### 2016
+###### [async/await](async-await)
 ###### [includes()](Array-methods#9)
 ###### Оператор возведения в степень
 >> `a**b ( то же, что и `_`Math.pow( a, b )`_` )`
 ***
 ## ES8
 ###### 2017
-###### [async/await](async-await)
+
 ###### [padStart | padEnd](Strings-methods#mortar_board-padstart--padend)
 ###### [Object.getOwnPropertyDescriptors()](Object-static-props#mortar_board-objectgetownpropertydescriptors)
 ###### [Object.entries()](Object-static-props#mortar_board-objectentries)
