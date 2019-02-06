@@ -50,13 +50,13 @@ npm install -g json-server
             "id": 1
         },
         {
-            "postId": 2,
+            "userId": 2,
             "id": 2,
             "title": "Автопробег",
             "body": "Завтра планируется автопробег. Участвовать могут все желающие"
         },
         {
-            "userId": 2,
+            "userId": 1,
             "title": "*Бетономешалка",
             "body": "Это жесть. Собираюсь купить. Лучше, чем АК!",
             "id": 3
@@ -71,31 +71,31 @@ npm install -g json-server
             "userId": 3,
             "title": "XMLHttpRequest",
             "body": "Method POST",
-            "id": 8
+            "id": 5
         }
     ],
     "comments": [
         {
-            "postId": 0,
-            "id": 0,
+            "postId": 1,
+            "id": 1,
             "userId": 1,
             "body": "wow!"
         },
         {
-            "postId": 0,
-            "id": 1,
+            "postId": 3,
+            "id": 2,
             "userId": 2,
             "body": "Hi, I'm wonder!"
         },
         {
-            "postId": 1,
-            "id": 2,
+            "postId": 4,
+            "id": 3,
             "userId": 3,
             "body": "It's really wonder!"
         },
         {
             "postId": 2,
-            "id": 3,
+            "id": 4,
             "userId": 2,
             "body": "Ударим автопробегом по бездорожью и разгильдяйству!"
         }
