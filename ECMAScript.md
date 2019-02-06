@@ -23,7 +23,7 @@
 ###### 2017
 
 ###### [padStart | padEnd](Strings-methods#mortar_board-padstart--padend)
-###### [Object.getOwnPropertyDescriptors()](Object-static-props#mortar_board-objectgetownpropertydescriptors)
+###### [Object.getOwnPropertyDescriptors()](Object.getOwnPropertyDescriptors)
 ###### [Object.entries()](Object.entries)
 ###### [Object.values()](Object-static-props#mortar_board-objectvalues)
 
