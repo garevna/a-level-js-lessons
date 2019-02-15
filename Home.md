@@ -12,3 +12,8 @@
         </td>
     </tr>
 </table>
+
+***
+
+| :rewind: [HTML/ CSS](https://github.com/garevna/wiki/wiki) | [React](http://doc.a-level.com.ua/react) :fast_forward: |
+|-|-|
