@@ -310,6 +310,3 @@
 ***
 
 ###### [:open_file_folder: ECMAScript](ECMAScript)
-
-***
-### [:mortar_board: HTML/CSS](https://github.com/garevna/wiki/wiki)
