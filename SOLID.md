@@ -57,7 +57,7 @@
 ***
 
 <a name="1"></a>
-### Single responsibility
+### :mortar_board: Single responsibility
 
 Этот принцип обеспечивает четкое разграничение функций ( обязанностей ) модулей
 
@@ -65,9 +65,11 @@ _Один модуль отвечает только за что-то одно_
 
 Что нам дает соблюдение этого принципа?
 
-Первое - мы легко расширяем функциональность путем добавления новых модулей, но не переписываем уже существующие
+Первое - код каждого модуля достаточно прост
 
-Это иллюстрируют те же статические методы `Object`, которые добавляются в каждой новой спецификации языка
+Второе - мы легко расширяем функциональность путем добавления новых модулей, но не переписываем уже существующие
+
+Этот принцип иллюстрируют те же статические методы `Object`, которые добавляются в каждой новой спецификации языка
 
 Рассмотрим пример объекта `user`, который изначально имел два метода - `read` и `write`
 
@@ -82,7 +84,7 @@ _Один модуль отвечает только за что-то одно_
 ***
 
 <a name="2"></a>
-### Open-closed
+### :mortar_board: Open-closed
 
 Пример выше отлично иллюстрирует также и этот приницип
 
@@ -142,7 +144,7 @@ user.voyage ( "London" )
 ***
 
 <a name="3"></a>
-### Liskov substitution
+### :mortar_board: Liskov substitution
 
 Прин­цип под­ста­новки Бар­бары Лис­ков заключается в следующем:
 
@@ -188,7 +190,7 @@ user = new RegisteredUser ( "Иван", "xJgb-809/**1Bh" )
 ***
 
 <a name="4"></a>
-### Interface segregation
+### :mortar_board: Interface segregation
 
 Как мы уже поняли :wink:, модули взаимодействуют друг с другом через интерфейсы
 
@@ -214,10 +216,68 @@ user = new RegisteredUser ( "Иван", "xJgb-809/**1Bh" )
 
 Очевидно, что принцип специализации интерфейсов непосредственно вытекает из первого принципа `SOLID`
 
+:coffee:
+
+```javascript
+const card = (
+    function ( pin ) {
+        let cash = 0
+        const addCash = sum => cash += sum
+        const changePin = newPin => pin = newPin
+        const testPin = pincode => pin === pincode
+        const showCash = () => console.log ( `Cash: ${cash}` )
+        const getMoney = sum => {
+            cash -= sum
+            console.log ( `Get money: ${sum}` )
+        }
+        
+        return function ( operation, sum ) {
+            operation === 0 ? addCash ( sum ) : 
+                testPin ( prompt ( "Enter pincode" ) ) ?
+                    operation === 1 ? showCash() : 
+                        operation === 2 ? 
+                            sum <= cash ? getMoney ( sum ) : console.warn ( "Insufficient cash" )
+                        : changePin ( prompt ( "Set your pincode" ) )
+                : console.error ( "Invalide pincode" )
+        }
+    }
+)( prompt ( "Set your pincode" ) )
+```
+
+Мы получили модуль с навороченным интерфейсом
+
+Раздробим интерфейс модуля:
+
+```javascript
+const card = (
+    function ( pin ) {
+        let cash = 0
+        const changePin = () => pin = prompt ( "Set your pincode" )
+        const testPin = pincode => pin === prompt ( "Enter pincode" )
+        const pinError = () => console.error ( "Invalide pincode" )
+        const showMoney = () => console.log ( `Cash: ${cash}` )
+        const getMoney = sum => {
+            cash -= sum
+            console.log ( `Get your money: ${sum}` )
+        }
+        
+        return {
+            uppendCash: sum => cash += sum,
+            showCash: () => testPin() ? showMoney() : pinError (),
+            getCash: sum =>
+                testPin() ? sum <= cash ? getMoney ( sum ) :
+                        console.warn ( "Insufficient cash" )
+                    : pinError (),
+            changePincode: () => testPin() ? changePin () : pinError ()
+        }
+    }
+)( prompt ( "Set your pincode" ) )
+```
+
 ***
 
 <a name="5"></a>
-### Dependency Invertion
+### :mortar_board: Dependency Invertion
 
 Зависимости...
 
