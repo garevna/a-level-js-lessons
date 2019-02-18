@@ -298,6 +298,7 @@
 
 ###### :mortar_board: Дополнительно
 
+* [SOLID](SOLID)
 * [:pushpin: **Performance**](performance)
 * [:pushpin: **Websockets**](websocket)
 
