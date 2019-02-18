@@ -264,10 +264,9 @@ const card = (
         return {
             uppendCash: sum => cash += sum,
             showCash: () => testPin() ? showMoney() : pinError (),
-            getCash: sum =>
-                testPin() ? sum <= cash ? getMoney ( sum ) :
-                        console.warn ( "Insufficient cash" )
-                    : pinError (),
+            getCash: sum => testPin() ? sum <= cash ? getMoney ( sum ) 
+                                : console.warn ( "Insufficient cash" ) 
+                            : pinError (),
             changePincode: () => testPin() ? changePin () : pinError ()
         }
     }
