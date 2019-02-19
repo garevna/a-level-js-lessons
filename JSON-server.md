@@ -152,7 +152,7 @@ fetch ( 'http://localhost:3000/comments' )
 
 Теперь получим данные из базы данных в переменные  **_users_**,  **_posts_** и  **_comments_**, используя функцию  **getData**
 
-Наберем следущий код в консоли браузера:
+Выполним следущий код в консоли браузера:
 
 ```javascript
 let users, posts, comments
@@ -173,9 +173,11 @@ Promise.all ([
         }
     )
 ```
+
 ###### :coffee: :three: POST
 
 Добавим новый комментарий:
+
 ```javascript
 fetch ( 'http://localhost:3000/comments', {
     method: 'POST',
@@ -188,9 +190,7 @@ fetch ( 'http://localhost:3000/comments', {
         "Content-type": "application/json"
     }
 })
-    .then ( response => {
-        console.log ( 'response: ', response )
-})
+    .then ( response => console.log ( 'response: ', response ) )
 ```
 Обратите внимание, что поле **id** добавляемой записи вычисляется на стороне сервера<br/>
 Вам не нужно устанавливать его значение<br/>
@@ -204,7 +204,9 @@ fetch ( 'http://localhost:3000/comments?postId=1&id=4' )
 ```
 
 ###### :coffee: :four: PUT
+
 Изменим содержание первого поста :
+
 ```javascript
 fetch ( 'http://localhost:3000/posts/1', {
     method: 'PUT',
@@ -217,15 +219,15 @@ fetch ( 'http://localhost:3000/posts/1', {
         "Content-type": "application/json"
     }
 })
-   .then ( response => {
-       console.log ( 'response: ', response )
-})
+   .then ( response => console.log ( 'response: ', response ) )
 ```
+
 ###### :coffee: :five: DELETE
 
 Удалим первый комментарий
 
 В консоли браузера наберем код:
+
 ```javascript
 fetch ( 'http://localhost:3000/comments/1', {
     method: 'DELETE',
@@ -233,34 +235,38 @@ fetch ( 'http://localhost:3000/comments/1', {
         "Content-type": "application/json"
     }
 })
-   .then ( response => {
-       console.log ( 'response: ', response )
-})
+   .then ( response => console.log ( 'response: ', response ) )
 ```
+
 ***
+
 ### XMLHttpRequest
+
 ```javascript
 function workWithData ( method, url, data ) {
     let request = new XMLHttpRequest ()
-    request.onreadystatechange = function ( event ) {
-        if ( this.readyState === 4 ) 
-            if ( this.status === 200 || this.status === 201 )
-                console.log ( this.responseText )
-        request.open ( method, url )
-        request.setRequestHeader ( 
-            'Content-type', 'application/json; charset=utf-8' 
-        )
-        request.send ( data )
+    request.onload = function ( event ) {
+        console.log ( this.responseText )
+    }
+    request.open ( method, url )
+    request.setRequestHeader ( 
+        'Content-type', 'application/json; charset=utf-8' 
+    )
+    request.send ( data )
 }
 ```
+
 ###### GET
+
 ```javascript
 workWithData (
     'GET',
     'http://localhost:3000/posts'
 )
 ```
+
 ###### POST
+
 ```javascript
 workWithData (
     'POST', 
@@ -272,14 +278,18 @@ workWithData (
     } )
 )
 ```
+
 ###### DELETE
+
 ```javascript
 workWithData (
     'DELETE',
     'http://localhost:3000/posts/7'
 )
 ```
+
 ###### PUT
+
 ```javascript
 workWithData (
     'PUT', 
