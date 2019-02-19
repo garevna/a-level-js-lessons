@@ -150,27 +150,28 @@ fetch ( 'http://localhost:3000/comments' )
 ```
 ###### :coffee: :two: GET
 
-Теперь получим данные из базы данных в переменные  **_users_**,  **_posts_** и  **_comments_**, используя асинхронную функцию  **getAllData**
+Теперь получим данные из базы данных в переменные  **_users_**,  **_posts_** и  **_comments_**, используя функцию  **getData**
 
 Наберем следущий код в консоли браузера:
+
 ```javascript
+let users, posts, comments
+
 function getData ( ref ) {
     return fetch ( 'http://localhost:3000/' + ref )
-        .then ( response => response.json ()
-            .then ( json => console.log ( json ) )
-        )
+        .then ( response => response.json () )
 }
-async function getAllData () {
-    var users = await getData ( "users" )
-        .then ( response => response )
-    var posts = await getData ( "posts" )
-        .then ( response => response )
-     var comments = await getData ( "comments" )
-        .then ( response => response )
-    console.log ( users, posts, comments )
-}
-
-getAllData ()
+Promise.all ([
+    getData ( "users" ),
+    getData ( "posts" ),
+    getData ( "comments" )
+])
+    .then (
+        response => {
+            [ users, posts, comments ] = response
+            console.log ( users, posts, comments )
+        }
+    )
 ```
 ###### :coffee: :three: POST
 
