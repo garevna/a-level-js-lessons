@@ -142,15 +142,15 @@ Promise.all ( promises ).then ( response => document.body.innerHTML += `<p>${res
 
 ```javascript
 console.log ( "hello" )
-let promise = new Promise (
-    ( resolve, reject ) => resolve ( "Promise successfully rejected" )
-)
 
-promise.then ( response => console.log ( response ) )
+new Promise (
+    resolve => resolve ( "Promise successfully rejected" )
+).then ( response => console.log ( response ) )
+
 console.log ( "wait for promise" )
 ```
 
-Обратите внимание, что функция, переданная конструктору Promise, отнюдь не асинхронная
+Обратите внимание, что функция, переданная конструктору `Promise`, отнюдь не асинхронная
 
 Однако, завернув ее в промис, мы убрали ее из основного потока
 
@@ -165,10 +165,7 @@ console.log ( "wait for promise" )
 ```javascript
 console.log ( "start" )
 
-setTimeout (
-    () => console.log ( "Timeout is over" ),
-    0
-)
+setTimeout ( () => console.log ( "Time is over" ), 0 )
 
 console.log ( "Application finished" )
 ```
@@ -185,7 +182,7 @@ console.log ( "Start" )
 setTimeout ( () => console.log ( "Timeout is over" ), 0 )
 
 let promise = new Promise (
-    ( resolve, reject ) => resolve ( "Promise successfully rejected" )
+    resolve => resolve ( "Promise successfully resolved" )
 )
 
 promise.then ( response => console.log ( response ) )
@@ -204,4 +201,24 @@ Timeout is over
 ```
 
 ***
+
+:coffee: :eight:
+
+```javascript
+console.log ( "Диалог в чате" )
+
+new Promise ( resolve => resolve ( "Привет, тебя как зовут?" ) )
+    .then ( response => console.log ( response ) )
+    .then ( () => console.log ( "А меня Миша. Ты где живешь?" ) )
+    .then ( () => console.log ( "Во Львове. Ты работаешь или учишся?" ) )
+    .then ( () => console.log ( "Я тоже. Ладно, до связи, удачи!" ) )
+
+new Promise ( resolve => resolve ( "Привет, Маша, а тебя?" ) )
+    .then ( response => console.log ( response ) )
+    .then ( () => console.log ( "В Харькове. А ты где?" ) )
+    .then ( () => console.log ( "Учусь, и работаю. А ты?" ) )
+    .then ( () => console.log ( "Спасибо, и тебе )" ) )
+
+console.log ( "___________________" )
+```
 
