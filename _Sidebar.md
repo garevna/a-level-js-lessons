@@ -101,6 +101,7 @@
 * [Метод valueOf](valueOf)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#valueOf)
 * [Конструктор Error](Error)
+* [:briefcase: Homework](hw-05)
 
 ***
 
@@ -116,7 +117,7 @@
 * [Элементы DOM](DOM-elements)
 * [Оператор switch](switch)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
-
+* [:briefcase: Homework](hw-06)
 
 <a name="toc-7"></a>
 #### Занятие 7
@@ -127,7 +128,8 @@
 * [События  DOM](Event)
 * [:mortar_board: Элементы форм](forms)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#forms)
-* [:briefcase: Homework](hw-06)
+* [:briefcase: Homework](hw-07)
+
 ***
 
 <a name="toc-8"></a>
@@ -148,7 +150,7 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](SHA)
-* [:briefcase: Homework](hw-07)
+* [:briefcase: Homework](hw-08)
 ***
 
 <a name="toc-9"></a>
@@ -162,7 +164,7 @@
 * [Методы Object](Object-static-props)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
     * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
-* [:briefcase: Homework](hw-08)
+* [:briefcase: Homework](hw-09)
 
 ***
 <a name="toc-10"></a>
@@ -177,7 +179,7 @@
 * [CSRF](CSRF)
 * [Promise](Promise)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
-* [:briefcase: Homework](hw-09)
+* [:briefcase: Homework](hw-10)
 
 ***
 <a name="toc-11"></a>
@@ -193,6 +195,7 @@
 * [localStorage](localStorage)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
 * [:briefcase: Homework](hw-fetch-blob-localStorage)
+* [:briefcase: Homework](hw-11)
 
 ***
 <a name="toc-12"></a>
@@ -209,7 +212,7 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#file-API)
 * [FormData](FormData)
 * [:coffee: Пример](formData-sample)
-* [:briefcase: Homework](hw-10)
+* [:briefcase: Homework](hw-12)
 
 ***
 <a name="toc-13"></a>
@@ -228,7 +231,7 @@
 * [:briefcase: Упражнения](JSON-placeholder)
 * [:briefcase: Практика](JSON-server)
 * [:briefcase: fake chat](Fake-chat)
-* [:briefcase: Homework](hw-12)
+* [:briefcase: Homework](hw-13)
 
 ***
 <a name="toc-14"></a>
@@ -246,7 +249,7 @@
     * [static](Class-static)
     * [ get & set ](Class-get-set)
     * [:coffee:](Class-sample)
-* [:briefcase: Homework](hw-13)
+* [:briefcase: Homework](hw-14)
 
 ***
 <a name="toc-15"></a>
@@ -259,7 +262,7 @@
 * [Деструктуризация](Destructuring)
 * [Генераторы и итераторы](generators-and-iterators)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
-* [:briefcase: Homework](hw-14)
+* [:briefcase: Homework](hw-15)
 
 ***
 <a name="toc-16"></a>
