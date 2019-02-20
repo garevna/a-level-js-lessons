@@ -194,7 +194,6 @@
 * [cookie](cookie)
 * [localStorage](localStorage)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
-* [:briefcase: Homework](hw-fetch-blob-localStorage)
 * [:briefcase: Homework](hw-11)
 
 ***
