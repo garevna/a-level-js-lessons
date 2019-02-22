@@ -46,8 +46,7 @@ elefant
 добавив проверку типа аргумента:
 ```javascript
 function animal ( func ) {
-    if ( typeof func === 'function' )
-        func ()
+    typeof func === 'function' ? func () : null
 }
 ```
 Создадим элемент `div`  и  добавим его в  `document.body`
