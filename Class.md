@@ -232,6 +232,7 @@ pict.constructor.name
 
 ###### :coffee: :four:
 
+```javascript
 const Sample = class Canvas {
     constructor () {
         this.canvas = document.createElement ( 'canvas' )
@@ -256,10 +257,13 @@ window.onresize = pict.resizeCanvas.bind ( pict )
 pict.drawLine ( [ { x: 50, y: 50 }, { x: 250, y: 250 } ] )
 pict.drawLine (  [ { x: 250, y: 250 }, { x: 100, y: 250 } ] )
 ```
+
 :pushpin: Чтобы получить имя класса, нужно использовать его свойство  **name**:
+
 ```javascript
 console.log ( Sample.name ) // "Canvas"
 ```
+
 ***
 <a name="context"></a>
 ### :mortar_board: Потеря контекста
