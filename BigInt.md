@@ -67,7 +67,7 @@ BigInt ( NaN )
 BigInt ( null )
 ```
 
-будет сгенерировано исключение **RangeError**
+будет сгенерировано исключение **TypeError**
 
 ```
 ⛔️ Uncaught TypeError: Cannot convert null to a BigInt
