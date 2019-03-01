@@ -27,6 +27,79 @@ bigNumber = BigInt ( bigNumber ) // 9007199254745994n
 typeof bigNumber // 'bigint'
 ```
 
+**`NaN`**, **`null`**, **`Infinity`** не могут быть конвертированы в **`bigint`**
+
+###### Infinity
+
+```javascript
+BigInt ( Infinity )
+```
+
+будет сгенерировано исключение **RangeError**
+
+```
+⛔️ Uncaught RangeError: The number Infinity cannot be converted to a BigInt because it is not an integer
+```
+
+###### NaN
+
+```javascript
+BigInt ( NaN )
+```
+
+будет сгенерировано исключение **RangeError**
+
+```
+⛔️ Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
+```
+
+###### null
+
+```javascript
+BigInt ( null )
+```
+
+будет сгенерировано исключение **RangeError**
+
+```
+⛔️ Uncaught TypeError: Cannot convert null to a BigInt
+```
+
+###### Boolean --> BigInt
+
+```javascript
+BigInt ( false )  // 0n
+BigInt ( true )   // 1n
+```
+
+###### [] --> BigInt
+
+```javascript
+BigInt ( [] )   // 0n
+```
+
+###### String --> BigInt
+
+```javascript
+BigInt ( "45" )        // 45n
+BigInt ( "45" + 11 )   // 4511n
+BigInt ( "45" - 11 )   // 34n
+
+BigInt ( "45" - true ) // 44n
+```
+
+а вот такое приведение:
+
+```javascript
+BigInt ( "45 + 8" )
+```
+
+```
+⛔️ Uncaught SyntaxError: Cannot convert 45 + 8 to a BigInt
+```
+
+***
+
 При этом арифметические операции с участием данных типа **`bigint`** возможны только при условии, что оба операнда имеют тип данных **`bigint`**
 
 При попытке выполнить арифметическую операцию с операндами различного типа 
