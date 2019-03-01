@@ -48,7 +48,7 @@
 
 * [Приведение типов](data-types-conversion)
 * [NaN | null | Infinity](NaN-null-Infinity)
-* [BigInt (ES10)](BigInt)
+* [:large_orange_diamond: BigInt (ES10)](BigInt)
 * [Функции](function)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#function)
 * [Методы](method)
