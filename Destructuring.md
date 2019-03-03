@@ -260,4 +260,4 @@ var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] =
 
 ***
 
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSeSywg6vOrnZ0JJdvqOjB9OSNT3FcBBRJox7Qt2661Nz_C8CA/viewform)
+### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#destructuring)
