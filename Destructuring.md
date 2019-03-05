@@ -151,7 +151,9 @@ console.log( speciality )  // "слесарь"
 * остаток от дестуктурированного массива
 
 :coffee: :one:
+
 ###### функция  _getAngleData_  возвращает массив
+
 ```javascript
 let getAngleData = 
     deg => [ 
@@ -161,7 +163,9 @@ let getAngleData =
         Math.atan ( deg ) 
     ]
 ```
+
 ###### функция  _func_  принимает 4 аргумента
+
 ```javascript
 let func = ( x, y, z, w ) => {
     console.log ( x )
@@ -170,7 +174,9 @@ let func = ( x, y, z, w ) => {
     console.log ( w )
 }
 ```
+
 ###### Передадим результат работы функции _getAngleData_ функции _func_
+
 ```javascript
 func ( ...getAngleData ( Math.PI/3 ) )
 
@@ -181,7 +187,9 @@ func ( ...getAngleData ( Math.PI/3 ) )
 ```
 
 :coffee: :two:
+
 ###### получим остаток массива, возвращаемого функцией _getAngleData_, в массив _rest30_
+
 ```javascript
 let [ sin30, ...rest30 ] = getAngleData ( Math.PI/3 )
 
@@ -193,6 +201,7 @@ console.log ( rest30 )
 :coffee: :three:
 
 ###### разметка
+
 ```html
 <body>
     <p class="paragraph">1</p>
@@ -201,23 +210,29 @@ console.log ( rest30 )
     <p class="paragraph">4</p>
 </body>
 ```
+
 ###### код
+
 ```javascript
 let collection = document.querySelectorAll ( '.paragraph' )
 let [ first, second, third, forth ] = collection
 ```
+
 ###### или
+
 ```javascript
 let [ first, second, third, forth ] = 
     document.querySelectorAll ( '.paragraph' )
 ```
 ###### результат
+
 ```javascript
 console.log ( first )   // <p class="paragraph">1</p>
 console.log ( second )  // <p class="paragraph">2</p>
 console.log ( third )   // <p class="paragraph">3</p>
 console.log ( forth )   // <p class="paragraph">4</p>
 ```
+
 ***
 
 :coffee: :four:
@@ -256,6 +271,39 @@ var title = document.getElementById ( "title" )
 var ids = [ "demo", "registration", "sign-in", "name", "pass", "title" ]
 var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] = 
     ids.map ( item => document.getElementById ( item ) )
+```
+
+***
+
+:coffee: :five:
+
+Посчитаем, сколько раз встречается каждый символ в строке
+
+Результат поместим в объект, где имя каждого свойства будет буквой, а значение - числом, сколько раз этот символ встречается в строке `str`
+
+```javascript
+str = "htkolkhlfottko"
+
+Object.assign ( {}, ...str.split('').map(
+    letter => {
+        return {
+            [ letter ]: str.match (eval (`/${letter}/g`)).length
+        }
+    }
+) )
+```
+
+###### результат
+
+```
+▼ {h: 2, t: 3, k: 3, o: 3, l: 2, …}
+    f: 1
+    h: 2
+    k: 3
+    l: 2
+    o: 3
+    t: 3
+  ► __proto__: Object
 ```
 
 ***
