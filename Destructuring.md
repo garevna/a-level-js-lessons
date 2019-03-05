@@ -282,15 +282,16 @@ var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] =
 Результат поместим в объект, где имя каждого свойства будет буквой, а значение - числом, сколько раз этот символ встречается в строке `str`
 
 ```javascript
-str = "htkolkhlfottko"
+const lettersCounter = str => Object.assign ( {}, 
+    ...str.split('')
+        .map( letter => {
+            return {
+                [ letter ]: str.match (eval (`/${letter}/g`)).length
+            }
+    })
+)
 
-Object.assign ( {}, ...str.split('').map(
-    letter => {
-        return {
-            [ letter ]: str.match (eval (`/${letter}/g`)).length
-        }
-    }
-) )
+lettersCounter ( "htkolkhlfottko" )
 ```
 
 ###### результат
