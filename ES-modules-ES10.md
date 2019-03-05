@@ -1,6 +1,8 @@
-## :mortar_board: Dynamic import ( ES10 )
+## :mortar_board: Dynamic import 
 
-:coffee:
+###### ES10 ( 2019 )
+
+#### :coffee: 1
 
 Запустите в консоли следующий код:
 
@@ -16,7 +18,7 @@ document.body.onclick = async () => {
 
 ***
 
-:warning: С 2019 года все основные браузеры поддерживают ES-модули
+#### :coffee: 2
 
 Предположим, в разметке мы подключили скрипт **`index.js`**
 
