@@ -293,6 +293,7 @@
 * [webpack](webpack)
 * [:briefcase: Упражнение 1](webpack-1)
 * [ES6 модули](ES6-modules)
+    * [ES10](ES-modules-ES10)
 * [:briefcase: Упражнение 2](webpack-2)
 * [--mode | --watch](webpack-options)
 * [:briefcase: Упражнение 3](webpack-3)
