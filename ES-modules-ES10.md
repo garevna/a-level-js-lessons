@@ -2,6 +2,8 @@
 
 ###### ES10 ( 2019 )
 
+Динамический импорт представлен новой функцией **`import()`**, возвращающей промис
+
 #### :coffee: 1
 
 Запустите в консоли следующий код:
@@ -14,11 +16,51 @@ document.body.onclick = async () => {
 
 :pushpin: Примечательно то, что в файле **_index12.js_** нет директивы **_`export`_**
 
-Однако импорт сработал, и скрипт запустился 
+Однако импорт сработал, и скрипт запустился
+
+#### :coffee: 2
+
+В этом примере скрипты импортируются динамически, последовательно, с задержкой в несколько секунд
+
+```javascript
+let scriptFile = 'https://garevna.github.io/js-samples/js/index'
+
+import ( `${scriptFile}12.js` )
+    .then( module => {
+        setTimeout (
+            () => import ( `${scriptFile}21.js` )
+                .then (
+                    setTimeout (
+                        () => import ( `${scriptFile}22.js` ),
+                        10000
+                    ),
+                    20000
+                ),
+            10000
+        )
+    })
+```
+
+Используем асинхронную функцию для упрощения кода:
+
+```javascript
+const scriptImports = async moduleFile => {
+    const timeOut = timeInterval => new Promise (
+        resolve => setTimeout ( () => resolve(), timeInterval )
+    )
+    await import ( `${moduleFile}12.js` )
+    await timeOut ( 8000 )
+    await import ( `${moduleFile}21.js` )
+    await timeOut ( 12000 )
+    await import ( `${moduleFile}22.js` )
+}
+
+scriptImports ( 'https://garevna.github.io/js-samples/js/index' )
+```
 
 ***
 
-#### :coffee: 2
+#### :coffee: 3
 
 Предположим, в разметке мы подключили скрипт **`index.js`**
 
