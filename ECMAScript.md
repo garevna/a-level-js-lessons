@@ -40,4 +40,5 @@
 ### ES10
 ###### 2019
 
+###### [Dynamic import](ES-modules-ES10)
 ###### [BigInt](BigInt)
