@@ -88,6 +88,7 @@
 * [Конструктор](constructor)
 * [Модель наследования](inheritance-model)
 * [Публичные и приватные свойства](public-and-private-properties)
+* [Оператор in](operator-in)
 * [:coffee: 1](inheritance-model-sample-1)
 * [:briefcase: Homework](hw-04)
 
