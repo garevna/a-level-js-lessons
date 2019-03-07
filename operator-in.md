@@ -40,15 +40,35 @@ var arr = [ 1, 2, 3 ]
 
 ***
 
+###### Строки, числа и логические значения
+
+Их нужно "завернуть" в объект так:
+
 ```javascript
 var sample = String ( "Welcome to the hell" )
 "length" in sample   // true
 
-var number = Number ( 5 )
+var number = new Number ( 5 )
 "valueOf" in number  // true
+
+var bool = new Boolean ( "5" )
+"valueOf" in bool  // true
 ```
 
+или так:
 
+```javascript
+var sample = Object ( "Welcome to the hell" )
+"length" in sample   // true
+
+var number = Object ( 5 )
+"valueOf" in number  // true
+
+var bool = Object ( false )
+"valueOf" in bool  // true
+```
+
+Если не "завернуть" строку, число или логическое значение в объект, то при попытке использовать оператор **`in`** будет сгенерировано исключение **`TypeError`**
 
 ```javascript
 var sample = "Welcome to the hell"
@@ -56,4 +76,7 @@ var sample = "Welcome to the hell"
 
 var number = 5
 "valueOf" in number  // TypeError
+
+var bool = true
+"valueOf" in bool   // TypeError
 ```
