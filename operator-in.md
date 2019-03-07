@@ -80,3 +80,17 @@ var number = 5
 var bool = true
 "valueOf" in bool   // TypeError
 ```
+
+***
+
+#### null | undefined
+
+"Завернуть" в объект можно также **_`null`_** и **_`undefined`_**
+
+```javascript
+var sample = Object ( null )
+"valueOf" in sample  // true
+
+var sample = Object ( undefined )
+"valueOf" in sample  // true
+```
