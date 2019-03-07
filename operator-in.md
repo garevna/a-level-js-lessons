@@ -52,8 +52,8 @@ var number = Number ( 5 )
 
 ```javascript
 var sample = "Welcome to the hell"
-"length" in sample   // true
+"length" in sample   // TypeError
 
 var number = 5
-"valueOf" in number  // true
+"valueOf" in number  // TypeError
 ```
