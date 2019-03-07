@@ -6,7 +6,7 @@
 
 #### :coffee: 1
 
-Запустите в консоли следующий код:
+Запустите в консоли **Chrome** следующий код:
 
 ```javascript
 document.body.onclick = async () => {
