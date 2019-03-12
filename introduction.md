@@ -1,5 +1,5 @@
-# 🎓 Обзор концепций и языков программирования
-[![](https://garevna.github.io/js-samples/images/google-slides-ico.png)](https://docs.google.com/presentation/d/e/2PACX-1vSpj71UvZmrwHsdtLFOrjXQJADTMosCPAoutK423NIhTR-LviXyhgvm-2z3S8QcyX5GCpHwWSnMPKCg/pub?start=true&loop=true&delayms=10000 "Просмотр презентации")
+# :mortar_board: Обзор концепций и языков программирования
+[<img src="https://garevna.github.io/js-samples/images/google-slides-ico.png" height="40"/> **demo**](https://docs.google.com/presentation/d/e/2PACX-1vSpj71UvZmrwHsdtLFOrjXQJADTMosCPAoutK423NIhTR-LviXyhgvm-2z3S8QcyX5GCpHwWSnMPKCg/pub?start=true&loop=true&delayms=10000 "Просмотр презентации")
 
 ## 📖 Язык программирования
 
@@ -165,17 +165,12 @@
 
 # 📖 JavaScript
 
-### Мультипарадигмальный язык программирования
-[![](https://garevna.github.io/js-samples/images/google-slides-ico.png)](https://docs.google.com/presentation/d/e/2PACX-1vRlJKEbfaL0TBFgKlh-thWxPbddXsbt6_Ml1-aM1OmOAztVHxQ7pKpwqpoovLldfIZ1tmf3P5CLFLaX/pub?start=true&loop=true&delayms=15000 "Просмотр презентации")
+[<img src="https://garevna.github.io/js-samples/images/google-slides-ico.png" height="40"/> **Мультипарадигмальный язык программирования**](https://docs.google.com/presentation/d/e/2PACX-1vRlJKEbfaL0TBFgKlh-thWxPbddXsbt6_Ml1-aM1OmOAztVHxQ7pKpwqpoovLldfIZ1tmf3P5CLFLaX/pub?start=true&loop=true&delayms=15000 "Просмотр презентации")
 
 ***
 
 ## 📖 Дополнительный материал
 
-### Язык гипертекстовой разметки
+[<img src="https://garevna.github.io/js-samples/images/google-slides-ico.png" height="40"/> **Язык гипертекстовой разметки**](https://docs.google.com/presentation/d/e/2PACX-1vT9NDRlX0YBgJnG8mnfBWUN7amXuTu80kGWfPMwNPT0AgWLZUrL7IwntyHIo2Lp1o6h1HnF3gOZUETC/pub?start=true&loop=true&delayms=30000 "Просмотр презентации")
 
-[![](https://garevna.github.io/js-samples/images/google-slides-ico.png)](https://docs.google.com/presentation/d/e/2PACX-1vT9NDRlX0YBgJnG8mnfBWUN7amXuTu80kGWfPMwNPT0AgWLZUrL7IwntyHIo2Lp1o6h1HnF3gOZUETC/pub?start=true&loop=true&delayms=30000 "Просмотр презентации")
-
-### Всемирная паутина
-
-[![](https://garevna.github.io/js-samples/images/google-slides-ico.png)](https://docs.google.com/presentation/d/e/2PACX-1vQmHcWRjdwPwZbciTavoqSt8hJzjP8ifwx8ktGL5Cr72d66qAg9Y7tADq1n1UpP1iNRucheGd6ZeJmt/pub?start=true&loop=true&delayms=30000 "Просмотр презентации")
+[<img src="https://garevna.github.io/js-samples/images/google-slides-ico.png" height="40"/> **Всемирная паутина**](https://docs.google.com/presentation/d/e/2PACX-1vQmHcWRjdwPwZbciTavoqSt8hJzjP8ifwx8ktGL5Cr72d66qAg9Y7tADq1n1UpP1iNRucheGd6ZeJmt/pub?start=true&loop=true&delayms=30000 "Просмотр презентации")
