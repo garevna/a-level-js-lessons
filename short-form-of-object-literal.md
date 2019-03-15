@@ -15,6 +15,8 @@ console.log ( user )
 
 #### :coffee: 2
 
+Не забывайте, что массивы и объекты передаются по ссылке
+
 ```javascript
 let name = "Ivan", age = 25
 let hobby = [ "football", "fishing" ],
