@@ -42,3 +42,4 @@
 
 ###### [Dynamic import](ES-modules-ES10)
 ###### [BigInt](BigInt)
+###### Symbol description
