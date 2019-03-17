@@ -164,6 +164,7 @@
 
 * [Стрелочные функции](arrowFunction)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+* [let | const](let-const)
 * [Методы Object](Object-static-props)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
     * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
@@ -224,7 +225,6 @@
 |-|-|-|
 
 * [Размеры и прокрутка элемента](scroll)
-* [let | const](let-const)
 * [Event Loop](event-loop)
 * [async | await](async-await)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#async)
