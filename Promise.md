@@ -373,7 +373,11 @@ navigator.getBattery().then ( result => {
 
 ***
 
-### :coffee: 4
+## Promise.all
+
+Супер-удобная штука
+
+Этот метод принимает массив промисов, и возвращает массив ответов тогда, когда все промисы разрезолвятся
 
 ```javascript
 var promises = [
@@ -385,14 +389,36 @@ var promises = [
 Promise.all ( promises ).then ( response => document.body.innerHTML += `<p>${response}</p>` )
 ```
 
+Плохо то, что если какой-то промис в массиве разреджектится, то слетят все остальные...
+
+```javascript
+const executor = ( resolve, reject ) =>
+    Math.random () > 0.5 ? 
+        resolve ( "success :)" ) : 
+        reject ( new Error ( "ups... :(" ) )
+
+var promises = [
+    new Promise ( executor ),
+    new Promise ( executor ),
+    new Promise ( executor )
+]
+
+Promise.all ( promises )
+    .then (
+        response => document.body.innerHTML += `<p>${response}</p>`,
+        err => console.warn ( err )
+    )
+```
+
+
 ***
 
-| [:coffee: 5](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [:coffee: 6](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [:coffee: 7](https://repl.it/@garevna/promise-sample-1) |
+| [:coffee: 4](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [:coffee: 5](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [:coffee: 6](https://repl.it/@garevna/promise-sample-1) |
 |-|-|-|
 
 ***
 
-### :coffee: 8
+### :coffee: 7
 
 Для понимания полезности промисов в нашей асинхронной жизни рассмотрим простенький пример
 
@@ -458,7 +484,7 @@ Timeout is over
 
 ***
 
-### :coffee: 9
+### :coffee: 8
 
 Обратите внимание, в какой последовательности будут срабатывать колбэки промисов
 
