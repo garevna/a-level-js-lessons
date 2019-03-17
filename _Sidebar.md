@@ -181,7 +181,7 @@
 * [curl](curl)
 * [XMLHttpRequest](XMLHttpRequest)
 * [CSRF](CSRF)
-* [Promise](Promise)
+* [Promise:small_red_triangle:](Promise)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
 * [:briefcase: Homework](hw-10)
 
