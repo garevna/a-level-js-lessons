@@ -13,15 +13,30 @@
 
 **Ответ**:
 
+###### while
+
 ```javascript
-function showNumbers ( finalNum ) {
+function fizzBuzz ( finalNum ) {
     var num = 0
     while ( num++ < finalNum ) {
-        let x = ( num % 3 ? "" : "fizz" ) + ( num % 5 ? "" : "Buzz" )
+        let x = ( num % 3 ? "" : "fizz" ) + ( num % 5 ? "" : "buzz" )
         console.log (
            x.length ? x : num 
         )
     }  
+}
+```
+
+###### recursion
+
+```javascript
+function fizzBuzz ( finalNum ) {
+    let num = 0
+    const testNum = n => ( n % 3 ? "" : "fizz" ) + ( n % 5 ? "" : "buzz" );
+    ( function () {
+        console.log ( testNum ( num ) ? testNum ( num ) : num )
+        num++ < finalNum ? arguments.callee ( num ) : null
+    })()
 }
 ```
 
