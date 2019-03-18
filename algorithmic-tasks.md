@@ -20,9 +20,7 @@ function fizzBuzz ( finalNum ) {
     var num = 0
     while ( num++ < finalNum ) {
         let x = ( num % 3 ? "" : "fizz" ) + ( num % 5 ? "" : "buzz" )
-        console.log (
-           x.length ? x : num 
-        )
+        console.log ( x.length ? x : num )
     }  
 }
 ```
