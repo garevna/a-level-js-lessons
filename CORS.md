@@ -60,7 +60,7 @@
 
 ***
 
-### Access-Control-Expose-Headers ( необязательный )
+#### Access-Control-Expose-Headers ( необязательный )
 
 Во время запроса CORS можно получить доступ только к простым заголовкам ответов
 
