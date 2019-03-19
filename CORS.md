@@ -207,7 +207,7 @@ fetch ( "https://cors-anywhere.herokuapp.com/http://humor.fm/uploads/posts/2016-
     X-Request-Url: http://humor.fm/uploads/posts/2016-03/17/umndflr0wjc.jpg
 ```
 
-Прокси-сервер добавил необходимые заголовки к ответу, и браузер вернул нам ответ - файл изображения получен :simple_smile:
+Прокси-сервер добавил необходимые заголовки к ответу, и браузер вернул нам ответ - файл изображения получен :wink:
 
 ***
 
