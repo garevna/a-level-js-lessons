@@ -73,6 +73,8 @@
      Last-Modified
      Pragma
 
+В заголовке `Access-Control-Expose-Headers` ответа сервера перечисляются заголовки ответа, которые будут доступны клиенту
+
 ***
 
 #### Access-Control-Allow-Credentials ( необязательный )
@@ -174,12 +176,14 @@ fetch ( "http://humor.fm/uploads/posts/2016-03/17/umndflr0wjc.jpg" )
 
 ```javascript
 fetch ( "https://cors-anywhere.herokuapp.com/http://humor.fm/uploads/posts/2016-03/17/umndflr0wjc.jpg" )
-    .then ( response => response.text()
-        .then ( response => console.log ( response ) )
+    .then ( response => response.blob()
+        .then ( blob => document.body.appendChild (
+            document.createElement ( "img" )
+        ).src = URL.createObjectURL ( blob ) )
     )
 ```
 
-Теперь наш запрос благополучно проходит, и во вкладке **Network** можно увидеть такие заголовки ответа:
+Теперь наш запрос благополучно проходит, на странице появляется картинка, а во вкладке **Network** можно увидеть такие заголовки ответа:
 
 ```
 ▼ Response Headers
