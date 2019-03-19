@@ -42,6 +42,26 @@ function fizzBuzz ( finalNum ) {
 
 ### 2
 
+###### Anagram
+
+Напишите функцию, проверяющую, являются ли две строки анаграммами друг друга 
+
+( регистр не имеет значения )
+
+**Ответ**:
+
+```javascript
+const anagram = ( text1, text2 ) =>
+    text1.toLowerCase().split("").filter(
+        letter => text2.toLowerCase().split("")
+            .find ( x => x === letter )
+    ).length === text2.length
+```
+
+***
+
+### 3
+
 <img src="http://pngimg.com/uploads/clock/clock_PNG6616.png" width="150"/>
 
 Сколько раз в день часовая и минутная стрелки встречаются друг с другом ?
