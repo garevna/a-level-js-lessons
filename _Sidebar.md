@@ -194,7 +194,7 @@
 
 * [Fetch API](fetch)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#fetch)
-* [CORS](CORS)
+* [CORS:small_red_triangle:](CORS)
 * [cookie](cookie)
 * [localStorage](localStorage)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
