@@ -256,7 +256,7 @@ ________________________________________________________________________________
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#file-API)
 * [FormData](FormData)
 * [:coffee: Пример](formData-sample)
-* [:briefcase: Homework](hw-12)
+* [:briefcase: Homework](hw-13)
 
 ______________________________________________________________________________________
 
