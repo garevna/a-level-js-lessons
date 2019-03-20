@@ -313,7 +313,7 @@ ________________________________________________________________________________
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#destructuring)
 * [Генераторы и итераторы](generators-and-iterators)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
-* [:briefcase: Homework](hw-15)
+* [:briefcase: Homework](hw-16)
 
 ______________________________________________________________________________________
 
