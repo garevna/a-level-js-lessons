@@ -171,6 +171,7 @@ ________________________________________________________________________________
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#recursion)
+* [:briefcase: Homework](hw-08)
 
 ______________________________________________________________________________________
 
