@@ -237,7 +237,7 @@ ________________________________________________________________________________
 * [cookie](cookie)
 * [localStorage](localStorage)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
-* [:briefcase: Homework](hw-11)
+* [:briefcase: Homework](hw-12)
 
 ______________________________________________________________________________________
 
