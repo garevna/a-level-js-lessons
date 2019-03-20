@@ -7,8 +7,11 @@
 [`findIndex()`](Array.prototype.findIndex)<br/>
 [`flatMap()`](Array.prototype.flatMap)<br/>
 ***
+
 ## :mortar_board: forEach()
-:warning: Этот метод не возвращает никакого значения<br/>
+
+:warning: Этот метод не возвращает никакого значения
+
 Он просто выполняет указанные действия с каждым элементом массива
 
 :coffee: Рассмотрим самый простой вариант использования метода **`forEach()`**
@@ -22,14 +25,18 @@ people.forEach (
     }
 )
 ```
-Здесь мы итерируем массив  **people**  с помощью метода  **`forEach`**<br/>
+
+Здесь мы итерируем массив  **people**  с помощью метода  **`forEach`**
+
 Методу  **`forEach`**  в качестве аргумента  передается анонимная функция:
+
 ```javascript
 function ( currentValue, index, array ) {
     console.log ( index  )
     console.log ( currentValue )
 }
 ```
+
 У этой анонимной функции может быть  три аргумента:
 1)  текущий элемент массива
 2) идекс текущего элемента массива
@@ -38,6 +45,7 @@ function ( currentValue, index, array ) {
 Обязательным является только первый аргумент
 
 Например, чтобы вывести в консоль все элементы массива  **people**, мы можем использовать метод  **`forEach`** следующим образом:
+
 ```javascript
 people.forEach (
     function ( x ) {
@@ -51,6 +59,9 @@ for ( var x of people ) {
     console.log ( x )
 }
 ```
+
+***
+
 Для чего могут понадобиться второй и третий аргументы анонимной функции:
 
 предположим, нам нужно произвести вычисления с участием индекса элемента массива
@@ -72,6 +83,7 @@ console.log ( numbers )
 [ 8, 4, 9, 7, 0, 4, 18, 21 ]
 ```
 или мы хотим удвоить все значения элементов масива:
+
 ```javascript
 var  numbers = [ 8, 4, 9, 7 ]
 
@@ -114,6 +126,9 @@ numbers.forEach (
     res
 )
 ```
+
+***
+
 Предположим, мы хотим передавать ссылку на массив, куда следует помещать результаты вычислений
 
 Для этого объявим функцию  **_createNewArray_**, которая будет вызывать метод **`forEach`**
@@ -123,6 +138,7 @@ numbers.forEach (
    - массив результатов ( **resultArray** )
 
 При вызове метода  **`forEach`**  функция  **_createNewArray_**  будет передавать методу  **`forEach`**  не только анонимную функцию, которая будет вызвана на каждой итерации цикла, но и еще один дополнительный аргумент - ссылку на контекст вызова метода ( `this` )
+
 ```javascript
 var  numbers = [ 8, 4, 9, 7 ]
 var res = []
@@ -161,7 +177,23 @@ var resultArray = []
 
 createNewArray ( numArray, resultArray )
 ```
+
 ***
+
+:coffee:
+
+```javascript
+Array.from ( document.styleSheets )
+    .forEach (
+        sheet => sheet.href ? null : 
+            Array.from ( sheet.cssRules ).forEach (
+                rule => console.log ( rule )
+            )
+    )
+```
+
+***
+
 [`keys()`](Array.prototype.keys)<br/>
 [`map()`](Array.prototype.map)<br/>
 [`reduce()`](Array.prototype.reduce)<br/>
