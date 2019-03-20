@@ -1,3 +1,21 @@
+:one:
+
+```javascript
+let clock = document.body.appendChild(
+    document.createElement ( "h1" )
+)
+
+var counter = 0
+while ( counter++ < 100 ) {
+    setTimeout (
+        () => clock.innerText = new Date().toLocaleString().split(", ")[1],
+        1000 * counter
+    )
+}
+```
+
+_________________________________________________________
+
 :two:
 
 ```javascript
