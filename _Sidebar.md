@@ -104,6 +104,8 @@
 * [Метод valueOf](valueOf)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#valueOf)
 * [Конструктор Error](Error)
+* [Оператор switch](switch)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
 * [:briefcase: Homework](hw-05)
 
 ***
@@ -118,8 +120,6 @@
 * [Oбъект document](document)
 * [Типы узлов дерева DOM](NodeTypes)
 * [Элементы DOM](DOM-elements)
-* [Оператор switch](switch)
-    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
 * [:briefcase: Homework](hw-06)
 
 <a name="toc-7"></a>
