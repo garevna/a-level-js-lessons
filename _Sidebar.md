@@ -11,19 +11,26 @@
 
   * [🔗 FEA](https://docs.google.com/forms/d/e/1FAIpQLScoUhG6mHKhnPYZKBbjocQ496LjCZkkPYLV8Mudu4DIK6UjFQ/viewform)
   * [🔗 FS](https://docs.google.com/forms/d/e/1FAIpQLSfOSdwsiPYl1NO2hnzv6vEp4On2X03sU2RafmnLQrWE_1znzA/viewform)
-***
+
+______________________________________________________________________________________
+
 |    |    |    |    |
 |:-: |:-: |:-: |:-: |
 |  [1](#toc-1) |  [2](#toc-2) |  [3](#toc-3) |  [4](#toc-4) |
 |  [5](#toc-5) |  [6](#toc-6) |  [7](#toc-7) |  [8](#toc-8) |
 |  [9](#toc-9) | [10](#toc-10) | [11](#toc-11) | [12](#toc-12) |
 | [13](#toc-13) | [14](#toc-14) | [15](#toc-15) | [16](#toc-16) |
-| [17](#toc-17) | | |
-***
+| [17](#toc-17) | [18](#toc-18) | |
+
+______________________________________________________________________________________
+
 <a name="toc-1"></a>
+
 #### Занятие 1
+
 | [:arrow_double_down:](#toc-bottom) | <img width="800"/> | [:arrow_heading_down:](#toc-2) |
 |-|-|-|
+
   * [Блок-схема алгоритма](Block-diagram)
   * [Developer Tools](developer-tools)
   * [Chrome DevTools](chrome-dev-tools)
@@ -38,9 +45,11 @@
   * [Оператор цикла for](for)
   * [UTF-8](UTF-8)
   * [:briefcase: Homework](hw-01)
-***
+
+______________________________________________________________________________________
 
 <a name="toc-2"></a>
+
 #### Занятие 2
 
 | [:arrow_heading_up:](#toc-1) | <img width="800"/> | [:arrow_heading_down:](#toc-3) |
@@ -60,10 +69,13 @@
 * [:clipboard: Самостоятельная работа](self-work-02)
 * [:briefcase: Практика (XSS)](XSS)
 * [:briefcase: Homework](hw-02)
-***
+
+______________________________________________________________________________________
 
 <a name="toc-3"></a>
+
 #### Занятие 3
+
 | [:arrow_heading_up:](#toc-2) | <img width="800"/> | [:arrow_heading_down:](#toc-4) |
 |-|-|-|
 
@@ -75,8 +87,11 @@
 * [Объект function](function-object)
 * [:briefcase: Практика](practice-03)
 * [:briefcase: Homework](https://github.com/garevna/js-course/wiki/hw-03)
-***
+
+______________________________________________________________________________________
+
 <a name="toc-4"></a>
+
 #### Занятие 4
 
 | [:arrow_heading_up:](#toc-3) | <img width="800"/> | [:arrow_heading_down:](#toc-5) |
@@ -92,8 +107,10 @@
 * [:coffee: 1](inheritance-model-sample-1)
 * [:briefcase: Homework](hw-04)
 
-***
+______________________________________________________________________________________
+
 <a name="toc-5"></a>
+
 #### Занятие 5
 
 | [:arrow_heading_up:](#toc-4) | <img width="800"/> | [:arrow_heading_down:](#toc-6) |
@@ -108,9 +125,10 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
 * [:briefcase: Homework](hw-05)
 
-***
+______________________________________________________________________________________
 
 <a name="toc-6"></a>
+
 #### Занятие 6
 
 | [:arrow_heading_up:](#toc-5) | <img width="800"/> | [:arrow_heading_down:](#toc-7) |
@@ -122,7 +140,10 @@
 * [Элементы DOM](DOM-elements)
 * [:briefcase: Homework](hw-06)
 
+______________________________________________________________________________________
+
 <a name="toc-7"></a>
+
 #### Занятие 7
 
 | [:arrow_heading_up:](#toc-6) | <img width="800"/> | [:arrow_heading_down:](#toc-8) |
@@ -133,20 +154,33 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#forms)
 * [:briefcase: Homework](hw-07)
 
-***
+______________________________________________________________________________________
 
 <a name="toc-8"></a>
+
 #### Занятие 8
 
 | [:arrow_heading_up:](#toc-7) | <img width="800"/> | [:arrow_heading_down:](#toc-9) |
 |-|-|-|
 
+* [Стрелочные функции](arrowFunction)
+    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
 * [Функциональщина в JS](functionality)
 * [Таймеры](setTimeout)
 * [Замыкание](closure)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](recursion)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#recursion)
+
+______________________________________________________________________________________
+
+<a name="toc-9"></a>
+
+#### Занятие 9
+
+| [:arrow_heading_up:](#toc-8) | <img width="800"/> | [:arrow_heading_down:](#toc-10) |
+|-|-|-|
+
 * Итерирующие методы массивов
     * [Принцип работы](arrayIterators-principle)
     * [Методы](arrayIterators-methods)
@@ -154,27 +188,30 @@
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](SHA)
 * [:briefcase: Homework](hw-08)
-***
 
-<a name="toc-9"></a>
-#### Занятие 9
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-8) | <img width="800"/> | [:arrow_heading_down:](#toc-10) |
+<a name="toc-10"></a>
+
+#### Занятие 10
+
+| [:arrow_heading_up:](#toc-9) | <img width="800"/> | [:arrow_heading_down:](#toc-11) |
 |-|-|-|
 
-* [Стрелочные функции](arrowFunction)
-    * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+
 * [let | const](let-const)
 * [Методы Object](Object-static-props)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
     * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
 * [:briefcase: Homework](hw-09)
 
-***
-<a name="toc-10"></a>
-#### Занятие 10
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-9) | <img width="800"/> | [:arrow_heading_down:](#toc-11) |
+<a name="toc-11"></a>
+
+#### Занятие 11
+
+| [:arrow_heading_up:](#toc-10) | <img width="800"/> | [:arrow_heading_down:](#toc-12) |
 |-|-|-|
 
 * [JSON](JSON)
@@ -185,11 +222,13 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
 * [:briefcase: Homework](hw-10)
 
-***
-<a name="toc-11"></a>
-#### Занятие 11
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-10) | <img width="800"/> | [:arrow_heading_down:](#toc-12) |
+<a name="toc-12"></a>
+
+#### Занятие 12
+
+| [:arrow_heading_up:](#toc-11) | <img width="800"/> | [:arrow_heading_down:](#toc-13) |
 |-|-|-|
 
 * [Fetch API](fetch)
@@ -200,11 +239,13 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#localStorage)
 * [:briefcase: Homework](hw-11)
 
-***
-<a name="toc-12"></a>
-#### Занятие 12
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-11) | <img width="800"/> | [:arrow_heading_down:](#toc-13) |
+<a name="toc-13"></a>
+
+#### Занятие 13
+
+| [:arrow_heading_up:](#toc-12) | <img width="800"/> | [:arrow_heading_down:](#toc-14) |
 |-|-|-|
 
 * [Метод namedItem](namedItem)
@@ -217,11 +258,13 @@
 * [:coffee: Пример](formData-sample)
 * [:briefcase: Homework](hw-12)
 
-***
-<a name="toc-13"></a>
-#### Занятие 13
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-12) | <img width="800"/> | [:arrow_heading_down:](#toc-14) |
+<a name="toc-14"></a>
+
+#### Занятие 14
+
+| [:arrow_heading_up:](#toc-13) | <img width="800"/> | [:arrow_heading_down:](#toc-15) |
 |-|-|-|
 
 * [Размеры и прокрутка элемента](scroll)
@@ -235,11 +278,13 @@
 * [:briefcase: fake chat](Fake-chat)
 * [:briefcase: Homework](hw-13)
 
-***
-<a name="toc-14"></a>
-#### Занятие 14
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-13) | <img width="800"/> | [:arrow_heading_down:](#toc-15) |
+<a name="toc-15"></a>
+
+#### Занятие 15
+
+| [:arrow_heading_up:](#toc-14) | <img width="800"/> | [:arrow_heading_down:](#toc-16) |
 |-|-|-|
 
 * [strict mode](strict-mode)
@@ -254,11 +299,13 @@
     * [:coffee:](Class-sample)
 * [:briefcase: Homework](hw-14)
 
-***
-<a name="toc-15"></a>
-#### Занятие 15
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-14) | <img width="800"/> | [:arrow_heading_down:](#toc-16) |
+<a name="toc-16"></a>
+
+#### Занятие 16
+
+| [:arrow_heading_up:](#toc-15) | <img width="800"/> | [:arrow_heading_down:](#toc-17) |
 |-|-|-|
 
 * [Фабричные методы](fabric)
@@ -268,11 +315,13 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#gen)
 * [:briefcase: Homework](hw-15)
 
-***
-<a name="toc-16"></a>
-#### Занятие 16
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-15) | <img width="800"/> | [:arrow_heading_down:](#toc-17) |
+<a name="toc-17"></a>
+
+#### Занятие 17
+
+| [:arrow_heading_up:](#toc-16) | <img width="800"/> | [:arrow_heading_down:](#toc-18) |
 |-|-|-|
 
 * [:not(:defined)](not-defined)
@@ -284,11 +333,13 @@
 * [:coffee: Пример](https://github.com/garevna/game/wiki)
 * [:briefcase: Homework](hw-16)
 
-***
-<a name="toc-17"></a>
-#### Занятие 17
+______________________________________________________________________________________
 
-| [:arrow_heading_up:](#toc-16) | <img width="800"/> | [:arrow_heading_down:](#toc-18) |
+<a name="toc-18"></a>
+
+#### Занятие 18
+
+| [:arrow_heading_up:](#toc-16) | <img width="800"/> | [:arrow_heading_down:](#toc-19) |
 |-|-|-|
 
 * [npm](npm)
@@ -306,11 +357,14 @@
 * [:briefcase: Упражнение 8](webpack-8)
 * [:briefcase: Homework](hw-17)
 
-***
+______________________________________________________________________________________
+
 | [:arrow_heading_up:](#toc-3) | <a name="toc-bottom"><img width="800"/></a> | [:arrow_double_up:](#toc-top) |
 |-|-|-|
 
-***
+______________________________________________________________________________________
+
+<a name="toc-19"></a>
 
 ###### :mortar_board: Дополнительно
 
@@ -324,6 +378,7 @@
 * [:notebook: **TCP/IP**](TCP-IP)
 * [:notebook: **_localhost_**](localhost)
 * [:link: **_Коды символов_**](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
-***
+
+______________________________________________________________________________________
 
 ###### [:open_file_folder: ECMAScript](ECMAScript)
