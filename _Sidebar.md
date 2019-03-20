@@ -331,7 +331,7 @@ ________________________________________________________________________________
 * [whenDefined](whenDefined)
 * [&lt;template>](template)
 * [:coffee: Пример](https://github.com/garevna/game/wiki)
-* [:briefcase: Homework](hw-16)
+* [:briefcase: Homework](hw-17)
 
 ______________________________________________________________________________________
 
