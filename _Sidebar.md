@@ -220,7 +220,7 @@ ________________________________________________________________________________
 * [CSRF](CSRF)
 * [Promise:small_red_triangle:](Promise)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#promise)
-* [:briefcase: Homework](hw-10)
+* [:briefcase: Homework](hw-11)
 
 ______________________________________________________________________________________
 
