@@ -23,31 +23,6 @@ typeMessage ( `Welcome to the hell`, 1 )
 :two:
 
 ```javascript
-var typeMessage = ( function ( velocity ) {
-    const container = document.getElementById ( "demo" ) ?
-        document.getElementById ( "demo" ) :
-        document.body.appendChild (
-            document.createElement ( "h4" )
-        )
-    var index = 0
-    return function ( message ) {
-        var num = index
-        setTimeout ( 
-            () => container.textContent += message [ num ],
-            1000 * velocity * num
-        )
-        index++ < message.length - 1 ? arguments.callee ( message ) : null
-    }
-})( 1 )
-
-typeMessage ( `Welcome to the hell` )
-```
-
-_____________________________________________________________________
-
-:three:
-
-```javascript
 var users = (
     function ( list ) {
         var users = []
@@ -74,4 +49,27 @@ var users = (
 )( [ "Иван", "Дмитрий", "Степан", "Михаил" ] )
 
 users.showAbsent()
+```
+
+_____________________________________________________________________
+
+:three:
+
+```javascript
+let changeClass = ( classname, styleString ) => ( Array.from ( document.styleSheets )
+    .filter ( sheet => !sheet.href )
+        .map (
+            sheet => Array.from ( sheet.cssRules )
+                    .filter ( rule => rule.selectorText === `.{classname}` )
+        )
+           .filter ( item => item.length > 0 )
+               .map ( item => item[0].cssText.split ("}")
+                           .join ( `${styleString}}` )
+               )
+).length > 0 ? console.log ( "found" ) : 
+    document.head.appendChild (
+        document.createElement ( "style" )
+    ).textContent = `.${classname} {${styleString}}`
+
+changeClass ( "second-level-menu", "background-color: red!important;" )
 ```
