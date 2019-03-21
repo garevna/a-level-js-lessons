@@ -204,7 +204,7 @@ ________________________________________________________________________________
 * [Методы Object](Object-static-props)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#Object)
     * [:briefcase: Object.create()](https://garevna.github.io/js-quiz/#Object.create)
-* [:briefcase: Homework](hw-09)
+* [:briefcase: Homework](hw-10)
 
 ______________________________________________________________________________________
 
