@@ -188,7 +188,7 @@ ________________________________________________________________________________
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 * [:coffee: Примеры](lesson-06-samples)
 * [SHA](SHA)
-* [:briefcase: Homework](hw-08)
+* [:briefcase: Homework](hw-09)
 
 ______________________________________________________________________________________
 
