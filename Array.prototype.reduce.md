@@ -185,7 +185,7 @@ let segments = [ [ 1, 8 ], [ 2, 3 ], [ 4, 7 ], [ 5, 6 ] ]
 
 ```javascript
 function countInnerIntervals ( intervals ) {
-    let  = []
+    let results = []
     intervals.forEach (
         ...
     )
