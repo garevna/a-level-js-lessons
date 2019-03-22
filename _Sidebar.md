@@ -371,6 +371,7 @@ ________________________________________________________________________________
 
 * [:point_up: **SOLID**](SOLID)
 * [:pushpin: **Performance**](performance)
+* [:pushpin: **Memory allocation**](https://youtu.be/nDNEiu_xwf0)
 * [:pushpin: **Websockets**](websocket)
 
 ###### :ledger: Справочная инфо
