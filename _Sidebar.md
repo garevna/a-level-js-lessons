@@ -187,6 +187,7 @@ ________________________________________________________________________________
     * [Методы](arrayIterators-methods)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 * [:coffee: Примеры](lesson-06-samples)
+* [Тестирование производительности](JS-heap-memory-allocation)
 * [SHA](SHA)
 * [:briefcase: Homework](hw-09)
 
