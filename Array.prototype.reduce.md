@@ -299,7 +299,7 @@ function countInnerIntervals ( intervals ) {
         ( segment, index, array ) =>
             results.push (
                 array.filter (
-                        item => item [0] > segment[0] && item [1] < segment[1] 
+                    item => item [0] > segment[0] && item [1] < segment[1] 
                 ).length
             )
     )
