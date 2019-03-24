@@ -61,3 +61,5 @@ let changeClass = ( classname, styleString ) => ( Array.from ( document.styleShe
 
 changeClass ( "graf", "background-color: red!important;" )
 ```
+
+[<img src="https://www.youtube.com/yts/img/ringo/hitchhiker/logo_small_2x-vfl4_cFqn.png" height="30"/>](https://youtu.be/vL6n7hGvwSs)
