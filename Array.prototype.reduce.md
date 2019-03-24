@@ -325,6 +325,21 @@ function countInnerIntervals ( intervals ) {
 }
 ```
 
+А теперь заменим метод **`forEach`** на метод **`map`**
+
+```javascript
+function countInnerIntervals ( intervals ) {
+    return intervals.map (
+        ( segment, index, array ) =>
+            array.reduce (
+                ( result, item ) =>
+                    result += item [0] > segment[0] && item [1] < segment[1] ? 1 : 0,
+                    0
+            )
+    )
+}
+```
+
 Осталось только вызвать функцию:
 
 ```javascript
