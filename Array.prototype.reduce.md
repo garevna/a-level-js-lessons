@@ -305,8 +305,6 @@ function countInnerIntervals ( intervals ) {
     )
     return results
 }
-
-console.log ( countInnerIntervals ( segments ) )
 ```
 
 А теперь та же функция, но с использованием метода **`reduce`**:
@@ -325,7 +323,11 @@ function countInnerIntervals ( intervals ) {
     )
     return results
 }
+```
 
+Осталось только вызвать функцию:
+
+```javascript
 console.log ( countInnerIntervals ( segments ) )
 ```
 
