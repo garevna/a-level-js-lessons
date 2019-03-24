@@ -292,6 +292,7 @@ intervals.forEach (
 
 ###### countInnerIntervals
 
+```javascript
 function countInnerIntervals ( intervals ) {
     let results = []
     intervals.forEach (
