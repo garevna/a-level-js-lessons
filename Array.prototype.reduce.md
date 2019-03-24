@@ -312,8 +312,6 @@ console.log ( countInnerIntervals ( segments ) )
 А теперь та же функция, но с использованием метода **`reduce`**:
 
 ```javascript
-let segments = [ [ 1, 8 ], [ 2, 3 ], [ 4, 7 ], [ 5, 6 ] ]
-
 function countInnerIntervals ( intervals ) {
     let results = []
     intervals.forEach (
