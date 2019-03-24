@@ -334,10 +334,23 @@ function countInnerIntervals ( intervals ) {
             array.reduce (
                 ( result, item ) =>
                     result += item [0] > segment[0] && item [1] < segment[1] ? 1 : 0,
-                    0
+                0
             )
     )
 }
+```
+
+или с использованием стрелочной функции:
+
+```javascript
+const countInnerIntervals = intervals => intervals.map (
+    ( segment, index, array ) =>
+        array.reduce (
+            ( result, item ) =>
+                result += item [0] > segment[0] && item [1] < segment[1] ? 1 : 0,
+            0
+        )
+)
 ```
 
 Осталось только вызвать функцию:
