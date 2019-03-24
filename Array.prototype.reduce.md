@@ -250,21 +250,6 @@ intervals.forEach (
 
 Но мы итерируем исходный массив, ссылку на который получаем в параметре **`array`**
 
-Воспользуемся методом **`reduce`**
-
-```javascript
-intervals.forEach (
-    function ( segment, index, array ) {
-        this.push (
-            array.reduce (
-                ...
-            )
-        )
-    },
-    results
-)
-```
-
 Итак, в параметре **`segment`** у нас ссылка на отрезок, для которого мы подсчитываем число входящих в него отрезков
 
 В параметре **`array`** у нас ссылка на исходный массив отрезков
@@ -273,6 +258,11 @@ intervals.forEach (
 
 Для этого можно использовать метод **`filter`**:
 
+```javascript
+array.filter (
+    item => item [0] > segment[0] && item [1] < segment[1] 
+)
+```
 
 Результатом будет массив отрезков, попавших в заданный отрезок **`segment`**
 
@@ -290,16 +280,11 @@ array.filter (
 
 ```javascript
 intervals.forEach (
-    function ( segment, index, array ) {
-        this.push (
-            array.reduce (
-                ( childs, section ) => array.filter (
-                    item => item [0] > segment[0] && item [1] < segment[1] 
-                ).length
-            )
-        )
-    },
-    results
+    ( segment, index, array ) => results.push (
+        array.filter (
+            item => item [0] > segment[0] && item [1] < segment[1] 
+        ).length
+    )
 )
 ```
 
@@ -313,11 +298,9 @@ function countInnerIntervals ( intervals ) {
     intervals.forEach (
         ( segment, index, array ) =>
             results.push (
-                array.reduce (
-                    ( childs, section ) => array.filter (
+                array.filter (
                         item => item [0] > segment[0] && item [1] < segment[1] 
-                    ).length
-                )
+                ).length
             )
     )
     return results
