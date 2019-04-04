@@ -1,49 +1,69 @@
 # :mortar_board: Стрелочные функции
+
 ###### ES6
 
 ## :mortar_board: Синтаксис
-###### ⛔ **_function_**
+
+###### :no_entry: **_function_**
 
 В сигнатуре стрелочной функции нет слова **_function_**
+
 ```
 ( параметры ) => { тело функции }
 ```
+
 :coffee:
+
 ```javascript
 var res = ( x, y ) => x * y
 res ( 2, 5 )
 ```
 
 :hand: Если тело функции состоит из одной операции, фигурные скобки можно опустить
+
 ```javascript
 ( name = "user" ) => console.info ( "Hi, " + name )
 ```
+
 :hand: Если у функции всего один формальный параметр, круглые скобки можно опустить
+
 ```javascript
 name => console.info ( "Hi, " + name )
-```         
+```
+
 :hand: При отсутствии формальных параметров круглые скобки обязательны
+
 ```javascript
 () => console.info ( "Hi, user"  )
-```         
-:hand: Если тело функции состоит из одного выражения, значение которого возвращает функция, оператор **`return`** не нужен
+```
+
+:hand: Если тело функции состоит из одного выражения, значение которого возвращает функция, оператор **`return`** не используется
+
 ###### :coffee: обычная функция
+
 ```javascript
 var res = function ( x, y ) { return x * y }
 ```
+
 ###### :coffee: стрелочная функция
+
 ```javascript
 var res = ( x, y ) => x * y
 ```
+
 :hand: Операторы ветвления кода ( кроме тернарного оператора ) и операторы цикла нужно заключать в фигурные скобки 
+
 ###### :coffee: оператор `for`
+
 ```javascript
 () => {
     for ( var i = 0; i < 5; i++ )
         console.log ( i )
 }
 ```
+
 ###### :coffee: оператор `switch`
+
 ```javascript
 var answerArrow = question => { 
     switch ( question ) {
@@ -58,7 +78,9 @@ var answerArrow = question => {
     }
 }
 ```
+
 ###### :coffee: тернарный оператор
+
 ```javascript
 var answerArrow = question =>  
     question === "who" ? "Irina" :
@@ -71,7 +93,7 @@ ____________________________________________________________________
 
 ## :mortar_board: Главные особенности
 
-### ⛔ prototype
+### :no_entry: prototype
 
 У стрелочных функций нет объекта  **`prototype`**
 
@@ -122,7 +144,7 @@ var obj = new arrowFunc()
 
 ______________________________________________________
 
-### ⛔ arguments
+### :no_entry: arguments
 
 У стрелочных функций нет объекта  **`arguments`**
 
