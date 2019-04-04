@@ -117,7 +117,7 @@ var obj = new arrowFunc()
 будет сгенерировано исключение:
 
 ```
-TypeError: arrowFunc is not a constructor
+🛑 TypeError: arrowFunc is not a constructor
 ```
 
 ______________________________________________________
