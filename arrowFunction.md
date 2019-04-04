@@ -288,4 +288,4 @@ obj.testUsial ()
 
 ____________________________________________________________________
 
-#### [Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+### [Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
