@@ -108,6 +108,18 @@ console.dir ( usualFunc )
   ► __proto__: ƒ ()
 ```
 
+При попытке вызвать стрелочную функцию с ключевым словом **`new`**
+
+```javascript
+var obj = new arrowFunc()
+```
+
+будет сгенерировано исключение:
+
+```
+TypeError: arrowFunc is not a constructor
+```
+
 ______________________________________________________
 
 ### ⛔ arguments
