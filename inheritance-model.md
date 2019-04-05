@@ -147,7 +147,7 @@ sample.hasOwnProperty( "name" )   // true
 
 _________________________________________________________________
 
-## constructor
+## :mortar_board: constructor
 
 Теперь обратим внимание на первое, что мы видим в объекте [**`prototype`**](#prototype) и в свойстве [**`__proto__`**](#proto) экземпляра
 
