@@ -570,6 +570,8 @@ console.dir ( Object.__proto__.constructor.name )
 
 ( свойство **`Function.prototype.__proto__`** является ссылкой на **`Object.prototype`** )
 
+Вот такие "сиамские близнецы" :wink:
+
 | | ссылка на |
 |-|-| 
 | `Object.__proto__` | `Function.prototype` |
