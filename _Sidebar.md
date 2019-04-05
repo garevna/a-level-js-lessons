@@ -101,7 +101,7 @@ ________________________________________________________________________________
 * [Литерал объекта](object-literal)
 * [Унаследованные свойства](inherited-properties)
 * [Конструктор](constructor)
-* [Модель наследования](inheritance-model)
+* [Модель наследования:small_red_triangle:](inheritance-model)
 * [Публичные и приватные свойства](public-and-private-properties)
 * [Оператор in](operator-in)
 * [:coffee: 1](inheritance-model-sample-1)
