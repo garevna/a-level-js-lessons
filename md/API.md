@@ -1,3 +1,6 @@
+[ico50]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> API
 
 **_Application Programming Interface_** ( **API** ) позволяет двум системам взаимодействовать друг с другом
@@ -6,7 +9,7 @@
 
 API-интерфейсы могут использовать HTTP-запросы для получения информации от веб-приложения или веб-сервера
 ***
-## :mortar_board: web service
+## ![ico25] web service
 
 :clipboard: **SOA** — **_Service Oriented Architecture_** — сервис-ориентированная архитектура веб-приложений ( набор архитектурных принципов )
 
@@ -29,8 +32,10 @@ API-интерфейсы могут использовать HTTP-запросы
 Архитектурный стиль **REST** в большинстве случаев подразумевает использование протокола HTTP
 
 Поэтому команды CRUD преобразованы в  HTTP-методы  **POST** — **GET** — **PUT** — **DELETE**
-***
-### :mortar_board: SOAP vs REST
+
+_____________________________________________________________________________________________
+
+### [ico25] SOAP vs REST
 
 **_API_** обычно классифицируются как **SOAP** или **REST**, и оба используются для доступа к веб-сервисам
 
@@ -49,7 +54,9 @@ API-интерфейсы могут использовать HTTP-запросы
 
 Можно получить результат в формате, который легче парсить на языке вашего приложения
 
-## :mortar_board: API  endpoints
+________________________________________________________________________
+
+## [ico25] API  endpoints
 
 API работают по принципу «запрос» — «ответ»
 

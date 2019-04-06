@@ -1,15 +1,22 @@
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/breafcase-30.png
+
 ## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы массивов
 
+<table>
+  <tr>
+    <td>
 * [`pop()`](Array-methods-pop.md)
 * [`push()`](Array-methods-push.md)
 * [`splice()`](Array-methods-splice.md)
 * [`shift()`](Array-methods-shift.md)
 * [`unshift()`](Array-methods-unshift.md)
 * [`slice()`](Array-methods-slice.md)
-
+</td>
+<td>
 ______________________________________________________________________________
 
-### :memo: concat ()
+### ![ico25] concat ()
 
 Метод объединяет два или более массива в один массив
 
@@ -37,4 +44,8 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________
 
-### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
+### [![hw] Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
