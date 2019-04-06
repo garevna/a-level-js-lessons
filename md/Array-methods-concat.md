@@ -3,17 +3,12 @@
 
 ## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы массивов
 
-<table>
-  <tr>
-    <td>
 * [`pop()`](Array-methods-pop.md)
 * [`push()`](Array-methods-push.md)
 * [`splice()`](Array-methods-splice.md)
 * [`shift()`](Array-methods-shift.md)
 * [`unshift()`](Array-methods-unshift.md)
 * [`slice()`](Array-methods-slice.md)
-</td>
-<td>
 ______________________________________________________________________________
 
 ### ![ico25] concat ()
