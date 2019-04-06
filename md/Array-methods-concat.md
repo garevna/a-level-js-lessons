@@ -1,11 +1,11 @@
 ## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы массивов
 
-* [`pop()`](Array-methods-pop)
-* [`push()`](Array-methods-push)
-* [`splice()`](Array-methods-splice)
-* [`shift()`](Array-methods-shift)
-* [`unshift()`](Array-methods-unshift)
-* [`slice()`](Array-methods-slice)
+* [`pop()`](Array-methods-pop.md)
+* [`push()`](Array-methods-push.md)
+* [`splice()`](Array-methods-splice.md)
+* [`shift()`](Array-methods-shift.md)
+* [`unshift()`](Array-methods-unshift.md)
+* [`slice()`](Array-methods-slice.md)
 
 ______________________________________________________________________________
 
@@ -32,8 +32,8 @@ var newArray = ukrainianCities.concat ( europeanCities )
 
 _____________________________________________________________________________________
 
-* [`join()`](Array-methods-join)
-* [`includes()`](Array-methods-includes)
+* [`join()`](Array-methods-join.md)
+* [`includes()`](Array-methods-includes.md)
 
 ______________________________________________________________________________________________
 
