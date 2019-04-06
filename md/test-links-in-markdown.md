@@ -1,5 +1,5 @@
 <a name="1"></a>
-# 🎓 1
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> 1
 
 | [:arrow_double_down:](#bottom) | <img width="800"/> | [:arrow_heading_down:](#2) |
 |-|-|-|

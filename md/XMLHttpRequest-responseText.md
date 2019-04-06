@@ -1,4 +1,4 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
@@ -21,7 +21,7 @@
 
 При получении от сервера текстового файла содержимое файла будет значением этого свойства
 
-При обработке асинхронного запроса данные могут быть загружены не полностью, но значение `responseText` всегда содержит 
+При обработке асинхронного запроса данные могут быть загружены не полностью, но значение `responseText` всегда содержит
 тот текст, который уже получен от сервера
 
 Свойство `responseText` допустимо только для текстового содержимого
@@ -37,8 +37,8 @@ transport.open (
 )
 
 transport.onreadystatechange = function ( event ) {
-   if ( this.readyState === 4 && 
-        this.status === 200 ) 
+   if ( this.readyState === 4 &&
+        this.status === 200 )
            console.log ( this.responseText )
 }
 
@@ -56,7 +56,7 @@ transport.open (
 )
 
 transport.onload = function ( event ) {
-   this.status === 200 ? 
+   this.status === 200 ?
        console.log ( this.responseText ) :
        null
 }

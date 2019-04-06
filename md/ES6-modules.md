@@ -1,4 +1,4 @@
-# :mortar_board: ES6 модули
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> ES6 модули
 
 [:small_orange_diamond: **export**](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/export)<br/>
 [:small_orange_diamond: **import**](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/import)
@@ -13,7 +13,7 @@
 
 ## :mortar_board: export
 
-#### :radio_button: Именованный экспорт 
+#### :radio_button: Именованный экспорт
 ###### ( несколько экспортов из одного файла )
 ###### :pencil: файл lib.js:
 ```javascript
@@ -22,14 +22,14 @@ export const sqrt = Math.sqrt
 export function buildElement ( tagName ) {
     return document.body.appendChild (
         document.createElement ( tagName )
-    ) 
+    )
 }
 
 export function elemExist ( elemSelector ) {
     return !!document.querySelector ( elemSelector )
 }
 ```
-#### :radio_button: Дефолтный экспорт 
+#### :radio_button: Дефолтный экспорт
 ###### Экспорт по умолчанию - это экспорт единственного объекта
 ###### ( один "главный" объект в модуле )
 ###### :pencil: файл Sample.js:
@@ -37,7 +37,7 @@ export function elemExist ( elemSelector ) {
 const Sample = function ( tagName ) {
     this.elem = document.body.appendChild (
         document.createElement ( tagName )
-    ) 
+    )
 }
 Sample.prototype.getAttrs = function () {
     return Object.getOwnPropertyNames ( this.elem )
@@ -57,7 +57,7 @@ export default Sample
 При импорте из **_js_**-файлов расширение файла указывать не обязательно
 
 ### :coffee:  Импорт именованного экспорта
- 
+
 Предположим, нам нужно использовать функции  **_buildElement_**  и  **_elemExist_**  из файла  **lib.js**  ( см. выше )
 в файл **main.js**
 

@@ -1,4 +1,4 @@
-## :mortar_board: FileReader
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> FileReader
 
 ###### Конструктор
 
@@ -18,7 +18,7 @@ var reader = new FileReader ()
 ```
 ### :clipboard: Свойства
 
-###### ✅ error 
+###### ✅ error
 ```
 объект DOMError со свойствами name и message
 ```
@@ -99,7 +99,7 @@ selector.onchange = function handleFiles( event ) {
                 demo.innerText = event.target.result
             }
             break
-        default: 
+        default:
             fileReader.readAsArrayBuffer ( selected )
             fileReader.onload = function ( event ) {
                 console.log ( event.target.result )
@@ -143,10 +143,10 @@ selector.onchange = function ( event ) {
         var picture = document.createElement ( "img" )
         document.body.appendChild( picture )
         var fileReader = new FileReader ()
-        fileReader.onload = ( 
+        fileReader.onload = (
             image => function ( e ) {
                 image.src = e.target.result
-            } 
+            }
         )( picture )
         fileReader.readAsDataURL ( file )
     }

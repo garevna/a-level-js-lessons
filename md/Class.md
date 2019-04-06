@@ -1,10 +1,12 @@
-# :mortar_board: Классы
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Классы
+
 ###### ES6 ( ECMAScript 2015 )
+
 Синтаксический сахар на поверхности прототипной модели наследования
 
 | [class declaration](#mortar_board-class-declaration) | [class expression](#mortar_board-class-expression) |
 |-|-|
-| [**`Потеря контекста`**](#context) | [**static**](Class-static) | 
+| [**`Потеря контекста`**](#context) | [**static**](Class-static) |
 | [ **get & set** ](Class-get-set) | [**extends**](Class-extends) |
 | [**super**](Class-super) | [:coffee: **`Пример`**](Class-sample) |
 
@@ -102,7 +104,7 @@ typeof Picture  // "function"
 > :warning: `объявленный класс невозможно удалить динамически, без перезагрузки страницы`<br/>
 > `В примере` :one: `идентификатор`  **_`Picture`_**  `уже занят, и никакие магические заклинания не помогут переопределить его  содержание`
 
-> :warning: `если обычный конструктор JS можно вызвать и как функцию, и как конструктор ( с ключевым словом `**`new`**` ), 
+> :warning: `если обычный конструктор JS можно вызвать и как функцию, и как конструктор ( с ключевым словом `**`new`**` ),
 то конструктор класса вызвать без ключевого слова `**`new`**`  нельзя - будет сгенерировано исключение `**_`TypeError`_**`
 ```javascript
 let x = new Picture ( "http://www.radioactiva.cl/wp-content/uploads/2018/05/pikachu.jpg", 200 )
@@ -123,7 +125,7 @@ document.body.appendChild ( x.elem )
 ```javascript
 let Picture = class {
     constructor ( url = "https://cdn.pastemagazine.com/www/articles/GrinchPOster_header.jpg" ) {
-        this.elem = document.body.appendChild ( 
+        this.elem = document.body.appendChild (
             document.createElement ( 'img' )
         )
         this.elem.src = url
@@ -168,7 +170,7 @@ console.log ( sample )
 ```javascript
 let Picture = class Canvas {
     constructor ( url = "https://cdn.pastemagazine.com/www/articles/GrinchPOster_header.jpg" ) {
-        this.elem = document.body.appendChild ( 
+        this.elem = document.body.appendChild (
             document.createElement ( 'img' )
         )
         this.elem.src = url
@@ -271,7 +273,7 @@ console.log ( Sample.name ) // "Canvas"
 | [:arrow_double_up:](#es6--ecmascript-2015-) |
 |-|
 
-###### :pushpin: В строгом режиме не происходит неявной передачи контекста вызова 
+###### :pushpin: В строгом режиме не происходит неявной передачи контекста вызова
 
 :warning: Потеря контекста происходит всегда, если ссылка на метод передается в новую переменную:
 

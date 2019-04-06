@@ -1,4 +1,4 @@
-## :mortar_board: Вычисляемые имена свойств
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Вычисляемые имена свойств
 ###### ES6
 
 :warning: В качестве имени свойства можно использовать выражение:
@@ -43,7 +43,7 @@ console.log ( bag.____book )   // 📖
 :coffee: :four:
 ```javascript
 let sample = {}
-let props = [ 
+let props = [
     { prop: "mouse", val: "🐭" },
     { prop: "monkey", val: '🐒' },
     { prop: "chicken", val: "🐥" }

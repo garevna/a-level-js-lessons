@@ -1,4 +1,4 @@
-## :mortar_board: Размеры и прокрутка элемента
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Размеры и прокрутка элемента
 
 ✅ scrollHeight
 
@@ -31,12 +31,12 @@
 
 ✅ scrollTop
 
-    высота "прокрученной" части элемента 
+    высота "прокрученной" части элемента
     ( сверху )
 
 ✅ scrollLeft
 
-    ширина "прокрученной" части элемента 
+    ширина "прокрученной" части элемента
     ( слева )
 ***
 |[:coffee: :one:](https://plnkr.co/edit/2TACKm8yWn4FnbSujOGu?p=preview)|
@@ -48,7 +48,7 @@ var randomMovie = ( function ( url ) {
 
     function randomPosition ( axis ) {
         return Math.round (
-            Math.random() * window[ `inner${[ "Height", "Width" ][ axis ]}` ] 
+            Math.random() * window[ `inner${[ "Height", "Width" ][ axis ]}` ]
                           - logo [ `offset${[ "Height", "Width" ][ axis ]}` ]
         )
     }
@@ -64,10 +64,10 @@ var randomMovie = ( function ( url ) {
         top: ${randomPosition ( 0 )}px;
         left: ${randomPosition ( 1 )}px;
     `
-	
+
     function randomDistance ( axis ) {
 
-        return randomPosition ( axis ) - 
+        return randomPosition ( axis ) -
                logo [ `offset${[ "Top", "Left" ][ axis ]}` ]
     }
 

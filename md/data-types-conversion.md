@@ -1,4 +1,4 @@
-# :mortar_board: Приведение типов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Приведение типов
 
 [:mortar_board: Явное приведение типов](Explicit-type-conversion)
 

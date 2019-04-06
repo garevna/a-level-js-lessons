@@ -1,5 +1,5 @@
 <a name="top"></a>
-# :mortar_board: Параметры функции по умолчанию
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Параметры функции по умолчанию
 
 ###### ES6
 

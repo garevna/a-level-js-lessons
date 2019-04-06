@@ -1,4 +1,4 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
@@ -54,7 +54,7 @@ request.responseType = "arraybuffer"
 request.onreadystatechange = function() {
    if (
       this.readyState === 4
-      && this.status === 200 
+      && this.status === 200
    ) {
         console.log ( this.response )
    }
@@ -74,8 +74,8 @@ var transport = new XMLHttpRequest ()
 transport.onload = function ( event ) {
     console.dir ( this.getAllResponseHeaders() )
 }
-transport.open ( 
-    'GET', 
+transport.open (
+    'GET',
     'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'
 )
 transport.send()

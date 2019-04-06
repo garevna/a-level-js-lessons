@@ -1,3 +1,5 @@
+<img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+
 :one:
 
 ```javascript
@@ -8,8 +10,8 @@ function typeMessage ( message, velocity ) {
             document.createElement ( "h3" )
         )
     container.style = `color: magenta;`
-    message.split("").forEach ( 
-        ( letter, index ) => 
+    message.split("").forEach (
+        ( letter, index ) =>
             setTimeout (
                 () => container.textContent += letter,
                 1000 * velocity * index
@@ -66,7 +68,7 @@ let changeClass = ( classname, styleString ) => ( Array.from ( document.styleShe
                .map ( item => item[0].cssText.split ("}")
                            .join ( `${styleString}}` )
                )
-).length > 0 ? console.log ( "found" ) : 
+).length > 0 ? console.log ( "found" ) :
     document.head.appendChild (
         document.createElement ( "style" )
     ).textContent = `.${classname} {${styleString}}`

@@ -1,6 +1,9 @@
-# :mortar_board: Custom elements
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Custom elements
+
 ###### Создание кастомных элементов DOM
+
 ###### :warning: Имена кастомных тегов обязательно должны состоять минимум из двух частей, разделенных дефисом, например:
+
 ```html
 <speaking-club></speaking-club>
 <gold-prize></gold-prize>
@@ -90,8 +93,8 @@ console.dir ( CustomElementRegistry )
 * второй - ссылка на класс создаваемого элемента
 ```javascript
 customElements.define (
-    'sample-custom-element', 
-    SampleCustomElement 
+    'sample-custom-element',
+    SampleCustomElement
 )
 ```
 ***
@@ -189,9 +192,9 @@ class SampleCustomElement extends HTMLElement {
         this.canvas.height = window.innerHeight - 20
     }
     drawLine ( first, second, border ) {
-        this.area.strokeStyle = border && border.lineColor ? 
+        this.area.strokeStyle = border && border.lineColor ?
                                 border.lineColor : "#0000ff"
-        this.area.lineWidth = border && border.lineWidth ? 
+        this.area.lineWidth = border && border.lineWidth ?
                               border.lineWidth : 3
         this.area.beginPath()
         this.area.moveTo( first.x, first.y )
@@ -201,8 +204,8 @@ class SampleCustomElement extends HTMLElement {
 }
 
 customElements.define (
-    'sample-custom-element', 
-    SampleCustomElement 
+    'sample-custom-element',
+    SampleCustomElement
 )
 
 let elem = document.createElement ( 'sample-custom-element' )
@@ -213,7 +216,7 @@ window.onresize = elem.resizeCanvas.bind ( elem )
 elem.drawLine (
     { x:20, y:20 },
     { x:400, y:200 },
-    { lineColor: "#008595", lineWidth: 5 } 
+    { lineColor: "#008595", lineWidth: 5 }
 )
 ```
 ***
@@ -281,8 +284,8 @@ class SampleCustomElement extends HTMLElement {
         this.canvas.history = []
         this.canvas.onmousemove = function ( event ) {
             let point = { x: event.clientX, y: event.clientY }
-            this.self.drawLine ( 
-                point, 
+            this.self.drawLine (
+                point,
                 { lineColor: "#f0f", lineWidth: 3 } )
         }
         this.shadow = this.attachShadow ( { mode: 'open' } )
@@ -307,10 +310,10 @@ class SampleCustomElement extends HTMLElement {
         this.canvas.history.push ( point )
         let len = this.canvas.history.length
         if ( len < 2 )  return
-        let prev = this.canvas.history [ len - 2 ] 
-        this.area.strokeStyle = border && border.lineColor ? 
+        let prev = this.canvas.history [ len - 2 ]
+        this.area.strokeStyle = border && border.lineColor ?
                                 border.lineColor : "#0000ff"
-        this.area.lineWidth = border && border.lineWidth ? 
+        this.area.lineWidth = border && border.lineWidth ?
                               border.lineWidth : 3
         this.area.beginPath()
         this.area.moveTo( prev.x, prev.y )
@@ -320,8 +323,8 @@ class SampleCustomElement extends HTMLElement {
 }
 
 customElements.define (
-    'sample-custom-element', 
-    SampleCustomElement 
+    'sample-custom-element',
+    SampleCustomElement
 )
 
 let elem = document.createElement (

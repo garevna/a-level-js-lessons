@@ -1,4 +1,4 @@
-## :mortar_board: SOLID
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> SOLID
 
 ###### Принципы про­ек­ти­ро­ва­ния в ООП
 
@@ -230,12 +230,12 @@ const card = (
             cash -= sum
             console.log ( `Get money: ${sum}` )
         }
-        
+
         return function ( operation, sum ) {
-            operation === 0 ? addCash ( sum ) : 
+            operation === 0 ? addCash ( sum ) :
                 testPin ( prompt ( "Enter pincode" ) ) ?
-                    operation === 1 ? showCash() : 
-                        operation === 2 ? 
+                    operation === 1 ? showCash() :
+                        operation === 2 ?
                             sum <= cash ? getMoney ( sum ) : console.warn ( "Insufficient cash" )
                         : changePin ( prompt ( "Set your pincode" ) )
                 : console.error ( "Invalide pincode" )
@@ -260,12 +260,12 @@ const card = (
             cash -= sum
             console.log ( `Get your money: ${sum}` )
         }
-        
+
         return {
             uppendCash: sum => cash += sum,
             showCash: () => testPin() ? showMoney() : pinError (),
-            getCash: sum => testPin() ? sum <= cash ? getMoney ( sum ) 
-                                : console.warn ( "Insufficient cash" ) 
+            getCash: sum => testPin() ? sum <= cash ? getMoney ( sum )
+                                : console.warn ( "Insufficient cash" )
                             : pinError (),
             changePincode: () => testPin() ? changePin () : pinError ()
         }
@@ -308,6 +308,6 @@ user.sedition ( "badExample", "You should not do this" )
 
 Другими словами, класс **`User`** является абстрацией более высокого уровня, чем класс **`RegisteredUser`**
 
-Поэтому нормально, что класс **`RegisteredUser`** зависит от класса **`User`**, но никак не наоборот 
+Поэтому нормально, что класс **`RegisteredUser`** зависит от класса **`User`**, но никак не наоборот
 
 :warning: Обратная зависимость недопустима

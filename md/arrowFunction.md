@@ -1,4 +1,4 @@
-# :mortar_board: Стрелочные функции
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Стрелочные функции
 
 ###### ES6
 
@@ -51,7 +51,7 @@ var res = function ( x, y ) { return x * y }
 var res = ( x, y ) => x * y
 ```
 
-:white_square_button: Операторы ветвления кода ( кроме тернарного оператора ) и операторы цикла нужно заключать в фигурные скобки 
+:white_square_button: Операторы ветвления кода ( кроме тернарного оператора ) и операторы цикла нужно заключать в фигурные скобки
 
 ###### :coffee: оператор `for`
 
@@ -65,14 +65,14 @@ var res = ( x, y ) => x * y
 ###### :coffee: оператор `switch`
 
 ```javascript
-var answerArrow = question => { 
+var answerArrow = question => {
     switch ( question ) {
         case "who":
             return "student"
         case "what":
-            return "develop" 
+            return "develop"
         case "where":
-            return "Kharkiv" 
+            return "Kharkiv"
         default:
             return "I don't undestand your question"
     }
@@ -151,7 +151,7 @@ ______________________________________________________
 При попытке обратиться к объекту **`arguments`** из стрелочной функции будет сгенерировано исключение ( `ReferenceError` )
 
 ![](https://lh6.googleusercontent.com/yv3tm03wlxRLj8N8La3rjpv-ptedTRsM-jZY25YaNpDycba4XNeSic-lpaCva6g7ftFz1Vu8MmkIk4zLLXfgsFNu10Tin-S88UrOstrwdIcPvvLyq8avaEjO29Fi2q5q3nKkrETuWY4qxks)
-      
+
 :point_up: Если стрелочная функция объявлена внутри обычной функции, то переменные контекста родительской функции будут доступны для стрелочной функции ( [**`цепочка областей видимости`**](function-object#scope) ), поэтому внутри нее будет доступен объект `arguments` родительской функции
 
 :coffee:
@@ -199,7 +199,7 @@ __________________________________________________________________
 
 ```javascript
 document.querySelector ( "button" )
-    .onclick = 
+    .onclick =
         event =>  console.log ( event.type, this )
 ```
 **_`this`_** будет указывать на глобальный объект `window`

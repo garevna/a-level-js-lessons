@@ -1,4 +1,4 @@
-## :mortar_board: Замыкание
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Замыкание
 
 [Замыкание](https://www.w3schools.com/js/js_function_closures.asp "W3Schools") - это прием, с помощью которого можно "скрыть" переменные в контексте родительской функции, возвращающей функцию
 
@@ -13,9 +13,9 @@ Immediately Invoked Function Expression
 В следующем примере мы видим функциональное выражение [**IIFE**](https://developer.mozilla.org/uk/docs/Glossary/IIFE "MDN"), т.е. вызов объявляемой анонимной функции "на месте"
 ( в месте ее объявления )
 
-Эта анонимная функция получает агрумент "Hello", объявляет локальную ( приватную ) переменную **_message_**, в которой сохраняет полученное значение аргумента, и возвращает анонимную функцию 
+Эта анонимная функция получает агрумент "Hello", объявляет локальную ( приватную ) переменную **_message_**, в которой сохраняет полученное значение аргумента, и возвращает анонимную функцию
 
-При этом ее контекст демонтируется ( удаляется из стека ), 
+При этом ее контекст демонтируется ( удаляется из стека ),
 
 но!
 
@@ -60,7 +60,7 @@ function functionDeclaration() {
 }
 
 functionConstructor()()   // Global Scope
-functionDeclaration()()   // Closured Scope 
+functionDeclaration()()   // Closured Scope
 ```
 ***
 ### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#closures)

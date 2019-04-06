@@ -1,4 +1,4 @@
-# :mortar_board: Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
 
 * [`entries()`](md/Array.prototype.entries.md)
 * [`every()`](md/Array.prototype.every.md)
@@ -22,3 +22,7 @@ _______________________________________________________________________
 ###### [Генератор](generators-and-iterators)
 
 Возвращает объект итератора
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

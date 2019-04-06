@@ -1,4 +1,4 @@
-## :mortar_board: valueOf
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> valueOf
 
 Метод  **_`valueOf()`_**  наследуется всеми объектами от **`Object`**
 
@@ -73,7 +73,7 @@ const test = {
    }
 }
 ```
-:grey_question: Что вернет выражение: 
+:grey_question: Что вернет выражение:
 ```javascript
 test == 1 && test == 2 && test == 3
 ```

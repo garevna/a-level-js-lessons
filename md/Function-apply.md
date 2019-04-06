@@ -1,4 +1,4 @@
-## :mortar_board: [Биндинг и каррирование](call-apply-bind)
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> [Биндинг и каррирование](call-apply-bind)
 
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
@@ -50,7 +50,7 @@ var test = ( function () {
 function func () {
     this.test()
     var args = Array.from ( arguments )
-    console.warn ( `Who was called before ${this.name} (${args.splice(0, 1)}):` ) 
+    console.warn ( `Who was called before ${this.name} (${args.splice(0, 1)}):` )
     for ( var x of args )
         console.info ( x )
 }

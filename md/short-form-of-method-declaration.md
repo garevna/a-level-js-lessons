@@ -1,5 +1,7 @@
-## :mortar_board: Краткая форма объявления методов
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Краткая форма объявления методов
+
 ###### ES6
+
 ✋ Краткий синтаксис объявления методов при инициализации объекта:
 ```javascript
 var user = {
@@ -14,13 +16,13 @@ var user = {
 user.sayHello ()
 user.sayBye ()
 ```
-:warning: Вместо 
+:warning: Вместо
 ```javascript
 sayHello: function () {
     console.log ( `Hello, ${ this.name }!` )
 }
 ```
-можно использовать краткую форму: 
+можно использовать краткую форму:
 ```javascript
 sayHello () {
     console.log ( `Hello, ${ this.name }!` )

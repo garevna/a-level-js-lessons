@@ -1,4 +1,4 @@
-# :mortar_board: Performance
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Performance
 
 | [`performance.timing`](#mortar_board-performancetiming) |
 |:-|
@@ -61,7 +61,7 @@
 
 Скрипт может получать данные ( `getEntries()`, `getEntriesByName()`, `getEntriesByType()` ) из этого буфера, а так же динамически создавать и удалять кастомные временные метки ( `mark` ) и измерения ( `measure` )
 
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 ***
 ## :mortar_board: performance.timing
@@ -76,13 +76,13 @@
 
 ```javascript
 console.log (
-    performance.timing.domComplete - 
+    performance.timing.domComplete -
     performance.timing.domInteractive,
-    performance.timing.domInteractive - 
+    performance.timing.domInteractive -
     performance.timing.domLoading
 )
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
@@ -116,14 +116,14 @@ console.log (
   ► get timing: ƒ timing()
   ► __proto__: EventTarget
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
 #### now
 Метод `performance.now()` позволяет получить текущее время высокой точности с момента начала отсчета
 
-:coffee: 
+:coffee:
 ```javascript
 console.log ( `Старт: ${performance.now()}` )
 setTimeout (
@@ -140,14 +140,14 @@ setTimeout (
 ```
 209385.9999999986 - 207385.50000003306 = 2000.499999965541 (ms)
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
 #### mark
 Установка временных меток
 
-:coffee: 
+:coffee:
 ```javascript
 performance.mark ( "start" )
 for ( var x = 0; x < 1000; x++ )
@@ -176,14 +176,14 @@ console.log ( items )
     length: 2
   ► __proto__: Array(0)
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
 #### measure
 Измерение производительности
 
-:coffee: 
+:coffee:
 ```javascript
 performance.mark ( "start1" )
 
@@ -233,7 +233,7 @@ performance.clearMeasures()
 ###### clearMarks()
 ###### clearMeasures()
 
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
@@ -376,7 +376,7 @@ fetch ( "https://httpbin.org" )
     length: 4
   ► __proto__: Array(0)
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
@@ -467,7 +467,7 @@ console.log (
     length: 4
   ► __proto__: Array(0)
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
@@ -549,7 +549,7 @@ fetch ( 'https://httpbin.org/' )
         length: 1
   ► __proto__: Array(0)
 ```
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|
 
 ***
@@ -579,7 +579,7 @@ const pictures = [
 let promises = []
 
 pictures.forEach (
-    item => 
+    item =>
         promises.push (
             new Promise (
                 function ( resolve, reject ) {
@@ -638,5 +638,5 @@ Promise.all ( promises )
 
 ***
 
-| [:arrow_double_up:](#mortar_board-performance) | 
+| [:arrow_double_up:](#mortar_board-performance) |
 |-|

@@ -1,4 +1,4 @@
-## :mortar_board: [Биндинг и каррирование](call-apply-bind)
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> [Биндинг и каррирование](call-apply-bind)
 
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
@@ -72,7 +72,7 @@ var test = ( function () {
 })()
 
 function func () {
-    console.warn ( `Функция func вызвана ${this.test()} раз в контексте объекта ${this.name}` ) 
+    console.warn ( `Функция func вызвана ${this.test()} раз в контексте объекта ${this.name}` )
 }
 
 var figure = { name: "figure", test: test }
@@ -132,7 +132,7 @@ bloom.google()
 ```
 они отрабатывают в том контексте, который мы им "прибиндили" до этого
 
-"Прибиндить" можно не только контекст вызова, но также и аргументы 
+"Прибиндить" можно не только контекст вызова, но также и аргументы
 
 ***
 

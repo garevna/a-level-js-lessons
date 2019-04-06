@@ -1,4 +1,4 @@
-# :mortar_board: Объект **`document`**
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Объект **`document`**
 
 воспользуемся рекурсивной функцией showProto:
 ```javascript
@@ -95,8 +95,8 @@ for ( var sheet of document.styleSheets ) {
 
 Выполним код в консоли:
 ```javascript
-for ( var prop in document ) 
-    prop.indexOf ( "on" ) === 0 ? 
+for ( var prop in document )
+    prop.indexOf ( "on" ) === 0 ?
        console.info ( prop.slice(2) ) : ""
 ```
 Мы получим длинный перечень событий объекта **`document`**
@@ -111,7 +111,7 @@ for ( var prop in document )
 ```javascript
 document.onmouseover = function ( event ) {
     console.info ( `${event.clientX} : ${event.clientY}` )
-} 
+}
 ```
 ## :mortar_board:  Методы объекта **`document`**:
 
@@ -139,10 +139,10 @@ console.log ( style )
 
 :coffee: 2
 ```javascript
-style.appendChild ( 
+style.appendChild (
     document.createTextNode (
         `div { color: blue; }`
-    ) 
+    )
 )
 ```
 ***

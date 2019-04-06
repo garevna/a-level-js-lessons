@@ -1,4 +1,4 @@
-# :mortar_board: &lt;template>
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> &lt;template>
 
     ✅ DocumentFragment
     ✅ content
@@ -44,10 +44,10 @@ DocumentFragment содержит DOM-элементы ( nodes ), как и об
 ```html
 <template id="svg">
     <svg width="400" height="400">
-        <circle cx="200" cy="200" 
-                r="100" 
+        <circle cx="200" cy="200"
+                r="100"
                 fill="transparent"
-                stroke="red" 
+                stroke="red"
                 style="stroke-width:5">
         </circle>
     </svg>
@@ -112,9 +112,9 @@ document.body.appendChild ( circle.content.cloneNode ( true ) )
         circle { stroke-width:5; }
     </style>
     <svg width="400" height="400" id="svg">
-        <circle cx="200" cy="200" r="100" 
+        <circle cx="200" cy="200" r="100"
                 id="circle"
-                fill="transparent" 
+                fill="transparent"
                 stroke="red">
         </circle>
     </svg>

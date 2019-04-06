@@ -1,6 +1,6 @@
 Теперь у нас есть выбор между статическим ( **`import`** ) и динамическим ( **`import()`** ) импортом
 
-## :mortar_board: Dynamic import 
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Dynamic import 
 
 ###### ES10 ( 2019 )
 
@@ -150,7 +150,7 @@ export function showMessage ( message ) {
 }
 ```
 
-:warning: При импорте модулей следует указывать или полный путь 
+:warning: При импорте модулей следует указывать или полный путь
 
 ```javascript
 import {showMessage} from 'https://example.com/js/testESModules.js';

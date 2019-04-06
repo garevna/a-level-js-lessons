@@ -1,4 +1,4 @@
-## :mortar_board: ReadableStream
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> ReadableStream
 
 ###### Конструктор
 
@@ -46,8 +46,8 @@ fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
 
 ```javascript
 fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
-   .then ( response => 
-      console.log ( response.body.getReader() ) 
+   .then ( response =>
+      console.log ( response.body.getReader() )
    )
 ```
 ###### Результат
@@ -69,7 +69,7 @@ fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
 
 ```javascript
 fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
-   .then ( response => 
+   .then ( response =>
       response.body.getReader().read()
          .then ( response => console.log ( response ) )
    )
@@ -85,16 +85,16 @@ fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
 ### :mortar_board: ArrayBuffer
 ```javascript
 fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
-   .then ( response => 
+   .then ( response =>
       response.body.getReader().read()
          .then ( response => {
             var buffer = new ArrayBuffer ( response.value.length )
-            response.value.forEach ( 
+            response.value.forEach (
                 ( val, index ) => {
                     buffer [ index ] = val
-                } 
+                }
             )
-            console.log ( buffer ) 
+            console.log ( buffer )
          })
    )
 ```
@@ -112,10 +112,10 @@ fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
       response.body.getReader().read()
          .then ( response => {
             var buffer = new ArrayBuffer ( response.value.length )
-            response.value.forEach ( 
+            response.value.forEach (
                 ( val, index ) => {
                     buffer [ index ] = val
-                } 
+                }
             )
             var blob = new Blob ( [ buffer ] )
             console.log ( blob )
@@ -134,7 +134,7 @@ fetch ( 'http://ptsv2.com/t/garevna/d/980001/json')
 ```javascript
 var blob = new Blob(
     [ 'body { background-color: #dde; }' ],
-    { type: 'text/css' } 
+    { type: 'text/css' }
 )
 var link = document.createElement( 'link' )
 link.rel = 'stylesheet'

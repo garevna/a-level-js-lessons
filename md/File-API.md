@@ -1,4 +1,4 @@
-# :mortar_board: File API
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> File API
 
 ###### обеспечивает доступ к файлам на стороне клиента
 ###### ( добавлен к DOM в HTML5 )

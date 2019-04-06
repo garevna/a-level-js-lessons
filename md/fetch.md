@@ -1,8 +1,8 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ## :mortar_board: Fetch API
 
-Интерфейсы Fetch API 
+Интерфейсы Fetch API
 
 | [**`Request`**](#mortar_board-request) | [**`Response`**](#mortar_board-response) |
 |-|-|
@@ -57,7 +57,7 @@ fetch ( "message.txt" )
 
 Ресурс - это любые данные на стороне сервера, имеющие **URI** ( идентификатор ресурса )
 
-**URI** ( _Uniform Resource Identifier_ ) - 
+**URI** ( _Uniform Resource Identifier_ ) -
 
 Ресурсом может быть файл, база данных, запись в базе данных и т.д.
 
@@ -71,8 +71,8 @@ fetch ( "message.txt" )
 * `HEAD` - получение информации о ресурсе
 
 ```javascript
-var request = new Request( 
-    'https://httpbin.org/post', 
+var request = new Request(
+    'https://httpbin.org/post',
     {
         method: 'GET'
     }
@@ -94,7 +94,7 @@ var request = new Request(
 
 :coffee: Например, запрос
 ```javascript
-var request = new Request( 
+var request = new Request(
     'https://avatars2.githubusercontent.com/u/46?v=4',
     {
         mode: 'same-origin'
@@ -108,7 +108,7 @@ fetch ( request )
 приведет к генерации исключения:
 ```console
 Fetch API cannot load https://avatars2.githubusercontent.com/u/46?v=4
-Request mode is "same-origin" 
+Request mode is "same-origin"
 but the URL's origin is not same as the request origin null
 ```
 в результате чего промис завершится неудачей:
@@ -123,7 +123,7 @@ Promise {<rejected>: TypeError: Failed to fetch
 
 В таком режиме при кросс-доменном запросе исключение не будет сгенерировано, но ответ будет пустым
 ```javascript
-var request = new Request( 
+var request = new Request(
     'https://avatars2.githubusercontent.com/u/46?v=4',
     {
         mode: 'no-cors'
@@ -160,7 +160,7 @@ Blob(35635) { size: 35635, type: "image/jpeg" }
 
 :coffee: Например, запрос:
 ```javascript
-var request = new Request( 
+var request = new Request(
     'http://bm.img.com.ua/img/prikol/images/large/0/0/307600.jpg',
     {
         mode: 'cors'
@@ -173,10 +173,10 @@ fetch ( request )
 ```
 приведет к генерации исключения:
 ```console
-Failed to load http://bm.img.com.ua/img/prikol/images/large/0/0/307600.jpg: 
+Failed to load http://bm.img.com.ua/img/prikol/images/large/0/0/307600.jpg:
 No 'Access-Control-Allow-Origin' header is present on the requested resource
 Origin 'null' is therefore not allowed access
-If an opaque response serves your needs, 
+If an opaque response serves your needs,
 set the request's mode to 'no-cors' to fetch the resource with CORS disabled
 ```
 и соответствующему "провалу" запроса
@@ -190,7 +190,7 @@ Uncaught (in promise) TypeError: Failed to fetch
 
 :coffee: Если сервер запрошенного ресурса вернет заголовок **`Access-Control-Allow-Origin`** со значением **`*`**, то запрос будет выполнен нормально
 ```javascript
-var request = new Request( 
+var request = new Request(
     'https://httpbin.org/get',
     {
         mode: 'cors'
@@ -205,18 +205,18 @@ fetch ( request )
 ```
 ```console
 {
-  "args": {}, 
+  "args": {},
   "headers": {
-    "Accept": "*/*", 
-    "Accept-Encoding": "gzip, deflate, br", 
-    "Accept-Language": "en-US,en;q=0.9,ru;q=0.8", 
-    "Connection": "close", 
-    "Host": "httpbin.org", 
-    "Origin": "null", 
-    "Save-Data": "on", 
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,ru;q=0.8",
+    "Connection": "close",
+    "Host": "httpbin.org",
+    "Origin": "null",
+    "Save-Data": "on",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
-  }, 
-  "origin": "185.38.217.69", 
+  },
+  "origin": "185.38.217.69",
   "url": "https://httpbin.org/get"
 }
 ```
@@ -242,7 +242,7 @@ console.log ( request.mode ) // cors
 ```
 В противном случае в качестве режима обычно используется **`no-cors`**
 
-например, когда запрос инициируется из разметки, и атрибут `crossorigin` отсутствует 
+например, когда запрос инициируется из разметки, и атрибут `crossorigin` отсутствует
 ( для элементов `<link>`, `<script>`, `<img>`, `<audio>`, `<video>`, `<object>`, `<embed>` или `<iframe>` запрос выполняется в режиме **`no-cors`** )
 
 Ответ ( Response ) имеет свойство **`type`**, которое может иметь значения _`basic`_, _`cors`_ или _`opaque`_
@@ -366,13 +366,13 @@ fetch ( 'https://api.2ip.ua/geo.json?ip=' )
 
 Нам нужен результат ( данные ) в формате  _json_
 
-Используем метод   **`json()`** объекта  **`Response`** 
+Используем метод   **`json()`** объекта  **`Response`**
 
 Мы знаем, что этот метод также вернет промис, т.е. нам нужно еще одного обработчика **`then`**:
 ```javascript
 fetch ( 'https://api.2ip.ua/geo.json?ip=' )
     .then ( response => {
-        response.json().then ( response => 
+        response.json().then ( response =>
             ...
         )
     })
@@ -384,7 +384,7 @@ fetch ( 'https://api.2ip.ua/geo.json?ip=' )
 | [:arrow_heading_up:](#mortar_board-response) |
 |-|
 
-:coffee: 
+:coffee:
 
 :warning: В этом примере нужно вместо **`...`** подставить имя своего _toilet_
 
@@ -395,7 +395,7 @@ document.cookie = "name=garevna;token=qw4654Rzsxc-*/w5"
 fetch ( 'https://api.github.com/users?since=135' )
    .then ( response => response.json()
       .then ( response => {
-          fetch ( 
+          fetch (
               'http://ptsv2.com/t/.../post',
               {
                  method: 'POST',
@@ -480,12 +480,12 @@ fetch ( 'https://avatars2.githubusercontent.com/u/46?v=4' )
 
 :coffee: :one: Закиньте в консоль следующий код, и посмотрите результат:
 ```javascript
-console.log ( new Blob ( [ 
-    '01101000110000100000011101011010010001000100011101011' 
+console.log ( new Blob ( [
+    '01101000110000100000011101011010010001000100011101011'
 ] ) )
-console.log ( new Blob ( [ 
-    '01101000110000100000011101011010010001000100011101011', 
-    '01101000110000100000011101011010010001000100011101011' 
+console.log ( new Blob ( [
+    '01101000110000100000011101011010010001000100011101011',
+    '01101000110000100000011101011010010001000100011101011'
 ] ) )
 ```
 :coffee: :two: Закиньте в консоль следующий код:
@@ -536,8 +536,8 @@ fetch ( 'https://avatars2.githubusercontent.com/u/46?v=4' )
 ```javascript
 fetch ( 'https://httpbin.org/get' )
     .then ( response => response.json()
-        .then ( 
-            response => 
+        .then (
+            response =>
                 console.log ( response.headers )
         )
     )
@@ -561,11 +561,11 @@ fetch ( 'https://httpbin.org/get' )
 :coffee: :five:
 Сделаем кросс-доменный запрос:
 ```javascript
-var request = new Request ( 
+var request = new Request (
     'https://httpbin.org/post',
     {
-        method: 'POST', 
-        mode: 'cors', 
+        method: 'POST',
+        mode: 'cors',
         redirect: 'follow',
         headers: new Headers({
             'Content-Type': 'text/plain'

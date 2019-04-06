@@ -1,7 +1,7 @@
 | [:rewind:](Class) |
 |-|
 
-## :mortar_board: get & set
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> get & set
 
 :warning: Свойства, объявленные в конструкторе, будут собственными свойствами экземпляра
 
@@ -29,7 +29,7 @@ const Canvas = class {
 ```
 ✍ Добавим сеттер свойства  **_history_**
 
-Обратите внимание, что в конструкторе такого свойства нет 
+Обратите внимание, что в конструкторе такого свойства нет
 ( и не должно быть )
 ```javascript
 set history ( newHistory ) {

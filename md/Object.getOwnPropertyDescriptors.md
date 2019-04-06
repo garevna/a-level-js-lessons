@@ -1,4 +1,5 @@
-# :mortar_board: Статические методы конструктора  Object
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Статические методы конструктора  Object
+
 * <a href="Object.assign">`Object.assign()`</a>
 * <a href="Object.create">`Object.create()`</a>
 * <a href="Object.defineProperty">`Object.defineProperty()`</a>

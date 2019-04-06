@@ -1,9 +1,10 @@
-## :mortar_board: Деструктуризация
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Деструктуризация
+
 ###### ES6
 
 Деструктуризация - это разложение структуры данных на элементарные составляющие
 
-    Структура данных - это совокупность элементов, 
+    Структура данных - это совокупность элементов,
     объединенных под одним именем
     и организованных по определенному принципу
 
@@ -17,11 +18,11 @@
 
 :warning: Как правило, при деструктуризации имеет место присваивание
 
-    В левой части оператора присваивания 
+    В левой части оператора присваивания
     будет перечень переменных
-    в квадратных или фигурных скобках 
+    в квадратных или фигурных скобках
     ( в зависимости от того, что деструктурируем ),
-    в правой - массив или объект, 
+    в правой - массив или объект,
     который мы деструктурируем
 
 ###### Массивы
@@ -37,7 +38,7 @@ console.info ( var2 )   // "апельсин"
 console.info ( var3 )   // "киви"
 ```
 :coffee: :two:
-###### обмен значениями между переменными 
+###### обмен значениями между переменными
 ```javascript
 let x = 5, y = 7, z = 9
 [ x, y, z ] = [ y, z, x ]
@@ -62,12 +63,12 @@ console.info ( cos30 )  // 0.5
 :coffee: :three:
 ###### выборка
 ```javascript
-let getAngleData = 
-    deg => [ 
-        Math.sin ( deg ), 
-        Math.cos ( deg ), 
-        Math.tan ( deg ), 
-        Math.atan ( deg ) 
+let getAngleData =
+    deg => [
+        Math.sin ( deg ),
+        Math.cos ( deg ),
+        Math.tan ( deg ),
+        Math.atan ( deg )
     ]
 ```
 ###### Вызовем эту функцию, но "пропустим" возвращаемое ею значение тангенса угла:
@@ -87,10 +88,10 @@ console.info ( arctg30 )  // 0.808448792630022
 
 :coffee:
 ```javascript
-const user = { 
-    name: "Georg", 
-    role: "admin", 
-    stars: 5 
+const user = {
+    name: "Georg",
+    role: "admin",
+    stars: 5
 }
 
 let { name, role, stars } = user
@@ -116,16 +117,16 @@ let name, age
 Если мы хотим присвоить значение переменной с именем, отличающимся от имени свойства деструктурируемого объекта,
 то при перечислении имен свойств в левой части оператора присваивания через двоеточие можно указать новое имя переменной:
 ```javascript
-const user = { 
-    login: "Ivan", 
-    age: 42, 
+const user = {
+    login: "Ivan",
+    age: 42,
     works: true
 }
 
-let { 
+let {
     login: userName,
-    works: employed 
-} = user 
+    works: employed
+} = user
 
 console.log( userName )   // "Ivan"
 console.log( employed )   // true
@@ -139,7 +140,7 @@ let {
     login = "Сергей",
     speciality = "слесарь"
 } = { login: "Ivan", age: 42 }
- 
+
 console.log( login )       // "Ivan"
 console.log( speciality )  // "слесарь"
 ```
@@ -155,12 +156,12 @@ console.log( speciality )  // "слесарь"
 ###### функция  _getAngleData_  возвращает массив
 
 ```javascript
-let getAngleData = 
-    deg => [ 
-        Math.sin ( deg ), 
-        Math.cos ( deg ), 
-        Math.tan ( deg ), 
-        Math.atan ( deg ) 
+let getAngleData =
+    deg => [
+        Math.sin ( deg ),
+        Math.cos ( deg ),
+        Math.tan ( deg ),
+        Math.atan ( deg )
     ]
 ```
 
@@ -221,7 +222,7 @@ let [ first, second, third, forth ] = collection
 ###### или
 
 ```javascript
-let [ first, second, third, forth ] = 
+let [ first, second, third, forth ] =
     document.querySelectorAll ( '.paragraph' )
 ```
 ###### результат
@@ -269,7 +270,7 @@ var title = document.getElementById ( "title" )
 
 ```javascript
 var ids = [ "demo", "registration", "sign-in", "name", "pass", "title" ]
-var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] = 
+var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] =
     ids.map ( item => document.getElementById ( item ) )
 ```
 
@@ -282,7 +283,7 @@ var [ demo, btnReg, btnSignIn, nameElem, passElem, title ] =
 Результат поместим в объект, где имя каждого свойства будет буквой, а значение - числом, сколько раз этот символ встречается в строке `str`
 
 ```javascript
-const lettersCounter = str => Object.assign ( {}, 
+const lettersCounter = str => Object.assign ( {},
     ...str.split('')
         .map( letter => {
             return {

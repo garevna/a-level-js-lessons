@@ -1,4 +1,4 @@
-# :mortar_board: Promise
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Promise
 
 | [:frog: Промис в картинках](Promise-through-pictures) |
 |-|
@@ -25,7 +25,7 @@
 2. может быть связано с сервером, поскольку наше приложение запрашивает и отправляет данные
 3. кроме того, есть еще таймеры - отдельная песня
 
-Все эти события связывает следующее: 
+Все эти события связывает следующее:
 
 * они могут произойти в любое время
 * первым об этом узнает браузер - основной "хост" событий
@@ -57,10 +57,10 @@ const promise = new Promise ( ... )
 :warning: Конструктору передается функция - это обязательно
 
 ```javascript
-const promise = new Promise ( 
+const promise = new Promise (
     function ( ... ) {
         ...
-    } 
+    }
 )
 ```
 
@@ -113,10 +113,10 @@ End
 Поэтому у функции-исполнителя предусмотрены два формальных параметра - колбэки
 
 ```javascript
-const promise = new Promise ( 
+const promise = new Promise (
     function ( resolve, reject ) {
         ...
-    } 
+    }
 )
 ```
 
@@ -137,8 +137,8 @@ const resolve = data => console.log ( data )
 const reject = err => console.warn ( err )
 
 const executor = ( resolve, reject ) =>
-    new Date().getSeconds() > 30 ? 
-        resolve ( "success :)" ) : 
+    new Date().getSeconds() > 30 ?
+        resolve ( "success :)" ) :
         reject ( new Error ( "ups... :(" ) )
 
 executor ( resolve, reject )
@@ -179,8 +179,8 @@ Finish
 ```javascript
 new Promise (
     ( resolve, reject ) =>
-        new Date().getSeconds() > 30 ? 
-            resolve ( new Date().getSeconds() ) : 
+        new Date().getSeconds() > 30 ?
+            resolve ( new Date().getSeconds() ) :
             reject ( new Error (
                 `Time is out: ${new Date().getSeconds()}` )
             )
@@ -197,7 +197,7 @@ new Promise (
 
 ```javascript
 var test = new Promise (
-    resolve => 
+    resolve =>
         resolve ( `Time: ${new Date().getSeconds()}/` )
 )
 ```
@@ -247,8 +247,8 @@ console.log ( "Start" )
 new Promise (
     function executor ( resolve, reject ) {
         console.log ( arguments.callee.name )
-        Math.random() >= 0.5 ? 
-            resolve ( arguments.callee.name ) : 
+        Math.random() >= 0.5 ?
+            resolve ( arguments.callee.name ) :
             reject ( new Error ( arguments.callee.name ) )
     }
 )
@@ -314,11 +314,11 @@ reject: Error: executor
 console.log ( "Start" )
 
 new Promise (
-    ( resolve, reject ) => 
+    ( resolve, reject ) =>
         Math.random() > 0.4 ? resolve( {
             name: "Google",
             type: "service"
-        } ) : 
+        } ) :
         reject ( new Error ( "The promise was rejected" ) ),
     )
     .then(
@@ -342,7 +342,7 @@ function randomResult () {
             () => Math.random() > 0.4 ? resolve( {
                     name: "Google",
                     type: "service"
-                } ) : 
+                } ) :
                 reject ( new Error ( "The promise was rejected" ) ),
             Math.round ( Math.random() * 5000 )
         )
@@ -368,7 +368,7 @@ randomResult ()
 
 ```javascript
 navigator.getBattery().then ( result => {
-    for ( var x in result ) 
+    for ( var x in result )
         console.log ( `${x}: ${result[x]}` )
 })
 ```
@@ -395,8 +395,8 @@ Promise.all ( promises ).then ( response => document.body.innerHTML += `<p>${res
 
 ```javascript
 const executor = ( resolve, reject ) =>
-    Math.random () > 0.5 ? 
-        resolve ( "success :)" ) : 
+    Math.random () > 0.5 ?
+        resolve ( "success :)" ) :
         reject ( new Error ( "ups... :(" ) )
 
 var promises = [

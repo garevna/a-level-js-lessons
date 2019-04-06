@@ -1,4 +1,5 @@
-# :mortar_board: Shadow DOM
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Shadow DOM
+
 <code>
 До появления Shadow DOM инкапсуляция стилей элементов DOM была острой проблемой разработчиков
 
@@ -90,7 +91,7 @@ console.dir ( elem.shadowRoot )
   ► firstChild: img
   ► firstElementChild: img
   ► host: div
-    innerHTML: "<img src="http://www.radioactiva.cl/wp-content/uploads/2018/05/pikachu.jpg"><style>img { width: 200px; } 
+    innerHTML: "<img src="http://www.radioactiva.cl/wp-content/uploads/2018/05/pikachu.jpg"><style>img { width: 200px; }
     </style>"
     isConnected: true
   ► lastChild: style

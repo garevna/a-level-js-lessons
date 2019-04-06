@@ -1,5 +1,7 @@
-# :mortar_board: ArrayBuffer
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> ArrayBuffer
+
 ###### конструктор
+
 Создает объект с двоичными данными в виде строки
 
 Непосредственного доступа к данным в экземпляре `ArrayBuffer` нет
@@ -53,7 +55,7 @@ console.log ( sample )
 Однако это "дорога в одну сторону", поскольку приводит к созданию нового массива ( **_sample_** ), изменения в котором не отражаются на исходном объекте ( **_buffer_** )
 
 ### DataView
-С помощью этого конструктора создается экземпляр акцессора, обеспечивающего гибкий доступ к данным исходного экземпляра `ArrayBuffer` 
+С помощью этого конструктора создается экземпляр акцессора, обеспечивающего гибкий доступ к данным исходного экземпляра `ArrayBuffer`
 
 ```javascript
 var buffer  = new ArrayBuffer ( 16 )
@@ -153,7 +155,7 @@ console.log ( buffer)
   ► __proto__: ArrayBuffer
 ```
 
-###### :coffee: :four: 
+###### :coffee: :four:
 ```javascript
 var picture = document.createElement ( 'img' )
 document.body.appendChild ( picture )

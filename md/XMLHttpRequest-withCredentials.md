@@ -1,4 +1,4 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
@@ -88,10 +88,10 @@ request.send ( JSON.stringify ( obj ) )
 
 ![](http://icecream.me/uploads/c39e024f7afd6d962457a8ca1435585d.png)
 
-В этой вкладке мы видим и те куки, которые "поехали" с запросом на сервер, и те куки, которые пришли назад 
+В этой вкладке мы видим и те куки, которые "поехали" с запросом на сервер, и те куки, которые пришли назад
 
-( ничего не пришло, 
-потому что **_ptsv2.com_** не пишет куки, 
+( ничего не пришло,
+потому что **_ptsv2.com_** не пишет куки,
 и ему наплевать на наше разрешение писать свои куки на клиенте )
 
 

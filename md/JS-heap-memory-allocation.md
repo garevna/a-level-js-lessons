@@ -1,4 +1,4 @@
-# Тестирование производительности
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Тестирование производительности
 
 Рассмотрим пример кода, производительность которого мы хотим протестировать:
 
@@ -12,7 +12,7 @@ function countInnerIntervals ( intervals ) {
             results.push (
                 array.reduce (
                     ( childs, section ) => array.filter (
-                        item => item [0] > segment[0] && item [1] < segment[1] 
+                        item => item [0] > segment[0] && item [1] < segment[1]
                     ).length
                 )
             )

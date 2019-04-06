@@ -1,4 +1,4 @@
-## 🎓 Конструктор
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Конструктор
 
 Настало время разобраться с тем, что же такое конструктор
 
@@ -84,7 +84,7 @@ func()
         var x = "Hello"
         var y = "baby"
         console.log ( x + ", " + y )
-    
+
 }
 Hello, baby
 ```

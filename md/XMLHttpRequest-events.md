@@ -1,4 +1,4 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
@@ -41,8 +41,8 @@
 var transport = new XMLHttpRequest ()
 
 transport.onreadystatechange = function ( event ) {
-   if ( this.readyState === 4 && 
-        this.status === 200 ) 
+   if ( this.readyState === 4 &&
+        this.status === 200 )
            console.log ( event )
 }
 ```
@@ -121,7 +121,7 @@ var request = new XMLHttpRequest()
 request.open (
     "get",
     'https://httpbin.org/get',
-    true 
+    true
 )
 request.responseType = "arraybuffer";
 

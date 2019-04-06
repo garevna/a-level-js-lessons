@@ -1,14 +1,14 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ## :mortar_board: `XMLHttpRequest`
 
 ***
 
-###### Спецификация 
+###### Спецификация
 ```
-XMLHttpRequest - это API, 
-предоставляющий функциональность на стороне клиента 
-для передачи данных между клиентом и сервером 
+XMLHttpRequest - это API,
+предоставляющий функциональность на стороне клиента
+для передачи данных между клиентом и сервером
 с помощью скриптов
 ```
 ###### :warning: `Same Origin Policy`

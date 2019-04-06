@@ -1,7 +1,7 @@
 | [:rewind:](Class) |
 |-|
 
-## :mortar_board: static
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> static
 
 Статические методы класса объявляются с помощью ключевого слова **static**
 
@@ -55,8 +55,8 @@ window.onresize = Canvas.resizeCanvas.bind ( pict.canvas )
 ```
 При вызове статического метода  **_drawLine_**  первым аргументом ему передается контекст вызова
 
-> ✍ Примечание: 
- 
+> ✍ Примечание:
+
 > В данном случае объявление метода  drawLine  как статического <br/>
 > создает ненужные сложности с передачей контекста, <br/>
 > и гораздо проще объявить его так:

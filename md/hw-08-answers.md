@@ -1,3 +1,5 @@
+<img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+
 :one:
 
 ```javascript
@@ -28,7 +30,7 @@ var typeMessage = ( function ( velocity ) {
     var index = 0
     return function ( message ) {
         var num = index
-        setTimeout ( 
+        setTimeout (
             () => container.textContent += message [ num ],
             1000 * velocity * num
         )

@@ -1,4 +1,4 @@
-# :mortar_board: curl
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> curl
 
 Утилита командной строки для передачи данных по URL
 
@@ -73,7 +73,7 @@ $ curl  -o  index-1.html  https://garevna.github.io/js-samples/index.html
 
 ***
 
-Далее воспользуемся бесплатным тестовым сервером 
+Далее воспользуемся бесплатным тестовым сервером
 
 ###### http://ptsv2.com
 
@@ -132,7 +132,7 @@ $ curl -d '{ name:Irina }'  -H  'Content-Type: application/json'  http://ptsv2.c
 
 мы передали простой объект `{ name:Irina }`
 
-в заголовке 
+в заголовке
 ```
 Content-Type: application/json'
 ```
@@ -171,4 +171,3 @@ $ curl http://name:passwd@machine.domain/full/path/to/file
 <table><tr><td><code>
 $ curl --user garevna:garevna -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/garevna/post
 </code></td></tr></table>
-

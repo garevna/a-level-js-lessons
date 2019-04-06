@@ -1,4 +1,4 @@
-# :mortar_board: Генераторы и итераторы
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Генераторы и итераторы
 ###### ES6
 
 ### Генератор
@@ -189,7 +189,7 @@ while ( !user.iterator.next().done ) {}
 
 ***
 
-Используем **`Symbol.iterator`** в контексте предыдущего примера 
+Используем **`Symbol.iterator`** в контексте предыдущего примера
 
 ```javascript
 user [ Symbol.iterator ] = function* () {
@@ -227,12 +227,12 @@ elements [ Symbol.iterator ] = function* () {
     let itemNum = 0
     while ( itemNum < this.length ) {
         yield ( () => {
-            var elem = document.body.appendChild ( 
+            var elem = document.body.appendChild (
                 document.createElement (
                     this [ itemNum ].tagName
                 )
             )
-            if ( this [ itemNum ].attrs ) 
+            if ( this [ itemNum ].attrs )
                 for ( var x in this [ itemNum ].attrs ) {
                     elem [ x ] = this [ itemNum ].attrs [ x ]
                 }
@@ -249,7 +249,7 @@ for ( let elem of elements ) {}
 
 ### Асинхронный генератор
 
-##### :coffee: 4 
+##### :coffee: 4
 
 Создадим генератор, который выдает по одному символу в секунду из массива, переданного ему в качестве аргумента
 
@@ -383,7 +383,7 @@ function* someGenerator ( objs ) {
     let nextItem = objs [ 0 ]
     while ( !!nextItem ) {
         currentItem = nextItem
-        nextItem = !!currentItem.nextItem ? 
+        nextItem = !!currentItem.nextItem ?
             objs.find ( x => currentItem.nextItem === x.val )
             : null
         yield currentItem.val
@@ -411,7 +411,7 @@ objects[Symbol.iterator] = function* () {
     let nextItem = this [ 0 ]
     while ( !!nextItem ) {
         currentItem = nextItem
-        nextItem = !!currentItem.nextItem ? 
+        nextItem = !!currentItem.nextItem ?
             this.find ( x => currentItem.nextItem === x.val )
             : null
         yield currentItem.val

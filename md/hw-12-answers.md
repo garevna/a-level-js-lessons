@@ -1,3 +1,5 @@
+<img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+
 :three:
 
 ```javascript
@@ -30,7 +32,7 @@ startButton.onclick = event => {
     timeOut ( 4000 )
         .then ( () => img.src = "https://thumbs.gfycat.com/OddWideHookersealion-small.gif" )
     timeOut ( 3500 )
-        .then ( () => img.style.opacity = 0 ) 
+        .then ( () => img.style.opacity = 0 )
     timeOut ( 4500 )
         .then ( () => img.style.opacity = 1 )
     timeOut ( 5500 )

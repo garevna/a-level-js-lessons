@@ -1,3 +1,5 @@
+<img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+
 :one:
 
 Используя асинхронную функцию, напилить код функции `printString`, выводящей строку на страницу по 1 символу в секунду

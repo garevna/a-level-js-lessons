@@ -1,4 +1,4 @@
-# :mortar_board: Events
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Events
 
 В цепочке прототипов любого элемента DOM есть объект ( класс ) **`EventTarget`**
 
@@ -33,7 +33,7 @@ console.dir ( EventTarget )
 * [removeEventListener](#removeEventListener)
 * [dispatchEvent](#dispatchEvent)
 
-Мы уже в курсе, что объект **`Node`** наследует от объекта **`EventTarget`**, 
+Мы уже в курсе, что объект **`Node`** наследует от объекта **`EventTarget`**,
 
 а объект **`Element`** наследует от **`Node`**,
 
@@ -50,7 +50,7 @@ console.dir ( EventTarget )
 ```javascript
 for ( var prop in HTMLElement.prototype ) {
     if ( prop.indexOf ( 'on' ) !== 0 ) continue
-    console.info ( `Event: ${prop.slice(2)}` ) 
+    console.info ( `Event: ${prop.slice(2)}` )
 }
 ```
 
@@ -69,7 +69,7 @@ for ( var prop in HTMLElement.prototype ) {
 ###### :coffee:  DOMNodeInserted
 
 ```javascript
-document.body.ondomnodeinserted = 
+document.body.ondomnodeinserted =
     function ( event ) {
         console.log ( event )
     }
@@ -133,7 +133,7 @@ document.body.appendChild (
 :warning: Однако в примере выше обработчик был повешен на элемент `body`,<br/>
 а свойство `target` указывает на добавленный в DOM элемент
 
-В следующем примере свойство `target` будет ссылкой на тот элемент, на котором произошел клик 
+В следующем примере свойство `target` будет ссылкой на тот элемент, на котором произошел клик
 
 ###### :coffee: event.target
 
@@ -180,7 +180,7 @@ const divs = pictures.map (
 
 Конструктор, с помощью которого создаются все события DOM
 
-Свойство  **_`prototype`_**  конструктора **`Event`** содержит свойства, которые будут унаследованы всеми событиями 
+Свойство  **_`prototype`_**  конструктора **`Event`** содержит свойства, которые будут унаследованы всеми событиями
 ***
 ```javascript
 var userEvent = new Event( 'user' )
@@ -211,8 +211,8 @@ document.body.dispatchEvent ( new Event ( 'click' ) )
 
 ```javascript
 function addElement ( tagName, container ) {
-    var _container = 
-        container && container.nodeType === 1 ? 
+    var _container =
+        container && container.nodeType === 1 ?
                     container : document.body
     return _container.appendChild (
          document.createElement ( tagName )
@@ -235,12 +235,12 @@ btn.innerText = "Change"
 btn.onclick = function ( event ) {
     var inp = addElement ( "input" )
     inp.onchange = function ( event ) {
-        obj.dispatchEvent ( 
+        obj.dispatchEvent (
              new CustomEvent ( "listen",
-                  { 
+                  {
                        detail: this.value
-                  } 
-             ) 
+                  }
+             )
         )
         this.parentNode.removeChild ( this )
     }
@@ -276,7 +276,7 @@ elem.onmouseover = function ( mev ) { ... }
 
 #### :mortar_board: event.screenX | event.screenY
 
-Координаты указателя мышки относительно левого верхнего угла физического экрана 
+Координаты указателя мышки относительно левого верхнего угла физического экрана
 
 ***
 
@@ -474,9 +474,9 @@ var collection = document.querySelectorAll ( 'p ~ *' )
 collection.forEach ( x => {
    if ( x.nodeType === 1 )
        x.addEventListener ( 'mouseover', function ( event ) {
-           console.warn ( 
+           console.warn (
               event.target.tagName + (
-              event.target.id ? '#' + event.target.id : 
+              event.target.id ? '#' + event.target.id :
               event.target.className ?
               '.' + event.target.className :
               ' content: ' + event.target.innerHTML )
@@ -512,12 +512,12 @@ elem.addEventListener ( 'click', clickHandler )
 :coffee: :seven:
 
 ```javascript
-var elem = document.body.appendChild ( 
+var elem = document.body.appendChild (
      document.createElement ( 'a' )
 )
 elem.innerText = "click me"
 elem.href = "https://www.w3schools.com/charsets/ref_utf_punctuation.asp"
-elem.addEventListener ( 'click', 
+elem.addEventListener ( 'click',
     function ( event ) {
         event.preventDefault()
         alert ( `href: ${this.href}` )
@@ -615,14 +615,14 @@ var text = [
     'what is your favorite language?',
     'Bye'
 ]
-elem.addEventListener ( 'click', 
+elem.addEventListener ( 'click',
    function ( event ) {
       // event.stopImmediatePropagation()
       console.log ( 'Я тут первый, остальные на фиг!' )
    }
 )
 for ( var txt of text ) {
-    elem.addEventListener ( 'click', 
+    elem.addEventListener ( 'click',
         ( function ( message ) {
             return function () {
                 console.log ( message )

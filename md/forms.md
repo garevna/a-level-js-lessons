@@ -1,4 +1,4 @@
-# :mortar_board: Элементы форм
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Элементы форм
 
 | `button` | [`input`](#input) | [`select`](#select) | `textarea` |
 |-|-|-|-|
@@ -15,7 +15,7 @@
 Возможные значения свойства  `type`:
 
 * `button`
-* [**`checkbox`**](#checkbox) 
+* [**`checkbox`**](#checkbox)
 * [**`color`**](#color)
 * `date`
 * `datetime-local`
@@ -82,7 +82,7 @@ function inputValueChangedHandler ( event ) {
 ```javascript
 function inputClickHandler ( event ) {
     var p = event.target.id + " checked: " + event.target.checked
-    demo ? demo.innerHTML += p + "<br>" : console.log ( p ) 
+    demo ? demo.innerHTML += p + "<br>" : console.log ( p )
 }
 ```
 
@@ -116,7 +116,7 @@ clr.onchange = inputValueChangedHandler
 
 Свойство  `value`  этих элементов можно установить любым
 
-Переключатели типа  `radio`  можно объединить в одну группу с помощью свойства  `name` 
+Переключатели типа  `radio`  можно объединить в одну группу с помощью свойства  `name`
 
 ( оно должно иметь одно и то же значение для всех переключателей группы )
 

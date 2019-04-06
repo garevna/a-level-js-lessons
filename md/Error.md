@@ -1,4 +1,4 @@
-# :mortar_board: Error ()
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Error ()
 
 Конструктор **Error ()** создаёт объект **`Error`**
 
@@ -88,7 +88,7 @@ try {
 ```
 в консоль будет выброшено исключение:
 ```console
-⛔️ Error: Arguments not valid 
+⛔️ Error: Arguments not valid
 ```
 :coffee: 3
 ```javascript
@@ -126,8 +126,8 @@ Error: Arguments not valid
 ```javascript
 try {
     throw ( { name: "Hi", message: "It's a joke" } )
-} catch ( err ) { 
-    console.log ( err.name, err.message ) 
+} catch ( err ) {
+    console.log ( err.name, err.message )
 }
 ```
 :coffee: 5
@@ -135,13 +135,13 @@ try {
 ```javascript
 try {
      throw ( {
-          name: "Hi", 
-          message: "It's a joke", 
+          name: "Hi",
+          message: "It's a joke",
           stack: `
               Привет,
               извините за вмешательство,
               очень хотелось поздороваться 😉
-          ` 
+          `
      } )
 } catch ( err ) { console.error ( err.stack ) }
 
@@ -154,16 +154,16 @@ try {
 ```javascript
 try {
      throw ( {
-          name: "Hi", 
-          message: "It's a joke", 
+          name: "Hi",
+          message: "It's a joke",
           stack: `
               Привет,
               извините за вмешательство,
               очень хотелось поздороваться 😉
-          ` 
+          `
      } )
 } catch ( err ) {
-     console.error ( err.stack ) 
+     console.error ( err.stack )
 }
 finally {
      console.info ( `try...catch завершил работу` )

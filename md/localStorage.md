@@ -1,4 +1,5 @@
-# :mortar_board: localStorage
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> localStorage
+
 ###### Локальное хранилище данных на клиенте
 ###### Свойство глобального объекта window
 ###### Объем 5Mb

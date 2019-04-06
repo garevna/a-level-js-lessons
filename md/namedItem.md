@@ -1,4 +1,4 @@
-### :clipboard: namedItem
+### <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> namedItem
 
 С помощью метода **`namedItem`** можно получить ссылку на именованный элемент из таких HTML-коллекций ( _**`HTMLCollection`**_ ), как:
 
@@ -42,7 +42,7 @@ console.log (
 
 ```javascript
 function testNamedItem ( tagName ) {
-    var elem = document.body.appendChild ( 
+    var elem = document.body.appendChild (
         document.createElement ( tagName )
     )
     elem.id = "testId"

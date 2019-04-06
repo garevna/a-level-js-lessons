@@ -1,6 +1,6 @@
-# :mortar_board: Cookie
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Cookie
 
-Файлы cookie позволяют идентифицировать уникальных пользователей в разных сеансах, 
+Файлы cookie позволяют идентифицировать уникальных пользователей в разных сеансах,
 
 :warning: но не при смене браузеров или устройств
 
@@ -24,7 +24,7 @@ var res = document.cookie
 console.log ( res )
 ```
 
-:coffee: 
+:coffee:
 
 | <img src="https://lh4.googleusercontent.com/ff09mvDAMy80ahxWRzoq2QDhrQtACJ19czpFWBSwlEoWf_I3u1QUolgK4pO1A8SKKWp-BNAfjNFTn57WHLejg34Wp_koYlivWH2JjFzikxRMz_nr6fg8ZLBBWOm9Xkmyn0wv3fqSPA8jfSI" width="500"/> |
 |-|
@@ -43,7 +43,7 @@ console.log ( res )
 В нашем примере метод `document.cookie  вернул строку:
 
 ```console
-"intercom-id-vuh4y50t=87110d5f-3671-4c46-bc3f-299e7e3702d8; 
+"intercom-id-vuh4y50t=87110d5f-3671-4c46-bc3f-299e7e3702d8;
 _csrfToken=grvL1zeL-jpCdOS60hSAYv6EeNBy4hiICwb8"
 ```
 
@@ -59,7 +59,7 @@ _csrfToken=grvL1zeL-jpCdOS60hSAYv6EeNBy4hiICwb8
      ключ:      intercom-id-vuh4y50t
      значение:  87110d5f-3671-4c46-bc3f-299e7e3702d8
 
-Во второй подстроке 
+Во второй подстроке
 
      ключ:      _csrfToken
      значение:  grvL1zeL-jpCdOS60hSAYv6EeNBy4hiICwb8
@@ -84,7 +84,7 @@ var res = document.cookie
 console.log ( res )
 ```
 
-:coffee: 
+:coffee:
 
 | <img src="https://lh4.googleusercontent.com/0S48mrOhxzSppmjxS-1UwW7CZuL2edhilC0y46zhtf8q4elSbLky5uwBawHTLPq8n4dV8k_yDKY9uLd5tRsout8VYucYOWazePFBV-AomUxvwn4i13oZDQ42xZ2ocdm2qO6SR-LnuU-pTLY" width="450"/> |
 |-|
@@ -204,7 +204,7 @@ function getCookies () {
 Если опция `expires` отсутствует или ее значение равно 0, то соответствующая запись в cookie-файле будет рассматриваться как сессионная и будет удалена при закрытии окна браузера
 
 
-:coffee: 
+:coffee:
 
 Например, если мы хотим, чтобы запись в куки-файле была удалена через 10 секунд после вставки,
 
@@ -225,7 +225,7 @@ getCookies ()
 
 Как видно на скриншоте, в наш куки-файл была добавлена запись  
 
-     "name=Ирина" 
+     "name=Ирина"
 
 По истечении 10 секунд еще раз вызовем функцию **_getCookies()_**:
 
@@ -239,7 +239,7 @@ getCookies ()
 
 ### :mortar_board: UTC
 
-**Coordinated Universal Time** - всемирный стандарт времени, не зависящий от временных зон 
+**Coordinated Universal Time** - всемирный стандарт времени, не зависящий от временных зон
 
 ( «Скоординированное всеобщее время» )
 
@@ -254,7 +254,7 @@ getCookies ()
 Для удаления записи из куки-файла нужно "сбросить" значение "срока годности":
 
 ```javascript
-document.cookie = "name=; expires=" + 
+document.cookie = "name=; expires=" +
     new Date ( 0 ).toUTCString ()
 ```
 

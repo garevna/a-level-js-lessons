@@ -1,4 +1,4 @@
-# :mortar_board: Вычисляемые свойства
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Вычисляемые свойства
 
 У объекта могут быть свойства, значения которых вычисляются на основании значений других свойств
 
@@ -41,7 +41,7 @@ var commodity = {
 
 **Сеттер** - это функция, которая будет получать новое значение цены товара в гривне ( **_`newPriceUAH`_** ) и пересчитывать цену товара в долларах ( **`commodity.priceUSD`** ) по текущему курсу ( **_`course`_** )
 
-Каждый раз, когда мы будем обращаться к свойству **`commodity.priceUAH`**, 
+Каждый раз, когда мы будем обращаться к свойству **`commodity.priceUAH`**,
 
 ```javascript
 console.log ( commodity.priceUAH )
@@ -171,7 +171,7 @@ var human = {
     },
 
     set state ( newState ) {
-        this.states.indexOf ( newState ) < 0 ? 
+        this.states.indexOf ( newState ) < 0 ?
             this.states.push ( newState ) : null
         this.currentState = this.states.indexOf ( newState )
     },
@@ -207,4 +207,3 @@ human.showState()
 ```console
 Current state: 3 ( swim )
 ```
-

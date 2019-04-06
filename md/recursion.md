@@ -1,4 +1,4 @@
-## :mortar_board: Рекурсия
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Рекурсия
 
 Рекурсия - это процесс, в котором функция вызывает сама себя, прямо или косвенно
 

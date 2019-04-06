@@ -1,8 +1,11 @@
-# :mortar_board: let | const
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> let | const
+
 ###### ES6 ( 2015 )
-***
+
 ### let
+
 ###### Блочная область видимости:
+
 ```javascript
 var x = 5
 {
@@ -24,7 +27,7 @@ function sample () {
 }
 sample ()
 ```
-###### Будет сгенерировано исключение: 
+###### Будет сгенерировано исключение:
 ```console
 ⛔️ Uncaught SyntaxError: Identifier 'figure' has already been declared
 ```
@@ -32,7 +35,7 @@ sample ()
 ```javascript
 let sample = { a: 'img', b: 'div', c: 'p' }
 for ( let prop in sample ) {
-    let elem = document.body.appendChild ( 
+    let elem = document.body.appendChild (
         document.createElement ( sample [ prop ] )
     )
     console.log ( elem )
@@ -62,7 +65,7 @@ for ( let i of [ 1, 2, 3, 4, 5 ] ) {
 const XXX = 11
 XXX = 55
 ```
-Будет сгенерировано исключение: 
+Будет сгенерировано исключение:
 ```console
 ⛔️ Uncaught TypeError: Assignment to constant variable.
 ```
@@ -70,7 +73,7 @@ XXX = 55
 ```javascript
 const XXX
 ```
-Будет сгенерировано исключение: 
+Будет сгенерировано исключение:
 ```console
 ⛔️ Uncaught SyntaxError: Missing initializer in const declaration
 ```

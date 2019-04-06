@@ -1,7 +1,8 @@
-# :mortar_board: Статические методы конструктора  Object
-***
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Статические методы конструктора  Object
+
 ## :mortar_board: Object.assign()
-Метод копирует значения всех собственных перечислимых свойств 
+
+Метод копирует значения всех собственных перечислимых свойств
 
 из одного или более исходных объектов  **`sources`**  в целевой объект **`target`**
 
@@ -17,15 +18,15 @@ Object.assign ( target, ...sources )
 
 :coffee: :one:
 ```javascript
-var newObject = Object.assign ( 
-    { }, 
-    { name: "Егор", age: 25 }, 
-    {  write: true, read: true  } 
+var newObject = Object.assign (
+    { },
+    { name: "Егор", age: 25 },
+    {  write: true, read: true  }
 )
 ```
 В результате вывода в консоль объекта **newObject** получим
 ```console
-   { 
+   {
        name: "Егор",
        age: 25,
        write: true,
@@ -49,7 +50,7 @@ var source = {
 ```javascript
 var target = Object.assign ( {}, source )
 ```
-Покажем, что: 
+Покажем, что:
 
 ☝ свойство  **target._attrs_**  содержит ссылку на объект  **source._attrs_**,
 
@@ -67,7 +68,7 @@ target.attrs.color = "#fa0"
 
 а  **target._attrs_** - ссылка на объект **source._attrs_**,
 
-соответствующее значение массива **source._position_** 
+соответствующее значение массива **source._position_**
 
 и значение свойства **_attrs_._color_** объекта **source** изменились:
 

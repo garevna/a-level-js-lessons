@@ -1,5 +1,5 @@
 <a name="top"></a>
-# :mortar_board: Элементы DOM 
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Элементы DOM 
 
 | [:arrow_double_down:](#bottom) | <img width="800"/> | [:arrow_heading_down:](#appendChild) |
 |-|-|-|
@@ -59,7 +59,7 @@ style.sheet.cssRules[0].cssText  // "p { color: red; }"
 style.appendChild (
     document.createTextNode (
         `div { color: blue; }`
-    ) 
+    )
 )
 ```
 Результат:
@@ -132,8 +132,8 @@ figure.appendChild ( removed )
 ### :coffee: :five:
 ```javascript
 function addElement ( tagName, container ) {
-    var _container = 
-        container && container.nodeType === 1 ? 
+    var _container =
+        container && container.nodeType === 1 ?
            container : document.body
     return _container.appendChild (
          document.createElement ( tagName )
@@ -204,22 +204,22 @@ section.insertAdjacentHTML ( `afterEnd`, `<p>Bye</p>` )
 ```
 ```javascript
 document.getElementById ( "demo" )
-    .insertAdjacentElement( 
+    .insertAdjacentElement(
         "beforeend",
         document.createElement ( "p" )
     )
 document.querySelector ( "figure" )
-    .insertAdjacentElement( 
+    .insertAdjacentElement(
         "afterend",
         document.createElement ( "h3" )
     )
 document.querySelector ( "#demo" )
-    .insertAdjacentElement( 
+    .insertAdjacentElement(
         "beforebegin",
         document.createElement ( "img" )
     )
 document.getElementsByTagName ( "figure" )[0]
-    .insertAdjacentElement( 
+    .insertAdjacentElement(
         "afterbegin",
         document.createElement ( "li" )
     )
@@ -241,7 +241,7 @@ document.getElementsByTagName ( "figure" )[0]
 ```
 ***
 <a name="props"></a>
-### Свойства 
+### Свойства
 
 ##### ✅ **`childNodes`**
 

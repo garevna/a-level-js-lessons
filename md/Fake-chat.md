@@ -1,4 +1,4 @@
-## :briefcase: Fake chat
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Fake chat
 
 ### :clipboard: db.json
 Внесем некоторые изменения в базу данных **db.json**
@@ -64,7 +64,7 @@ Home
 | [**`currentUser`**](#vars) | [**`updateChat`**](#updateChat) |
 | [**`chatInput`**](#chatInput) | [**`Запуск`**](#start) |
 
-###### 
+######
 `Объявляем переменную `**_`lastUpdate`_**`,`<br>`в которой будем хранить дату и время модификации загруженных данных`
 ```javascript
 let lastUpdate
@@ -93,7 +93,7 @@ let getData = function ( ref ) {
 `Если такой аргумент отсутствует, то функция вставляет элемент`<br/>
 `в `_`document.body`_
 ```javascript
-let appElem = ( tagName, container ) => 
+let appElem = ( tagName, container ) =>
     ( container ? container : document.body )
         .appendChild (
             document.createElement ( tagName )
@@ -193,7 +193,7 @@ let initChat = async function () {
     chat.innerHTML = ""
     posts.forEach ( post => {
         let user = users.filter (
-            x => x.id === post.userId 
+            x => x.id === post.userId
         )[0]
         chat.appendChild (
             ( function () {
@@ -202,7 +202,7 @@ let initChat = async function () {
                 ava.src = user.photoURL
                 ava.width = "40"
                 ava.title = ` ${user.name} ${user.lastName}`
-                appElem ( 'span', cont ).innerHTML = 
+                appElem ( 'span', cont ).innerHTML =
                     ` <small> ${post.date} ${post.time}</small>`
                 appElem ( 'p', cont ).innerText = post.body
                 return cont
@@ -233,9 +233,9 @@ let initChat = async function () {
 
 `✋ В противном случае формируем массив промисов:`
 ```javascript
-[ 
-    getData ( "users" ).then ( x => users = x ) , 
-    getData ( "posts" ).then ( x => posts = x ) 
+[
+    getData ( "users" ).then ( x => users = x ) ,
+    getData ( "posts" ).then ( x => posts = x )
 ]
 ```
 `и передаем его методу `**`Promise.all`**`,`<br/>
@@ -251,13 +251,13 @@ let initChat = async function () {
 ```javascript
 let updateChat = async function () {
     let updated = await getData ( "lastUpdate" )
-    if ( lastUpdate && updated.data === lastUpdate.data && 
+    if ( lastUpdate && updated.data === lastUpdate.data &&
         updated.time === lastUpdate.time ) return
 
     let scrollValue = chat.scrollTop
 
-    await Promise.all ( [ 
-        getData ( "users" ).then ( x => users = x ) , 
+    await Promise.all ( [
+        getData ( "users" ).then ( x => users = x ) ,
         getData ( "posts" ).then ( x => posts = x )
     ] )
 
@@ -290,11 +290,11 @@ chat.scrollTop = chat.offsetTop
 * вызваем **updateChat ()**, чтобы заполнить контейнер данными
 * устанавливаем интервал обновления чата ( **setInterval** )
 ```
-через заданные интервалы времени 
+через заданные интервалы времени
 мы будем вызывать updateChat (),
 чтобы проверить, было ли за это время
 обновление базы данных на серевере,
-и если да - обновлять 
+и если да - обновлять
 содержимое чата на клиенте
 ```
 * вешаем обработчика события **change** элемента **chatInput**

@@ -1,4 +1,4 @@
-## :mortar_board: [Биндинг и каррирование](call-apply-bind)
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> [Биндинг и каррирование](call-apply-bind)
 
 * [`Конструктор Function`](Function-constructor)
 * [`Наследование`](Function-inheritance)
@@ -14,20 +14,20 @@
 
 Каррирование заключается в следующем:
 
-если при вызове функции 1 передать ей не все параметры, 
+если при вызове функции 1 передать ей не все параметры,
 
-то она вернет функцию 2, параметры которой будут 
+то она вернет функцию 2, параметры которой будут
 
-недостающими параметрами функции 1, 
+недостающими параметрами функции 1,
 
 а выходные данные - результатом функции 1
 
 ```javascript
 function currying ( first, second ) {
     return arguments.length === 0 ? null :
-        arguments.length === 1 ? 
+        arguments.length === 1 ?
             function ( second ) {
-                return arguments.length === 1 ? 
+                return arguments.length === 1 ?
                     [ first, second ] : null
             } : [ first, second ]
 }
@@ -41,7 +41,7 @@ console.log ( curried )
 
 ```console
 ƒ ( second ) {
-    return arguments.length === 1 ? 
+    return arguments.length === 1 ?
         [ first, second ] : null
 }
 ```
@@ -66,8 +66,8 @@ var test = function ( args ) {
 
 function func () {
     console.log (
-    `Функция func вызвана в контексте объекта ${this.name} 
-     c аргументами ${this.test( arguments )}` ) 
+    `Функция func вызвана в контексте объекта ${this.name}
+     c аргументами ${this.test( arguments )}` )
 }
 
 var figure = { name: "figure", test: test }
@@ -84,11 +84,11 @@ lineFunc ( 20, 30, 200, 200 )
 ###### Результат в консоли:
 
 ```console
-Функция func вызвана в контексте объекта figure 
+Функция func вызвана в контексте объекта figure
      c аргументами circle,100,120,80
-Функция func вызвана в контексте объекта figure 
+Функция func вызвана в контексте объекта figure
      c аргументами rect,50,50,150,150
-Функция func вызвана в контексте объекта figure 
+Функция func вызвана в контексте объекта figure
      c аргументами line,20,30,200,200
 ```
 

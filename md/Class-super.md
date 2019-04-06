@@ -2,7 +2,9 @@
 |-|
 
 ###### Наследование
+
 ### super
+
 Методы родительского класса доступны в дочернем классе посредством ключевого слова **`super`**
 
 Расширим метод **drawLine**  родительского класса, <br/>
@@ -57,11 +59,11 @@ newCanvas.drawLine (  [ { x: 20, y: 20 }, { x: 300, y: 400 } ], "#ffaa00", 10 )
 
 В предыдущих примерах мы не использовали конструктор наследующего класса
 
-    ☝ Когда нужно добавить свойства 
+    ☝ Когда нужно добавить свойства
      экземпляру наследующего класса,
      без конструктора это сделать невозможно
 
-✋ Первое, что нужно выполнить в конструкторе наследующего класса - 
+✋ Первое, что нужно выполнить в конструкторе наследующего класса -
       вызвать метод  **super ()**
 ```javascript
 const Canvas = class {
@@ -87,7 +89,7 @@ class ExtendedCanvas extends Canvas {
 ```
 В противном случае будет сгенерировано исключение:
 ```
-⛔️ Uncaught ReferenceError: 
+⛔️ Uncaught ReferenceError:
 Must call super constructor in derived class before accessing 'this' or returning from derived constructor
 ```
 
@@ -162,11 +164,11 @@ person.talk ( "привет!" )
 
 ```javascript
 let human = {
-    place: () => 
-        document.getElementById ( "demo" ) ? 
+    place: () =>
+        document.getElementById ( "demo" ) ?
         document.getElementById ( "demo" ) :
-        document.body.appendChild ( 
-            document.createElement ( "p" ) 
+        document.body.appendChild (
+            document.createElement ( "p" )
         ).id = "demo",
 
     say ( text ) {
@@ -224,9 +226,9 @@ setTimeout ( () => person.talk ( "Hello, baby!" ), 2000 )
 ```javascript
 let human = {
     place: ( () => {
-        if ( document.getElementById ( "demo" ) ) 
+        if ( document.getElementById ( "demo" ) )
             return document.getElementById ( "demo" )
-        var x = document.body.appendChild ( 
+        var x = document.body.appendChild (
             document.createElement ( "p" )
         )
         x.id = "demo"

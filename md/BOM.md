@@ -1,5 +1,5 @@
 _( черновик )_
-# :mortar_board: Browser Object Model
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Browser Object Model
 
 ## Объект window
 
@@ -38,7 +38,7 @@ _( черновик )_
 
 Методами объекта  **`console`**  мы уже пользовались
 
-**_viewport_** - часть окна браузера, где отображается веб-страница 
+**_viewport_** - часть окна браузера, где отображается веб-страница
 ( `без панелей и элементов управления самого браузера` )
 
 ### **`history`**
@@ -98,7 +98,7 @@ window.history.go(-2)
     ✅ protocol
     ✅ search
 
-Посмотрим на 
+Посмотрим на
 ```console
 ▼ __proto__: Location
     ► constructor: ƒ Location()
@@ -106,4 +106,4 @@ window.history.go(-2)
     ► __proto__: Object
 ```
 
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSegoz325rD2axv1Trw3EYZVPFhXbRaEa40WQhSO22EzEEYvZA/viewform) 
+### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSegoz325rD2axv1Trw3EYZVPFhXbRaEa40WQhSO22EzEEYvZA/viewform)

@@ -1,11 +1,11 @@
-## :mortar_board: [Биндинг и каррирование](call-apply-bind)
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> [Биндинг и каррирование](call-apply-bind)
 
 ### :mortar_board: Конструктор Function
 
 Функции можно создавать путем явного вызова конструктора **Function** с ключевым словом **_`new`_**:
 
 ```javascript
-var func = new Function ( 
+var func = new Function (
     "x",
     "y",
     `
@@ -32,7 +32,7 @@ console.dir ( func )
 
 ###### Результат в консоли:
 
-``` 
+```
 ▼ ƒ anonymous(x,y,z )
     arguments: null
     caller: null
@@ -51,4 +51,3 @@ console.dir ( func )
     * [`apply()`](Function-apply)
     * [`bind`](Function-bind)
 * [`Currying`](Function-currying)
-

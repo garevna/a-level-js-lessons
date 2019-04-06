@@ -1,4 +1,4 @@
-# :mortar_board: webpack
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> webpack
 
 | <a href="https://webpack.js.org/api/module-methods/#es6-recommended-" target = "_blank"><img src="https://webpack.js.org/d19378a95ebe6b15d5ddea281138dcf4.svg" width="70"/></a> | Сборщик модулей |
 |-|-|
@@ -20,7 +20,7 @@ Webpack создает граф зависимостей приложения
 
     npm install -g webpack webpack-cli
 
-###### установит  _webpack_ и  _webpack-cli_  глобально 
+###### установит  _webpack_ и  _webpack-cli_  глобально
 
 ###### Сокращение для команды `install ( i )`
 

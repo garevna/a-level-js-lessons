@@ -1,4 +1,4 @@
-# :mortar_board: Приведение типов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Приведение типов
 
 [Неявное приведение типов](Implicit-type-conversion)
 
@@ -11,7 +11,7 @@
 
 ***
 
-Самый простой способ явного приведения данных произвольного типа к типу `string`, `number` или `boolean` - 
+Самый простой способ явного приведения данных произвольного типа к типу `string`, `number` или `boolean` -
 использование встроенных одноименных функций `String()`,  `Number()`,  `Boolean()`
 
 :coffee: 1
@@ -29,7 +29,7 @@ Number ( x )    // 10
 Number ( "туман" )
 ```
 
-вернет специальное значение  **`NaN`** ( _Not  a  Number_ ), 
+вернет специальное значение  **`NaN`** ( _Not  a  Number_ ),
 
 что означает, что строка "туман" не может быть преобразована к числу
 
@@ -71,7 +71,7 @@ Number ( "\t" )    // 0
 
 > "пробельные" символы `""`, `"   "`, `"\n"`, `"\t"` всегда приводятся к 0
 
-```javascript 
+```javascript
 Number ( String.fromCharCode(9) )   // 0
 Number ( String.fromCharCode(10) )  // 0
 Number ( String.fromCharCode(11) )  // 0
@@ -134,18 +134,18 @@ parseFloat('3.14/5')    // 3.14
 :warning: Во всех нижеперечисленных случаях результат будет  `false`:
 
 ```javascript
-Boolean ( "" ) 
+Boolean ( "" )
 Boolean ( 0 )     
 Boolean ( -0 )  
-Boolean ( NaN ) 
+Boolean ( NaN )
 Boolean ( null )
 Boolean ( undefined )
-Boolean ( false ) 
+Boolean ( false )
 ```
 
 :warning: Во всех остальных случаях результат будет  `true`
 
-При приведении строки к булевому типу действует простое правило: 
+При приведении строки к булевому типу действует простое правило:
 
 если длина строки равна 0, то возвращается `false`, в противном случае - `true`
 

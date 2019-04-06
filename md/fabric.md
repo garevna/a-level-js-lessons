@@ -1,4 +1,4 @@
-## :mortar_board: Фабричные методы
+## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Фабричные методы
 <table>
     <tr>
         <td width="200">
@@ -32,7 +32,7 @@
 let google = ( function ( params, pin ) {
     return {
         getVar ( varName, pincode ) {
-            return pin === pincode ? 
+            return pin === pincode ?
                    params [ varName ] :
                    'No access'
         }
@@ -68,7 +68,7 @@ class User {
 User.updateUser = function ( user, params, pin ) {
     return Object.assign ( user, {
         getVar ( varName, pincode ) {
-            return pin === pincode ? 
+            return pin === pincode ?
                    params [ varName ] :
                    'No access'
         }
@@ -124,7 +124,7 @@ function User () {
 
 User.createNewUser = function( params ) {
     var user = new this
-    for ( var key in params ) 
+    for ( var key in params )
         user [ key ] = params [ key ]
     return user
 }
@@ -200,7 +200,7 @@ class User {
     }
     static createNewUser ( params ) {
         var user = new this
-        for ( var key in params ) 
+        for ( var key in params )
             user [ key ] = params [ key ]
         return user
     }

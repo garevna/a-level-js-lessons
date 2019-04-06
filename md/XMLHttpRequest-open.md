@@ -1,4 +1,4 @@
-# AJAX
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> AJAX
 
 ###### :mortar_board: [`XMLHttpRequest`](XMLHttpRequest)
 
@@ -48,8 +48,8 @@
 
 ```javascript
 var request = new XMLHttpRequest ()
-request.open ( 
-    'GET', 
+request.open (
+    'GET',
     'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'
 )
 ```

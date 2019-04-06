@@ -1,12 +1,12 @@
-# :mortar_board: CORS
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> CORS
 
 ###### Cross-origin resource sharing
 
 > Кросс-доменное использование ресурсов ( **CORS** ) - это рабочий проект _W3C_, который определяет, как браузер и сервер должны взаимодействовать при доступе к внешним ресурсам ( с других доменов )
 
->> Суть CORS заключается в использовании дополнительных заголовков, позволяющих браузеру и серверу "опознать" друг друга, чтобы определить, может ли запрос быть удовлетворен 
+>> Суть CORS заключается в использовании дополнительных заголовков, позволяющих браузеру и серверу "опознать" друг друга, чтобы определить, может ли запрос быть удовлетворен
 
->> **`XMLHttpRequest`** и **`Fetch API`** следуют политике одного источника 
+>> **`XMLHttpRequest`** и **`Fetch API`** следуют политике одного источника
 
 >> ( **_same-origin policy_** )
 
@@ -42,8 +42,8 @@
 
 Значение этого заголовка описывает происхождение запроса:
 
-* протокол ( http, ftp, file, about...  ), 
-* домен ( например, tweet.com ) 
+* протокол ( http, ftp, file, about...  ),
+* домен ( например, tweet.com )
 * порт ( включается в заголовок только в том случае, если это не порт по умолчанию, например 81 )
 
 ***
@@ -191,7 +191,7 @@ fetch ( "https://cors-anywhere.herokuapp.com/http://humor.fm/uploads/posts/2016-
 ▼ Response Headers
     Accept-Ranges: bytes
     Access-Control-Allow-Origin: *
-    Access-Control-Expose-Headers: server,date,content-type,content-length,last-modified,connection,etag,expires,cache- 
+    Access-Control-Expose-Headers: server,date,content-type,content-length,last-modified,connection,etag,expires,cache-
     control,accept-ranges,x-final-url,access-control-allow-origin
     Cache-Control: max-age=604800
     Connection: keep-alive

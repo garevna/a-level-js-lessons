@@ -1,4 +1,4 @@
-# :mortar_board: strict mode
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> strict mode
 
 ```javascript
 "use strict"
@@ -21,14 +21,14 @@ function sample () {
 
 ***
 
-#### :warning: использовать необъявленные переменные 
+#### :warning: использовать необъявленные переменные
 
 ```javascript
 'use strict'
 x = 8
 ```
 
-###### будет сгенерировано исключение: 
+###### будет сгенерировано исключение:
 
 ```
 ⛔️ Uncaught ReferenceError: x is not defined
@@ -57,10 +57,10 @@ function sum ( x, y ) {
 delete sum
 ```
 
-###### будет сгенерировано исключение: 
+###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Delete of an unqualified identifier in strict mode.
 ```
 
@@ -84,7 +84,7 @@ var x = 010
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Octal literals are not allowed in strict mode.
 ```
 
@@ -108,7 +108,7 @@ var x = "\010"
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Octal escape sequences are not allowed in strict mode.
 ```
 
@@ -142,7 +142,7 @@ sample.x = 5
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught TypeError: 
+⛔️ Uncaught TypeError:
 Cannot assign to read only property 'x' of object '#<Object>'
 ```
 
@@ -153,10 +153,10 @@ Cannot assign to read only property 'x' of object '#<Object>'
 ###### обычный режим:
 
 ```javascript
-var obj = { 
+var obj = {
     get x() {
         return 0
-    } 
+    }
 }
 obj.x = 5 // 0
 ```
@@ -165,10 +165,10 @@ obj.x = 5 // 0
 
 ```javascript
 'use strict'
-var obj = { 
+var obj = {
     get x() {
         return 0
-    } 
+    }
 }
 obj.x = 5
 ```
@@ -176,7 +176,7 @@ obj.x = 5
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught TypeError: 
+⛔️ Uncaught TypeError:
 Cannot set property x of #<Object> which has only a getter
 ```
 
@@ -200,7 +200,7 @@ delete Object.prototype
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught TypeError: 
+⛔️ Uncaught TypeError:
 Cannot delete property 'prototype' of function Object() { [native code] }
 ```
 
@@ -224,7 +224,7 @@ var eval = 7
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Unexpected eval or arguments in strict mode
 ```
 
@@ -248,7 +248,7 @@ var arguments = 7
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Unexpected eval or arguments in strict mode
 ```
 
@@ -290,8 +290,8 @@ test ()
 
 ```
 ⛔️ Uncaught TypeError:
-'caller', 'callee', and 'arguments' properties 
-may not be accessed on strict mode functions 
+'caller', 'callee', and 'arguments' properties
+may not be accessed on strict mode functions
 or the arguments objects for calls to them
 ```
 
@@ -339,14 +339,14 @@ test ()
 
 ```
 ⛔️ Uncaught TypeError:
-'caller', 'callee', and 'arguments' properties 
-may not be accessed on strict mode functions 
+'caller', 'callee', and 'arguments' properties
+may not be accessed on strict mode functions
 or the arguments objects for calls to them
 ```
 
 ***
 
-#### :warning: использовать выражение _**with**_ 
+#### :warning: использовать выражение _**with**_
 
 ###### обычный режим:
 
@@ -380,7 +380,7 @@ console.log ( y )  // 256
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Strict mode code may not include a with statement
 ```
 
@@ -388,7 +388,7 @@ Strict mode code may not include a with statement
 
 #### :warning: метод **_eval ()_** не может создавать переменные в области видимости, в которой он был вызван
 
-###### по соображениям безопасности 
+###### по соображениям безопасности
 
 ###### обычный режим:
 
@@ -408,7 +408,7 @@ console.log ( gamma )
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught ReferenceError: 
+⛔️ Uncaught ReferenceError:
 gamma is not defined
 ```
 
@@ -429,6 +429,6 @@ gamma is not defined
 ###### будет сгенерировано исключение:
 
 ```
-⛔️ Uncaught SyntaxError: 
+⛔️ Uncaught SyntaxError:
 Unexpected strict mode reserved word
 ```

@@ -1,6 +1,7 @@
-# :mortar_board: Статические методы конструктора  Object
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Статические методы конструктора  Object
+
 * <a href="Object.assign">`Object.assign()`</a>
-***
+
 
 ### :mortar_board: instanceof
 
@@ -31,7 +32,7 @@ var emptyObject = Object.create ( null )
 ```
 ***
 ###### :coffee: :two:
-Метод `Object.create()` позволяет задавать дескрипторы свойств объекта 
+Метод `Object.create()` позволяет задавать дескрипторы свойств объекта
 
 ( как это делает метод `Object.defineProperty()`, который добавляет свойство в объект )
 ```javascript
@@ -43,26 +44,26 @@ Figure.prototype.className = "Figure"
 
 var circle = Object.create ( new Figure ( "circle" ), {
     x: {
-        value: undefined, 
-        writable: true, 
-        configurable: false, 
+        value: undefined,
+        writable: true,
+        configurable: false,
         enumerable: false
     },
     y: {
-        value: undefined, 
-        writable: true, 
-        configurable: false, 
+        value: undefined,
+        writable: true,
+        configurable: false,
         enumerable: false
     },
     radius: {
-        value: undefined, 
-        writable: true, 
-        configurable: false, 
+        value: undefined,
+        writable: true,
+        configurable: false,
         enumerable: false
     }
 })
 ```
-Выведем в консоль переменную **circle**: 
+Выведем в консоль переменную **circle**:
 ```console
 ▼ Figure {x: undefined, y: undefined, radius: undefined}
     radius: undefined
@@ -107,7 +108,7 @@ var obj = Object.create ( proto )
 ```
 <img src="https://lh3.googleusercontent.com/_pAPyoxhK4ekiTu4Q1Hu3NODkNZLICO0NF4GH-kZVHsXIlHFOMZ5QMjf7Fnc4fwJO_WY6VZgEI7POEkbr4yJrjycDkWNKAryWa06o6qjiY_laHD_gUV5gDGg4lcMUJqb3Q4jzQ7BxXIKmdQ" width="300"/>
 
-Все свойства и методы объекта **proto**, взятого в качестве прототипа, стали  унаследованными  свойствами и методами 
+Все свойства и методы объекта **proto**, взятого в качестве прототипа, стали  унаследованными  свойствами и методами
 экземпляра **obj**
 
 Теперь создадим простой конструктор:
@@ -178,10 +179,10 @@ function SubClass () {
      this.type = "SubClass"
 }
 
-// Конструктор SuperClass вызывается 
-// в конструкторе SubClass 
+// Конструктор SuperClass вызывается
+// в конструкторе SubClass
 // как обычная функция,
-// однако в контексте экземпляра 
+// однако в контексте экземпляра
 // ( sample )
 ```
 ```javascript
@@ -292,9 +293,9 @@ var Kitchenware = function () {
     this.__proto__.constructor = Kitchenware
 }
 ```
-Теперь создадим конструктор класса  **_Dishes_**, 
+Теперь создадим конструктор класса  **_Dishes_**,
 
-и используем конструктор **_Kitchenware_** 
+и используем конструктор **_Kitchenware_**
 
 для создания прототипа экземпляров класса  **_Dishes_**:
 ```javascript
@@ -304,9 +305,9 @@ var Dishes = function () {
     this.className = "Посуда"
 }
 ```
-Теперь создадим конструктор класса  **_Cup_**, 
+Теперь создадим конструктор класса  **_Cup_**,
 
-и используем конструктор **_Dishes_** 
+и используем конструктор **_Dishes_**
 
 для создания прототипа экземпляров класса  **_Cup_**:
 ```javascript
@@ -329,7 +330,7 @@ console.log (
     Object.getPrototypeOf ( yellowCup )
 )
 console.log (
-    'yellowCup prototype of prototype: ', 
+    'yellowCup prototype of prototype: ',
     Object.getPrototypeOf (
         Object.getPrototypeOf ( yellowCup )
     )
@@ -363,7 +364,7 @@ yellowCup instanceof Cup          // false
 yellowCup instanceof Object       // true
 ```
 Как мы видим, хотя в консоли цепочка прототипов выглядит вполне прилично,<br/>
-на самом деле произошла передача свойств вместо наследования 
+на самом деле произошла передача свойств вместо наследования
 ***
 * <a href="Object.defineProperty">`Object.defineProperty()`</a>
 * <a href="Object.defineProperties">`Object.defineProperties()`</a>

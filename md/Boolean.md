@@ -1,4 +1,4 @@
-# :mortar_board: Логические выражения
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Логические выражения
 
 * [`Логические значения`](#logic-value)
 * [`Операторы сравнения`](#comparison-operators)
@@ -87,7 +87,7 @@ false && false   //    false
 
 ```javascript
 5 > 8 && 4 < 5   // false  
-// explanation: 
+// explanation:
 5 > 8            // false,
 4 < 5            // true,
 false && true    // false
@@ -370,7 +370,7 @@ y != x  // значение y не равно значению x
 y !== x // или значение y не равно значению x,
             // или тип данных y не совпадает с типом данных x
 
-y != x 
+y != x
 y !== x
 
 x > 8 && y === 5

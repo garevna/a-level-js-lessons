@@ -1,11 +1,11 @@
-# :mortar_board: WebSocket
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> WebSocket
 
 **WebSockets API** позволяет веб-приложениям использовать протокол `WebSockets` для двусторонней связи с удаленным хостом
 
 > `WebSockets, как и Local Storage и Geolocation, изначально был частью спецификации HTML5`
 
-> `Cогласно спецификации протокола, 
-> соединение WebSocket стартует как HTTP-соединение, 
+> `Cогласно спецификации протокола,
+> соединение WebSocket стартует как HTTP-соединение,
 > гарантируя полную обратную совместимость с миром до WebSocket`
 
 Переключение протокола с `HTTP` на `WebSocket` называется рукопожатием ( handshake ) `WebSocket`

@@ -1,4 +1,5 @@
-## :mortar_board: JSON
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> JSON
+
 >> Формат хранения объектов JS  в виде текстовой строки удобен с точки зрения обмена данными с сервером и хранения данных сложной структры
 
 >> Он является более компактной альтернативой формату **XML** ( e**X**tensible **M**arkup **L**anguage )
@@ -37,7 +38,7 @@
 * Единственный обязательный аргумент метода - ссылка на объект ( массив )
 * Возвращаемое значение -  JSON-строка
 
-:coffee: :one: 
+:coffee: :one:
 ```javascript
 var obj = {
    name: "sample",
@@ -62,7 +63,7 @@ JSON.stringify ( obj )
 ###### :warning: В строке  JSON  все строчные значения ( включая имена свойств )  заключаются в `двойные` кавычки
 ###### :warning: Числовые и логические значения, массивы и объекты в кавычки не заключаются
 
-:coffee: :two: 
+:coffee: :two:
 ```javascript
 var x = `{
     "name": "sample",
