@@ -14,3 +14,7 @@
 * [Оператор цикла for](md/for.md)
 * [UTF-8](md/UTF-8.md)
 * [:briefcase: Homework](md/hw-01.md)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

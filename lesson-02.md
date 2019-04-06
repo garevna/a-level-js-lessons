@@ -14,3 +14,7 @@
 * [:clipboard: Самостоятельная работа](md/self-work-02.md)
 * [:briefcase: Практика (XSS)](md/XSS.md)
 * [:briefcase: Homework](md/hw-02.md)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
