@@ -1,16 +1,18 @@
 # :mortar_board: Итерирующие методы массивов
 
-[`entries()`](Array.prototype.entries)<br/>
-[`every()`](Array.prototype.every)<br/>
-[`filter()`](Array.prototype.filter)<br/>
-[`find()`](Array.prototype.find)<br/>
-***
+* [`entries()`](Array.prototype.entries)
+* [`every()`](Array.prototype.every)
+* [`filter()`](Array.prototype.filter)
+
+________________________________________________________________________
+
 ## :mortar_board: findIndex()
 Подобно методу `find()`, ищет в массиве первый элемент, удовлетворяющий заданному условию
 
 Однако возвращает не сам элемент, а его индекс
 
 Если такого элемента в массиве не обнаружено, возвращает **-1**
+
 ```javascript
 var cards = [
     { num: "457892425", cash: 1100 },
@@ -26,13 +28,15 @@ cards.findIndex (
 )
 // Вернет 1
 ```
-***
-[`flatMap()`](Array.prototype.flatMap)<br/>
-[`forEach()`](Array.prototype.forEach)<br/>
-[`keys()`](Array.prototype.keys)<br/>
-[`map()`](Array.prototype.map)<br/>
-[`reduce()`](Array.prototype.reduce)<br/>
-[`reduceRight()`](Array.prototype.reduceRight)<br/>
-[`some()`](Array.prototype.some)<br/>
-[`sort()`](Array.prototype.sort)<br/>
-[`values()`](Array.prototype.values)<br/>
+
+___________________________________________________________________
+
+* [`flatMap()`](md/Array.prototype.flatMap.md)
+* [`forEach()`](md/Array.prototype.forEach.md)
+* [`keys()`](md/Array.prototype.keys.md)
+* [`map()`](md/Array.prototype.map.md)
+* [`reduce()`](md/Array.prototype.reduce.md)
+* [`reduceRight()`](md/Array.prototype.reduceRight.md)
+* [`some()`](md/Array.prototype.some.md)
+* [`sort()`](md/Array.prototype.sort.md)
+* [`values()`](md/Array.prototype.values.md)

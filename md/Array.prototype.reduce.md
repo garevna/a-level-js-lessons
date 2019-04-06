@@ -1,14 +1,14 @@
 # :mortar_board: Итерирующие методы массивов
 
-[`entries()`](Array.prototype.entries)<br/>
-[`every()`](Array.prototype.every)<br/>
-[`filter()`](Array.prototype.filter)<br/>
-[`find()`](Array.prototype.find)<br/>
-[`findIndex()`](Array.prototype.findIndex)<br/>
-[`flatMap()`](Array.prototype.flatMap)<br/>
-[`forEach()`](Array.prototype.forEach)<br/>
-[`keys()`](Array.prototype.keys)<br/>
-[`map()`](Array.prototype.map)<br/>
+* [`entries()`](md/Array.prototype.entries.md)
+* [`every()`](md/Array.prototype.every.md)
+* [`filter()`](md/Array.prototype.filter.md)
+* [`find()`](md/Array.prototype.find.md)
+* [`findIndex()`](md/Array.prototype.findIndex.md)
+* [`flatMap()`](md/Array.prototype.flatMap.md)
+* [`forEach()`](md/Array.prototype.forEach.md)
+* [`keys()`](md/Array.prototype.keys.md)
+* [`map()`](md/Array.prototype.map.md)
 
 _____________________________________________________________________
 
@@ -139,7 +139,7 @@ var arr = [
 
 arr.reduce (
     function ( result, item ) {
-        result.indexOf ( item ) < 0 ? 
+        result.indexOf ( item ) < 0 ?
             result.push ( item ) : null
         return result
     },
@@ -170,7 +170,7 @@ _______________________________________________________________________
 let segments = [ [ 1, 8 ], [ 2, 3 ], [ 4, 7 ], [ 5, 6 ] ]
 ```
 
-Для каждого отрезка нужно посчитать, сколько отрезков лежит внутри него 
+Для каждого отрезка нужно посчитать, сколько отрезков лежит внутри него
 
 **Решение**
 
@@ -195,7 +195,7 @@ function countInnerIntervals ( intervals ) {
 
 Внутри функции объявляется пустой массив **`results`**, куда мы будем помещать результаты подсчетов
 
-Когда итерирование исходного массива будет завершено, функция вернет массив результатов **`results`** 
+Когда итерирование исходного массива будет завершено, функция вернет массив результатов **`results`**
 
 Теперь методу **`forEach`** нужно передать функцию, которая будет "работать" с очередным отрезком
 
@@ -260,7 +260,7 @@ intervals.forEach (
 
 ```javascript
 array.filter (
-    item => item [0] > segment[0] && item [1] < segment[1] 
+    item => item [0] > segment[0] && item [1] < segment[1]
 )
 ```
 
@@ -270,7 +270,7 @@ array.filter (
 
 ```javascript
 array.filter (
-    item => item [0] > segment[0] && item [1] < segment[1] 
+    item => item [0] > segment[0] && item [1] < segment[1]
 ).length
 ```
 
@@ -282,7 +282,7 @@ array.filter (
 intervals.forEach (
     ( segment, index, array ) => results.push (
         array.filter (
-            item => item [0] > segment[0] && item [1] < segment[1] 
+            item => item [0] > segment[0] && item [1] < segment[1]
         ).length
     )
 )
@@ -299,7 +299,7 @@ function countInnerIntervals ( intervals ) {
         ( segment, index, array ) =>
             results.push (
                 array.filter (
-                    item => item [0] > segment[0] && item [1] < segment[1] 
+                    item => item [0] > segment[0] && item [1] < segment[1]
                 ).length
             )
     )
@@ -361,7 +361,7 @@ console.log ( countInnerIntervals ( segments ) )
 
 _______________________________________________________________________
 
-[`reduceRight()`](Array.prototype.reduceRight)<br/>
-[`some()`](Array.prototype.some)<br/>
-[`sort()`](Array.prototype.sort)<br/>
-[`values()`](Array.prototype.values)<br/>
+* [`reduceRight()`](md/Array.prototype.reduceRight.md)
+* [`some()`](md/Array.prototype.some.md)
+* [`sort()`](md/Array.prototype.sort.md)
+* [`values()`](md/Array.prototype.values.md)

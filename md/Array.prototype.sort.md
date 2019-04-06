@@ -1,19 +1,22 @@
 # :mortar_board: Итерирующие методы массивов
 
-[`entries()`](Array.prototype.entries)<br/>
-[`every()`](Array.prototype.every)<br/>
-[`filter()`](Array.prototype.filter)<br/>
-[`find()`](Array.prototype.find)<br/>
-[`findIndex()`](Array.prototype.findIndex)<br/>
-[`flatMap()`](Array.prototype.flatMap)<br/>
-[`forEach()`](Array.prototype.forEach)<br/>
-[`keys()`](Array.prototype.keys)<br/>
-[`map()`](Array.prototype.map)<br/>
-[`reduce()`](Array.prototype.reduce)<br/>
-[`reduceRight()`](Array.prototype.reduceRight)<br/>
-[`some()`](Array.prototype.some)<br/>
-***
+* [`entries()`](md/Array.prototype.entries.md)
+* [`every()`](md/Array.prototype.every.md)
+* [`filter()`](md/Array.prototype.filter.md)
+* [`find()`](md/Array.prototype.find.md)
+* [`findIndex()`](md/Array.prototype.findIndex.md)
+* [`flatMap()`](md/Array.prototype.flatMap.md)
+* [`forEach()`](md/Array.prototype.forEach.md)
+* [`keys()`](md/Array.prototype.keys.md)
+* [`map()`](md/Array.prototype.map.md)
+* [`reduce()`](md/Array.prototype.reduce.md)
+* [`reduceRight()`](md/Array.prototype.reduceRight.md)
+* [`some()`](md/Array.prototype.some.md)
+
+_______________________________________________________________________
+
 ## :mortar_board: sort()
+
 В полном смысле слова этот метод нельзя назвать методом итерирования массива, поскольку число итераций больше чем число элементов массива
 
 Однако итерации имеют место быть
@@ -121,5 +124,7 @@ var resArray = sourceArray
 :warning: Число итераций будет заведомо больше числа элементов массива
 
 ☝ Самостоятельно попробуйте нарисовать блок-схему алгоритма сортировки массива методом  **`sort()`**
-***
-[`values()`](Array.prototype.values)<br/>
+
+_______________________________________________________________________
+
+* [`values()`](md/Array.prototype.values.md)

@@ -1,13 +1,17 @@
 # :mortar_board: Итерирующие методы массивов
 
-[`entries()`](Array.prototype.entries)<br/>
-[`every()`](Array.prototype.every)<br/>
-[`filter()`](Array.prototype.filter)<br/>
-***
+* [`entries()`](md/Array.prototype.entries.md)
+* [`every()`](md/Array.prototype.every.md)
+* [`filter()`](md/Array.prototype.filter.md)
+
+__________________________________________________________________
+
 ## :mortar_board: find()
+
 Метод ищет в массиве и возвращает первый найденный элемент, удовлетворяющий заданному условию
 
 Если такого элемента в массиве нет, возвращает `undefined`
+
 ```javascript
 var cards = [
     { num: "457892425", cash: 1100 },
@@ -23,20 +27,23 @@ cards.find (
 )
 ```
 ###### Этот код вернет объект
+
 ```javascript
 ▼ { num: "457811714", cash: 5000 }
     cash: 5000
     num: "457811714"
   ► __proto__: Object
 ```
-***
-[`findIndex()`](Array.prototype.findIndex)<br/>
-[`flatMap()`](Array.prototype.flatMap)<br/>
-[`forEach()`](Array.prototype.forEach)<br/>
-[`keys()`](Array.prototype.keys)<br/>
-[`map()`](Array.prototype.map)<br/>
-[`reduce()`](Array.prototype.reduce)<br/>
-[`reduceRight()`](Array.prototype.reduceRight)<br/>
-[`some()`](Array.prototype.some)<br/>
-[`sort()`](Array.prototype.sort)<br/>
-[`values()`](Array.prototype.values)<br/>
+
+___________________________________________________________________
+
+* [`findIndex()`](md/Array.prototype.findIndex.md)
+* [`flatMap()`](md/Array.prototype.flatMap.md)
+* [`forEach()`](md/Array.prototype.forEach.md)
+* [`keys()`](md/Array.prototype.keys.md)
+* [`map()`](md/Array.prototype.map.md)
+* [`reduce()`](md/Array.prototype.reduce.md)
+* [`reduceRight()`](md/Array.prototype.reduceRight.md)
+* [`some()`](md/Array.prototype.some.md)
+* [`sort()`](md/Array.prototype.sort.md)
+* [`values()`](md/Array.prototype.values.md)
