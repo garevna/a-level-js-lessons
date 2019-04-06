@@ -1,6 +1,7 @@
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-30.png
 
 ## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы массивов
 
@@ -18,7 +19,7 @@ ______________________________________________________________________________
 
 Возвращаемое значение - новый массив
 
-⚠️ Исходные массивы не изменятся
+![warn-30] Исходные массивы не изменятся
 
 ![cap-30] ❶
 
