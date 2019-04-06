@@ -3,7 +3,7 @@
 
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Блок схема алгоритма
 
-## ![ico50] Алгоритм
+## ![ico25] Алгоритм
 
 В основе структурного программирования лежит триада
 
