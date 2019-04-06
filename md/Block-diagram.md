@@ -1,5 +1,5 @@
-[ico50]: ico/a-level-50.ping
-[ico25]: ico/a-level-25.ping
+[ico50]: ../ico/a-level-50.ping
+[ico25]: ../ico/a-level-25.ping
 
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Блок схема алгоритма
 
