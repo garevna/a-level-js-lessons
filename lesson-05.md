@@ -1,10 +1,14 @@
 #### Занятие 5
 
-* [Вычисляемые свойства](get-and-set)
-* [Биндинг и карринг](call-apply-bind)
-* [Метод valueOf](valueOf)
+* [Вычисляемые свойства](md/get-and-set.md)
+* [Биндинг и карринг](md/call-apply-bind.md)
+* [Метод valueOf](md/valueOf.md)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#valueOf)
-* [Конструктор Error](Error)
-* [Оператор switch](switch)
+* [Конструктор Error](md/Error.md)
+* [Оператор switch](md/switch.md)
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#switch)
-* [:briefcase: Homework](hw-05)
+* [:briefcase: Homework](md/hw-05.md)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
