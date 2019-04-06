@@ -39,4 +39,4 @@ ________________________________________________________________________________
 
 ### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
 
-<a href="https://garevna.github.io/js-quiz/#arrayMethods" _target="_blank">Тесты</a>
+<a href="https://garevna.github.io/js-quiz/#arrayMethods" target="_blank">Тесты</a>
