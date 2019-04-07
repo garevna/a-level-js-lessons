@@ -12,7 +12,7 @@
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
 
-| <img width="900"/> | ![me40] <br/><sup>Занятие&nbsp;1</sup> |
+| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lesson-01.md)</sup> |
 |-|-|
 
 # Блок схема алгоритма
