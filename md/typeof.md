@@ -1,8 +1,27 @@
-<a name="top"></a>
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Оператор `typeof`
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[debagger]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/debagger-20.png "Resume script execution F8 Ctrl+\"
+[reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
+[file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
 
-| [:arrow_double_down:](#bottom) | <img width="800"/> | [:arrow_heading_down:](#2) |
-|-|-|-|
+
+| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
+|-|-|
+
+# Оператор `typeof`
+
+Оператор  `typeof`  возвращает строку
 
 Возможные значения, возвращаемые оператором `typeof`:
 
@@ -14,45 +33,44 @@
 * [`function`](#function)
 * `symbol`
 
-Оператор  `typeof`  возвращает строку
+![cap-30]
 
-:coffee:
-
-✍️ Наберите в консоли:
+Наберите в консоли:
 
 ```javascript
 var x = 10
 typeof x      // "number"
 ```
-✍️ А теперь выполните код в консоли:
+
+А теперь выполните код в консоли:
 
 ```javascript
 x = "google"
 typeof x     // "string"
 ```
-✍️ Теперь выполните в консоли следующий код:
+
+Теперь выполните в консоли следующий код:
 
 ```javascript
 var x = false
 typeof typeof x  // "boolean"
 ```
 
-<a name="string"></a>
-## 📖 string
+_____________________________________________________________
 
-| [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) | [`undefined`](#undefined) | [`function`](#function) |
-|-|-|-|-|-|
+## ![ico25] string
 
 Строки состоят из символов и заворачиваются в двойные ( *"мама"* ) или одинарные ( *'мама'* ) кавычки
 
-Также можно завернуть строку в обратные кавычки ``` ` ```
+Также можно завернуть строку в обратные кавычки **` ` `**
 
 ```javascript
 var sample = `This is a sample`
 ```
+
 Если внутри строки встречаются двойные кавычки, то сама строка должна быть завернута в одинарные, и наоброт
 
-:coffee:
+![cap-30]
 
 ```javascript
 var first = 'Капитаном корабля "Наутилус" был Немо'
@@ -60,14 +78,9 @@ var second = "Капитаном корабля 'Наутилус' был Нем
 var third = `Капитаном корабля "Наутилус" был Немо`
 ```
 
-***
+_____________________________________________________________
 
-<a name="number"></a>
-
-## 📖 number
-
-| [`string`](#string) | [`boolean`](#boolean) | [`object`](#object) | [`undefined`](#undefined) | [`function`](#function) |
-|-|-|-|-|-|
+## ![ico25] number
 
 Число может быть:
 
@@ -76,28 +89,24 @@ var third = `Капитаном корабля "Наутилус" был Нем�
 * [**`Infinity`**](NaN-null-Infinity#infinity) ( бесконечность )
 * [**`NaN`**](NaN-null-Infinity#NaN) ( Not a Number - не число )
 
-:raised_hand: Значение [**`Infinity`**](NaN-null-Infinity#infinity)  может получиться при делении на ноль:
+![warn-25] Значение [**`Infinity`**](NaN-null-Infinity#infinity)  может получиться при делении на ноль:
 
 ```javascript
 var x = 1, y = 0
 var z = x / y
 ```
-Значением переменной  z  будет  *Infinity*
 
-:raised_hand: Значение [**`NaN`**](NaN-null-Infinity#NaN) может получиться при попытке выполнения арифметических операций с операндами, которые не являются числами, например:   ` 5 * "total" `, а так же при попытке разделить ноль на ноль: ` 0/0 `
+<sup>Значением переменной  z  будет  *Infinity*</sup>
 
-:warning: Значение  [**`NaN`**](NaN-null-Infinity#NaN)  не равно никакому другому значению, включая само значение [**`NaN`**](NaN-null-Infinity#NaN)
+![warn-25] Значение [**`NaN`**](NaN-null-Infinity#NaN) может получиться при попытке выполнения арифметических операций с операндами, которые не являются числами, например:   ` 5 * "total" `, а так же при попытке разделить ноль на ноль: ` 0/0 `
 
-:warning: Никакие арифметические операции в JS никогда не будут завершены с ошибкой, поскольку в случае ошибки операция вернет [**`NaN`**](NaN-null-Infinity#NaN)
+![warn-25] Значение  [**`NaN`**](NaN-null-Infinity#NaN)  не равно никакому другому значению, включая само значение [**`NaN`**](NaN-null-Infinity#NaN)
 
-***
+![warn-25] Никакие арифметические операции в JS никогда не будут завершены с ошибкой, поскольку в случае ошибки операция вернет [**`NaN`**](NaN-null-Infinity#NaN)
 
-<a name="boolean"></a>
+________________________________________________________
 
-## 📖 boolean
-
-| [`string`](#string) | [`number`](#number) | [`object`](#object) | [`undefined`](#undefined) | [`function`](#function) |
-|-|-|-|-|-|
+## ![ico25] boolean
 
 Логический тип
 
@@ -106,33 +115,23 @@ var z = x / y
 * `true` ( истина )
 * `false` ( ложь )
 
-***
+_____________________________________________________________
 
-<a name="object"></a>
+## ![ico25] object
 
-## 📖 object
+К данным типа `object` относятся:
 
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`undefined`](#undefined) | [`function`](#function) |
-|-|-|-|-|-|
+* [**`объекты`**](data-structures.md#object)
+* [**`массивы`**](data-structures.md#array)
+* [**`null`**](NaN-null-Infinity.md#null)
 
-К данным типа object относятся:
+________________________________________________________
 
-* [**`объекты`**](data-structures#object)
-* [**`массивы`**](data-structures#array)
-* [**`null`**](NaN-null-Infinity#null)
-
-***
-
-<a name="undefined"></a>
-
-## 📖 undefined
-
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) | [`function`](#function) |
-|-|-|-|-|-|
+## ![ico25] undefined
 
 Специальный тип данных, означающий, что значение переменной не определено
 
-:coffee:
+![cap-30]
 
 ```javascript
 var  sample
@@ -141,14 +140,9 @@ console.log ( sample )
 
 В консоль будет выведено `undefined`, поскольку мы не присвоили переменной  **sample** никакого значения
 
-***
+________________________________________________________
 
-<a name="function"></a>
-
-## 📖 function
-
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) | [`undefined`](#undefined) |
-|-|-|-|-|-|
+## ![ico25] function
 
 С помощью ключевого слова `function` создаются объекты, содержащие фрагмент кода
 
@@ -156,7 +150,7 @@ console.log ( sample )
 
 Если вывести в консоль такой объект
 
-:coffee: 1
+#### ![cap-30] 1
 
 ```javascript
 function sample ( arg ) {
@@ -175,7 +169,7 @@ console.log ( sample )
 
 Такие объекты имеют тип данных `function`
 
-:coffee: 2
+#### ![cap-30] 2
 
 ```javascript
 function sample ( arg ) {
@@ -186,7 +180,7 @@ console.log ( typeof sample ) // function
 
 Особенность этого типа данных заключается в том, что в любой момент можно инициировать выполнение кода, находящегося в объекте, по его имени ( для этого необходимо после имени функции использовать круглые скобки )
 
-:coffee: 3
+#### ![cap-30] 3
 
 ```javascript
 function sample () {
@@ -195,13 +189,12 @@ function sample () {
 sample ()   // "Привет, студент!"
 ```
 
->`Мы будем подробнее изучать объекты типа function далее`
+<sup>Мы будем подробнее изучать объекты типа function далее</sup>
 
-***
+_____________________________________________________________
 
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) | [`undefined`](#undefined) | [`function`](#function) |
-|-|-|-|-|-|-|
+### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdegQYfzld6s0CYJekJ2uvu84fUU2-BXiu7g9X2wzcutF1CWQ/viewform)
 
-***
+_____________________________________________________________
 
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdegQYfzld6s0CYJekJ2uvu84fUU2-BXiu7g9X2wzcutF1CWQ/viewform)
+![footer]
