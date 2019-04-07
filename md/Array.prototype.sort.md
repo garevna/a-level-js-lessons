@@ -9,24 +9,25 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
-* [`entries()`](md/Array.prototype.entries.md)
-* [`every()`](md/Array.prototype.every.md)
-* [`filter()`](md/Array.prototype.filter.md)
-* [`find()`](md/Array.prototype.find.md)
-* [`findIndex()`](md/Array.prototype.findIndex.md)
-* [`flatMap()`](md/Array.prototype.flatMap.md)
-* [`forEach()`](md/Array.prototype.forEach.md)
-* [`keys()`](md/Array.prototype.keys.md)
-* [`map()`](md/Array.prototype.map.md)
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
+* [`entries()`](Array.prototype.entries.md)
+* [`every()`](Array.prototype.every.md)
+* [`filter()`](Array.prototype.filter.md)
+* [`find()`](Array.prototype.find.md)
+* [`findIndex()`](Array.prototype.findIndex.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
+* [`forEach()`](Array.prototype.forEach.md)
+* [`keys()`](Array.prototype.keys.md)
+* [`map()`](Array.prototype.map.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
 
 _______________________________________________________________________
 
-## :mortar_board: sort()
+## ![ico25] sort()
 
 В полном смысле слова этот метод нельзя назвать методом итерирования массива, поскольку число итераций больше чем число элементов массива
 
@@ -41,11 +42,15 @@ _______________________________________________________________________
 Функция получает два аргумента для попарного сравнения
 
 Функция возвращает одно из трех значений:
+
 * 0 - совпадение элементов
 * 1 - первый аргумент больше второго
 * -1 - второй аргумент больше первого
 
 На основании возвращенного функцией значения метод меняет порядок следования элементов в массиве
+
+![cap-30]
+
 ```javascript
 var sourceArray = [
     {  title: "fond",  value:  100 },
@@ -62,7 +67,9 @@ var resArray = sourceArray.sort (
     }
 )
 ```
+
 ###### Результат в консоли:
+
 ```console
 ▼ (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
   ► 0: {title: "bonus", value: 70}
@@ -75,7 +82,9 @@ var resArray = sourceArray.sort (
     length: 7
   ► __proto__: Array(0)
 ```
+
 Для понимания механизма сортировки выведем в консоль значения сравниваемых элементов массива на каждой итерации:
+
 ```javascript
 var resArray = sourceArray
     .sort (
@@ -85,7 +94,9 @@ var resArray = sourceArray
         }
     )
 ```
+
 ###### Результат в консоли:
+
 ```console
 fond - bonus = 30
 payments - fond = 50
@@ -94,7 +105,9 @@ income - credit = 120
 salary - income = 80
 debt - salary = 300
 ```
+
 или так:
+
 ```javascript
 var tmp =[]
 var resArray = sourceArray
@@ -108,7 +121,9 @@ var resArray = sourceArray
         }
     )
 ```
+
 ###### tmp:
+
 ```console
 ▼ (13) [...]
   ► 0: "salary - fond = 300"
@@ -130,16 +145,16 @@ var resArray = sourceArray
 
 Итак, в отличие от других итерирующих методов, функция, передаваемая методу в качестве единственного аргумента, принимает строго два параметра
 
-:warning: Этому методу нельзя передать ссылку на контекст вызова
+![warn-25] Этому методу нельзя передать ссылку на контекст вызова
 
-:warning: Число итераций будет заведомо больше числа элементов массива
+![warn-25] Число итераций будет заведомо больше числа элементов массива
 
-☝ Самостоятельно попробуйте нарисовать блок-схему алгоритма сортировки массива методом  **`sort()`**
+![hw-30] Самостоятельно попробуйте нарисовать блок-схему алгоритма сортировки массива методом  **`sort()`**
 
 _______________________________________________________________________
 
-* [`values()`](md/Array.prototype.values.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

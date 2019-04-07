@@ -9,17 +9,24 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
 [`entries()`](Array.prototype.entries)<br/>
 [`every()`](Array.prototype.every)<br/>
-***
-## :mortar_board: filter()
+
+_________________________________________________________
+
+## ![ico25] filter()
+
 Метод **`filter()`** итерирует массив, проверяя выполнение заданного условия для каждого элемента массива
 
 Метод возвращает новый массив
 
 В результирующий массив попадут только те элементы, которые удовлетворяют условию фильтрации
+
+![cap-30]
+
 ```javascript
 var sourceArray = [
     {  name: "Николай Василенко",  country:  "Украина" },
@@ -35,21 +42,25 @@ var usa = sourceArray.filter ( x => x.country === "США" )
 
 console.log ( usa )
 ```
+
 ###### Результат в консоли:
+
 ![](https://lh4.googleusercontent.com/dPJ7fo_MpTFLila8yzWxmVCTxW6QRyd44lWhg_fGoAGeg1JTCj4Ni-zfy63rKdodIK017yyAqgSrDeao_QZW4vhCY44EjO7ltOGjoGU0BaR3QlRXv6VmByUKw_HyE4SilpWEaAouNcOPwrs)
-***
-* [`find()`](md/Array.prototype.find.md)
-* [`findIndex()`](md/Array.prototype.findIndex.md)
-* [`flatMap()`](md/Array.prototype.flatMap.md)
-* [`forEach()`](md/Array.prototype.forEach.md)
-* [`keys()`](md/Array.prototype.keys.md)
-* [`map()`](md/Array.prototype.map.md)
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
-* [`sort()`](md/Array.prototype.sort.md)
-* [`values()`](md/Array.prototype.values.md)
+
+_________________________________________________________
+
+* [`find()`](Array.prototype.find.md)
+* [`findIndex()`](Array.prototype.findIndex.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
+* [`forEach()`](Array.prototype.forEach.md)
+* [`keys()`](Array.prototype.keys.md)
+* [`map()`](Array.prototype.map.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
+* [`sort()`](Array.prototype.sort.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

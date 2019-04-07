@@ -9,24 +9,25 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
-* [`entries()`](md/Array.prototype.entries.md)
-* [`every()`](md/Array.prototype.every.md)
-* [`filter()`](md/Array.prototype.filter.md)
-* [`find()`](md/Array.prototype.find.md)
-* [`findIndex()`](md/Array.prototype.findIndex.md)
-* [`flatMap()`](md/Array.prototype.flatMap.md)
+* [`entries()`](Array.prototype.entries.md)
+* [`every()`](Array.prototype.every.md)
+* [`filter()`](Array.prototype.filter.md)
+* [`find()`](Array.prototype.find.md)
+* [`findIndex()`](Array.prototype.findIndex.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
 
 ________________________________________________________
 
-## :mortar_board: forEach()
+## ![ico25] forEach()
 
-:warning: Этот метод не возвращает никакого значения
+![warn-25] Этот метод не возвращает никакого значения
 
 Он просто выполняет указанные действия с каждым элементом массива
 
-### :coffee: 1
+#### ![cap-30] 1
 
 Рассмотрим самый простой вариант использования метода **`forEach()`**
 
@@ -41,7 +42,7 @@ people.forEach (
 )
 ```
 
-Здесь мы итерируем массив  **people**  с помощью метода  **`forEach`**
+Здесь мы итерируем массив  **`people`**  с помощью метода  **`forEach`**
 
 Методу  **`forEach`**  в качестве аргумента  передается анонимная функция:
 
@@ -59,7 +60,7 @@ function ( currentValue, index, array ) {
 
 Обязательным является только первый аргумент
 
-Например, чтобы вывести в консоль все элементы массива  **people**, мы можем использовать метод  **`forEach`** следующим образом:
+Например, чтобы вывести в консоль все элементы массива  **`people`**, мы можем использовать метод  **`forEach`** следующим образом:
 
 ```javascript
 people.forEach (
@@ -122,9 +123,10 @@ console.log ( numbers )
 ```console
 [ 16, 8, 18, 14 ]
 ```
-т.е. исходный массив  **numbers**  был изменен
 
-Теперь получим результаты вычислений в новый массив  **res**
+т.е. исходный массив  **`numbers`**  был изменен
+
+Теперь получим результаты вычислений в новый массив  **`res`**
 
 ```javascript
 var  numbers = [ 8, 4, 9, 7 ]
@@ -140,11 +142,11 @@ console.log ( res )
 console.log ( numbers )
 ```
 
-Теперь  результаты вычислений будут помещены в массив  **res**,  а исходный  массив  **numbers**  останется неизмененным
+Теперь  результаты вычислений будут помещены в массив  **`res`**,  а исходный  массив  **`numbers`**  останется неизмененным
 
 __________________________________________________________________
 
-## Контекст вызова
+## ![ico25] Контекст вызова
 
 Метод  **`forEach`**  может принимать дополнительный аргумент - ссылку на контект вызова
 
@@ -186,7 +188,7 @@ intervals.forEach (
 
 ________________________________________________________
 
-### :coffee: 2
+#### ![cap-30] 2
 
 Предположим, мы хотим передавать ссылку на массив **`res`**, куда следует помещать результаты вычислений:
 
@@ -248,7 +250,7 @@ createNewArray ( bug, fug )
 
 ________________________________________________________
 
-### :coffee: 3
+#### [cap-30] 3
 
 Разберитесь самостоятельно, что делает следующий код:
 
@@ -264,14 +266,14 @@ Array.from ( document.styleSheets )
 
 ___________________________________________________________________
 
-* [`keys()`](md/Array.prototype.keys.md)
-* [`map()`](md/Array.prototype.map.md)
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
-* [`sort()`](md/Array.prototype.sort.md)
-* [`values()`](md/Array.prototype.values.md)
+* [`keys()`](Array.prototype.keys.md)
+* [`map()`](Array.prototype.map.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
+* [`sort()`](Array.prototype.sort.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

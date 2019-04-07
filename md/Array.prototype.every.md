@@ -9,13 +9,14 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
-* [`entries()`](md/Array.prototype.entries.md)
+* [`entries()`](Array.prototype.entries.md)
 
 ________________________________________________________________________
 
-## :mortar_board: every()
+## ![ico25] every()
 
 Осуществляет проверку массива на предмет вхождения элементов, не удовлетворяющих заданному условию
 
@@ -31,6 +32,8 @@ ________________________________________________________________________
 В этом случае метод вернет  `false`
 
 Если функция вернет `true` для всех элементов массива, метод вернет `true`
+
+![cap-30]
 
 ```javascript
 var people = [
@@ -48,26 +51,26 @@ var res = people.every ( x => x.country === "Украина" )
 console.log ( res )
 ```
 
-В этом примере массив  **people**  проверяется на наличие в нем жителей не Украины
+В этом примере массив  **`people`**  проверяется на наличие в нем жителей не Украины
 
-Переменная  **res**  будет иметь значение `false`, поскольку в массиве есть элементы,
+Переменная  **`res`**  будет иметь значение `false`, поскольку в массиве есть элементы,
 не удовлетворяющие заданному условию
 
 ________________________________________________________________________
 
-* [`filter()`](md/Array.prototype.filter.md)
-* [`find()`](md/Array.prototype.find.md)
-* [`findIndex()`](md/Array.prototype.findIndex.md)
-* [`flatMap()`](md/Array.prototype.flatMap.md)
-* [`forEach()`](md/Array.prototype.forEach.md)
-* [`keys()`](md/Array.prototype.keys.md)
-* [`map()`](md/Array.prototype.map.md)
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
-* [`sort()`](md/Array.prototype.sort.md)
-* [`values()`](md/Array.prototype.values.md)
+* [`filter()`](Array.prototype.filter.md)
+* [`find()`](Array.prototype.find.md)
+* [`findIndex()`](Array.prototype.findIndex.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
+* [`forEach()`](Array.prototype.forEach.md)
+* [`keys()`](Array.prototype.keys.md)
+* [`map()`](Array.prototype.map.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
+* [`sort()`](Array.prototype.sort.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

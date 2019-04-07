@@ -9,7 +9,8 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
 * [`entries()`](Array.prototype.entries)
 * [`every()`](Array.prototype.every)
@@ -17,7 +18,8 @@
 
 ________________________________________________________________________
 
-## :mortar_board: findIndex()
+## ![ico25] findIndex()
+
 Подобно методу `find()`, ищет в массиве первый элемент, удовлетворяющий заданному условию
 
 Однако возвращает не сам элемент, а его индекс
@@ -42,16 +44,16 @@ cards.findIndex (
 
 ___________________________________________________________________
 
-* [`flatMap()`](md/Array.prototype.flatMap.md)
-* [`forEach()`](md/Array.prototype.forEach.md)
-* [`keys()`](md/Array.prototype.keys.md)
-* [`map()`](md/Array.prototype.map.md)
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
-* [`sort()`](md/Array.prototype.sort.md)
-* [`values()`](md/Array.prototype.values.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
+* [`forEach()`](Array.prototype.forEach.md)
+* [`keys()`](Array.prototype.keys.md)
+* [`map()`](Array.prototype.map.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
+* [`sort()`](Array.prototype.sort.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

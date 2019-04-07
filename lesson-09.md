@@ -1,3 +1,7 @@
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+
 #### Занятие 9
 
 * [Итерирующие методы массивов](md/arrayIterators-principle.md)
@@ -20,11 +24,11 @@
     * [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 _______________________________________________________________________
 
-* [:coffee: Примеры](md/lesson-06-samples.md)
+* [![cap-20] Примеры](md/Array.prototype-samples.md)
 * [Тестирование производительности](md/JS-heap-memory-allocation.md)
 * [SHA](md/SHA.md)
-* [:briefcase: Homework](md/hw-09.md)
+* [![hw-20] Homework](md/hw-09.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

@@ -9,20 +9,21 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Итерирующие методы массивов
+# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/>
+[Итерирующие методы массивов](../lesson-09.md)
 
-* [`entries()`](md/Array.prototype.entries.md)
-* [`every()`](md/Array.prototype.every.md)
-* [`filter()`](md/Array.prototype.filter.md)
-* [`find()`](md/Array.prototype.find.md)
-* [`findIndex()`](md/Array.prototype.findIndex.md)
-* [`flatMap()`](md/Array.prototype.flatMap.md)
-* [`forEach()`](md/Array.prototype.forEach.md)
-* [`keys()`](md/Array.prototype.keys.md)
+* [`entries()`](Array.prototype.entries.md)
+* [`every()`](Array.prototype.every.md)
+* [`filter()`](Array.prototype.filter.md)
+* [`find()`](Array.prototype.find.md)
+* [`findIndex()`](Array.prototype.findIndex.md)
+* [`flatMap()`](Array.prototype.flatMap.md)
+* [`forEach()`](Array.prototype.forEach.md)
+* [`keys()`](Array.prototype.keys.md)
 
 __________________________________________________________________________
 
-## :mortar_board: `map()`
+## ![ico25] `map()`
 
 Этот метод вызвращает новый массив, полученный из элементов исходного массива  после применения к каждому из них  функции,
 переданной методу в качестве аргумента
@@ -31,6 +32,8 @@ __________________________________________________________________________
 ( обязательно должен присутствовать оператор  `return` )
 
 Значение, возвращаемое функцией на каждой итерации, будет помещаться в результирующий массив
+
+![cap-30]
 
 ```javascript
 var first = [ 8, 4, 9, 7 ]
@@ -44,7 +47,7 @@ var res = first.map (
 console.log ( res )
 ```
 
-В этом примере в массив  **res**  попадут все удвоенные значения элементов исходного массива  **first**
+В этом примере в массив  **`res`**  попадут все удвоенные значения элементов исходного массива  **`first`**
 
 Так же, как и в методе **`forEach()`**,  в  методе  **`map()`**  передаваемая методу в качестве аргумента  функция может принимать три аргумента
 
@@ -57,18 +60,18 @@ function ( currentValue, index, arr ) {
 
 Второй  и третий  аргументы необязательны, и имеют то же содержание, что и в методе **`forEach()`**
 
-* Аргумент  **arr**  будет содержать ссылку на исходный массив, к которому применяется метод
-* Аргумент  **index**  - это счетчик итераций, или индекс текущего элемента итерируемого массива
+* Аргумент  **`arr`**  будет содержать ссылку на исходный массив, к которому применяется метод
+* Аргумент  **`index`**  - это счетчик итераций, или индекс текущего элемента итерируемого массива
 
 
 ___________________________________________________________________
 
-* [`reduce()`](md/Array.prototype.reduce.md)
-* [`reduceRight()`](md/Array.prototype.reduceRight.md)
-* [`some()`](md/Array.prototype.some.md)
-* [`sort()`](md/Array.prototype.sort.md)
-* [`values()`](md/Array.prototype.values.md)
+* [`reduce()`](Array.prototype.reduce.md)
+* [`reduceRight()`](Array.prototype.reduceRight.md)
+* [`some()`](Array.prototype.some.md)
+* [`sort()`](Array.prototype.sort.md)
+* [`values()`](Array.prototype.values.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]
