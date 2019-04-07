@@ -28,7 +28,6 @@ Every time you need to start new lesson copy link to this lesson and paste it to
 * [lesson 17](lessons/lesson-17.md)
 * [lesson 18](lessons/lesson-18.md)
 
+_________________________________________________________________
 
-
-
-![](https://github.com/garevna/js-course/blob/master/images/a-level-ico.png?raw=true)
+![footer]
