@@ -19,7 +19,7 @@
 const websocket = new WebSocket( "ws://echo.websocket.org" )
 ```
 
-При вызове конструктора **_WebSocket_** необходимо передать ему обязательный аргумент 
+При вызове конструктора **_WebSocket_** необходимо передать ему обязательный аргумент
 
 ```
 протокол://домен:порт
@@ -60,3 +60,7 @@ DISCONNECTED
 ***
 | [:rewind:](websocket#samples) |
 |-|
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

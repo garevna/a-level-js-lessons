@@ -67,3 +67,7 @@ console.log ( str )
 ***
 
 ### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#while)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

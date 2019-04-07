@@ -59,3 +59,7 @@ Upgrade: websocket
 
 | [ :briefcase: :one:](websocket-1) | [ :briefcase: :two:](websocket-2) | [ :briefcase: :three:](websocket-3) |
 |-|-|-|
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

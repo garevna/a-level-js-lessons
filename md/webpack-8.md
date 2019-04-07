@@ -14,7 +14,7 @@
 в своих стилях<br/>
 Установим шрифт  '_Hanalei Fill_'   для элемента  `body`<br/>
 и шрифт  _Roboto_  для  `.sampleClass`
-*** 
+***
 ###### [Дополнительно](google-fonts-webpack-plugin) ( для самостоятельного изучения ):
 ***
 ###### :pencil: main.css
@@ -69,3 +69,7 @@ body {
 <i class="fas fa-ambulance"></i>
 ```
 Обновите страницу и вы увидите добавленную иконку
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

@@ -1,3 +1,13 @@
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+
 | [:rewind:](Class#mortar_board-static) |
 |-|
 
@@ -47,8 +57,8 @@ window.onresize = Canvas.resizeCanvas.bind ( pict.canvas )
 ```
 При вызове статического метода  **_drawLine_**  первым аргументом ему передается контекст вызова
 
-> ✍ Примечание: 
- 
+> ✍ Примечание:
+
 > В данном случае объявление метода  drawLine  как статического <br/>
 > создает ненужные сложности с передачей контекста, <br/>
 > и гораздо проще объявить его так:
@@ -63,3 +73,7 @@ drawLine ( points ) {
 
 | [:rewind:](Class#mortar_board-static) |
 |-|
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

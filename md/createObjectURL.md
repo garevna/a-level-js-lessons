@@ -1,3 +1,8 @@
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+
 | [:rewind:](fetch) |
 |-|
 
@@ -35,3 +40,7 @@ blob:null/3163e503-d619-4de0-922a-36990f3fdab7
 
 | [:rewind:](fetch) | [:coffee:](https://codepen.io/garevna/pen/odZPbx) |
 |-|-|
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

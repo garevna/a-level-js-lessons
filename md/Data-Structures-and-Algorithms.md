@@ -1,3 +1,8 @@
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+
 * Структуры данных - это способы организации и хранения данных
 * Алгоритм — последовательность действий ( операций )
 
@@ -24,7 +29,7 @@
 
 У каждого дерева есть корень ( root ) и узлы ( node )
 
-Двоичное дерево: 
+Двоичное дерево:
 
      - каждый узел имеет не более двух дочерних узлов
      - левый дочерний узел имеет значение, меньше чем значение родительского узла
@@ -40,8 +45,8 @@ var Collection = function ( name, createItem ) {
         var counter = 0
         return function ( operationType ) {
             return Math.abs ( operationType ) !== 1 ?
-                   counter : counter += operationType 
-        } 
+                   counter : counter += operationType
+        }
     })()
     this.createItem = typeof createItem === "function" ?
                       createItem : null
@@ -68,7 +73,7 @@ var tags = new Collection ( "elements", function ( params ) {
     if ( params.className )
         elem.id = params.className
     elem.innerHTML = params.innerHTML || ""
-        
+
     if ( params.styles && typeof params.styles === "object" ) {
         for ( var x in params.styles ) {
             console.log ( x )
@@ -78,3 +83,7 @@ var tags = new Collection ( "elements", function ( params ) {
     return elem
 } )
 ```
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

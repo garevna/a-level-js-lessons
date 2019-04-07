@@ -164,7 +164,7 @@ import css from '../css/main.css';
 
 promise.then ( response =>
     document.querySelector ( '.sampleClass' )
-        .innerText += response 
+        .innerText += response
 )
 
 document.body.appendChild (
@@ -190,3 +190,7 @@ slider.src = [
     "http://papers.co/wallpaper/papers.co-nx17-sunset-river-lake-beautiful-nature-28-wallpaper.jpg"
 ]
 ```
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

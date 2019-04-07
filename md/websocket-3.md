@@ -9,7 +9,7 @@
 
 Теперь серверный скрипт будет немного сложнее, поэтому углубимся в **`Node.js`**
 
-<img src="https://github.com/garevna/js-course/blob/master/images/node.png?raw=true" height="50"/> 
+<img src="https://github.com/garevna/js-course/blob/master/images/node.png?raw=true" height="50"/>
 
 Первое, с чем мы познакомимся - это [**_`File System`_**](https://nodejs.org/api/fs.html) ( **`fs`** ) `Node.js`
 
@@ -432,3 +432,7 @@ $ node start.js
 Мы видим на страницах открытых вкладок все сообщения, поступающие из разных вкладок
 
 :baseball: играйтесь в свое удовольствие :smile_cat:
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

@@ -227,3 +227,7 @@ module.exports = {
 ###### [:link: file-loader](https://www.npmjs.com/package/file-loader)
 ###### [:link: url-loader](http://docs.w3cub.com/webpack/loaders/url-loader/)
 ###### [:link: loaders](https://webpack.js.org/loaders/)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

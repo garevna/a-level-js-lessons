@@ -32,7 +32,7 @@ import css from '../css/main.css'
 
 А теперь запустим сборку проекта
 
-:no_entry_sign: Вебпак выдаст нам ошибку: 
+:no_entry_sign: Вебпак выдаст нам ошибку:
 
 он умеет собирать модули js, а вот для загрузки файлов других форматов нужны специальные загрузчики
 
@@ -84,9 +84,9 @@ import css from '../css/main.css'
 </table>
 
 ### :pushpin: path
-Для разрешения конфликтов маршрутов ( путей ) к различным файлам сборки 
+Для разрешения конфликтов маршрутов ( путей ) к различным файлам сборки
 
-первым делом в файле кофигурации webpack ( webpack.config.js ) 
+первым делом в файле кофигурации webpack ( webpack.config.js )
 
 подключайте встроенный Node.js-модуль `path`:
 ```javascript
@@ -212,4 +212,8 @@ npm install css-loader style-loader --save-dev
 ```css
 img { margin: 40px; border: dotted 2px yellow; }
 ```
-перезагрузите страницу, и вы увидите изменения 
+перезагрузите страницу, и вы увидите изменения
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

@@ -1,3 +1,13 @@
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+
 ## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы массивов
 
 * [`pop()`](Array-methods-pop.md)
@@ -8,7 +18,7 @@
 
 _______________________________________________________________________________________
 
-### :memo: slice ()
+### ![ico25] slice ()
 
 Метод создает новый массив, содержащий фрагмент исходного массива
 
@@ -21,7 +31,7 @@ _Аргументы_:
 * Первый ( число ) - индекс элемента исходного массива, с которого начинается фрагмент
 * Второй  ( число ) - индекс элемента исходного массива, до которого продолжается фрагмент
 
-:coffee: ❶
+#### ![cap-30] 1
 
 ```javascript
 var drinks = [ "кофе", "чай", "сок", "вода", "молоко" ]
@@ -30,7 +40,7 @@ var newDrinks = drinks.slice ( 1, 2 )
 //  Значение newDrinks:  [ "чай" ]
 ```
 
-:coffee: ❷
+#### ![cap-30] 2
 
 ```javascript
 var drinks = [ "кофе", "чай", "сок", "вода", "молоко" ]
@@ -39,7 +49,7 @@ var newDrinks = drinks.slice ( 1, 4 )
 //  Значение newDrinks:  [ "чай", "сок", "вода" ]
 ```
 
-:coffee: ❸
+#### ![cap-30] 3
 
 ```javascript
 var drinks = [ "кофе", "чай", "сок", "вода", "молоко" ]
@@ -60,4 +70,8 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________
 
-### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
+### [![hw-30] Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

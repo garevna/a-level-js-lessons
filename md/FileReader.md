@@ -1,24 +1,37 @@
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> FileReader
 
 ###### Конструктор
 
 Создает экземпляр объекта, который позволяет веб-приложению асинхронно читать содержимое файлов ( объекты класса **_File_** ) на компьютере пользователя или объекты класса **_Blob_**
 
-:warning: `Не может читать объекты класса` **_`ReadableStream`_**
+![warn-25] `Не может читать объекты класса` **_`ReadableStream`_**
 
 ```javascript
 var reader = new FileReader ()
 ```
-### :clipboard: Методы
+
+_________________________________________________________________
+
+### ![ico25] Методы
+
 ```javascript
 ƒ readAsArrayBuffer()
 ƒ readAsBinaryString()
 ƒ readAsDataURL()
 ƒ readAsText()
 ```
-### :clipboard: Свойства
+
+_________________________________________________________
+
+### ![ico25] Свойства
 
 ###### ✅ error
+
 ```
 объект DOMError со свойствами name и message
 ```
@@ -34,7 +47,11 @@ var reader = new FileReader ()
 ✋ значение свойства result определено только после завершения операции чтения
 ✋ формат данных зависит от способа, с помощью которого процесс был вызван
 ```
-###### ⏰ `Обработка событий`
+
+_________________________________________________________
+
+###### ![ico25] `Обработка событий`
+
 ```javascript
 ✅ onabort
 ✅ onerror
@@ -44,7 +61,7 @@ var reader = new FileReader ()
 ✅ onprogress
 ```
 
-:coffee: :one:
+#### ![cap-30] 1
 
 ✍ Разберите работу кода в Chrome DevTools:
 ```javascript
@@ -68,7 +85,10 @@ var fileReader = new FileReader ()
 ```javascript
 picture.src = URL.createObjectURL( selected )
 ```
-:coffee: :two:
+
+_________________________________________________________
+
+#### ![cap-30] 2
 
 ✍ Разберите работу кода в Chrome DevTools:
 ```javascript
@@ -119,7 +139,10 @@ var demo = document.body.appendChild (
 )
 var fileReader = new FileReader ()
 ```
-:coffee: :three:
+
+_________________________________________________________
+
+#### ![cap-30] 3
 
 ✍ Разберите работу кода в Chrome DevTools:
 ```javascript
@@ -152,3 +175,7 @@ selector.onchange = function ( event ) {
     }
 }
 ```
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

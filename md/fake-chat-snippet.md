@@ -1,3 +1,8 @@
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+
 |[:rewind:](Fake-chat)|
 |-|
 
@@ -13,7 +18,7 @@ let getData = function ( ref ) {
     return fetch ( 'http://localhost:3000/' + ref )
         .then ( response => response.json () )
 }
-let appElem = ( tagName, container ) => 
+let appElem = ( tagName, container ) =>
     ( container ? container : document.body )
         .appendChild ( document.createElement ( tagName ) )
 
@@ -48,16 +53,16 @@ let buildChat = function () {
     `
 }
 let updateChat = async function () {
-    
+
     let updated = await getData ( "lastUpdate" )
 
     if ( lastUpdate &&
-         updated.data === lastUpdate.data && 
+         updated.data === lastUpdate.data &&
          updated.time === lastUpdate.time )
         return
 
     await Promise.all ( [
-        getData ( "users" ).then ( x => users = x ) , 
+        getData ( "users" ).then ( x => users = x ) ,
         getData ( "posts" ).then ( x => posts = x )
     ] )
     if ( !currentUser ) {
@@ -135,3 +140,7 @@ chatInput.onchange = function ( event ) {
 
 |[:rewind:](Fake-chat)|
 |-|
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)

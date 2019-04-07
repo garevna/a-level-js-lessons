@@ -50,3 +50,7 @@ XSS ( Cross-Site Scripting — «межсайтовый скриптинг» ) �
 ***
 [:link: securitylab](https://www.securitylab.ru/analytics/432835.php)
 [:link: websitesecurity](https://www.acunetix.com/websitesecurity/cross-site-scripting/)
+
+_________________________________________________________________________
+
+![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
