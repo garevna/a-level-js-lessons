@@ -1,3 +1,4 @@
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -72,3 +73,7 @@ API работают по принципу «запрос» — «ответ»
 :clipboard: **_endpoint_** — это один из концов канала коммуникации
 
 **_endpoint_** указывают, к каким ресурсам можно получить доступ с помощью API
+
+_________________________________________________________
+
+![footer]

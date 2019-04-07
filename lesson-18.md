@@ -7,7 +7,7 @@
 * [![hw-20] Упражнение 1](md/webpack-1.md)
 * [ES6 модули](md/ES6-modules.md)
     * [**`ES10`** import](md/ES-modules-ES10.md)
-* [:briefcase: Упражнение 2](md/webpack-2.md)
+* [![hw-20] Упражнение 2](md/webpack-2.md)
 * [`--mode` | `--watch`](md/webpack-options.md)
 * [![hw-20] Упражнение 3](md/webpack-3.md)
 * [![hw-20] Упражнение 4](md/webpack-4.md)

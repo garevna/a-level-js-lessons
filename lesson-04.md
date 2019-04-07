@@ -1,3 +1,7 @@
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+
 #### Занятие 4
 
 * [Нативные и host-объекты](md/native-and-host-objects.md)
@@ -7,9 +11,9 @@
 * [Модель наследования<sup>:small_red_triangle:</sup>](md/inheritance-model.md)
 * [Публичные и приватные свойства](md/public-and-private-properties.md)
 * [Оператор in](md/operator-in.md)
-* [:coffee: 1](md/inheritance-model-sample-1.md)
-* [:briefcase: Homework](md/hw-04.md)
+* [![cap-30]](md/inheritance-model-sample-1.md)
+* [![hw-20] Homework](md/hw-04.md)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

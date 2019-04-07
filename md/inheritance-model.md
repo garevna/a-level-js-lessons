@@ -1,3 +1,18 @@
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[question]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/question-25.png
+[attention]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-25.png
+[wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
+
+
 <a name="top"></a>
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Модель наследования JS
 
@@ -13,23 +28,23 @@
 
 <table><tr><td>
   <table><tr><td><img src="https://github.com/garevna/js-course/blob/master/images/lessons/smoke-monkey.gif?raw=true" width="200"/></td><td><h3>
-        :bangbang: Уважаемые дамы и господа<br/>
+        Уважаемые дамы и господа<br/>
         Курение вредит вашему здоровью,<br/>
         а курение конкретно в этом подъезде может вообще резко подорвать его
   </h3></td></tr></table>
 </td></tr></table>
 
-| :coffee: Класс и объект |
+| ![cap-30] Класс и объект |
 |:-|
 | <br/>Чашка - это абстракция, но чашка, из которой ты в данный момент пьешь чай - это объект, т.е. конкретное воплощение абстракции "чашка"<br/><br/>Для создания конкретного экземпляра класса "чашка" в классической модели используется ключевое слово **`new`**<p><br/></p> |
 
-| :coffee: Наследование в классической модели |
+| ![cap-30] Наследование в классической модели |
 |:-|
 | <br/>Абстракция "чашка" вложена в другую абстракцию - "емкость", поскольку емкостью также является кастрюля, и цистерна, и колба<br/><br/>Таким образом, класс "чашка" наследует от класса "емкость"<p><br/></p> |
 
 Так вот:
 
-:heavy_exclamation_mark: **в JS наследование происходит от объекта, а не класса**,
+![attention] **в JS наследование происходит от объекта, а не класса**,
 
 **т.е. от конкретного воплощения, а не от абстракции**
 
@@ -37,11 +52,11 @@
 
 _____________________________________________________________
 
-## :mortar_board: prototype
+## ![ico25] prototype
 
 Для создания объекта в JS нам достаточно сделать следующее:
 
-#### :coffee: 1
+#### ![cap-30] 1
 
 ```javascript
 var sample = {
@@ -132,9 +147,9 @@ sample.hasOwnProperty( "name" )   // true
 
 О-па, мы получили `true`, т.е. метод работает!
 
-Значит, наследство благополучно получено :smile_cat:
+Значит, наследство благополучно получено ![wink-20]
 
-:interrobang: зачем нам вообще нужно ключевое слово **`new`** ?
+![question] зачем нам вообще нужно ключевое слово **`new`** ?
 
 Итак, сделаем выводы:
 
@@ -144,7 +159,7 @@ sample.hasOwnProperty( "name" )   // true
 
 _________________________________________________________________
 
-## :mortar_board: constructor
+## ![ico25] constructor
 
 Теперь обратим внимание на первое, что мы видим в объекте [**`prototype`**](#prototype) и в свойстве [**`__proto__`**](#proto) экземпляра
 
@@ -171,7 +186,7 @@ _________________________________________________________________
 
 ___________________________________________________________________
 
-#### :coffee: 2
+#### ![cap-30] 2
 
 Проделаем следующий "финт":
 
@@ -270,7 +285,7 @@ I'm the instance of Sigma:  true
 
 _________________________________________________________________________
 
-## :mortar_board: this
+## ![ico25] this
 
 Итак, мы уже поняли, что любая функция в JS является конструктором по своей сути, поскольку имеет контейнер для "наследства" - свойство **`prototype`**
 
@@ -333,11 +348,11 @@ obj.say()
 
 То есть каждый наследник может попользоваться, и в момент, когда он пользуется, этот метод принадлежит ему
 
-ферштейн? :wink:
+ферштейн? ![wink-20]
 
 __________________________________________________________________________
 
-## :mortar_board: Цепочка прототипов
+## ![ico25] Цепочка прототипов
 
 Обратите внимание, что в предыдущем примере мы создали объект **`obj`** с двумя вложенными свойствами **_`__proto__`_**
 
@@ -371,11 +386,7 @@ __________________________________________________________________________
 
 _________________________________________________________________________________
 
-<a name="Object"></a>
-## :mortar_board: Конструктор `Object`
-
-| [:arrow_heading_up:](#top) | <img width="800"/> | [:arrow_heading_down:](#static) |
-|-|-|-|
+## ![ico25] Конструктор `Object`
 
 **`Object`** - это "Адам" всех объектов в JS
 
@@ -405,7 +416,8 @@ obj.__proto__ = null
 _________________________________________________________________________________________
 
 
-### :mortar_board: [Статические свойства `Object`](Object-static-props)
+### ![ico25] [Статические свойства `Object`](Object-static-props)
+
 ###### собственные свойства конструктора `Object`
 
 Свойства и методы объекта  **Object**, которые не находятся в свойстве  **`prototype`**, не наследуются экземплярами, и могут быть вызваны только как свойства и методы объекта  **Object**:
@@ -443,7 +455,7 @@ ________________________________________________________________________________
 
 Поскольку они не передаются экземплярам, их называют **_статическими_**
 
-#### :coffee: 3
+#### ![cap-30] 3
 
 Воспользуемся методом **`Object.create`** для создания нового экземпляра объекта:
 
@@ -472,7 +484,7 @@ sample.name = "circle"
 
 _________________________________________
 
-#### :coffee: 4
+#### ![cap-30] 4
 
 Воспользуемся методом **`Object.setPrototypeOf()`**:
 
@@ -511,11 +523,11 @@ test.draw = function () {
 
 Правда, при этом у нас нет имитации классов ( в цепочке прототипов отсутствует свойство **`constructor`** ) и оператор **`instanceof`** становится бесполезен
 
-Зато все по-честному :wink:
+Зато все по-честному ![wink-30]
 
 _______________________________________________________________________
 
-### :mortar_board: `Object`._`__proto__`_
+### ![ico25] `Object`._`__proto__`_
 
 Выведем в консоль свойство **_`__proto__`_** конструктора **`Object`**
 
@@ -570,7 +582,7 @@ console.dir ( Object.__proto__.constructor.name )
 
 ( свойство **`Function.prototype.__proto__`** является ссылкой на **`Object.prototype`** )
 
-Вот такие "сиамские близнецы" :wink:
+Вот такие "сиамские близнецы" ![wink-30]
 
 | | ссылка на |
 |-|-|
@@ -579,9 +591,13 @@ console.dir ( Object.__proto__.constructor.name )
 
 _______________________________________________________________________________________________
 
-[:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSf-i0cr7AEXzSJrggqS1AgZz-OBW5ES-l_ntO1R4Q7XZqZaEw/viewform)
+[![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSf-i0cr7AEXzSJrggqS1AgZz-OBW5ES-l_ntO1R4Q7XZqZaEw/viewform)
 
 _______________________________________________________________________________________________
 
-[:link: MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects)
-[:link: MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+[![link-25] MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects)
+[![link-25] MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+
+_________________________________________________________
+
+![footer]

@@ -1,3 +1,4 @@
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -11,6 +12,10 @@
 [file-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-25.png
 [file-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-30.png
 [file-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-40.png
+[bash-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-20.png
+[bash-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-25.png
+[bash-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-30.png
+[bash-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-40.png
 
 
 # <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> webpack
@@ -27,21 +32,27 @@ Webpack создает граф зависимостей приложения
 
 _________________________________________________________
 
-## <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" width="50"/> Установка
+## ![bash-30] Установка
 
-Пакет  **webpack**  устанавливается с помощью **`npm`**
+Пакет  **`webpack`**  устанавливается с помощью **`npm`**
 
-###### Команда
+Консольная команда:
 
-    npm install -g webpack webpack-cli
+```
+npm install -g webpack webpack-cli
+```
 
-###### установит  _webpack_ и  _webpack-cli_  глобально
+установит  _`webpack`_ и  _`webpack-cli`_  глобально
 
-###### Сокращение для команды `install ( i )`
+Сокращение для команды `install`: `i`
 
-    npm i webpack webpack-cli --save-dev
+Консольная команда:
 
-###### установит  _webpack_ и  _webpack-cli_  в текущей папке
+```
+npm i webpack webpack-cli --save-dev
+```
+
+установит  _`webpack`_ и  _`webpack-cli`_  в текущей папке
 
 _________________________________________________________
 
@@ -73,13 +84,13 @@ _________________________________________________________
 
 Если вы хотите использовать различные файлы конфигурации в зависимости от ситуации, это можно настроить с помощью опции `--config`
 
-<img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" width="22"/> в командной строке:
+![bash-25] в командной строке:
 
 ```
 webpack --config prod.config.js
 ```
 
-![file-30] в файле package.json:
+![file-30] в файле `package.json`:
 
 ```javascript
 "scripts": {
@@ -89,4 +100,4 @@ webpack --config prod.config.js
 
 ________________________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]
