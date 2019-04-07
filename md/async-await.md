@@ -1,4 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -9,7 +10,7 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> async | await
+# ![me30] async | await
 
 ###### ES7
 
@@ -55,32 +56,42 @@ console.dir ( test )
         ► set caller: ƒ ()
         ► __proto__: Object
 ```
-:warning: **AsyncFunction** не является глобальным объектом
+
+![warn-25] **AsyncFunction** не является глобальным объектом
 
 Попытка отратиться к объекту **AsyncFunction** вызовет исключение:
+
 ```javascript
 test instanceof AsyncFunction
 ```
-###### :no_entry_sign:` Uncaught ReferenceError: AsyncFunction is not defined`
+
+###### ![err-20] ` Uncaught ReferenceError: AsyncFunction is not defined`
 
 поэтому получить ссылку на нее можно, например, так:
+
 ```javascript
 var AsyncFunctionConstructor = test.__proto__.constructor
 ```
+
 или:
+
 ```javascript
 var AsyncFunction = ( async function () {} ).__proto__.constructor
 ```
+
 Теперь исключения не будет:
+
 ```javascript
 test instanceof AsyncFunction  // true
 ```
-:warning: Асинхронная функция всегда возвращает промис
 
-> Поэтому нельзя конструктор объявить как асинхронную функцию - конструктор должен возвращать экземпляр объекта, а не обещание
+![warn-25] Асинхронная функция всегда возвращает промис
 
-***
-### :mortar_board: Принцип работы
+<sup>Поэтому нельзя конструктор объявить как асинхронную функцию - конструктор должен возвращать экземпляр объекта, а не обещание</sup>
+
+_________________________________________________________
+
+### ![ico25] Принцип работы
 
 Асинхронная функция является промисом, который обещает, что все асинхронные операции внутри него будут выполнены в строго заданном порядке, но когда это произойдет - неизвестно, поскольку каждая из операций будет выполнятся неизвестно сколько времени
 
@@ -96,19 +107,20 @@ test instanceof AsyncFunction  // true
 
 а ключевое слово **`await`** запускает функцию обратного вызова в нужное время
 
-:warning: Если бы сама асинхронная функция не была промисом, при ее вызове мы получили бы блокирующую операцию, что недопустимо
+![warn25] Если бы сама асинхронная функция не была промисом, при ее вызове мы получили бы блокирующую операцию, что недопустимо
 
 Итак, асинхронная функция является "оберткой" для нескольких асинхронных операций, которые строго упорядочиваются, т.е. их коллбэки вызываются в заданной последовательности
 
-:warning: Ключевое слово  **`await`**  можно использовать только внутри асинхронных функций<br/>
+![warn25] Ключевое слово  **`await`**  можно использовать только внутри асинхронных функций<br/>
 В противном случае будет сгенерировано исключение
+
 ```console
 ⛔️ Uncaught SyntaxError: await is only valid in async function
 ```
 
-***
+_________________________________________________________________
 
-:coffee: :one:
+#### ![cap-30] 1
 
 ###### Асинхронные процессы
 
@@ -183,9 +195,9 @@ test()
 
 Как видно из примера, код асинхронной функции проще, чем цепочка промисов
 
-***
+_________________________________________________________________
 
-:coffee: :two:
+#### ![cap-30] 2
 
 ```javascript
 async function getUsersData ( userName ) {
@@ -210,9 +222,9 @@ getUsersData( 'josh' )
     .then ( events => console.log ( events ) )
 ```
 
-***
+_________________________________________________________
 
-:coffee: :three:
+#### ![cap-30] 3
 
 Синхронизация асинхронных процессов приводит к увеличению времени выполнения
 
@@ -238,7 +250,8 @@ var getPosts = () =>
 
 Каждый вызов длится 1 секунду
 
-Если мы будем использовать асинхронную функцию для последовательного вызова **getNames** и **getPosts**, то суммарная продолжительность выполнения этих двух асинхронных операций составит не менее 2 сек
+Если мы будем использовать асинхронную функцию для последовательного вызова **`getNames`** и **`getPosts`**,
+то суммарная продолжительность выполнения этих двух асинхронных операций составит не менее 2 сек
 
 ```javascript
 async function getData () {
@@ -251,7 +264,9 @@ async function getData () {
 
 getData ()
 ```
+
 ###### Результат в консоли
+
 ```console
 
 Names | Posts
@@ -282,6 +297,7 @@ function getData () {
 ```
 
 ###### Результат в консоли
+
 ```console
 
 Names | Posts
@@ -289,9 +305,9 @@ Names | Posts
 time: 1001.474365234375ms
 ```
 
-***
+_________________________________________________________
 
-:coffee: :four:
+#### ![cap-30] 4
 
 ```javascript
 function getData ( typ ) {
@@ -316,34 +332,38 @@ function getAllData () {
 
 getAllData ( "figures", "colors", "diameters" )
 ```
-Функция  **getData ()**  возвращает промис
+
+Функция  **`getData ()`**  возвращает промис
 
 Промис будет разрешен через 1 сек
 
-Функция  **getAllData ()** формирует  массив промисов  **promises** и запускает сразу все асинхронные процессы с помощью метода  **_Promise.all ()_**
+Функция  **`getAllData ()`** формирует  массив промисов  **`promises`**
+
+и запускает сразу все асинхронные процессы с помощью метода  **_`Promise.all()`_**
 
 Что происходит в этом случае:
 
 Мы не выстраиваем очередь, а запускаем сразу все асинхронные процессы параллельно
 
-Однако упорядоченность возвращаемых данных контролирует **_Promise.all ()_**
+Однако упорядоченность возвращаемых данных контролирует **_`Promise.all()`_**
 
 В возвращаемом массиве данные будут упорядочены в той последовательности, в которой упорядочены промисы в массиве промисов
 
-В этом случае **_Promise.all ()_** является удобной альтернативой асинхронной функции
+В этом случае **_`Promise.all()`_** является удобной альтернативой асинхронной функции
 
 Общая продолжительность операции не будет суммой продолжительности всех асинхронных процессов
 
 В этом примере вместо 3 секунд, которые выполнялся бы код в случае последовательной обработки запросов, общая продолжительность составила 1 сек
 
-***
+_________________________________________________________
 
-| [:coffee: :five:](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview) | `Пример в песочнице` |
+| [![cap-30] **5**](https://plnkr.co/edit/jsH8XKmc0B6g4q8iPZBf?p=preview) | `Пример в песочнице` |
 |-|-|
 
-***
-### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#async)
+_________________________________________________________
+
+### [![hw-30] Тесты](https://garevna.github.io/js-quiz/#async)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

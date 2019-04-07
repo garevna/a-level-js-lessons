@@ -1,4 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -9,13 +10,13 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Стрелочные функции
+# ![me30] Стрелочные функции
 
 ###### ES6
 
-## :mortar_board: Синтаксис
+## ![ico25] Синтаксис
 
-###### :no_entry: **_function_**
+###### ![err-20] **_function_**
 
 В сигнатуре стрелочной функции нет слова **_function_**
 
@@ -23,48 +24,48 @@
 ( параметры ) => { тело функции }
 ```
 
-:coffee:
+![cap-30]
 
 ```javascript
 var res = ( x, y ) => x * y
 res ( 2, 5 )
 ```
 
-:white_square_button: Если тело функции состоит из одной операции, фигурные скобки можно опустить
+![ico20] Если тело функции состоит из одной операции, фигурные скобки можно опустить
 
 ```javascript
 ( name = "user" ) => console.info ( "Hi, " + name )
 ```
 
-:white_square_button: Если у функции всего один формальный параметр, круглые скобки можно опустить
+![ico20] Если у функции всего один формальный параметр, круглые скобки можно опустить
 
 ```javascript
 name => console.info ( "Hi, " + name )
 ```
 
-:white_square_button: При отсутствии формальных параметров круглые скобки обязательны
+![ico20] При отсутствии формальных параметров круглые скобки обязательны
 
 ```javascript
 () => console.info ( "Hi, user"  )
 ```
 
-:white_square_button: Если тело функции состоит из одного выражения, значение которого возвращает функция, оператор **`return`** не используется
+![ico20] Если тело функции состоит из одного выражения, значение которого возвращает функция, оператор **`return`** не используется
 
-###### :coffee: обычная функция
+#### ![cap-30] обычная функция
 
 ```javascript
 var res = function ( x, y ) { return x * y }
 ```
 
-###### :coffee: стрелочная функция
+#### ![cap-30] стрелочная функция
 
 ```javascript
 var res = ( x, y ) => x * y
 ```
 
-:white_square_button: Операторы ветвления кода ( кроме тернарного оператора ) и операторы цикла нужно заключать в фигурные скобки
+![ico20] Операторы ветвления кода ( кроме тернарного оператора ) и операторы цикла нужно заключать в фигурные скобки
 
-###### :coffee: оператор `for`
+#### ![cap-30] оператор `for`
 
 ```javascript
 () => {
@@ -73,7 +74,7 @@ var res = ( x, y ) => x * y
 }
 ```
 
-###### :coffee: оператор `switch`
+#### ![cap-30] оператор `switch`
 
 ```javascript
 var answerArrow = question => {
@@ -90,7 +91,7 @@ var answerArrow = question => {
 }
 ```
 
-###### :coffee: тернарный оператор
+#### ![cap-30] тернарный оператор
 
 ```javascript
 var answerArrow = question =>  
@@ -102,13 +103,13 @@ var answerArrow = question =>
 
 ____________________________________________________________________
 
-## :mortar_board: Три главные особенности стрелочных функций
+## ![ico-25] Три главные особенности стрелочных функций
 
-### :no_entry: prototype
+### ![err-20] prototype
 
 У стрелочных функций нет объекта  **`prototype`**
 
-:warning: Поэтому стрелочные функции не могут быть конструктором
+![warn-20] Поэтому стрелочные функции не могут быть конструктором
 
 ```javascript
 var arrowFunc = () => {}
@@ -141,7 +142,7 @@ console.dir ( usualFunc )
   ► __proto__: ƒ ()
 ```
 
-:warning: При попытке вызвать стрелочную функцию с ключевым словом **`new`**
+![warn-20] При попытке вызвать стрелочную функцию с ключевым словом **`new`**
 
 ```javascript
 var obj = new arrowFunc()
@@ -155,7 +156,7 @@ var obj = new arrowFunc()
 
 ______________________________________________________
 
-### :no_entry: arguments
+### ![err-20] arguments
 
 У стрелочных функций нет объекта  **`arguments`**
 
@@ -163,9 +164,10 @@ ______________________________________________________
 
 ![](https://lh6.googleusercontent.com/yv3tm03wlxRLj8N8La3rjpv-ptedTRsM-jZY25YaNpDycba4XNeSic-lpaCva6g7ftFz1Vu8MmkIk4zLLXfgsFNu10Tin-S88UrOstrwdIcPvvLyq8avaEjO29Fi2q5q3nKkrETuWY4qxks)
 
-:point_up: Если стрелочная функция объявлена внутри обычной функции, то переменные контекста родительской функции будут доступны для стрелочной функции ( [**`цепочка областей видимости`**](function-object#scope) ), поэтому внутри нее будет доступен объект `arguments` родительской функции
+![ico20] Если стрелочная функция объявлена внутри обычной функции, то переменные контекста родительской функции будут доступны для стрелочной функции ( [**`цепочка областей видимости`**](function-object#scope) ), поэтому внутри нее будет доступен объект `arguments` родительской функции
 
-:coffee:
+![cap-30]
+
 ```javascript
 function testArguments () {
     var arrowFunc = () =>  console.log ( arguments )
@@ -173,11 +175,12 @@ function testArguments () {
 }
 testArguments ( 5, false )
 ```
+
 В результате работы кода в консоль будет выведен объект `arguments` функции **_testArguments_**
 
 ______________________________________________________
 
-### :mortar_board: Контекст вызова
+### ![ico-25] Контекст вызова
 
 У стрелочных функций контекст вызова всегда будет контекстом, в котором функция была объявлена
 
@@ -185,7 +188,7 @@ ______________________________________________________
 
 Можно сказать, что у стрелочных функций "врожденный" контекст вызова
 
-###### :coffee: Литерал объекта
+#### ![cap-30] Литерал объекта
 
 ```javascript
 var obj = {
@@ -196,7 +199,7 @@ obj.test()   // window
 
 ![](https://lh6.googleusercontent.com/0j-nkUJPXjUVC_5aK8mGmzBkte36BmlPirRt6kZa6dPzQ8_t2WCyJayriwXOnyaeWPq-_H2nZfo0ROrBGwhxBglw1NOfVbJhA3KmcDjJre9-gqgEKv2HnS-nnVPXymENMzTtuBjGtOAs9DY)
 
-###### :coffee: Конструктор
+#### ![cap-30] Конструктор
 
 В случае, если экземпляр объекта создан с помощью конструктора, использование стрелочных функций в публичных методах объекта гарантирует, что  **`this`**  будет всегда ссылаться на экземпляр
 
@@ -204,9 +207,9 @@ obj.test()   // window
 
 __________________________________________________________________
 
-#### :mortar_board: Обработчики событий
+#### ![ico-25] Обработчики событий
 
-###### :coffee: стрелочная функция
+#### ![cap-30] стрелочная функция
 
 ```javascript
 document.querySelector ( "button" )
@@ -215,7 +218,7 @@ document.querySelector ( "button" )
 ```
 **_`this`_** будет указывать на глобальный объект `window`
 
-###### :coffee: обычная функция
+#### ![cap-30] обычная функция
 
 ```javascript
 document.querySelector ( "button" )
@@ -228,28 +231,29 @@ document.querySelector ( "button" )
 
 ____________________________________________________________________
 
-#### :mortar_board: Потеря контекста
+#### ![ico25] Потеря контекста
 
-В примере ниже экземпляр **x** создан с помощью конструктора **`Constr`**
+В примере ниже экземпляр **`x`** создан с помощью конструктора **`Constr`**
 
-Публичный метод **_arrowFunc()_** объявлен с помощью  стрелочной функции
+Публичный метод **_`arrowFunc()`_** объявлен с помощью  стрелочной функции
 
-Публичный метод **_usialFunc()_** объявлен с помощью обычной функции
+Публичный метод **_`usialFunc()`_** объявлен с помощью обычной функции
 
 ![](https://lh5.googleusercontent.com/D5I3AmkE19yQDtUHpQa-5TqLg4jbkKoy944LN9nkkXi9HZIlf8vHAOTvOc0UMPq0k5reH2HZa8MejFZUEsZkR2OKswMyMCbWaeSJhqxIvjVImhmtPqOK88PCI47Or3pyNQcsWBbzsAKThjE)
 
-При передаче метода **_arrowFunc()_** переменной **z**:
+При передаче метода **_`arrowFunc()`_** переменной **`z`**:
 
 ```javascript
 var z = x.arrowFunc
 ```
 контекст сохраняется,
 
-а при передаче метода **_usialFunc()_** переменной **w**:
+а при передаче метода **_`usialFunc()`_** переменной **`w`**:
 
 ```javascript
 var w = x.usialFunc
 ```
+
 контекст меняется, и **_`this`_**  уже указывает на глобальный объект `window`
 
 Таким образом, у стрелочной функции контекст, в котором она была создана, привязан к функции и не может быть утерян
@@ -258,7 +262,7 @@ var w = x.usialFunc
 
 _____________________________________________________
 
-#### :mortar_board: Изменение контекста
+#### ![ico25] Изменение контекста
 
 Еще один пример наглядно показывает, что изменить контекст вызова стрелочной функции, определенный при ее создании, нельзя
 
@@ -271,13 +275,13 @@ var usialFunc = function () {
 }
 ```
 
-Теперь создадим объект **obj** с единственным свойством **_name_**:
+Теперь создадим объект **`obj`** с единственным свойством **_`name`_**:
 
 ```javascript
 obj = { name: "sample" }
 ```
 
-и добавим ему методы **_testArrow_** и **_testUsial_**:
+и добавим ему методы **_`testArrow`_** и **_`testUsial`_**:
 
 ```javascript
 obj.testArrow = arrowFunc
@@ -293,14 +297,14 @@ obj.testUsial ()
 
 ![](https://lh4.googleusercontent.com/s_LhZmRdrIUMcrTCIddZgK4tnwCnrZzFScc03UColTivONhXL-B3LJUOi7nH9Nv1qvGep4_ffzmw459irEMvxLY5Azzd_MTr-EBzT_8F_vQQL5dHg5U4F9sX663yqxSzdwI1rOWWpQoyszc)
 
-Как видим, несмотря на то, что вызов осуществляется в контексте объекта **obj**, **_testArrow_** "работает" в контексте, в котором была создана функция **_arrowFunc_**, т.е. в глобальном контексте
+Как видим, несмотря на то, что вызов осуществляется в контексте объекта **`obj`**, **_`testArrow`_** "работает" в контексте, в котором была создана функция **_`arrowFunc`_**, т.е. в глобальном контексте
 
-Что касается метода **_testUsial_**, то он работает в контексте вызова, т.е. в контексте объекта **obj**
+Что касается метода **_`testUsial`_**, то он работает в контексте вызова, т.е. в контексте объекта **`obj`**
 
 ____________________________________________________________________
 
-### [Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
+### [![hw-30] Тесты](https://garevna.github.io/js-quiz/#arrowFunctions)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

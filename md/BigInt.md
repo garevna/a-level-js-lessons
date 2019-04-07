@@ -1,4 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -9,7 +10,7 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> BigInt
+## ![me30] BigInt
 
 ###### ES10 ( 2019 )
 
@@ -19,9 +20,9 @@
 
 Теперь это ограничение снято
 
-***
+_________________________________________________________
 
-### :mortar_board: Создание **`BigInt`**
+### ![ico25] Создание **`BigInt`**
 
 Для создания числа типа **`BigInt`** нужно просто добавить **`n`**:
 
@@ -42,13 +43,13 @@ bigNumber = BigInt ( bigNumber ) // 9007199254745994n
 typeof bigNumber // 'bigint'
 ```
 
-***
+_________________________________________________________
 
-### :mortar_board: Приведение типов
+### ![ico25] Приведение типов
 
 **`NaN`**, **`null`**, **`Infinity`** не могут быть конвертированы в **`bigint`**
 
-###### Infinity
+###### ![err-20] Infinity
 
 ```javascript
 BigInt ( Infinity )
@@ -60,7 +61,7 @@ BigInt ( Infinity )
 ⛔️ Uncaught RangeError: The number Infinity cannot be converted to a BigInt because it is not an integer
 ```
 
-###### NaN
+###### ![err-20] NaN
 
 ```javascript
 BigInt ( NaN )
@@ -72,7 +73,7 @@ BigInt ( NaN )
 ⛔️ Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
 ```
 
-###### null
+###### ![err-20] null
 
 ```javascript
 BigInt ( null )
@@ -84,7 +85,7 @@ BigInt ( null )
 ⛔️ Uncaught TypeError: Cannot convert null to a BigInt
 ```
 
-***
+_________________________________________________________
 
 ###### Boolean --> BigInt
 
@@ -119,9 +120,9 @@ BigInt ( "45 + 8" )
 ⛔️ Uncaught SyntaxError: Cannot convert 45 + 8 to a BigInt
 ```
 
-***
+_________________________________________________________
 
-### :mortar_board: Арифметические операции
+### ![ico25] Арифметические операции
 
 Арифметические операции с участием данных типа **`bigint`** возможны только при условии, что оба операнда имеют тип данных **`bigint`**
 
@@ -178,9 +179,9 @@ let bigArray = [
 bigArray [ BigInt ( 1 ) ]  // 9007199254740994n
 ```
 
-***
+_________________________________________________________
 
-### :mortar_board: Битовые операции
+### ![ico25] Битовые операции
 
 Битовые операции работают с данными типа **`bigint`** и возвращают результат типа **`bigint`**:
 
@@ -194,4 +195,4 @@ bigArray [ 0 ] | bigArray [ 1 ]  // 9007199254740994n
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

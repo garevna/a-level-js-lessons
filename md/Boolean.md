@@ -403,4 +403,4 @@ typeof x === "number" || x === null
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

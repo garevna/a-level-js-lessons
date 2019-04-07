@@ -1,4 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
@@ -9,7 +10,7 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> ArrayBuffer
+# ![me30] ArrayBuffer
 
 ###### конструктор
 
@@ -24,7 +25,10 @@ var buffer  = new ArrayBuffer ( 16 )
 console.log ( buffer.byteLength)  // 16
 ```
 
-## :mortar_board: Акцессоры
+_________________________________________________________
+
+## ![ico25] Акцессоры
+
 Для работы с данными экземпляра необходимо использовать конструкторы, создающие экземпляры аксессоров
 
 * DataView
@@ -48,9 +52,11 @@ new Uint32Array ( sample )
 new Int32Array ( sample )
 // ► Int32Array(8) [0, 0, 0, 0, 0, 0, 0, 0]
 ```
+
 Результатом вызова конструкторов `Int8Array`, `Uint8Array`, `Int16Array`, `Uint16Array`, `Int32Array`, `Uint32Array` будет _итерабельный объект_ с числовыми данными
 
 Для получения массива можно использовать метод **`ArrayFrom()`**:
+
 ```javascript
 var buffer  = new ArrayBuffer ( 16 )
 var sample = Array.from ( new Uint8Array ( buffer ) )
@@ -59,13 +65,19 @@ sample [3] = 255
 sample [4] = 178
 console.log ( sample )
 ```
+
 ###### Результат в консоли:
+
 ```console
 ► (16) [50, 0, 0, 255, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
+
 Однако это "дорога в одну сторону", поскольку приводит к созданию нового массива ( **_sample_** ), изменения в котором не отражаются на исходном объекте ( **_buffer_** )
 
-### DataView
+_________________________________________________________
+
+### ![ico25] DataView
+
 С помощью этого конструктора создается экземпляр акцессора, обеспечивающего гибкий доступ к данным исходного экземпляра `ArrayBuffer`
 
 ```javascript
@@ -73,7 +85,9 @@ var buffer  = new ArrayBuffer ( 16 )
 var dataView = new DataView ( buffer )
 console.log ( dataView.__proto__ )
 ```
+
 ###### Результат в консоли:
+
 ```console
 DataView {constructor: ƒ, getInt8: ƒ, …}
     buffer: (...)
@@ -106,7 +120,11 @@ DataView {constructor: ƒ, getInt8: ƒ, …}
   ► get byteOffset: ƒ byteOffset()
   ► __proto__: Object
 ```
-###### :coffee: :one: setInt8
+
+_________________________________________________________________
+
+#### ![cap-30] setInt8
+
 ```javascript
 var buffer  = new ArrayBuffer ( 16 )
 var dataView = new DataView ( buffer )
@@ -115,7 +133,9 @@ dataView.setInt8 ( 3, 94 )
 dataView.setInt8 ( 5, 55 )
 console.log ( buffer)
 ```
+
 ###### Результат в консоли:
+
 ```console
 ▼ ArrayBuffer(16) {}
   ► [[Int8Array]]: Int8Array(16) [0, 0, 78, 94, 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -126,7 +146,10 @@ console.log ( buffer)
   ► __proto__: ArrayBuffer
 ```
 
-###### :coffee: :two: setInt16
+_________________________________________________________
+
+#### ![cap-30] setInt16
+
 ```javascript
 var buffer  = new ArrayBuffer ( 16 )
 var dataView = new DataView ( buffer )
@@ -135,7 +158,9 @@ dataView.setInt16 ( 3, 94 )
 dataView.setInt16 ( 5, 55 )
 console.log ( buffer)
 ```
+
 ###### Результат в консоли:
+
 ```console
 ▼ ArrayBuffer(16) {}
   ► [[Int8Array]]: Int8Array(16) [0, 0, 78, 0, 94, 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -146,7 +171,10 @@ console.log ( buffer)
   ► __proto__: ArrayBuffer
 ```
 
-###### :coffee: :three: setInt32
+_________________________________________________________
+
+#### ![cap-30] setInt32
+
 ```javascript
 var buffer  = new ArrayBuffer ( 16 )
 var dataView = new DataView ( buffer )
@@ -155,7 +183,9 @@ dataView.setInt16 ( 7, 94 )
 dataView.setInt16 ( 11, 55 )
 console.log ( buffer)
 ```
+
 ###### Результат в консоли:
+
 ```console
 ▼ ArrayBuffer(16) {}
   ► [[Int8Array]]: Int8Array(16) [0, 0, 0, 0, 78, 0, 0, 0, 94, 0, 0, 0, 55, 0, 0, 0]
@@ -166,7 +196,10 @@ console.log ( buffer)
   ► __proto__: ArrayBuffer
 ```
 
-###### :coffee: :four:
+_________________________________________________________
+
+#### ![cap-30] 4
+
 ```javascript
 var picture = document.createElement ( 'img' )
 document.body.appendChild ( picture )
@@ -191,4 +224,4 @@ fetch ( 'https://avatars2.githubusercontent.com/u/46?v=4' )
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]

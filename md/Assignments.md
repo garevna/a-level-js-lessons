@@ -1,7 +1,9 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
 [warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
 [link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
@@ -9,19 +11,21 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Операторы присваивания
+# ![me30] Операторы присваивания
 
 В результате операции присваивания устанавливается тип данных переменной
 
 Это и есть **динамическая типизация**
 
-## 📖 Оператор ```=```
+_________________________________________________________
 
-С помощью ```=``` переменным присваиваются значения
+## ![ico20] Оператор `=`
 
->>:warning: не путайте оператор присваивания с оператором сравнения
+С помощью **`=`** переменным присваиваются значения
 
-:coffee: 1
+>>![warn-25] не путайте оператор присваивания с оператором сравнения
+
+#### ![cap-20] 1
 
 ```javascript
 var start = "Hello"
@@ -32,9 +36,9 @@ end = start
 
 Теперь в переменной  **`end`**  будет  значение  "Hello"
 
-***
+_________________________________________________________________
 
-:coffee: 2
+#### ![cap-20] 2
 
 ```javascript
 var  x = 5
@@ -43,13 +47,13 @@ var  y = x + 4
 
 Значением переменной **`y`** будет 9
 
-***
+_________________________________________________________________
 
-## 📖 Оператор ```+=```
+## ![ico-20] Оператор `+=`
 
 Добавляет значение к переменной
 
-:coffee: 1
+#### ![cap-20] 3
 
 ```javascript
 var x = 0
@@ -57,7 +61,7 @@ x += 5
 console.log (x)   // 5
 ```
 
-:coffee: 2
+#### ![cap-20] 4
 
 ```javascript
 var y = 10
@@ -65,13 +69,13 @@ x += y
 console.log (x)   // 15
 ```
 
-***
+_________________________________________________________
 
-## 📖 Оператор ```-=```
+## ![ico20] Оператор `-=`
 
 Вычитает значение из переменной
 
-:coffee: 3
+#### ![cap-20] 5
 
 ```javascript
 var x = 20
@@ -83,13 +87,13 @@ x -= y
 console.log (x)   // 5
 ```
 
-***
+_________________________________________________________
 
-## 📖 Оператор ```*=```
+## ![ico20] Оператор `*=`
 
 Умножает переменную на значение
 
-:coffee: 4
+#### ![cap-20] 6
 
 ```javascript
 var x = 5
@@ -101,13 +105,13 @@ x *= y
 console.log (x)   // 250
 ```
 
-***
+_________________________________________________________
 
-## 📖 Оператор ```/=```
+## ![ico20] Оператор `/=`
 
 Делит переменную на значение
 
-:coffee: 5
+#### ![cap-20] 7
 
 ```javascript
 var x = 30
@@ -119,13 +123,13 @@ x /= y
 console.log (x)   // 2
 ```
 
-***
+_________________________________________________________________
 
-## 📖 Оператор ```%=```
+## ![ico20] Оператор `%=`
 
 Присваивает переменной остаток от деления
 
-:coffee: 5
+#### ![cap-20] 8
 
 ```javascript
 var x = 17
@@ -145,8 +149,8 @@ console.log ( x %= y )  // 2
 
 _________________________________________________________________
 
-### [:briefcase: Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)
+### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)
 
 _________________________________________________________________________
 
-![](https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true)
+![footer]
