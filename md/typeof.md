@@ -16,10 +16,16 @@
 [file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
 
 
-| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
-|-|-|
+<table><tr><td width="50">
 
-# Оператор `typeof`
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2> Оператор <em>typeof</em></h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 
 Оператор  `typeof`  возвращает строку
 

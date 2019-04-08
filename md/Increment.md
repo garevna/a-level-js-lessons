@@ -10,10 +10,16 @@
 [link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 [wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
 
-| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
-|-|-|
+<table><tr><td width="50">
 
-## ![ico25] Инкремент (++)
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>Инкремент (++)</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 
 Инкремент - это увеличение значения числовой переменной на единицу
 

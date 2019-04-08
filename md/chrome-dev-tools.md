@@ -1,5 +1,4 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
@@ -18,10 +17,16 @@
 [yt-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-20.png
 
 
-| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
-|-|-|
+<table><tr><td width="50">
 
-# ![ico25] Chrome DevTools
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>Chrome DevTools</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 
 #### ![cap-30] 1
 

@@ -10,10 +10,16 @@
 [link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 [wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
 
-| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
-|-|-|
+<table><tr><td width="50">
 
-# UTF-8
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>UTF-8</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 
 Все символы имеют числовой код
 
