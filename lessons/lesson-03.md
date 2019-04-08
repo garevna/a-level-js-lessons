@@ -2,7 +2,7 @@
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
-#### ![me30] Занятие 3
+#### Занятие 3
 
 * [Циклы `while` и `do...while`](../md/while.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#while)

@@ -2,7 +2,7 @@
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
-#### ![me30] Занятие 2
+#### Занятие 2
 
 * [Приведение типов](../md/data-types-conversion.md)
 * [`NaN` | `null` | `Infinity`](../md/NaN-null-Infinity.md)

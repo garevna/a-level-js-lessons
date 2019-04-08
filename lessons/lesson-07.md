@@ -2,7 +2,7 @@
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
-#### ![me30] Занятие 7
+#### Занятие 7
 
 * [События  DOM](../md/Event.md)
 * [:mortar_board: Элементы форм](../md/forms.md)

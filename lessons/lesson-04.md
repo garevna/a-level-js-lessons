@@ -3,7 +3,7 @@
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
 
-#### ![me30] Занятие 4
+#### Занятие 4
 
 * [Нативные и host-объекты](../md/native-and-host-objects.md)
 * [Литерал объекта](../md/object-literal.md)

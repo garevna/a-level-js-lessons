@@ -2,7 +2,7 @@
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
-#### ![me30] Занятие 5
+#### Занятие 5
 
 * [Вычисляемые свойства](../md/get-and-set.md)
 * [Биндинг и карринг](../md/call-apply-bind.md)
