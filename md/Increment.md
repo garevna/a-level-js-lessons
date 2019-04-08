@@ -1,14 +1,29 @@
-## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Инкремент (++)
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
+
+| <img width="900"/> | ![me40] <br/><sup>[Занятие&nbsp;1](../lessons/lesson-01.md)</sup> |
+|-|-|
+
+## ![ico25] Инкремент (++)
 
 Инкремент - это увеличение значения числовой переменной на единицу
 
-Пост-префиксная форма:   ```y++```
+Пост-префиксная форма:   `y++`
 
-Префиксная форма:        ```++y```
+Префиксная форма:        `++y`
 
 Пост-префиксная форма означает, что переменная будет увеличена после операции, в которой она принимает участие
 
-:coffee:
+![cap-20]
 
 ```javascript
 var x = 0, y = 2
@@ -33,11 +48,18 @@ var z = y + ++x
 сначала значение переменной **x** станет ```0 + 1 = 1```,
 а затем будет вычислено значение переменной **z**:  ```2 + 1 = 3```
 
-## 🎓 Декремент (--)
+________________________________________________________
 
-Все то же самое, только значение не увеличивается на 1,
-а уменьшается 😉
+## ![ico25] Декремент (--)
 
-## [💼 Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
-***
-[🔗 MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+Все то же самое, только значение не увеличивается на 1, а уменьшается ![wink-20]
+
+### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
+
+______________________________________________________________
+
+[![link-20] MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+
+_________________________________________________________
+
+![footer]
