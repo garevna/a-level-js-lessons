@@ -4,8 +4,13 @@
 
 #### Занятие 2
 
-* [Приведение типов](../md/data-types-conversion.md)
+* Приведение типов
+    * [Явное приведение типов](../md/Explicit-type-conversion.md)
+    * [Неявное приведение типов](../md/Implicit-type-conversion.md)
+    * [!link-20]()
 * [`NaN` | `null` | `Infinity`](../md/NaN-null-Infinity.md)
+    [![link-25] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
+    [[![link-25] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/)
 * [`BigInt` (ES10)](../md/BigInt.md)
 * [Функции](../md/function.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#function)
