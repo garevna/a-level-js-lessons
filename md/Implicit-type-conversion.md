@@ -1,12 +1,6 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
-[debagger]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/debagger-20.png "Resume script execution F8 Ctrl+\"
-[reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
-[question]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/question-25.png
-[yes-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-25.png
-[yes-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-30.png
-
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [ico50]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png
@@ -31,24 +25,6 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-[file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
-[file-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-25.png
-[file-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-30.png
-
-[dir-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-20.png
-[dir-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-25.png
-[dir-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-30.png
-[dir-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-40.png
-
-[bash-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-20.png
-[bash-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-25.png
-[bash-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-30.png
-[bash-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-40.png
-
-[git-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-20.png
-[git-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-25.png
-[git-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-30.png
-
 [wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
 [wink-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-25.png
 [wink-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-30.png
@@ -67,11 +43,7 @@
 
 Неявное приведение типов происходит в процессе вычисления выражений
 
-<a name="string"></a>
 ## ![ico25] Неявное приведение к типу `string`
-
-| [`number`](#number) | [`boolean`](#boolean)|
-|-|-|
 
 ![warn-25] При сложении числа и строки JavaScript обрабатывает число как строку
 
@@ -117,8 +89,7 @@ String ( [ 4, 8 ] )
 ```
 и результат будет   `4,8`
 
-![warn-25] Однако, если в массиве не более одного элемента, и перед массивом стоит знак арифметической операции,
-он будет приведен к числу:
+![warn-25] Однако, если в массиве не более одного элемента, и перед массивом стоит знак арифметической операции, он будет приведен к числу:
 
 #### ![cap-20] 2
 
@@ -129,11 +100,7 @@ null + +[ 4 ]          // 4
 
 _____________________________________________________________
 
-<a name="number"></a>
-#### ![ico25] Неявное приведение к типу `number`
-
-| [`string`](#string) |  [`boolean`](#boolean) |
-|-|-|
+## ![ico25] Неявное приведение к типу `number`
 
 ![warn-25] Неявное приведение к типу  `number` происходит в арифметических выражениях:
 
@@ -193,11 +160,7 @@ a == b      // 1 == null  --> false
 
 _____________________________________________________________
 
-<a name="boolean"></a>
-#### ![ico25] Неявное приведение к типу `boolean`
-
-| [`string`](#string) |  [`number`](#number) |
-|-|-|
+## ![ico25] Неявное приведение к типу `boolean`
 
 ![warn-25] Преобразование типов к логическому типу ( `boolean` ) происходит в условных операторах ( `if`, тернарный оператор )
 
@@ -219,7 +182,7 @@ Boolean ( "5" )
 
 _________________________________________________________________
 
-#### ![ico20] `&&`
+### ![ico20] `&&`
 
 Операция `&&`  перебирает операнды слева направо, приводя их к логическому значению, до тех пор, пока не встретится первый `false`
 
@@ -249,7 +212,7 @@ true && true && true && true     //    true
 
 _____________________________________________________________
 
-#### `||`
+### `||`
 
 Операция `||`  перебирает операнды слева направо, приводя их к логическому значению, до тех пор, пока не встретится первый `true`
 
@@ -296,13 +259,8 @@ var y = !!x        // false
 
 _____________________________________________________________
 
-| [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) |
-|-|-|-|
-
-________________________________________________________
-
 #### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
 
 ________________________________________________________
-| [:link: w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [:link: Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+| [![link-20] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![link-20] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
 |-|-|
