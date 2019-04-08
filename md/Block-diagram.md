@@ -15,14 +15,12 @@
 
 ![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
   </td>
-  <td width="800"><h2> Оператор <em>typeof</em></h2></td>
+  <td width="800"><h2>Блок схема алгоритма</h2></td>
   <td>
 
   ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
 </tr></table>
 
-
-# Блок схема алгоритма
 
 ## ![ico25] Алгоритм
 
