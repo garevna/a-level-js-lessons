@@ -1,6 +1,8 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+
 
 #### Занятие 2
 
@@ -9,8 +11,8 @@
     * [Неявное приведение типов](../md/Implicit-type-conversion.md)
     * [!link-20]()
 * [`NaN` | `null` | `Infinity`](../md/NaN-null-Infinity.md)
-    [![link-25] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
-    [[![link-25] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/)
+    * [![link-20] <sup>w3schools</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
+    * [[![link-20] <sup>Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
 * [`BigInt` (ES10)](../md/BigInt.md)
 * [Функции](../md/function.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#function)
