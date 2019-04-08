@@ -1,11 +1,30 @@
-<a name="NaN"></a>
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-| [`null`](#null) | [`Infinity`](#Infinity) |
-|-|-|
 
-## :mortar_board: Значение `NaN`
+<table><tr><td width="50">
 
-###### :pushpin: Тип данных  `number`
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>NaN | null | Infinity</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
+
+## ![ico25] Значение `NaN`
+
+###### Тип данных  `number`
 
 Сокращение от **Not a Number** ( результат операции не является числом )
 
@@ -20,7 +39,7 @@
 
 `NaN` также является свойством встроенного объекта  `Number`
 
-:warning: `NaN` не равен ничему, даже самому себе 
+:warning: `NaN` не равен ничему, даже самому себе
 
 ```javascript
 NaN === NaN            // false
@@ -29,7 +48,7 @@ NaN >= NaN             // false
 NaN <= NaN             // false
 ```
 
-Для определения, является ли значением выражения `NaN`, 
+Для определения, является ли значением выражения `NaN`,
 
 можно использовать методы   `isNaN ()`  и  `Number.isNaN ()`
 
@@ -40,24 +59,20 @@ isNaN ( "привет" )               //  true
 Number.isNaN ( "привет" )        //  false
 Number.isNaN ( "привет" / 10 )   //  true
 ```
-> :hash: `isNaN ()`  возвращает `true`, если после приведения типа аргумента к числу результат будет  `NaN`
 
-> :hash: `Number.isNaN ()`  возвращает `true`, если аргумент имеет значение  `NaN`  ( приведения типа не происходит )
+<sup>`isNaN ()`  возвращает `true`, если после приведения типа аргумента к числу результат будет  `NaN`</sup>
 
-***
+<sup>`Number.isNaN ()`  возвращает `true`, если аргумент имеет значение  `NaN`  ( приведения типа не происходит )</sup>
 
-<a name="null"></a>
+_____________________________________________________________
 
-| [`NaN`](#NaN) | [`Infinity`](#Infinity) |
-|-|-|
+## ![ico25] Значение `null`
 
-## :mortar_board: Значение `null`
-
-###### :pushpin: Тип данных  `object`
+###### Тип данных  `object`
 
 Специальное значение `null` означает "ничего"
 
-:warning: `null` может равняться только `null` или ( при нестрогом сравнении ) `undefined`
+![warn-25] `null` может равняться только `null` или ( при нестрогом сравнении ) `undefined`
 
 ```javascript      
 null == null              // true
@@ -71,16 +86,11 @@ null == ""                // false
 null == []                // false
 ```
 
-***
+_____________________________________________________________
 
-<a name="Infinity"></a>
+## ![ico25] Значение `Infinity`
 
-| [`NaN`](#NaN) | [`null`](#null) |
-|-|-|
-
-## :mortar_board: Значение `Infinity`
-
-###### :pushpin: Тип данных  `number`
+###### Тип данных  `number`
 
 Значение, превышающее максимально возможное число с плавающей  запятой
 
@@ -108,10 +118,10 @@ Infinity * Infinity  // Infinity
 Infinity + Infinity  // Infinity
 ```
 
-***
+______________________________________________________________
 
-| [`NaN`](#NaN) | [`null`](#null) | [`Infinity`](#Infinity) |
-|-|-|-|
+[![link-20] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
 
-***
-[:link: w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
+________________________________________________________
+
+![footer]
