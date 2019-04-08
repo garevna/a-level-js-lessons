@@ -178,7 +178,7 @@ Boolean ( "5" )
 
 ![warn-25] При выполнении логических операций  `||`  и  `&&` происходит неявное приведение типов операндов к логическому значению
 
-но при этом результатом логической операции будет изначальное значение одного из операндов, даже если оно не являются булевым
+![warn-25] но при этом результатом логической операции будет изначальное значение одного из операндов, даже если оно не являются булевым
 
 _________________________________________________________________
 
@@ -248,10 +248,12 @@ ________________________________________________________________________________
 var x = null
 var y = !!x        // false
 ```
+
 ```javascript
 var x = undefined
 var y = !!x        // false
 ```
+
 ```javascript
 !![ ]      // вернет   true
 !!+[ ]     // вернет  false
@@ -259,8 +261,12 @@ var y = !!x        // false
 
 _____________________________________________________________
 
-#### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
+### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
 
 ________________________________________________________
 | [![link-20] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![link-20] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
 |-|-|
+
+________________________________________________________
+
+![footer]
