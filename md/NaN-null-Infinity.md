@@ -39,7 +39,7 @@
 
 `NaN` также является свойством встроенного объекта  `Number`
 
-:warning: `NaN` не равен ничему, даже самому себе
+![warn-25] `NaN` не равен ничему, даже самому себе
 
 ```javascript
 NaN === NaN            // false
@@ -120,7 +120,7 @@ Infinity + Infinity  // Infinity
 
 ______________________________________________________________
 
-[![link-20] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
+[![link-25] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
 
 ________________________________________________________
 
