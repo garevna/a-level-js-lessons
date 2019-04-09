@@ -7,47 +7,18 @@
 
 #### Занятие 2
 
-<table>
-<tr><td>Приведение типов</td>
-<td rowspan="2">
-
-[`NaN`](../md/NaN-null-Infinity.md#NaN) [`null`](../md/NaN-null-Infinity.md#null) [`Infinity`](../md/NaN-null-Infinity.md#Infinity)<br/><br/>
-[![link-20] <sup>w3schools</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
-</td>
-</tr>
-<tr>
-  <td>
-
-[<sup>Явное приведение типов</sup>](../md/Explicit-type-conversion.md)<br/>
-[<sup>Неявное приведение типов</sup>](../md/Implicit-type-conversion.md)
-</td>
-</tr>
-<tr><td>
-
-[![link-20] <sup>Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
-</td><td>
-
-[`BigInt` <sup>(ES10)</sup>](../md/BigInt.md)
-</td></tr>
-<tr><td colspan="2">
-
-</td></tr>
-<tr><td>
-
-[Функции](../md/function.md)<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[![hw-20] <sup>Тесты</sup>](https://garevna.github.io/js-quiz/#function)
-</td>
-<td>
-
-[Методы](../md/method.md)
-</td>
-</tr>
-</table>
+* Приведение типов
+    * [Явное приведение типов](../md/Explicit-type-conversion.md)
+    * [Неявное приведение типов](../md/Implicit-type-conversion.md)
+* [Функции](../md/function.md)
+    * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#function)
+* [Методы](../md/method.md)
 
 <table><tr>
 <td>Методы строк</td><td>Методы массивов</td></tr>
 <tr><td width="200">
 
+[<sup>indexOf()</sup>](../md/Strings-methods-indexOf.md)<br/>
 [<sup>indexOf()</sup>](../md/Strings-methods-indexOf.md)<br/>
 [<sup>slice()</sup>](../md/Strings-methods-slice.md)<br/>
 [<sup>substring()</sup>](../md/Strings-methods-substring.md)<br/>
@@ -96,8 +67,7 @@
 [![link-20] <sup>MDN</sup>](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "Открывайте в новой вкладке")<br/>
 </tr></table>
 
-
-* [`Date()`](../md/Date-constructor.md)
+* [Конструктор `Date()`](../md/Date-constructor.md)
 * [![hw-20] Самостоятельная работа](../md/self-work-02.md)
 * [![hw-20] Практика (XSS)](../md/XSS.md)
 * [![hw-20] Homework](../md/hw-02.md)
