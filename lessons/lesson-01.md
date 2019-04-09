@@ -8,6 +8,7 @@
 * [Chrome DevTools](../md/chrome-dev-tools.md)
 * [Переменные](../md/var.md)
 * [Оператор `typeof`](../md/typeof.md)
+* [`NaN`](../md/NaN-null-Infinity.md#NaN) [`null`](../md/NaN-null-Infinity.md#null) [`Infinity`](../md/NaN-null-Infinity.md#Infinity)
 * [Структуры данных](../md/data-structures.md)
 * [Операторы присваивания](../md/Assignments.md)
 * [Логические выражения](../md/Boolean.md)
@@ -16,7 +17,13 @@
 * [Свойство `length`](../md/length.md)
 * [Оператор цикла `for`](../md/for.md)
 * [UTF-8](../md/UTF-8.md)
+* [`BigInt` <sup>(ES10)</sup>](../md/BigInt.md)
 * [![hw-20] Homework](../md/hw-01.md)
+
+_________________________________________________________________________
+
+* [![link-20] <sup>Infinity</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
+* [![link-20] <sup>Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
 
 _________________________________________________________________________
 
