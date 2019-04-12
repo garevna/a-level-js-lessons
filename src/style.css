@@ -31,6 +31,52 @@ a {
     margin-bottom:20px;
 }
 
+.ico-20, .ico-25, .ico-30, .ico-35, .ico-40 {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.ico-20 { width: 20px; height: 20px; }
+.ico-25 { width: 25px; height: 25px; }
+.ico-30 { width: 30px; height: 30px; }
+.ico-35 { width: 35px; height: 35px; }
+.ico-40 { width: 40px; height: 40px; }
+
+.main {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png)
+}
+.warn {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-40.png)
+}
+.cap {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png)
+}
+.link {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png)
+}
+.bash {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-40.png)
+}
+.err {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png)
+}
+.file {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-30.png)
+}
+.dir {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-40.png)
+}
+.git {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-30.png)
+}
+.smile {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-30.png)
+}
+.hw {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-40.png)
+}
+
 /* ================= media rules =================== */
 @media screen and (max-width: 900px) {
   body {

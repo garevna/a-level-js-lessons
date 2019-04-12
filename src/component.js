@@ -16,10 +16,10 @@ template.innerHTML = `
               display: block;
               font-weight: bold;
               font-family: monospace;
-              font-size: 1.2rem;
+              font-size: 1.1rem;
               text-transform: uppercase;
               text-align: center;
-              padding: 0.8rem;
+              padding: 0.7rem;
               color: #fff;
               background: #bbb;
               cursor: pointer;
