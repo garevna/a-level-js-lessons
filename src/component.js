@@ -12,13 +12,6 @@ template.innerHTML = `
         input[type='checkbox'] {
               display: none;
         }
-        label {
-          background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png);
-          background-repeat: no-repeat;
-          background-size: 25px;
-          background-position: left center;
-          border-left: solid 10px transparent;
-        }
         .lbl-toggle {
               display: block;
               font-weight: bold;
@@ -33,6 +26,11 @@ template.innerHTML = `
               border-radius: 3px;
               transition: all 0.25s ease-out;
               user-select: none;
+              background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png);
+              background-repeat: no-repeat;
+              background-size: 25px;
+              background-position: left center;
+              border-left: solid 10px transparent;
         }
         .lbl-toggle:hover {
               text-shadow: 1px 1px 1.5px #00000090;
