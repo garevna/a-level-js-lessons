@@ -1,2 +1,2 @@
-const topic = location.hash.splice(1)
+const topic = location.hash.slice(1)
 alert(topic)
