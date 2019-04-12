@@ -19,11 +19,11 @@ template.innerHTML = `
               font-size: 1.2rem;
               text-transform: uppercase;
               text-align: center;
-              padding: 1rem;
+              padding: 0.8rem;
               color: #fff;
-              background: #FA0;
+              background: #bbb;
               cursor: pointer;
-              border-radius: 7px;
+              border-radius: 3px;
               transition: all 0.25s ease-out;
               user-select: none;
         }
