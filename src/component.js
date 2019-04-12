@@ -47,9 +47,9 @@ template.innerHTML = `
               background-color: white;
               /* color: #bbb; */
               color: #444;
-              border-bottom-left-radius: 7px;
-              border-bottom-right-radius: 7px;
-              box-shadow: inset 2px 2px 3px #00000090;
+              /* border-bottom-left-radius: 7px;
+              border-bottom-right-radius: 7px; */
+              box-shadow: inset 2px -2px 3px #00000090;
               padding: .5rem 1.2rem;
               font-size: 0.8rem;
               border: inset 1px;
@@ -61,7 +61,8 @@ template.innerHTML = `
               background-color: #000;
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
-              max-height: 350px;
+              /* max-height: 350px; */
+              max-height: max-content;
         }
         .toggle:checked + .lbl-toggle::before {
               transform: rotate(90deg) translateX(-3px);
