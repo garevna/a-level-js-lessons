@@ -18,7 +18,7 @@ template.innerHTML = `
               font-family: monospace;
               font-size: 1.1rem;
               text-transform: uppercase;
-              text-align: center;
+              text-align: right;
               padding: 0.7rem;
               color: #fff;
               background: #bbb;
