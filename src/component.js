@@ -41,11 +41,13 @@ template.innerHTML = `
               transition: transform .2s ease-out;
         }
         .collapsible-content .content-inner {
-              background-color: #000;
-              color: #bbb;
+              /* background-color: #000; */
+              background-color: white;
+              /* color: #bbb; */
+              color: #444;
               border-bottom-left-radius: 7px;
               border-bottom-right-radius: 7px;
-              /*box-shadow: 2px 2px 3px #00000090;*/
+              box-shadow: 2px 2px 3px #00000090;
               padding: .5rem 1.2rem;
               font-size: 0.8rem;
         }
