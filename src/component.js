@@ -42,6 +42,15 @@ template.innerHTML = `
               transition: transform .2s ease-out;
               user-select: none;
         }
+        .lbl-toggle::after {
+          background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png);
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+        }
         .collapsible-content .content-inner {
               /* background-color: #000; */
               background-color: white;
