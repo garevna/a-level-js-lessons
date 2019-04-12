@@ -61,8 +61,8 @@ template.innerHTML = `
               background-color: #000;
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
-              /* max-height: 350px; */
-              max-height: max-content;
+              max-height: 900px;
+              /* max-height: max-content; */
         }
         .toggle:checked + .lbl-toggle::before {
               transform: rotate(90deg) translateX(-3px);
