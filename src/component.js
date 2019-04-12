@@ -12,8 +12,16 @@ template.innerHTML = `
         input[type='checkbox'] {
               display: none;
         }
+        label {
+          background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png);
+          background-repeat: no-repeat;
+          background-size: 25px;
+          background-position: left center;
+          border-left: solid 10px transparent;
+        }
         .lbl-toggle {
               display: block;
+              background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png);
               font-weight: bold;
               font-family: monospace;
               font-size: 1.1rem;
@@ -43,7 +51,7 @@ template.innerHTML = `
               user-select: none;
         }
         .lbl-toggle::after {
-          background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png);
+
           width: 20px;
           height: 20px;
           display: inline-block;
@@ -56,8 +64,6 @@ template.innerHTML = `
               background-color: white;
               /* color: #bbb; */
               color: #444;
-              /* border-bottom-left-radius: 7px;
-              border-bottom-right-radius: 7px; */
               box-shadow: inset 2px -2px 3px #00000090;
               padding: .5rem 1.2rem;
               font-size: 0.8rem;
@@ -71,7 +77,6 @@ template.innerHTML = `
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
               max-height: 900px;
-              /* max-height: max-content; */
         }
         .toggle:checked + .lbl-toggle::before {
               transform: rotate(90deg) translateX(-3px);
@@ -80,7 +85,6 @@ template.innerHTML = `
               border-bottom-right-radius: 0;
               border-bottom-left-radius: 0;
         }
-        code span { background-color: black; }
     </style>
 
     <section>
