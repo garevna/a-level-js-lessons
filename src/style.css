@@ -31,68 +31,6 @@ a {
     margin-bottom:20px;
 }
 
-input[type='checkbox'] {
-  display: none;
-}
-.lbl-toggle {
-  display: block;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 1rem;
-  color: #fff;
-  background: #FA0;
-  cursor: pointer;
-  border-radius: 7px;
-  transition: all 0.25s ease-out;
-  user-select: none;
-}
-.lbl-toggle:hover {
-  text-shadow: 1px 1px 1.5px #00000090;
-}
-.lbl-toggle::before {
-  content: ' ';
-  display: inline-block;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-  vertical-align: middle;
-  margin-right: .7rem;
-  transform: translateY(-2px);
-  transition: transform .2s ease-out;
-  user-select: none;
-}
-.collapsible-content .content-inner {
-  /* background: #000;
-  color: #bbb; */
-  background: white;
-  color: #333;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-  border: inset 1px;
-  padding: .5rem 1.2rem;
-  font-size: 0.8rem;
-}
-.collapsible-content {
-  max-height: 0px;
-  overflow: auto;
-  transition: max-height .25s ease-in-out;
-}
-.toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 350px;
-}
-.toggle:checked + .lbl-toggle::before {
-  transform: rotate(90deg) translateX(-3px);
-}
-.toggle:checked + .lbl-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-b {
-  color: #08d;
-}
 /* ================= media rules =================== */
 @media screen and (max-width: 900px) {
   body {

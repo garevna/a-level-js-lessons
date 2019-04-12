@@ -4,7 +4,7 @@ const template = document.body.appendChild (
 
 template.innerHTML = `
     <style>
-        * { user-select: none; }
+        /* * { user-select: none; } */
         a {
               text-decoration: none;
               color: #777;
@@ -25,6 +25,7 @@ template.innerHTML = `
               cursor: pointer;
               border-radius: 7px;
               transition: all 0.25s ease-out;
+              user-select: none;
         }
         .lbl-toggle:hover {
               text-shadow: 1px 1px 1.5px #00000090;
@@ -39,6 +40,7 @@ template.innerHTML = `
               margin-right: .7rem;
               transform: translateY(-2px);
               transition: transform .2s ease-out;
+              user-select: none;
         }
         .collapsible-content .content-inner {
               /* background-color: #000; */
@@ -47,9 +49,10 @@ template.innerHTML = `
               color: #444;
               border-bottom-left-radius: 7px;
               border-bottom-right-radius: 7px;
-              box-shadow: 2px 2px 3px #00000090;
+              box-shadow: inset 2px 2px 3px #00000090;
               padding: .5rem 1.2rem;
               font-size: 0.8rem;
+              border: inset 1px;
         }
         .collapsible-content {
               max-height: 0px;
