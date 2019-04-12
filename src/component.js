@@ -21,7 +21,6 @@ template.innerHTML = `
         }
         .lbl-toggle {
               display: block;
-              background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png);
               font-weight: bold;
               font-family: monospace;
               font-size: 1.1rem;
