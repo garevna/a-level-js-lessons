@@ -6,7 +6,9 @@ body {
   background-color: white;
   background-image: url(https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: right bottom;
+  background-size: 100px;
+  border: solid 10px white;
 }
 
   html {
