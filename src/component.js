@@ -70,7 +70,7 @@ template.innerHTML = `
               max-height: 0px;
               overflow: auto;
               transition: max-height .25s ease-in-out;
-              background-color: #000;
+              /* background-color: #000; */
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
               max-height: 900px;
@@ -79,8 +79,8 @@ template.innerHTML = `
               transform: rotate(90deg) translateX(-3px);
         }
         .toggle:checked + .lbl-toggle {
-              border-bottom-right-radius: 0;
-              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 3px;
+              border-bottom-left-radius: 3px;
         }
     </style>
 

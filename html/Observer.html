@@ -19,11 +19,11 @@
       <p>Нужно обеспечить реактивность приложения, т.е. отображение должно оперативно обновляться при обновлении данных модели</p>
       <p>При этом модули должны быть независимы</p>
       <p>Как оповестить модуль, отвечающий за представление, об изменении данных модели ?</p>
-      <sample-element file="../src/samples/Observer-1.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-1.js" header="inputs" lang="js"></sample-element>
       <p>функция, создающая и вставляющая элемент на страницу:</p>
-      <sample-element file="../src/samples/Observer-2.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-2.js" header="addElem" lang="js"></sample-element>
       <p>Создадим массив элементов <b><code>input</code></b>:</p>
-      <sample-element file="../src/samples/Observer-3.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-3.js" header="observed" lang="js"></sample-element>
       <p>Итак, пользователь может в любой момент изменить данные модели</p>
       <hr/>
       <p>Давайте создадим представление и стилизуем его:</p>
@@ -32,7 +32,7 @@
       <sample-element file="../src/samples/Observer-5.js" header="JS" lang="js"></sample-element> -->
       <p>Будем отображать в <b><code>subscriber</code></b> данные, которые пользователь вводит в поля <b><code>input</code></b></p>
       <p>Для этого создадим ему метод <b><code>showInfo</code></b></p>
-      <sample-element file="../src/samples/Observer-6.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-6.js" header="showInfo" lang="js"></sample-element>
       <p>Этому методу передается объект <b><code>data</code></b>, в котором содержатся данные модели</p>
       <p>Метод обновляет контент элемента <b><code>subscriber</code></b></p>
       <p>Осталось только "подписать" <b><code>subscriber</code></b> на обновления данных модели</p>
@@ -48,9 +48,9 @@
       <li>Для того, чтобы отписаться от уведомлений обозревателя, нужно вызвать его метод <em><code>unsubscibe</code></em></li>
       <li>Для оповещения подписчиков есть метод <em><code>broadcast</code></em></li>
       <p>Осталось только создать экземпляр обозревателя <b><code>observer</code></b>, передав ему ссылки на отслеживаемые элементы <b><em><code>observed</code></em></b>:</p>
-      <sample-element file="../src/samples/Observer-8.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-8.js" header="create observer instance" lang="js"></sample-element>
       <p>и подписать на его оповещения наше представление <b><code>subscriber</code></b>:</p>
-      <sample-element file="../src/samples/Observer-9.js" header="JS" lang="js"></sample-element>
+      <sample-element file="../src/samples/Observer-9.js" header="subscibe" lang="js"></sample-element>
       <p>Тееперь при изменении значений в полях <b><em><code>input</code></em></b> созданное нами представление <b><code>subscriber</code></b> будет реактивно обновляться:</p>
       <div style="text-align: center">
           <img src="https://github.com/garevna/js-course/blob/master/pictures/observer-1.gif?raw=true" width="500"/>

@@ -1,1 +1,1 @@
-const  = new Observer ( observed )
+const observer = new Observer ( observed )

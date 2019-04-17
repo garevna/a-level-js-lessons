@@ -53,6 +53,18 @@
 [wink-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-25.png
 [wink-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-30.png
 
+[point-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/point_up-20.png
+[point-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/point_up-25.png
+[point-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/point_up-30.png
+
+[ok-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/ok-20.png
+[ok-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/ok-25.png
+[ok-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/ok-30.png
+
+[super-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-20.png
+[super-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-25.png
+[super-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-30.png
+
 ________________________________________________________
 
 ### Шаблон шапки темы:
