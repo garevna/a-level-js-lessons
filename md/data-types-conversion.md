@@ -22,9 +22,9 @@
 </tr></table>
 
 
-[![ico25] Явное приведение типов](Explicit-type-conversion)
+[![ico25] Явное приведение типов](Explicit-type-conversion.md)
 
-[![ico25] Неявное приведение типов](Implicit-type-conversion)
+[![ico25] Неявное приведение типов](Implicit-type-conversion.md)
 
 _____________________________________________________________
 

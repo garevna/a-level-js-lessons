@@ -13,6 +13,8 @@
 * [Функции](../md/function.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#function)
 * [Методы](../md/method.md)
+* [Работа со строками](../md/Strings-methods.md)
+* [Методы массивов](../md/Array-methods.md)
 
 <table><tr>
 <td>Методы строк</td><td>Методы массивов</td></tr>

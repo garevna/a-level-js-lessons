@@ -76,7 +76,7 @@ var str = "ХОРОШО"
 console.log ( str.charAt ( 4 ) )   //  Ш
 ```
 
-***
+_____________________________________________________________
 
 * [`charCodeAt()`](Strings-methods-charCodeAt)
 * [`repeat()`](Strings-methods-repeat)
@@ -88,7 +88,7 @@ console.log ( str.charAt ( 4 ) )   //  Ш
 * [`String.fromCharCode()`](String-fromCharCode)
 * [`Переменные в литералах`](Strings-vars-and-literals)
 
-***
+________________________________________________________
 
 #### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
 
