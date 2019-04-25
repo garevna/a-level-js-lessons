@@ -24,7 +24,6 @@
 </tr></table>
 
 [<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
-[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
 [<sup>slice()</sup>](Strings-methods-slice.md)<br/>
 [<sup>substring()</sup>](Strings-methods-substring.md)<br/>
 [<sup>substr()</sup>](Strings-methods-substr.md)<br/>
@@ -33,7 +32,7 @@
 [<sup>split()</sup>](Strings-methods-split.md)<br/>
 [<sup>trim()</sup>](Strings-methods-trim.md)<br/>
 [<sup>charAt()</sup>](Strings-methods-charAt.md)<br/>
-[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt.md)<br/>
+[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt.md)
 
 ___________________________________________________________________
 

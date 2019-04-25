@@ -55,7 +55,8 @@ console.log ( str_1 + str_2 )
 Привет, студент
 ```
 
-[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+### ![dir-25] Методы строк
+
 [<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
 [<sup>slice()</sup>](Strings-methods-slice.md)<br/>
 [<sup>substring()</sup>](Strings-methods-substring.md)<br/>

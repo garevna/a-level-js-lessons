@@ -24,7 +24,6 @@
 </tr></table>
 
 [<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
-[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
 [<sup>slice()</sup>](Strings-methods-slice.md)<br/>
 [<sup>substring()</sup>](Strings-methods-substring.md)<br/>
 [<sup>substr()</sup>](Strings-methods-substr.md)<br/>

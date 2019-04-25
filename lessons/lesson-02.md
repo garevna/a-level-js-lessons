@@ -21,7 +21,6 @@
 <tr><td width="200">
 
 [<sup>indexOf()</sup>](../md/Strings-methods-indexOf.md)<br/>
-[<sup>indexOf()</sup>](../md/Strings-methods-indexOf.md)<br/>
 [<sup>slice()</sup>](../md/Strings-methods-slice.md)<br/>
 [<sup>substring()</sup>](../md/Strings-methods-substring.md)<br/>
 [<sup>substr()</sup>](../md/Strings-methods-substr.md)<br/>
