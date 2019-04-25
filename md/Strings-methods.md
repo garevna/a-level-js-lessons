@@ -75,8 +75,8 @@ ______________________________________________________________
 
 ### ![ico25] Дополнительно
 
-* [`String.fromCharCode()`](String-fromCharCode)
-* [`Переменные в литералах`](Strings-vars-and-literals)
+[<sup>String.fromCharCode()</sup>](String-fromCharCode.md)<br/>
+[<sup>Переменные в литералах</sup>](Strings-vars-and-literals.md)
 
 _____________________________________________________________
 
