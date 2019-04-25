@@ -17,7 +17,7 @@
   <td width="800"><h2>Итерирующие методы массивов</h2></td>
   <td>
 
-  ![me40] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup></td>
+  ![me30] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup></td>
 </tr></table>
 
 * [`entries()`](Array.prototype.entries.md)

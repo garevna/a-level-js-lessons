@@ -17,7 +17,7 @@
   <td width="800"><h2>Методы массивов</h2></td>
   <td>
 
-  ![me40] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
+  ![me30] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
 </tr></table>
 
 ### ![ico25] pop ()
