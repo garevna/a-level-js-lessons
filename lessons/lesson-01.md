@@ -1,5 +1,6 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 
 #### Занятие 1
 
@@ -22,8 +23,8 @@
 
 _________________________________________________________________________
 
-* [![link-20] <sup>Infinity</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
-* [![link-20] <sup>Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
+* [<sup>![link-20] Infinity</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
+* [<sup>![link-20] Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
 
 _________________________________________________________________________
 
