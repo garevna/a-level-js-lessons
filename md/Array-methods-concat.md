@@ -20,8 +20,6 @@
   ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
 </tr></table>
 
-## ![me30] Методы массивов
-
 * [`pop()`](Array-methods-pop.md)
 * [`push()`](Array-methods-push.md)
 * [`splice()`](Array-methods-splice.md)
