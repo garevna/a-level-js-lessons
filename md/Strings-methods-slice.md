@@ -23,8 +23,7 @@
   ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
 </tr></table>
 
-[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
-[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)
 
 ___________________________________________________________________
 
