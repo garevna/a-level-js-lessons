@@ -10,10 +10,16 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-[apple]: https://github.com/garevna/a-level-js-lessons/blob/master/ico/other/apple.png?raw=true
+<table><tr><td width="50">
 
+![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>Условные операторы</h2></td>
+  <td>
 
-# ![ico25] Условные операторы
+  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 
 Обычная последовательность выполнения кода соответствует порядку следования команд:
 
