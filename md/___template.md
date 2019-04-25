@@ -1,5 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
 [debagger]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/debagger-20.png "Resume script execution F8 Ctrl+\"
 [reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png

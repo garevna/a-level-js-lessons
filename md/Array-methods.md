@@ -1,5 +1,5 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
 <table><tr><td width="50">
@@ -9,7 +9,7 @@
   <td width="800"><h2>Методы массивов</h2></td>
   <td>
 
-  ![me30] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
+  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
 </tr></table>
 
 * [`pop()`](Array-methods-pop)
