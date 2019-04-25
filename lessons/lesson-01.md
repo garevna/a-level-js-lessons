@@ -5,8 +5,10 @@
 #### Занятие 1
 
 * [Блок-схема алгоритма](../md/Block-diagram.md)
-* [Developer Tools](../md/developer-tools.md)
-* [Chrome DevTools](../md/chrome-dev-tools.md)
+    * [![](https://github.com/garevna/a-level-js-lessons/blob/master/ico/youtube-25.png?raw=true) Видосик](https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be)
+* Debagger
+    * [Developer Tools](../md/developer-tools.md)
+    * [Chrome DevTools](../md/chrome-dev-tools.md)
 * [Переменные](../md/var.md)
 * [Оператор `typeof`](../md/typeof.md)
 * [`NaN`](../md/NaN-null-Infinity.md#NaN) [`null`](../md/NaN-null-Infinity.md#null) [`Infinity`](../md/NaN-null-Infinity.md#Infinity)
