@@ -24,6 +24,18 @@
 </tr></table>
 
 
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>slice()</sup>](Strings-methods-slice.md)<br/>
+[<sup>substring()</sup>](Strings-methods-substring.md)<br/>
+[<sup>substr()</sup>](Strings-methods-substr.md)<br/>
+[<sup>toLowerCase()</sup>](Strings-methods-toLowerCase.md)<br/>
+[<sup>toUpperCase()</sup>](Strings-methods-toUpperCase.md)<br/>
+[<sup>split()</sup>](Strings-methods-split.md)<br/>
+[<sup>trim()</sup>](Strings-methods-trim.md)
+
+___________________________________________________________________
+
+
 ### ![ico20] charAt()
 
 Возвращает символ, находящийся в заданной аргументом позиции строки
@@ -37,10 +49,10 @@ console.log ( str.charAt ( 4 ) )   //  Ш
 
 _____________________________________________________________
 
-[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt)<br>
-[<sup>repeat()</sup>](Strings-methods-repeat)<br>
-[<sup>replace()</sup>](Strings-methods-replace)<br>
-[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd)<br>
+[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt.md)<br/>
+[<sup>repeat()</sup>](Strings-methods-repeat.md)<br/>
+[<sup>replace()</sup>](Strings-methods-replace.md)<br/>
+[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd.md)
 
 ___________________________________________________________________
 
