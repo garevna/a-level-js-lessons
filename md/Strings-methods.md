@@ -55,21 +55,20 @@ console.log ( str_1 + str_2 )
 Привет, студент
 ```
 
-### ![dir-25] Методы строк
-
-* [`indexOf()`](Strings-methods-indexOf.md)
-* [`slice()`](Strings-methods-slice.md)
-* [`substring()`](Strings-methods-substring.md)
-* [`substr()`](Strings-methods-substr.md)
-* [`toLowerCase()`](Strings-methods-toLowerCase.md)
-* [`toUpperCase()`](Strings-methods-toUpperCase.md)
-* [`split()`](Strings-methods-split.md)
-* [`trim()`](Strings-methods-trim.md)
-* [`charAt()`](Strings-methods-charAt.md)
-* [`charCodeAt()`](Strings-methods-charCodeAt.md)
-* [`repeat()`](Strings-methods-repeat.md)
-* [`replace()`](Strings-methods-replace.md)
-* [`padStart & padEnd`](Strings-methods-padStart-padEnd.md)
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>slice()</sup>](Strings-methods-slice.md)<br/>
+[<sup>substring()</sup>](Strings-methods-substring.md)<br/>
+[<sup>substr()</sup>](Strings-methods-substr.md)<br/>
+[<sup>toLowerCase()</sup>](Strings-methods-toLowerCase.md)<br/>
+[<sup>toUpperCase()</sup>](Strings-methods-toUpperCase.md)<br/>
+[<sup>split()</sup>](Strings-methods-split.md)<br/>
+[<sup>trim()</sup>](Strings-methods-trim.md)<br/>
+[<sup>charAt()</sup>](Strings-methods-charAt.md)<br/>
+[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt.md)<br/>
+[<sup>repeat()</sup>](Strings-methods-repeat.md)<br/>
+[<sup>replace()</sup>](Strings-methods-replace.md)<br/>
+[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd.md)
 
 ______________________________________________________________
 

@@ -24,15 +24,15 @@
 </tr></table>
 
 
-[<sup>indexOf()</sup>](Strings-methods-indexOf)<br>
-[<sup>slice()</sup>](Strings-methods-slice)<br>
-[<sup>substring()</sup>](Strings-methods-substring)<br>
-[<sup>substr()</sup>](Strings-methods-substr)<br>
-[<sup>toLowerCase()</sup>](Strings-methods-toLowerCase)<br>
-[<sup>toUpperCase()</sup>](Strings-methods-toUpperCase)<br>
-[<sup>split()</sup>](Strings-methods-split)<br>
-[<sup>trim()</sup>](Strings-methods-trim)<br>
-[<sup>charAt()</sup>](Strings-methods-charAt)
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br>
+[<sup>slice()</sup>](Strings-methods-slice.md)<br>
+[<sup>substring()</sup>](Strings-methods-substring.md)<br>
+[<sup>substr()</sup>](Strings-methods-substr.md)<br>
+[<sup>toLowerCase()</sup>](Strings-methods-toLowerCase.md)<br>
+[<sup>toUpperCase()</sup>](Strings-methods-toUpperCase.md)<br>
+[<sup>split()</sup>](Strings-methods-split.md)<br>
+[<sup>trim()</sup>](Strings-methods-trim.md)<br>
+[<sup>charAt()</sup>](Strings-methods-charAt.md)
 
 ___________________________________________________________________
 
@@ -56,14 +56,14 @@ console.log ( str.charCodeAt ( 4 ) )  //  53
 
 ___________________________________________________________________
 
-[<sup>repeat()</sup>](Strings-methods-repeat)<br>
-[<sup>replace()</sup>](Strings-methods-replace)<br>
-[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd)
+[<sup>repeat()</sup>](Strings-methods-repeat.md)<br>
+[<sup>replace()</sup>](Strings-methods-replace.md)<br>
+[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd.md)
 
 ___________________________________________________________________
 
-[![link-20] String Methods](https://www.w3schools.com/js/js_string_methods.asp "Открывайте в новой вкладке")<br>
-[![link-20] String Reference](https://www.w3schools.com/jsref/jsref_obj_string.asp "Открывайте в новой вкладке")
+[![link-20] <sup><b>String Methods</b></sup>](https://www.w3schools.com/js/js_string_methods.asp "Открывайте в новой вкладке")<br>
+[![link-20] <sup><b>String Reference</b></sup>](https://www.w3schools.com/jsref/jsref_obj_string.asp "Открывайте в новой вкладке")
 
 ___________________________________________________________________
 

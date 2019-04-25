@@ -1,17 +1,36 @@
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы работы со строками
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
-:file_folder: `Операции со строками`
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 
-* [`+`](Strings-methods-concat)
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 
-:file_folder: `Методы строк`
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
 
-* [`indexOf()`](Strings-methods-indexOf)
-* [`slice()`](Strings-methods-slice)
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 
-***
 
-### substring()
+
+<table><tr><td width="50">
+
+![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
+  </td>
+  <td width="800"><h2>Методы строк</h2></td>
+  <td>
+
+  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
+</tr></table>
+
+
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>indexOf()</sup>](Strings-methods-indexOf.md)<br/>
+[<sup>slice()</sup>](Strings-methods-slice.md)<br/>
+
+___________________________________________________________________
+
+### ![ico25] substring()
 
 Извлекает подстроку из строки
 
@@ -29,29 +48,19 @@
 "Хорошего дня".substring ( 9 )    // "дня"
 ```
 
-***
+___________________________________________________________________
 
-* [`substr()`](Strings-methods-substr)
-* [`toLowerCase()`](Strings-methods-toLowerCase)
-* [`toUpperCase()`](Strings-methods-toUpperCase)
-* [`split()`](Strings-methods-split)
-* [`trim()`](Strings-methods-trim)
-* [`charAt()`](Strings-methods-charAt)
-* [`charCodeAt()`](Strings-methods-charCodeAt)
-* [`repeat()`](Strings-methods-repeat)
-* [`replace()`](Strings-methods-replace)
-* [`padStart & padEnd`](Strings-methods-padStart-padEnd)
+[<sup>substr()</sup>](Strings-methods-substr.md)<br/>
+[<sup>toLowerCase()</sup>](Strings-methods-toLowerCase.md)<br/>
+[<sup>toUpperCase()</sup>](Strings-methods-toUpperCase.md)<br/>
+[<sup>split()</sup>](Strings-methods-split.md)<br/>
+[<sup>trim()</sup>](Strings-methods-trim.md)<br/>
+[<sup>charAt()</sup>](Strings-methods-charAt.md)<br/>
+[<sup>charCodeAt()</sup>](Strings-methods-charCodeAt.md)<br/>
+[<sup>repeat()</sup>](Strings-methods-repeat.md)<br/>
+[<sup>replace()</sup>](Strings-methods-replace.md)<br/>
+[<sup>padStart & padEnd</sup>](Strings-methods-padStart-padEnd.md)
 
-:file_folder:` Дополнительно`
+______________________________________________________________
 
-* [`String.fromCharCode()`](String-fromCharCode)
-* [`Переменные в литералах`](Strings-vars-and-literals)
-
-***
-
-#### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
-
-***
-
-| [:link:` MDN`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String "Открывайте в новой вкладке") | [:link:` String Methods`](https://www.w3schools.com/js/js_string_methods.asp "Открывайте в новой вкладке") | [:link:` String Reference`](https://www.w3schools.com/jsref/jsref_obj_string.asp "Открывайте в новой вкладке") |
-|-|-|-|
+![footer]

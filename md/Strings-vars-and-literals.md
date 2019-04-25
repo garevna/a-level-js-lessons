@@ -1,40 +1,42 @@
-# <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Методы работы со строками
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
-:file_folder: `Операции со строками`
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 
-* [`+`](Strings-methods-concat)
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 
-:file_folder: `Методы строк`
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
 
-* [`indexOf()`](Strings-methods-indexOf)
-* [`slice()`](Strings-methods-slice)
-* [`substring()`](Strings-methods-substring)
-* [`substr()`](Strings-methods-substr)
-* [`toLowerCase()`](Strings-methods-toLowerCase)
-* [`toUpperCase()`](Strings-methods-toUpperCase)
-* [`split()`](Strings-methods-split)
-* [`trim()`](Strings-methods-trim)
-* [`charAt()`](Strings-methods-charAt)
-* [`charCodeAt()`](Strings-methods-charCodeAt)
-* [`repeat()`](Strings-methods-repeat)
-* [`replace()`](Strings-methods-replace)
-* [`padStart & padEnd`](Strings-methods-padStart-padEnd)
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 
-:file_folder:` Дополнительно`
+[yes-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-30.png
 
-* [`String.fromCharCode()`](String-fromCharCode)
 
-***
 
-## Переменные в литералах
+<table><tr><td width="50">
 
-:heavy_exclamation_mark: Литерал строки заворачивается в символы обратных кавычек ( **`** )
+![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
+  </td>
+  <td width="800"><h2>Методы работы со строками</h2></td>
+  <td>
+
+  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
+</tr></table>
+
+
+___________________________________________________________________
+
+### ![dir-25] Переменные в литералах
+
+![yes-30] Литерал строки заворачивается в символы обратных кавычек ( **`** )
 
 Литерал может содержать многострочный текст,
 
 т.е. в литерал можно вставлять символ перевода строки
 
-:coffee: :one:
+#### ![cap-25] 1
 
 ```javascript
 var str = "\nПривет,\nменя зовут Дима\n"
@@ -63,11 +65,11 @@ console.log ( lit.charCodeAt (0) )
 
 Но это не все достоинства литерала
 
-***
+_____________________________________
 
 Конструкция **_`${ имя_переменной }`_** позволяет вставлять значения переменных непосредственно в литерал строки
 
-:coffee: :two:
+#### ![cap-25] 2
 
 ```javascript
 var cities = [ "Неаполь", "Вашингтон", "Женева" ]
@@ -87,11 +89,11 @@ for ( var i = 0; i < cities.length; i++ ) {
 3: Женева
 ```
 
-***
+_____________________________________
 
 Можно использовать выражения, значения которых будут вычислены и вставлены в литерал:
 
-:coffee: :three:
+#### ![cap-25] 3
 
 ```javascript
 var cities = [
@@ -115,9 +117,9 @@ console.log ( str )
 
 <img width="450" src="https://lh6.googleusercontent.com/DhqLf_YtZbWoqFT2BRMswxpt1ccotkTUkYbVB4r4IUpctgrEuOTJuhycbk4-MaonVYwNzUZvg2hX0h65a75whcI3wem8JzW5Jpmym0Fl1PlNnapQWbabWRZMXeGvKFc0h5RFFld5c28Ku7M"/>
 
-***
+_____________________________________
 
-:coffee: :four:
+#### ![cap-25] 4
 
 Можно сгенерировать случайное значение цвета в шестнадцатеричном формате
 
@@ -142,9 +144,9 @@ var color = `#${red}${green}${blue}`
 
 Теперь в переменной **`color`** будет строка, содержащая значение цвета в шестнадцатеричном формате
 
-***
+_____________________________________
 
-:coffee: :five:
+#### ![cap-25] 5
 
 Можно сгенерировать случайное значение цвета с использованием функции **`rgb()`**
 
@@ -159,11 +161,6 @@ var color = `rgb(${red},${green},${blue})`
 
 Теперь в переменной **`color`** будет строка, содержащая значение цвета в модели **`rgb`** с десятичными значениями цвета в каналах
 
-***
+______________________________________________________________
 
-#### [:briefcase: Тесты](https://garevna.github.io/js-quiz/#stringMethods)
-
-***
-
-| [:link:` MDN`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String "Открывайте в новой вкладке") | [:link:` String Methods`](https://www.w3schools.com/js/js_string_methods.asp "Открывайте в новой вкладке") | [:link:` String Reference`](https://www.w3schools.com/jsref/jsref_obj_string.asp "Открывайте в новой вкладке") |
-|-|-|-|
+![footer]
