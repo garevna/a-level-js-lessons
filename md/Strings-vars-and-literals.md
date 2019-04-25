@@ -11,6 +11,8 @@
 
 [link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 
+[dir-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-25.png
+
 [yes-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-30.png
 
 
