@@ -12,12 +12,12 @@
 
 <table><tr><td width="50">
 
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-01.md)</sup>
+![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
   </td>
   <td width="800"><h2>Методы массивов</h2></td>
   <td>
 
-  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
+  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
 </tr></table>
 
 ### ![ico25] pop ()
