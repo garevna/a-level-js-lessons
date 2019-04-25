@@ -10,7 +10,15 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-# ![me30] [Итерирующие методы массивов](../lesson-09.md)
+<table><tr><td width="50">
+
+![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup>
+  </td>
+  <td width="800"><h2>Итерирующие методы массивов</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup></td>
+</tr></table>
 
 * [`entries()`](Array.prototype.entries.md)
 

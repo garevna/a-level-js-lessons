@@ -5,19 +5,29 @@
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
 [warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 [err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 [yt-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-30.png
 
-# ![me30] [Итерирующие методы массивов](../lesson-09.md)
+<table><tr><td width="50">
+
+![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup>
+  </td>
+  <td width="800"><h2>Итерирующие методы массивов</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup></td>
+</tr></table>
+
 
 #### ![cap-30] 1
 
-[:link: Перейдите по ссылке](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
+[![link-20] Перейдите по ссылке](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
 
 В консоли новой вкладки выполните код:
+
 ```javascript
 location.search.slice(1).split(',')
         .map ( x => Object.assign ( {},
@@ -30,7 +40,7 @@ _____________________________________________________________________________
 
 #### ![cap-30] 2
 
-[:link: Перейдите по ссылке](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
+[![link-20] Перейдите по ссылке](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
 
 Теперь в консоли новой вкладки объявите функцию:
 
@@ -78,3 +88,7 @@ changeClass ( "graf", "background-color: red!important;" )
 ```
 
 [![yt-30]](https://youtu.be/vL6n7hGvwSs)
+
+____________________________________________________________________________
+
+![footer]

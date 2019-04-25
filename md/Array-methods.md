@@ -2,7 +2,15 @@
 [me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 
-## ![me30] Методы массивов
+<table><tr><td width="50">
+
+![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>Методы массивов</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
 
 * [`pop()`](Array-methods-pop)
 * [`push()`](Array-methods-push)

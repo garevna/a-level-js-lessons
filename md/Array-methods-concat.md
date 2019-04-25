@@ -10,6 +10,16 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
+<table><tr><td width="50">
+
+![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-01.md)</sup>
+  </td>
+  <td width="800"><h2>Методы массивов</h2></td>
+  <td>
+
+  ![me40] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-01.md)</sup></td>
+</tr></table>
+
 ## ![me30] Методы массивов
 
 * [`pop()`](Array-methods-pop.md)
