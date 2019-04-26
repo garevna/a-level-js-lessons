@@ -3,7 +3,7 @@
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
-[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
 [link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
 [err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
@@ -74,17 +74,18 @@
 ![warn-25] Обязательный первый аргумент, передаваемый методу в момент вызова - функция
 
 ```javascript
-function func ( arrayElement ) {
+function example ( arrayElement ) {
     console.log ( arrayElement )
 }
 
-[ 7, "D", false ]
-    .forEach ( func )
+[ 7, "D", false ].forEach ( func )
 ```
 
-Обязательный формальный параметр функции ( **func** ) - текущее значение элемента массива ( **_arrayElement_** )
+Обязательный формальный параметр функции ( **example** ) - текущее значение элемента массива ( **_arrayElement_** )
 
-Функция ( назовем ее условно _callback_ ) будет вызвана на каждой итерации ( для каждого элемента массива )
+Функция **example** будет вызвана на каждой итерации ( для каждого элемента массива )
+
+_____________________________________
 
 #### ![cap-25] 1
 
@@ -128,6 +129,8 @@ arr.sampleMethod ( test )
 Функция, передаваемая методу, может иметь больше формальных параметров,<br/>
 но остальные два являются опциональными ( необязательными )
 
+_____________________________________
+
 #### ![cap-25] 2
 
 второй параметр - идекс текущего элемента массива
@@ -153,6 +156,8 @@ Array.prototype.sampleMethod = function ( callback ) {
 
 console.log ( arr.sampleMethod ( test ) )
 ```
+
+_____________________________________
 
 #### ![cap-25] 3
 
