@@ -1,21 +1,22 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
 [warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
 [link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
 [err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
+| ![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup> | <h2>Итерирующие методы массивов</h2>![space-800]<sup><sup>[entries()](Array.prototype.entries.md) • [every()](Array.prototype.every.md) • [filter()](Array.prototype.filter.md) • [find()](Array.prototype.find.md) • [findIndex()](Array.prototype.findIndex.md) • [flatMap()](Array.prototype.flatMap.md) • [forEach()](Array.prototype.forEach.md) • [keys()](Array.prototype.keys.md) • [map()](Array.prototype.map.md) • [reduce()](Array.prototype.reduce.md) • [reduceRight()](Array.prototype.reduceRight.md) • [some()](Array.prototype.some.md) • [sort()](Array.prototype.sort.md) • [values()](Array.prototype.values.md)</sup></sup> | ![me] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup> |
+|-|-|-|
 
-# ![me30] [Итерирующие методы массивов](../lesson-09.md)
+## ![ico25] Принцип работы итерирующих методов массивов
 
-Выведя в консоль свойство **_`prototype`_** конструктора массивов, можно убедиться,
-что эти структуры данных наследуют много методов,
-и некоторые из них мы уже знаем
+Выведя в консоль свойство **_`prototype`_** конструктора массивов, можно убедиться, что эти структуры данных наследуют много методов, и некоторые из них мы уже знаем
 
 ###### Array.prototype
 
@@ -65,31 +66,12 @@
 
 В процессе перебора значений происходит вызов указанной нами функции, которая и получает очередной элемент массива в качестве аргумента
 
-### Методы массивов
+Группа итерирующих методов массивов - пример реализации функциональной парадигмы в ООП
 
-| Обычные | Итерирующие |
-|-|-|
-| `concat` | `entries` |
-| `copyWithin` | `every` |
-| `fill` | `filter` |
-| `flat` :warning: | `find` |
-| `includes` | `findIndex` |
-| `indexOf` | `flatMap` :warning: |
-| `join` | `forEach` |
-| `lastIndexOf` | `keys` |
-| `pop` | `map` |
-| `push` | `reduce` |
-| `reverse` | `reduceRight` |
-| `shift` | `some` |
-| `slice` | `sort` |
-| `splice` | `values` |
-| `unshift` |  |
+> <sup>Точнее, mix двух парадигм программирования</sup><br/>
+><sup> Mix - потому что мы передаем этим методам в аргументах не только функцию, но и ссылку на объект</sup>
 
-Группа итерирующих методов массивов - пример реализации функциональной парадигмы в ООП<br/>
->> Точнее, mix двух парадигм программирования<br/>
->> Mix - потому что мы передаем этим методам в аргументах не только функцию, но и ссылку на объект
-
-Обязательный первый аргумент, передаваемый методу в момент вызова - функция
+![warn-25] Обязательный первый аргумент, передаваемый методу в момент вызова - функция
 
 ```javascript
 function func ( arrayElement ) {
@@ -104,7 +86,9 @@ function func ( arrayElement ) {
 
 Функция ( назовем ее условно _callback_ ) будет вызвана на каждой итерации ( для каждого элемента массива )
 
-###### :coffee: Принцип работы итерирующих методов
+#### ![cap-25] 1
+
+Принцип работы итерирующих методов
 
 ```javascript
 var arr = [ "google", "service", "user" ]
@@ -144,7 +128,9 @@ arr.sampleMethod ( test )
 Функция, передаваемая методу, может иметь больше формальных параметров,<br/>
 но остальные два являются опциональными ( необязательными )
 
-###### :coffee: :one: второй параметр - идекс текущего элемента массива
+#### ![cap-25] 2
+
+второй параметр - идекс текущего элемента массива
 
 ```javascript
 var arr = [ "google", "service", "user" ]
@@ -168,7 +154,9 @@ Array.prototype.sampleMethod = function ( callback ) {
 console.log ( arr.sampleMethod ( test ) )
 ```
 
-###### :coffee: :two: третий параметр - ссылка на итерируемый массив
+#### ![cap-25] 3
+
+третий параметр - ссылка на итерируемый массив
 
 ```javascript
 var arr = [ "google", "service", "user", 0, false ]
@@ -197,7 +185,9 @@ Array.prototype.sampleMethod = function ( callback ) {
 arr.sampleMethod ( test )
 ```
 
-###### :coffee: :three:
+_____________________________________
+
+#### ![cap-25] 4
 
 Функция, передаваемая методу в качестве первого аргумента, может быть анонимной, объявленной непосредственно в вызове метода
 ```javascript
@@ -225,6 +215,8 @@ numbers.sampleMethod (
 )
 ```
 
+___________________________________________________________________
+
 ## Передача контекста
 
 Кроме обязательного первого аргумента - ссылки на функцию  
@@ -233,7 +225,7 @@ numbers.sampleMethod (
 
 ( т.е. внутри метода  `this`  будет указывать на этот объект )
 
-###### :coffee: :four:
+#### ![cap-25] 5
 
 ```javascript
 var numbers = [ 8, 4, 9, 7 ]
@@ -264,6 +256,10 @@ var sample = numbers.sampleMethod (
 ```
 
 Итак, функция **sample** получает в переменной **_arr_** ссылку на исходный массив **numbers**, а **_`this`_** внутри функции **sample** указывает на массив **alter**
+
+____________________________________________________________________________
+
+#### [![hw-30] Тесты](https://garevna.github.io/js-quiz/#arrayIterationMethods)
 
 _________________________________________________________________________
 
