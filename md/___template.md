@@ -65,6 +65,8 @@
 [super-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-25.png
 [super-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-30.png
 
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
+
 ________________________________________________________
 
 ### Шаблон шапки темы:
