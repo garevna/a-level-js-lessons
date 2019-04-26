@@ -42,14 +42,14 @@ var elem = myArray.pop ()
 
 _______________________________________________________________________________________
 
-* [`push()`](Array-methods-push.md)
-* [`splice()`](Array-methods-splice.md)
-* [`shift()`](Array-methods-shift.md)
-* [`unshift()`](Array-methods-unshift.md)
-* [`slice()`](Array-methods-slice.md)
-* [`concat()`](Array-methods-concat.md)
-* [`join()`](Array-methods-join.md)
-* [`includes()`](Array-methods-includes.md)
+[<sup>push()</sup>](Array-methods-push.md)<br>
+[<sup>splice()</sup>](Array-methods-splice.md)<br>
+[<sup>shift()</sup>](Array-methods-shift.md)<br>
+[<sup>unshift()</sup>](Array-methods-unshift.md)<br>
+[<sup>slice()</sup>](Array-methods-slice.md)<br>
+[<sup>concat()</sup>](Array-methods-concat.md)<br>
+[<sup>join()</sup>](Array-methods-join.md)<br>
+[<sup>includes()</sup>](Array-methods-includes.md)
 
 ______________________________________________________________________________________________
 
