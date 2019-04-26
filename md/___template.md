@@ -67,6 +67,10 @@
 
 [space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
+[yt-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-20.png
+[yt-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-25.png
+[yt-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-30.png
+
 ________________________________________________________
 
 ### Шаблон шапки темы:

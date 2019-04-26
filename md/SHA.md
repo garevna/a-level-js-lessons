@@ -1,6 +1,30 @@
-## <img src="https://avatars2.githubusercontent.com/u/19735284?s=40&v=4" width="30" title="Ⓒ Irina Fylyppova ( garevna ) 2019"/> Secure Hash Algorithm
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
+[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
+[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[yt-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-25.png
+[git-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-20.png
+[git-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-25.png
+[git-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-30.png
+[bash-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-20.png
+[bash-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-25.png
+[bash-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-30.png
+[bash-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-40.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-###### криптографический алгоритм компьютерной безопасности
+| ![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup> | <h2>Secure Hash Algorithm</h2>![space-800] <sup>криптографический алгоритм компьютерной безопасности<sup> | ![me] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup> |
+|-|-|-|
+
+
+######
 
 Алгоритм генерирует криптографический хэш ( «дайджест» )
 
@@ -8,64 +32,69 @@
 
 Алгоритм SHA не является «шифрованием»
 
-:warning: он не может быть расшифрован обратно к исходному тексту
+![warn-25] он не может быть расшифрован обратно к исходному тексту
 
 это «односторонняя» криптографическая функция
 
 она возвращает цифровую подпись фиксированного размера для любого размера исходного текста
 
->> Создан Агентством национальной безопасности США
+>> <sup>Создан Агентством национальной безопасности США</sup>
 
->> * SHA-0 - в 1993 году
->> * SHA-1 - в 1995 году
->> * SHA-2 - в 2002 году
+>> <sup> SHA-0 - в 1993 году</sup><br>
+>> <sup> SHA-1 - в 1995 году</sup><br>
+>> <sup> SHA-2 - в 2002 году</sup>
 
-    является частью стандарта цифровой подписи ( DSS )
-***
-## :mortar_board: SHA-1
+>> <sup> является частью стандарта цифровой подписи ( DSS )</sup>
 
-    генерирует почти уникальную 160-битную ( 20-байтную ) подпись для текста
+______________________________________________________________
 
-:coffee:
-    Например, для исходного текста:
+## ![ico20] SHA-1
+
+генерирует почти уникальную 160-битную ( 20-байтную ) подпись для текста
+
+![cap-25]
+
+<sup>Например, для исходного текста:</sup>
+
 ```javascript
 for ( var x of arr ) {
      console.log ( x )
 }
 ```
-криптографический хэш SHA-1 будет:
 
-    15E84BC669EC1F264F68CF0329A3DE12788EBC7D
+<sup>криптографический хэш SHA-1 будет:</sup>
 
-а  SHA-2 ( SHA256 ):
+```
+15E84BC669EC1F264F68CF0329A3DE12788EBC7D
+```
 
-    B731057D4688C1BCE4E6D7213027AA5F9E30939456B222E4FFF74FA0CD399D4F
+<sup>а  SHA-2 ( SHA256 ):</sup>
 
->> **git** широко использует хэши **SHA-1** в качестве идентификаторов и проверок согласованности
+```
+B731057D4688C1BCE4E6D7213027AA5F9E30939456B222E4FFF74FA0CD399D4F
+```
 
-***
+>> <sup>**git** широко использует хэши **SHA-1** в качестве идентификаторов и проверок согласованности</sup>
 
-###### Онлайн-генераторы цифровой подписи SHA
+_____________________________________________________________________________
 
-| [:link:**SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [ :link: **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |
+### ![ico20] Онлайн-генераторы цифровой подписи SHA
+
+| [![link-20] **SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [![link-20] **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |
 |-|-|
 
-***
+_____________________________________________________________________________
 
-### :octocat: js-sha1
+## ![git-30] js-sha1
 
 Вы можете установить пакет [**`js-sha1`**](https://github.com/emn178/js-sha1 "repo") из _CDN_
 
-<table><tr>
-<td><img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" height="20"/></td>
-<td><code>
-$ npm install js-sha1
-</code></td>
-</tr></table>
+| ![bash-20] | ```$ npm install js-sha1``` |
+|-|-|
 
-***
+_____________________________________________________________________________
 
-### SHA256
+## ![ico20] SHA256
 
 Вы можете подключить скрипт **`sha256`** к своей странице:
 
@@ -79,18 +108,18 @@ $ npm install js-sha1
 var hash = Sha256.hash ( text )
 ```
 
-| [:coffee: :one:](https://garevna.github.io/js-samples/#07) |
+| [![cap-20] **1**](https://garevna.github.io/js-samples/#07) |
 |-|
 
 Кроме того, в <img src="https://github.com/garevna/js-course/blob/master/images/git-bush-ico.png?raw=true" height="20"/> **Bush** вы можете использовать консольную команду `sha256sum`
 
-###### sha256sum
+## ![ico20] sha256sum
 
 ![](https://lh4.googleusercontent.com/wM_pdlag2wymXBf0vtG0LDwLUPyKPmNI0Z8op0grW79K0LNzSzQMTdOx_1zQtT9Utj6VxtRtNEjJajYfCusV8LejAeXMvtOliRJG_T6btsIShVCe20WkxABN4P2K5zqwp6E9ORQpuRwKF4k)
 
-***
+______________________________________________________________________________
 
-### SHA384
+## ![ico20] SHA384
 
 Откройте пустое окно ( _blank_ )
 
@@ -99,6 +128,7 @@ var hash = Sha256.hash ( text )
 Создайте  фрагмент кода ( **snippet** ), как показано на видео [<img src="https://github.com/garevna/js-course/blob/master/pictures/logo_small_2x-vfl4_cFqn%5B1%5D.png?raw=true" height="22"/>](https://www.youtube.com/watch?v=xg9qsryE8Hk)
 
 Вставьте следующий код сниппета:
+
 ```javascript
 let script = document.createElement( 'script' )
 script.src = 'https://garevna.github.io/js-samples/js/testSHA384.js'
@@ -107,9 +137,9 @@ script.integrity = 'sha384-yXrIdlO1CBJknfDtCtDe2tmWWNl5xK30aTz62nLkEpEIBRD3OGi7+
 document.head.appendChild( script )
 ```
 
-***
+______________________________________________________________________________________________
 
-## :mortar_board: integrity
+## ![ico25] integrity
 
 **_Subresource Integrity_** ( **SRI** ) - это функция безопасности, которая позволяет браузерам проверять файлы, загружаемые из внешних источников ( например, из CDN )
 
@@ -125,22 +155,22 @@ document.head.appendChild( script )
 * Скопируйте значение атрибута **`integrity`**
 * Теперь вы сможете использовать его при динамической загрузке скриптов
 
-***
+_________________________________________________________________________________________________
 
-## :briefcase: Самостоятельная работа
+## ![hw-30] Самостоятельная работа
 
-Посмотрите код [:coffee: **примера**](https://garevna.github.io/js-samples/#09) в отладчике
+<sup>Посмотрите код [![cap-20] **примера**](https://garevna.github.io/js-samples/#09) в отладчике</sup>
 
-Установите **`breakpoints`**
+<sup>Установите **`breakpoints`**</sup>
 
-С помощью **`Watch`** отслеживайте, как изменяются значения массива  **_users_** и переменной **_user_**
+<sup>С помощью **`Watch`** отслеживайте, как изменяются значения массива  **_users_** и переменной **_user_**</sup>
 
 ###### Задание:
 
-* Создайте форму регистрации пользователя
-* Создайте страницу для зарегистрированных пользователей
+* <sup>Создайте форму регистрации пользователя</sup>
+* <sup>Создайте страницу для зарегистрированных пользователей</sup>
 
-> При регистрации пользователя должен генерироваться дайджест, который будет ключом записи в базе данных
+> <sup>При регистрации пользователя должен генерироваться дайджест, который будет ключом записи в базе данных</sup>
 
 ```javascript
 users = [
@@ -160,15 +190,19 @@ users = [
 ]
 ```
 
-Создайте форму для входа пользователя
+<sup>Создайте форму для входа пользователя</sup>
 
-После ввода _email_ нужно найти пользователя с таким _**email**_ и запросить пароль
+<sup>После ввода _email_ нужно найти пользователя с таким _**email**_ и запросить пароль</sup>
 
-После ввода пароля должен быть сгенерирован дайджест, который будет проверяться на совпадение со значением **_key_**
-найденного пользователя
+<sup>После ввода пароля должен быть сгенерирован дайджест, который будет проверяться на совпадение со значением **_key_**
+найденного пользователя</sup>
 
-Если значения не совпадут, нужно вывести предупреждение
+<sup>Если значения не совпадут, нужно вывести предупреждение</sup>
 
-Если значения совпали, то перейти на страницу для зарегистрированных пользователей
+<sup>Если значения совпали, то перейти на страницу для зарегистрированных пользователей</sup>
 
-На странице для зарегистрированных пользователей должно быть выведено имя пользователя и его аватар
+<sup>На странице для зарегистрированных пользователей должно быть выведено имя пользователя и его аватар</sup>
+
+_________________________________________________________________________
+
+![footer]
