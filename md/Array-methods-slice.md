@@ -10,21 +10,8 @@
 [err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 
-<table><tr><td width="50">
-
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
-  </td>
-  <td width="800"><h2>Методы массивов</h2></td>
-  <td>
-
-  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
-</tr></table>
-
-* [`pop()`](Array-methods-pop.md)
-* [`push()`](Array-methods-push.md)
-* [`splice()`](Array-methods-splice.md)
-* [`shift()`](Array-methods-shift.md)
-* [`unshift()`](Array-methods-unshift.md)
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup> | <h2>Методы массивов</h2><sup><img width="800"> [pop()](Array-methods-pop.md) • [push()](Array-methods-push.md) • [splice()](Array-methods-splice.md) • [shift()](Array-methods-shift.md) • [unshift()](Array-methods-unshift.md) • [slice()](Array-methods-slice.md) • [concat()](Array-methods-concat.md) • [join()](Array-methods-join.md) • [includes()](Array-methods-includes.md)</sup> | ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup> |
+|-|-|-|
 
 _______________________________________________________________________________________
 
@@ -72,11 +59,6 @@ var newDrinks = drinks.slice ( 2 )
 ```
 ( если опустить второй аргумент, то фрагмент будет взят до конца исходного массива )
 
-______________________________________________________________________________________
-
-* [`concat()`](Array-methods-concat.md)
-* [`join()`](Array-methods-join.md)
-* [`includes()`](Array-methods-includes.md)
 
 ______________________________________________________________________________________________
 

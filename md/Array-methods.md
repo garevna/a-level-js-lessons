@@ -1,30 +1,13 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
 [me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 
-<table><tr><td width="50">
-
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
-  </td>
-  <td width="800"><h2>Методы массивов</h2></td>
-  <td>
-
-  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
-</tr></table>
-
-* [`pop()`](Array-methods-pop)
-* [`push()`](Array-methods-push)
-* [`splice()`](Array-methods-splice)
-* [`shift()`](Array-methods-shift)
-* [`unshift()`](Array-methods-unshift)
-* [`slice()`](Array-methods-slice)
-* [`concat()`](Array-methods-concat)
-* [`join()`](Array-methods-join)
-* [`includes()`](Array-methods-includes)
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup> | <h2>Методы массивов</h2><sup><img width="800"> [pop()](Array-methods-pop.md) • [push()](Array-methods-push.md) • [splice()](Array-methods-splice.md) • [shift()](Array-methods-shift.md) • [unshift()](Array-methods-unshift.md) • [slice()](Array-methods-slice.md) • [concat()](Array-methods-concat.md) • [join()](Array-methods-join.md) • [includes()](Array-methods-includes.md)</sup> | ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup> |
+|-|-|-|
 
 ______________________________________________________________________________________________
 
-### [![hw-20] Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
+### [![hw-30] Тесты](https://garevna.github.io/js-quiz/#arrayMethods)
 
 _________________________________________________________________
 
