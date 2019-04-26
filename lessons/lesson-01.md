@@ -1,8 +1,12 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-#### Занятие 1
+| ![ico25] Занятие 1 ![space-800] | ![me] |
+|-|-|
 
 * [Блок-схема алгоритма](../md/Block-diagram.md)
     * [![](https://github.com/garevna/a-level-js-lessons/blob/master/ico/youtube-25.png?raw=true) Видосик](https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be)

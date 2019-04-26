@@ -1,12 +1,14 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 [hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
 [dir-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-20.png
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-
-#### Занятие 2
+| ![ico25] Занятие 2 ![space-800] | ![me] |
+|-|-|
 
 ![ico20] Приведение типов
 
