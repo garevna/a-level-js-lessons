@@ -1,36 +1,39 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
+[study]: https://github.com/garevna/a-level-js-lessons/blob/master/ico/study-20.png?raw=true
+[yt]: https://github.com/garevna/a-level-js-lessons/blob/master/ico/youtube-25.png?raw=true
 
-| ![ico25] Занятие 1 ![space-800] | ![me] |
-|-|-|
+[video]:      https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be
+[var]:       https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform
+[assigments]: https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform
+[typeof]:     https://docs.google.com/forms/d/e/1FAIpQLSdegQYfzld6s0CYJekJ2uvu84fUU2-BXiu7g9X2wzcutF1CWQ/viewform
+[logic]:      https://docs.google.com/forms/d/e/1FAIpQLSexcuOpJS2d0KNNU1qTUlD5Exnf0FGI9Wb9d2I5YvViwuSKDA/viewform
+[condition]:  https://docs.google.com/forms/d/e/1FAIpQLSds2Q8WyrfeDSN7dZd6F3v0HspdMQG9BPrV0d3SG3mOGh2rFw/viewform
+[increment]:  https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform  
+[length]:     https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform
+[for]:        https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform   
 
-* [Блок-схема алгоритма](../md/Block-diagram.md)
-    * [![](https://github.com/garevna/a-level-js-lessons/blob/master/ico/youtube-25.png?raw=true) Видосик](https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be)
-* Debagger
-    * [Developer Tools](../md/developer-tools.md)
-    * [Chrome DevTools](../md/chrome-dev-tools.md)
-* [Переменные](../md/var.md)
-* [Оператор `typeof`](../md/typeof.md)
-* [`NaN`](../md/NaN-null-Infinity.md#NaN) [`null`](../md/NaN-null-Infinity.md#null) [`Infinity`](../md/NaN-null-Infinity.md#Infinity)
-* [Структуры данных](../md/data-structures.md)
-* [Операторы присваивания](../md/Assignments.md)
-* [Логические выражения](../md/Boolean.md)
-* [Условные операторы](../md/Conditional-operators.md)
-* [Инкремент](../md/Increment.md)
-* [Свойство `length`](../md/length.md)
-* [Оператор цикла `for`](../md/for.md)
-* [UTF-8](../md/UTF-8.md)
-* [`BigInt` <sup>(ES10)</sup>](../md/BigInt.md)
-* [![hw-20] Homework](../md/hw-01.md)
+# ![ico25] Занятие 1
 
-_________________________________________________________________________
-
-* [<sup>![link-20] Infinity</sup>](https://www.w3schools.com/jsref/jsref_infinity.asp)
-* [<sup>![link-20] Equality in JavaScript</sup>](https://dorey.github.io/JavaScript-Equality-Table/unified/)
+| <sup>Чтиво</sup> | <sup>О чем</sup> | <sup>Тесты и прочее</sup> |
+|:-:|:-:|:-:|
+|[![study]](../md/Block-diagram.md)| Блок-схема алгоритма |[![yt]][video]|
+| [![study]](../md/developer-tools.md) | Developer Tools |
+| [![study]](../md/chrome-dev-tools.md) | Chrome DevTools |
+| [![study]](../md/var.md) | Переменные | [![hw-30]][var] |
+| [![study]](../md/typeof.md) | Оператор `typeof` | [![hw-30]][typeof] |
+| [![study]](../md/NaN-null-Infinity.md) | [`NaN`](../md/NaN-null-Infinity.md#NaN) [`null`](../md/NaN-null-Infinity.md#null) [`Infinity`](../md/NaN-null-Infinity.md#Infinity) |
+| [![study]](../md/data-structures.md) | Структуры данных |
+| [![study]](../md/Assignments.md) | Операторы присваивания | [![hw-30]][assigments] |
+| [![study]](../md/Boolean.md) | Логические выражения | [![hw-30]][logic] |
+| [![study]](../md/Conditional-operators.md) | Условные операторы | [![hw-30]][condition] |
+| [![study]](../md/Increment.md) | Инкремент | [![hw-30]][increment] |
+| [![study]](../md/length.md) | Свойство `length` | [![hw-30]][length] |
+| [![study]](../md/for.md) | Оператор цикла `for` | [![hw-30]][for] |
+| [![study]](../md/UTF-8.md) | UTF-8 |
+| [![study]](../md/BigInt.md) | `BigInt` <sup>(ES10)</sup> |
+|  | Домашка | [![hw-30]](../md/hw-01.md) |
 
 _________________________________________________________________________
 

@@ -1,28 +1,18 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
+[study]: https://github.com/garevna/a-level-js-lessons/blob/master/ico/study-30.png?raw=true
 
-| ![ico25] Занятие 3 ![space-800] | ![me] |
-|-|-|
+# ![ico25] Занятие 3
 
-
-* [Циклы `while` и `do...while`](../md/while.md)
-
-    * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#while)
-
-* [Циклы `for...of` и `for...in`](../md/for-of-and-for-in.md)
-
-    * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#for-in-for-of)
-
-* [Параметры по умолчанию](../md/default-params-values.md)
-
-* [Объект `function`](../md/function-object.md)
-
-[![hw-20] Практика](../md/practice-03.md)
-
-[![hw-20] Homework](https://github.com/garevna/js-course/wiki/hw-03)
+| <sup>Чтиво</sup> | <sup>О чем</sup> | <sup>Тесты</sup> |
+|:-:|:-:|:-:|
+| [![study]](../md/while.md) | Циклы `while` и `do...while` | [![hw-30]](https://garevna.github.io/js-quiz/#while) |
+| [![study]](../md/for-of-and-for-in.md) | Циклы `for...of` и `for...in` | [![hw-30]](https://garevna.github.io/js-quiz/#for-in-for-of) |
+| [![study]](../md/default-params-values.md) | Параметры функции по умолчанию |
+| [![study]](../md/function-object.md) | Объект `function` |
+|  | Практика | [![hw-30]](../md/practice-03.md) |
+|  | Домашка | [![hw-30]](https://github.com/garevna/js-course/wiki/hw-03) |
 
 _________________________________________________________________________
 
