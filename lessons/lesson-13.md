@@ -13,7 +13,7 @@
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#file-API)
 * [FormData](../md/FormData.md)
     * [![cap-20] Пример](../md/formData-sample.md)
-* [![hw-20] Homework](../md/hw-13.md)
+* [![hw-20] Homework](../homeworks/hw-13.md)
 
 _________________________________________________________________________
 

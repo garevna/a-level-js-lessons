@@ -12,7 +12,7 @@
 * [whenDefined](../md/whenDefined.md)
 * [&lt;template>](../md/template.md)
 * [![cap-20] Пример](https://github.com/garevna/game/wiki)
-* [![hw-20] Homework](../md/hw-17.md)
+* [![hw-20] Homework](../homeworks/hw-17.md)
 
 _________________________________________________________________________
 

@@ -12,7 +12,7 @@
 | [![study]](../md/default-params-values.md) | Параметры функции по умолчанию |
 | [![study]](../md/function-object.md) | Объект `function` |
 |  | Практика | [![hw-30]](../md/practice-03.md) |
-|  | Домашка | [![hw-30]](https://github.com/garevna/js-course/wiki/hw-03) |
+|  | Домашка | [![hw-30]](../homeworks/hw-03.md) |
 
 _________________________________________________________________________
 

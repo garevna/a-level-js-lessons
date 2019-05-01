@@ -12,7 +12,7 @@
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#closures)
 * [Рекурсия](../md/recursion.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#recursion)
-* [![hw-20] Homework](../md/hw-08.md)
+* [![hw-20] Homework](../homeworks/hw-08.md)
 
 _________________________________________________________________________
 

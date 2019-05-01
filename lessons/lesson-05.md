@@ -21,7 +21,7 @@
 | [![study]](../md/valueOf.md) | Метод valueOf | [![hw-30]](https://garevna.github.io/js-quiz/#valueOf) |
 | [![study]](../md/Error.md) | Конструктор Error |  |
 | [![study]](../md/switch.md) | Оператор switch | [![hw-30]](https://garevna.github.io/js-quiz/#switch) |
-|  | Домашка | [![hw-30]](../md/hw-05.md) |
+|  | Домашка | [![hw-30]](../homeworks/hw-05.md) |
 
 _________________________________________________________________________
 

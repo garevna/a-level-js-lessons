@@ -10,7 +10,7 @@
 * [cookie](../md/cookie.md)
 * [localStorage](../md/localStorage.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#localStorage)
-* [![hw-20] Homework](md/hw-12.md)
+* [![hw-20] Homework](../homeworks/hw-12.md)
 
 _________________________________________________________________________
 

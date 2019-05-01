@@ -10,7 +10,7 @@
 * [CSRF](../md/CSRF.md)
 * [Promise:small_red_triangle:](../md/Promise.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#promise)
-* [![hw-20] Homework](../md/hw-11.md)
+* [![hw-20] Homework](../homeworks/hw-11.md)
 
 _________________________________________________________________________
 

@@ -15,7 +15,7 @@
     * [static](../md/Class-static.md)
     * [ get & set ](../md/Class-get-set.md)
     * [![cap-20]](../md/Class-sample.md)
-* [![hw-20] Homework](../md/hw-15.md)
+* [![hw-20] Homework](../homeworks/hw-15.md)
 
 _________________________________________________________________________
 

@@ -7,7 +7,7 @@
 * [События  DOM](../md/Event.md)
 * [:mortar_board: Элементы форм](../md/forms.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#forms)
-* [![hw-20] Homework](../md/hw-07.md)
+* [![hw-20] Homework](../homeworks/hw-07.md)
 
 _________________________________________________________________________
 

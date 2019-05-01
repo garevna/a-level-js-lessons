@@ -9,7 +9,7 @@
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#destructuring)
 * [Генераторы и итераторы](../md/generators-and-iterators.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#gen)
-* [![hw-20] Homework](../md/hw-16.md)
+* [![hw-20] Homework](../homeworks/hw-16.md)
 
 _________________________________________________________________________
 

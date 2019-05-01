@@ -8,7 +8,7 @@
 * [Методы Object](../md/Object-static-props.md)
     * [![hw-20] Тесты](https://garevna.github.io/js-quiz/#Object)
     * [![hw-20] Object.create()](https://garevna.github.io/js-quiz/#Object.create)
-* [![hw-20] Homework](../md/hw-10.md)
+* [![hw-20] Homework](../homeworks/hw-10.md)
 
 _________________________________________________________________________
 

@@ -13,7 +13,7 @@
 * [![hw-20] JSON-placeholder](../md/JSON-placeholder.md)
 * [![hw-20] JSON-server](../md/JSON-server.md)
 * [![hw-20] fake chat](../md/Fake-chat.md)
-* [![hw-20] Homework](../md/hw-14.md)
+* [![hw-20] Homework](../homeworks/hw-14.md)
 
 _________________________________________________________________________
 
