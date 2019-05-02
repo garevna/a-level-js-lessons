@@ -1,29 +1,23 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
+[lesson]: ../lessons/lesson-02.md
 
-<table><tr><td width="50">
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**][lesson]</sup> | <h2>Явное приведение типов</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;2**][lesson]</sup> |
+|-|-|-|
 
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
-  </td>
-  <td width="800"><h2>Явное приведение типов</h2></td>
-  <td>
-
-  ![me40] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
-</tr></table>
-
-[Неявное приведение типов](Implicit-type-conversion)
-
-_____________________________________________________________
+_________________________________________________________________________
 
 | [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) |
 |-|-|-|-|
@@ -52,7 +46,7 @@ Number ( "туман" )
 
 что означает, что строка "туман" не может быть преобразована к числу
 
-#### ![cap-20] 3
+#### ![cap-25] 3
 
 ```javascript
 String ( 50 )   // "50"
@@ -60,7 +54,7 @@ String ( 50 )   // "50"
 
 вернет строку "50"
 
-#### ![cap-20] 4
+#### ![cap-25] 4
 
 ```javascript
 Boolean ( "50" )  // true
@@ -100,11 +94,11 @@ Number ( String.fromCharCode(13) )  // 0
 
 <sup>`String.fromCharCode( cod )` возвращает символ, код которого равен **cod**</sup>
 
-![warn-25] `Number ( true )`  вернет 1
+![warn] `Number ( true )`  вернет 1
 
-![warn-25] В случаях, когда преобразовать выражение к числу невозможно, результат будет  **`NaN`** ( `Not a Number` ):
+![warn] В случаях, когда преобразовать выражение к числу невозможно, результат будет  **`NaN`** ( `Not a Number` ):
 
-#### ![cap-20] 5
+#### ![cap-25] 5
 
 ```javascript
 Number ( undefined )
@@ -117,7 +111,7 @@ Number ( {} )
 
 ![warn-25]  Во всех остальных случаях результат будет  числом
 
-#### ![cap-20] 6
+#### ![cap-25] 6
 
 ```javascript
 Number ( 57 )            // вернет 57
@@ -131,7 +125,7 @@ Number( null - true )    // вернет -1
 
 В отличие от конструктора `Number`, эти функции парсят строку, даже если в ней есть "левые" символы после числа - эти символы просто будут проигнорированы:
 
-#### ![cap-20] 7
+#### ![cap-25] 7
 
 ```javascript
 Number ('3.14abc')      // NaN
@@ -152,9 +146,9 @@ ________________________________________________________
 | [`string`](#string) | [`number`](#number) | [`object`](#object) |
 |-|-|-|
 
-![warn-25] Во всех нижеперечисленных случаях результат будет  `false`:
+![warn] Во всех нижеперечисленных случаях результат будет  `false`:
 
-#### ![cap-20] 8
+#### ![cap-25] 8
 
 ```javascript
 Boolean ( "" )
@@ -166,7 +160,7 @@ Boolean ( undefined )
 Boolean ( false )
 ```
 
-![warn-25] Во всех остальных случаях результат будет  `true`
+![warn] Во всех остальных случаях результат будет  `true`
 
 При приведении строки к булевому типу действует простое правило:
 
@@ -180,7 +174,7 @@ _________________________________________________________
 | [`number`](#number) | [`boolean`](#boolean) | [`object`](#object) |
 |-|-|-|
 
-#### ![cap-20] 9
+#### ![cap-25] 9
 
 ```javascript
 var str = String ( 5 + 8 + false )  //  "13"
@@ -198,7 +192,7 @@ String ( y )  //  "5,true,hello,11"
 
 <sup>Для того, чтобы получить строчное значение числа в двоичной системе исчисления, нужно передать методу `toString()` аргумент 2, в восьмеричной - 8, в шестнадцатеричной - 16</sup>
 
-#### ![cap-20] 10
+#### ![cap-25] 10
 
 ```javascript
 Number(2).toString(2)    // "10"
@@ -217,7 +211,7 @@ _____________________________________________________________
 | [`string`](#string) | [`number`](#number) | [`boolean`](#boolean) |
 |-|-|-|
 
-#### ![cap-20] 11
+#### ![cap-25] 11
 
 ```javascript
 Object ( 5 + 8 + false )
@@ -229,7 +223,7 @@ Object ( 5 + 8 + false )
     [[PrimitiveValue]]: 13
 ```
 
-#### ![cap-20] 12
+#### ![cap-25] 12
 
 ```javascript
 var x = 10
@@ -242,7 +236,7 @@ Object ( x )
     [[PrimitiveValue]]: 10
 ```
 
-#### ![cap-20] 13
+#### ![cap-25] 13
 
 ```javascript
 var y = [ 5, true, "hello", 11 ]
@@ -262,7 +256,7 @@ ________________________________________________________
 
 _____________________________________________________________
 
-| [![link-25] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [:link: Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+| [![link] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![link] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
 |-|-|
 
 _________________________________________________________________________

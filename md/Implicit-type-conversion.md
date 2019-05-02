@@ -1,51 +1,29 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[ico50]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png
-
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
-[hw-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-40.png
-
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
 [cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[cap-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[warn-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-30.png
-[warn-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-40.png
+[lesson]: ../lessons/lesson-02.md
 
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**][lesson]</sup> | <h2>Неявное приведение типов</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;2**][lesson]</sup> |
+|-|-|-|
 
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
-
-[wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
-[wink-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-25.png
-[wink-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-30.png
-
-
-<table><tr><td width="50">
-
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
-  </td>
-  <td width="800"><h2>Неявное приведение типов</h2></td>
-  <td>
-
-  ![me40] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
-</tr></table>
-
+_________________________________________________________________________
 
 Неявное приведение типов происходит в процессе вычисления выражений
 
 ## ![ico25] Неявное приведение к типу `string`
 
-![warn-25] При сложении числа и строки JavaScript обрабатывает число как строку
+![warn] При сложении числа и строки JavaScript обрабатывает число как строку
 
 Например, после выполнения кода:
 
@@ -72,7 +50,7 @@ var res = "3" + 20 + 10
 
 ![warn-25] При сложении массива и любого другого операнда результат будет строкового типа ( `string` )
 
-#### ![cap-20] 1
+#### ![cap-25] 1
 
 ```javascript
 [ ] + 5            //  "5"
@@ -91,7 +69,7 @@ String ( [ 4, 8 ] )
 
 ![warn-25] Однако, если в массиве не более одного элемента, и перед массивом стоит знак арифметической операции, он будет приведен к числу:
 
-#### ![cap-20] 2
+#### ![cap-25] 2
 
 ```javascript
 null + +[ 4 ]          // 4
@@ -102,14 +80,14 @@ _____________________________________________________________
 
 ## ![ico25] Неявное приведение к типу `number`
 
-![warn-25] Неявное приведение к типу  `number` происходит в арифметических выражениях:
+![warn] Неявное приведение к типу  `number` происходит в арифметических выражениях:
 
 ```javascript
 var  x = "8" / 2
 ```
 ( значением переменной x будет 4 )
 
-![warn-25] При участии в арифметических операциях пустая строка ( `""` ) и пустой массив ( `[]` ) преобразуется в **0**:
+![warn] При участии в арифметических операциях пустая строка ( `""` ) и пустой массив ( `[]` ) преобразуется в **0**:
 
 ```javascript
 var x = ""
@@ -123,14 +101,14 @@ console.log ( +[] )         // 0
 console.log ( +[]+"" )      // 0
 ```
 
-![warn-25] Если в арифметическом выражении участвуют специальные значения `undefined` или `null`, то они преобразуются к числу так:
+![warn] Если в арифметическом выражении участвуют специальные значения `undefined` или `null`, то они преобразуются к числу так:
 
 ```javascript
 Number ( undefined )   // NaN
 Number ( null )        // 0
 ```
 
-![warn-25] Если в арифметическом выражении участвуют логические значения `true` или `false`, то они преобразуются к числу так:
+![warn] Если в арифметическом выражении участвуют логические значения `true` или `false`, то они преобразуются к числу так:
 
 ```javascript
 var a = false
@@ -138,9 +116,9 @@ var b = true
 var z = a + b    //  0 + 1 --> 1
 ```
 
-![warn-25] Кроме арифметических операций, преобразование к типу `number` происходит при участии переменной в операциях сравнения ( за исключением операций   `===`   и   `!==`,  когда сравниваются не только значения, но и типы данных )
+![warn] Кроме арифметических операций, преобразование к типу `number` происходит при участии переменной в операциях сравнения ( за исключением операций   `===`   и   `!==`,  когда сравниваются не только значения, но и типы данных )
 
-#### ![cap-20] 3
+#### ![cap-25] 3
 
 ```javascript
 a = false, b = undefined
@@ -149,7 +127,7 @@ a < b       // 0 < NaN  --> false
 a == b      // 0 == NaN --> false
 ```
 
-#### ![cap-20] 4
+#### ![cap-25] 4
 
 ```javascript
 a = true,  b = null
@@ -162,9 +140,9 @@ _____________________________________________________________
 
 ## ![ico25] Неявное приведение к типу `boolean`
 
-![warn-25] Преобразование типов к логическому типу ( `boolean` ) происходит в условных операторах ( `if`, тернарный оператор )
+![warn] Преобразование типов к логическому типу ( `boolean` ) происходит в условных операторах ( `if`, тернарный оператор )
 
-#### ![cap-20] 5
+#### ![cap-25] 5
 
 ```javascript
 if ( "5" ) console.log ( "Yes" )
@@ -176,9 +154,9 @@ if ( "5" ) console.log ( "Yes" )
 Boolean ( "5" )
 ```
 
-![warn-25] При выполнении логических операций  `||`  и  `&&` происходит неявное приведение типов операндов к логическому значению
+![warn] При выполнении логических операций  `||`  и  `&&` происходит неявное приведение типов операндов к логическому значению
 
-![warn-25] но при этом результатом логической операции будет изначальное значение одного из операндов, даже если оно не являются булевым
+![warn] но при этом результатом логической операции будет изначальное значение одного из операндов, даже если оно не являются булевым
 
 _________________________________________________________________
 
@@ -188,7 +166,7 @@ _________________________________________________________________
 
 в этом случае возвращается исходное значение последнего операнда
 
-#### ![cap-20] 6
+#### ![cap-25] 6
 
 ```javascript
 true && false && null   //  false
@@ -196,7 +174,7 @@ true && "5" && null     //  null
 true && [] && null      //  null
 ```
 
-#### ![cap-20] 7
+#### ![cap-25] 7
 
 ```javascript
 true && ![] && null     //  false
@@ -218,14 +196,14 @@ _____________________________________________________________
 
 в этом случае возвращается исходное значение последнего операнда, на котором остановились
 
-#### ![cap-20] 8
+#### ![cap-25] 8
 
 ```javascript
 null || false || 5 || ""          //   5
 null || "" || 0 || 4 || 10        //   4
 ```
 
-#### ![cap-20] 9
+#### ![cap-25] 9
 
 ```javascript
 null || false || undefined || ""  //  ""
@@ -264,7 +242,7 @@ _____________________________________________________________
 ### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
 
 ________________________________________________________
-| [![link-20] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![link-20] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+| [![link] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![link] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
 |-|-|
 
 ________________________________________________________
