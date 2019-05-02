@@ -14,7 +14,7 @@
 
 [lesson]: ../lessons/lesson-01.md
 
-| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>`NaN` | `null` | `Infinity`</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>`NaN` • `null` • `Infinity`</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
 |:-:|:-:|:-:|
 
 _________________________________________________________________________
