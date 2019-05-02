@@ -3,32 +3,18 @@
 
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-
+[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
 [cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[lesson]: ../lessons/lesson-02.md
 
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-
-[dir-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-25.png
-
-[yes-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/yes-30.png
-
-[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
-
-
-
-<table><tr><td width="50">
-
-![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup>
-  </td>
-  <td width="800"><h2>Функции</h2></td>
-  <td>
-
-  ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup></td>
-</tr></table>
-
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**][lesson]</sup> | <h2>Функции</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;2**][lesson]</sup> |
+|-|-|-|
 
 ___________________________________________________________________
 
@@ -36,7 +22,7 @@ ___________________________________________________________________
 
 Объявление функции начинается с ключевого слова  **_`function`_**, после которого ( через пробел ) следует имя функции ( правила те же, что для имен переменных )
 
-![warn-25] После имени функции обязательно следуют круглые скобки
+![warn] После имени функции обязательно следуют круглые скобки
 
 В круглых скобках могут быть ( а могут и не быть ) формальные параметры функции
 
@@ -46,7 +32,7 @@ ___________________________________________________________________
 
 Значения формальных параметров будут установлены в момент вызова функции
 
-![warn-25] Тело функции заключается в фигурные скобки
+![warn] Тело функции заключается в фигурные скобки
 
 Внутри фигурных скобок размещается код функции
 
@@ -138,7 +124,7 @@ var  a = 2,    b = 8,    w = multiply ( a, b )
 
 _____________________________________________________________________
 
-| [![hw-30] Тесты](https://garevna.github.io/js-quiz/#function) | [![link-20] w3schools](https://www.w3schools.com/js/js_function_definition.asp) | [![link-20] MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function) |
+| [![hw-30] Тесты](https://garevna.github.io/js-quiz/#function) | [![link] w3schools](https://www.w3schools.com/js/js_function_definition.asp) | [![link] MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function) |
 |-|-|-|
 
 ___________________________________________________________________

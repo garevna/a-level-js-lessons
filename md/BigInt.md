@@ -1,16 +1,23 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-30.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-## ![me30] BigInt
+[lesson]: ../lessons/lesson-01.md
+
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>BigInt</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|-|-|-|
+
+_________________________________________________________________________
 
 ###### ES10 ( 2019 )
 
@@ -49,7 +56,7 @@ _________________________________________________________
 
 **`NaN`**, **`null`**, **`Infinity`** не могут быть конвертированы в **`bigint`**
 
-###### ![err-20] Infinity
+###### ![warn] Infinity
 
 ```javascript
 BigInt ( Infinity )
@@ -57,11 +64,10 @@ BigInt ( Infinity )
 
 будет сгенерировано исключение **RangeError**
 
-```
-⛔️ Uncaught RangeError: The number Infinity cannot be converted to a BigInt because it is not an integer
-```
+| ![error] <sup>Uncaught RangeError: The number Infinity cannot be converted to a BigInt because it is not an integer</sup> |
+|-|
 
-###### ![err-20] NaN
+###### ![warn] NaN
 
 ```javascript
 BigInt ( NaN )
@@ -69,11 +75,11 @@ BigInt ( NaN )
 
 будет сгенерировано исключение **RangeError**
 
-```
-⛔️ Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
-```
+| ![error] <sup>Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer</sup> |
+|-|
 
-###### ![err-20] null
+
+###### ![warn] null
 
 ```javascript
 BigInt ( null )
@@ -81,9 +87,8 @@ BigInt ( null )
 
 будет сгенерировано исключение **TypeError**
 
-```
-⛔️ Uncaught TypeError: Cannot convert null to a BigInt
-```
+| ![error] <sup>Uncaught TypeError: Cannot convert null to a BigInt</sup> |
+|-|
 
 _________________________________________________________
 
@@ -116,9 +121,8 @@ BigInt ( "45" - true ) // 44n
 BigInt ( "45 + 8" )
 ```
 
-```
-⛔️ Uncaught SyntaxError: Cannot convert 45 + 8 to a BigInt
-```
+| ![error] <sup>Uncaught SyntaxError: Cannot convert 45 + 8 to a BigInt</sup> |
+|-|
 
 _________________________________________________________
 
@@ -134,9 +138,8 @@ bigNumber * 2
 
 будет сгенерировано исключение
 
-```
-⛔️ Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
-```
+| ![error] <sup>Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions</sup> |
+|-|
 
 При попытке применить функции библиотеки Math к данным типа **`bigint`**
 
@@ -146,9 +149,8 @@ Math.sin ( bigNumber )
 
 будет сгенерировано исключение
 
-```
-⛔️ Uncaught TypeError: Cannot convert a BigInt value to a number
-```
+| ![error] <sup>Uncaught TypeError: Cannot convert a BigInt value to a number</sup> |
+|-|
 
 Однако можно привести данное типа **`bigint`** к обычному типу **`number`**
 
@@ -176,7 +178,7 @@ let bigArray = [
     BigInt ( Number.MAX_SAFE_INTEGER + 5 )
 ]
 
-bigArray [ BigInt ( 1 ) ]  // 9007199254740994n
+bigArray [ BigInt(1) ]  // 9007199254740994n
 ```
 
 _________________________________________________________
