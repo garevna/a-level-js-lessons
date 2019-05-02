@@ -1,32 +1,28 @@
-[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
-[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
-[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
-[hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
-[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
-[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 [debagger]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/debagger-20.png "Resume script execution F8 Ctrl+\"
 [reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
 [file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
-[yt-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-20.png
+[youtube]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-25.png
 
+[footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
-<table><tr><td width="50">
+[ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
+[ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
+[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
+[cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
+[cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
-  </td>
-  <td width="800"><h2>Chrome DevTools</h2></td>
-  <td>
+[lesson]: ../lessons/lesson-01.md
 
-  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
-</tr></table>
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>Chrome DevTools</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|:-:|:-:|:-:|
 
+_________________________________________________________________________
 
 #### ![cap-30] 1
 
@@ -34,14 +30,14 @@
 
 Переходим на вкладку **Sources** панели разработчика
 
-| <sub>navigator</sub> | <img width="800"/> | <sub>debugger</sub> |
+| <sub>navigator</sub> | ![space-800] | <sub>debugger</sub> |
 |-|-|-|
 
 ![](https://raw.githubusercontent.com/garevna/js-course/master/images/lessons/01.png)
 
-Для просмотра кода загруженной страницы используем кнопку **`>>`** и открываем **_Pages_**
+Для просмотра кода загруженной страницы в панели навигации ( слева ) используем кнопку **`>>`** и открываем **_Page_**
 
-Слева вы видите структуру проекта, где можно выбрать файл для просмотра
+Слева появится структура проекта, где можно выбрать файл для просмотра
 
 выбираем файл проекта, содержимое которого будет отображаться в центре ( index02.js )
 
@@ -101,7 +97,7 @@ _____________________________________________________________________________
 
 В  Chrome DevTools  можно также приостанавливать выполнение кода, когда происходят события DOM
 
-#### ![cap-20] Перейдем по [![link-20] ссылке](garevna.github.io)  
+#### ![cap-20] Перейдем по [![link] ссылке](garevna.github.io)  
 
 Посмотрите код примера
 
@@ -135,10 +131,6 @@ _____________________________________________________________________________
 
 </td></tr></table>
 
-## [![yt-20]](https://youtu.be/PQYG2aJf6uI)
+## [![youtube]](https://youtu.be/PQYG2aJf6uI)
 
-[![link-20] google](https://developers.google.com/web/tools/chrome-devtools/)
-
-_________________________________________________________________________
-
-![footer]
+[![link] google](https://developers.google.com/web/tools/chrome-devtools/)
