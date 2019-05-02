@@ -1,28 +1,23 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
-[reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
-[file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-<table><tr><td width="50">
+[lesson]: ../lessons/lesson-01.md
 
-![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
-  </td>
-  <td width="800"><h2>Операторы присваивания</h2></td>
-  <td>
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>Операторы присваивания</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|:-:|:-:|:-:|
 
-  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
-</tr></table>
+_________________________________________________________________________
 
 
 В результате операции присваивания устанавливается тип данных переменной
@@ -35,9 +30,9 @@ _________________________________________________________
 
 С помощью **`=`** переменным присваиваются значения
 
-<sup>![warn-25] не путайте оператор присваивания с оператором сравнения</sup>
+<sup>![warn] не путайте оператор присваивания с оператором сравнения</sup>
 
-#### ![cap-20] 1
+#### ![cap-25] 1
 
 ```javascript
 var start = "Hello"
@@ -50,7 +45,7 @@ end = start
 
 _________________________________________________________________
 
-#### ![cap-20] 2
+#### ![cap-25] 2
 
 ```javascript
 var  x = 5
@@ -65,7 +60,7 @@ _________________________________________________________________
 
 Добавляет значение к переменной
 
-#### ![cap-20] 3
+#### ![cap-25] 3
 
 ```javascript
 var x = 0
@@ -73,7 +68,7 @@ x += 5
 console.log (x)   // 5
 ```
 
-#### ![cap-20] 4
+#### ![cap-25] 4
 
 ```javascript
 var y = 10
@@ -87,7 +82,7 @@ _________________________________________________________
 
 Вычитает значение из переменной
 
-#### ![cap-20] 5
+#### ![cap-25] 5
 
 ```javascript
 var x = 20
@@ -105,7 +100,7 @@ _________________________________________________________
 
 Умножает переменную на значение
 
-#### ![cap-20] 6
+#### ![cap-25] 6
 
 ```javascript
 var x = 5
@@ -123,7 +118,7 @@ _________________________________________________________
 
 Делит переменную на значение
 
-#### ![cap-20] 7
+#### ![cap-25] 7
 
 ```javascript
 var x = 30
@@ -141,7 +136,7 @@ _________________________________________________________________
 
 Присваивает переменной остаток от деления
 
-#### ![cap-20] 8
+#### ![cap-25] 8
 
 ```javascript
 var x = 17
