@@ -11,7 +11,18 @@
 [err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
 [space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-| ![ico25] <br/><sup>[**Lesson&nbsp;2**](../lessons/lesson-02.md)</sup> | <h2>Методы массивов</h2><sup>![space-800][pop()](Array-methods-pop.md) • [push()](Array-methods-push.md) • [splice()](Array-methods-splice.md) • [shift()](Array-methods-shift.md) • [unshift()](Array-methods-unshift.md) • [slice()](Array-methods-slice.md) • concat() • [join()](Array-methods-join.md) • [includes()](Array-methods-includes.md)</sup> | ![me] <br/><sup>[**Занятие&nbsp;2**](../lessons/lesson-02.md)</sup> |
+[lesson]: ../lessons/lesson-02.md
+[pop]: Array-methods-pop.md
+[push]: Array-methods-push.md
+[splice]: Array-methods-splice.md
+[shift]: Array-methods-shift.md
+[unshift]: Array-methods-unshift.md
+[slice]: Array-methods-slice.md
+[concat]: Array-methods-concat.md
+[join]: Array-methods-join.md
+[includes]: Array-methods-includes.md
+
+| ![ico25] <br/><sup>[**Lesson&nbsp;2**][lesson]</sup> | <h2>Методы массивов</h2><sup>![space-800][pop()][pop] • [push()][push] • [splice()][splice] • [shift()][shift] • [unshift()][unshift] • [slice()][slice] • concat() • [join()][join] • [includes()][includes]</sup> | ![me] <br/><sup>[**Занятие&nbsp;2**][lesson]</sup> |
 |-|-|-|
 
 ______________________________________________________________________________
