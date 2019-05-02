@@ -71,6 +71,36 @@
 [yt-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-25.png
 [yt-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/youtube-30.png
 
+[ambulance-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/ambulance-20.png
+[ambulance-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/ambulance-25.png
+[bottom-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bottom-20.png
+[bottom-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bottom-25.png
+[down-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/down-20.png
+[down-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/down-25.png
+[green-ok-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/green-ok-20.png
+[green-ok-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/green-ok-25.png
+[left-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/left-20.png
+[left-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/left-25.png
+[right-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/right-20.png
+[right-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/right-25.png
+[sand-watch-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/sand-watch-20.png
+[sand-watch-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/sand-watch-25.png
+[sand-watch-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/sand-watch-30.png
+[search-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/search-20.png
+[search-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/search-25.png
+[toilet-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/toilet-20.png
+[toilet-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/toilet-25.png
+[toilet-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/toilet-30.png
+[toilet-40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/toilet-40.png
+[top-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/top-20.png
+[top-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/top-25.png
+[trophy-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/trophy-20.png
+[trophy-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/trophy-25.png
+[up-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/up-20.png
+[up-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/up-25.png
+
+
+
 ________________________________________________________
 
 ### Шаблон шапки темы:
