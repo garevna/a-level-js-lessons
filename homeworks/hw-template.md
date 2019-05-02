@@ -5,12 +5,12 @@
 [super-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/super-30.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
 [space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
 
-| ![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup> | <h2></h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup> |
+| ![ico25] <br/><sup>[**Lesson&nbsp;9**](../lessons/lesson-09.md)</sup> | <h2>![hw-40] Homework</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;9**](../lessons/lesson-09.md)</sup> |
 |-|-|-|
 
-
-# ![hw-40] Homework
+______________________________________________________________________________
 
 ## Required ![point-30]
 
@@ -27,6 +27,6 @@ ______________________________________________________________________________
 ## Additionally ![super-30]
 
 
-_________________________________________________________________________
+______________________________________________________________________________
 
 ![footer]
