@@ -29,22 +29,18 @@
 
 [lesson]: ../lessons/lesson-03.md
 
-| ![ico25] <br/><sup>[**Lesson&nbsp;3**][lesson]</sup> | <h2>Объект `function`</h2>![space-800]<sup>[arguments](#arguments) • [prototype](#prototype) • [Контекст выполнения](#execution-context) • [Lexical Environment](#lexical-environment) • [hoisting](#hoisting) • [Область видимости](#scope) • [this](#this) • [Контекст вызова](#call-context)</sup> | ![me] <br/><sup>[**Занятие&nbsp;3**][lesson]</sup> |
+| ![ico25] <br/><sup>[**Lesson&nbsp;3**][lesson]</sup> | <h2>Объект `function`</h2>![space-800]<sup>[• arguments](#arguments) [• arguments.callee](#callee) [• prototype](#prototype) [• Контекст выполнения](#execution-context) [• Lexical Environment](#lexical-environment) [• hoisting](#hoisting) [• Область видимости](#scope) [• this](#this) [• Контекст вызова](#call-context)</sup> | ![me] <br/><sup>[**Занятие&nbsp;3**][lesson]</sup> |
 |-|-|-|
 
 <a name="top"></a>
-
-| [![bottom]](#bottom) | ![space-800] | [![down]](#call-context) |
-|-|-|-|
-
 ___________________________________________________________________________________________________
 
 ###### ECMAScript® 2016 Language Specification
 
-| • _Функция является вызываемым объектом_ |
+| ![green-ok] _Функция является вызываемым объектом_ |
 |-|
 
-| • _Функция, связанная с объектом через свойство, называется методом_ |
+| ![green-ok] _Функция, связанная с объектом через свойство, называется методом_ |
 |-|
 
 ___________________________________________________________________________________________________
@@ -72,8 +68,8 @@ _____________________________________________________________________________
 <a name="call-context"></a>
 ## ![ico20] КОНТЕКСТ ВЫЗОВА
 
-| [![up]](#top) | ![space-800] | [![down]](#signature) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this)</sup> |
+|-|
 
 Контекст вызова - это объект
 
@@ -125,8 +121,8 @@ ________________________________________________________________________________
 <a name="signature"></a>
 ## ![ico20] Сигнатура функции
 
-| [![up]](#call-context) | ![space-800] | [![down]](#arguments) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 Сигнатура функции - это ее имя + список формальных параметров
 
@@ -145,8 +141,8 @@ ________________________________________________________________________________
 <a name="arguments"></a>
 ## ![ico20] Объект arguments
 
-| [![up]](#signature) | ![space-800] | [![down]](#callee) |
-|-|-|-|
+| <sup>[◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 Функции JavaScript имеют встроенный объект **`arguments`**
 
@@ -184,8 +180,8 @@ ________________________________________________________________________________
 <a name="callee"></a>
 ### ![ico20] arguments.callee
 
-| [![up]](#arguments) | ![space-800] | [![down]](#execution-context) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 У объекта **arguments** есть свойство **arguments.`callee`** -
 
@@ -209,8 +205,8 @@ ________________________________________________________________________________
 <a name="execution-context"></a>
 ## ![ico20] КОНТЕКСТ ИСПОЛНЕНИЯ
 
-| [![up]](#callee) | ![space-800] | [![down]](#lexical-environment) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 <sup>Когда происходит вызов функции, она активируется</sup>
 
@@ -268,8 +264,8 @@ ________________________________________________________________________________
 <a name="lexical-environment"></a>
 ### ![ico20] Lexical Environment
 
-| [![up]](#execution-context) | ![space-800] | [![down]](#hoisting) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 Объект активации ( `Lexical Environment` ) содержит аргументы функции и все объявленные внутри функции переменные
 ( включая функции )
@@ -278,11 +274,13 @@ ________________________________________________________________________________
 
 ![warn] Получить доступ к объекту активации невозможно
 
+_________________________________________________________________________________________________________________
+
 <a name="hoisting"></a>
 ### ![ico20] hoisting
 
-| [![up]](#lexical-environment) | ![space-800] | [![down]](#scope) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 После вызова функции:
 
@@ -308,8 +306,8 @@ ________________________________________________________________________________
 <a name="scope"></a>
 ## ![ico20] Область видимости
 
-| [![up]](#hoisting) | <img width="800"/> | [![down]](#this) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 Область видимости ( **`scope`** ) ограничивает действие идентификаторов переменных и функций
 
@@ -357,8 +355,8 @@ ________________________________________________________________________________
 <a name="this"></a>
 ## ![ico20] this
 
-| [![up]](#scope) | <img width="800"/> | [![down]](#8) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 **`this`** - это еще одна составляющая контекста исполнения функции
 
@@ -395,11 +393,10 @@ func ()  // window
 
 _______________________________________________________________________________________________________
 
-<a name="8"></a>
 #### ![cap-25] 8
 
-| [![up]](#this) | <img width="800"/> | [![down]](#bottom) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 Если же функция является методом объекта, то ее контекстом вызова будет этот объект
 
@@ -428,7 +425,9 @@ function girl () {
    console.log ( 'function girl: this: ', this )
 }
 ```
-Добавим функции  **`girl`**  свойство  **`say`** и вызовем функцию girl и ее свойство say:
+
+Добавим функции  **`girl`**  свойство  **`say`** и вызовем функцию `girl` и ее свойство `say`:
+
 ```javascript
 girl.say = say
 girl.say ()     //  girl
@@ -439,6 +438,9 @@ ________________________________________________________________________________
 
 <a name="prototype"></a>
 ## ![ico20] prototype
+
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 * Функцию *как объект* нельзя вывести с помощью метода **`console.log`**
 * Для этой цели следует использовать метод **`console.dir`**
@@ -485,8 +487,8 @@ ________________________________________________________________________________
 
 [![link] w3schools](https://www.w3schools.com/js/js_scope.asp)
 
-| [![up]](#prototype) | <a name="bottom"><img width="800"/></a> | [![top]](#top) |
-|-|-|-|
+| <sup>[◉ arguments](#arguments) [◉ arguments.callee](#callee) [◉ prototype](#prototype) [◉ Контекст выполнения](#execution-context) [◉ Lexical Environment](#lexical-environment) [◉ hoisting](#hoisting) [◉ Область видимости](#scope) [◉ this](#this) [◉ Контекст вызова](#call-context)</sup> |
+|-|
 
 _______________________________________________________________________________________________________
 
