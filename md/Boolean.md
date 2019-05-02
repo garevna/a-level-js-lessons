@@ -1,29 +1,23 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
-[reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
-[file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-<table><tr><td width="50">
+[lesson]: ../lessons/lesson-01.md
 
-![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
-  </td>
-  <td width="800"><h2>Логические выражения</h2></td>
-  <td>
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>Логические выражения</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|:-:|:-:|:-:|
 
-  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
-</tr></table>
-
+_________________________________________________________________________
 
 Выражение "_Яблоко красное и круглое_" можно разложить на два выражения:
 
@@ -73,7 +67,7 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-#### ![cap-20] 1
+#### ![cap-25] 1
 
 ```javascript
 var x = 5
@@ -112,7 +106,7 @@ false && true    //    false
 false && false   //    false
 ```
 
-#### ![cap-20] 2
+#### ![cap-25] 2
 
 ```javascript
 5 > 8 && 4 < 5   // false  
@@ -124,7 +118,7 @@ false && true    // false
 
 _________________________________________________________________________
 
-#### ![cap-20] 3
+#### ![cap-25] 3
 
 ```javascript
 8 > 5 && 4 < 5   // true
@@ -136,7 +130,7 @@ true && true     // true
 
 _________________________________________________________________________
 
-#### ![cap-20] 4
+#### ![cap-25] 4
 
 ```javascript
 var    x = 4,    y = 10,    z = 8
@@ -150,7 +144,7 @@ false && true    // false
 
 _________________________________________________________________________
 
-#### ![cap-20] 5
+#### ![cap-25] 5
 
 ```javascript
 x < y && z < y   // true
@@ -174,7 +168,7 @@ false || true    //    true
 false || false   //    false
 ```
 
-#### ![cap-20] 6
+#### ![cap-25] 6
 
 ```javascript
 5 > 8 || 4 < 5   // true
@@ -186,7 +180,7 @@ false || true    // true
 
 _________________________________________________________________________
 
-#### ![cap-20] 7
+#### ![cap-25] 7
 
 ```javascript
 5 > 8 || 4 > 5   // false
@@ -198,7 +192,7 @@ false || false   // false
 
 _________________________________________________________________________
 
-#### ![cap-20] 8
+#### ![cap-25] 8
 
 ```javascript
 var  x = 4,  y = 10,  z = 8
@@ -214,7 +208,7 @@ false || true    // true
 
 _________________________________________________________________________
 
-#### ![cap-20] 9
+#### ![cap-25] 9
 
 ```javascript
 x > y || z > y   // false
@@ -240,7 +234,7 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-#### ![cap-20] 10
+#### ![cap-25] 10
 
 ```javascript
 !(5 > 8)    // true
@@ -253,7 +247,7 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-#### ![cap-20] 11
+#### ![cap-25] 11
 
 ```javascript
 !(5 > 4)   // false
@@ -266,13 +260,13 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-![warn-25] для логических значений **x**, а так же значений **`null`**, **`NaN`**, **`undefined`**
+![warn] для логических значений **x**, а так же значений **`null`**, **`NaN`**, **`undefined`**
 
 ```javascript
 x || !x    // всегда  true
 ```
 
-![warn-25] для логических значений **x**
+![warn] для логических значений **x**
 
 ```javascript
 x && !x    // всегда  false
@@ -280,7 +274,7 @@ x && !x    // всегда  false
 
 _________________________________________________________________________
 
-#### ![cap-20] 12
+#### ![cap-25] 12
 
 ```javascript
 var x = undefined
@@ -290,7 +284,7 @@ var z = x && !x       // undefined
 
 _________________________________________________________________________
 
-#### ![cap-20] 13
+#### ![cap-25] 13
 
 ```javascript
 var x = null
@@ -300,7 +294,7 @@ var z = x && !x       // null
 
 _________________________________________________________________________
 
-#### ![cap-20] 14
+#### ![cap-25] 14
 
 ```javascript
     var x = NaN
@@ -310,7 +304,7 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-#### ![cap-20] 15
+#### ![cap-25] 15
 
 ```javascript
 var x = 5
@@ -320,7 +314,7 @@ var z = x && !x       // false
 
 _________________________________________________________________________
 
-#### ![cap-20] 16
+#### ![cap-25] 16
 
 ```javascript
 var x = "h"
@@ -330,7 +324,7 @@ var z = x && !x       // false
 
 _________________________________________________________________________
 
-#### ![cap-20] 17
+#### ![cap-25] 17
 
 ```javascript
 var x = ""        // ( пустая строка )
@@ -340,7 +334,7 @@ var z = x && !x   // ""
 
 _________________________________________________________________________
 
-#### ![cap-20] 18
+#### ![cap-25] 18
 
 ```javascript
 var  x = 4,  y = 10
@@ -362,7 +356,7 @@ _________________________________________________________________________
 
 Логические выражения принимают значения **`true`** или **`false`**
 
-###### ![cap-20] Примеры логических выражений
+###### ![cap-25] Примеры логических выражений
 
 ```javascript
 x >= y
@@ -386,7 +380,7 @@ _________________________________________________________________________
 
 _________________________________________________________________________
 
-[![link-20] w3schools](https://www.w3schools.com/js/js_comparisons.asp)
+[![link] w3schools](https://www.w3schools.com/js/js_comparisons.asp)
 
 _________________________________________________________________________
 
