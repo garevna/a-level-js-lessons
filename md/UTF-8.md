@@ -1,25 +1,23 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[wink-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-20.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
-<table><tr><td width="50">
+[lesson]: ../lessons/lesson-01.md
 
-![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
-  </td>
-  <td width="800"><h2>UTF-8</h2></td>
-  <td>
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>UTF-8</h2>![space-800] | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|:-:|:-:|:-:|
 
-  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
-</tr></table>
-
+_________________________________________________________________________
 
 Все символы имеют числовой код
 
@@ -69,11 +67,11 @@ ________________________________________________________
 
 _____________________________________________________________
 
-[![link-20] шестнадцатеричные коды символов](https://www.fileformat.info/info/charset/UTF-8/list.htm "шестнадцатеричные коды символов")
+[![link] шестнадцатеричные коды символов](https://www.fileformat.info/info/charset/UTF-8/list.htm "шестнадцатеричные коды символов")
 
-[![link-20] w3schools](https://www.w3schools.com/html/html_symbols.asp)
+[![link] w3schools](https://www.w3schools.com/html/html_symbols.asp)
 
-[![link-20] UTF-8](http://i.voenmeh.ru/kafi5/Kam.loc/inform/UTF-8.htm)
+[![link] UTF-8](http://i.voenmeh.ru/kafi5/Kam.loc/inform/UTF-8.htm)
 
 _____________________________________________________________
 
