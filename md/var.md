@@ -1,32 +1,25 @@
 [footer]: https://github.com/garevna/js-course/raw/master/images/a-level-ico.png?raw=true
-[me40]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+[me]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/myPhoto-40.png "Ⓒ Irina Fylyppova ( garevna ) 2019"
+
 [ico20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-20.png
 [ico25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-25.png
-[hw-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-20.png
 [hw-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-30.png
 [cap-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-20.png
+[cap-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-25.png
 [cap-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-30.png
-[warn-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
-[link-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
-[err-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
-[err-25]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-25.png
-[err-30]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png
-[debagger]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/debagger-20.png "Resume script execution F8 Ctrl+\"
-[reload]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/reload.png
-[file-20]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-20.png
+[error]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-20.png
+[warn]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-25.png
+[link]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-20.png
+[space-800]: https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/space-800.png
 
+[lesson]: ../lessons/lesson-01.md
 
-<table><tr><td width="50">
+| ![ico25] <br/><sup>[**Lesson&nbsp;1**][lesson]</sup> | <h2>Переменные. Типы данных</h2>![space-800]<sup>[• var](#var) [• Типы данных](#dataTypes) [• Динамическая типизация](#dynamo) [• Спецификация ECMAScript](#spec)</sup> | ![me] <br/><sup>[**Занятие&nbsp;1**][lesson]</sup> |
+|:-:|:-:|:-:|
 
-![ico25] <br/><sup>[**Lesson&nbsp;1**](../lessons/lesson-01.md)</sup>
-  </td>
-  <td width="800"><h2>Переменные. Типы данных</h2></td>
-  <td>
+_________________________________________________________________________
 
-  ![me40] <br/><sup>[**Занятие&nbsp;1**](../lessons/lesson-01.md)</sup></td>
-</tr></table>
-
-
+<a name="var"></a>
 ## ![ico25] var
 
 Переменные - это контейнеры для хранения данных
@@ -36,19 +29,19 @@
 При объявлении переменной ей можно сразу присвоить начальное значение:
 
 ```javascript
-     var x = 5
+var x = 5
 ```
 
-![warn-25] Если мы объявим переменные, но не присвоим им начальные значения:
+![warn] Если мы объявим переменные, но не присвоим им начальные значения:
 
 ```javascript
-     var x, y, z
+var x, y, z
 ```
 
 то их значением будет   `undefined`
 
 
-![warn-25] Если мы не объявим переменную, но попытаемся обратиться к ней:
+![warn] Если мы не объявим переменную, но попытаемся обратиться к ней:
 
 ```javascript
 console.log ( sigma )
@@ -56,9 +49,8 @@ console.log ( sigma )
 
 то в консоли появится сообщение об ошибке:
 
-```
-⛔️ Uncaught ReferenceError: sigma is not defined
-```
+| ![error] <sup>Uncaught ReferenceError: sigma is not defined</sup> |
+|-|
 
 Можно объявить сразу несколько переменных в одной строке, разделяя их запятой:
 
@@ -76,18 +68,19 @@ var person = "Сергей",
 
 ______________________________________________________________
 
-## ![ico25] Правила построения имен переменных
+## ![ico20] Правила построения имен переменных
 
-![warn-25] Имена переменных могут содержать буквы, цифры, символы подчеркивания и знаки доллара
+![warn] Имена переменных могут содержать буквы, цифры, символы подчеркивания и знаки доллара
 
-![warn-25] Имена переменных могут начинаться с буквы, сиволов `$` и `_`
+![warn] Имена переменных могут начинаться с буквы, сиволов `$` и `_`
 
-![warn-25] Имена переменных чувствительны к регистру ( `y` и `Y` - разные переменные )
+![warn] Имена переменных чувствительны к регистру ( `y` и `Y` - разные переменные )
 
-![warn-25] [Зарезервированные слова](https://www.w3schools.com/js/js_reserved.asp) не могут использоваться как имена переменных
+![warn] [Зарезервированные слова](https://www.w3schools.com/js/js_reserved.asp) не могут использоваться как имена переменных
 
 ______________________________________________________________
 
+<a name="dataTypes"></a>
 ## ![ico25] Типы данных
 
 [Оператор `typeof`](typeof.md "Переход на другую страницу")
@@ -102,12 +95,8 @@ ______________________________________________________________
 
 Внутри строки можно использовать кавычки, если они не совпадают с кавычками самой строки:
 
-<table><tr><td><br/>
-
-'Посмотри слово "Бегемот" в словаре'
-"Посмотри слово 'Бегемот' в словаре"
-
-</td></tr></table>
+| 'Посмотри слово "Бегемот" в словаре' | "Посмотри слово 'Бегемот' в словаре" |
+|-|-|
 
 ______________________________________________________________
 
@@ -135,7 +124,6 @@ ______________________________________________________________
 
 ( без кавычек, "_true_" - это уже строка )
 
-
 ______________________________________________________________
 
 ### ![ico20] `undefined`
@@ -150,6 +138,7 @@ ______________________________________________________________
 
 ______________________________________________________________
 
+<a name="dynamo"></a>
 ## ![ico25] Динамическая типизация
 
 В  JavaScript используется динамическая типизация данных
@@ -168,6 +157,7 @@ console.log ( typeof x)    // в консоли будет    "string"
 
 ______________________________________________________________
 
+<a name="cpec"></a>
 ## ![ico25] Спецификация ECMAScript
 
 На сегодняшний день спека определяет семь типов данных:
@@ -182,7 +172,7 @@ ______________________________________________________________
 
 ______________________________________________________________
 
-[![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)
+#### [![hw-30] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)
 
 _____________________________________________________________
 
