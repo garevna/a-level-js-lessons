@@ -104,14 +104,4 @@ class SpoilerClass extends HTMLElement {
     }
 }
 
-SpoilerClass.template = `
-<section id="component">
-    <div class="wrap-collabsible">
-        <input id="collapsible" class="toggle" type="checkbox">
-        <label for="collapsible" class="lbl-toggle">
-          <span id="header"></span>
-        </label>
-        <div class="collapsible-content"></div>
-    </div>
-</section>
-`
+// customElements.define( 'spoiler-element', SpoilerComponent )
