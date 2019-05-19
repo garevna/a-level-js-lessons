@@ -27,13 +27,13 @@ ________________________________________________________________________________
 
 ## ![ico-30 icon] Блок-схема
 
-| [![ico-50 youtube]]( https://youtu.be/QBh67civUWk) | [![ico-20 link] Обозначения](https://pro-prof.com/archives/1462) |
+[![ico-20 link] Обозначения](https://pro-prof.com/archives/1462)
 
 
 ^^Для выполнения блок-схемы можно воспользоваться^^ [^^**бесплатным сервисом**^^](https://www.draw.io/)
 
 
-[![ico-50 youtube]](https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be)
+[![ico-70 youtube]](https://www.youtube.com/watch?v=QBh67civUWk&feature=youtu.be)
 
 
 ^^^[Последовательность]
