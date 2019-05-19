@@ -44,6 +44,7 @@ class PageComponent extends HTMLElement {
       this.pageContent = ""
       this.pageContentList = []
       this.main.innerHTML = ""
+      this.menu.setAttribute ( "options", "" )
 
       this.getData ( newVal )
   }

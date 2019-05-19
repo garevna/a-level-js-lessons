@@ -40,8 +40,9 @@ class MenuComponent extends HTMLElement {
     }
 
     attributeChangedCallback( attrName, oldVal, newVal ) {
-        if ( !newVal ) return
         let container = this.shadow.querySelector ( ".dropdown" )
+        container.innerHTML = ""
+        if ( !newVal ) return
         this.options = JSON.parse ( this.getAttribute ( "options" ) )
         this.setAttribute ( "options", "" )
         this.options.forEach (
