@@ -107,7 +107,7 @@ MenuComponent.prototype.styleContent = `
 }
 .main-nav > li > a::before {
   content: "•••";
-  font-size: 30px;
+  font-size: 24px;
   position: absolute;
   top: 50%;
   left: 50%;

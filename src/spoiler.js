@@ -33,14 +33,14 @@ class SpoilerClass extends HTMLElement {
             border-left: solid 10px transparent;
         }
         .lbl-toggle:hover {
-            text-shadow: 1px 1px 1.5px #00000090;
+            text-shadow: 1px 1px 1.5px #00005050;
         }
         .lbl-toggle::before {
             content: ' ';
             display: inline-block;
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
-            border-left: 8px solid #fa0;
+            border-left: 8px solid #ff7000;
             vertical-align: middle;
             margin-right: .7rem;
             transform: translateY(-2px);
@@ -62,17 +62,20 @@ class SpoilerClass extends HTMLElement {
             box-shadow: inset 2px -2px 3px #00000090;
             padding: .5rem 1.2rem;
             font-size: 0.8rem;
-            border: inset 1px;
             overflow: auto;
         }
         .collapsible-content {
             max-height: 0px;
             overflow: auto;
-            transition: max-height .25s ease-in-out;
+            transition: all .4s ease-in-out;
             margin-bottom: 40px;
+            border: solid 0px transparent;
+            box-shadow: 0px 0px 0px transparent;
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
             max-height: 900px;
+            border: solid 30px transparent;
+            box-shadow: 2px 2px 4px #00000080;
         }
         .toggle:checked + .lbl-toggle::before {
             transform: rotate(90deg) translateX(-3px);
