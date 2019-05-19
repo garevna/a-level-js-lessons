@@ -40,7 +40,12 @@ class PageComponent extends HTMLElement {
       return [ 'src' ]
   }
   attributeChangedCallback( attrName, oldVal, newVal ) {
-      this.getData ( this.getAttribute ( "src" ) )
+      this.fragments = {}
+      this.pageContent = ""
+      this.pageContentList = []
+      this.main.innerHTML = ""
+
+      this.getData ( newVal )
   }
 
   getData ( file ) {
