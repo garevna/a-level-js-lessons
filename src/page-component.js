@@ -21,8 +21,6 @@ class PageComponent extends HTMLElement {
       )
 
       Promise.all ([
-        fetch ( "src/rainbow.css" )
-          .then (response => response.text()),
         fetch ( "src/for-rainbow.css" )
           .then (response => response.text()),
         fetch ( "src/main.css" )
