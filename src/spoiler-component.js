@@ -1,12 +1,16 @@
 class SpoilerComponent extends SpoilerClass {
     constructor () {
         super()
-        let iconStyles = this.shadow.appendChild (
+        let styles = this.shadow.appendChild (
         document.createElement("style")
       )
-      fetch ( "src/icons.css" )
-          .then ( response => response.text() )
-          .then ( css => iconStyles.textContent = css )
+      Promise.all ([
+          fetch ( "src/icons.css" )
+            .then ( response => response.text() ),
+          fetch ( "src/for-rainbow.css" )
+            .then ( response => response.text() ),
+      ])
+      .then ( css => styles.textContent = css.join("\n\n") )
     }
     connectedCallback () {
       this.header = this.shadow.querySelector ( "#header" )
@@ -21,8 +25,9 @@ class SpoilerComponent extends SpoilerClass {
         attrName === "header" ? this.header.innerHTML = newVal :
           attrName === "ready" ? (
             () => {
-              this.wrapper.innerHTML = this.innerHTML
-              this.innerHTML = ""
+              this.content.forEach (
+                item => this.wrapper.appendChild ( item )
+              )
             })() : null
     }
 }
