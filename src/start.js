@@ -1,9 +1,8 @@
 window.onhashchange = function ( event ) {
-  const topic = location.hash.slice(1)
-  console.log ( topic )
-  const pageElement = document.getElementsByTagName ( "page-element" )[0]
-  pageElement.setAttribute (
-    "src",
-    `src/lessons/${topic}.md`
-  )
+  document.getElementsByTagName ( "page-element" )[0]
+      .setAttribute (
+          "src",
+          `src/lessons/${location.hash.slice(1)}.md`
+      )
+      console.log ( document.getElementsByTagName ( "page-element" )[0] )
 }
