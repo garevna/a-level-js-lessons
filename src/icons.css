@@ -1,0 +1,100 @@
+.ico-20, .ico-25, .ico-30, .ico-35, .ico-40 {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.ico-20 { width: 20px; height: 20px; }
+.ico-25 { width: 25px; height: 25px; }
+.ico-30 { width: 30px; height: 30px; }
+.ico-35 { width: 35px; height: 35px; }
+.ico-40 { width: 40px; height: 40px; }
+
+.icon {
+  background-image: url(src/icons/a-level-ico.png)
+}
+.warn {
+  background-image: url(src/icons/warning.png)
+}
+.cap {
+  background-image: url(src/icons/cap.png)
+}
+.link {
+  background-image: url(src/icons/link.png)
+}
+.bash {
+  background-image: url(src/icons/bash.png)
+}
+.err {
+  background-image: url(src/icons/no_entry.png)
+}
+.file {
+  background-image: url(src/icons/pencil.png)
+}
+.dir {
+  background-image: url(src/icons/folder.png)
+}
+.git {
+  background-image: url(src/icons/github.png)
+}
+.smile {
+  background-image: url(src/icons/wink.png)
+}
+.hw {
+  background-image: url(src/icons/briefcase.png)
+}
+.study {
+  background-image: url(src/icons/study.png)
+}
+.require {
+  background-image: url(src/icons/point-up.png)
+}
+.good {
+  background-image: url(src/icons/ok.png)
+}
+.exelent {
+  background-image: url(src/icons/super.png)
+}
+.search {
+  background-image: url(src/icons/search.png)
+}
+.reload {
+  background-image: url(src/icons/reload.png)
+}
+.sand-watch {
+  background-image: url(src/icons/sand-watch.png)
+}
+.green-ok {
+  background-image: url(src/icons/green-ok.png)
+}
+.pin {
+  background-image: url(src/icons/pin.png)
+}
+.trophy {
+  background-image: url(src/icons/trophy.png)
+}
+.yes {
+  background-image: url(src/icons/yes.png)
+}
+.question {
+  background-image: url(src/icons/question.png)
+}
+
+.npm {
+  background-image: url(src/icons/npm.png)
+}
+.youtube {
+  background-image: url(src/icons/youtube.png)
+}
+.debug-button {
+  background-image: url(src/icons/debug-button.png)
+}
+.debug-paused {
+  background-image: url(src/icons/debug-paused.png)
+}
+.ambulance {
+  background-image: url(src/icons/ambulance.png)
+}
+.toilet {
+  background-image: url(src/icons/toilet.png)
+}
