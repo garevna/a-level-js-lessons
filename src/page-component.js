@@ -1,12 +1,14 @@
+// let hash = location.hash.slice(1)
+
+let hash = "Data-Structures"
+
 class PageComponent extends HTMLElement {
   constructor () {
     super()
     this.fragments = {}
     this.pageContent = ""
     this.pageContentList = []
-    this.styles = document.head.appendChild (
-      document.createElement ( "style" )
-    )
+
     this.main = this.appendChild (
       document.createElement ( "main" )
     )
@@ -14,16 +16,22 @@ class PageComponent extends HTMLElement {
   }
 
   connectedCallback() {
+      this.styleSheet = this.appendChild (
+          document.createElement ( "style" )
+      )
+
       Promise.all ([
         fetch ( "src/rainbow.css" )
           .then (response => response.text()),
-        fetch ( "src/style.css" )
+        fetch ( "src/for-rainbow.css" )
           .then (response => response.text()),
-        fetch ( "style.css" )
+        fetch ( "src/main.css" )
+          .then (response => response.text()),
+        fetch ( "src/icons.css" )
           .then (response => response.text())
       ]).then (
         response =>
-          this.styles.textContent = response.join(
+          this.styleSheet.textContent += response.join(
             String.fromCharCode(10)
           )
       )
@@ -43,6 +51,16 @@ class PageComponent extends HTMLElement {
       )
   }
 
+  parseTextFragment ( textFragment ) {
+      let lines = textFragment.length ?
+          textFragment.split("\n") : []
+      lines.forEach (
+        line => line.length ?
+          this.main.appendChild ( this.parseLine ( line ) ) :
+          null
+      )
+  }
+
   parsePageContent ( pageContent ) {
 
       this.pageContent = pageContent
@@ -58,21 +76,24 @@ class PageComponent extends HTMLElement {
 
       this.pageContent = this.fragments.pageContent
       delete this.fragments.pageContent
-      this.pageContent.match ( /!!!.[^!!!]+!!!/g ).forEach (
-        divider => {
-          let tmp = this.pageContent.split( divider )
-          let fragment = tmp.shift()
-          this.pageContent = tmp.join("")
-          let lines = fragment.split("\n")
-          lines.forEach (
-            line => line.length ? this.main.appendChild ( this.parseLine ( line ) ) : null
-          )
-          divider = divider.slice(3,-3)
-          this[ `create${this.fragments[divider].type}` ](
-              this.fragments[divider].content
-          )
-        }
-      )
+      this.pageContent.match ( /!!!.[^!!!]+!!!/g )
+        .forEach (
+          insertionPoint => {
+            let tmp = this.pageContent.split( insertionPoint )
+            let fragment = tmp.shift()
+            this.pageContent = tmp.join("")
+
+            this.parseTextFragment ( fragment )
+
+            insertionPoint = insertionPoint.slice(3,-3)
+            this[ `create${this.fragments[insertionPoint].type}` ](
+                this.fragments[insertionPoint].content
+            )
+          }
+        )
+        this.pageContent.length ?
+            this.parseTextFragment ( this.pageContent ) : null
+
       let footer = this.appendChild (
         document.createElement ( "footer" )
       )
@@ -97,7 +118,6 @@ class PageComponent extends HTMLElement {
       let table = this.main.appendChild (
           document.createElement ( "table" )
       )
-
       tableFragment.match ( /.[^\n]*/g )
         .filter (
             string => string.trim().indexOf ( "|" ) === 0
@@ -111,9 +131,11 @@ class PageComponent extends HTMLElement {
                     .filter ( cell => cell.length )
                     .map ( cell => cell.trim() )
                     .forEach (
-                        cellContent => row.appendChild (
+                        cellContent => {
+                          row.appendChild (
                             document.createElement ( "td" )
-                        ).innerHTML = cellContent
+                          ).appendChild ( this.parseLine ( cellContent ) )
+                        }
                     )
             }
       )
@@ -154,24 +176,66 @@ class PageComponent extends HTMLElement {
       this.main.appendChild ( snippet )
   }
 
-  createCodeSnippet ( fragment ) {
+  createScriptSpoiler ( fragment ) {
+      let lang = fragment.slice(
+          4, fragment.search ( String.fromCharCode(10) )
+      )
+      let scriptSpoiler = this.main.appendChild (
+        document.createElement ( "script-spoiler" )
+      )
+
+      let scriptSpoilerContent = this.main.appendChild (
+        this.createCodeSnippet (
+            fragment.slice ( 4 + lang.length, fragment.length - 4 ),
+            lang
+        )
+      )
+
+      scriptSpoiler.setAttribute ( "header", lang )
+      // console.log ( scriptSpoilerContent )
+      scriptSpoiler.content = scriptSpoilerContent
+      // console.log ( scriptSpoiler.content )
+      scriptSpoiler.setAttribute ( "content", "ready" )
+  }
+
+  createScriptSnippet ( fragment ) {
       let lang = fragment.slice(
           3, fragment.search ( String.fromCharCode(10) )
       )
+      this.main.appendChild (
+          this.createCodeSnippet (
+              fragment.slice ( 3 + lang.length, fragment.length - 3 ),
+              lang
+          )
+      )
+  }
+
+  createCodeSnippet ( fragment, lang ) {
       let wrapper = document.createElement ( "pre" )
       let script = document.createElement ( "code" )
       script.setAttribute( "data-language", lang )
-      script.textContent = fragment.slice (
-          3 + lang.length,
-          fragment.length - 3
-      )
+      script.textContent = fragment
       wrapper.appendChild( script )
       Rainbow.color(
           script.textContent,
           lang,
           highlightedCode => script.innerHTML = highlightedCode
       )
-      this.main.appendChild ( wrapper )
+      return wrapper
+  }
+
+  createSpoiler ( fragment ) {
+      let spoiler = document.createElement ( "spoiler-component" )
+      this.main.appendChild ( spoiler )
+      let head = fragment.match(/(\^{3})\[(.+)\]/)[0]
+      spoiler.setAttribute ("header", head.slice(4,-1) )
+      fragment.split ( head ).join("")
+              .slice (0,-3)
+              .split('\n')
+              .forEach (
+                line => spoiler.appendChild ( this.parseLine ( line ) )
+              )
+      spoiler.setAttribute ("ready", "1" )
   }
 
   // =============================== Line level ===============================
@@ -188,45 +252,45 @@ class PageComponent extends HTMLElement {
   }
 
   parseHeader ( line ) {
-    let tmp = line.split("#")
-    if ( tmp.length === 1 ) return { level: 0, text: tmp [0] }
 
-    let text = tmp [ tmp.length - 1 ]
+    let headerLevel = line.match ( /^[#]{1,6}/ )
+
+    if ( !headerLevel ) return { level: 0, text: line }
+
+    let text = line.slice( headerLevel[0].length )
 
     let icons = text.match (/!\[.[^\]]+\]/g)
-      icons ? icons.forEach (
+    icons ? icons.forEach (
         icon => text = text.split ( icon ).join("")
-      ) : null
+    ) : null
     let refs = text.match (/\[.[^(]+\]\(.[^\)]+\)/g)
-      refs ? refs.forEach (
+    refs ? refs.forEach (
         ref => {
             let content = ref.split ( "](" )[0].slice ( 1 )
             text = text.split ( ref ).join( content )
         }
-      ) : null
+    ) : null
 
       this.main.appendChild (
         document.createElement ( "a" )
       ).name = encodeURI ( text.trim() )
 
       this.pageContentList.push ({
-          level: tmp.length - 1,
+          level: headerLevel.length,
           text: text.trim()
       })
 
-      return { level: tmp.length - 1, text: tmp [ tmp.length - 1 ] }
+      return { level: headerLevel[0].length, text: line = line.split ( headerLevel[0] ).join("") }
   }
 
 
 
   parseLine ( line ) {
-      if ( line.match (/[-_]{2,5000}/) ) {
-        return document.createElement ( "hr" )
-      }
+      if ( line.match (/[-_]{2,5000}/) ) return document.createElement ( "hr" )
       let img = this.parseImage ( line )
       if ( img ) return img
       let { level, text } = this.parseHeader ( line )
-      let elem = document.createElement ( level > 0 ? `h${level}` : "p" )
+      let elem = document.createElement ( level > 0 ? `h${level}` : "div" )
       elem.innerHTML = this.parseAnchors (
           this.parseIcons (
             this.formatText ( text )
@@ -251,7 +315,6 @@ class PageComponent extends HTMLElement {
   }
 
   parseAnchors ( line ) {
-    console.log (line)
     let anchors = line.match (/\[.[^(]+\]\(.[^\)]+\)/g)
     anchors ? anchors.forEach (
       anchor => {
@@ -290,10 +353,11 @@ class PageComponent extends HTMLElement {
 }
 
 PageComponent.prototype.regExprs = {
-    CodeComponent: /~~~~.[^~~~~]+~~~~/,
-    CodeSnippet: /~~~.[^~~~]+~~~/,
+    ScriptSpoiler: /~~~~.[^~~~~]+~~~~/,
+    ScriptSnippet: /~~~.[^~~~]+~~~/,
     Slider: /!!\[.[^\]]+\]/,
-    Table: /\n\n\|(.+|\n[^\n\n])+/
+    Table: /\n\n\|(.+|\n[^\n\n])+/,
+    Spoiler: /(\^{3})([\s\S]+?)\1/m
 }
 
 PageComponent.prototype.generator = function* () {
@@ -316,8 +380,6 @@ PageComponent.prototype.generator = function* () {
         yield { [ start ]: { type: key,content: fragment[0] } }
       }
     }
-
-
     yield { pageContent: this.pageContent }
 }
 
@@ -339,9 +401,9 @@ PageComponent.prototype.symbols = [
     tag: ["<code>", "</code>"]
   },
   {
-    symb: "#",
-    reg: "#",
-    tag: ["<h1>", "</h1>"]
+    symb: "^^",
+    reg: "\\^\\^",
+    tag: ["<small>", "</small>"]
   }
 ]
 
