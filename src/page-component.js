@@ -303,7 +303,7 @@ class PageComponent extends HTMLElement {
       ).name = encodeURI ( text.trim() )
 
       this.pageContentList.push ({
-          level: headerLevel.length,
+          level: headerLevel[0].length,
           text: text.trim()
       })
 
