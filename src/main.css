@@ -1,0 +1,177 @@
+body {
+  margin: 20px calc(50% - 450px);
+  font-family: Arial;
+  color: #555;
+  background-color: white;
+  border: solid 20px white;
+  border-bottom: solid 70px white;
+  /* border-right: solid 50px white; */
+  overflow-x: hidden;
+}
+
+html {
+    background: #999;
+    line-height:32px;
+    scroll-behavior: smooth;
+}
+
+main {
+  padding: 20px 30px 50px 50px;
+}
+
+img, button, input[type="button"] {
+  user-select: none;
+}
+
+img {
+  max-width:90%;
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: -70px;
+  right: -70px;
+}
+
+a {
+    text-decoration: none;
+    color:#557;
+    font-style: italic bold;
+}
+a:hover {
+    border: inset 1px white;
+    padding: 7px 10px;
+    background-image: linear-gradient(to bottom, #fff, #ccc);
+}
+a > span {
+  vertical-align: middle;
+}
+
+div {
+  text-align: justify;
+  margin: 0 0 16px 0;
+}
+
+.main {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width:900px;
+    width: 100%;
+    margin-bottom:20px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+pre {
+  border: inset 1px;
+}
+
+.slider-button {
+    background-color: transparent;
+    border: 0;
+    background-image: url(src/icons/slider-5.gif);
+    padding: 40px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    outline:none;
+    transition: all 0.5s;
+}
+.slider-button:hover {
+    background-image: url(src/icons/slider-2.gif);
+}
+
+
+.overshadow {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    box-sizing: border-box;
+    bottom:0;
+    right:5%;
+    transition: all 0.5s;
+    vertical-align: bottom;
+    background-image: url(src/images/a-level.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+.overshadow__shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 10%;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translate(0,30%) scale(0.0);
+    background-image: url(src/images/my-photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    overflow:hidden;
+}
+
+.overshadow:hover {
+    background-image: url();
+}
+
+
+.overshadow:hover .overshadow__shadow {
+    opacity: 1;
+    transform: translate(0,-10%) scale(1);
+    box-shadow: 4px 4px 8px #00000090;
+}
+
+.overshadow__text:before {
+    position: absolute;
+    content: "© Irina H. Fylyppova";
+    font-family: Arial;
+    line-height: 0;
+    color: #333;
+    font-size: 10px;
+    bottom: 50%;
+    right: -15%;
+    transform: rotate(-90deg);
+    text-align: center;
+    width:max-content;
+}
+
+menu-component {
+  cursor:pointer;
+}
+menu-component:hover {
+  color:white;
+}
+
+code, pre {
+  overflow: auto;
+}
+
+/* ================= media rules =================== */
+
+@media screen and (max-width: 900px) {
+  body {
+    margin: 0;
+    border-right-width: 10px;
+  }
+  main {
+    padding: 20px 10px 50px 20px;
+  }
+  .overshadow {
+    width: 150px;
+    right: 40px;
+  }
+  .overshadow__text:before {
+    right: -30%;
+  }
+}
