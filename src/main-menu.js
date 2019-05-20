@@ -47,7 +47,7 @@ class MainMenuComponent extends HTMLElement {
                 item.ref = lesson [ topic ]
                 item.onclick = function ( event ) {
                   document.getElementsByTagName ( "page-element" )[0]
-                            .setAttribute ( "src",  `lessons/${event.target.ref}.md` )
+                            .setAttribute ( "src",  `src/lessons/${event.target.ref}.md` )
                 }
               }
             }
