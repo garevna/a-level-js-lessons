@@ -91,6 +91,9 @@ MenuComponent.prototype.styleContent = `
     opacity: 1;
     visibility: visible;
     width: max-content;
+    border: solid 10px transparent;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 8px #00000080;
 }
 
 .main-nav > li:hover > a {
@@ -127,7 +130,7 @@ MenuComponent.prototype.styleContent = `
     left: 0;
     top: 10px;
     width: 100%;
-    background: #dde;
+    background: #eef;
     border: 2px solid #fff;
     opacity: 0;
     visibility: hidden;
