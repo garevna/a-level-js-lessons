@@ -55,7 +55,9 @@ ________________________________________________________________________________
 
 ^^^
 
+
 !!["https://garevna.github.io/js-samples/images/block-scheme-03.png","https://garevna.github.io/js-samples/images/block-scheme-02.png","https://garevna.github.io/js-samples/images/block-scheme-01.png"]
+
 
 ![ico-30 hw] **Упражнение 1**
 
