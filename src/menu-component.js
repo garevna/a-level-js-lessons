@@ -21,18 +21,7 @@ class MenuComponent extends HTMLElement {
         this.menuContent = this.shadow.appendChild (
           document.createElement ( "ul" )
         )
-        // this.className = "sticky"
         this.menuContent.className = "main-nav"
-        // this.parentNode.classList.add ( "main-nav" )
-        // this.parentNode.onmouseover = function ( event ) {
-        //   this.menuContent.style.height = "50vh"
-        //   this.menuContent.style.opacity = "1"
-        // }.bind(this)
-
-        // this.parentNode.onmouseout = function ( event ) {
-        //   this.menuContent.style.height = "0"
-        //   this.menuContent.style.opacity = "0"
-        // }.bind(this)
     }
 
     static get observedAttributes() {
@@ -63,61 +52,67 @@ class MenuComponent extends HTMLElement {
 }
 
 MenuComponent.prototype.styleContent = `
+li {
+  list-style-type: none;
+}
 #nav {
     position: sticky;
     top:0;
     z-index: 1000;
 }
 .main-nav {
-    --hover-back: #457;
-    --menu-back: #bbc;
+    --hover-back: #f90;
+    --menu-back: #079;
+    --menu-color: #fff;
+    --main-color: #f50;
 
     font-size: 0;
     line-height: 0;
-    /* background: var(--menu-back); */
     padding-left:0;
 }
 
 .main-nav > li {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
+    position: absolute;
     font-size: 1rem;
     line-height: 1rem;
-    border-left: 2px solid #fff;
 }
 
 .main-nav > li:hover .dropdown {
     opacity: 1;
-    visibility: visible;
+    max-width: 50vw;
+    max-height: 90vh;
     width: max-content;
+    height: max-content;
     border: solid 10px transparent;
     box-sizing: border-box;
     box-shadow: 4px 4px 8px #00000080;
+    color: #f50;
 }
 
 .main-nav > li:hover > a {
-    color: #fff;
-    /* background: var(--hover-back); */
+    color: var(--menu-color);
 }
 
 .main-nav > li > a {
     display: block;
-    color: var(--hover-back);
+    color: var(--main-color);
     padding: 20px 0;
     transition: background .5s ease;
     text-decoration: none;
-    font-size: 30px;
 }
-.main-nav > li > a::before {
+.main-nav > li > a:hover {
+  color: var(--main-color);
+}
+
+.main-nav > li > a:before {
   content: "•••";
-  font-size: 24px;
+  color:
+  font-size: 28px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
-
 
 .main-nav .dropdown a:hover {
     color: #fff;
@@ -126,43 +121,41 @@ MenuComponent.prototype.styleContent = `
 
 .dropdown {
     position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 10px;
-    width: 100%;
-    background: #eef;
-    border: 2px solid #fff;
+    max-height: 0;
+    font-size: 0;
+    line-height: 1.8rem;
+    transition: all 0.8s ease;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease;
-    padding-left: 0;
+    background: var(--menu-back);
+    border: solid 10px var(--menu-back);
+    color: #f50;
+    z-index: 50;
+    left: 10px;
+    top: 10px;
+
+    overflow: auto;
+
 }
 
 .dropdown > li {
-    border-bottom: 1px solid #fff;
-    list-style-type: none;
-    list-style-position: outside;
-}
-
-.dropdown > li:last-child {
-    border-bottom: 0;
+    margin-left: -40px;
 }
 
 .dropdown > li > a {
     display: block;
-    padding: 1rem;
+    padding: 0.4rem;
     text-decoration: none;
-    color: #555;
+    color: var(--menu-color);
 }
 
   .dropdown > li.option1 {
     padding-left: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
   }
   .dropdown > li.option2 {
     padding-left: 20px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .dropdown > li.option3 {
@@ -171,7 +164,7 @@ MenuComponent.prototype.styleContent = `
   }
   .dropdown > li.option4 {
     padding-left: 60px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   .dropdown > li.option5 {
     padding-left: 80px;
@@ -182,6 +175,24 @@ MenuComponent.prototype.styleContent = `
     font-size: 0.7rem;
   }
 
+  ::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #079;
+  box-shadow: inset 0 0 1px #00000070;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f70;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
 `
 MenuComponent.prototype.template = `
 <nav id="nav" class="main-nav">

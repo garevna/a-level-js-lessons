@@ -57,91 +57,105 @@ class MainMenuComponent extends HTMLElement {
 }
 
 MainMenuComponent.styleSheet = `
-    ul {
-        list-style-type: none;
-    }
-    .main-menu {
-        --hover-back: #079;
-        --hover-color: #fff;
-        --menu-back: #fff;
-        --menu-color: #079;
+ul {
+    list-style-type: none;
+}
+.main-menu {
+    --hover-back: #079;
+    --hover-color: #fff;
+    --menu-back: #000;
+    --menu-color: #079;
+    --orange: #f50;
+    --blue: #079;
 
-        position: fixed;
-        top: 2vh;
-        right: 1vw;
-        z-index: 1500;
-        cursor: pointer;
-    }
-    .main-menu:before {
-        content: "☰";
-        font-size: 24px;
-    }
-    .main-menu .top-level {
-        position: absolute;
-        max-height: 0;
-        transition: all 0.8s;
-        opacity: 0;
-    }
-    .main-menu:hover .top-level {
-      max-height: 90vh;
-      height: max-content;
-      opacity: 1;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      right: 0;
-      top:0;
-      max-width: 70vw;
-      min-width: 200px;
-      width: max-content;
-      padding: 10px;
-      overflow: auto;
-      border: solid 10px var(--menu-back);
-      background: var(--menu-back);
-      box-shadow: -4px 4px 8px #00000070;
-    }
+    position: fixed;
+    top: 4vh;
+    right: 5vw;
+    z-index: 1500;
+    cursor: pointer;
+}
+.main-menu:before {
+    content: "☰";
+    font-size: 28px;
+    color: var(--orange);
+    font-weight: bold;
+}
 
-    .top-level-item {
-        position: relative;
-        display: block;
-        vertical-align: top;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        padding: 5px 10px;
-        border: 5px solid var(--menu-back);
-        background: var(--menu-back);
-        color: var(--menu-color);
-    }
+@media screen and (max-width:900px) {
+  .main-menu:before {
+    color: var(--blue);
+  }
+  .main-menu {
+    right: 2vw;
+  }
+}
+.main-menu:hover:before {
+  color: var(--orange);
+}
 
-    .sub-level {
-        max-height: 0;
-        transition: all 0.8s ease-in-out;
-    }
+.main-menu .top-level {
+    position: absolute;
+    transition: all 0.8s;
+    height: 85vh;
+    max-width: 70vw;
+    min-width: 200px;
+    width: max-content;
+    top: 1.5vh;
+    right: -100vw;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    overflow: auto;
+    background: var(--menu-back);
+    border: solid 10px var(--menu-back);
+    box-shadow: -2px 2px 4px #00000050;
+}
+.main-menu:hover .top-level {
+    right:-5vw;
+}
 
-    .top-level-item:hover .sub-level {
-      max-height: 90vh;
-      height: max-content;
-    }
+.top-level-item {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding: 5px 10px;
 
-    .sub-level-item {
-        font-size: 0;
-        padding: 0;
-        line-height: 0;
-        opacity: 0;
-        transition: all 0.5s;
-    }
+    background: var(--menu-back);
+    color: var(--menu-color);
+}
 
-    .sub-level-item:hover {
-        background: var(--hover-back);
-        color: var(--hover-color);
-    }
+.sub-level {
+    max-height: 0;
+    transition: all 0.8s ease-in-out;
+}
 
-    .top-level-item:hover .sub-level-item {
-        font-size: 1rem;
-        line-height: 1.4rem;
-        padding: 5px 10px;
-        opacity: 1;
-        box-shadow: inset 1px 1px 2px #00000050;
-    }`
+.top-level-item:hover .sub-level {
+  max-height: 90vh;
+  height: max-content;
+}
+
+.sub-level-item {
+    font-size: 0;
+    padding: 0;
+    line-height: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.sub-level-item:hover {
+    background: var(--hover-back);
+    color: var(--hover-color);
+}
+
+.top-level-item:hover .sub-level-item {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    padding: 5px 10px;
+    opacity: 1;
+    box-shadow: inset 1px 1px 2px #00000050;
+}`
 
 customElements.define (
   "main-menu-component",
