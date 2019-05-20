@@ -76,7 +76,7 @@ pre {
 .slider-button {
     background-color: transparent;
     border: 0;
-    background-image: url(icons/slider-5.gif);
+    background-image: url(src/icons/slider-5.gif);
     padding: 40px;
     background-size: 100%;
     background-position: center center;
@@ -85,7 +85,7 @@ pre {
     transition: all 0.5s;
 }
 .slider-button:hover {
-    background-image: url(icons/slider-2.gif);
+    background-image: url(src/icons/slider-2.gif);
 }
 
 
