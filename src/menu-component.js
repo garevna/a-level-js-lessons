@@ -84,11 +84,19 @@ li {
     font-weight: bold;
     transition: all 0.5s;
 }
+
 .main-nav > li:before {
     color: #f50;
 }
+.main-nav > li:hover:before {
+    color: #09b;
+}
+
 .main-nav > li:after {
     color: #09b;
+}
+.main-nav > li:hover:after {
+    color: #f50;
 }
 
 .main-nav > li:hover .dropdown {
