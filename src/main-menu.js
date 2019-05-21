@@ -74,24 +74,37 @@ ul {
     z-index: 1500;
     cursor: pointer;
 }
-.main-menu:before {
-    content: "☰";
-    font-size: 28px;
-    color: var(--orange);
-    font-weight: bold;
-}
+.main-menu:before, .main-menu:after {
+      content: "■";
+        color: var(--orange);
+        font-size: 30px;
+        font-weight: bold;
+        transition: all 0.5s;
+    }
 
-@media screen and (max-width:900px) {
-  .main-menu:before {
-    color: var(--blue);
-  }
-  .main-menu {
-    right: 2vw;
-  }
-}
-.main-menu:hover:before {
-  color: var(--orange);
-}
+    .main-menu:before {
+        color: var(--orange);
+    }
+    .main-menu:hover:before {
+        color: var(--blue);
+    }
+
+    .main-menu:after {
+        color: var(--blue);
+    }
+    .main-menu:hover:after {
+        color: var(--orange);
+    }
+
+    @media screen and (max-width:900px) {
+      .main-menu {
+        right: 1vw;
+        top: 1vh;
+      }
+      .main-menu:before {
+        font-size: 20px;
+      }
+    }
 
 .main-menu .top-level {
     position: absolute;
