@@ -7,7 +7,13 @@ class SpoilerClass extends HTMLElement {
       ).textContent = `
         a {
           text-decoration: none;
-          color: #777;
+          color: #079;
+        }
+        a:hover {
+          color: #f50;
+        }
+        img {
+          max-width: 100%;
         }
         input[type='checkbox'] {
             display: none;
