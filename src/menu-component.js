@@ -127,7 +127,7 @@ li {
     border: solid 10px var(--menu-back);
     color: #f50;
     z-index: 50;
-    left: 10px;
+    left: 20px;
     top: 10px;
     overflow: auto;
 }
