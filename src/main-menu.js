@@ -71,7 +71,7 @@ ul {
     position: fixed;
     top: 4vh;
     right: 5vw;
-    z-index: 1500;
+    z-index: 500;
     cursor: pointer;
 }
 .main-menu:before, .main-menu:after {

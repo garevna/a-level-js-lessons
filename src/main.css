@@ -40,14 +40,24 @@ footer {
 
 a {
     text-decoration: none;
-    color:#557;
+    color:#079;
     font-style: italic bold;
 }
 a:hover {
-    border: inset 1px white;
-    padding: 7px 10px;
-    background-image: linear-gradient(to bottom, #fff, #ccc);
+    color: #f70;
+    text-decoration: #079 underline;
 }
+a > span {
+  vertical-align: middle;
+}
+
+h1, h2 {
+  color: #079;
+}
+h3, h4 {
+  color: #f50;
+}
+
 a > span {
   vertical-align: middle;
 }
