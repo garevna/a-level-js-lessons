@@ -76,6 +76,20 @@ li {
     font-size: 1rem;
     line-height: 1rem;
 }
+.main-nav > li:before, .main-nav > li:after {
+    content: "■";
+    display: block;
+    font-size: 20px;
+    line-height:-1rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.main-nav > li:before {
+    color: #f50;
+}
+.main-nav > li:after {
+    color: #09b;
+}
 
 .main-nav > li:hover .dropdown {
     opacity: 1;
@@ -87,31 +101,6 @@ li {
     box-sizing: border-box;
     box-shadow: 4px 4px 8px #00000080;
     color: #f50;
-}
-
-.main-nav > li:hover > a {
-    color: var(--menu-color);
-}
-
-.main-nav > li > a {
-    display: block;
-    color: var(--main-color);
-    padding: 20px 0;
-    transition: background .5s ease;
-    text-decoration: none;
-}
-.main-nav > li > a:hover {
-  color: var(--main-color);
-}
-
-.main-nav > li > a:before {
-  content: "•••";
-  color:
-  font-size: 28px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .main-nav .dropdown a:hover {
@@ -132,9 +121,7 @@ li {
     z-index: 50;
     left: 10px;
     top: 10px;
-
     overflow: auto;
-
 }
 
 .dropdown > li {

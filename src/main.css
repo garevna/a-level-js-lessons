@@ -164,7 +164,7 @@ code, pre {
     border-right-width: 10px;
   }
   main {
-    padding: 20px 10px 50px 20px;
+    padding: 20px 10px 50px 30px;
   }
   .overshadow {
     width: 150px;
@@ -184,7 +184,7 @@ code, pre {
   box-shadow: inset 0 0 1px #00000070;
   border-radius: 1px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #f70;
   border-radius: 1px;

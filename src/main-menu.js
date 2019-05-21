@@ -101,7 +101,7 @@ ul {
         right: 1vw;
         top: 1vh;
       }
-      .main-menu:before {
+      .main-menu:before, .main-menu:after {
         font-size: 20px;
       }
     }
