@@ -16,10 +16,10 @@
     "Задание на дом": "hw-01"
   },
   "2": {
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Явное приведение типов": "Explicit-type-conversion",
+    "Неявное приведение типов": "Implicit-type-conversion",
+    "NaN | null | Infinity": "NaN-null-Infinity",
+    "BigInt (ES10)": "BigInt",
     "": "",
     "": "",
     "": "",
