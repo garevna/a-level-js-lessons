@@ -22,11 +22,11 @@ class SpoilerClass extends HTMLElement {
             margin-top: 40px;
             display: block;
             font-weight: bold;
-            font-family: monospace;
-            font-size: 1.4rem;
+            font-family: Roboto, Arial, monospace;
+            font-size: 1.0rem;
             text-transform: uppercase;
             text-align: right;
-            padding: 0.7rem;
+            padding: 0.5rem 0.8rem;
             color: #079;
             box-shadow: 1px 1px 2px #00000070;
             cursor: pointer;
@@ -34,7 +34,7 @@ class SpoilerClass extends HTMLElement {
             user-select: none;
             background-image: url(src/icons/cap.png);
             background-repeat: no-repeat;
-            background-size: 24px;
+            background-size: 20px;
             background-position: left center;
             border-left: solid 10px transparent;
         }
@@ -79,7 +79,7 @@ class SpoilerClass extends HTMLElement {
             box-shadow: 0px 0px 0px transparent;
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
-            max-height: 900px;
+            max-height: 80vh;
             border: solid 30px transparent;
             box-shadow: 2px 2px 4px #00000080;
         }
@@ -89,6 +89,25 @@ class SpoilerClass extends HTMLElement {
         .toggle:checked + .lbl-toggle {
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #079;
+            box-shadow: inset 0 0 1px #00000070;
+            border-radius: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #f50;
+            border-radius: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fa0;
         }
       `
       this.shadow.innerHTML += `

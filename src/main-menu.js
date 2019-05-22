@@ -108,10 +108,10 @@ ul {
 
 .main-menu .top-level {
     position: absolute;
-    transition: all 0.8s;
+    transition: all 1s ease-out;
     height: 85vh;
     max-width: 70vw;
-    min-width: 200px;
+    min-width: 40vw;
     width: max-content;
     top: 1.5vh;
     right: -100vw;

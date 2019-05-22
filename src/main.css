@@ -186,7 +186,8 @@ code, pre {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -196,10 +197,10 @@ code, pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f70;
+  background: #f50;
   border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fff;
+  background: #fa0;
 }

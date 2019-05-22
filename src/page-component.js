@@ -1,7 +1,3 @@
-// let hash = location.hash.slice(1)
-
-let hash = "Data-Structures"
-
 class PageComponent extends HTMLElement {
   constructor () {
     super()
@@ -47,6 +43,7 @@ class PageComponent extends HTMLElement {
       this.menu.setAttribute ( "options", "" )
 
       this.getData ( newVal )
+      console.log ( attrName, oldVal, newVal )
   }
 
   getData ( file ) {
@@ -92,6 +89,7 @@ class PageComponent extends HTMLElement {
             this.parseTextFragment ( fragment )
 
             insertionPoint = insertionPoint.slice(3,-3)
+
             this[ `create${this.fragments[insertionPoint].type}` ](
                 this.fragments[insertionPoint].content
             )
@@ -145,6 +143,8 @@ class PageComponent extends HTMLElement {
                     )
             }
       )
+
+      return table
   }
 
   createSlider ( fragment ) {
@@ -256,6 +256,8 @@ class PageComponent extends HTMLElement {
                       )
                       spoiler.content.push ( scriptSnippetContent )
                     }
+                    else if ( snippet.type === "Table" )
+                      spoiler.content.push ( this.createTable ( snippet.content ) )
                 }
                 else line.length ?
                         spoiler.content.push ( this.parseLine ( line ) ) :
@@ -307,7 +309,10 @@ class PageComponent extends HTMLElement {
           text: text.trim()
       })
 
-      return { level: headerLevel[0].length, text: line = line.split ( headerLevel[0] ).join("") }
+      return {
+          level: headerLevel[0].length,
+          text: line = line.split ( headerLevel[0] ).join("")
+      }
   }
 
   parseLine ( line ) {
