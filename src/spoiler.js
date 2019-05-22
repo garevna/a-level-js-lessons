@@ -24,7 +24,6 @@ class SpoilerClass extends HTMLElement {
             font-weight: bold;
             font-family: Roboto, Arial, monospace;
             font-size: 1.0rem;
-            text-transform: uppercase;
             text-align: right;
             padding: 0.5rem 0.8rem;
             color: #079;
