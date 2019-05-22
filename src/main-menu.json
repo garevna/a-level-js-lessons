@@ -23,6 +23,7 @@
     "Функции": "function",
     "Методы": "methods",
     "Работа со строками": "String-methods",
+    "String.fromCharCode()": "String-fromCharCode",
     "Переменные в литералах": "literals",
     "": "",
     "": "",
