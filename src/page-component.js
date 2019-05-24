@@ -43,7 +43,6 @@ class PageComponent extends HTMLElement {
       this.menu.setAttribute ( "options", "" )
 
       this.getData ( newVal )
-      console.log ( attrName, oldVal, newVal )
   }
 
   getData ( file ) {
