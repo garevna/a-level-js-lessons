@@ -216,11 +216,11 @@
     "": ""
   },
   "17": {
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Селектор :not(:defined)": "not-defined",
+    "Shadow DOM": "Shadow-DOM",
+    "Custom Elements": "custom-elements",
+    "Хуки жизненного цикла": "life-cycle-hooks",
+    "whenDefined": "when-defined",
     "": "",
     "": "",
     "": "",
