@@ -13,7 +13,7 @@
     "Свойство length": "length",
     "Оператор for": "for",
     "UTF-8": "UTF-8",
-    "Задание на дом": "hw-01"
+    "Homework": "hw-01"
   },
   "2": {
     "Явное приведение типов": "Explicit-type-conversion",
@@ -22,13 +22,14 @@
     "BigInt (ES10)": "BigInt",
     "Функции": "function",
     "Методы": "methods",
-    "Работа со строками": "String-methods",
+    "Методы строк": "String-methods",
     "String.fromCharCode()": "String-fromCharCode",
     "Переменные в литералах": "literals",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
+    "Методы массивов": "Array-methods",
+    "Конструктор Date": "Date-constructor",
+    "Самостоятельная работа": "self-work-02",
+    "Практика (XSS)": "XSS",
+    "Homework": "hw-02"
   },
   "3": {
     "": "",

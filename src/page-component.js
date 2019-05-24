@@ -79,8 +79,8 @@ class PageComponent extends HTMLElement {
 
       this.pageContent = this.fragments.pageContent
       delete this.fragments.pageContent
-      this.pageContent.match ( /!!!.[^!!!]+!!!/g )
-        .forEach (
+      let chanks = this.pageContent.match ( /!!!.[^!!!]+!!!/g )
+      !chanks ? null : chanks.forEach (
           insertionPoint => {
             let tmp = this.pageContent.split( insertionPoint )
             let fragment = tmp.shift()
