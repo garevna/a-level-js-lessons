@@ -23,6 +23,11 @@ ul {
     -webkit-user-select: none;
     user-select: none;
 }
+@media screen and (min-width:1480px) {
+  #menuToggle {
+      left: 96vw;
+  }
+}
 
 #menuToggle [type="checkbox"] {
     display: block;
