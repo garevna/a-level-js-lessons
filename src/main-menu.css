@@ -16,7 +16,7 @@ ul {
 
 #menuToggle {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 2vh;
     left: 95vw;
     z-index: 1;
