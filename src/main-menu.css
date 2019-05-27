@@ -84,7 +84,7 @@ ul {
 
 #menu {
   position: absolute;
-  min-width: 50vw;
+  min-width: 320px;
   width: max-content;
   height: 100vh;
   overflow-y: auto;
