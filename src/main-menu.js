@@ -62,7 +62,6 @@ class MainMenuComponent extends HTMLElement {
                   item.innerHTML = `${topic}`
                   item.ref = lesson [ topic ]
                   item.onclick = function ( event ) {
-                    console.log(`src/lessons/${event.target.ref}.md`)
                     document.getElementsByTagName ( "page-element" )[0]
                       .setAttribute ( "src",  `src/lessons/${event.target.ref}.md` )
                   }

@@ -58,7 +58,7 @@
     "": ""
   },
   "5": {
-    "": "",
+    "Вычисляемые свойства": "get-and-set",
     "": "",
     "": "",
     "": "",
@@ -223,10 +223,8 @@
     "whenDefined": "when-defined",
     "&lt;template&gt;": "template",
     "Slot": "slots",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
+    "Примеры веб-компонентов": "web-component-samples",
+    "Homework": "hw-17"
   },
   "18": {
     "": "",
