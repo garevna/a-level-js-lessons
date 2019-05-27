@@ -53,6 +53,7 @@ ul {
 
 #menuToggle span:nth-last-child(odd) {
   background: #09b;
+  height: 5px;
 }
 
 #menuToggle span:nth-last-child(even) {
