@@ -85,6 +85,8 @@ ul {
   position: absolute;
   min-width: 50vw;
   width: max-content;
+  height: 100vh;
+  overflow-y: auto;
   margin-top: -5vh;
   padding: 40px 20px;
   background: #000;
