@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
-hr {
+/* hr {
   margin: 30px 0;
   border-color: transparent;
 }
@@ -25,6 +25,14 @@ hr:before {
 hr:after {
   content: "▘";
   color: #09b;
+} */
+
+hr {
+  margin: 30px 0;
+  height: 1px;
+  border-top: solid 1px #f50;
+  border-bottom: solid 1.2px #09b;
+  background: transparent;
 }
 
 main {
@@ -90,10 +98,15 @@ div {
 
 table {
   margin-bottom: 20px;
+  border-collapse: collapse;
+}
+td {
+  border: solid 1px #dde;
+  padding: 5px 10px;
 }
 
 pre {
-  border: inset 1px;
+  border: inset 1px white;
 }
 
 .slider-button {

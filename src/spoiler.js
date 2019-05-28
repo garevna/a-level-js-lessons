@@ -89,6 +89,30 @@ class SpoilerClass extends HTMLElement {
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
         }
+
+        table {
+          margin: 30px 0;
+          border-collapse: collapse;
+        }
+        td {
+          border: solid 1px #eef;
+          padding: 5px 10px;
+        }
+
+        hr {
+          margin: 30px 0;
+          border: 0;
+        }
+        hr:before {
+          content: "▗";
+          color: #f50;
+
+        }
+        hr:after {
+          content: "▘";
+          color: #09b;
+        }
+
         ::-webkit-scrollbar {
             width: 4px;
             height: 4px;
