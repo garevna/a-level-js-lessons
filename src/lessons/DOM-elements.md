@@ -337,6 +337,23 @@ _________________________________
 
 Объект **~HTMLCollection~**
 
+Используем разметку предыдущего примера
+
+~~~js
+document.body.children
+~~~
+
+**Результат:**
+
+~~~console
+▼ HTMLCollection(3) [div.container, h1.header, p.paragraph]
+  ► 0: div.container
+  ► 1: h1.header
+  ► 2: p.paragraph
+    length: 3
+  ► __proto__: HTMLCollection
+~~~
+
 ___________________________________
 
 ### ![ico-20 icon] parentNode
