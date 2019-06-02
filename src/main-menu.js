@@ -13,6 +13,7 @@ class MainMenuComponent extends HTMLElement {
           <span></span>
           <span></span>
           <ul id="menu">
+            <h3>Lessons</h3>
           </ul>
         </div>
       </nav>

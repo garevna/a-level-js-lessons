@@ -16,41 +16,43 @@ ul {
 
 #menuToggle {
     display: block;
-    position: fixed;
-    top: 2vh;
-    left: 95vw;
+    position: absolute;
+    top: 8px;
+    right: 5px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
+    cursor: pointer;
 }
-@media screen and (min-width:1480px) {
+/* @media screen and (min-width:1480px) {
   #menuToggle {
       left: 96vw;
   }
-}
+} */
 
 #menuToggle [type="checkbox"] {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 55px;
+    height: 40px;
     position: absolute;
-    top: -7px;
-    left: -20px;
+    top: -15px;
+    right: 0px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
     -webkit-touch-callout: none;
 }
 
 #menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+  display: inline-block;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
   position: relative;
-  border-radius: 3px;
+  border-radius: 0px;
   z-index: 1;
-  transform-origin: 4px 0px;
+  transform-origin: 0px 0px;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
@@ -58,7 +60,6 @@ ul {
 
 #menuToggle span:nth-last-child(odd) {
   background: #09b;
-  height: 5px;
 }
 
 #menuToggle span:nth-last-child(even) {
@@ -74,8 +75,10 @@ ul {
 }
 
 #menuToggle [type="checkbox"]:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-9px, 10px);
+    opacity: 1;
+    width: 30px;
+    height: 5px;
+    transform: rotate(45deg) translate(50px, -68px);
 }
 
 #menuToggle [type="checkbox"]:checked ~ span:nth-last-child(3) {
@@ -84,24 +87,34 @@ ul {
 }
 
 #menuToggle [type="checkbox"]:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(-10px, -8px);
+    transform: rotate(-45deg) translate(0px, 10px);
+    width: 30px;
+    height: 5px;
 }
 
 #menu {
-  position: absolute;
-  min-width: 320px;
-  width: max-content;
-  height: 100vh;
-  overflow-y: auto;
-  margin-top: -45px;
-  padding: 40px 20px;
-  background: #000;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
+    position: absolute;
+    right: -5px;
+    top: 35px;
+    min-width: 320px;
+    width: max-content;
+    height: 101vh;
+    overflow-y: auto;
+    margin-top: -45px;
+    padding: 40px 20px;
+    background: #000000dd;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 100% 100%;
+    transform: translate(100%, 0);
+    transition: all 0.5s ease-out;
+}
 
-  transform-origin: 100% 100%;
-  transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+#menu > h3 {
+    position: absolute;
+    top: -5px;
+    right: 90px;
+    color: #09b;
 }
 
 #menu > li {
@@ -115,7 +128,7 @@ ul {
 }
 
 #menuToggle [type="checkbox"]:checked ~ ul {
-  transform: translate(-80%, 0)
+  transform: translate(5px, 0);
 }
 
 /* sub-level */
