@@ -17,18 +17,13 @@ ul {
 #menuToggle {
     display: block;
     position: absolute;
-    top: 8px;
+    top: 0px;
     right: 5px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
 }
-/* @media screen and (min-width:1480px) {
-  #menuToggle {
-      left: 96vw;
-  }
-} */
 
 #menuToggle [type="checkbox"] {
     display: block;
