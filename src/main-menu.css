@@ -129,6 +129,7 @@ ul {
 
 #menuToggle [type="checkbox"]:checked ~ ul {
   transform: translate(5px, 0);
+  box-shadow: -4px -4px 8px #00000090;
 }
 
 /* sub-level */
