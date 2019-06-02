@@ -58,7 +58,7 @@ li {
 #nav {
     position: sticky;
     top:0;
-    z-index: 1000;
+    z-index: 50;
 }
 .main-nav {
     --hover-back: #f90;
