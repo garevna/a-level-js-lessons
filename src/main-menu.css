@@ -90,7 +90,7 @@ ul {
 
 #menu {
     position: absolute;
-    right: -5px;
+    right: -15px;
     top: 35px;
     min-width: 320px;
     width: max-content;
@@ -124,7 +124,7 @@ ul {
 }
 
 #menuToggle [type="checkbox"]:checked ~ ul {
-  transform: translate(5px, 0);
+  transform: translate(0, 0);
   box-shadow: -4px -4px 8px #00000090;
 }
 
