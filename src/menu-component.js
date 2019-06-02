@@ -66,7 +66,6 @@ li {
     --menu-color: #fff;
     --main-color: #f50;
 
-    font-size: 0;
     line-height: 0;
     padding-left:0;
     padding-top: 58px;
@@ -148,24 +147,24 @@ li {
     font-weight: bold;
   }
   .dropdown > li.option2 {
-    padding-left: 20px;
+    padding-left: 35px;
     font-size: 1.05rem;
   }
 
   .dropdown > li.option3 {
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 1.0rem;
   }
   .dropdown > li.option4 {
-    padding-left: 60px;
+    padding-left: 100px;
     font-size: 0.95rem;
   }
   .dropdown > li.option5 {
-    padding-left: 80px;
+    padding-left: 130px;
     font-size: 0.8rem;
   }
   .dropdown > li.option6 {
-    padding-left: 100px;
+    padding-left: 155px;
     font-size: 0.7rem;
   }
 
