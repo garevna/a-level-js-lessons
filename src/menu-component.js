@@ -69,6 +69,7 @@ li {
     font-size: 0;
     line-height: 0;
     padding-left:0;
+    padding-top: 58px;
 }
 
 .main-nav > li {
