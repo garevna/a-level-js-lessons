@@ -74,12 +74,12 @@ li {
 .main-nav > li {
     position: absolute;
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 0.7rem;
 }
 .main-nav > li:before, .main-nav > li:after {
-    content: "■";
+    content: "◆";
     display: block;
-    font-size: 20px;
+    font-size: 30px;
     line-height:-1rem;
     font-weight: bold;
     transition: all 0.5s;
@@ -119,15 +119,13 @@ li {
 .dropdown {
     position: absolute;
     max-height: 0;
-    font-size: 0;
     line-height: 1.8rem;
     transition: all 0.8s ease;
     opacity: 0;
-    background: var(--menu-back);
-    border: solid 10px var(--menu-back);
-    color: #f50;
+    background: #005070cc;
+    border: solid 10px #005070cc;
     z-index: 50;
-    left: 20px;
+    left: 30px;
     top: 10px;
     overflow: auto;
 }
