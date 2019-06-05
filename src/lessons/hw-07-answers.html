@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="src/images/a-level-ico.png" type="image/x-icon">
+    <title>Homework 6 ( 3 )</title>
+  </head>
+  <body>
+    <h4>2</h4>
+    <pre>
+      <code data-language="js">
+var collection = []
+
+function enter_or_leave ( event ) {
+
+    event.target.style.backgroundColor =
+        event.type === "mouseover" ? "#ffff0050" : "#ff00ff50"
+}
+
+function clickHandler ( event ) {
+    event.target.removeEventListener ( "mouseover", enter_or_leave )
+    event.target.removeEventListener ( "mouseout", enter_or_leave )
+    event.target.remove()
+}
+
+[ "first", "second", "third", "fourth" ].forEach (
+    function ( tag, index, arr  ) {
+        var elem = ( collection.length === 0 ? document.body :
+                     collection [ collection.length - 1 ] )
+            .appendChild ( document.createElement ( "div" ) )
+        collection.push ( elem )
+        elem.style = `
+            width:  ${( arr.length - index ) * 50}px;
+            height: ${( arr.length - index ) * 50}px;
+            background-color: #ff00ff50;
+        `
+        elem.title = tag
+        elem.addEventListener ( "mouseover", enter_or_leave )
+        elem.addEventListener ( "mouseout", enter_or_leave )
+        elem.onclick = clickHandler
+	}
+)
+      </code>
+    </pre>
+
+    <h4>3</h4>
+    <pre>
+      <code language="js">
+var collection = []
+
+function enter_or_leave ( event ) {
+    event.target.style.backgroundColor =
+        event.type === "mouseover" ? "#ffff0050" : "#ff00ff50"
+}
+
+function clickHandler ( event ) {
+    event.stopPropagation()
+    event.target.removeEventListener ( "mouseover", enter_or_leave )
+    event.target.removeEventListener ( "mouseout", enter_or_leave )
+    event.target.outerHTML = event.target.innerHTML
+}
+
+[ 1, 2, 3, 4, 5, 6, 7 ].forEach (
+    function ( tag, index, arr  ) {
+        var elem = ( collection.length === 0 ? document.body :
+                     collection [ collection.length - 1 ] )
+            .appendChild ( document.createElement ( "div" ) )
+        collection.push ( elem )
+        elem.style = `
+            width:  ${( arr.length - index ) * 50}px;
+            height: ${( arr.length - index ) * 50}px;
+            background-color: #ff00ff50;
+            border: dotted 1px yellow;
+        `
+        elem.title = tag
+        elem.addEventListener ( "mouseover", enter_or_leave )
+        elem.addEventListener ( "mouseout", enter_or_leave )
+        elem.onclick = clickHandler
+	}
+)
+      </code>
+    </pre>
+  </body>
+</html>
