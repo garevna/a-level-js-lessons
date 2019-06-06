@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../images/a-level-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <script src="../rainbow.js"></script>
+    <link rel="stylesheet" href="../for-rainbow.css">
+    <title>Homework 6 ( 3 )</title>
+  </head>
+  <body>
+    <h4>1</h4>
+    <pre>
+      <code data-language="js">
+var p = document.body.appendChild(
+    document.createElement("p")
+)
+
+var counter = 100
+function timer() {
+    if ( !counter-- ) return p.remove()
+    p.innerText = new Date().toLocaleTimeString()
+    setTimeout ( timer, 1000 )
+}
+
+timer()
+      </code>
+    </pre>
+
+    <h4>2</h4>
+    <pre>
+      <code data-language="js">
+var typeMessage = ( function ( velocity ) {
+    const container = document.getElementById ( "demo" ) ?
+        document.getElementById ( "demo" ) :
+        document.body.appendChild (
+            document.createElement ( "h4" )
+        )
+    var index = 0
+    return function ( message ) {
+        var num = index
+        setTimeout (
+            () => container.textContent += message [ num ],
+            1000 * velocity * num
+        )
+        index++ < message.length - 1 ? arguments.callee ( message ) : null
+    }
+})( 1 )
+
+typeMessage ( `Welcome to the hell` )
+      </code>
+    </pre>
+
+    <h4>3</h4>
+    <pre>
+      <code language="js">
+function User ( name ) {
+    this.name = name
+    this.id = this.counter()
+}
+User.prototype.counter = (
+    function () {
+        var counter = 0
+        return function () {
+            return this.id ? this.id : counter++
+        }
+    }
+)()
+
+var users = [
+    new User ( "Семен" ),
+    new User ( "Антон" ),
+    new User ( "Демьян" ),
+    new User ( "Василий" )
+]
+      </code>
+    </pre>
+  </body>
+</html>

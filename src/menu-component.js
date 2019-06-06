@@ -52,6 +52,7 @@ class MenuComponent extends HTMLElement {
 }
 
 MenuComponent.prototype.styleContent = `
+* { user-select: none; outline: none; }
 li {
   list-style-type: none;
 }
