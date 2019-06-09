@@ -103,3 +103,16 @@
 .toilet {
   background-image: url(src/icons/toilet.png)
 }
+
+
+.start-page {
+    background-image: url(https://garevna.github.io/js-samples/images/js_cup_1.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin: 20px 5px;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+}

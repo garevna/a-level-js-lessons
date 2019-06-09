@@ -1,9 +1,10 @@
-![](https://garevna.github.io/js-samples/images/js_cup_1.png)
+# ![start-page] Client-side JS
+_____________________
 
-# Client-side JS
+![](src/images/lessons/douglas-crockford.jpg)
+«_Я думаю, что ООП без классов — это подарок человечеству от JavaScript_»
 
-
-| ![](src/images/lessons/douglas-crockford.jpg)| <p>«_Я думаю, что ООП без классов — это подарок человечеству от JavaScript_»</p>[^^Дуглас Крокфорд^^](http://www.crockford.com/)|
+[^^Дуглас Крокфорд^^](http://www.crockford.com/)
 
 _______________________________________
 
