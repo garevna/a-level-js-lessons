@@ -1,8 +1,10 @@
 .ico-20, .ico-25, .ico-30, .ico-35, .ico-40, .ico-50, .ico-70 {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin: 20px 5px;
+    vertical-align: middle;
 }
 .ico-20 { width: 20px; height: 20px; }
 .ico-25 { width: 25px; height: 25px; }
@@ -86,7 +88,8 @@
   background-image: url(src/icons/npm.png)
 }
 .youtube {
-  background-image: url(src/icons/youtube.png)
+    background-image: url(src/icons/youtube.png);
+    min-width: 70px;
 }
 .debug-button {
   background-image: url(src/icons/debug-button.png)

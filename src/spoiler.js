@@ -13,8 +13,25 @@ class SpoilerClass extends HTMLElement {
           color: #f50;
         }
         img {
-          max-width: 100%;
+            max-width:90%;
+            margin: 20px;
+            padding: 10px;
+            border: inset 1px white;
+            box-shadow: 2px 2px 4px #00000080;
         }
+        div {
+            text-align: justify;
+        }
+        table {
+            margin: 30px 0;
+            border-collapse: collapse;
+        }
+        td {
+            border: solid 1px #eef;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
         input[type='checkbox'] {
             display: none;
         }
