@@ -24,7 +24,6 @@ class SpoilerClass extends HTMLElement {
         div {
             text-align: justify;
             padding-right: 20px;
-            max-width: 95%;
         }
         pre {
           max-width: 95%;
@@ -33,8 +32,7 @@ class SpoilerClass extends HTMLElement {
           border-top-width: 5px;
           border-bottom-width: 5px;
           margin: 20px 0;
-          padding: 0;
-          overflow: auto;
+          padding: 0 5px 0 0;
         }
         table {
             margin: 30px 0;
@@ -110,7 +108,8 @@ class SpoilerClass extends HTMLElement {
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
             max-height: 70vh;
-            border: solid 30px transparent;
+            border: solid 20px transparent;
+            padding-right:10px;
             box-shadow: 2px 2px 4px #00000080;
         }
         .toggle:checked + .lbl-toggle::before {
