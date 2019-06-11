@@ -103,6 +103,9 @@
 .toilet {
   background-image: url(src/icons/toilet.png)
 }
+.curl {
+  background-image: url(https://curl.haxx.se/logo/curl-logo.svg);
+}
 
 
 .start-page {

@@ -5,6 +5,7 @@ class SpoilerClass extends HTMLElement {
       this.shadow.appendChild (
         document.createElement ( "style" )
       ).textContent = `
+        * { box-sizing: border-box; }
         a {
           text-decoration: none;
           color: #079;
@@ -13,14 +14,27 @@ class SpoilerClass extends HTMLElement {
           color: #f50;
         }
         img {
-            max-width:90%;
-            margin: 20px;
+            max-width:98%;
+            margin: 20px 1%;
             padding: 10px;
             border: inset 1px white;
             box-shadow: 2px 2px 4px #00000080;
+            box-sizing: border-box;
         }
         div {
             text-align: justify;
+            padding-right: 20px;
+            max-width: 95%;
+        }
+        pre {
+          max-width: 95%;
+          box-shadow: 0 0 5px #00000050;
+          border: solid 20px transparent;
+          border-top-width: 5px;
+          border-bottom-width: 5px;
+          margin: 20px 0;
+          padding: 0;
+          overflow: auto;
         }
         table {
             margin: 30px 0;
@@ -95,7 +109,7 @@ class SpoilerClass extends HTMLElement {
             box-shadow: 0px 0px 0px transparent;
         }
         .toggle:checked + .lbl-toggle + .collapsible-content {
-            max-height: 80vh;
+            max-height: 70vh;
             border: solid 30px transparent;
             box-shadow: 2px 2px 4px #00000080;
         }

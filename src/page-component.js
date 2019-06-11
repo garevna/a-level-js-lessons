@@ -217,7 +217,7 @@ class PageComponent extends HTMLElement {
       let wrapper = document.createElement ( "pre" )
       let script = document.createElement ( "code" )
       script.setAttribute( "data-language", lang )
-      script.textContent = fragment
+      script.textContent = fragment.trim()
       wrapper.appendChild( script )
       Rainbow.color(
           script.textContent,

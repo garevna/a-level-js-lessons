@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../images/a-level-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <script src="../rainbow.js"></script>
+    <link rel="stylesheet" href="../for-rainbow.css">
+    <title>Homework 8</title>
+    <style>
+        body { font-family: Roboto, Arial;  }
+        pre { padding: 10px 20px; }
+        h1 {
+          color: white;
+          padding: 5px 10px;
+          max-width: 100px;
+          background: #079;
+          text-align: center;
+        }
+        h4 { color: #f50; }
+    </style>
+  </head>
+  <body>
+    <h4>1</h4>
+    simple...
+
+    <h4>2</h4>
+    <pre>
+      <code data-language="js">
+var messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+]
+
+messages.getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? log [ key + "[2]" ] ? key + "[3]" : key + "[2]" : key
+}
+
+var log = {}
+
+var sendMessage = message => new Promise (
+    resolve => setTimeout (
+        () => resolve ( message ),
+        Math.random () * 7000
+    )
+)
+
+messages.forEach (
+    ( message, index, arr ) => sendMessage ( message )
+        .then (
+            mess => Object.assign ( log,
+                { [ arr.getKey() ] : message }
+            )
+        )
+)
+      </code>
+    </pre>
+
+    <h4>3</h4>
+    <pre>
+      <code language="js">
+var messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+]
+
+messages.getKey = () => new Date().toLocaleString().split(", ")[1]
+
+var log = {}
+
+var sendMessage = message => new Promise (
+    resolve => setTimeout (
+        () => resolve ( message ),
+        Math.random () * 5000
+    )
+)
+
+var sendAll = () => {
+    var index = 0
+    function recursive () {
+        sendMessage ( messages [ index++ ] )
+            .then (
+                response => {
+                    if ( !response ) return
+                    Object.assign ( log,
+                        { [ messages.getKey() ] : response }
+                    )
+                    recursive ()
+                }
+            )
+    }
+    recursive ()
+}
+
+sendAll()
+      </code>
+    </pre>
+  </body>
+</html>
