@@ -23,17 +23,8 @@ class SpoilerClass extends HTMLElement {
         }
         div {
             text-align: justify;
-            padding-right: 20px;
         }
-        pre {
-          max-width: 95%;
-          box-shadow: 0 0 5px #00000050;
-          border: solid 20px transparent;
-          border-top-width: 5px;
-          border-bottom-width: 5px;
-          margin: 20px 0;
-          padding: 0 5px 0 0;
-        }
+
         table {
             margin: 30px 0;
             border-collapse: collapse;
