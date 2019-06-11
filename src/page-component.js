@@ -8,6 +8,17 @@ class PageComponent extends HTMLElement {
     this.main = this.appendChild (
       document.createElement ( "main" )
     )
+    
+    let footer = this.appendChild (
+      document.createElement ( "footer" )
+    )
+    footer.innerHTML += `
+    <figure class="overshadow">
+      <div class="overshadow__shadow">
+        <div class="overshadow__text"></div>
+      </div>
+    </figure>`
+
     this.menu = document.getElementsByTagName ( "menu-component" )[0]
   }
 
@@ -97,17 +108,7 @@ class PageComponent extends HTMLElement {
         this.pageContent.length ?
             this.parseTextFragment ( this.pageContent ) : null
 
-      let footer = this.appendChild (
-        document.createElement ( "footer" )
-      )
-      footer.innerHTML += `
-      <figure class="overshadow">
-        <div class="overshadow__shadow">
-          <div class="overshadow__text"></div>
-        </div>
-      </figure>`
-
-      this.menu.setAttribute ( "options", JSON.stringify (this.pageContentList) )
+        this.menu.setAttribute ( "options", JSON.stringify (this.pageContentList) )
   }
 
   // Block level
