@@ -9,8 +9,6 @@ pre {
     border-bottom-width: 5px;
     margin: 20px 10px 20px 2px;
     padding: 0 5px 0 0;
-}
-pre > code {
     overflow: auto;
 }
 
