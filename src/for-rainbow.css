@@ -11,7 +11,7 @@ pre {
     padding: 0 5px 0 0;
 }
 pre > code {
-    white-space: normal;
+    overflow: auto;
 }
 
 pre .storage.function, pre .variable.self,
