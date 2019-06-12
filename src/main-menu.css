@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
 
+:root {
+  --icon: "src/icons/a-level-ico.png";
+
+}
+
 * { box-sizing: border-box; }
 
 a {
@@ -13,6 +18,17 @@ ul {
     list-style: none;
 }
 
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-image: url(var(--icon));
+}
 
 #menuToggle {
     display: block;
@@ -39,27 +55,27 @@ ul {
 }
 
 #menuToggle span {
-  display: inline-block;
-  box-shadow: 1px 1px 2px #00000090;
-  cursor: pointer;
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-  position: relative;
-  border-radius: 0px;
-  z-index: 54;
-  transform-origin: 0px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+    display: inline-block;
+    box-shadow: 1px 1px 2px #00000090;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    position: relative;
+    border-radius: 0px;
+    z-index: 54;
+    transform-origin: 0px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
 }
 
 #menuToggle span:nth-last-child(odd) {
-  background: #09b;
+    background: #09b;
 }
 
 #menuToggle span:nth-last-child(even) {
-  background: #f50;
+    background: #f50;
 }
 
 #menuToggle span:first-child {
@@ -78,8 +94,8 @@ ul {
 }
 
 #menuToggle [type="checkbox"]:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 #menuToggle [type="checkbox"]:checked ~ span:nth-last-child(2) {
@@ -115,18 +131,18 @@ ul {
 }
 
 #menu > li {
-  padding: 10px 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #09b;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #09b;
 }
 #menu > li:hover {
-  color: #f50;
+    color: #f50;
 }
 
 #menuToggle [type="checkbox"]:checked ~ ul {
-  transform: translate(0, 0);
-  box-shadow: -4px -4px 8px #00000090;
+    transform: translate(0, 0);
+    box-shadow: -4px -4px 8px #00000090;
 }
 
 /* sub-level */
@@ -134,8 +150,8 @@ ul {
 label { cursor: pointer; }
 
 input[type="radio"] {
-  opacity: 0;
-  cursor: pointer;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .sub-level {
@@ -147,7 +163,7 @@ input[type="radio"] {
     transition: all 0.5s ease-in;
 }
 .sub-level > li {
-  color: #09b;
+    color: #09b;
 }
 
 input[type="radio"]:checked ~ .sub-level {
@@ -159,8 +175,8 @@ input[type="radio"]:checked ~ .sub-level {
 }
 
 input[type="radio"]:checked ~ .sub-level > li {
-  padding: 3px 5px;
-  width: 85%;
+    padding: 3px 5px;
+    width: 85%;
 }
 
 input[type="radio"]:checked ~ .sub-level > li:hover {
@@ -171,21 +187,21 @@ input[type="radio"]:checked ~ .sub-level > li:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+    width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #079;
-  box-shadow: inset 0 0 1px #00000070;
-  border-radius: 1px;
+    background: #079;
+    box-shadow: inset 0 0 1px #00000070;
+    border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f50;
-  border-radius: 1px;
+    background: #f50;
+    border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fa0;
+    background: #fa0;
 }

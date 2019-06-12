@@ -86,18 +86,11 @@ li {
     transition: all 0.5s;
 }
 
-.main-nav > li:before {
+.main-nav > li:before, .main-nav > li:hover:after {
     color: #f50;
 }
-.main-nav > li:hover:before {
+.main-nav > li:hover:before, .main-nav > li:after {
     color: #09b;
-}
-
-.main-nav > li:after {
-    color: #09b;
-}
-.main-nav > li:hover:after {
-    color: #f50;
 }
 
 .main-nav > li:hover .dropdown {
