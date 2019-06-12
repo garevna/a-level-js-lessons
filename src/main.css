@@ -38,7 +38,11 @@ main-menu-component {
 }
 
 main {
-  padding: 20px 30px 50px 50px;
+    padding: 20px 30px 50px 50px;
+    box-sizing: border-box;
+    max-width:900px;
+    width: 100%;
+    margin-bottom:20px;
 }
 
 div {
@@ -103,14 +107,6 @@ h3, h4 {
 
 a > span {
   vertical-align: middle;
-}
-
-.main {
-    padding: 20px;
-    box-sizing: border-box;
-    max-width:900px;
-    width: 100%;
-    margin-bottom:20px;
 }
 
 table {
