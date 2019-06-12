@@ -18,16 +18,16 @@ ul {
     list-style: none;
 }
 
-.icon {
+span.icon {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    margin-right: 10px;
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    background-image: url(var(--icon));
+    margin: 5px;
+    background-image: var(--icon);
 }
 
 #menuToggle {
