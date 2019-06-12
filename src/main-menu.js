@@ -49,7 +49,7 @@ class MainMenuComponent extends HTMLElement {
                 lessonItem.innerHTML = `
                   <input type="radio" id="lesson-${lessonNum}" name="lessons">
                   <label for="lesson-${lessonNum}">
-                    <img src="src/icons/a-level-ico.png" width="20"/>
+                    <span class = "ico-20 icon"></span>
                     <b>${lessonNum++}</b>
                   </label>
                   <ul class="sub-level"></ul>`
@@ -64,7 +64,7 @@ class MainMenuComponent extends HTMLElement {
                   item.ref = lesson [ topic ]
                   item.onclick = function ( event ) {
                     document.getElementsByTagName ( "page-element" )[0]
-                      .setAttribute ( "src",  `src/lessons/${event.target.ref}.md` )
+                      .setAttribute ( "src",  `${lessons}${event.target.ref}.md` )
                   }
                 }
               }
