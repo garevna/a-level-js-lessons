@@ -18,7 +18,7 @@ ul {
     list-style: none;
 }
 
-span.icon {
+.icon {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;

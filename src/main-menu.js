@@ -49,7 +49,7 @@ class MainMenuComponent extends HTMLElement {
                 lessonItem.innerHTML = `
                   <input type="radio" id="lesson-${lessonNum}" name="lessons">
                   <label for="lesson-${lessonNum}">
-                    <span class = "icon"></span>
+                    <div class = "icon"></div>
                     <b>${lessonNum++}</b>
                   </label>
                   <ul class="sub-level"></ul>`
