@@ -1,7 +1,7 @@
 # ![start-page] Client-side JS
 _____________________
 
-![](${assets}douglas-crockford.jpg)
+![](`${lessonsImages}douglas-crockford.jpg`)
 «_Я думаю, что ООП без классов — это подарок человечеству от JavaScript_»
 
 [^^Дуглас Крокфорд^^](http://www.crockford.com/)
