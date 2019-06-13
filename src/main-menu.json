@@ -87,8 +87,8 @@
   "11": {
     "JSON": "JSON",
     "Утилита командной строки curl": "curl",
-    "": "",
-    "": "",
+    "XMLHttpRequest": "XMLHttpRequest",
+    "Заголовок Content-Type": "Content-Type",
     "": "",
     "": "",
     "": "",

@@ -61,7 +61,7 @@
 .bash {
   background-image: var(--bash);
 }
-.err {
+.error {
   background-image: var(--err);
 }
 .file {
