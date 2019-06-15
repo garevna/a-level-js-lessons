@@ -22,7 +22,7 @@ class MainMenuComponent extends HTMLElement {
       this.shadow.querySelector ( ".home" )
         .onclick = function ( event ) {
             let page = document.getElementsByTagName ( "page-element" )[0]
-            page.getAttribute ( "src" ) !== "lessons/start-page.md" ?
+            page.getAttribute ( "src" ) !== "src/lessons/start-page.md" ?
                     page.setAttribute ( "src", "lessons/start-page.md" ) : null
         }
 
