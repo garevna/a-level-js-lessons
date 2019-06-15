@@ -23,7 +23,7 @@ class MainMenuComponent extends HTMLElement {
         .onclick = function ( event ) {
             let page = document.getElementsByTagName ( "page-element" )[0]
             page.getAttribute ( "src" ) !== "src/lessons/start-page.md" ?
-                    page.setAttribute ( "src", "lessons/start-page.md" ) : null
+                    page.setAttribute ( "src", "src/lessons/start-page.md" ) : null
         }
 
       fetch("src/main-menu.css")
