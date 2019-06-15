@@ -13,11 +13,19 @@ class MainMenuComponent extends HTMLElement {
           <span></span>
           <span></span>
           <ul id="menu">
-            <h3>Lessons</h3>
+            <h3><div class="home"></div>Lessons</h3>
           </ul>
         </div>
       </nav>
       `
+
+      this.shadow.querySelector ( ".home" )
+        .onclick = function ( event ) {
+            let page = document.getElementsByTagName ( "page-element" )[0]
+            page.getAttribute ( "src" ) !== "lessons/start-page.md" ?
+                    page.setAttribute ( "src", "lessons/start-page.md" ) : null
+        }
+
       fetch("src/main-menu.css")
         .then (
           response => response.text()

@@ -7,6 +7,17 @@
 
 * { box-sizing: border-box; }
 
+.home {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
+    vertical-align: text-bottom;
+    width: 30px;
+    height: 30px;
+}
+
 a {
     text-decoration: none;
     color: #09b;
