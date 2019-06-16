@@ -228,4 +228,4 @@ document.body.appendChild ( text )
 
 ___________________________
 
-[![ico-30 hw] Тесты](https://garevna.github.io/js-quiz/#forms)
+[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#forms)

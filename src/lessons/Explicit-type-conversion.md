@@ -195,8 +195,10 @@ Object ( y )
 
 ____________________________________________________________________
 
-### [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
 
 ____________________________________________________________________
 
-| [![ico-20 link] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![ico-20 link] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/jsref/jsref_infinity.asp)
+
+[![ico-20 link] ^^Equality in JavaScript^^](https://dorey.github.io/JavaScript-Equality-Table/unified/)

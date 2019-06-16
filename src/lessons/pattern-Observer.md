@@ -241,4 +241,4 @@ const observer = new Observer ( observed )
 observer.subscibe ( subscriber.showInfo )
 ~~~~
 
-| ![](https://github.com/garevna/js-course/blob/master/pictures/observer-2.gif?raw=true) |
+![](https://github.com/garevna/js-course/blob/master/pictures/observer-2.gif?raw=true)

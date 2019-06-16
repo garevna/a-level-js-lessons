@@ -49,8 +49,10 @@ var z = --y + ++x
 ^^значение переменной **x** станет ~0 + 1 = 1~,^^
 ^^а затем будет вычислено значение переменной **z**:  ~1 + 1 = 2~^^
 
-## [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
+_______________________________
+
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
 
 ______________________________________________________________
 
-[![ico-20 link] MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+[![ico-20 link] ^^MDN^^](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)

@@ -147,4 +147,8 @@ var  a = 2,    b = 8,    w = multiply ( a, b )
 
 ____________________________________________________________________
 
-| [![ico-25 hw] Тесты](https://garevna.github.io/js-quiz/#function) | [![ico-20 link] w3schools](https://www.w3schools.com/js/js_function_definition.asp) | [![ico-20 link] MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function) |
+[![ico-25 hw] **Тесты**](https://garevna.github.io/js-quiz/#function)
+
+_______________________________________
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/js/js_function_definition.asp)
+[![ico-20 link] MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)

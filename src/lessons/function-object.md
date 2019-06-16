@@ -818,4 +818,4 @@ ___________________________________
 [![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSfMKUQjVnYrQq_YpPCNG81_DXOU0x8rVnb1bAJ4O_UnvvzwKg/viewform)
 
 
-[![ico-20 link] w3schools](https://www.w3schools.com/js/js_scope.asp)
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/js/js_scope.asp)

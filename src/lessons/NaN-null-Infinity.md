@@ -98,4 +98,4 @@ Infinity + Infinity  // Infinity
 
 ______________________________________________________________
 
-[![ico-20 link] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp)
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/jsref/jsref_infinity.asp)

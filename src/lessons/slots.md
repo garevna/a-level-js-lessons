@@ -126,4 +126,4 @@ document.body.appendChild (
 
 _____________________________________________________________________
 
-[![ico-25 cap] 2](https://repl.it/@garevna/web-component)
+[![ico-25 cap] ** 2**](https://repl.it/@garevna/web-component)

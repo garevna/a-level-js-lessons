@@ -136,4 +136,4 @@ console.log ( x %= y )  // 2
 
 _________________________________________________________________
 
-### [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSd0-twHJZfk-bKNkk-mg7ELLH49d3GYjcahThqGJC7A7sAJZw/viewform)

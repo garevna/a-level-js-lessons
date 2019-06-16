@@ -759,7 +759,187 @@ ____________________________
 
 ## ![ico-25 icon] Object.freeze()
 
+Числа, строки и булевы значения в JS **_неиммутабельны_**, т.е. их значения не меняются при операциях с ними, но каждый раз возвращается новое значение
 
+![ico-25 cap] ** 1**
+
+~~~js
+var string = "Welcome to JS!"
+
+string.split ( " " ) // [ "Welcome", "to", "JS!" ]
+
+console.log ( string ) // "Welcome to JS!"
+~~~
+
+Объекты и массивы JS по природе своей **_иммутабельны_** ( изменяемы )
+
+![ico-25 cap] ** 2**
+
+~~~js
+var food = [ "milk", "apple", "soup" ]
+
+food.push ( "meat" )
+
+console.log ( food ) // [ "milk", "apple", "soup", "meat" ]
+~~~
+
+Мы легко добавляем новые свойства объекту:
+
+![ico-25 cap] ** 3**
+
+~~~js
+var provider = { name: "Google" }
+
+provider.addProp = function ( propName, propVal ) {
+    this[ propName ] = propVal
+}
+
+provider.addProp ( "browser", "Chrome" )
+
+console.log ( provider ) // { name: "Google", browser: "Chrome" }
+~~~
+
+____________________________________________________
+
+**Метод ~Object.freeze~ делает объект неиммутабельным, т.е. предотвращает:**
+
+^^^[добавление новых свойств к объекту]
+
+![ico-25 cap] ** 4**
+
+~~~js
+var provider = { name: "Google" }
+
+Object.freeze ( provider )
+
+provider.addProp = function ( propName, propVal ) {
+    this[ propName ] = propVal
+}
+
+console.log ( provider ) // { name: "Google" }
+~~~
+
+^^^
+
+^^^[удаление свойств объекта]
+
+![ico-25 cap] ** 5**
+
+~~~js
+var provider = { name: "Google", service: "API" }
+
+Object.freeze ( provider )
+
+delete provider.service  // false
+
+console.log ( provider ) // { name: "Google", service: "API" }
+~~~
+
+^^^
+
+^^^[изменение существующих свойств объекта]
+
+![ico-25 cap] ** 6**
+
+~~~js
+var provider = { name: "Google", service: "API" }
+
+Object.freeze ( provider )
+
+provider.name = "Mozilla"
+
+console.log ( provider.name ) // Google
+~~~
+
+^^^
+
+^^^[изменение дескрипторов свойств объекта]
+
+изменение значений **enumerable**, **configurable** и **writable**
+
+![ico-25 cap] ** 7**
+
+Изменим дескриптор свойства объекта до "заморозки":
+
+~~~js
+var provider = { name: "Google", service: "API" }
+
+Object.defineProperty ( provider, "name", {
+    enumerable: false,
+    writable: false
+} )
+
+for ( var prop in provider )
+    console.log ( `${prop}: ${provider [ prop ]}` )
+
+// service: API
+~~~
+
+Как видите, свойство **name** стало неперечислимым
+
+Проверим, изменяемо ли оно:
+
+~~~js
+provider.name = "Mozilla"
+
+console.log ( provider.name ) // "Google"
+~~~
+
+Теперь опять изменим дескриптор свойства **name** и изменим его значение:
+
+~~~js
+Object.defineProperty ( provider, "name", {
+    enumerable: true,
+    writable: true
+} )
+
+provider.name = "Mozilla"
+~~~
+
+Выведем все перечислимые свойства объекта:
+
+~~~js
+for ( var prop in provider )
+    console.log ( `${prop}: ${provider [ prop ]}` )
+
+// name: Mozilla
+// service: API
+~~~
+
+Т.е. мы опять сделали свойство **name** перечислимым
+
+А теперь "заморозим" объект и попробуем переконфигурировать свойство **service**
+
+~~~js
+Object.freeze ( provider )
+
+Object.defineProperty ( provider, "service", {
+    enumerable: false,
+    writable: false
+} )
+~~~
+
+Будет сгенерировано исключение:
+
+![ico-20 error] ~Uncaught TypeError: Cannot redefine property: service~
+
+Однако изменить значение свойства **service** мы не сможем, хотя нам и не удалось изменить дескриптор этого свойства
+
+Почему? Заглянем теперь в дескриптор:
+
+~~~js
+Object.getOwnPropertyDescriptor ( provider, "service" )
+
+// { value: "API", writable: false, enumerable: true, configurable: false }
+~~~
+
+Т.е. в результате "заморозки" объекта дескрипторы его свойств были автоматически изменены: свойства стали неизменяемы и не конфигурируемы
+
+Единственное, что "не зацепила" заморозка объекта - это атрибут **_enumerable_**
+
+Если мы сами не установим его значение в ~false~ перед заморозкой, то свойства будут перечислимыми
+
+^^^
 ____________________________
 
 ## ![ico-25 icon] Object.getOwnPropertyDescriptor()
@@ -1125,8 +1305,8 @@ ____________________________
 
 ## ![ico-25 hw] Тесты по методам Object
 
-[![ico-30 hw] Тесты](https://garevna.github.io/js-quiz/#Object)
+[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#Object)
 
 __________________
 
-[![ico-20 link] MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+[![ico-20 link] ^^MDN^^](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)

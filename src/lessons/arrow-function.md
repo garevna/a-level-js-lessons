@@ -311,4 +311,4 @@ obj.testUsial ()
 
 ____________________________________________________________________
 
-[**Тесты**](https://garevna.github.io/js-quiz/#arrowFunctions)
+[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#arrowFunctions)

@@ -210,7 +210,7 @@ students.persons[1].homeworks[0]   // 5
 
 _____________________________________________________________
 
-## [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSexcuOpJS2d0KNNU1qTUlD5Exnf0FGI9Wb9d2I5YvViwuSKDA/viewform)
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSexcuOpJS2d0KNNU1qTUlD5Exnf0FGI9Wb9d2I5YvViwuSKDA/viewform)
 
 ________________________________________________________
 

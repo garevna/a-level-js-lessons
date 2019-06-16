@@ -127,4 +127,4 @@ document.getElementsByTagName ( "circle-element" )
 
 ______________________________________________
 
-[![ico-25 cap] Пример в песочнице](https://repl.it/@garevna/customElements-lifecycle-hooks)
+[![ico-25 cap] **Пример в песочнице**](https://repl.it/@garevna/customElements-lifecycle-hooks)

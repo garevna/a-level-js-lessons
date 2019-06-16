@@ -356,7 +356,7 @@ typeof x === "number" || x === null
 
 _________________________________________________________________________
 
-### [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSexcuOpJS2d0KNNU1qTUlD5Exnf0FGI9Wb9d2I5YvViwuSKDA/viewform)
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSexcuOpJS2d0KNNU1qTUlD5Exnf0FGI9Wb9d2I5YvViwuSKDA/viewform)
 
 _________________________________________________________________________
 

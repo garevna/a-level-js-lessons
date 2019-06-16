@@ -42,8 +42,10 @@ hello.length
 
 будет равно ** 6 **
 
-### [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
+____________________________________
+
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSdsKuS6kG1r5O3H62G_m32NK8a88jmFmJ5e4N2uAiDLAb31xQ/viewform)
 
 ________________________________________________________
 
-[![ico-20 link] w3school](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length)
+[![ico-20 link] ^^w3school^^](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length)

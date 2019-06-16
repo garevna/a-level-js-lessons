@@ -179,4 +179,4 @@ calcDate ( new Date(), 50 )
 
 _________________________________________
 
-[![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLScAFYBPpPFxuhTyuT6izba6WKRIN3ETICHKf_IIWCIL0qzkIQ/viewform)
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLScAFYBPpPFxuhTyuT6izba6WKRIN3ETICHKf_IIWCIL0qzkIQ/viewform)

@@ -105,8 +105,10 @@ z = users.push ( "Henry" )
 
 значение переменной ** z ** будет равно 4
 
-## [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSfhSiifjcwm7tLhcQftjAXByl-O93y3o31i91wAMr-uvi-MzQ/viewform)
+______________________________
+
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSfhSiifjcwm7tLhcQftjAXByl-O93y3o31i91wAMr-uvi-MzQ/viewform)
 
 _________________________________________________________________
 
-[![ico-20 link] w3schools](https://www.w3schools.com/jsref/jsref_push.asp)
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/jsref/jsref_push.asp)

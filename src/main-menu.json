@@ -89,16 +89,11 @@
     "Утилита командной строки curl": "curl",
     "XMLHttpRequest": "XMLHttpRequest",
     "Заголовок Content-Type": "Content-Type",
-    "": "",
-    "": "",
-    "": "",
     "Promise": "promise",
-    "": "",
-    "": "",
     "Homework": "hw-11"
   },
   "12": {
-    "": "",
+    "Fetch API": "fetch",
     "": "",
     "": "",
     "": "",

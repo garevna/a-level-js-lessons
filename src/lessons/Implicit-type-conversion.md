@@ -77,7 +77,7 @@ var  x = "8" / 2
 
 ^^( значением переменной x будет 4 )^^
 
-![ico-20 warn] При участии в арифметических операциях пустая строка ( ~""~ ) и пустой массив ( ~[]~ ) преобразуется в ** 0 **:
+![ico-20 warn] При участии в арифметических операциях пустая строка ( ~""~ ) и пустой массив ( ~[]~ ) преобразуется в ** 0**:
 
 ~~~javascript
 var x = ""
@@ -237,8 +237,11 @@ var y = !!x        // false
 
 ^^^
 
-### [![ico-30 hw] Упражнения](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
+_____________________________
+
+[![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSdFHuyyukF2rmA04BN1AmS5MCNXWgQmR5t7mmxyTpzdBZVGGw/viewform)
 
 _____________________________________________________________________
 
-| [![ico-20 link] w3schools](https://www.w3schools.com/jsref/jsref_infinity.asp) | [![ico-20 link] Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) |
+[![ico-20 link] ^^w3schools^^](https://www.w3schools.com/jsref/jsref_infinity.asp)
+[![ico-20 link] ^^Equality in JavaScript^^](https://dorey.github.io/JavaScript-Equality-Table/unified/)
