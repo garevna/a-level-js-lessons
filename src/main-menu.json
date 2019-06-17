@@ -95,8 +95,8 @@
   "12": {
     "Fetch API": "fetch-API",
     "CORS": "CORS",
-    "": "",
-    "": "",
+    "cookie": "cookie",
+    "localStorage": "localStorage",
     "": "",
     "": "",
     "": "",
