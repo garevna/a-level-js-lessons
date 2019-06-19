@@ -70,17 +70,14 @@ class PictureSlider extends HTMLElement {
         `
         shadow.appendChild ( style )
         this.btnClose = this.createElem ( 'button', this.container )
-        // this.btnClose = this.createElem ( 'button', this )
         this.btnClose.onclick = () => this.remove()
 
         this.btnClose.id = 'close'
         this.btnLeft = this.createElem ( 'button', this.container )
-        // this.btnLeft = this.createElem ( 'button', this )
         this.btnLeft.id = 'left'
         this.btnLeft.onclick = () => this.changePicture ( "left" )
 
         this.btnRight = this.createElem ( 'button', this.container )
-        // this.btnRight = this.createElem ( 'button', this )
         this.btnRight.id = 'right'
         this.btnRight.onclick = () => this.changePicture ( "right" )
 

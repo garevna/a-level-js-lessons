@@ -8,7 +8,7 @@ class PageComponent extends HTMLElement {
     this.main = this.appendChild (
       document.createElement ( "main" )
     )
-    
+
     let footer = this.appendChild (
       document.createElement ( "footer" )
     )
@@ -28,8 +28,6 @@ class PageComponent extends HTMLElement {
       )
 
       Promise.all ([
-        fetch ( "src/for-rainbow.css" )
-          .then (response => response.text()),
         fetch ( "src/for-rainbow.css" )
           .then (response => response.text()),
         fetch ( "src/main.css" )

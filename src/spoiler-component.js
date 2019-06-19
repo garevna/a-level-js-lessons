@@ -16,7 +16,7 @@ class SpoilerComponent extends SpoilerClass {
       this.header = this.shadow.querySelector ( "#header" )
       this.wrapper = this.shadow.querySelector ( ".collapsible-content" )
       this.shadow.querySelector ( ".lbl-toggle" )
-        .style.backgroundImage = "url(src/icons/a-level-ico.png)"
+        .style.backgroundImage = "url(https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png)"
     }
     static get observedAttributes() {
         return [ 'header', 'ready' ]

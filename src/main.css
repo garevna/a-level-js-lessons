@@ -109,6 +109,19 @@ a > span {
   vertical-align: middle;
 }
 
+glitch-logo {
+    position: absolute;
+    top: 70px;
+    left: calc(100% - 150px);
+}
+
+@media screen and (max-width: 480px) {
+  glitch-logo {
+    display:none;
+  }
+  .main-page { width: 100px; height: 100px; }
+}
+
 table {
   margin-bottom: 20px;
   border-collapse: collapse;
@@ -168,7 +181,6 @@ td {
 .overshadow:hover {
     background-image: url();
 }
-
 
 .overshadow:hover .overshadow__shadow {
     opacity: 1;

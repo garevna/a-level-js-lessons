@@ -193,3 +193,7 @@ window.addEventListener( 'storage', function(e) {
 ~~~
 
 Повесьте обработчика и измените содержимое ~localStorage~ в консоли
+
+___________________________________
+
+[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#localStorage)

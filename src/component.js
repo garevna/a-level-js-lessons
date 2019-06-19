@@ -63,7 +63,7 @@ CodeSnippet.template = `
       border-radius: 3px;
       transition: all 0.25s ease-out;
       user-select: none;
-      background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png);
+      background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/coffee.png);
       background-repeat: no-repeat;
       background-size: 25px;
       background-position: left center;

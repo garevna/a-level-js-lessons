@@ -51,7 +51,7 @@ class SpoilerClass extends HTMLElement {
             cursor: pointer;
             transition: all 0.25s ease-out;
             user-select: none;
-            background-image: url(src/icons/cap.png);
+            background-image: url(https://garevna.github.io/a-level-js-lessons/src/icons/cap.png);
             background-repeat: no-repeat;
             background-size: 20px;
             background-position: left center;

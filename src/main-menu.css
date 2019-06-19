@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
 
 :root {
-  --icon: "src/icons/a-level-ico.png";
+  --icon: "https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png";
+  --home: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
 
 }
 
@@ -12,7 +13,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
+    background-image: var(--home);
     vertical-align: text-bottom;
     width: 30px;
     height: 30px;
@@ -54,7 +55,7 @@ ul {
 
 #menuToggle [type="checkbox"] {
     display: block;
-    width: 55px;
+    width: 70px;
     height: 40px;
     position: absolute;
     top: -15px;
@@ -69,8 +70,8 @@ ul {
     display: inline-block;
     box-shadow: 1px 1px 2px #00000090;
     cursor: pointer;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     margin-right: 4px;
     position: relative;
     border-radius: 0px;

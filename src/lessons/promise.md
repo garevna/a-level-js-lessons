@@ -415,9 +415,9 @@ Promise.all ( promises )
 
 ________________________________
 
-## ![ico-25 icon]
+## ![ico-25 icon] Примеры 4-5-6
 
-| [![ico-25 cap] Пример 4](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [![ico-25 cap] Пример 5](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [![ico-25 cap] Пример 6](https://repl.it/@garevna/promise-sample-1) |
+| [![ico-25 cap] ** 4**](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [![ico-25 cap] ** 5**](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [![ico-25 cap] ** 6**](https://repl.it/@garevna/promise-sample-1) |
 
 
 ____________________________
