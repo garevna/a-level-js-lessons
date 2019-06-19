@@ -2,8 +2,6 @@
 
 :root {
   --icon: "https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png";
-  --home: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
-
 }
 
 * { box-sizing: border-box; }
@@ -13,7 +11,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    background-image: var(--home);
+    background-image: var(--house);
     vertical-align: text-bottom;
     width: 30px;
     height: 30px;
