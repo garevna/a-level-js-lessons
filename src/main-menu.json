@@ -97,19 +97,13 @@
     "CORS": "CORS",
     "cookie": "cookie",
     "localStorage": "localStorage",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
+    "Homework": "hw-12"
   },
   "13": {
+    "namedItem": "named-item",
+    "": "",
+    "": "",
     "FileReader": "FileReader",
-    "": "",
-    "": "",
-    "": "",
     "": "",
     "": "",
     "": "",
