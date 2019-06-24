@@ -10,7 +10,7 @@
 
 Класс - это абстракция, объект - это воплощение
 
-| ![](https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/smoke-monkey.gif?raw=true) | ![ico-25 yes] Уважаемые дамы и господа<br>Курение вредит вашему здоровью,<br>а курение конкретно в этом подъезде может вообще резко подорвать его |
+| ![](https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/smoke-monkey.gif) | ![ico-25 yes] Уважаемые дамы и господа<br>Курение вредит вашему здоровью,<br>а курение конкретно в этом подъезде может вообще резко подорвать его |
 
 
 | ![ico-25 cap] Класс и объект |
