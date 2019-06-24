@@ -545,6 +545,8 @@ transport.onreadystatechange = function ( event ) {
 
 ^^^
 
+___________________________________________
+
 [![ico-25 cap] **Пример 7**](https://plnkr.co/edit/b5gXN9q5FdturHenpo3b?p=preview)
 
 [![ico-20 link] HTTP Status Messages](https://www.w3schools.com/tags/ref_httpmessages.asp)
@@ -591,7 +593,7 @@ request.send ()
 
 _______________________________
 
-^^^[onloadstart | onprogress | onloadend]
+^^^[onloadstart &#10072; onprogress &#10072; onloadend]
 
 ![ico-25 cap] ** 9**
 
@@ -666,7 +668,8 @@ transport.onerror = function ( err ) {
 }
 ~~~
 
-| [![ico-25 cap] **11**](https://plnkr.co/edit/BqbCvoAnbikBtTFTRBHp?p=preview) | [![ico-25 cap] **12**](https://plnkr.co/edit/DLH49iWObtxqcijNT9oY?p=preview) |
+[![ico-25 cap] **11**](https://plnkr.co/edit/BqbCvoAnbikBtTFTRBHp?p=preview)
+[![ico-25 cap] **12**](https://plnkr.co/edit/DLH49iWObtxqcijNT9oY?p=preview)
 
 ^^^
 
