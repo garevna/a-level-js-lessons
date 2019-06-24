@@ -10,7 +10,7 @@
 
 Класс - это абстракция, объект - это воплощение
 
-| ![](https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/smoke-monkey.gif) | ![ico-25 yes] Уважаемые дамы и господа<br>Курение вредит вашему здоровью,<br>а курение конкретно в этом подъезде может вообще резко подорвать его |
+| <img src="https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/smoke-monkey.gif" width="300"/> | ![ico-25 yes] Уважаемые дамы и господа<br>Курение вредит вашему здоровью,<br>а курение конкретно в этом подъезде может вообще резко подорвать его |
 
 
 | ![ico-25 cap] Класс и объект |
@@ -57,7 +57,7 @@ var sample = {
 
 На мой взгляд, это вполне соотносится с реальностью:
 
-| ^^можно ли получить наследство от _класса_ "дедушка" ?^^ | ![](https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/cat-no.gif) | ^^Даже кошке понятно, что только **конкретный** дедушка может оставить вам наследство^^ |
+| ^^можно ли получить наследство от _класса_ "дедушка" ?^^ | <img src="https://github.com/garevna/a-level-js-lessons/blob/gh-pages/src/images/lessons/cat-no.gif" width="200"/> | ^^Даже кошке понятно, что только **конкретный** дедушка может оставить вам наследство^^ |
 
 Таким образом, **~sample~** наследовал от **~Object~**
 
