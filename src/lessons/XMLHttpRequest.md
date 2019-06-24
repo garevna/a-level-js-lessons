@@ -72,6 +72,7 @@ request.setRequestHeader( headerName, headerValue )
 
 request.send ( request.body )
 ~~~
+
 ^^^
 
 _________________________________________
@@ -442,7 +443,7 @@ ___________________
 
 Отправим из консоли запрос на сервер с опцией **_~withCredentials~_**
 
-~~~~javascript
+~~~~js
 var obj = {
     provider: "Google",
     type: "service",
@@ -544,7 +545,7 @@ transport.onreadystatechange = function ( event ) {
 
 ^^^
 
-| [![ico-25 cap] **Пример 7**](https://plnkr.co/edit/b5gXN9q5FdturHenpo3b?p=preview) |
+[![ico-25 cap] **Пример 7**](https://plnkr.co/edit/b5gXN9q5FdturHenpo3b?p=preview)
 
 [![ico-20 link] HTTP Status Messages](https://www.w3schools.com/tags/ref_httpmessages.asp)
 
