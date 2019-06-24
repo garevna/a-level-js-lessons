@@ -66,11 +66,12 @@ img, button, input {
 
 img {
   max-width:90%;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   border: inset 1px white;
   box-shadow: 2px 2px 4px #00000080;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 
 button {
