@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+
+:root {
+  --icon: url(https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png);
+}
+
+* { box-sizing: border-box; }
+
+.home {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
+    vertical-align: text-bottom;
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #09b;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-image: var(--icon);
+}
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+#menuToggle [type="checkbox"] {
+    display: block;
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 55;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: inline-block;
+    box-shadow: 1px 1px 2px #00000090;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    position: relative;
+    border-radius: 0px;
+    z-index: 54;
+    transform-origin: 0px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menuToggle span:nth-last-child(odd) {
+    background: #09b;
+}
+
+#menuToggle span:nth-last-child(even) {
+    background: #f50;
+}
+
+#menuToggle span:first-child {
+  	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  	transform-origin: 0% 100%;
+}
+
+#menuToggle [type="checkbox"]:checked ~ span {
+    opacity: 1;
+    width: 30px;
+    height: 5px;
+    transform: rotate(45deg) translate(50px, -68px);
+}
+
+#menuToggle [type="checkbox"]:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle [type="checkbox"]:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0px, 10px);
+    width: 30px;
+    height: 5px;
+}
+
+#menu {
+    position: absolute;
+    right: -15px;
+    top: 35px;
+    min-width: 320px;
+    width: max-content;
+    height: 101vh;
+    overflow-y: auto;
+    margin-top: -45px;
+    padding: 40px 20px;
+    background: #000000dd;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 100% 100%;
+    transform: translate(100%, 0);
+    transition: all 0.5s ease-out;
+    z-index: 51;
+}
+
+#menu > h3 {
+    position: absolute;
+    top: -5px;
+    right: 90px;
+    color: #09b;
+}
+
+#menu > li {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #09b;
+}
+#menu > li:hover {
+    color: #f50;
+}
+
+#menuToggle [type="checkbox"]:checked ~ ul {
+    transform: translate(0, 0);
+    box-shadow: -4px -4px 8px #00000090;
+}
+
+/* sub-level */
+
+label { cursor: pointer; }
+
+input[type="radio"] {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sub-level {
+    list-style: none;
+    line-height: 0;
+    font-size: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.sub-level > li {
+    color: #09b;
+}
+
+input[type="radio"]:checked ~ .sub-level {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    max-height: 100vh;
+    height: max-content;
+    opacity: 1;
+}
+
+input[type="radio"]:checked ~ .sub-level > li {
+    padding: 3px 5px;
+    width: 85%;
+}
+
+input[type="radio"]:checked ~ .sub-level > li:hover {
+    background-color: #09b;
+    color: #fff;
+    box-shadow: inset 1px 1px 3px #00000070;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #079;
+    box-shadow: inset 0 0 1px #00000070;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f50;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fa0;
+}

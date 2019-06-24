@@ -1,0 +1,213 @@
+body {
+  margin: 20px calc(50% - 450px);
+  font-family: Arial;
+  color: #555;
+  background-color: white;
+  border: solid 20px white;
+  border-bottom: solid 70px white;
+  border-right: solid 50px white;
+}
+
+html {
+    background: #999;
+    scroll-behavior: smooth;
+}
+
+main {
+  padding: 20px 30px 50px 50px;
+}
+
+img, button, input[type="button"] {
+  user-select: none;
+}
+
+img {
+  max-width:95%;
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: -70px;
+  right: -70px;
+}
+
+a {
+    text-decoration: none;
+    /* border: outset 1px;
+
+    background-image: linear-gradient(to bottom, #ccc, #fff);
+    border-radius: 3px; */
+    color:#557;
+    font-style: italic bold;
+}
+a:hover {
+    border: inset 1px;
+    padding: 7px 10px;
+    background-image: linear-gradient(to bottom, #fff, #ccc);
+}
+a > span {
+  vertical-align: middle;
+}
+
+div {
+  text-align: justify;
+  margin: 0 0 16px 0;
+}
+
+.main {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width:900px;
+    width: 100%;
+    margin-bottom:20px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+pre {
+  border: inset 1px;
+}
+
+.slider-button {
+    background-color: transparent;
+    border: 0;
+    background-image: url(https://github.com/garevna/a-level-js-lessons/blob/master/animated-gifs/slider-5.gif?raw=true);
+    padding: 40px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    outline:none;
+    transition: all 0.5s;
+}
+.slider-button:hover {
+    background-image: url(https://github.com/garevna/a-level-js-lessons/blob/master/animated-gifs/slider-2.gif?raw=true);
+}
+
+.ico-20, .ico-25, .ico-30, .ico-35, .ico-40 {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.ico-20 { width: 20px; height: 20px; }
+.ico-25 { width: 25px; height: 25px; }
+.ico-30 { width: 30px; height: 30px; }
+.ico-35 { width: 35px; height: 35px; }
+.ico-40 { width: 40px; height: 40px; }
+
+.icon {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/a-level-50.png)
+}
+.warn {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/warning-40.png)
+}
+.cap {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/coffee-40.png)
+}
+.link {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/link-25.png)
+}
+.bash {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/bash-40.png)
+}
+.err {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/no_entry-30.png)
+}
+.file {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/pencil-30.png)
+}
+.dir {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/folder-40.png)
+}
+.git {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/github-30.png)
+}
+.smile {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/wink-30.png)
+}
+.hw {
+  background-image: url(https://raw.githubusercontent.com/garevna/a-level-js-lessons/master/ico/briefcase-40.png)
+}
+
+/* ================= media rules =================== */
+@media screen and (max-width: 900px) {
+  body {
+    margin: 0;
+  }
+}
+
+
+.overshadow {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    box-sizing: border-box;
+    bottom:0;
+    right:0;
+    transition: all 0.5s;
+    vertical-align: bottom;
+    background-image: url(https://github.com/garevna/js-course/blob/master/images/a-level.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+.overshadow__shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 10%;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translate(0,30%) scale(0.0);
+    background-image: url(https://github.com/garevna/js-course/blob/master/images/my-photo.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    overflow:hidden;
+}
+
+.overshadow:hover {
+    background-image: url();
+}
+
+
+.overshadow:hover .overshadow__shadow {
+    opacity: 1;
+    transform: translate(0,-10%) scale(1);
+    box-shadow: 4px 4px 8px #00000090;
+}
+
+.overshadow__text:before {
+    position: absolute;
+    content: "© Irina H. Fylyppova";
+    font-family: Arial;
+    line-height: 0;
+    color: #333;
+    font-size: 10px;
+    bottom: 50%;
+    right: -15%;
+    transform: rotate(-90deg);
+    text-align: center;
+    width:max-content;
+}
+
+menu-component {
+  cursor:pointer;
+}
+menu-component:hover {
+  color:white;
+}
+
+code, pre {
+  overflow: auto;
+}

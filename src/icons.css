@@ -1,0 +1,195 @@
+:root {
+  --icon:        url(https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png);
+  --bash:        url(https://garevna.github.io/a-level-js-lessons/src/icons/bash.png);
+  --git:         url(https://garevna.github.io/a-level-js-lessons/src/icons/github.png);
+  --reload:      url(https://garevna.github.io/a-level-js-lessons/src/icons/reload.png);
+  --npm:         url(https://garevna.github.io/a-level-js-lessons/src/icons/npm.png);
+  --youtube:     url(https://garevna.github.io/a-level-js-lessons/src/icons/youtube.png);
+  --debug-but:   url(https://garevna.github.io/a-level-js-lessons/src/icons/debug-button.png);
+  --debug-pause: url(https://garevna.github.io/a-level-js-lessons/src/icons/debug-paused.png);
+  --curl:        url(https://garevna.github.io/a-level-js-lessons/src/icons/curl.svg);
+  --slider-1:    url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-5.png);
+  --slider-2:    url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-3.png);
+  --main-page:   url(https://garevna.github.io/js-samples/images/js_cup_1.png);
+}
+
+.house {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/house.png);
+}
+.warn {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/warning.png);
+}
+.cap {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/coffee.png);
+}
+.link {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/link.png);
+}
+
+.error {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/no_entry.png);
+}
+.pencil {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/pencil2.png);
+}
+.paper {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/page_facing_up.png);
+}
+.file {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/memo.png);
+}
+.dir {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/open_file_folder.png);
+}
+
+.smile {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/wink.png);
+}
+.hw {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/briefcase.png);
+}
+.study {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/mortar_board.png);
+}
+.require {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/point_up.png);
+}
+.good {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/ok_hand.png);
+}
+.exelent {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/thumbsup.png);
+}
+.search {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/mag.png);
+}
+.diagram {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/bar_chart.png);
+}
+.chart-top {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/chart_with_upwards_trend.png);
+}
+.chart-bottom {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/chart_with_downwards_trend.png);
+}
+.art {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/art.png);
+}
+.sand-watch {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/hourglass.png);
+}
+.green-ok {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/white_check_mark.png);
+}
+.pin {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/pushpin.png);
+}
+.mail {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/envelope.png);
+}
+.book {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/book.png);
+}
+.books {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/books.png);
+}
+.lock {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/lock.png);
+}
+.unlock {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/unlock.png);
+}
+.key {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/key.png);
+}
+.trophy {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/trophy.png);
+}
+.yes {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/exclamation.png);
+}
+.question {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/question.png);
+}
+.ambulance {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/ambulance.png);
+}
+.toilet {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/toilet.png);
+}
+.octocat {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/octocat.png);
+}
+.speach {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/speech_balloon.png);
+}
+.star {
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/star.png);
+}
+
+
+.icon {
+  background-image: var(--icon);
+}
+.npm {
+  background-image: var(--npm);
+}
+.bash {
+  background-image: var(--bash);
+}
+.youtube {
+  background-image: var(--youtube);
+  height: 30px;
+}
+.debug-button {
+  background-image: var(--debug-but);
+}
+.debug-paused {
+  background-image: var(--debug-pause);
+}
+.reload {
+  background-image: var(--reload);
+}
+.git {
+  background-image: var(--git);
+}
+.curl {
+  background-image: var(--curl);
+}
+
+.ico-20, .ico-25, .ico-30, .ico-35, .ico-40, .ico-50, .ico-70 {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    vertical-align: middle;
+}
+.ico-20 { width: 20px; height: 20px; margin: 5px; }
+.ico-25 { width: 25px; height: 25px; margin: 10px 5px; }
+.ico-30 { width: 30px; height: 30px; margin: 20px 5px; }
+.ico-35 { width: 35px; height: 35px; margin: 20px 5px; }
+.ico-40 { width: 40px; height: 40px; margin: 20px 5px; }
+.ico-50 { width: 50px; height: 50px; margin: 20px 5px; }
+.ico-70 { width: 70px; height: 70px; margin: 20px 5px; }
+
+.main-page {
+    background-image: var(--main-page);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin: 20px 5px;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+}
+
+.slider-button {
+  background-image: var(--slider-1);
+  margin-top: 20px;
+}
+.slider-button:hover {
+  background-image: var(--slider-2);
+  box-shadow: 0px 0px 5px #f50;
+  border-radius: 10px;
+}

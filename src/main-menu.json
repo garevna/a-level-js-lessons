@@ -1,0 +1,185 @@
+{
+  "1": {
+    "Блок-схема алгоритма": "Block-diagram",
+    "Инструменты разработчика": "Developer-tools",
+    "Chrome DevTools": "Chrome-dev-tools",
+    "Переменные. Типы данных": "var",
+    "Оператор typeof": "typeof",
+    "Структуры данных": "data-structures",
+    "Операторы присваивания": "Assignments",
+    "Логические выражения": "Boolean",
+    "Условные операторы": "Conditional-operators",
+    "Инкремент": "Increment",
+    "Свойство length": "length",
+    "Оператор for": "for",
+    "UTF-8": "UTF-8",
+    "Homework": "hw-01"
+  },
+  "2": {
+    "Явное приведение типов": "Explicit-type-conversion",
+    "Неявное приведение типов": "Implicit-type-conversion",
+    "NaN | null | Infinity": "NaN-null-Infinity",
+    "BigInt (ES10)": "BigInt",
+    "Функции": "function",
+    "Методы": "methods",
+    "Методы строк": "String-methods",
+    "String.fromCharCode()": "String-fromCharCode",
+    "Переменные в литералах": "literals",
+    "Методы массивов": "Array-methods",
+    "Конструктор Date": "Date-constructor",
+    "Самостоятельная работа": "self-work-02",
+    "Практика (XSS)": "XSS",
+    "Homework": "hw-02"
+  },
+  "3": {
+    "Циклы while | do ... while": "while",
+    "Циклы for...of | for...in": "for-of-for-in",
+    "Параметры функции по умолчанию": "default-param-values",
+    "Функция как объект": "function-object",
+    "Практика": "practice-03",
+    "Homework": "hw-03"
+  },
+  "4": {
+    "Объекты JS": "native-and-host-objects",
+    "Модель наследования JS": "inheritance-model",
+    "Оператор in": "in-operator",
+    "Homework": "hw-04"
+  },
+  "5": {
+    "Вычисляемые свойства": "get-and-set",
+    "Биндинг и карринг": "call-apply-bind",
+    "Метод valueOf()": "value-of",
+    "Конструктор Error": "Error",
+    "Оператор switch": "switch",
+    "Homework": "hw-05"
+  },
+  "6": {
+    "Browser Object Model": "BOM",
+    "Document Object Model": "DOM",
+    "Элементы DOM": "DOM-elements",
+    "Homework": "hw-06"
+  },
+  "7": {
+    "События элементов DOM": "DOM-events",
+    "Элементы форм": "forms",
+    "Homework": "hw-07"
+  },
+  "8": {
+    "Стрелочные функции": "arrow-function",
+    "Функциональщина": "functionality",
+    "Замыкание": "Closure",
+    "Рекурсия": "recursion",
+    "Event Loop": "Event-Loop",
+    "Таймеры": "Timers",
+    "Homework": "hw-08"
+  },
+  "9": {
+    "Итерирующие методы массивов": "Array-iteration-methods",
+    "Тестирование производительности": "JS-heap-memory-allocation",
+    "Secure Hash Algorithm": "SHA",
+    "Homework": "hw-09"
+  },
+  "10": {
+    "let | const": "let-const",
+    "Статические методы Object": "Object-static-props",
+    "Homework": "hw-10"
+  },
+  "11": {
+    "JSON": "JSON",
+    "Утилита командной строки curl": "curl",
+    "XMLHttpRequest": "XMLHttpRequest",
+    "Заголовок Content-Type": "Content-Type",
+    "Promise": "promise",
+    "Homework": "hw-11"
+  },
+  "12": {
+    "Fetch API": "fetch-API",
+    "CORS": "CORS",
+    "cookie": "cookie",
+    "localStorage": "localStorage",
+    "Homework": "hw-12"
+  },
+  "13": {
+    "namedItem": "named-item",
+    "Streams API": "readableStream",
+    "ArrayBuffer": "arrayBuffer",
+    "FileReader": "FileReader",
+    "File API": "File-API",
+    "FormData.md": "Form-Data",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "14": {
+    "async | await": "async-await",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "15": {
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "16": {
+    "Фабричные методы. Полиморфизм": "fabric",
+    "Деструктуризация": "Destructuring",
+    "Генераторы и итераторы": "generators",
+    "Homework": "hw-16"
+  },
+  "17": {
+    "Селектор :not(:defined)": "not-defined",
+    "Shadow DOM": "Shadow-DOM",
+    "Custom Elements": "custom-elements",
+    "Хуки жизненного цикла": "life-cycle-hooks",
+    "whenDefined": "when-defined",
+    "&lt;template&gt;": "template",
+    "Slot": "slots",
+    "Примеры веб-компонентов": "web-component-samples",
+    "Homework": "hw-17"
+  },
+  "18": {
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "19": {
+    "Конструктор Set": "Set",
+    "Паттерн Observer": "pattern-Observer",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
+  }
+}
