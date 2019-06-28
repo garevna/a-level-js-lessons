@@ -19,7 +19,7 @@ ________________________________________
 ## ![ico-25 icon] Автор концепции
 
 | **Roy Thomas Fielding** |  |
-| ![](src/images/lessons/filding.png) | ^^DOCTOR OF PHILOSOPHY<br/>_in Information and Computer Science^^_<br/>[^^DISSERTATION^^](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) |
+| <img src="src/images/lessons/filding.png"/> | ^^DOCTOR OF PHILOSOPHY<br/>_in Information and Computer Science^^_<br/>[^^DISSERTATION^^](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) |
 
 ______________________________
 
