@@ -19,7 +19,7 @@ ________________________________________
 ^^^[Автор&nbsp;концепции]
 
 | **Roy Thomas Fielding** |  |
-| ![](https://pbs.twimg.com/profile_images/2195030209/roy_fielding_sq.jpg) | ^^DOCTOR OF PHILOSOPHY<br/>_in Information and Computer Science^^_<br/>[^^DISSERTATION^^](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) |
+| ![](src/images/lessons/filding.png) | ^^DOCTOR OF PHILOSOPHY<br/>_in Information and Computer Science^^_<br/>[^^DISSERTATION^^](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) |
 
 ^^^
 
