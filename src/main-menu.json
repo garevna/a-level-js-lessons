@@ -109,14 +109,14 @@
     "Homework": "hw-13"
   },
   "14": {
+    "Event Loop": "Event-Loop",
+    "Размеры и прокрутка элемента": "scroll",
     "async | await": "async-await",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "API": "API",
+    "REST API": "REST",
+    "Response status codes": "REST-status",
+    "JSON-placeholder": "JSON-placeholder",
+    "json-server": "json-server",
     "": "",
     "": "",
     "": ""
