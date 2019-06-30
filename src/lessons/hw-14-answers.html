@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <script src="../rainbow.js"></script>
+    <link rel="stylesheet" href="../for-rainbow.css">
+    <title>Homework 14</title>
+    <style>
+        body { font-family: Roboto, Arial;  }
+        pre { padding: 10px 20px; }
+        h1, h2 {
+          color: white;
+          padding: 5px 10px;
+          max-width: 100px;
+          background: #079;
+          text-align: center;
+        }
+        h4 { color: #f50; }
+    </style>
+  </head>
+  <body>
+    <h1>1</h1>
+    <pre>
+      <code language="js">
+        function printString ( text, container ) {
+            printLetter = ( letter, index ) => new Promise (
+                resolve => setTimeout (
+                    () => resolve ( letter ),
+                    1000*index
+                )
+            )
+            let demo = container && container.nodeType === 1 ?
+                container : document.body.appendChild (
+                    document.createElement ( "div" )
+                )
+            text.split("")
+                .forEach (
+                    async ( letter, index ) => demo.appendChild (
+                        document.createTextNode(
+                            await printLetter ( letter, index )
+                        )
+                    )
+                )
+        }
+      </code>
+    </pre>
+
+    <h1>2</h1>
+    <pre>
+      <code language="js">
+...
+    </code>
+  </pre>
+    <h1>3</h1>
+    <pre>
+      <code language="js">
+        function printString ( text, container ) {
+            printLetter = ( letter, index ) => new Promise (
+                resolve => setTimeout (
+                    () => resolve ( letter ),
+                    1000*index
+                )
+            )
+            let demo = container && container.nodeType === 1 ?
+                container : document.body.appendChild (
+                    document.createElement ( "div" )
+                )
+            let tmp = text.split("")
+            let index = 0;
+            ( async function () {
+                demo.appendChild ( document.createTextNode(
+                    await printLetter ( tmp.shift(), index++ )
+                ))
+                while ( tmp.length ) arguments.callee ()
+            })()
+        }
+      </code>
+    </pre>
+  </body>
+</html>
