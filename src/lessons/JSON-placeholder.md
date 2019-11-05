@@ -2,7 +2,7 @@
 
 Для того, чтобы понять принцип взаимодействия с ~REST API~, воспользуемся бесплатным сервисом **~JSONPlaceholder~**
 
-![](src/icons/json-placeholder-logo.png)
+![](https://garevna.github.io/a-level-js-lessons/src/icons/json-placeholder-logo.png)
 
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
@@ -58,9 +58,8 @@ _____________________________________________
 
 ~~~js
 fetch ( 'https://jsonplaceholder.typicode.com/comments?postId=1' )
-    .then ( response => response.json ()
+    .then ( response => response.json () )
         .then ( json => console.log ( json ) )
-    )
 ~~~
 
 ![](https://lh6.googleusercontent.com/tQof5aM48ME-v6g1l-4gkfE2v2WYqinFGYyarEsCdKNvAxfQLjY02h9VffWTvVqk1QlkMxpy14ZNhbCTnVxTzIdMb-5-CYM4zgEVzXQUdodp0UUFx5SMozubZ-1kmTRdly-mS03cSBVGDQ8)

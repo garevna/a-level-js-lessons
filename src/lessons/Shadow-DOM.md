@@ -35,16 +35,16 @@ _______________________________________
 Метод  **~attachShadow()~**  принимает в качестве аргумента объект опций, который содержит единственную опцию **_~mode~_**
 Опция  **_~mode~_**  может иметь значение  **_~'open'~_**  или  **_~'closed'~_**
 
-~~~javascript
+~~~js
 var elem = document.createElement ( 'div' )
 elem.attachShadow ( { mode: 'open' } )
 ~~~
 
 ____________________________________________
 
-![ico-25 cap] ** 1 **
+◘◘![ico-20 cap] ** 1 **◘◘
 
-~~~~js
+~~~js
 let elem = document.createElement ( 'div' )
 document.body.appendChild ( elem )
 let shadow = elem.attachShadow ( { mode: 'open' } )
@@ -69,12 +69,12 @@ shadow.appendChild (
         return style
     })()
 )
-~~~~
+~~~
 
 
 ### ![ico-20 icon] mode: 'open'
 
-Значение  **_'open'_**  означает, что ~shadow DOM~  данного элемента будет доступен в контексте страницы через его свойство **~shadowRoot~**
+Значение  **_~open~_**  означает, что ~shadow DOM~  данного элемента будет доступен в контексте страницы через его свойство **~shadowRoot~**
 
 ~~~html
 ▼ <div>
@@ -86,7 +86,7 @@ shadow.appendChild (
 
 **Доступные свойства shadowRoot**
 
-~~~javascript
+~~~js
 console.dir ( elem.shadowRoot )
 ~~~
 
@@ -123,13 +123,13 @@ console.dir ( elem.shadowRoot )
 
 ### ![ico-20 icon] mode: 'closed'
 
-Значение  **_~'closed'~_**  делает shadow DOM  данного элемента недоступным для скриптов
+Значение  **_~closed~_**  делает shadow DOM  данного элемента недоступным для скриптов
 
 При обращении к свойству shadowRoot  элемента  будет возвращено значение  ~null~
 
 **Доступные свойства shadowRoot**
 
-~~~javascript
+~~~js
 console.dir ( elem.shadowRoot ) // null
 ~~~
 

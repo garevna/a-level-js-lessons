@@ -8,26 +8,22 @@ _____________________
 
 Добавляет элементу дочерний элемент
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] ** 1**◘◘
 
 ~~~html
 <body>
-    <div id="demo">
-        <section></section>
-        <figure></figure>
-    </div>
+    <div id="demo"></div>
 </body>
 ~~~
 
-~~~javascript
-var section = document
-    .createElement ( "section" )
+~~~js
+var section = document.createElement ( "section" )
 section.innerHTML = "Hello"
 document.querySelector ( "#demo" )
     .appendChild ( section )
 ~~~
 
-Результат:
+◘◘Результат◘◘
 
 ~~~html
 <body>
@@ -39,9 +35,9 @@ document.querySelector ( "#demo" )
 
 _______________________
 
-![ico-25 cap] ** 2**
+◘◘![ico-25 cap] ** 2**◘◘
 
-~~~javascript
+~~~js
 var style = document.createElement ( 'style' )
 document.head.appendChild ( style )
 style.textContent = `p { color: red; }`
@@ -56,7 +52,7 @@ style.appendChild (
 )
 ~~~
 
-Результат:
+◘◘Результат◘◘
 
 ~~~html
 <head>
@@ -69,9 +65,9 @@ style.appendChild (
 
 _______________________________________
 
-![ico-25 cap] ** 3**
+◘◘![ico-25 cap] ** 3**◘◘
 
-~~~javascript
+~~~js
 var script = document.createElement ( 'script' )
 script.appendChild (
     document.createTextNode (
@@ -93,7 +89,7 @@ _________________________________________
 
 ____________________________
 
-![ico-25 cap] ** 4**
+◘◘![ico-25 cap] ** 4**◘◘
 
 ~~~html
 <body>
@@ -104,7 +100,7 @@ ____________________________
 </body>
 ~~~
 
-~~~javascript
+~~~js
 var section = document.querySelector ( "#section" )
 var removed = section.parentNode.removeChild ( section )
 console.dir ( removed )  // ► section#section
@@ -112,6 +108,8 @@ console.dir ( removed )  // ► section#section
 var figure = document.querySelector ( ".figure" )
 figure.appendChild ( removed )
 ~~~
+
+◘◘Результат◘◘
 
 ~~~html
 <body>
@@ -127,9 +125,9 @@ _______________________________
 
 ### ![ico-20 icon] insertBefore()
 
-![ico-25 cap] ** 5**
+◘◘![ico-25 cap] ** 5**◘◘
 
-~~~javascript
+~~~js
 function addElement ( tagName, container ) {
     var _container =
         container && container.nodeType === 1 ?
@@ -146,7 +144,7 @@ var figure = addElement ( "figure", main )
 main.insertBefore ( document.createElement ( "p" ), section )
 ~~~
 
-**Result**
+◘◘Результат◘◘
 
 ~~~html
 <body>
@@ -162,9 +160,9 @@ _____________________________________________
 
 ### ![ico-20 icon] insertAdjacentHTML()
 
-![ico-25 cap] ** 6**
-
 Вставим в разметку элементы _~main~_, _~section~_ и _~figure~_ следующим образом:
+
+◘◘![ico-25 cap] ** 6**◘◘
 
 ~~~html
 <body>
@@ -177,7 +175,7 @@ _____________________________________________
 
 А теперь выполним следующий код в консоли:
 
-~~~javascript
+~~~js
 var section = document.body.querySelector( "section" )
 section.insertAdjacentHTML ( "beforeBegin", `<p>beforeBegin</p>` )
 section.insertAdjacentHTML ( "afterBegin", `<p>afterBegin</p>` )
@@ -185,7 +183,7 @@ section.insertAdjacentHTML ( "beforeEnd", `<p>beforeEnd</p>` )
 section.insertAdjacentHTML ( "afterEnd", `<p>afterEnd</p>` )
 ~~~
 
-Результат во вкладке Elements:
+◘◘Результат◘◘
 
 ~~~html
 <body>
@@ -205,7 +203,7 @@ ______________________________________________
 
 ### ![ico-20 icon] insertAdjacentElement()
 
-![ico-25 cap] ** 7**
+◘◘![ico-25 cap] ** 7**◘◘
 
 ~~~html
 <body>
@@ -239,7 +237,7 @@ document.getElementsByTagName ( "figure" )[0]
     )
 ~~~
 
-Результат во вкладке Elements:
+◘◘Результат◘◘
 
 ~~~html
 <body>
@@ -266,7 +264,7 @@ ____________________________
 
 Объект **~NodeList~**
 
-![ico-25 cap] ** 8**
+◘◘![ico-25 cap] ** 8**◘◘
 
 ~~~html
 <body>
@@ -288,11 +286,11 @@ ____________________________
 
 Выведем в консоль все дочерние узлы ~document.body~
 
-~~~javascript
+~~~js
 document.body.childNodes
 ~~~
 
-Результат:
+◘◘Результат◘◘
 
 ~~~console
 ▼ NodeList(7) [text, div.container, text, h1.header, text, p.paragraph, text]
@@ -315,7 +313,7 @@ document.body.childNodes
 document.querySelector ( '[ title ]' ).childNodes
 ~~~
 
-Результат:
+◘◘Результат◘◘
 
 ~~~console
 ▼ NodeList(5) [text, a.paragraph, text, img#picture.galleryPicture, text]
@@ -343,7 +341,7 @@ _________________________________
 document.body.children
 ~~~
 
-**Результат:**
+◘◘Результат◘◘
 
 ~~~console
 ▼ HTMLCollection(3) [div.container, h1.header, p.paragraph]
@@ -360,7 +358,7 @@ ___________________________________
 
 ^^Ссылка на родительский элемент ( контейнер, в котором находится элемент )^^
 
-![ico-25 cap] ** 9**
+◘◘![ico-25 cap] ** 9**◘◘
 
 ~~~html
 <body>
@@ -384,7 +382,7 @@ _____________________________________________
 
 Изначально они имеют значение ~null~
 
-![ico-25 cap] **10**
+◘◘![ico-25 cap] **10**◘◘
 
 ~~~js
 var section = document.body.appendChild (
@@ -400,9 +398,20 @@ for ( var prop in section ) {
 
 _____________________________________
 
-### ![ico-20 icon] Дополнительно
+### ![ico-20 icon] Memory leaks
 
-![ico-25 cap] **~setAttribute~** | **~getAttribute~**
+Предположим, вы сохраняете ссылку на конкретную ячейку таблицы ( тег &lt;td> ) в своем коде
+В какой-то момент в будущем вы решите удалить таблицу из DOM, но забываете удалить ссылку на эту ячейку
+Интуитивно можно предположить, что garbage collector ( сборщик мусора ) будет очищать память от всех переменных, кроме ссылки на эту ячейку
+На практике произойдет следующее: поскольку ячейка является дочерним узлом таблицы, а а элементы-потомки сохраняют ссылки на своих родителей,
+сохранившаяся ссылка на ячейку таблицы приводит к тому, что вся таблица остается в памяти
+Учитывайте это внимательно, сохраняя ссылки на элементы DOM
+
+_______________________________________
+
+### ![ico-20 icon] Атрибуты тегов
+
+◘◘![ico-25 cap] **setAttribute** | **getAttribute**◘◘
 
 ~~~js
 document.body.setAttribute ( 'title', 'Hello' )
@@ -414,7 +423,7 @@ console.info (
 
 ______________________
 
-![ico-25 cap] **~getBoundingClientRect~**
+◘◘![ico-25 cap] **getBoundingClientRect**◘◘
 
 ~~~js
 var div = document.body.appendChild (
@@ -431,7 +440,7 @@ console.info (
 )
 ~~~
 
-**Result:**
+◘◘Результат◘◘
 
 ~~~console
 ▼ DOMRect {x: 8, y: 8, width: 202, height: 202, top: 8, …}
@@ -447,9 +456,9 @@ console.info (
 ~~~
 ___________________________
 
-![ico-25 cap] **~backgroundImage~**
+◘◘![ico-25 cap] **backgroundImage**◘◘
 
-~~~javascript
+~~~js
 var btn = document.createElement ( 'button' )
 btn.innerText = "OK"
 btn.style = `

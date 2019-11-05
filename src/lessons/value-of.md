@@ -6,7 +6,7 @@
 
 Например, если объект сравнивается с числом
 
-~~~javascript
+~~~js
 var obj = {
    num: 5,
    val: 10,
@@ -19,11 +19,11 @@ var obj = {
 
 Если теперь мы выполним сравнение:
 
-~~~javascript
+~~~js
 obj == 4
 ~~~
 
-то получим  *~true~*
+то получим  _~true~_
 
 При выполнении сравнения будет вычисляться примитивное значение объекта, т.е. вызываться метод **~valueOf()~**
 
@@ -33,9 +33,9 @@ obj == 4
 
 Но это не означает, что мы не можем его переопределить
 
-![ico-25 cap] ** 1 **
+◘◘![ico-25 cap] ** 1 **◘◘
 
-~~~javascript
+~~~js
 var human = {
    name: "Ivan",
    age: 25,
@@ -49,13 +49,15 @@ console.info ( human + "!" ) // Ivan: 25!
 
 ___________________
 
-![ico-25 cap] ** 2 **
-
 Конечно, так делать не стоит, но все-таки интересно ![ico-20 smile]
 
 в результате выполнения следующего кода:
 
-~~~javascript
+
+◘◘![ico-25 cap] ** 2 **◘◘
+
+
+~~~js
 Object.prototype.valueOf = function () {
     return "Это объект, блин, а не игрушка!"
 }
@@ -63,7 +65,7 @@ Object.prototype.valueOf = function () {
 
 все нативные объекты JS будут "ругаться" соответствующим образом при попытке получить их примитивное значение
 
-~~~javascript
+~~~js
 console.info ( Number + "" )
 ~~~
 
@@ -73,9 +75,9 @@ console.info ( Number + "" )
 
 __________
 
-![ico-25 cap] ** 3 **
+◘◘![ico-25 cap] ** 3 **◘◘
 
-~~~javascript
+~~~js
 const test = {
    num: 0,
    valueOf: function () {
@@ -86,7 +88,7 @@ const test = {
 
 ![ico-25 question] Что вернет выражение:
 
-~~~javascript
+~~~js
 test == 1 && test == 2 && test == 3
 ~~~
 

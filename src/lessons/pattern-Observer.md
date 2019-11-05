@@ -1,8 +1,12 @@
-# ![ico-30 study] Паттерны проектирования
+# ![ico-30 study] Design Patterns
 
-## ![ico-25 icon] Observer
+_____________________________________
 
-Разберем конкретную ситуацию, в которой можно применить этот паттерн
+### ![ico-20 icon] Observer
+
+Это **поведенческий** паттерн
+
+Разберем конкретную ситуацию, в которой его можно применить
 
 Есть модель - это данные, которые динамически обновляются
 
@@ -20,7 +24,7 @@ _______________________________
 
 Пусть есть массив идентификаторов для элементов:
 
-~~~javascript
+~~~js
 const inputs = [
     "author",
     "topic",
@@ -30,7 +34,7 @@ const inputs = [
 
 функция, создающая и вставляющая элемент на страницу:
 
-~~~javascript
+~~~js
 const addElem = ( tag = "input", container ) =>
     ( container && container.nodeType === 1 ?
                 container : document.body )
@@ -39,7 +43,7 @@ const addElem = ( tag = "input", container ) =>
 
 Создадим массив элементов _~input~_:
 
-~~~javascript
+~~~js
 const observed = inputs.map (
     item => {
         let label = addElem ( "label" )
@@ -59,7 +63,7 @@ _________________________________________________________
 
 Давайте создадим представление:
 
-~~~javascript
+~~~js
 const subscriber = document.body.appendChild (
     document.createElement ( "section" )
 )
@@ -67,7 +71,7 @@ const subscriber = document.body.appendChild (
 
 можно даже стилизовать этот элемент:
 
-~~~javascript
+~~~js
 subscriber.style = `
     border: inset 1px;
     padding: 10px 20px;
@@ -81,7 +85,7 @@ subscriber.style = `
 
 Для этого создадим ему метод **_~showInfo~_**
 
-~~~javascript
+~~~js
 subscriber.showInfo = function ( data ) {
     this.topic = data.topic ? data.topic : this.topic ? this.topic : ""
     this.author = data.author ? data.author: this.author ? this.author : ""
@@ -149,19 +153,20 @@ class Observer {
 
 Осталось только создать экземпляр обозревателя **~observer~**, передав ему ссылки на отслеживаемые элементы **_~observed~_**:
 
-~~~javascript
-const  = new Observer ( observed )
+~~~js
+const observer = new Observer ( observed )
 ~~~
 
 и подписать на его оповещения наше представление **~subscriber~**:
 
-~~~javascript
+~~~js
 observer.subscibe ( subscriber.showInfo )
 ~~~
 
 Тееперь при изменении значений в полях _~input~_ созданное нами представление **~subscriber~** будет реактивно обновляться:
 
-| ![](https://github.com/garevna/js-course/blob/master/pictures/observer-1.gif?raw=true) |
+![](https://github.com/garevna/js-course/blob/master/pictures/observer-1.gif?raw=true)
+
 
 ____________________________________________________
 
@@ -242,3 +247,20 @@ observer.subscibe ( subscriber.showInfo )
 ~~~~
 
 ![](https://github.com/garevna/js-course/blob/master/pictures/observer-2.gif?raw=true)
+
+Можно создать несколько подписчиков:
+
+~~~js
+observer.subscibe ( subscriber.showInfo )
+observer.subscibe ( console.log )
+observer.subscibe ()
+~~~
+
+Теперь вым можете отслеживать изменения не только на странице, но и в консоли
+
+В результате попытки создать подписчика без передачи аргумента observer.subscibe ()
+мы получим сообщение от обозревателя:
+
+••Invalide subscriber••
+
+{{{pattern-2.js}}}

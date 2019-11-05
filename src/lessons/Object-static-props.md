@@ -17,7 +17,9 @@ Object.assign ( target, ...sources )
 ![ico-20 warn] ~Object.assign~ осуществляет неглубокое копирование
 ^^Если свойства исходного объекта являются массивами или объектами, то в целевой объект будут помещены ссылки на соответствующие свойства исходного объекта^^
 
-![ico-25 cap] ** 1**
+_________________________________________________
+
+◘◘![ico-25 cap] **Пример 1**◘◘
 
 ~~~js
 var newObject = Object.assign (
@@ -27,7 +29,7 @@ var newObject = Object.assign (
 )
 ~~~
 
-В результате вывода в консоль объекта **newObject** получим
+◘◘**^^newObject^^**◘◘
 
 ~~~console
 {
@@ -38,11 +40,17 @@ var newObject = Object.assign (
 }
 ~~~
 
-![ico-25 cap] ** 2**
+_________________________________
 
-Создадим объект **source**, свойство **_position_** которого будет массивом, а свойство **_attrs_** - объектом:
+
+◘◘![ico-25 cap] **Пример 2**◘◘
 
 ~~~js
+
+// Создадим объект source, 
+// свойство position которого будет массивом,
+// а свойство attrs - объектом:
+
 var source = {
     name: "sample",
     attrs: {
@@ -52,35 +60,29 @@ var source = {
     },
     position: [ 250, 250 ]
 }
-~~~
 
-Создадим копию  **target**  объекта **source** с помощью метода ~Object.assign~:
+// Создадим копию target объекта source с помощью метода Object.assign:
 
-~~~js
 var target = Object.assign ( {}, source )
-~~~
 
-Покажем, что:
+// Покажем, что:
 
-![ico-20 warn] свойство  **target._attrs_**  содержит ссылку на объект  **source._attrs_**,
-![ico-20 warn] а свойство  **target._position_**  содержит ссылку на массив  **source._position_**
+// свойство target.attrs содержит ссылку на объект source.attrs,
+// а свойство target.position содержит ссылку на массив source.position
 
-Для этого изменим значение элемента массива **target._position_**:
+// Для этого изменим значение элемента массива target.position:
 
-~~~js
 target.position [0] = 100
-~~~
 
-и значение свойства **target._attrs_._color_**:
+// и значение свойства target.attrs.color:
 
-~~~js
 target.attrs.color = "#fa0"
 ~~~
 
-поскольку  **target._position_** - это всего лишь ссылка на массив **source._position_**,
-а  **target._attrs_** - ссылка на объект **source._attrs_**,
-соответствующее значение массива **source._position_**
-и значение свойства **_attrs_._color_** объекта **source** изменились:
+поскольку  **~target._position_~** - это всего лишь ссылка на массив **~source._position_~**,
+а  **~target._attrs_~** - ссылка на объект **~source._attrs_~**,
+соответствующее значение массива **~source._position_~**
+и значение свойства **~_attrs_._color_~** объекта **~source~** изменились:
 
 ![](https://camo.githubusercontent.com/66c769dbc806133b41ce4d018e6423d06e2ca362/68747470733a2f2f6c68362e676f6f676c6575736572636f6e74656e742e636f6d2f53326945454375335a5f395552446a635f5072792d3866464466716258585a4734437733786b68624a524d366667576735635652476c5851396b4a444c5879654f48366237737333664d6c31326a73336b496150643330766367435f2d6949634432666b7141507a4a57364e62744243333550574a5f595f7a4c534c6e2d36746d746a722d57533478667453707845)
 
@@ -88,14 +90,14 @@ _______________________
 
 ## ![ico-25 icon] Object.create()
 
-^^Этот метод использовался для доступа к прототипу объекта до того, как в спецификации ES6 ( 2015 ) появилось свойство **~__proto__~**^^
+^^Этот метод использовался для доступа к прототипу объекта до того, как в спецификации ES6 ( 2015 ) появилось свойство **~&#95;&#95;proto&#95;&#95;~**^^
 
 Создает экземпляр объекта на основе прототипа
 
 • Методу нужно передать в качестве первого аргумента ссылку на прототип, который будет использован при создании экземпляра
 • Вторым ( опциональным ) аргументом может быть объект-дескриптор свойств создаваемого экземпляра
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] **Пример 3**◘◘
 
 ~~~js
 var figure = {
@@ -106,18 +108,18 @@ var circle = Object.create ( figure )
 
 Если передать ~null~  в качестве аргумента, будет создан объект без прототипа:
 
-~~~javascript
+~~~js
 var emptyObject = Object.create ( null )
 ~~~
 
 ________________________
 
-![ico-25 cap] ** 2**
-
-Метод ~Object.create()~ позволяет задавать дескрипторы свойств объекта
+![ico-25 warn] Метод ~Object.create()~ позволяет задавать дескрипторы свойств объекта
 ^^( как это делает метод ~Object.defineProperty()~, который добавляет свойство в объект )^^
 
-~~~~js
+^^^[Пример 4]
+
+~~~js
 function Figure ( figType ) {
     this.type = figType
     console.log ( "Instance of Figure created" )
@@ -144,11 +146,15 @@ var circle = Object.create ( new Figure ( "circle" ), {
         enumerable: false
     }
 })
-~~~~
+~~~
 
-^^^[circle]
+^^^
+
+
+◘◘circle◘◘
 
 ~~~console
+
 ▼ Figure {x: undefined, y: undefined, radius: undefined}
     radius: undefined
     x: undefined
@@ -161,19 +167,20 @@ var circle = Object.create ( new Figure ( "circle" ), {
           ► __proto__: Object
 ~~~
 
-^^^
 
 ~~~js
 circle instanceof Figure  // true
 ~~~
 
-_________________
+_________________________________________________________
 
-![ico-25 cap] ** 3**
 
-^^Создадим экземпляр объекта **proto**:^^
+◘◘![ico-25 cap] **Пример 5**◘◘
 
 ~~~js
+
+// Создадим экземпляр объекта proto:
+
 var proto = {
     figure: "circle",
     size: 100,
@@ -182,17 +189,18 @@ var proto = {
         this.figure = newFigure
     }
 }
-~~~
 
-^^А теперь вызовем метод  **~Object.create()~** для создания экземпляра **obj**:^^
+// А теперь вызовем метод Object.create() для создания экземпляра obj
 
-~~~javascript
 var obj = Object.create ( proto )
 ~~~
 
-^^^[результат]
+^^Все свойства и методы объекта **proto**, взятого в качестве прототипа, стали  унаследованными  свойствами и методами экземпляра **obj**^^
+
+◘◘obj◘◘
 
 ~~~console
+
 ▼ {}
    ▼ __proto__:
       ► changeFigure: ƒ ( newFigure )
@@ -201,12 +209,6 @@ var obj = Object.create ( proto )
         size: 100
       ► __proto__: Object
 ~~~
-
-![](https://lh3.googleusercontent.com/_pAPyoxhK4ekiTu4Q1Hu3NODkNZLICO0NF4GH-kZVHsXIlHFOMZ5QMjf7Fnc4fwJO_WY6VZgEI7POEkbr4yJrjycDkWNKAryWa06o6qjiY_laHD_gUV5gDGg4lcMUJqb3Q4jzQ7BxXIKmdQ)
-
-^^Все свойства и методы объекта **proto**, взятого в качестве прототипа, стали  унаследованными  свойствами и методами экземпляра **obj**^^
-
-^^^
 
 ^^Теперь создадим простой конструктор:^^
 
@@ -219,22 +221,24 @@ var Creator = function ( id, val ) {
 
 ^^и вызовем его как обычную функцию, передав контекст нашего экземпляра **obj**:^^
 
-~~~javascript
+~~~js
 Creator.call ( obj,  "sample",  75 )
 ~~~
 
-^^^[результат]
+**результат**
 
 ![](https://lh5.googleusercontent.com/tZ41G5MsrY2Y2XdD9QWEhHKGBdML2mKPKuYs18HjbLu1vScqaZlSy4udqTRyVvabwuv5q4Iyi9RQec_LAejFuYEreIgbhKpUsrU31J3h3Qxyl4DKbZyK7lEzuVUMPXcuZs3T6GpYa6xNc-I)
 
-^^^
-__________________
 
-![ico-25 cap] ** 4**
+________________________________________________________
 
-^^Создадим конструктор **_Human_** и воспользуемся методом ~Object.create()~ для создания нового экземпляра  **worker**:^^
+
+◘◘![ico-25 cap] **Пример 6**◘◘
 
 ~~~js
+
+// Создадим конструктор Human:
+
 function Human ( name = "Тимофей", hobby = "футбол" ) {
     this.name = name,
     this.hobby = hobby
@@ -245,14 +249,17 @@ Human.prototype = {
     age: 20
 }
 
+// и воспользуемся методом Object.create() для создания нового экземпляра worker:
+
 var worker = Object.create (
     new Human ( "Иван", "рыбалка" )
 )
 ~~~
 
-^^^[worker]
+◘◘worker◘◘
 
 ~~~console
+
 ▼ {}
   ▼ __proto__:
         hobby: "рыбалка"
@@ -263,54 +270,53 @@ var worker = Object.create (
           ► __proto__: Object
 ~~~
 
-^^^
 
 ^^А теперь проверим, что **worker** является экземпляром **_Human_**^^
 
-~~~javascript
+~~~js
 worker instanceof Human   // true
 worker instanceof Object  // true
 ~~~
 
-__________________
+_______________________________________________________
 
-![ico-25 cap] ** 5**
 
-^^Объявим конструктор класса **_SuperClass_**^^
+◘◘![ico-25 cap] **Пример 7**◘◘
 
 ~~~js
+
+// Объявим конструктор класса SuperClass
+
 function SuperClass () {
     this.__proto__.type = "SuperClass"
     this.__proto__.name = "Родительский класс"
 }
-~~~
 
-^^Теперь используем метод ~Object.create()~ для создания подкласса **_SubClass_** класса **_SuperClass_**^^
-^^Для этого объявим конструктор подкласса **_SubClass_**:^^
+// Теперь используем метод Object.create() 
+// для создания подкласса SubClass класса SuperClass
 
-~~~javascript
+// Для этого объявим конструктор подкласса SubClass:
+
 function SubClass () {
      SuperClass.call ( this )
      this.name = "Дочерний класс"
      this.type = "SubClass"
 }
-~~~
 
-^^Конструктор **_SuperClass_** вызывается в конструкторе **_SubClass_** как обычная функция, однако в контексте экземпляра^^
+// Конструктор SuperClass вызывается в конструкторе SubClass 
+// как обычная функция, однако в контексте экземпляра
 
-~~~javascript
 var sample = new SubClass()
 ~~~
 
-^^^[Результат]
+**Результат**
 
 ![](https://lh4.googleusercontent.com/vcps-4BeqX1JkOoOAOPJr82l6T9KExwOvfmuguK2nlkGesPz8LUYIX9qyLPI3ZDyHsAtxystJKAvUVY-EeIBQWVxmg77oiEUNUnqMuST214tak36uuCH9DTw6szNi9h8K2Y_LvtZlcLOQDU)
 
-^^^
 
 ^^Обратите внимание, что **_SuperClass_** передал унаследованные свойства экземпляру, но при этом сам не появился в цепочке наследования:^^
 
-~~~javascript
+~~~js
 sample instanceof SubClass    // true
 sample instanceof SuperClass  // false
 sample instanceof Object      // true
@@ -318,22 +324,21 @@ sample instanceof Object      // true
 
 ^^В данном примере **_SuperClass_** выполняет функцию **_декоратора_**^^
 
-__________________
+____________________________________________________
 
-![ico-25 cap] ** 6**
 
-^^Объявляем конструктор класса **_Dishes_**:^^
+◘◘![ico-25 cap] **Пример 8**◘◘
 
-~~~javascript
+~~~js
+// Объявляем конструктор класса Dishes
+
 function Dishes ( type ) {
     this.type = "Посуда"
     console.log ( "Конструктор Dishes создал экземпляр посуды: \n", this )
 }
-~~~
 
-^^Создаем свойства и методы прототипа:^^
+// Создаем свойства и методы прототипа:
 
-~~~js
 Dishes.prototype.wash = function () {
     this.clean = true
     console.info ( 'Посуда вымыта' )
@@ -342,14 +347,12 @@ Dishes.prototype.use = function () {
     this.clean = false
     console.info ( 'Посуда использована, она грязная' )
 }
-~~~
 
-^^Теперь создадим конструктор класса **_Cup_**:^^
+// Теперь создадим конструктор класса Cup:
 
-~~~js
 function Cup ( color ) {
     this.type = "чашка"
-    this.color = color || "синяя"
+    this.color = color &#124;&#124; "синяя"
 }
 ~~~
 
@@ -372,9 +375,10 @@ Dishes.call ( Cup.prototype )
 var redCup = new Cup ( "красная" )
 ~~~
 
-^^^[redCup]
+◘◘redCup◘◘
 
 ~~~console
+
 ▼ Cup {type: "чашка", color: "красная", clean: true}
     clean: true
     color: "красная"
@@ -388,7 +392,6 @@ var redCup = new Cup ( "красная" )
           ► __proto__: Object
 ~~~
 
-^^^
 
 ^^Итак, мы построили цепочку прототипов^^
 ^^Для проверки, что наш экземпляр  **redCup**  принадлежит  одновременно классам  **_Cup_**  и  **_Dishes_**, воспользуемся оператором  **~instanceof~**:^^
@@ -409,58 +412,55 @@ redCup.use ()  // Посуда использована, она грязная
 redCup.wash () // Посуда вымыта
 ~~~
 
-__________________
+^^Аналогичный результат можно получить значительно проще, используя свойство **~&#95;&#95;proto&#95;&#95;~**^^
 
-![ico-25 cap] ** 7**
+_________________________________________________________________________
 
 ~&#95;&#95;proto&#95;&#95;~  vs  ~Object.create()~
 
-^^Аналогичный результат можно получить значительно проще, используя свойство **~&#95;&#95;proto&#95;&#95;~**^^
-^^Сейчас мы усложним задачу, удлинив цепочку прототипов еще одним классом - **_Kitchenware_**^^
-^^Создадим конструктор класса  **_Kitchenware_**:^^
+
+◘◘![ico-25 cap] **Пример 9**◘◘
 
 ~~~js
+// усложним задачу, удлинив цепочку прототипов еще одним классом - Kitchenware
+
+// Создадим конструктор класса Kitchenware
+
 var Kitchenware = function () {
     this.className = "Кухонная утварь"
     this.__proto__.constructor = Kitchenware
 }
-~~~
 
-^^Теперь создадим конструктор класса  **_Dishes_**, ^^
-^^и используем конструктор **_Kitchenware_** ^^
-^^для создания прототипа экземпляров класса  **_Dishes_**:^^
+// Теперь создадим конструктор класса Dishes,
+// и используем конструктор Kitchenware
+// для создания прототипа экземпляров класса Dishes:
 
-~~~js
 var Dishes = function () {
     this.__proto__ = new Kitchenware ()
     this.__proto__.constructor = Dishes
     this.className = "Посуда"
 }
-~~~
 
-^^Теперь создадим конструктор класса  **_Cup_**, ^^
-^^и используем конструктор **_Dishes_** ^^
-^^для создания прототипа экземпляров класса  **_Cup_**:^^
+// Теперь создадим конструктор класса Cup,
+// и используем конструктор Dishes
+// для создания прототипа экземпляров класса Cup:
 
-~~~js
 var Cup = function ( $color ) {
     this.__proto__ = new Dishes ()
     this.__proto__.constructor = Cup
     this.className = "Чашка"
-    this.color = $color || "белая"
+    this.color = $color &#124;&#124; "белая"
 }
-~~~
 
-^^Теперь создадим экземпляр  **yellowCup**  класса  **_Cup_**  и выведем его в консоль:^^
+// Теперь создадим экземпляр yellowCup класса Cup
+// и выведем его в консоль:
 
-~~~js
 var yellowCup = new Cup (  "желтая" )
 console.log ( '*** cup: ', yellowCup )
-~~~
 
-^^А также выведем в консоль цепочку прототипов, используя метод  ~Object.getPrototypeOf()~:^^
+// также выведем в консоль цепочку прототипов,
+// используя метод Object.getPrototypeOf():
 
-~~~js
 console.log (
     'yellowCup prototype: ',
     Object.getPrototypeOf ( yellowCup )
@@ -477,7 +477,7 @@ console.log (
 
 ^^Обратите внимание, что ссылка на конструктор задана в явном виде:^^
 
-~~~javascript
+~~~js
 this.__proto__.constructor = Dishes
 ~~~
 
@@ -509,11 +509,11 @@ yellowCup instanceof Object       // true
 
 ^^Как мы видим, хотя в консоли цепочка прототипов выглядит вполне прилично, на самом деле произошла передача свойств вместо наследования ^^
 
-### ![ico-20 hw] Тесты на Object.create
+_____________________________________________________________________________
 
-[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#Object.create)
+[![ico-30 hw] **Тесты на Object.create**](https://garevna.github.io/js-quiz/#Object.create)
 
-_______________________
+_____________________________________________________________________________
 
 ## ![ico-25 icon] Object.defineProperty()
 
@@ -523,11 +523,11 @@ _______________________
 ![ico-20 green-ok] Второй аргумент - имя свойства ( строка )
 ![ico-20 green-ok] Третий аргумент - объект дескриптора свойства
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] **Пример 10**◘◘
 
-Добавим свойство **_type_** объекту **sample** и сделаем это свойство неперечислимым
+~~~js
+// Добавим свойство type объекту sample и сделаем это свойство неперечислимым
 
-~~~javascript
 var sample = {
     name: "figure",
     size: 100,
@@ -541,27 +541,27 @@ Object.defineProperty ( sample, 'type', {
 Object.keys ( sample )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ► (3) ["name", "size", "color"]
 ~~~
 
-____________________
+______________________________________________________________________
 
 ### ![ico-20 icon] геттер и сеттер свойства
 
 **Вычисляемые свойства**
 
-![ico-25 cap] ** 2**
+![ico-20 warn] Когда определяются атрибуты **~get()~**  и  **~set()~** в дескрипторе свойства, нельзя использовать атрибуты  **~writable~** и **~value~**
 
-Добавим еще одно свойство объекту  **sample**
+◘◘![ico-25 cap] **Пример 11**◘◘
 
-Свойство   **_operation_**   будет  с геттером и сеттером
+~~~js
+// Добавим еще одно свойство объекту sample
+// Свойство operation будет  с геттером и сеттером
 
-![ico-20 warn] Когда определяются атрибуты _~get()~_  и  _~set()~_ в дескрипторе свойства, нельзя использовать атрибуты  _~writable~_ и _~value~_
-
-~~~javascript
 Object.defineProperty ( sample, "operation", {
     get: () => this.operation ?
                this.operation.substr ( 0, 1 ) : "?",
@@ -569,9 +569,10 @@ Object.defineProperty ( sample, "operation", {
 })
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ▼ {name: "figure", size: 100, color: "red", type: "svg"}
     color: "red"
     name: "figure"
@@ -582,12 +583,12 @@ Object.defineProperty ( sample, "operation", {
   ► set operation: newVal => this.operation = newVal + "***"
   ► __proto__: Object
 ~~~
-^^^
-_____________
 
-![ico-25 cap] ** 3**
+___________________________________________________________
 
-~~~javascript
+◘◘![ico-25 cap] **Пример 12**◘◘
+
+~~~js
 var course = 28
 
 var thing = {
@@ -606,27 +607,25 @@ Object.defineProperty ( thing, "priceUAH", {
 })
 
 console.log ( thing.priceUAH ) // 560
-~~~
 
-Теперь выполним присваивание значения вычисляемому свойству ( вызывая под капотом сеттер этого свойства ):
+// Теперь выполним присваивание значения вычисляемому свойству
+// ( вызывая под капотом сеттер этого свойства )
 
-~~~javascript
 thing.priceUAH = 450
 
 console.log ( thing.priceUDS ) // 8.928571428571429
-~~~
 
-Выведем в консоль дескриптор вычисляемого свойства **~priceUAH~**
+// Выведем в консоль дескриптор вычисляемого свойства priceUAH
 
-~~~javascript
 console.log (
     Object.getOwnPropertyDescriptor ( thing, "priceUAH" )
 )
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ▼ {get: ƒ, set: ƒ, enumerable: true, configurable: true}
     configurable: true
     enumerable: true
@@ -634,7 +633,7 @@ console.log (
   ► set: ƒ priceUAH( newPriceUAH )
   ► __proto__: Object
 ~~~
-^^^
+
 ____________________________
 
 ## ![ico-25 icon] Object.defineProperties()
@@ -644,16 +643,16 @@ ____________________________
 Создадим в разметке новый элемент **svg**
 
 ~~~html
-<body>
-    <svg width="400" height="400"
+&lt;body>
+    &lt;svg width="400" height="400"
          style="border: 1px dotted;"/>
-    </svg>
-</body>
+    &lt;/svg>
+&lt;/body>
 ~~~
 
 и добавим сразу два свойства объекту **sample** с помощью метода **_Object.defineProperties()_**:
 
-~~~javascript
+~~~js
 Object.defineProperties ( sample, {
     canvas: {
         value: document.querySelector ( "svg" ),
@@ -691,9 +690,10 @@ var obj = {
 console.log ( Object.entries( obj ) )
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ▼ (5) [Array(2), Array(2), Array(2), Array(2), Array(2)]
   ► 0: (2) ["name", "first"]
   ► 1: (2) ["type", "circle"]
@@ -704,13 +704,13 @@ console.log ( Object.entries( obj ) )
   ► __proto__: Array(0)
 ~~~
 
-^^^
+________________________________________
 
-![ico-25 cap] ** 1**
-
-Нарисуем окружность
+◘◘![ico-25 cap] **Пример 13**◘◘
 
 ~~~js
+// Нарисуем окружность
+
 var obj = {
     width: "30%",
     height: "30%",
@@ -720,20 +720,23 @@ var obj = {
     top: "10%",
     left: "10%"
 }
+
 var elem = document.body.appendChild (
     document.createElement ( "div" )
 )
+
 Object.entries( obj )
    .forEach ( prop => elem.style [ prop [0] ] = prop [1] )
 ~~~
 
 ____________________
 
-![ico-25 cap] ** 2**
+◘◘![ico-25 cap] **Пример 14**◘◘
 
-Выведем все свойства объекта **obj** в консоль
 
 ~~~js
+// Выведем все свойства объекта obj в консоль
+
 console.info ( 'obj = {\n' )
 for ( var x of Object.entries( obj ) ) {
     console.info ( `     ${x[0]}:${x[1]}\n` )
@@ -741,9 +744,10 @@ for ( var x of Object.entries( obj ) ) {
 console.info ( '}' )
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 obj = {
       width:30%
       height:30%
@@ -754,14 +758,14 @@ obj = {
       left:10%
 }
 ~~~
-^^^
+
 ____________________________
 
 ## ![ico-25 icon] Object.freeze()
 
 Числа, строки и булевы значения в JS **_неиммутабельны_**, т.е. их значения не меняются при операциях с ними, но каждый раз возвращается новое значение
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] **Пример 15**◘◘
 
 ~~~js
 var string = "Welcome to JS!"
@@ -771,9 +775,11 @@ string.split ( " " ) // [ "Welcome", "to", "JS!" ]
 console.log ( string ) // "Welcome to JS!"
 ~~~
 
+_______________________________________________________________________
+
 Объекты и массивы JS по природе своей **_иммутабельны_** ( изменяемы )
 
-![ico-25 cap] ** 2**
+◘◘![ico-25 cap] **Пример 16**◘◘
 
 ~~~js
 var food = [ "milk", "apple", "soup" ]
@@ -783,9 +789,11 @@ food.push ( "meat" )
 console.log ( food ) // [ "milk", "apple", "soup", "meat" ]
 ~~~
 
+_______________________________________________________________________
+
 Мы легко добавляем новые свойства объекту:
 
-![ico-25 cap] ** 3**
+◘◘![ico-25 cap] **Пример 17**◘◘
 
 ~~~js
 var provider = { name: "Google" }
@@ -805,7 +813,7 @@ ____________________________________________________
 
 ^^^[добавление новых свойств к объекту]
 
-![ico-25 cap] ** 4**
+![ico-25 cap] **Пример 18**
 
 ~~~js
 var provider = { name: "Google" }
@@ -823,7 +831,7 @@ console.log ( provider ) // { name: "Google" }
 
 ^^^[удаление свойств объекта]
 
-![ico-25 cap] ** 5**
+![ico-25 cap] **Пример 19**
 
 ~~~js
 var provider = { name: "Google", service: "API" }
@@ -839,7 +847,7 @@ console.log ( provider ) // { name: "Google", service: "API" }
 
 ^^^[изменение существующих свойств объекта]
 
-![ico-25 cap] ** 6**
+![ico-25 cap] **Пример 20**
 
 ~~~js
 var provider = { name: "Google", service: "API" }
@@ -857,11 +865,11 @@ console.log ( provider.name ) // Google
 
 изменение значений **enumerable**, **configurable** и **writable**
 
-![ico-25 cap] ** 7**
-
-Изменим дескриптор свойства объекта до "заморозки":
+◘◘![ico-25 cap] **Пример 21**◘◘
 
 ~~~js
+// Изменим дескриптор свойства объекта до "заморозки":
+
 var provider = { name: "Google", service: "API" }
 
 Object.defineProperty ( provider, "name", {
@@ -921,7 +929,7 @@ Object.defineProperty ( provider, "service", {
 
 Будет сгенерировано исключение:
 
-![ico-20 error] ~Uncaught TypeError: Cannot redefine property: service~
+••![ico-20 error] Uncaught TypeError: Cannot redefine property: service••
 
 Однако изменить значение свойства **service** мы не сможем, хотя нам и не удалось изменить дескриптор этого свойства
 
@@ -929,9 +937,9 @@ Object.defineProperty ( provider, "service", {
 
 ~~~js
 Object.getOwnPropertyDescriptor ( provider, "service" )
-
-// { value: "API", writable: false, enumerable: true, configurable: false }
 ~~~
+
+••► { value: "API", writable: false, enumerable: true, configurable: false }••
 
 Т.е. в результате "заморозки" объекта дескрипторы его свойств были автоматически изменены: свойства стали неизменяемы и не конфигурируемы
 
@@ -940,53 +948,33 @@ Object.getOwnPropertyDescriptor ( provider, "service" )
 Если мы сами не установим его значение в ~false~ перед заморозкой, то свойства будут перечислимыми
 
 ^^^
-____________________________
+_________________________________________________________________________________________________
 
 ## ![ico-25 icon] Object.getOwnPropertyDescriptor()
 
 Этот метод позволяет получить дескриптор собственного свойства объекта
 Возвращает **объект дескриптора** свойства
-![ico-20 green-ok] первым аргументом метода является объект ( ссылка )
-![ico-20 green-ok] второй аргумент - имя свойства объекта ( строка )
+![ico-20 pin] первым аргументом метода является объект ( ссылка )
+![ico-20 pin] второй аргумент - имя свойства объекта ( строка )
 
 ### ![ico-20 icon] Дескрипторы свойств
 
 Для каждого свойства объекта существует **дескриптор свойства**
 Дескриптор свойства - это **_объект_**, который содержит атрибуты свойства:
 
-![ico-20 green-ok] **value**
-^^значение свойства^^
-^^( по умолчанию **_undefined_** )^^
+| ^^атрибут&nbsp;свойства^^ | ^^содержание^^ | ^^значение&nbsp;по&nbsp;умолчанию^^ |
+| **~value~** | ^^значение свойства^^ | ^^**_undefined_**^^ |
+| **~writable~** | ^^можно ли изменять значение свойства<br>( ~_true_~ &#124; ~_false_~)^^ | ^^**_true_**^^ |
+| **~set~** | ^^сеттер свойства^^<br> ^^( функция, которая вызывается при записи значения свойства )^^ | ^^**_undefined_**^^ |
+| **~get~** | ^^геттер свойства<br>( функция, которая вызывается при чтении значения свойства )^^ | ^^**_undefined_**^^ |
+| **~enumerable~** | ^^является свойство перечислимым, или нет<br>т.е. будет ли оно итерироваться оператором **_for..in_**<br>и возвращаться при вызове метода **_Object.keys()_**<br>( ~_true_~ &#124; ~_false_~ )^^ | ^^**_false_**^^ |
+| **~configurable~** | ^^доступно ли свойство для модификации ( удаления, изменения атрибутов свойства )<br>можно ли конфигурировать свойство с помощью метода **_defineProperty_**<br>( ~_true_~ &#124; ~_false_~ )^^ | ^^**_false_**^^ |
 
-![ico-20 green-ok] **writable**
-^^( _true_ | _false_ )^^
-^^можно ли изменять значение свойства^^
-^^( по умолчанию **_true_** )^^
+_________________________________________________________________
 
-![ico-20 green-ok] set
-^^сеттер свойства^^
-^^( функция, которая вызывается при записи значения свойства )^^
-^^( по умолчанию имеет значение **_undefined_** )^^
+◘◘![ico-25 cap] **Пример 22**◘◘
 
-![ico-20 green-ok] **get**
-^^геттер свойства^^
-^^( функция, которая вызывается при чтении значения свойства )^^
-^^( по умолчанию имеет значение **_undefined_** )^^
-
-![ico-20 green-ok] **enumerable** ( ~true~ | ~false~ )
-^^является свойство перечислимым, или нет^^
-^^т.е. будет ли оно итерироваться оператором **_for..in_**^^
-^^и возвращаться при вызове метода **_Object.keys()_**^^
-^^( по умолчанию имеет значение **_false_** )^^
-
-![ico-20 green-ok] **configurable** ( ~true~ | ~false~ )
-^^доступно ли свойство для модификации ( удаления, изменения атрибутов свойства )^^
-^^можно ли конфигурировать свойство с помощью метода **_defineProperty_**^^
-^^( по умолчанию **_false_** )^^
-
-![ico-25 cap] ** 1**
-
-~~~javascript
+~~~js
 var newObject = {
     name: "Егор",
     age: 25,
@@ -998,9 +986,10 @@ var newObject = {
 Object.getOwnPropertyDescriptor ( newObject, "getName" )
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ▼ {value: ƒ, writable: true, enumerable: true, configurable: true}
     configurable: true
     enumerable: true
@@ -1009,7 +998,6 @@ Object.getOwnPropertyDescriptor ( newObject, "getName" )
   ► __proto__: Object
 ~~~
 
-^^^
 
 ____________________________
 
@@ -1034,9 +1022,10 @@ var obj = {
 Object.getOwnPropertyDescriptors( obj )
 ~~~
 
-^^^[Результат]
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 ▼ {name: {…}, type: {…}, color: {…}, radius: {…}, center: {…}}
   ► center: {value: Array(2), writable: true, enumerable: true, configurable: true}
   ► color: {value: "red", writable: true, enumerable: true, configurable: true}
@@ -1046,7 +1035,6 @@ Object.getOwnPropertyDescriptors( obj )
   ► __proto__: Object
 ~~~
 
-^^^
 ____________________________
 
 ## ![ico-25 icon] Object.getOwnPropertyNames()
@@ -1067,9 +1055,10 @@ var newObject = Object.assign (
 Object.getOwnPropertyNames ( newObject )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 (6) ["name", "age", "write", "read", "getName", "setName"]
 ~~~
 ____________________________
@@ -1079,13 +1068,13 @@ ____________________________
 возвращает массив всех **_собственных перечислимых_** свойств экземпляра
 аргумент - ссылка на экземпляр
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] **Пример 23**◘◘
 
 ~~~js
 var Human = function () {
-    this.name = arguments [ 0 ] || "Тимофей"
-    this.age = arguments [ 1 ] || 25
-    this.speciality = arguments [ 2 ] || "слесарь"
+    this.name = arguments [ 0 ] &#124;&#124; "Тимофей"
+    this.age = arguments [ 1 ] &#124;&#124; 25
+    this.speciality = arguments [ 2 ] &#124;&#124; "слесарь"
 }
 
 Human.prototype.setSpeciality = function ( spec ) {
@@ -1093,36 +1082,34 @@ Human.prototype.setSpeciality = function ( spec ) {
 }
 
 var man = new Human ( null )
-~~~
 
-Добавим в прототип **Human** новое свойство **_employed_**:
+// Добавим в прототип Human новое свойство employed:
 
-~~~js
 Human.prototype.employed = false
 console.log ( man.employed )  // false
-~~~
 
-выведем в консоль собственные перечислимые свойства экземпляра  **man**
+// выведем в консоль собственные перечислимые свойства экземпляра  man
 
-~~~javascript
 console.log ( Object.keys ( man ) )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 (3) [ "name", "age", "speciality" ]
 ~~~
 
 выведем перечислимые свойства прототипа:
 
-~~~javascript
+~~~js
 console.log ( Object.keys ( Human.prototype ) )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 (2) [ "setSpeciality", "employed" ]
 ~~~
 
@@ -1133,9 +1120,10 @@ man.employed = true
 console.log ( Object.keys ( man ) )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 (4) [ "name", "age", "speciality", "employed" ]
 ~~~
 
@@ -1152,17 +1140,17 @@ ____________________________
 Метод добавляет в цепочку прототипов объекта, указанного первым аргументом,
 ссылку на другой объект, указанный вторым аргументом
 
-![ico-25 cap] ** 1**
-
-Создадим объект **proto** с двумя методами: **_valueOf()_** и **_getName()_**
+◘◘![ico-25 cap] **Пример 24**◘◘
 
 ~~~js
+// Создадим объект proto с двумя методами: valueOf() и getName()
+
 const proto = {
     valueOf() {
         return this [
             Object.keys ( this )
                 .find ( key => !isNaN ( this[key] ) )
-        ] || 0
+        ] &#124;&#124; 0
     },
     getName() {
         return this.name ? this.name : "user"
@@ -1170,14 +1158,13 @@ const proto = {
 }
 ~~~
 
-^^^[Методы объекта proto]
+**Методы объекта proto**
 
 ^^Метод **_valueOf()_** ищет среди собственных перечислимых свойств объекта любое свойство, которое при приведении к числу вернет не **~NaN~**, и возвращает числовое значение этого свойства^^
 ^^или, если такого свойства не обнаружено, возвращает 0^^
 
 ^^Метод **_getName()_** ищет среди свойств объекта свойство **_name_**, и если находит, то возвращает его значение, в противном случае возвращает "_user_"^^
 
-^^^
 
 Создадим объект **admin**:
 
@@ -1190,9 +1177,10 @@ const admin = {
 
 Легко убедиться, что в цепочке прототипов объекта **admin** есть только ссылка на объект **~prototype~** конструктора **_Object_**
 
-^^^[admin]
+◘◘admin◘◘
 
 ~~~console
+
 ▼ { name: "Stephan", age: 25 }
     age: 25
     name: "Stephan"
@@ -1212,7 +1200,6 @@ const admin = {
       ► set __proto__: ƒ __proto__()
 ~~~
 
-^^^
 
 С помощью метода **~Object.setPrototypeOf~** передадим объекту **admin** в наследство объект **proto**:
 
@@ -1222,9 +1209,10 @@ Object.setPrototypeOf ( admin, proto )
 
 Выведем объект **admin** в консоль и убедимся, что в его цепочке прототипов появилось еще одно звено - ссылка на объект **proto**:
 
-^^^[admin]
+◘◘admin◘◘
 
 ~~~console
+
 ▼ { name: "Stephan", age: 25 }
     age: 25
     name: "Stephan"
@@ -1234,7 +1222,6 @@ Object.setPrototypeOf ( admin, proto )
       ► __proto__: Object
 ~~~
 
-^^^
 
 Вызовем унаследованные объектом **admin** методы объекта **proto**
 
@@ -1287,9 +1274,10 @@ var obj = {
 console.log ( Object.values( obj ) )
 ~~~
 
-**Результат:**
+◘◘^^Результат^^◘◘
 
 ~~~console
+
 (5) ["first", "circle", "red", 100, Array(2)]
 ~~~
 ____________________________
@@ -1309,4 +1297,4 @@ ____________________________
 
 __________________
 
-[![ico-20 link] ^^MDN^^](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+[%%%MDN%%%](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)

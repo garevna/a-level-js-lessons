@@ -2,13 +2,12 @@
 
 Утилита командной строки для передачи данных по URL
 
-| [![ico-50 curl]](https://curl.haxx.se/docs/manpage.html) | [![ico-20 link] ^^usage^^](https://curl.haxx.se/docs/manual.html) |
+[![ico-50 curl]](https://curl.haxx.se/docs/manpage.html)
+[%%%usage%%%](https://curl.haxx.se/docs/manual.html)
 
-![ico-25 bash] Синтаксис:
+Синтаксис:
 
-~~~console
-$ curl опции ссылка
-~~~
+••![ico-25 bash] $ curl опции ссылка••
 
 _______________________
 
@@ -16,21 +15,14 @@ _______________________
 
 По умолчанию содержимое запрошенного ресурса будет отправлено на стандартный вывод
 
-![ico-25 bash] ** 1**
+••![ico-25 bash] $ curl https://github.com••
 
-~~~console
-$ curl https://github.com
-~~~
 
 ^^^[Sample 1]
 ![](https://lh4.googleusercontent.com/NNBTdfB5sjJHwZonWN9Cas48xn-6Z9FpbQ6cWE8BuKT3viwiqeJARIVZtqXhh-3TYdpRF_E0ZoBCqqWijAUdYdJzTgwMbAGG2EWfLyZEF_3jIRxjKmeHjsHcWTlVjCHfc26Je71T-6LSge8)
 ^^^
 
-![ico-25 bash] ** 2**
-
-~~~console
-$ curl curl https://garevna.github.io/js-samples/js/index08.js
-~~~
+••![ico-25 bash] $ curl curl https://garevna.github.io/js-samples/js/index08.js••
 
 ^^^[Sample 2]
 ![](https://lh6.googleusercontent.com/i5RSX6lSW65LpS8fr040nn2716uWNpBzmjYpI8gy0BFvs8Zm61AvKEd59ym2WbR5OdX7T89iR7Bm0wBUo6o-4unD4W8m3urkCVkAs-LbaaWnkupj6dwvBS4eZ-QUX25uCE83n5RzyZGX_yU)
@@ -43,11 +35,7 @@ $ curl curl https://garevna.github.io/js-samples/js/index08.js
 
 Сохранить загруженный файл в текущую папку под тем же именем, что и на сервере
 
-![ico-25 bash] ** 3**
-
-~~~console
-$ curl  -O  https://garevna.github.io/js-samples/js/index08.js
-~~~
+••![ico-25 bash] $ curl  -O  https://garevna.github.io/js-samples/js/index08.js••
 
 ![](https://lh6.googleusercontent.com/lkSnp2j3kw-lr6y4-S1BCzNMBmdpp2UJ1Qy9LzrWzwyKARaMK1N5o7NbeaEVsrI0XEI1h1jRM7hHE1sh70LJeKA1fRXVgkGlInTBNVToyIE5KsmQWIR8iRQO6XrMBvwQ06FyMliqczbDeB4)
 
@@ -61,11 +49,7 @@ $ curl  -O  https://garevna.github.io/js-samples/js/index08.js
 
 Сохранить загруженный файл в текущую папку под указанным именем
 
-![ico-25 bash] ** 4**
-
-~~~console
-$ curl  -o  index-1.html  https://garevna.github.io/js-samples/index.html
-~~~
+••![ico-25 bash] $ curl  -o  index-1.html  https://garevna.github.io/js-samples/index.html••
 
 ![](https://lh3.googleusercontent.com/dqMLhIuIj6A4Itq2c5-16BhyBFwZtGjxK4BR4MpWFRKhnuwXzL3pKd8wKzupjmMH0u6QzvbpLaJw-sEDY6GlOILYD_TIz1GFJRy1bD-1ZdL0xhB6qXMTvFaELtnCQYEMjplDyzsjUPqwto0)
 
@@ -91,25 +75,18 @@ __________________
 
 Эта опция нужна для отправки данных на сервер методом ~POST~
 
-![ico-25 bash] ** 5**
-
-~~~console
-$ curl -d  "name=garevna&subject=testing"  http://ptsv2.com/t/garevna/post
-~~~
+••![ico-25 bash] $ curl -d  "name=garevna&subject=testing"  http://ptsv2.com/t/garevna/post••
 
 ![](https://lh5.googleusercontent.com/386WFzu4tgvkFsvcDiIBvH_FiFSM5-Oyvcnd9DLGSBzNAnp5R9jV9nLT5x1u188mqU79bdtbvTOQlLWPMMBR3dnO7nliVXydcersaqpRa4_9AUuzxFcq41l3eHsxqkDhzWA5Wf5so2o0u7s)
 
 Обратите внимание на заголовки ( Headers )
 
-~~~console
-Content-Type   application/x-www-form-urlencoded
-~~~
+
+••Content-Type   application/x-www-form-urlencoded••
 
 Мы отправили данные формы как пары  ключ=значение, соединенные знаком ** &**:
 
-~~~console
-"name=garevna&subject=testing"
-~~~
+••"name=garevna&subject=testing"••
 
 Сервер автоматически распознал тип контента и установил значение заголовка ~Content-Type~
 
@@ -123,19 +100,13 @@ Content-Type   application/x-www-form-urlencoded
 
 Заголовком по умолчанию для простого POST-запроса будет
 
-~~~console
-Content-Type: application / x-www-form-urlencoded
-~~~
+••Content-Type: application / x-www-form-urlencoded••
 
 Изменим это значение
 
 Укажем, что мы передаем данные в ~json~-формате:
 
-![ico-25 bash] ** 6**
-
-~~~console
-$ curl -d '{ name:Irina }'  -H  'Content-Type: application/json'  http://ptsv2.com/t/garevna/post
-~~~
+••![ico-25 bash] $ curl -d '{ name:Irina }'  -H  'Content-Type: application/json'  http://ptsv2.com/t/garevna/post••
 
 мы передали простой объект ~{ name:Irina }~
 в заголовке ~Content-Type: application/json~
@@ -145,15 +116,11 @@ $ curl -d '{ name:Irina }'  -H  'Content-Type: application/json'  http://ptsv2.c
 
 ________________________
 
-![ico-25 bash] ** 7**
-
 Отправим ранее сохраненный файл  **_index-1.html_** на сервер  **http://ptsv2.com**,
 
 указав в заголовке ~Content-Type~, что мы отправляем обычный текстовый файл ( **_~text/plain~_** ):
 
-~~~console
-curl  -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/garevna/post
-~~~
+••![ico-25 bash] curl  -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/garevna/post••
 
 ![](https://lh5.googleusercontent.com/5vxbWn8QA-_jNTnd085QG4lDAK2XmLrqNDtH4bOmfZu4qA6f6HvM3_Bk2a7ebjIa250DS0y37WtHXW9wf-UiHudeouf36ALIyzdB7wkB4EpjrWMl4RET3UCfX6UXW4wFxH-iyVrkno3gmfc)
 
@@ -165,14 +132,10 @@ curl  -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/ga
 
 ~curl~ поддерживает login и пароль в URL-адресах:
 
-~~~console
-$ curl http://name:passwd@machine.domain/full/path/to/file
-~~~
+••![ico-25 bash] $ curl http://name:passwd@machine.domain/full/path/to/file••
 
 С помощью опции **~-u~** ( _**~--user~**_ ) можно передать ~логин:пароль~ отдельно:
 
-~~~console
-$ curl --user garevna:garevna -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/garevna/post
-~~~
+••![ico-25 bash] $ curl --user garevna:garevna -d  @index-1.html   -H  'Content-Type: text/plain'   http://ptsv2.com/t/garevna/post••
 
 ^^^

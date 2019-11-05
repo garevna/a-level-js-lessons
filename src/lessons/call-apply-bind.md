@@ -1,4 +1,4 @@
-# ![ico-30 study] Биндинг и каррирование
+# ![ico-30 study] Изменение контекста
 
 ____________________________________________
 
@@ -6,9 +6,12 @@ ____________________________________________
 
 Функции можно создавать путем явного вызова конструктора **Function** с ключевым словом **_~new~_**
 
-![ico-20 warn] Однако следует помнить, что созданные таким образом функции будут анонимными ( "_anonymous_" )
+![ico-20 warn] Однако следует помнить, что созданные таким образом функции будут анонимными 
+( "_anonymous_" )
 
-~~~javascript
+◘◘![ico-25 cap] ** 1**◘◘
+
+~~~js
 var func = new Function (
     "x",
     "y",
@@ -26,13 +29,13 @@ func( 5, 8, 11, false )
 ^^затем - глобальный объект ~window~^^
 ^^затем - объект ~arguments~ функции, содержащий 5, 8, 11, ~false~^^
 
-~~~javascript
+~~~js
 console.dir ( func )
 ~~~
 
 **Результат в консоли:**
 
-~~~js
+~~~console
 ▼ ƒ anonymous(x,y,z )
     arguments: null
     caller: null
@@ -53,13 +56,13 @@ ________________________________
 ![ico-20 pin] все функции наследуют свойства и методы объекта **_prototype_** конструктора **Function**
 
 
-~~~javascript
+~~~js
 console.dir ( Function )
 ~~~
 
 ^^^[Результат в консоли:]
 
-~~~js
+~~~console
 ▼ ƒ Function()
     arguments: (...)
     caller: (...)
@@ -86,9 +89,9 @@ console.dir ( Function )
 
 ^^^
 
-![ico-20 warn] Свойство **_&#95;&#95;proto&#95;&#95;_** любой функции является ссылкой на свойство **_prototype_** конструктора **Function**
+![ico-20 warn] Свойство **~&#95;&#95;proto&#95;&#95;~** любой функции является ссылкой на свойство **_prototype_** конструктора **Function**
 
-~~~javascript
+~~~js
 function func () {
     console.dir ( this )
 }
@@ -98,7 +101,7 @@ console.dir ( func )
 
 ^^^[Результат в консоли:]
 
-~~~js
+~~~console
 ▼ ƒ func()
     arguments: null
     caller: null
@@ -125,7 +128,7 @@ console.dir ( func )
 
 ^^^
 
-![ico-20 pin] Поскольку конструктор **Function** также является функцией, его свойство **_~&#95;&#95;proto&#95;&#95;~_** тоже является ссылкой на собственное свойство **_~prototype~_**
+![ico-20 pin] Поскольку конструктор **Function** также является функцией, его свойство **_~__proto__~_** тоже является ссылкой на собственное свойство **_~prototype~_**
 
 _________________________________
 
@@ -134,13 +137,11 @@ _________________________________
 ![ico-20 pin] всегда является методом ( т.е. свойством какого-либо объекта )
 ![ico-20 pin] всегда вызывается в контексте какого-либо объекта
 
-^^^[Пример 1]
-
-![ico-25 cap] ** 1 **
-
 ^^Покажем, что функции, объявленные в глобальной области видимости, по умолчанию являются свойствами глобального объекта ~window~^^
 
-~~~javascript
+◘◘![ico-25 cap] ** 2**◘◘
+
+~~~js
 function sample () {
     console.info ( "I'm sample" )
 }
@@ -163,7 +164,7 @@ I'm sample
 I'm figure
 ~~~
 
-^^^
+____________________________________
 
 ## ![ico-25 icon] Контекст вызова
 
@@ -172,7 +173,9 @@ I'm figure
 
 Явное указание контекста вызова происходит при обращении к методам какого-либо объекта:
 
-~~~javascript
+◘◘![ico-25 cap] ** 3**◘◘
+
+~~~js
 var obj = {
     name: "google",
     say: function () {
@@ -185,7 +188,7 @@ obj.say()   // google
 ^^Здесь перед именем метода **_say()_** явным образом указан контекст вызова **obj**,^^
 ^^поэтому _**~this~**_ внутри метода **_say()_** является ссылкой на **obj**^^
 
-~~~javascript
+~~~js
 window.name = "window"
 function say () {
     console.log ( this.name )
@@ -198,11 +201,27 @@ say()       // window
 obj.say()   // google
 ~~~
 
-_____________________________
+_____________________________________________
+
+Разберитесь самостоятельно с контекстом вызова метода getName функции getName:
+
+◘◘![ico-25 cap] ** 4**◘◘
+
+~~~js
+function getName() {
+    console.log ( this.name )
+}
+
+getName.getName = getName
+
+getName.getName()
+~~~
+_____________________________________________
 
 ## ![ico-25 icon] Изменение контекста
 
-Заглянув в свойство **_~prototype~_** конструктора **Function** или в свойство **_~&#95;&#95;proto&#95;&#95;~_** экземпляра функции, можно обнаружить три метода, которые наследуют все функции от своего создателя:
+Заглянув в свойство **_~prototype~_** конструктора **Function** или в свойство **_~&#95;&#95;proto&#95;&#95;~_** экземпляра функции, 
+можно обнаружить три метода, которые наследуют все функции от своего создателя:
 
 ![ico-20 green-ok] **_apply()_**
 ![ico-20 green-ok] **_call()_**
@@ -222,7 +241,9 @@ _____________________________
 
 Первым обязательным аргументом метода является ссылка на объект, в контексте которого будет вызвана функция
 
-~~~javascript
+◘◘![ico-25 cap] ** 5**◘◘
+
+~~~js
 window.name = "window"
 
 function func () {
@@ -244,7 +265,7 @@ func.call ( sample )  // sample
 
 Далее может следовать перечень аргументов:
 
-~~~javascript
+~~~js
 function func () {
     console.log ( this.name, arguments )
 }
@@ -258,8 +279,8 @@ func.call ( sample, 5, 1, "Bye" )
 
 **Результат в консоли:**
 
-~figure ► Arguments(3) [ 9, false, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ ]~
-~sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ ]~
+••figure ► Arguments(3) [ 9, false, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ ]••
+••sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ ]••
 
 
 ________________________________________
@@ -268,7 +289,9 @@ ________________________________________
 
 Метод **_apply()_** отличается от метода **_call()_** только способом передачи аргументов - теперь их нужно передавать массивом:
 
-~~~javascript
+◘◘![ico-25 cap] ** 6**◘◘
+
+~~~js
 function func () {
     console.log ( this.name, arguments )
 }
@@ -290,11 +313,12 @@ sample ► Arguments(3) [ 5, 1, "Bye", callee: ƒ, Symbol(Symbol.iterator): ƒ 
 __________________________________________________
 
 
-Передача массива аргументов вместо перечня их значений обеспечивает определенную гибкость, поскольку массивы передаются по ссылке, и содержимое массива может динамически обновляться от вызова к вызову
+Передача массива аргументов вместо перечня их значений обеспечивает определенную гибкость, 
+поскольку массивы передаются по ссылке, и содержимое массива может динамически обновляться от вызова к вызову
 
-![ico-25 cap] ** 2 **
+◘◘![ico-25 cap] ** 7**◘◘
 
-~~~~js
+~~~js
 var args = [0]
 var test = ( function () {
     var counter = 0
@@ -319,16 +343,16 @@ var google = { name: "google", test: test }
 func.apply ( figure, args )
 func.apply ( sample, args )
 func.apply ( google, args )
-~~~~
+~~~
 
 **Результат в консоли:**
 
-![ico-20 warn] ~► Who was called before figure (0):~
-![ico-20 warn] ~► Who was called before sample (1):~
-figure
-![ico-20 warn] ~► Who was called before google (2):~
-figure
-sample
+••![ico-20 warn] ► Who was called before figure (0):••
+••![ico-20 warn] ► Who was called before sample (1):••
+••figure••
+••![ico-20 warn] ► Who was called before google (2):••
+••figure••
+••sample••
 
 _____________________________
 
@@ -336,7 +360,7 @@ _____________________________
 ^^При каждом вызове функция **_func_** получает в аргументах полный отчет о том, сколько раз она была вызвана до этого, и с каким контекстом^^
 ^^Поменяйте местами вызовы функций, или добавьте повторный вызов любой из функций, и посмотрите результат^^
 
-________________________________
+______________________________________________________________________________
 
 ### ![ico-20 icon] bind()
 
@@ -344,7 +368,9 @@ ________________________________
 
 Функция-wrapper, в которую "заворачивается" исходная функция, вызывает ее в нужном контексте:
 
-~~~javascript
+◘◘![ico-25 cap] ** 8**◘◘
+
+~~~js
 function bindContext ( func, context, args ) {
     func.call ( context, args )
 }
@@ -362,7 +388,7 @@ bindContext ( sample, user, "Hello" )
 а так же обеспечим возможность привязки не только контекста вызова,
 но и аргументов ( этот прием программирования называется **_Currying_**, или каррирование ):
 
-~~~javascript
+~~~js
 function bindContext ( func, context, props ) {
     return function ( args ) {
         props ? func.call ( context, props, args ) :
@@ -388,9 +414,9 @@ userSay ( "Bye" )  // Фигаро: Bye
 
 ____________________________
 
-![ico-25 cap] ** 3 **
+◘◘![ico-25 cap] ** 9**◘◘
 
-~~~~javascript
+~~~js
 var test = ( function () {
     var counter = 0
     return function () {
@@ -413,25 +439,26 @@ var googleFunc = func.bind ( google )
 figureFunc ()
 sampleFunc ()
 googleFunc ()
-~~~~
+~~~
 
 **Результат в консоли:**
 
-![ico-20 warn] ~► Функция func вызвана 1 раз в контексте объекта figure~
-![ico-20 warn] ~► Функция func вызвана 2 раз в контексте объекта sample~
-![ico-20 warn] ~► Функция func вызвана 3 раз в контексте объекта google~
+••![ico-20 warn] ► Функция func вызвана 1 раз в контексте объекта figure••
+••![ico-20 warn] ► Функция func вызвана 2 раз в контексте объекта sample••
+••![ico-20 warn] ► Функция func вызвана 3 раз в контексте объекта google••
 
 _____________________________
 
-^^Теперь контекст вызова экземпляров **_figureFunc()_**, **_sampleFunc()_** и **_googleFunc()_** изменить невозможно, и при вызове этих функций не нужно явно указывать, в каком контексте они вызываются^^
+^^Теперь контекст вызова экземпляров **_figureFunc()_**, **_sampleFunc()_** и **_googleFunc()_** изменить невозможно, 
+и при вызове этих функций не нужно явно указывать, в каком контексте они вызываются^^
 
 ____________________________________
 
-![ico-25 cap] ** 4 **
-
 Добавим еще один объект **bloom** с методами **_figure()_**, **_sample()_** и **_google()_**:
 
-~~~javascript
+◘◘![ico-25 cap] **10**◘◘
+
+~~~js
 var bloom = { name: "bloom" }
 bloom.figure = figureFunc
 bloom.sample = sampleFunc
@@ -444,160 +471,40 @@ bloom.google()
 
 **Результат в консоли:**
 
-![ico-20 warn] ~► Функция func вызвана 4 раз в контексте объекта figure~
-![ico-20 warn] ~► Функция func вызвана 5 раз в контексте объекта sample~
-![ico-20 warn] ~► Функция func вызвана 6 раз в контексте объекта google~
+••![ico-20 warn] ► Функция func вызвана 4 раз в контексте объекта figure••
+••![ico-20 warn] ► Функция func вызвана 5 раз в контексте объекта sample••
+••![ico-20 warn] ► Функция func вызвана 6 раз в контексте объекта google••
 
 _______________________________
 
 Несмотря на явное указание контекста при вызове методов:
 
-~~~javascript
+~~~js
 bloom.figure()
 bloom.sample()
 bloom.google()
 ~~~
 
 они отрабатывают в том контексте, который мы им "прибиндили" до этого
-
 "Прибиндить" можно не только контекст вызова, но также и аргументы
+
 
 _________________________________________
 
-## ![ico-25 icon] Currying
+## ![ico-25 smile] Тест на вынос мозга
 
-Каррирование заключается в следующем:
-если при вызове функции 1 передать ей не все параметры,
-то она вернет функцию 2, параметры которой будут недостающими параметрами функции 1,
-а выходные данные - результатом функции 1
-
-~~~javascript
-function currying ( first, second ) {
-    return arguments.length === 0 ? null :
-        arguments.length === 1 ?
-            function ( second ) {
-                return arguments.length === 1 ?
-                    [ first, second ] : null
-            } : [ first, second ]
-}
-
-var curried = currying ( "Google" )
-
-console.log ( curried )
-~~~
-
-**Результат в консоли:**
+![ico-20 question] Что произойдет в результате запуска кода:
 
 ~~~js
-ƒ ( second ) {
-    return arguments.length === 1 ?
-        [ first, second ] : null
-}
-~~~
-
-Вызовем функцию ~curried~
-
-~~~javascript
-curried ()               // null
-curried ( "Mozilla" )   // ► (2) ["Google", "Mozilla"]
-~~~
-
-____________________
-
-Воспользуемся приемом **_Currying_** для создания функций с заданным контекстом и фиксированным значением первого аргумента
-
-![ico-25 cap] ** 5 **
-
-~~~javascript
-var test = function ( args ) {
-    return Array.from ( args ).toString()
+let sample = function () {
+    this.getSelf()
 }
 
-function func () {
-    console.log (
-    `Функция func вызвана в контексте объекта ${this.name}
-     c аргументами ${this.test( arguments )}` )
-}
+sample.getSelf = sample.bind ( sample )
 
-var figure = { name: "figure", test: test }
+sample = sample.getSelf
 
-var circleFunc = func.bind ( figure, "circle" )
-var rectFunc = func.bind ( figure, "rect" )
-var lineFunc = func.bind ( figure, "line" )
-
-circleFunc ( 100, 120, 80 )
-rectFunc ( 50, 50, 150, 150 )
-lineFunc ( 20, 30, 200, 200 )
+sample ()
 ~~~
 
-**Результат в консоли:**
-
-~~~js
-Функция func вызвана в контексте объекта figure
-     c аргументами circle,100,120,80
-Функция func вызвана в контексте объекта figure
-     c аргументами rect,50,50,150,150
-Функция func вызвана в контексте объекта figure
-     c аргументами line,20,30,200,200
-~~~
-
-_____________________________
-
-![ico-25 cap] ** 6 **
-
-~~~javascript
-function sample ( first, second, third ) {
-    function test ( arg ) {
-        return Array.from ( arguments )
-    }
-    return [
-        test.bind ( null, first ),
-        test.bind ( null, first, second ),
-        test.bind ( null, first, second, third )
-    ]
-}
-
-var test = sample ( "Google", "Mozilla", "Safari" )
-
-console.log ( test[0]( "IE" ) )
-console.log ( test[1]( "IE" ) )
-console.log ( test[2]( "IE" ) )
-~~~
-
-**Результат в консоли:**
-
-~~~js
-► (2) ["Google", "IE"]
-► (3) ["Google", "Mozilla", "IE"]
-► (4) ["Google", "Mozilla", "Safari", "IE"]
-~~~
-
-_____________________________________
-
-![ico-25 cap] ** 7 **
-
-~~~javascript
-function sample ( first, second, third ) {
-    function test ( arg ) {
-        return Array.from ( arguments )
-    }
-    var one = test.bind ( null, first )
-    var two = one.bind ( null, second )
-    var three = two.bind ( null, third )
-    return [ one, two, three ]
-}
-
-var test = sample ( "Google", "Mozilla", "Safari" )
-
-console.log ( test[0]( "IE" ) )
-console.log ( test[1]( "IE" ) )
-console.log ( test[2]( "IE" ) )
-~~~
-
-**Результат в консоли:**
-
-~~~js
-► (2) ["Google", "IE"]
-► (3) ["Google", "Mozilla", "IE"]
-► (4) ["Google", "Mozilla", "Safari", "IE"]
-~~~
+___________________________________________________________________

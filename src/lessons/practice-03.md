@@ -18,7 +18,7 @@
 
 Отредактируйте код функции   **getCurrentPostComments**   таким образом, чтобы она возвращала массив комментариев к посту, идентификатор которого передается аргументом функции  **postId**
 
-~~~javascript
+~~~js
 getCurrentPostComments ( postId )
 ~~~
 
@@ -30,4 +30,4 @@ getCurrentPostComments ( postId )
 
 Результат работы функции **getCurrentPostComments**:
 
-![](http://icecream.me/uploads/ecfe1bff8e5f39ddb2f24ab8504b531e.png)
+![](createPath("images",'practice-03.png'))

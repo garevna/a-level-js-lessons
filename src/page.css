@@ -1,0 +1,321 @@
+*:active, *:hover, *:focus {
+  outline: none;
+}
+
+hr {
+  margin: 32px 0;
+  height: 1px;
+  border-top: solid 1px #f50;
+  border-bottom: solid 1.2px #09b;
+  background: transparent;
+}
+
+.black {
+  background-color: #000;
+  color: #dde;
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-family: monospace, Roboto, Arial;
+  font-size: 13px;
+}
+
+::selection {
+    background-color: #09b;
+    color: white;
+}
+
+.bordered {
+  border: solid 1px #bbb;
+  padding: 2px 16px 2px 8px;
+  margin: 10px 0 -25px 2px;
+  box-shadow: 1px -1px 3px #00000050;
+  border-top-left-radius: 4px;
+  width: max-content;
+}
+
+@media screen and (max-width: 480px), screen and (max-height: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  h1 { font-size: 1.2rem; }
+  h2 { font-size: 1.0rem; }
+  h3 { font-size: 0.9rem; }
+  div { font-size: 0.8rem; }
+  popup-win { display: none; }
+}
+
+/* ======================================================= */
+
+main {
+    padding: 20px 30px 50px 50px;
+    box-sizing: border-box;
+    max-width:900px;
+    width: 100%;
+    margin-bottom:20px;
+}
+
+div {
+  text-align: justify;
+  line-height: 1.8rem;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+div:empty {
+  margin: 0;
+  padding: 0;
+}
+
+div > small {
+  line-height:0;
+}
+
+img, button, input {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+img {
+  max-width:90%;
+  margin: 10px;
+  padding: 10px;
+  border: inset 1px white;
+  box-shadow: 2px 2px 4px #00000080;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: -70px;
+  right: -70px;
+}
+
+a {
+    text-decoration: none;
+    color:#079;
+    font-style: italic;
+    font-weight: bold;
+}
+a:hover {
+    color: #f70;
+    text-decoration: #079 underline;
+}
+a > span {
+  vertical-align: middle;
+}
+
+h1, h2 {
+  color: #079;
+}
+h3, h4 {
+  color: #579;
+}
+
+a > span {
+  vertical-align: middle;
+}
+
+glitch-logo {
+    position: absolute;
+    top: 70px;
+    left: calc(100% - 150px);
+}
+
+@media screen and (max-width: 480px), screen and (max-height: 480px) {
+  .main-page { width: 100px; height: 100px; }
+}
+
+table {
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+td {
+  border: solid 1px #dde;
+  padding: 5px 10px;
+}
+td > div {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.slider-button {
+    background-color: transparent;
+    border: 0;
+    background-image: url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-5.gif);
+    padding: 40px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    outline:none;
+    transition: all 0.5s;
+}
+.slider-button:hover {
+    background-image: url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-2.gif);
+}
+
+.overshadow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    bottom:0;
+    right:50px;
+    transition: all 0.5s;
+    vertical-align: bottom;
+    background-image: var(--stars), radial-gradient(#ffffff00, #ffffff20 50%, #ffffff10 60%, #ffffff 70%), var(--icon);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center, center;
+    background-size: cover, cover, 40%;
+    background-blend-mode: overlay, hard-light, hard-light;
+}
+
+.overshadow__shadow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translate(0,30%) scale(0.0);
+    background-color: #fff;
+    background-image: url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fgarevna-9.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.overshadow:hover .overshadow__shadow {
+    opacity: 1;
+    transform: translate(0,-10%) scale(1);
+    box-shadow: 4px 4px 8px #00000090;
+}
+
+.overshadow__text:before {
+    position: absolute;
+    content: "© Irina H. Fylyppova";
+    font-family: "Montserrat", Arial;
+    line-height: 0;
+    color: #fff;
+    font-size: 10px;
+    bottom: 34%;
+    left: -20%;
+    transform: rotate(-90deg);
+    text-align: center;
+    width:max-content;
+    z-index: 10;
+}
+
+menu-component {
+    position: fixed;
+    top: 8px;
+    z-index: 500;
+    cursor:pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.close-button:before {
+  content: "";
+  background-size: contain;
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/no_entry_sign.png);
+  width:30px;
+  height:30px;
+}
+.close-button:hover:before {
+  background-blend-mode: difference;
+}
+
+button.link, button.cap {
+  padding: 10px 10px 10px 48px;
+  margin: 10px 0;
+  font-family: Mali, Montserrat, Arial;
+  font-size: 1rem;
+  white-space: nowrap;
+  border:0;
+  color: white;
+  box-shadow: 1px 1px 2px #00000070;
+  background-repeat: no-repeat;
+  background-position: 8px, center;
+}
+button.link {
+  background-image: var(--link-image), var(--button-gradient-0);
+  background-size: 40px, cover;
+}
+button.cap {
+  background-image: var(--cap-image), var(--button-gradient-0);
+  background-size: 30px, cover;
+}
+
+button.link:hover, button.cap:hover {
+  box-shadow: 0px 0px 2px #00000050;
+  text-shadow: 1px 1px 1px #005577de;
+}
+
+button.link:hover {
+  animation: button-link-hover 0.2s ease alternate 2;
+}
+button.cap:hover {
+  animation: button-cap-hover 0.2s ease alternate 2;
+}
+
+@keyframes button-link-hover {
+    0% { background-image: var(--link-image), var(--button-gradient-0); }
+   20% { background-image: var(--link-image), var(--button-gradient-1); }
+   40% { background-image: var(--link-image), var(--button-gradient-2); }
+   60% { background-image: var(--link-image), var(--button-gradient-3); }
+   80% { background-image: var(--link-image), var(--button-gradient-4); }
+  100% { background-image: var(--link-image), var(--button-gradient-5); }
+}
+
+@keyframes button-cap-hover {
+    0% { background-image: var(--cap-image), var(--button-gradient-0); }
+   20% { background-image: var(--cap-image), var(--button-gradient-1); }
+   40% { background-image: var(--cap-image), var(--button-gradient-2); }
+   60% { background-image: var(--cap-image), var(--button-gradient-3); }
+   80% { background-image: var(--cap-image), var(--button-gradient-4); }
+  100% { background-image: var(--cap-image), var(--button-gradient-5); }
+}
+
+
+/* ================= media rules =================== */
+
+@media screen and (max-width: 900px) {
+  main {
+    padding: 20px 20px 50px 30px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #079;
+  box-shadow: inset 0 0 1px #00000070;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f50;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fa0;
+}

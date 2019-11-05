@@ -8,13 +8,15 @@ _______________________________________
 ^^Свойство глобального объекта window^^
 ^^Объем 5Mb^^
 
-![](https://lh5.googleusercontent.com/SXRWoXR2DCrwVt9HlDSS9mHqzDN-OaALoHA2CaS47eTbuOt3hYAY4ZtE-TTsXChd8oHTJY_zcLnfYxyIe7S5b2-bqTP0Ew4ZY0pApXqlrQ6yPjWqUv50nLxyF598YiAHn6zZ52XSbw4LhFI)
+___________________________________
+
+![ico-25 google]
 
 ![](https://lh3.googleusercontent.com/PiqN6DSsKBOXC4M6ziRLdGzKX97HdnP071HwE5J-ooSgqOLK5MXqn118vTcPS-pSpeCqVvDtu-XNYyDrEhFwC5PDpaeBXuQi9o1t63CdNE4KJPTpmpTsuV5u_mbRUDBmsBDzRwYAQSKfTjY)
 
 ________________________________
 
-![](https://lh6.googleusercontent.com/PGj3ajCzD9Oe5oXyzOKj4zVLTHUGcMV5FzUJfgSjYXyhmAJEKsEPbq4z72kdb-NVXdBD98ufyoDl6JD_6Azzd_Nt2Xk0fIr4-K7Ns-gmt-TizO8M4O-kEkqvy9rtiCpcCnNWyvv7OaDMA9A)
+![ico-25 mozilla]
 
 ![](https://lh4.googleusercontent.com/iugMdt41GkC9IgOugs_E9vAkMsTGwx_WDI1jm_SHqMmllPKRPOD59Jgvt5Viff0vo_eV8_kRNXDfoWMDQrgUqV0CSr-2Gh1w9RybES4oEh6VUz3TBNNx7n5iVmow7zZHjpgDOXi44O-fw0A)
 
@@ -32,7 +34,7 @@ localStorage.setItem ( "circle", 100 )
 localStorage.setItem ( "color", "red" )
 ~~~
 
-В localStorage можно хранить только строки
+В ~localStorage~ можно хранить только строки
 Поэтому для сохранения объекта нужно превратить его в строку:
 
 ~~~js

@@ -143,12 +143,11 @@ ________________________________________________
 При этом в форме есть поля, не имеющие атрибута ~name~
 Они отображаются пользователю, однако их содержимое не будет включено в объект ~formData~
 
-
 ____________________________________________
 
 ## ![ico-25 icon] Методы
 
-### ![ico-20 icon] append()
+![ico-20 icon] append()
 
 Принимает два аргумента - имя ключа и его значение
 
@@ -162,20 +161,20 @@ formData.append ( "username", "garevna" )
 formData.append ( "token", "HgTY78-jdfhj91*/jskdfj" )
 ~~~
 
-### ![ico-20 icon] has()
+![ico-20 icon] has()
 
 ~~~js
 formData.has ( "token" )     // true
 ~~~
 
-### ![ico-20 icon] get()
+![ico-20 icon] get()
 
 ~~~js
 formData.get ( "username" )  // "garevna"
 formData.get ( "token" )     // "HgTY78-jdfhj91*/jskdfj"
 ~~~
 
-### ![ico-20 icon] getAll()
+![ico-20 icon] getAll()
 
 Возвращает массив всех значений, связанных с указанным в аргументе ключом
 
@@ -186,7 +185,7 @@ formData.append ( "pictures", "https://github.com/garevna/js-course/raw/master/i
 formData.getAll ( "pictures" )
 ~~~
 
-### ![ico-20 icon] set()
+![ico-20 icon] set()
 
 Аргументы: ключ, значение
 
@@ -197,14 +196,14 @@ formData.set ( "token", "gF&op*i91/54gkjHU" )
 formData.get ( "token" )  // "gF&op*i91/54gkjHU"
 ~~~
 
-### ![ico-20 icon] delete()
+![ico-20 icon] delete()
 
 ~~~js
 formData.delete ( "token" )
 formData.get ("token")    // null
 ~~~
 
-### ![ico-20 icon] keys()
+![ico-20 icon] keys()
 
 Возвращает объект-итератор ( будем изучать позже )
 
@@ -217,7 +216,7 @@ iterator.next()
 ...
 ~~~
 
-### ![ico-20 icon] entries()
+![ico-20 icon] entries()
 
 Возвращает объект-итератор ( будем изучать позже )
 
@@ -294,7 +293,7 @@ fileSelector.onchange = function ( event ) {
 
 **Посмотрим, что ответил сервер**
 
-![](src/images/lessons/formData-1.png)
+![](https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2FformData-1.png)
 
 
 Как мы видим, файл изображения был передан на сервер как строка закодированных двичных данных
@@ -351,3 +350,105 @@ request.send()
 ![](http://ptsv2.com/static/ToiletLogo.jpg)
 
 будет заменено на выбранное изображение
+
+______________________________________________________________________________
+
+## ![ico-25 icon] Endpoints для самостоятельной работы
+
+••https://garevna-form-data.glitch.me/forms/&lt;id>••
+
+### ![ico-20 icon] GET
+
+◘◘![ico-20 cap] 1◘◘
+
+~~~js
+fetch ( "https://garevna-form-data.glitch.me/forms/all" )
+    .then ( response => response.json() )
+        .then ( response => console.log ( response ) )
+~~~
+
+~~~console
+▼ {goblin: {…}, frodo: {…}, garevna: {…}, begemot: {…}, bomb: {…}, …}
+  ► begemot: {name: "Cat", age: "15", avatar: {…}}
+  ► bomb: {name: "Serafim", age: "27", avatar: {…}}
+  ► frodo: {name: "Frodo", age: "18", avatar: {…}}
+  ► garevna: {name: "Irina", age: "16", avatar: {…}}
+  ► goblin: {name: "Grig", age: "21", avatar: {…}}
+  ► safari: {name: "Grig", age: "25", avatar: {…}}
+  ► __proto__: Object
+~~~
+
+◘◘![ico-20 cap] 2◘◘
+
+~~~js
+function getFormData ( url ) {
+    fetch ( url ).then ( response => response.formData() )
+        .then ( formData => formData.forEach ( 
+            prop => console.log ( prop )
+        ))
+}
+
+getFormData ( "https://garevna-form-data.glitch.me/forms/frodo" )
+~~~
+
+~~~console
+Frodo
+18
+▼ File {name: "upload_d3a3179170b5ddaf0fee28e32799cc32.jpg", lastModified: 1572253559576, lastModifiedDate: Mon Oct 28 2019 11:05:59 GMT+0200 (Восточная Европа, стандартное время), webkitRelativePath: "", size: 15068, …}
+    lastModified: 1572253615903
+  ► lastModifiedDate: Mon Oct 28 2019 11:06:55 GMT+0200 (Восточная Европа, стандартное время) {}
+    name: "upload_d3a3179170b5ddaf0fee28e32799cc32.jpg"
+    size: 15068
+    type: "image/jpeg"
+    webkitRelativePath: ""
+  ► __proto__: File
+~~~
+
+________________________________________________________
+
+### ![ico-20 icon] POST | PUT | PATCH
+
+••https://garevna-form-data.glitch.me/form/&lt;id>••
+
+~~~html
+<form id="form">
+  <p>Name</p>
+  <input id="userName" name="name" placeholder="Name">
+  <p>Age</p>
+  <input type="number"
+         id="userAge" 
+         name="age"
+         placeholder="Age"
+  >
+  <p>Your Photo</p>
+  <input type="file" 
+         id="avatar" 
+         name="avatar" 
+  >
+  <img id="userPhoto" src="https://forexi.ru/wp-content/uploads/2019/02/teacher1.png" width="70">
+</form>
+
+<button id="submit">Submit</button>
+~~~
+
+Ввод логина прийдется сделать отдельно ![ico-20 smile]
+
+~~~js
+let login = "bandit";
+
+let formData = new FormData ( document.getElementById ( "form" ) );
+
+fetch ( `https://garevna-form-data.glitch.me/form/${login}`, {
+    method: "POST",
+    body: formData
+}).then ( response => console.log ( response.status ) );
+~~~
+
+^^Обратите внимание, что при отправке фетчем POST-запроса заголовок ~'Content-Type': "multipart/form-data"~ лучше не указывать^^
+^^Браузер сам добавит нужный заголовок и разделитель ( ~boundary~ )^^
+^^В противном случае на сервер приходит пустой объект^^
+
+________________________________________________________
+
+[:::Live Demo:::](https://garevna-form-data.glitch.me/)  
+[![ico-50 git] Live Demo](https://garevna.github.io/js-samples/#47)

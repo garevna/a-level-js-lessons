@@ -1,5 +1,6 @@
 # ![ico-30 study] Promise
 
+__________________________________________________________________________________________
 
 ## ![ico-25 icon] callback
 
@@ -30,9 +31,11 @@
 • браузер должен знать, что нужно делать, когда событие произойдет
 • для этого и нужны колбэки
 
-Функции являются колбэками, если они не вызываются из основного потока, а "возвращаются" из [**~Event Loop~**](event-loop)
+Функции являются колбэками, если они не вызываются из основного потока, а "возвращаются" из **~Event Loop~**
 
 ^^^
+
+__________________________________________________________________________________________
 
 ## ![ico-25 icon] Promise
 
@@ -44,19 +47,22 @@
 
 Промисы - это "коробки" для функций
 
-Их особенность в том, что функция внутри промиса исполняется синхронно, но вот результат ее работы возращается всегда асинхронно
+Их особенность в том, что функция внутри промиса исполняется синхронно, 
+но вот результат ее работы возращается всегда асинхронно
+
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] Конструктор Promise
 
 Создание экземпляра **~Promise~** - это банальный вызов конструктора
 
-~~~javascript
+~~~js
 const promise = new Promise ( ... )
 ~~~
 
 ![ico-20 warn] Конструктору передается функция - это обязательно
 
-~~~javascript
+~~~js
 const promise = new Promise (
     function ( ... ) {
         ...
@@ -66,7 +72,7 @@ const promise = new Promise (
 
 Если вызвать конструктор **~Promise~** без аргумента:
 
-~~~javascript
+~~~js
 const promise = new Promise ()
 ~~~
 
@@ -76,7 +82,7 @@ const promise = new Promise ()
 Uncaught TypeError: Promise resolver undefined is not a function
 ~~~
 
-_________________________
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] Функция-исполнитель
 
@@ -88,7 +94,7 @@ _________________________
 
 и если ей не передать колбэк-функции, и она нечего не будет вызывать ( ввиду отсутствия колбэков ), то ничего асинхронного не произойдет
 
-~~~javascript
+~~~js
 console.log ( "Start" )
 
 new Promise ( () => console.log ( "Promise starts" ) )
@@ -106,13 +112,13 @@ End
 
 То есть асинхронность будет тогда, когда появятся колбэки
 
-_________________
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] Колбэки
 
 Поэтому у функции-исполнителя предусмотрены два формальных параметра - колбэки
 
-~~~javascript
+~~~js
 const promise = new Promise (
     function ( resolve, reject ) {
         ...
@@ -130,7 +136,7 @@ const promise = new Promise (
 
 Рассмотрим простой пример без "обертки" ( промиса )
 
-~~~javascript
+~~~js
 console.log ( "Start" )
 
 const resolve = data => console.log ( data )
@@ -162,7 +168,7 @@ Finish
 
 Вопрос - как их передать ?
 
-_____________________
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] then | catch
 
@@ -176,7 +182,7 @@ _____________________
 
 Этим методам мы и передадим реальные колбэк-функции, которые будут использованы вместо формальных параметров **~resolve~** и **~reject~**
 
-~~~javascript
+~~~js
 new Promise (
     ( resolve, reject ) =>
         new Date().getSeconds() > 30 ?
@@ -189,13 +195,13 @@ new Promise (
     .catch ( err => console.warn ( err ) )
 ~~~
 
-_________________________________
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] Ожидание
 
 Давайте помотрим, что произойдет, если мы создадим экземпляр ~Promise~ значительно раньше, чем повесим колбэки с помощью методов **_~then~_** и **_~catch~_**
 
-~~~javascript
+~~~js
 var test = new Promise (
     resolve =>
         resolve ( `Time: ${new Date().getSeconds()}/` )
@@ -204,7 +210,7 @@ var test = new Promise (
 
 Выждав несколько секунд, выполним код:
 
-~~~javascript
+~~~js
 console.log ( "Start" )
 test
     .then ( data => console.log ( data, new Date().getSeconds() ) )
@@ -224,24 +230,24 @@ Time: 24/ 36
 
 Если мы повторим:
 
-~~~javascript
+~~~js
 test
     .then ( data => console.log ( data, new Date().getSeconds() ) )
 ~~~
 
 то мы увидим новое значение после слеша, и так можно "резвиться" до бесконечности ![ico-20 smile]
 
-_____________________________
+__________________________________________________________________________________________
 
-#### ![ico-25 cap] Пример 1
-
-Давайте умышленно используем обычные функции, у которых есть объект ~aguments~ и, соответственно, ~aguments.callee~
+Давайте умышленно используем обычные функции, у которых есть объект ~arguments~ и, соответственно, ~arguments.callee~
 
 Пусть все наши функции выводят в консоль свое имя
 
 Так мы сможем увидеть, как они вызываются и отрабатывают
 
-~~~javascript
+◘◘![ico-25 cap] Пример 1◘◘
+
+~~~js
 console.log ( "Start" )
 
 new Promise (
@@ -302,7 +308,7 @@ reject: Error: executor
 
 Однако колбэки отработали асинхронно
 
-______________________________________________
+__________________________________________________________________________________________
 
 ### ![ico-20 icon] Альтернатива catch
 
@@ -310,7 +316,7 @@ ______________________________________________
 
 Можно передать второй аргумент ( callback ) методу **~then~**
 
-~~~javascript
+~~~js
 console.log ( "Start" )
 
 new Promise (
@@ -331,11 +337,11 @@ console.log ( "End" )
 
 ____________________________
 
-#### ![ico-25 cap] Пример 2
-
 Добавим реальной асинхронности:
 
-~~~javascript
+◘◘![ico-25 cap] Пример 2◘◘
+
+~~~js
 function randomResult () {
     return new Promise (
         ( resolve, reject ) => setTimeout (
@@ -360,20 +366,20 @@ randomResult ()
 
 _____________________________________
 
-#### ![ico-25 cap] Пример 3
-
 Используем **Battery API**  для получения инфо о зарядке аккумулятора
 
 ( метод  **_getBattery()_**  объекта  **navigator** возвращает промис ):
 
-~~~javascript
+◘◘![ico-25 cap] Пример 3◘◘
+
+~~~js
 navigator.getBattery().then ( result => {
     for ( var x in result )
         console.log ( `${x}: ${result[x]}` )
 })
 ~~~
 
-___________________________________________________
+__________________________________________________________________________________________
 
 ## ![ico-25 icon] Promise.all
 
@@ -381,7 +387,7 @@ ___________________________________________________
 
 Этот метод принимает массив промисов, и возвращает массив ответов тогда, когда все промисы разрезолвятся
 
-~~~javascript
+~~~js
 var promises = [
     new Promise ( resolve => setTimeout ( () => resolve ( "Hello" ), 1000 ) ),
     new Promise ( resolve => setTimeout ( () => resolve ( "Bye" ), 3000 ) ),
@@ -393,7 +399,7 @@ Promise.all ( promises ).then ( response => document.body.innerHTML += `<p>${res
 
 Плохо то, что если какой-то промис в массиве разреджектится, то слетят все остальные...
 
-~~~javascript
+~~~js
 const executor = ( resolve, reject ) =>
     Math.random () > 0.5 ?
         resolve ( "success :)" ) :
@@ -415,18 +421,15 @@ Promise.all ( promises )
 
 ________________________________
 
-## ![ico-25 icon] Примеры 4-5-6
-
-| [![ico-25 cap] ** 4**](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [![ico-25 cap] ** 5**](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [![ico-25 cap] ** 6**](https://repl.it/@garevna/promise-sample-1) |
-
+| [:::** 4**:::](https://plnkr.co/edit/WpZrRvD1ScHbCN3eUfC8?p=preview) | [:::** 5**:::](https://plnkr.co/edit/BpFFu73mwsXDmZSdVOTn?p=preview) | [:::** 6**:::](https://repl.it/@garevna/promise-sample-1) |
 
 ____________________________
 
-### ![ico-25 cap] Пример 7
-
 Для понимания полезности промисов в нашей асинхронной жизни рассмотрим простенький пример
 
-~~~javascript
+◘◘![ico-25 cap] Пример 7◘◘
+
+~~~js
 console.log ( "hello" )
 
 new Promise (
@@ -444,11 +447,13 @@ console.log ( "wait for promise" )
 
 Это позволяет избежать блокирующих операций
 
-Если какой-то фрагмент кода содежит слишком "тяжеловесные" вычисления или операции, которые могут длиться достаточно долго, чтобы заблокировать основной поток - заверните такой код в промис, и он "уйдет" в [**`Event Loop`**](event-loop)
+Если какой-то фрагмент кода содежит слишком "тяжеловесные" вычисления или операции, 
+которые могут длиться достаточно долго, чтобы заблокировать основной поток - 
+заверните такой код в промис, и он "уйдет" в **~Event Loop~**
 
 Почти аналогичного результата можно достичь с помощью таймера с нулевой задержкой:
 
-~~~javascript
+~~~js
 console.log ( "start" )
 
 setTimeout ( () => console.log ( "Time is over" ), 0 )
@@ -462,7 +467,7 @@ console.log ( "Application finished" )
 
 В случае с таймером приложение завершит работу к тому моменту, когда колбэк таймера сработает
 
-~~~javascript
+~~~js
 console.log ( "Start" )
 
 setTimeout ( () => console.log ( "Timeout is over" ), 0 )
@@ -488,11 +493,11 @@ Timeout is over
 
 _________________________________________________________________
 
-### ![ico-25 cap] Пример 8
-
 Обратите внимание, в какой последовательности будут срабатывать колбэки промисов
 
-~~~javascript
+◘◘![ico-25 cap] Пример 8◘◘
+
+~~~js
 console.log ( "Диалог в чате" )
 
 new Promise ( resolve => resolve ( "Привет, тебя как зовут?" ) )
@@ -514,11 +519,11 @@ console.log ( "___________________" )
 
 _______________________________________________________________________
 
-### ![ico-25 cap] Пример 9
-
 Синхронизируем во времени выполнение трех функций ( последовательно, одна после другой )
 
-~~~javascript
+◘◘![ico-25 cap] Пример 9◘◘
+
+~~~js
 const promise = message => new Promise (
     resolve => setTimeout (
         () => resolve ( message ),
@@ -532,3 +537,55 @@ const third = () => promise ( "Third" )
 
 first().then ( () => second().then ( () => third() ) )
 ~~~
+
+______________________________________________________________
+
+◘◘![ico-25 cap] Пример 10◘◘
+
+~~~js
+Object.defineProperty ( Error.prototype, "code", {
+    get () { return Math.round ( Math.random() * 10 ) }
+})
+
+Error.prototype.errorNames = [
+            "RandomError",
+            "FatalError",
+            "Exorcism",
+            "FuckingError",
+            "Evil",
+            "XSS",
+            "GameError",
+            "UserError",
+            "BadError",
+            "GoodError"
+        ] 
+
+Object.defineProperty ( Error.prototype, "name", {
+    get () { return this.errorNames[ this.code ] }
+})
+
+const getRandomResult = () => new Promise (
+    ( resolve, reject ) => Math.random() > 0.5 ? 
+        resolve ( "I win" ) : reject ( new Error ( "There is no luck in my life..." ) )
+)
+
+async function testRandom () {
+    let result, error
+    result = await getRandomResult ()
+        .catch ( err => {
+            console.warn ( err.name, err.code, err.message )
+            let error = new Error ( err.message )
+            throw error
+        } )
+    return result
+}
+
+testRandom ().then (
+    result => console.log ( result ),
+    error => console.warn ( error.name, error.code, error.message )
+)
+~~~
+
+__________________________________________________________________________________________
+
+[%%%Тесты%%%](https://garevna.github.io/js-quiz/#promise)

@@ -53,11 +53,11 @@ ____________________
 
 Обработка событий элементов форм
 
-![ico-25 cap] **Пример 1**
-
 Вставьте на страницу элемент  **~ p ~**, установите его свойство  ~id = "_demo_"~
 
-~~~javascript
+◘◘![ico-25 cap] **Пример 1**◘◘
+
+~~~js
 var demo = document.createElement ( 'p' )
 demo.id = "demo"
 demo.style.fontSize = "16px"
@@ -73,7 +73,7 @@ ____________________________
 
 **inputValueChangedHandler**
 
-~~~javascript
+~~~js
 function inputValueChangedHandler ( event ) {
     var p = event.target.id + " value: " + event.target.value
     demo ? demo.innerHTML += p + "<br>" : console.log ( p )      
@@ -82,7 +82,7 @@ function inputValueChangedHandler ( event ) {
 
 **inputClickHandler**
 
-~~~javascript
+~~~js
 function inputClickHandler ( event ) {
     var p = event.target.id + " checked: " + event.target.checked
     demo ? demo.innerHTML += p + "<br>" : console.log ( p )
@@ -93,9 +93,9 @@ __________________________________
 
 ### ![ico-20 icon] text
 
-![ico-25 cap] **Пример 2**
+◘◘![ico-25 cap] **Пример 2**◘◘
 
-~~~javascript
+~~~js
 var inp = document.createElement ( 'input' )
 inp.type = "text"
 inp.id = "input text"
@@ -106,9 +106,9 @@ inp.onchange = inputValueChangedHandler
 
 ### ![ico-20 icon] color
 
-![ico-25 cap] **Пример 3**
+◘◘![ico-25 cap] **Пример 3**◘◘
 
-~~~javascript
+~~~js
 var clr = document.createElement ( 'input' )
 clr.type = "color"
 clr.id = "color picker"
@@ -135,9 +135,9 @@ _____________________________
 
 ### ![ico-20 icon] radio
 
-![ico-25 cap] **Пример 4**
+◘◘![ico-25 cap] **Пример 4**◘◘
 
-~~~javascript
+~~~js
 for ( var i = 0; i < 3; i++ ) {
     var radio = document.createElement ( 'input' )
     radio.type = "radio"
@@ -152,15 +152,15 @@ for ( var i = 0; i < 3; i++ ) {
 
 ________________________
 
-[![ico-25 cap] **Пример 5**](https://jsfiddle.net/npso86uy/2/)
+[:::Пример 5:::](https://jsfiddle.net/npso86uy/2/)
 
 __________________________________
 
 ### ![ico-20 icon] checkbox
 
-![ico-25 cap] **Пример 6**
+◘◘![ico-25 cap] **Пример 6**◘◘
 
-~~~javascript
+~~~js
 for ( var i = 0; i < 3; i++ ) {
     var chk = document.createElement ( 'input' )
     chk.type = "checkbox"
@@ -174,7 +174,7 @@ for ( var i = 0; i < 3; i++ ) {
 
 _____________________________
 
-[![ico-25 cap] **Пример 7**](https://jsfiddle.net/npso86uy/3/)
+[:::Пример 7:::](https://jsfiddle.net/npso86uy/3/)
 
 _____________________________
 
@@ -194,9 +194,9 @@ _____________________________
 • **~value~** - значение ~value~ выбранного ~option~
 • **~selectedIndex~** - порядковый номер выбранного ~option~
 
-![ico-25 cap] **Пример 8**
+◘◘![ico-25 cap] **Пример 8**◘◘
 
-~~~~js
+~~~js
 var members = [
     "...",
     "Алексеенко Валерия",
@@ -224,7 +224,7 @@ groupMembers.onchange = function ( ev ) {
 
 var text = document.createElement ( 'p' )
 document.body.appendChild ( text )
-~~~~
+~~~
 
 ___________________________
 

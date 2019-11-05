@@ -1,3 +1,36 @@
+:root {
+  /* --cap-image : url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/coffee.png); */
+  --cap-image : url(https://garevna.github.io/js-samples/icons/cap.png);
+  /* --link-image: url(https://garevna.github.io/js-samples/icons/link.png); */
+
+  --back-color: #ffffff90;
+  --menu-back-color: #fa0;
+  --submenu-back-color: #09b;
+  --back-transparent: #ffffff00;
+  --menu-color: #09b;
+  --submenu-color: #09b;
+  --menu-color-hover: #000;
+  --submenu-color-hover: #000;
+  --selected-lesson-color: #fff;
+  --header-back-color: linear-gradient(to right, #00000000, #00000050 30%, #000000 40%, #000 );
+  --header-back-image: url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fstars-5.gif);
+
+  /*--icon:       url(../src/images/cat.gif);*/
+  --icon:       url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fpersonage-to-right.gif);
+  --search:     url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/mag.png);
+  --link-image: url(https://garevna.github.io/js-samples/icons/link-ico.png);
+
+  --button-gradient-0: linear-gradient(to right, #09b, #09b, #09b);
+  --button-gradient-1: linear-gradient(to right top, #09b, #5bd 10% 30%, #09b);
+  --button-gradient-2: linear-gradient(to right top, #09b, #5bd 30% 50%, #09b);
+  --button-gradient-3: linear-gradient(to right top, #09b, #5bd 50% 70%, #09b);
+  --button-gradient-4: linear-gradient(to right top, #09b, #5bd 70% 90%, #09b);
+  --button-gradient-5: linear-gradient(to right top, #09b, #5bd 40% 50%, #09b);
+  --main-menu-item-height: 20px;
+  --main-font: 'Poppins', 'Montserrat', 'Roboto', Arial;
+  --funy-font: 'Luckiest Guy', 'Montserrat', 'Roboto', Arial;
+}
+
 body {
   margin: 20px calc(50% - 450px);
   font-family: "Poppins", Arial;
@@ -14,101 +47,84 @@ html {
 }
 
 hr {
-  margin: 30px 0;
+  margin: 32px 0;
   height: 1px;
   border-top: solid 1px #f50;
   border-bottom: solid 1.2px #09b;
   background: transparent;
 }
 
+/* ===============  main-menu-component  =============== */
+
 main-menu-component {
-  width: 100%;
-  box-sizing: border-box;
-  border: solid 10px #ffffff20;
-  height: 50px;
-  background: #ffffffe0;
-  box-shadow: 2px 2px 4px #00000090;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 55;
-  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/a-level.png);
-  background-repeat: no-repeat;
-  background-size: 100px;
-}
-
-main {
-    padding: 20px 30px 50px 50px;
-    box-sizing: border-box;
-    max-width:900px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom:20px;
+    height: 50px;
+    background: var(--header-back-image), var(--header-back-color);
+    background-size: 30%, 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-blend-mode: overlay;
+    box-shadow: 2px 2px 4px #00000090;
+    z-index: 55;
 }
 
-div {
-  text-align: justify;
-  line-height: 1.8rem;
-  max-width: 95%;
+main-menu-component:before {
+    content: "Client-side JS";
+    font-family: "Luckiest Guy";
+    color: #def;
+    display: block;
+    padding: 8px 16px;
+    font-size: 30px;
+    mix-blend-mode: difference;
+    -moz-letter-spacing: 2;
+    -webkit-letter-spacing: 2;
+    letter-spacing: 2;
 }
 
-div:empty {
-  margin: 0;
-  padding: 0;
+popup-win img {
+  border: 0;
+}
+popup-win h3 {
+  color: #dde;
 }
 
-div > small {
-  line-height:0;
+@media screen and (min-width: 1300px) {
+  main-menu-component:before {
+    padding-left: 16px;
+  }
 }
 
-img, button, input {
-  user-select: none;
+@media screen and (max-width: 1280px) {
+  main-menu-component:before {
+    padding-left: 20vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    margin: 0;
+  }
+  glitch-logo { display: none; }
+  popup-win { display: none; }
+
+  main-menu-component:before {
+    padding-left: 80px;
+  }
 }
 
-img {
-  max-width:90%;
-  margin: 10px;
-  padding: 10px;
-  border: inset 1px white;
-  box-shadow: 2px 2px 4px #00000080;
-  box-sizing: border-box;
-  vertical-align: middle;
+@media screen and (max-width: 480px), screen and (max-height: 480px) {
+    main-menu-component {
+      background: transparent;
+      box-shadow: none;
+    }
+    main-menu-component:before {
+      display: none;
+    }
 }
 
-button {
-  padding: 10px 20px;
-  margin-bottom: 24px;
-  cursor: pointer;
-}
 
-footer {
-  position: relative;
-  bottom: -70px;
-  right: -70px;
-}
-
-a {
-    text-decoration: none;
-    color:#079;
-    font-style: italic bold;
-}
-a:hover {
-    color: #f70;
-    text-decoration: #079 underline;
-}
-a > span {
-  vertical-align: middle;
-}
-
-h1, h2 {
-  color: #079;
-}
-h3, h4 {
-  color: #579;
-}
-
-a > span {
-  vertical-align: middle;
-}
+/* ===== glitch logo ===== */
 
 glitch-logo {
     position: absolute;
@@ -116,121 +132,32 @@ glitch-logo {
     left: calc(100% - 150px);
 }
 
-@media screen and (max-width: 480px) {
-  glitch-logo {
-    display:none;
-  }
-  .main-page { width: 100px; height: 100px; }
-}
-
-table {
-  margin-bottom: 20px;
-  border-collapse: collapse;
-}
-td {
-  border: solid 1px #dde;
-  padding: 5px 10px;
-}
-
-.slider-button {
-    background-color: transparent;
-    border: 0;
-    background-image: url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-5.gif);
-    padding: 40px;
-    background-size: 100%;
-    background-position: center center;
-    background-repeat:no-repeat;
-    outline:none;
-    transition: all 0.5s;
-}
-.slider-button:hover {
-    background-image: url(https://garevna.github.io/a-level-js-lessons/src/icons/slider-2.gif);
-}
-
-
-.overshadow {
-    position: absolute;
-    width: 200px;
-    height: 150px;
-    box-sizing: border-box;
-    bottom:0;
-    right:5%;
-    transition: all 0.5s;
-    vertical-align: bottom;
-    background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/a-level.png);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: contain;
-}
-
-.overshadow__shadow {
-    position: absolute;
-    top: -40px;
-    bottom: 40px;
-    left: 20%;
-    right: 10%;
-    border-right: solid 20px transparent;
-    opacity: 0;
-    transition: .5s ease;
-    transform: translate(0,30%) scale(0.0);
-    background-color: #fff;
-    background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/my-photo.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 70%;
-    overflow:hidden;
-    /* z-index:5; */
-}
-
-/* .overshadow:hover {
-    background-image: url();
-} */
-
-.overshadow:hover .overshadow__shadow {
-    opacity: 1;
-    transform: translate(0,-10%) scale(1);
-    box-shadow: 4px 4px 8px #00000090;
-}
-
-.overshadow__text:before {
-    position: absolute;
-    content: "© Irina H. Fylyppova";
-    font-family: "Montserrat", Arial;
-    line-height: 0;
-    color: #579;
-    font-size: 10px;
-    bottom: 50%;
-    right: -37%;
-    transform: rotate(-90deg);
-    text-align: center;
-    width:max-content;
-    z-index: 10;
-}
 
 menu-component {
-  cursor:pointer;
-}
-menu-component:hover {
-  color:white;
+    position: fixed;
+    top: 8px;
+    z-index: 500;
+    cursor:pointer;
 }
 
-/* ================= media rules =================== */
-
-@media screen and (max-width: 900px) {
-  body {
-    margin: 0;
-    border-right-width: 10px;
-  }
-  main {
-    padding: 20px 20px 50px 30px;
-  }
-  .overshadow {
-    width: 150px;
-    right: 40px;
-  }
-  .overshadow__text:before {
-    right: -30%;
-  }
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.close-button:before {
+  content: "";
+  background-size: contain;
+  background-image: url(https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/no_entry_sign.png);
+  width:30px;
+  height:30px;
+}
+.close-button:hover:before {
+  background-blend-mode: difference;
 }
 
 ::-webkit-scrollbar {

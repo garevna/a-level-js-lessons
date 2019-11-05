@@ -1,0 +1,20 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    justify-items: center;
+    align-items: stretch;
+    gap: 10px;
+}
+.grid > div {
+    display: block;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin:0;
+}
+.grid > div > a {
+    display: block;
+    width: inherit;
+    height: inherit;
+}

@@ -44,8 +44,7 @@ timer()
     <pre>
       <code data-language="js">
 var typeMessage = ( function ( velocity ) {
-    const container = document.getElementById ( "demo" ) ?
-        document.getElementById ( "demo" ) :
+    const container = demo ? demo :
         document.body.appendChild (
             document.createElement ( "h4" )
         )

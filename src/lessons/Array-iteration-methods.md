@@ -1,267 +1,12 @@
 # ![ico-30 study] Итерирующие методы массивов
 
-Выведя в консоль свойство **_~prototype~_** конструктора массивов, можно убедиться, что эти структуры данных наследуют много методов, и некоторые из них мы уже знаем
+_____________________________________________________
 
-^^^[Array.prototype]
+[%%%Принцип работы%%%](https://js-lessons.glitch.me/Array-iteration-methods-theory)
 
-~~~js
-▼ [constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
-  ► concat: ƒ concat()
-  ► constructor: ƒ Array()
-  ► copyWithin: ƒ copyWithin()
-  ► entries: ƒ entries()
-  ► every: ƒ every()
-  ► fill: ƒ fill()
-  ► filter: ƒ filter()
-  ► find: ƒ find()
-  ► findIndex: ƒ findIndex()
-  ► flat: ƒ flat()
-  ► flatMap: ƒ flatMap()
-  ► forEach: ƒ forEach()
-  ► includes: ƒ includes()
-  ► indexOf: ƒ indexOf()
-  ► join: ƒ join()
-  ► keys: ƒ keys()
-  ► lastIndexOf: ƒ lastIndexOf()
-    length: 0
-  ► map: ƒ map()
-  ► pop: ƒ pop()
-  ► push: ƒ push()
-  ► reduce: ƒ reduce()
-  ► reduceRight: ƒ reduceRight()
-  ► reverse: ƒ reverse()
-  ► shift: ƒ shift()
-  ► slice: ƒ slice()
-  ► some: ƒ some()
-  ► sort: ƒ sort()
-  ► splice: ƒ splice()
-  ► toLocaleString: ƒ toLocaleString()
-  ► toString: ƒ toString()
-  ► unshift: ƒ unshift()
-  ► values: ƒ values()
-  ► Symbol(Symbol.iterator): ƒ values()
-  ► Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}
-  ► __proto__: Object
-~~~
+_____________________________________________________
 
-^^^
-
-Часть методов, с которыми мы уже знакомы, выполняют какую-то операцию с массивом ( добавляют элемент в массив, удаляют или заменяют элементы в массиве, объединяют несколько массивов в один и т.д. )
-
-Итерирующие методы перебирают элементы массива один за другим строго в порядке возрастания их индексов ( за исключением ~reduceRight~ )
-
-В процессе перебора значений происходит вызов указанной нами функции, которая и получает очередной элемент массива в качестве аргумента
-
-^^^[Методы массивов]
-
-| ^^Обычные^^ | ^^Итерирующие^^ |
-| ~concat~ | ~entries~ |
-| ~copyWithin~ | ~every~ |
-| ~fill~ | ~filter~ |
-| ~flat~ ![ico-20 warn] | ~find~ |
-| ~includes~| ~findIndex~ |
-| ~indexOf~ | ~flatMap~ ![ico-20 warn] |
-| ~join~ | ~forEach~ |
-| ~lastIndexOf~ | ~keys~ |
-| ~pop~ | ~map~ |
-| ~push~| ~reduce~ |
-| ~reverse~ | ~reduceRight~ |
-| ~shift~ | ~some~ |
-| ~slice~ | ~sort~ |
-| ~splice~ | ~values~ |
-| ~unshift~ |  |
-
-^^^
-
-_Группа итерирующих методов массивов - пример реализации функциональной парадигмы в ООП_
-^^Точнее, mix двух парадигм программирования^^
-^^Mix - потому что мы передаем этим методам в аргументах не только функцию, но и ссылку на объект^^
-
-![ico-20 warn] Обязательный первый аргумент, передаваемый методу в момент вызова - функция
-
-![ico-20 warn] Функция-аргумент метода будет вызвана на каждой итерации ( для каждого элемента массива )
-
-У этой функции три формальных параметра: первый - обязательный, два других - опциональные
-
-![ico-20 warn] Обязательный формальный параметр функции - текущее значение элемента массива
-
-~~~js
-function func ( arrayElement ) {
-    console.log ( arrayElement )
-}
-
-[ 7, "D", false ]
-    .forEach ( func )
-~~~
-
-___________
-
-Кроме обязательного первого аргумента - ссылки на функцию  
-каждый метод имеет необязательный ( опциональный ) второй аргумент - ссылку на контекст вызова
-
-( т.е. внутри метода ~this~ будет указывать на этот объект )
-
-______________________________
-
-### ![ico-25 icon] Принцип работы
-
-![ico-25 cap] ** 1**
-
-~~~js
-var arr = [ "google", "service", "user" ]
-
-function test ( elem ) {
-    console.log ( elem )
-}
-
-Array.prototype.sampleMethod = function ( callback ) {
-    for ( var item of this )
-        callback ( item )
-}
-
-arr.sampleMethod ( test )
-~~~
-
-Собственно, эти методы не изменяют исходный массив, поэтому алгоритм их работы скорее можно представить так:
-
-~~~~js
-var arr = [ "google", "service", "user", 0, false ]
-
-function test ( elem ) {
-    return `${ typeof elem === "string" ? elem : "default" }`
-}
-
-Array.prototype.sampleMethod = function ( callback ) {
-    var res = []
-    for ( var item of this ) {
-        res.push ( callback ( item ) )
-    }
-    return res
-}
-
-arr.sampleMethod ( test )
-~~~~
-
-Функция, передаваемая методу, может иметь больше формальных параметров,
-но остальные два являются опциональными ( необязательными )
-
-второй параметр - идекс текущего элемента массива
-
-~~~~js
-var arr = [ "google", "service", "user" ]
-
-function test ( elem, index ) {
-    return `${index}: ${elem}`
-}
-
-Array.prototype.sampleMethod = function ( callback ) {
-    var res = []
-    for ( var item of this )
-        res.push (
-            callback (
-                item,
-                this.indexOf ( item )
-            )
-        )
-    return res
-}
-
-console.log ( arr.sampleMethod ( test ) )
-~~~~
-
-________________________
-
-третий параметр - ссылка на итерируемый массив
-
-~~~~js
-var arr = [ "google", "service", "user", 0, false ]
-
-function test ( elem, index, ref ) {
-    var tmp = typeof elem === "string" ?
-        ref.splice ( index, 1, true )[0] :
-        null
-    return ref [ index ]
-}
-
-Array.prototype.sampleMethod = function ( callback ) {
-    var res = []
-    for ( var item of this ) {
-        res.push (
-            callback (
-                item,
-                this.indexOf ( item ),
-                this
-            )
-        )
-    }
-    return res
-}
-
-arr.sampleMethod ( test )
-~~~~
-
-Функция, передаваемая методу в качестве первого аргумента, может быть анонимной, объявленной непосредственно в вызове метода
-
-~~~~js
-var  numbers = [ 8, 4, 9, 7 ]
-
-Array.prototype.sampleMethod = function ( callback ) {
-    var res = []
-    for ( var item of this ) {
-        res.push (
-            callback (
-                item,
-                this.indexOf ( item ),
-                this
-            )
-        )
-    }
-    return res
-}
-
-numbers.sampleMethod (
-    function ( item, index, arr ) {
-        console.log ( index, arr.indexOf( item ) === index )
-        console.log ( index, arr [ index ] === item )
-    }
-)
-~~~~
-
-![ico-20 icon] **Передача контекста**
-
-~~~~js
-var numbers = [ 8, 4, 9, 7 ]
-var alter = [ "google", 5, "figure", 11 ]
-
-Array.prototype.sampleMethod = function ( callback, context ) {
-    var res = []
-    for ( var item of this ) {
-        res.push (
-            callback.call (
-                context,
-                item,
-                this.indexOf ( item ),
-                this
-            )
-        )
-    }
-    return res
-}
-
-var sample = numbers.sampleMethod (
-    function ( item, index, arr ) {
-        console.log ( this [ index ] )
-        console.log ( arr )
-    },
-    alter
-)
-~~~~
-
-^^Функция **sample** получает в переменной **_arr_** ссылку на исходный массив **numbers**, а **_~this~_** внутри функции **sample** указывает на массив **alter**^^
-
-____________________________
-
-### ![ico-25 icon]  forEach()
+### ![ico-25 icon] forEach()
 
 ![ico-20 warn] Этот метод не возвращает никакого значения
 Он просто вызывает переданную ему функцию с каждым элементом массива
@@ -273,11 +18,11 @@ ____________________________
 
 ____________
 
-![ico-25 cap] ** 1**
-
 ^^Рассмотрим самый простой вариант использования метода **~forEach()~**^^
 
-~~~jas
+◘◘![ico-20 cap] **forEach ( 1 )**◘◘
+
+~~~js
 var  people = [ "Ivan", "Mary", "Elena", "Andrey" ]
 
 people.forEach (
@@ -309,18 +54,18 @@ people.forEach ( x => console.log ( x ) )
 
 Результат работы предыдущего кода будет идентичен результату работы обычного оператора ~for ... of~:
 
-~~~javascript
+~~~js
 for ( var x of people ) console.log ( x )
 ~~~
 
 __________________________________________
 
-![ico-25 cap] ** 2**
-
 ^^Для чего могут понадобиться второй и третий аргументы анонимной функции:^^
 
 ^^предположим, нам нужно произвести вычисления с участием индекса элемента массива^^
 ^^при этом мы хотим добавить результаты вычислений в исходный массив ( изменить его )^^
+
+◘◘![ico-25 cap] **forEach ( 2 )**◘◘
 
 ~~~js
 var  numbers = [ 8, 4, 9, 7 ], res = []
@@ -332,7 +77,7 @@ console.log ( numbers ) // [ 8, 4, 9, 7, 0, 4, 18, 21 ]
 
 ^^или мы хотим удвоить все значения элементов масива:^^
 
-~~~javascript
+~~~js
 var  numbers = [ 8, 4, 9, 7 ]
 
 numbers.forEach ( ( numb, ind, res ) => res [ ind ] = numb * 2 )
@@ -361,6 +106,9 @@ _________________________________________________
 Метод  **~forEach~**  может принимать дополнительный аргумент - ссылку на контект вызова
 ![ico-20 warn] Однако при этом функция, передаваемая методу в качестве аргумента, не должна быть стрелочной
 
+
+◘◘![ico-25 cap] **forEach ( 3 )**◘◘
+
 ~~~js
 let intervals = [ [ 1, 8 ], [ 2, 3 ], [ 4, 7 ], [ 5, 6 ] ]
 
@@ -373,7 +121,7 @@ intervals.forEach (
 ^^В результате выполнения этого кода в консоли будет массив **~intervals~**^^
 ^^Фактически передача методу второго аргумента равносильна биндингу контекста:^^
 
-~~~javascript
+~~~js
 intervals.forEach (
     function ( interval ) { console.log ( this ) }
         .bind( intervals )
@@ -397,7 +145,7 @@ intervals.forEach (
 
 _____________________
 
-^^^[Пример 3]
+^^^[forEach (  4 )]
 
 ^^Предположим, мы хотим передавать ссылку на массив **~res~**, куда следует помещать результаты вычислений:^^
 
@@ -449,7 +197,7 @@ createNewArray ( numbers, res )
 
 ^^Теперь функция  **~createNewArray~**  может быть применена к различным массивам:^^
 
-~~~javascript
+~~~js
 var bug = [ 10, 1, 3, 8 ]
 var fug = []
 
@@ -460,7 +208,7 @@ createNewArray ( bug, fug )
 
 ____________________
 
-^^^[Тест]
+^^^[Тест ( forEach )]
 
 ^^Разберитесь самостоятельно, что делает следующий код:^^
 
@@ -486,7 +234,7 @@ ______________________
 
 Значение, возвращаемое функцией на каждой итерации, будет помещаться в результирующий массив
 
-![ico-25 cap]
+◘◘![ico-20 cap] **map ( 1 )**◘◘
 
 ~~~js
 var first = [ 8, 4, 9, 7 ]
@@ -500,7 +248,7 @@ console.log ( res )
 
 Так же, как и в методе **~forEach()~**,  в  методе  **~map()~**  передаваемая методу в качестве аргумента  функция может принимать три аргумента
 
-~~~javascript
+~~~js
 function ( currentValue, index, arr ) {
     console.log ( arr )
     return  currentValue * index
@@ -512,6 +260,140 @@ function ( currentValue, index, arr ) {
 ![ico-20 green-ok] Аргумент  **arr**  будет содержать ссылку на исходный массив, к которому применяется метод
 ![ico-20 green-ok] Аргумент  **index**  - это счетчик итераций, или индекс текущего элемента итерируемого массива
 
+______________________________________________
+
+Перейдите по [![ico-20 link] **_ссылке_**](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
+
+В консоли новой вкладки выполните код:
+
+◘◘![ico-20 cap] **map ( 2 )**◘◘
+
+~~~js
+location.search
+  .slice(1).split(',')
+    .map ( x => {
+        return { [ x.split( '=' )[0] ] : x.split( '=' )[1] }
+    })
+~~~
+
+У вас должен получиться результат:
+
+~~~console
+▼ (2) [{…}, {…}]
+  ► 0: {name: "garevna"}
+  ► 1: {date: "10.07.2018"}
+    length: 2
+  ► __proto__: Array(0)
+~~~
+
+______________________________________________
+
+Перейдите по [![ico-20 link] **_ссылке_**](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
+
+Теперь в консоли новой вкладки объявите функцию:
+
+◘◘![ico-20 cap] **map ( 3 )**◘◘
+
+~~~js
+function getSearchObject () {
+  var obj = {}
+  location.search.slice(1).split( ',' )
+    .map ( x => x.split( '=' ) )
+      .map ( function ( item ) {
+          this[ item [0] ] = item [1]
+      }, obj )
+  return obj
+}
+~~~
+
+Вызовите функцию  **getSearchObject()**
+
+У вас должен получиться результат:
+
+~~~console
+▼ {name: "garevna", date: "10.07.2018"}
+    date: "10.07.2018"
+    name: "garevna"
+  ► __proto__: Object
+~~~
+
+______________________________________________
+
+◘◘![ico-20 cap] **map ( 4 )**◘◘
+
+~~~js
+[ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ].map (
+    ( item, index ) => window [ item ] = function ( func ) {
+        return func && typeof func === "function" ? func ( index ) : index
+    } 
+);
+
+
+[ "plus", "minus", "divide", "multiply" ].map (
+    ( item, index ) => window[ item ] = function () {
+        let operations = [ "+", "-", "/", "*" ]
+        return arguments.length === 2 ? 
+            eval ( `arguments[0] ${ operations [ index ] } arguments[1]` ) : 
+            window[ item ].bind ( null, arguments[0] )
+    }
+)
+~~~
+
+В этом примере мы создаем с помощью метода **map** массив функций с именами 
+"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+
+Каждая из этих функций проверяет тип переданного ей аргумента **_func_**,
+и если это ~function~, то вызывает **_func_**, 
+передавая ей в качестве аргумента свой порядковый номер ( 0, 1, 2 ... ),
+в противном случае возвращает число - свой порядковый номер ( 0, 1, 2 ... )
+
+~~~js
+zero ( Math.sin )  // 0
+zero ( Math.cos )  // 1
+
+four ( Math.sqrt ) // 2
+nine ( Math.sqrt ) // 3
+
+nine ()  // 9
+~~~
+
+Далее мы создаем еще один массив функций с именами "plus", "minus", "divide", "multiply"
+Каждая из этих функций имеет два формальных параметра,
+поэтому первым делом она проверяет длину объекта arguments,
+и если длина равна 2, то выполняет соответствующую операцию с аргументами 
+( складывает, вычитает, умножает, делит ),
+
+~~~js
+minus ( 7, 2 )    // 5
+
+divide ( 9, 3 )   // 3
+
+multiply ( 5, 3 ) // 15
+~~~
+
+в протичном случае возвращает каррированную функцию,
+у которой первый аргумент уже "прошит",
+и которую можно вызывать с одним ( недостающим вторым ) аргументом
+
+~~~js
+multiply ( 5 ) ( 3 )  // 15
+
+divide ( 9 ) ( 3 )
+~~~
+
+Теперь мы можем использовать первую группу функций в сочетании с функциями второй группы:
+
+~~~js
+seven ( plus ( two () ) )        // 9
+
+five ( minus ( nine () ) )       // 4
+
+three ( multiply ( eight () ) )  // 24
+~~~
+
+Заметим, что здесь не обязательно использовать метод **map**,
+тот же результат мы получим с использованием метода **forEach**
+
 __________________________
 
 ### ![ico-25 icon] filter()
@@ -520,7 +402,9 @@ __________________________
 Метод возвращает новый массив
 В результирующий массив попадут только те элементы, которые удовлетворяют условию фильтрации
 
-~~~~js
+◘◘![ico-20 cap] **filter**◘◘
+
+~~~js
 var sourceArray = [
     {  name: "Николай Василенко",  country:  "Украина" },
     {  name: "Дюк Шейн",  country:  "США" },
@@ -534,11 +418,20 @@ var sourceArray = [
 var usa = sourceArray.filter ( x => x.country === "США" )
 
 console.log ( usa )
-~~~~
 
-**Результат в консоли:**
+~~~
 
-![](https://lh4.googleusercontent.com/dPJ7fo_MpTFLila8yzWxmVCTxW6QRyd44lWhg_fGoAGeg1JTCj4Ni-zfy63rKdodIK017yyAqgSrDeao_QZW4vhCY44EjO7ltOGjoGU0BaR3QlRXv6VmByUKw_HyE4SilpWEaAouNcOPwrs)
+◘◘**Результат**◘◘
+
+~~~console
+
+▼ (3) [{…}, {…}, {…}]
+  ► 0: {name: "Дюк Шейн", country: "США"}
+  ► 1: {name: "Маргарет Джонсон", country: "США"}
+  ► 2: {name: "Роберт Трамп", country: "США"}
+    length: 3
+  ► __proto__: Array(0)
+~~~
 
 _________________________________
 
@@ -547,6 +440,8 @@ _________________________________
 Метод ищет в массиве и возвращает первый найденный элемент, удовлетворяющий заданному условию
 
 Если такого элемента в массиве нет, возвращает ~undefined~
+
+◘◘![ico-20 cap] **find ( 1 )**◘◘
 
 ~~~js
 var cards = [
@@ -561,11 +456,38 @@ cards.find ( card => card.cash > 4000 )
 
 ^^Этот код вернет объект^^
 
-~~~js
+◘◘**Результат**◘◘
+
+~~~console
+
 ▼ { num: "457811714", cash: 5000 }
     cash: 5000
     num: "457811714"
   ► __proto__: Object
+  
+~~~
+
+___________________________
+
+Попробуйте самостоятельно разобраться, что будет в переменной **transactionMode** в результате выполнения следующего кода:
+
+◘◘![ico-20 cap] **find ( 2 )**◘◘
+
+~~~js
+let transactionMode = ( operation => {
+    let operations = {
+        readwrite: [ "add", "put", "delete", "clear" ],
+        readonly: [ "get", "getAll", "getKey", "getAllKeys" ]
+    }
+    for ( let mode in operations ) {
+        let res = operations[ mode ].find (
+            item => item === operation
+        )
+        if ( res ) return mode
+    }
+    return null
+
+})( "delete" )
 ~~~
 
 _________________________
@@ -577,7 +499,9 @@ _________________________
 
 Если такого элемента в массиве не обнаружено, возвращает **-1**
 
-~~~javascript
+◘◘![ico-20 cap] **findIndex**◘◘
+
+~~~js
 var cards = [
     { num: "457892425", cash: 1100 },
     { num: "457812840", cash: 3000 },
@@ -605,7 +529,9 @@ _______________________
 
 Если функция вернет ~true~ для всех элементов массива, метод вернет ~true~
 
-~~~~js
+◘◘![ico-20 cap] **every**◘◘
+
+~~~js
 var people = [
     {  name: "Николай Василенко",  country:  "Украина" },
     {  name: "Дюк Шейн",  country:  "США" },
@@ -619,7 +545,7 @@ var people = [
 var res = people.every ( x => x.country === "Украина" )
 
 console.log ( res )
-~~~~
+~~~
 
 ^^В этом примере массив  **people**  проверяется на наличие в нем жителей не Украины^^
 ^^Переменная  **res**  будет иметь значение ~false~, поскольку в массиве есть элементы, не удовлетворяющие заданному условию^^
@@ -639,7 +565,9 @@ ______________________________________________
 
 Если функция вернет ~false~ для всех элементов массива, метод вернет ~false~
 
-~~~~js
+◘◘![ico-20 cap] **some**◘◘
+
+~~~js
 var people = [
     {  name: "Николай Василенко",  country:  "Украина" },
     {  name: "Дюк Шейн",  country:  "США" },
@@ -653,11 +581,10 @@ var people = [
 var res = people.some ( x => x.country === "Пакистан" )
 
 console.log ( res )
-~~~~
+~~~
 
-В этом примере массив  **people**  проверяется на наличие в нем жителей Пакистана
-
-Переменная  **res**  будет иметь значение `false`, поскольку таких "персонажей" в массиве нет
+^^В этом примере массив  **people**  проверяется на наличие в нем жителей Пакистана^^
+^^Переменная  **res**  будет иметь значение `false`, поскольку таких "персонажей" в массиве нет^^
 
 ____________________________
 
@@ -666,15 +593,220 @@ ____________________________
 Сводит массив к новому результату
 
 Этот метод получает два аргумента:
-    обязательный первый аргумент - функция, которая будет вызвана для каждого элемента массива
-    опциональный второй аргумент - стартовое значение переменной-аккумулятора
+  • обязательный первый аргумент - функция, которая будет вызвана для каждого элемента массива
+  • опциональный второй аргумент - стартовое значение переменной-аккумулятора
 
-Функция, которая передается методу в качестве первого ( обязательного ) аргумента, имеет два формальных параметра:
+Функция, которая передается методу в качестве первого ( обязательного ) аргумента, имеет два обязательных формальных параметра:
 
-• первый: имя переменной-аккумулятора, а которой будет накапливаться результат работы метода
+• первый: имя переменной-аккумулятора, в которой будет накапливаться результат работы метода
 • второй: текущий элемент массива
 
-Для примера создадим массив банковских карт:
+![ico-20 warn] Если стартовое значение аккумулятора не установлено, 
+в качестве стартового значения аккумулятора будет использовано значение первого элемента массива, 
+и на каждой итерации второй аргумент будет следующим элементом массива
+
+◘◘![ico-20 cap] **reduce ( 1 )**◘◘
+
+~~~js
+[1, 2, 3, 4, 5].reduce( ( accumulator, item ) => {
+    document.body.innerHTML += `<p>${accumulator} : ${item}</p>`
+    return accumulator += item
+})
+~~~
+
+{{{Array-iteration-methods-reduce-1.js}}}
+
+___________________
+
+
+Метод может возвращать данные любого типа, например, объект:
+
+◘◘![ico-20 cap] **reduce ( 2 )**◘◘
+
+~~~js
+[ "first", "second", "third", "fourth" ]
+    .reduce( ( res, item, index ) => {
+        res[ item ] = index + 1
+        return res
+    },
+    {}
+)
+~~~
+
+{{{Array-iteration-methods-reduce-2.js}}}
+
+
+или массив:
+
+◘◘![ico-20 cap] **reduce ( 3 )**◘◘
+
+~~~js
+console.log (
+  [ "first", "second", "third", "fourth" ]
+    .reduce( ( res, item, index, arr ) => {
+        res[ index ] = arr[ arr.length - index - 1 ]
+        return res
+    },
+    []
+  )
+)
+~~~
+
+{{{Array-iteration-methods-reduce-3.js}}}
+
+_____________________________
+
+Функция, передаваемая методу **reduce** в качестве первого обязательного аргумента, 
+как и в случае других итерирующих методов, может принимать дополнительные аргументы -
+индекс текущего элемента массива и ссылку на сам исходный массив
+Благодаря ссылке, мы можем манипулировать исходным массивом, что делает его мутабельным
+Посмотрим, что будет происходить, если в процессе итерирования массива мы будем изменять его длину:
+
+◘◘![ico-20 cap] **reduce ( 4 )**◘◘
+
+~~~js
+console.log (
+    [ "first", "second", "third", "fourth" ].reduce(
+        ( res, item, index, arr ) => {
+            res.push ( arr.pop() )
+            return res
+        },
+        []
+    )
+)
+~~~
+
+{{{Array-iteration-methods-reduce-4.js}}}
+
+◘◘![ico-20 cap] **reduce ( 5 )**◘◘
+
+~~~js
+console.log (
+    [ "first", "second", "third", "fourth" ].reduce(
+        ( res, item, index, arr ) => {
+            res.push ( arr.shift () )
+            return res
+        },
+        []
+    )
+)
+~~~
+
+{{{Array-iteration-methods-reduce-5.js}}}
+
+_____________________________________
+
+Проследим, как будет работать метод **reduce**, если передать ему первым аргументом **Math.sqrt**
+Библиотечная функция **Math.sqrt** принимает всего 1 аргумент ( число ), и возвращает квадратный корень из полученного числа
+Если мы не передаем методу **reduce** стартовое значение аккумулятора, он будет использовать значение первого элемента массива
+На каждой итерации это значение будет заменяться его квадратным корнем
+Остальные элементы массива в вычислениях участвовать не будут, поскольку **Math.sqrt** принимает всего 1 аргумент, и это будет текущее значение переменной-аккумулятора
+Итераций будет столько, сколько элементов в массиве
+Таким образом, результатом работы метода **reduce** будет квадратный корень из квадратного корня... и т.д. первого элемента исходного массива
+
+
+◘◘![ico-20 cap] **reduce ( 6 )**◘◘
+
+~~~js
+console.log ( [ 625, 5, 10 ].reduce( Math.sqrt ) )
+console.log ( [ 625, 8, 3 ].reduce( Math.sqrt ) )
+console.log ( [ 625, 4 ].reduce( Math.sqrt ) )
+console.log ( [ 81, 7, 5 ].reduce( Math.sqrt ) )
+console.log ( [ 81, 0, 0 ].reduce( Math.sqrt ) )
+~~~
+
+{{{Array-iteration-methods-reduce-7.js}}}
+
+Первый и второй вариант - из числа 625 дважды извлечен квадратный корень:
+••625 -> 25 -> 5••
+^^Значения второго и третьего элементов массива не влияют на результат, поскольку не участвуют в вычислениях^^
+Третий вариант - квадратный корень будет извлечен всего один раз
+••625 -> 25••
+В четвертом и пятом вариантах из числа 81 будет дважды извлечен квадратный корень:
+••81 -> 9 -> 3••
+^^Значения второго и третьего элементов массива опять-таки не влияют на результат, поскольку не участвуют в вычислениях^^
+
+_______________________________
+
+Теперь будем передавать методу **reduce** первым аргументом библиотечную функцию **Math.pow** 
+( возведение в степень )
+Эта функция принимает два аргумента: число, которое нужно возвести в степень, и значение степени числа
+
+◘◘![ico-20 cap] **reduce ( 7 )**◘◘
+
+~~~js
+console.log ( [ 3, 2, 2 ].reduce( Math.pow ) )
+
+// 81
+
+console.log ( Math.pow ( Math.pow ( 3, 2 ), 2 ) )
+
+// 81
+
+console.log ( [ 2, 3, 3 ].reduce( Math.pow ) )
+
+// 512
+
+console.log ( Math.pow ( Math.pow ( 2, 3 ), 3 ) )
+
+// 512
+
+console.log ( [ 2, 3, 4 ].reduce( Math.pow, 2 ) )
+
+// 16777216
+
+Math.pow ( Math.pow ( Math.pow ( 2, 2 ), 3 ), 4 ) 
+
+// 16777216
+~~~
+
+Если мы не передаем стартовое значение аккумулятора вторым аргументом метода **reduce**, то в этом качестве будет использовано значение первого элемента массива 
+Остальные элементы массива будут значениями степени, в которую нужно возвести текущее значение аккумулятора
+
+Если же мы передаем стартовое значение аккумулятора, то все элементы массива будут рассматриваться как степень, в которую нужно возвести текущее значение аккумулятора
+На каждой итерации значение аккумулятора будет уже результатом операции возведения в степень предыдущей итерации
+
+![ico-25 hw] Тесты
+
+Что вернут следующие выражения:
+
+◘◘** 1**◘◘
+
+~~~js
+[].reduce( Math.pow )
+~~~
+
+◘◘** 2**◘◘
+
+~~~js
+[].reduce( Math.sqrt, "Google" )
+~~~
+
+◘◘** 3**◘◘
+
+~~~js
+[1].reduce( Math.sqrt, "Google" )
+~~~
+
+◘◘** 4**◘◘
+
+~~~js
+[ -10, -20, 5 ].reduce( Math.abs )
+~~~
+
+◘◘** 5**◘◘
+
+~~~js
+[ -10, -20, 5 ].reduce( Math.abs )
+~~~
+
+Объясните, почему
+
+_________________________________
+
+Создадим массив банковских карт, и с помощью метода **reduce** посчитаем сумму средств на всех картах:
+
+◘◘![ico-25 cap] **reduce ( 8 )**◘◘
 
 ~~~js
 var cards = [
@@ -683,26 +815,19 @@ var cards = [
     { num: "457855780", cash: 1200 },
     { num: "457811714", cash: 5000 }
 ]
-~~~
 
-______________________________________________________
-
-![ico-25 cap] ** 1**
-
-Посчитаем сумму средств на всех картах:
-
-~~~js
 cards.reduce ( ( result, card ) => result + card.cash, 0 )
+
 // 10300
 ~~~
 
 ___________________________________________________
 
-![ico-25 cap] ** 2**
-
 Создадим новую карту, на которую аккумулируем остатки на счетах все карт:
 
-~~~javascript
+◘◘![ico-25 cap] **reduce ( 8.1 )**◘◘
+
+~~~js
 cards.reduce (
     function ( result, card ) {
         return {
@@ -717,20 +842,22 @@ cards.reduce (
 )
 ~~~
 
-**Результат:**
+◘◘**Результат**◘◘
 
 ~~~console
+
 ▼ { num: "457855155", cash: 10300 }
     cash: 10300
     num: "457855155"
   ► __proto__: Object
+  
 ~~~
 
 _________________________________________________
 
-![ico-25 cap] ** 3**
-
 Для чистоты результата дополнительно обнулим остатки на счетах других карт:
+
+◘◘![ico-25 cap] **reduce ( 8.2 )**◘◘
 
 ~~~js
 cards.reduce (
@@ -751,7 +878,10 @@ cards.reduce (
 
 **Теперь исходный массив карт будет:**
 
+◘◘**Результат**◘◘
+
 ~~~console
+
 ▼ (4) [{…}, {…}, {…}, {…}]
   ► 0: {num: "457892425", cash: 0}
   ► 1: {num: "457812840", cash: 0}
@@ -759,15 +889,16 @@ cards.reduce (
   ► 3: {num: "457811714", cash: 0}
     length: 4
   ► __proto__: Array(0)
+  
 ~~~
 
 __________________________________________
 
-![ico-25 cap] ** 4**
-
 Удалим дублирующиеся элементы массива:
 
-~~~~js
+◘◘![ico-25 cap] **reduce ( 8.3 )**◘◘
+
+~~~js
 var arr = [
     "google",
     "mozilla",
@@ -789,22 +920,24 @@ arr.reduce (
     },
     []
 )
-~~~~
+~~~
 
-**Результат:**
+◘◘**Результат**◘◘
 
-~~~~console
+~~~console
+
 ▼ (3) ["google", "mozilla", "ie"]
     0: "google"
     1: "mozilla"
     2: "ie"
     length: 3
   ► __proto__: Array(0)
-~~~~
+  
+~~~
 
 _________________________________________________
 
-![ico-25 cap] ** 5**
+![ico-25 cap] **reduce ( 9 )**
 
 Задача посложнее:
 
@@ -827,7 +960,7 @@ let segments = [ [ 1, 8 ], [ 2, 3 ], [ 4, 7 ], [ 5, 6 ] ]
 
 Каркас функции:
 
-~~~javascript
+~~~js
 function countInnerIntervals ( intervals ) {
     let results = []
     intervals.forEach (
@@ -912,7 +1045,7 @@ array.filter (
 
 Нам осталось только получить длину массива:
 
-~~~javascript
+~~~js
 array.filter (
     item => item [0] > segment[0] && item [1] < segment[1]
 ).length
@@ -1015,13 +1148,16 @@ __________________________
 _Функция получает два аргумента для попарного сравнения_
 
 Функция возвращает одно из трех значений:
-•  0 - совпадение элементов
-•  1 - первый аргумент больше второго
-• -1 - второй аргумент больше первого
+
+|  0 | совпадение элементов           |
+|  1 | первый аргумент больше второго |
+| -1 | второй аргумент больше первого |
 
 На основании возвращенного функцией значения метод меняет порядок следования элементов в массиве
 
-~~~~js
+◘◘![ico-20 cap] **sort ( 1 )**◘◘
+
+~~~js
 var sourceArray = [
     {  title: "fond",  value:  100 },
     {  title: "salary",  value:  400 },
@@ -1036,9 +1172,12 @@ var resArray = sourceArray.sort (
         return x.value - y.value
     }
 )
-~~~~
+~~~
 
-~~~~Результат
+◘◘**Результат**◘◘
+
+~~~console
+
 ▼ (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
   ► 0: {title: "bonus", value: 70}
   ► 1: {title: "fond", value: 100}
@@ -1049,11 +1188,15 @@ var resArray = sourceArray.sort (
   ► 6: {title: "debt", value: 700}
     length: 7
   ► __proto__: Array(0)
-~~~~
+  
+~~~
+
 
 Для понимания механизма сортировки выведем в консоль значения сравниваемых элементов массива на каждой итерации:
 
-~~~~javascript
+◘◘![ico-20 cap] **sort ( 2 )**◘◘
+
+~~~~js
 var resArray = sourceArray
     .sort (
         function ( x, y ) {
@@ -1063,14 +1206,18 @@ var resArray = sourceArray
     )
 ~~~~
 
-~~~~Результат
+◘◘**Результат**◘◘
+
+~~~console
+
 fond - bonus = 30
 payments - fond = 50
 credit - payments = 50
 income - credit = 120
 salary - income = 80
 debt - salary = 300
-~~~~
+
+~~~
 
 или так:
 
@@ -1088,7 +1235,10 @@ var resArray = sourceArray
     )
 ~~~~
 
-~~~~tmp
+^^^[tmp]
+
+~~~console
+
 ▼ (13) [...]
   ► 0: "salary - fond = 300"
   ► 1: "bonus - salary = -330"
@@ -1105,7 +1255,10 @@ var resArray = sourceArray
   ► 12: "income - salary = -80"
     length: 13
   ► __proto__: Array(0)
-~~~~
+  
+~~~
+
+^^^
 
 Итак, в отличие от других итерирующих методов, функция, передаваемая методу в качестве единственного аргумента, принимает строго два параметра
 
@@ -1122,6 +1275,8 @@ __________________________
 
 Есть строка **cookie**:
 
+◘◘![ico-20 cap] **flatMap**◘◘
+
 ~~~js
 var cookie = "name=user; token=Jd7-js15/84; inerest=javascript"
 ~~~
@@ -1135,15 +1290,17 @@ console.log (
 )
 ~~~
 
-**Результат в консоли:**
+◘◘**Результат**◘◘
 
 ~~~console
+
 ▼ (3) [Array(2), Array(2), Array(2)]
   ► 0: (2) ["name", "user"]
   ► 1: (2) ["token", "Jd7-js15/84"]
   ► 2: (2) ["inerest", "javascript"]
     length: 3
   ► __proto__: Array(0)
+  
 ~~~
 
 Мы получили массив, элементы которого являются массивами
@@ -1157,10 +1314,12 @@ console.log (
 )
 ~~~
 
-**Результат в консоли:**
+◘◘**Результат**◘◘
 
 ~~~console
+
 ► (6) ["name", "user", "token", "Jd7-js15/84", "inerest", "javascript"]
+
 ~~~
 
 Мы получили "плоский" массив
@@ -1182,7 +1341,7 @@ ____________________________________________________
 **Генератор**
 **Возвращает объект _итератора_**
 
-^^^[Пример]
+◘◘![ico-20 cap] **keys**◘◘
 
 ~~~js
 var cookie = "name=user; token=Jd7-js15/84; inerest=javascript"
@@ -1195,19 +1354,20 @@ var done = false
 
  do {
     var { value: val, done: stop } = iterator.next();
-    stop || console.log ( cookie[ val ][0], cookie[ val ][1] )
+    stop &#124;&#124; console.log ( cookie[ val ][0], cookie[ val ][1] )
 } while ( !stop )
 ~~~
 
-В консоли будет:
+◘◘**Результат**◘◘
 
 ~~~console
+
 name user
 token Jd7-js15/84
 inerest javascript
+
 ~~~
 
-^^^
 
 ______________________
 
@@ -1216,7 +1376,7 @@ ______________________
 **Генератор**
 **Возвращает объект _итератора_**
 
-^^^[Пример]
+◘◘![ico-20 cap] **values**◘◘
 
 ~~~js
 var iterator = "name=user; token=Jd7-js15/84; inerest=javascript"
@@ -1225,92 +1385,106 @@ var iterator = "name=user; token=Jd7-js15/84; inerest=javascript"
 
 do {
     var { value: val, done: stop } = iterator.next();
-    stop || console.log ( val )
+    stop &#124;&#124; console.log ( val )
 } while ( !stop )
 ~~~
 
-В консоли будет:
+◘◘**Результат**◘◘
 
 ~~~console
+
 ► (2) ["name", "user"]
 ► (2) ["token", "Jd7-js15/84"]
 ► (2) ["inerest", "javascript"]
+
 ~~~
-
-^^^
-
-_____________________
-
-## ![ico-25 icon] Примеры и тесты
-
-![ico-25 cap] ** 1**
-
-Перейдите по [![ico-20 link] **_ссылке_**](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
-
-В консоли новой вкладки выполните код:
-
-~~~js
-location.search
-    .slice(1).split(',')
-        .map ( x => Object.assign ( {},
-                        { [ x.split( '=' )[0] ] : x.split( '=' )[1] }
-                    )
-        )
-~~~
-
-____________________________________________________
-
-![ico-25 cap] ** 2**
-
-Перейдите по [![ico-20 link] **_ссылке_**](https://developer.mozilla.org/en-US/docs/Web/API/Window/location?name=garevna,date=10.07.2018)
-
-Теперь в консоли новой вкладки объявите функцию:
-
-~~~js
-function getSearchObject () {
-        var obj = {}
-        location.search.slice(1).split( ',' )
-                .map ( x => x.split( '=' ) )
-                .map ( function ( item ) {
-                        this[ item [0] ] = item [1]
-        }, obj )
-        return obj
-}
-~~~
-
-Вызовите функцию  **getSearchObject()**
-
-____________________________________________
-
-| [![ico-25 cap] ** 3**](https://garevna.github.io/js-samples/?name=garevna,date=10.07.2018#11) |
 
 _____________________________________________
 
-![ico-25 cap] ** 4**
 
-В консоли [**_страницы_**](https://medium.com/@js_tut/the-complete-guide-to-es10-features-f09a8c7be1bd) выполните код:
+## ![ico-25 icon] Примеры и тесты
 
-~~~~js
-let changeClass = ( classname, styleString ) => ( Array.from ( document.styleSheets )
-    .filter ( sheet => !sheet.href )
-        .map (
-            sheet => Array.from ( sheet.cssRules )
-                    .filter ( rule => rule.selectorText === `.{classname}` )
-        )
-           .filter ( item => item.length > 0 )
-               .map ( item => item[0].cssText.split ("}")
-                           .join ( `${styleString}}` )
-               )
-).length > 0 ? console.log ( "found" ) :
-    document.head.appendChild (
-        document.createElement ( "style" )
-    ).textContent = `.${classname} {${styleString}}`
+^^Спасибо **Антону Бурчак** за эту задачку ![ico-20 smile]^^
 
-changeClass ( "graf", "background-color: red!important;" )
-~~~~
+Задача: проверить парность и правильность расстановки скобок
+( для упрощения задачи будем считать, что в тестируемой строке только скобки и пробелы )
 
-[![ico-70 youtube]](https://youtu.be/vL6n7hGvwSs)
+Например, валидация строки "({})[([])]" должна пройти нормально ( вернуть ~true~ )
+а валидация строки "({(})[([)])]" должна вернуть ~false~
 
-_______________________
+Для удобства использования создадим наследуемый метод строк:
 
-[![ico-30 hw] **Тесты**](https://garevna.github.io/js-quiz/#arrayIterationMethods)
+◘◘![ico-20 cap] **Brackets validation**◘◘
+
+~~~js
+String.prototype.testBrackets = function () {
+    
+    let brackets = {
+      '[': ']',
+      '{': '}',
+      '(': ')'
+    }
+
+    let stack = [], result = '';
+
+    this.split("").forEach (
+        symbol => {
+            
+            if ( !brackets [ symbol ] && stack.length === 0 ) return false;
+
+            brackets [ symbol ] ? stack.push ( symbol ) : 
+                                  symbol = brackets [ stack.pop() ];
+            result += symbol
+        }
+    )
+
+    return result == this && stack.length === 0
+}
+~~~
+
+~~~js
+"( [ ( { ( ( {(} ([]) ) ) } ) ] )".testBrackets() 
+~~~
+
+{{{Array-iteration-methods-brackets.js}}}
+___________________________________________________
+
+◘◘![ico-20 cap] **map**◘◘
+
+~~~js
+function getSearchObject () {
+    var obj = {}
+    location.search.slice(1).split(',')
+        .map ( x => x.split('=') )
+        .map ( function ( item ) {
+            this[ item [0] ] = item [1]
+        },
+        obj
+    )
+    return obj
+}
+
+var searchObject = getSearchObject ()
+for ( var rec in searchObject ) {
+        document.body.innerHTML += `<p>${rec}: ${searchObject[rec]}</p>`
+}
+~~~
+
+[:::**Live demo**:::](https://garevna.github.io/js-samples/#11)
+
+_____________________________________________
+
+В консоли [**_страницы_**](https://ru.wikipedia.org/wiki/%D0%98%D0%B4%D0%B5%D0%BC%D0%BF%D0%BE%D1%82%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C) выполните код:
+
+◘◘![ico-22 cap] **getComputedStyle**◘◘
+
+~~~js
+Array.from (
+    document.getElementsByClassName( "interlanguage-link" )
+).map ( item => getComputedStyle ( item ) )
+    .forEach ( item => console.log ( item["font-family"] ) )
+~~~
+
+________________________________________________
+
+[%%%**Тесты**%%%](https://garevna.github.io/js-quiz/#arrayIterationMethods)

@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <base href="https://garevna.github.io/a-level-js-lessons/src/" -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Poppins|Roboto|Montserrat|&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png" type="image/x-icon">
     <title>JS course</title>
-    <script src="src/rainbow.js"></script>
+    <script id="rainbow" src="src/rainbow.js"></script>
+    <script>
+      const createPath = ( function () {
+        const lessons = "src/lessons/"
+        const src = "src/"
+        const icons = "src/icons/"
+        const externalIcons = "https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/"
+        const images = "src/images/"
+        const illustrations = "src/images/lessons/"
+        return function ( alias, fileName ) {
+          return `${eval(alias)}${fileName}`
+        }
+      })()
+
+      let favicon = document.head.appendChild(
+        document.createElement ( "link" )
+      )
+      favicon.rel = "shortcut icon"
+      favicon.type = "image/x-icon"
+      favicon.href = createPath( "icons","js-8.png" )
+      window.onscroll = window.onwheel = function ( event ) {
+        let removed = document.getElementsByTagName ( "popup-win" )
+        if ( removed ) {
+          removed[0].remove()
+          window.onscroll = window.onwheel = null
+        }
+      }
+    </script>
   </head>
   <body>
 
-    <main-menu-component></main-menu-component>
     <menu-component class="sticky" options=""></menu-component>
-    <page-element src="src/lessons/start-page.md"></page-element>
+    <page-element></page-element>
 
-    <glitch-logo></glitch-ligo>
-
+    <glitch-logo></glitch-logo>
+    <main-menu-component></main-menu-component>
+    <popup-win id="welcomeWin">
+      <div slot="left">
+        <img src='https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fgarevna-2.jpg' width='250'/>
+        <h3>Welcome, human!</h3>
+        <h4><small>Irina H. Fylyppova ( garevna )</small></h4>
+      </div>
+      <div slot="right" style='text-align:right'>
+        <img src='https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fpersonage-to-right.gif'>
+        <h3>Keep pressing on!</h3>
+      </div>
+    </popup-win>
     <script src="build/index.js"></script>
-
   </body>
 </html>

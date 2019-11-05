@@ -34,7 +34,7 @@ SHA-1 генерирует почти уникальную 160-битную ( 20
 
 Например, для исходного текста:
 
-~~~javascript
+~~~js
 for ( var x of arr ) {
      console.log ( x )
 }
@@ -42,7 +42,7 @@ for ( var x of arr ) {
 
 криптографический хэш SHA-1 будет:
 
-~15E84BC669EC1F264F68CF0329A3DE12788EBC7D~
+••15E84BC669EC1F264F68CF0329A3DE12788EBC7D••
 
 ![ico-20 pin] ^^**git** широко использует хэши **SHA-1** в качестве идентификаторов и проверок согласованности^^
 
@@ -50,7 +50,8 @@ _________________________
 
 ### ![ico-25 icon] Онлайн-генераторы цифровой подписи SHA
 
-| [![ico-20 link] **SHA1**](https://passwordsgenerator.net/sha1-hash-generator/) | [![ico-20 link] **SHA2**](https://passwordsgenerator.net/sha256-hash-generator/) |
+[%%%SHA1%%%](https://passwordsgenerator.net/sha1-hash-generator/) 
+[%%%SHA2%%%](https://passwordsgenerator.net/sha256-hash-generator/)
 
 ___________________
 
@@ -58,7 +59,7 @@ ___________________
 
 Можно установить пакет [**~js-sha1~**](https://github.com/emn178/js-sha1) из CDN
 
-![ico-30 bash] ~$ npm install js-sha1~
+••![ico-30 bash] $ npm install js-sha1••
 
 _________________
 
@@ -72,11 +73,11 @@ _________________
 
 и использовать функцию **~Sha256.hash()~** для динамической генерации дайджеста любого текста
 
-~~~javascript
+~~~js
 var hash = Sha256.hash ( text )
 ~~~
 
-| [![ico-25 cap] ** 1**](https://garevna.github.io/js-samples/#07) |
+[:::Пример:::](https://garevna.github.io/js-samples/#07)
 
 Кроме того, в консоли ![ico-20 bash] вы можете использовать консольную команду ~sha256sum~
 
@@ -98,7 +99,7 @@ _______________________
 
 Вставьте следующий код сниппета:
 
-~~~javascript
+~~~js
 let script = document.createElement( 'script' )
 script.src = 'https://garevna.github.io/js-samples/js/testSHA384.js'
 script.crossOrigin = 'anonymous';

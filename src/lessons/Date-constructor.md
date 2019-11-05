@@ -177,6 +177,75 @@ function calcDate ( currentDate, days ) {
 calcDate ( new Date(), 50 )
 ~~~
 
+_____________________________________________________
+
+### ![ico-25 icon] setDate()
+
+~~~js
+function getRelativeData ( data, days ) {
+    if ( !( data instanceof Date ) ) 
+      return console.log ( "Invalid date" )
+  
+    return new Date ( data.setDate ( data.getDate() + days ) )
+}
+
+getRelativeData ( new Date(), 15 )
+~~~
+
+{{{Date-constructor.js}}}
+
+
+_________________________________________________________
+
+### ![ico-25 icon] Разность дат
+
+Вычислим, сколько дней осталось до дня рождения:
+
+~~~js
+var birthday = new Date ( 1990, 11, 2 )
+
+var ms = birthday.setFullYear( new Date().getFullYear() ) - new Date()
+console.log ( `До дня рождения осталось ${ms} миллисекунд` )
+
+var hours = Math.round ( seconds / 3600000 )
+console.log ( `До дня рождения осталось ${hours} часов` )
+
+var days = Math.round ( hours / 24 )
+console.log ( `До дня рождения осталось ${days} дней` )
+~~~
+
+{{{Date-constructor-1.js}}}
+
+Как видите, для вычисления количества дней, оставшихся до указанной даты дня рождения мы сначала устанавливаем текущий год даты дня рождения
+
+~~~js
+birthday.setFullYear( new Date().getFullYear() )
+~~~
+
+Это означает, что мы вычисляем оставшиеся до дня рождения дни в пределах текущего года
+
+Мы вычисляем разность двух дат - даты дня рождения и текущей даты
+
+~~~js
+var ms = birthday.setFullYear( new Date().getFullYear() ) - new Date()
+~~~
+
+Результат будет в миллисекундах
+Разделив результат на 1000, мы получим число секунд
+Разделив число секунд на 360, мы получим число часов
+
+~~~js
+var hours = Math.round ( seconds / 3600000 )
+~~~
+
+Разделив число часов на 24, мы получим число дней
+
+~~~js
+var days = Math.round ( hours / 24 )
+~~~
+
+Если в этом году день рождения уже прошел, число дней будет отрицательным
+
 _________________________________________
 
 [![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLScAFYBPpPFxuhTyuT6izba6WKRIN3ETICHKf_IIWCIL0qzkIQ/viewform)

@@ -1,4 +1,4 @@
-# ![ico-30 study] NaN | null | Infinity
+# ![ico-30 study] NaN / null / Infinity
 
 
 ## ![ico-25 icon] Значение NaN
@@ -9,7 +9,7 @@
 
 Можно получить в результате приведения типов, например:
 
-~~~javascript
+~~~js
 5 / "a"  --> NaN
 "b" * 3  --> NaN
 ~~~
@@ -20,7 +20,7 @@
 
 ![ico-20 warn] ~NaN~ не равен ничему, даже самому себе
 
-~~~javascript
+~~~js
 NaN === NaN            // false
 NaN == NaN             // false
 NaN >= NaN             // false
@@ -32,7 +32,7 @@ NaN <= NaN             // false
 
 Их действие не идентично
 
-~~~javascript
+~~~js
 isNaN ( "привет" )               //  true
 Number.isNaN ( "привет" )        //  false
 Number.isNaN ( "привет" / 10 )   //  true
@@ -52,7 +52,7 @@ _____________________________________________________________
 
 ![ico-20 warn] ~null~ может равняться только ~null~ или ( при нестрогом сравнении ) ~undefined~
 
-~~~javascript      
+~~~js      
 null == null              // true
 null === null             // true
 null == undefined         // true
@@ -80,13 +80,13 @@ _____________________________________________________________
 
 ~Infinity~ может быть результатом деления на ноль отличного от нуля числа
 
-~~~javascript
+~~~js
 1 / 0            //  Infinity
 ~~~
 
 Однако:
 
-~~~javascript
+~~~js
 0 / Infinity  // NaN
 
 Infinity / Infinity  // NaN

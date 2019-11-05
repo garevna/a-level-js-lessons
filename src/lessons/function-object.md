@@ -24,7 +24,7 @@ _______________________________________________
 
 ^^Его можно преобразовать в обычный массив с помощью метода  **~Array.from~**^^
 
-~~~javascript
+~~~js
 function test () {
   var args = Array.from ( arguments )
   ...
@@ -35,9 +35,9 @@ function test () {
 
 Они будут доступны по индексу строго в том порядке, в каком они были переданы функции при вызове
 
-![ico-25 cap] **Пример 1**
+◘◘![ico-25 cap] **Пример 1**◘◘
 
-~~~javascript
+~~~js
 function testArguments () {
     for ( var i = 0;  i < arguments.length;  i++ ) {
         console.log ( `[ ${ ( i + " ]" ).padEnd ( 10 ) } ${ arguments [ i ] }` )
@@ -53,7 +53,7 @@ ______________________________________
 
 У объекта **~arguments~** есть свойство **_~callee~_** - ссылка на выполняемую функцию ( функцию-"хозяина" объекта  ~arguments~ )
 
-~~~javascript
+~~~js
 function testArguments () {
   console.log ( arguments.callee.name )
 }
@@ -67,7 +67,7 @@ testArguments() // testArguments
 
 ^^Объявим функцию  **~getArguments~**:^^
 
-~~~javascript
+~~~js
 function getArguments ( param ) {
     return param ? param : arguments.callee
 }
@@ -77,7 +77,7 @@ function getArguments ( param ) {
 
 ^^Теперь вызовем эту функцию с параметром и без:^^
 
-~~~javascript
+~~~js
 var x = getArguments ()
 var y = getArguments ( "Привет!" )
 ~~~
@@ -93,7 +93,7 @@ var y = getArguments ( "Привет!" )
 
 ^^Вызовем функцию **~ x ~**:^^
 
-~~~javascript
+~~~js
 x ( "До свидания!" )
 ~~~
 
@@ -107,7 +107,7 @@ x ( "До свидания!" )
 
 ^^Объявим функцию, которая "сама себя лечит", т.е. сама добавляет себе свойства и методы:^^
 
-~~~javascript
+~~~js
 function setProperty ( prop, val ) {
     arguments.callee [ prop ] = val
 }
@@ -115,14 +115,14 @@ function setProperty ( prop, val ) {
 
 ^^Теперь заставим ее создать себе парочку свойств:^^
 
-~~~javascript
+~~~js
 setProperty ( "isActive", false )
 setProperty ( "value", 50 )
 ~~~
 
 ^^Ну, и для пущей убедительности заставим ее создать себе метод:^^
 
-~~~javascript
+~~~js
 setProperty ( "method", function () {
     console.log ( "А еще я умею вышивать крестиком" )
 } )
@@ -144,7 +144,7 @@ setProperty ( "method", function () {
 
 ^^Пусть это будет функция, вычисляющая факториал числа^^
 
-~~~javascript
+~~~js
 var factorial = function ( num ) {
     var res = 1, n = 1
     while ( n <= num )  res *= n++
@@ -153,7 +153,7 @@ var factorial = function ( num ) {
 
 ^^"модифицируем" ее следующим образом:^^
 
-~~~javascript
+~~~js
 var factorial = function ( num ) {
      if ( !arguments.callee.res )  arguments.callee.res = []
      var res = 1, n = 1
@@ -165,7 +165,7 @@ var factorial = function ( num ) {
 
 ^^Вызовем ее с различными значениями аргумента и выведем в консоль значение свойства **~res~**:^^
 
-~~~javascript
+~~~js
 factorial ( 5 )
 factorial ( 5 )
 
@@ -186,7 +186,7 @@ console.log ( factorial.res )
 
 ^^Каждая функция "накапливает" данные о времени клика на кнопке в массиве **~arguments.callee.res~**^^
 
-~~~javascript
+~~~js
 var buttons = []
 for ( var n = 0; n < 5; n++ ) {
     buttons [ n ] = document.body.appendChild (
@@ -204,7 +204,7 @@ for ( var n = 0; n < 5; n++ ) {
 
 ^^Модифицируем этот код:^^
 
-~~~javascript
+~~~js
 var buttons = []
 for ( var n = 0; n < 5; n++ ) {
     buttons [ n ] = document.body.appendChild (
@@ -290,7 +290,7 @@ _______________________________
 
 ^^Объявим три функции:^^
 
-~~~javascript
+~~~js
 function first () {
     console.log ( "Работает функция first" )
 }
@@ -308,7 +308,7 @@ function third () {
 
 ^^Тогда конструкция:^^
 
-~~~javascript
+~~~js
 window [ "first" ]
 ~~~
 
@@ -316,13 +316,13 @@ window [ "first" ]
 
 ^^Для вызова этой функции не хватает только круглых скобок:^^
 
-~~~javascript
+~~~js
 window [ "first" ] ()
 ~~~
 
-^^Используя этот факт, мы можем вызывать функцию, имя которой нам передано в переменной типа "*string*":^^
+^^Используя этот факт, мы можем вызывать функцию, имя которой нам передано в переменной типа "_string_":^^
 
-~~~javascript
+~~~js
 for ( var func of [ "first", "second", "third" ] )
     window [ func ] ()
 ~~~
@@ -359,10 +359,7 @@ _________________________________________
 
 ![ico-20 warn] Каждый вызов функции приводит к созданию нового контекста выполнения
 
-Создание контекста выполнения происходит в два этапа:
-
-![ico-20 green-ok] сразу после вызова функции, но до начала выполнения кода
-![ico-20 green-ok] на этапе выполнения кода
+Создание контекста выполнения происходит до начала выполнения кода
 
 При каждом возврате ( **~return~** ) происходит выход из контекста выполнения
 Пока выполнение функции не завершено, ее контекст будет активным
@@ -380,7 +377,7 @@ _________________________________________
 
 _____________________________________________
 
-### ![ico-20 icon] LexicalEnvironment
+### ![ico-20 icon] Lexical Environment
 
 ^^Когда происходит вызов функции, она активируется^^
 ^^Ей нужно где-то безопасно "разместить" свои данные, с которыми она будет работать^^
@@ -392,7 +389,7 @@ _____________________________________________
 
 ~Lexical Environment~ содержит аргументы функции и все объявленные внутри функции переменные ( включая функции )
 
-^^поэтому его еще называют *объектом переменных* или *объектом активации*^^
+^^поэтому его еще называют _объектом переменных_ или _объектом активации_^^
 
 ^^Таким образом, объект активации можно сравнить со шкафчиком для хранения "личных вещей" функции^^
 
@@ -418,7 +415,7 @@ ______________________________________________
 
 ![ico-25 cap] ** 7 **
 
-~~~javascript
+~~~js
 function delegat () {
     console.log ( x )
     y = x + 5
@@ -435,7 +432,7 @@ function delegat () {
 
 ^^Но присваивание значений происходит уже на втором этапе, и код будет выполняться последовательно, то есть на момент исполнения кода^^
 
-~~~javascript
+~~~js
 console.log ( x )
 ~~~
 
@@ -443,19 +440,19 @@ console.log ( x )
 
 ^^Аналогично, на момент выполнения кода^^
 
-~~~javascript
+~~~js
 y = x + 5
 ~~~
 
 ^^значение переменной  **_~ x~_**  будет  ~undefined~, поэтому результатом операции присваивания будет  **~NaN~**,  что и выдаст в консоль код^^
 
-~~~javascript
+~~~js
 console.log ( y )
 ~~~
 
 ^^После этого будет выполнен код^^
 
-~~~javascript
+~~~js
 x = 5, y = 10
 ~~~
 
@@ -465,7 +462,7 @@ x = 5, y = 10
 
 ^^Присваивание значений^^
 
-~~~javascript
+~~~js
 x = 1, y = 1
 ~~~
 
@@ -477,7 +474,7 @@ x = 1, y = 1
 
 ![ico-25 cap] ** 8 **
 
-~~~javascript
+~~~js
 var treg = 5
 
 function delegat () {
@@ -556,7 +553,7 @@ ___________________________
 
 ![ico-25 cap] ** 9**
 
-~~~javascript
+~~~js
 var sample = 1
 function changeSample () {
    sample = 10
@@ -572,7 +569,7 @@ changeSample ()
 
 ^^Тогда при выполнении присваивания^^
 
-~~~javascript
+~~~js
 sample = 10
 ~~~
 
@@ -590,7 +587,7 @@ sample = 10
 
 ![ico-25 cap] **10**
 
-~~~javascript
+~~~js
 var sample = 1
 
 function showSample () {
@@ -704,7 +701,7 @@ _______________________________
 
 ![ico-25 cap] **12**
 
-~~~javascript
+~~~js
 function func () {
    console.log ( this )
 }
@@ -718,7 +715,7 @@ ________________________________
 
 ![ico-25 cap] **13**
 
-~~~javascript
+~~~js
 function func () {
    child ()
    function child () {
@@ -735,7 +732,7 @@ ___________________________________
 
 Если же функция является методом объекта, то ее контекстом вызова будет этот объект
 
-~~~javascript
+~~~js
 var human = {
     name: "Ivan",
     say: function () {
@@ -752,7 +749,7 @@ ________________________________
 
 Теперь посмотрим на функцию как на объект
 
-~~~javascript
+~~~js
 function say () {
    console.log ( 'function say: this: ', this )
 }
@@ -763,7 +760,7 @@ function girl () {
 
 Добавим функции  **~girl~**  свойство  **~say~** и вызовем функцию ~girl~ и ее свойство ~say~:
 
-~~~javascript
+~~~js
 girl.say = say
 girl.say ()     //  girl
 girl ()         // window
@@ -776,14 +773,14 @@ ________________________________________
 • Функцию как **_объект_** нельзя вывести с помощью метода ~console.log~
 • Для этой цели следует использовать метод **~console.dir~**
 
-~~~javascript
+~~~js
 function sample () {}
 
 console.dir ( sample )
 ~~~
 
 В консоли мы получим следующую картинку:
-~~~js
+~~~console
 ▼ ƒ sample()
       arguments: null
       caller: null

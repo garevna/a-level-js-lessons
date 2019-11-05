@@ -31,7 +31,7 @@ window.onbeforeunload = function( event ) {
 
 Срабатывает каждый раз при изменении значений отслеживаемых html-атрибутов элемента
 
-~~~javascript
+~~~js
 attributeChangedCallback( attrName, oldVal, newVal ) {
   ...
 }
@@ -41,11 +41,11 @@ attributeChangedCallback( attrName, oldVal, newVal ) {
 
 Изменяя значения атрибутов, можно извне влиять на состояние и поведение веб-компонента
 
-Чтобы указать, какие html-атрибуты нужно отслеживать, используется геттер статического свойства **~observedAttributes~`**
+Чтобы указать, какие html-атрибуты нужно отслеживать, используется геттер статического свойства **~observedAttributes~**
 
 имена отслеживаемых атрибутов передаются массивом:
 
-~~~javascript
+~~~js
 static get observedAttributes() {
     return [ 'size', 'color']
 }
@@ -55,7 +55,7 @@ static get observedAttributes() {
 
 #### ![ico-25 icon] Пример
 
-~~~~javascript
+~~~~js
 class CircleElement extends HTMLElement {
     constructor() {
         super()
@@ -100,7 +100,7 @@ customElements.define ( "circle-element", CircleElement )
 
 Благодаря хукам **~connectedCallback~** и **~attributeChangedCallback~** теперь абсолютно все равно, когда будут вставлены кастомные элементы на страницу
 
-~~~javascript
+~~~js
 for ( var x of [ "blue", "red", "green", "yellow" ] ) {
     let elem = document.body.appendChild (
         document.createElement ( 'circle-element' )
@@ -116,7 +116,7 @@ for ( var x of [ "blue", "red", "green", "yellow" ] ) {
 
 Однако если такой хук есть в определении класса, то результатом выполнения кода
 
-~~~javascript
+~~~js
 document.getElementsByTagName ( "circle-element" )
     .setAttribute ( "color", "magenta" )
 ~~~

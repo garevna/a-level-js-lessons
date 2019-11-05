@@ -19,7 +19,7 @@ _____________________________
 
 ^^Мы будем использовать эти данные для обновления чата^^
 ^^после того, как данные в **~db.json~**  были обновлены^^
-^^( операции ~POST~ | ~PUT~ | ~DELETE~ )^^
+^^( операции ~POST~ &#124; ~PUT~ &#124; ~DELETE~ )^^
 
 ![ico-20 green-ok] **posts**
 
@@ -43,13 +43,14 @@ __________________________________________
 
 ## ![ico-25 icon] json-server
 
-Запускаем  json-server
+![ico-25 bash] Запускаем  json-server
 
-| ![ico-25 bash] | ~json-server &#45;&#45;watch db.json~ |
+••son-server &#45;&#45;watch db.json••
 
 Получаем **endpoints**:
 
 ~~~console
+
 Resources
         http://localhost:3000/lastUpdate
         http://localhost:3000/users
@@ -58,6 +59,7 @@ Resources
 
 Home
         http://localhost:3000
+        
 ~~~
 
 __________________________

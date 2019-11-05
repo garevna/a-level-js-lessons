@@ -77,18 +77,20 @@ var commodity = {
 
 Каждый раз, когда мы будем обращаться к свойству **~commodity.priceUAH~**, будет срабатывать геттер
 
-~~~javascript
+~~~js
 console.log ( commodity.priceUAH ) // 560
 ~~~
 
 Каждый раз, когда мы будем присваивать новое значение свойству **~commodity.priceUAH~**, на самом деле будет вызываться функция-сеттер, которая будет изменять значение свойства **~commodity.priceUSD~**
 
 
-~~~javascript
+~~~js
 commodity.priceUAH = 250
 
 console.log ( commodity.priceUSD ) // 8.928571428571429
 ~~~
+
+{{{get-and-set-price.js}}}
 
 _____________________________________________________
 
@@ -98,7 +100,7 @@ _____________________________________________________
 
 ![ico-25 err]
 
-~~~javascript
+~~~js
 var commodity = {
     name: "Утюг",
     mark: "Tefal",
@@ -124,7 +126,7 @@ ____________________________________________________________
 
 Создадим простенький объект-калькулятор:
 
-~~~javascript
+~~~js
 var calculator = {
     firstValue: 0,
     secondValue: 0,
@@ -151,13 +153,13 @@ var calculator = {
 
 Когда мы обращамся к свойству **~result~** для получения его значения, срабатывает геттер
 
-~~~javascript
+~~~js
 console.log ( calculator.result )
 ~~~
 
 Если же мы выполним присваивание нового значения свойству **~result~**
 
-~~~javascript
+~~~js
 calculator.result = "5 - 8 "
 ~~~
 
@@ -175,13 +177,15 @@ calculator.result = "5 - 8 "
   ► __proto__: Object
 ~~~
 
+{{{get-and-set-calculator.js}}}
+
 __________________________________________
 
 ## ![ico-25 cap] Human states ( sample )
 
 Создадим вычисляемое свойство **_~state~_** объекта **~human~**
 
-~~~javascript
+~~~js
 var human = {
     name: "Иван Сидоренко",
     states: [ "work", "relax", "enjoy" ],
@@ -218,7 +222,7 @@ Current state: 0 ( work )
 Затем сеттер свойства **_~state~_** устанавливает значение свойства **~human~**.**_~currentState~_** равным индексу элемента массива **~human~**.**_~states~_**, значение которого будет отображать геттер свойства **_~state~_**
 
 
-~~~javascript
+~~~js
 human.state = "swim"
 
 human.showState()
@@ -229,3 +233,5 @@ human.showState()
 ~~~console
 Current state: 3 ( swim )
 ~~~
+
+

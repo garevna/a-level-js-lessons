@@ -138,11 +138,12 @@ ________________________
 
 Метод доступа к ресурсу идентифицирует операцию с ресурсом
 
-| **GET** | **POST** | **PUT** | **DELETE** | **HEAD** |
+| **GET** | **POST** | **PUT** | **PATCH** | **DELETE** | **HEAD** |
 
 ![ico-20 green-ok] **GET** - получить данные
 ![ico-20 green-ok] **POST** - создание нового ресурса ( новой записи )
 ![ico-20 green-ok] **PUT** - обновление существующего ресурса ( записи )
+![ico-20 green-ok] **PATCH** - частичное обновление существующего ресурса ( записи )
 ![ico-20 green-ok] **DELETE** - удаление ресурса
 ![ico-20 green-ok] **HEAD** - получение информации о ресурсе
 
@@ -152,7 +153,7 @@ ________________________
 
 откуда предполагается получить ( **~GET~** ) или куда предполагается записать ( **~POST~**, **~PUT~**, **~DELETE~** ) данные
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] ** 1**◘◘
 
 ~~~js
 var request = new XMLHttpRequest ()
@@ -177,7 +178,7 @@ __________________________________________
 
 При запросе на получение данных ( **~GET~** ) тело запроса отсутствует
 
-![ico-25 cap] ** 2**
+◘◘![ico-25 cap] ** 2**◘◘
 
 ~~~js
 var request = new XMLHttpRequest ()
@@ -226,7 +227,7 @@ transport.open (
 transport.send()
 ~~~
 
-**Заголовки ответа сервера:**
+◘◘**^^Заголовки ответа сервера^^**◘◘
 
 ~~~console
 last-modified: Tue, 20 Dec 2016 18:17:03 GMT
@@ -293,7 +294,7 @@ __________________________
 
 ^^^
 
-![ico-25 cap] ** 3**
+◘◘![ico-25 cap] ** 3**◘◘
 
 ~~~js
 var transport = new XMLHttpRequest ()
@@ -314,7 +315,7 @@ transport.send()
 
 ______________________________________
 
-![ico-25 cap] ** 4**
+◘◘![ico-25 cap] ** 4**◘◘
 
 ~~~js
 var transport = new XMLHttpRequest ()
@@ -362,11 +363,11 @@ __________________________
 
 ____________________
 
-![ico-25 cap] ** 5**
-
 Получение двоичных данных
 
-~~~~js
+◘◘![ico-25 cap] ** 5**◘◘
+
+~~~js
 var request = new XMLHttpRequest()
 request.open (
     "get",
@@ -382,10 +383,10 @@ request.onreadystatechange = function() {
           null
 }
 request.send ()
-~~~~
+~~~
 
 ^^^[ArrayBuffer]
-~~~js
+~~~console
 ▼ ArrayBuffer(425) {}
   ► [[Int8Array]]: Int8Array(425)
      ► [0 … 99]
@@ -547,9 +548,9 @@ transport.onreadystatechange = function ( event ) {
 
 ___________________________________________
 
-[![ico-25 cap] **Пример 7**](https://plnkr.co/edit/b5gXN9q5FdturHenpo3b?p=preview)
+[:::Пример 7:::](https://plnkr.co/edit/b5gXN9q5FdturHenpo3b?p=preview)
 
-[![ico-20 link] HTTP Status Messages](https://www.w3schools.com/tags/ref_httpmessages.asp)
+[%%%HTTP Status Messages%%%](https://www.w3schools.com/tags/ref_httpmessages.asp)
 
 _________________________________
 
@@ -573,7 +574,7 @@ _______________________________
 
 Это свойство содержит ссылку колбэк-функцию, которая будет обрабатывать событие благополучного завершения загрузки данных с сервера
 
-![ico-25 cap] ** 8**
+◘◘![ico-25 cap] ** 8**◘◘
 
 ~~~js
 var request = new XMLHttpRequest
@@ -631,7 +632,7 @@ ____________________
 
 Временной интервал устанавливается путем определения значения свойства **_timeout_**
 
-![ico-25 cap] **10**
+◘◘![ico-25 cap] **10**◘◘
 
 ~~~js
 var request = new XMLHttpRequest()
@@ -668,15 +669,73 @@ transport.onerror = function ( err ) {
 }
 ~~~
 
-[![ico-25 cap] **11**](https://plnkr.co/edit/BqbCvoAnbikBtTFTRBHp?p=preview)
-[![ico-25 cap] **12**](https://plnkr.co/edit/DLH49iWObtxqcijNT9oY?p=preview)
-
 ^^^
+
+_______________________________
+
+
+
+◘◘![ico-25 cap] **11**◘◘
+
+~~~js
+let request = Object.assign (
+    new XMLHttpRequest,
+    {
+        onreadystatechange: function ( event ) {
+            event.target.readyState === 4 ?
+                event.target.status >= 200 && event.target.status < 300 ?
+                    console.log ( event.target.status, "\n", JSON.parse ( event.target.response ) ) :
+                    console.warn ( "Request error: ", event.target.status, event.target.statusText )
+                : null
+        },
+        make: function ( endpoint, method, data ) {
+            let methods = [ "GET", "POST", "PUT", "DELETE", "PATCH" ]
+            method = methods.indexOf ( method ) === -1 ? "GET" : method
+            this.open ( method, `https://json-server-with-router.glitch.me/${endpoint}` )
+            this.setRequestHeader( "Content-Type", "application/json" )
+            method !== "GET" && data ? this.send ( JSON.stringify ( data ) ) : this.send()
+        }
+    }
+)
+
+~~~
+
+~~~js
+request.make ( "users" )
+~~~
+
+{{{XMLHttpRequest.js}}}
+
+~~~js
+request.make ( "user/hero", "POST", { name: "Jeck", age: 31, speciality: "pilot" } )
+request.make ( "users" )
+~~~
+
+~~~js
+request.make ( "user/hero", "PUT", { name: "Filimon", age: 38, speciality: "advocate" } )
+request.make ( "users" )
+~~~
+
+~~~js
+request.make ( "user/hero", "PATCH", { speciality: "prosecutor", children: 2 } )
+request.make ( "users" )
+~~~
+
+~~~js
+request.make ( "user/hero", "DELETE" )
+request.make ( "users" )
+~~~
+
+
+_______________________________
+
+[:::**12**:::](https://plnkr.co/edit/BqbCvoAnbikBtTFTRBHp?p=preview)
+[:::**13**:::](https://plnkr.co/edit/DLH49iWObtxqcijNT9oY?p=preview)
 
 __________________________
 
 [![ico-30 hw] **Упражнения**](https://docs.google.com/forms/d/e/1FAIpQLSdA3JwhlOTXdZxCO3y1MdLe-pe-cynNVGeboy7IV0aWHliGHA/viewform)
 
-[![ico-20 link] ^^Протокол TCP^^](https://xakep.ru/2002/04/11/14943/)
+[%%%Протокол TCP%%%](https://xakep.ru/2002/04/11/14943/)
 
-[![ico-20 link] **^^RFC793^^**](https://www.lissyara.su/doc/rfc/rfc793/)
+[%%%RFC793%%%](https://www.lissyara.su/doc/rfc/rfc793/)

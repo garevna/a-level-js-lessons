@@ -14,7 +14,7 @@ ______________________________
 
 Для того, чтобы структуру данных можно было итерировать, у этой структуры данных должен быть определен
 
-•  протокол итерирования, задающий правило выбора очередного элемента из множества
+• протокол итерирования, задающий правило выбора очередного элемента из множества
 • встроенный итератор, реализующий это правило
 
 ^^Итератор будет на каждой итерации возвращать следующий элемент итерируемого множества в соответствии с установленным для этого множества протоколом итерирования^^
@@ -29,7 +29,7 @@ ____________________________________
 
 Например, код
 
-~~~javascript
+~~~js
 var iteratedObject = {
     name: "Begemot",
     animal: true,
@@ -53,7 +53,7 @@ ____________________________________________
 
 ### ![ico-25 cap] Пример с массивом
 
-~~~javascript
+~~~js
 var iteratedArray = [ 10, 20, 30 ]
 
 for ( var x of iteratedArray ) {
@@ -68,7 +68,7 @@ _________________________
 
 ### ![ico-25 cap] Пример со строкой
 
-~~~javascript
+~~~js
 var iteratedString = "ABCDEF"
 
 for ( var x of iteratedString ) {
@@ -78,11 +78,41 @@ for ( var x of iteratedString ) {
 
 ^^На каждой итерации в консоль выводится очередносимвол строки *iteratedString*^^
 
+________________________
+
+Задача: проверить парность и правильность расстановки скобок в строке
+^^( для упрощения задачи будем считать, что в тестируемой строке только скобки )^^
+
+~~~js
+function testBrackets ( string ) {
+    
+    let brackets = {
+      '[': ']',
+      '{': '}',
+      '(': ')'
+    }
+
+    let stack = [], result = ''
+
+    for ( let symbol of string ) {
+
+        if ( !brackets [ symbol ] && stack.length === 0 ) return false
+
+        brackets [ symbol ] ? stack.push ( symbol ) : symbol = brackets [ stack.pop() ]
+
+        result += symbol
+
+    }
+
+    return result === string && stack.length === 0
+}
+~~~
+
 ________________
 
 ### ![ico-25 cap] Пример с объектом arguments
 
-~~~javascript
+~~~js
 function showArguments () {
     for ( var arg of arguments ) {
         console.log ( arg )
@@ -102,7 +132,7 @@ ___________________________
 
 Например, в результате выполнения кода
 
-~~~javascript
+~~~js
 var cities = [
     "Киев",
     "Львов",
@@ -134,7 +164,7 @@ for ( var x of cities ) {
 
 а в результате выполнения кода
 
-~~~javascript
+~~~js
 for ( var x of cities ) {
     if ( x === "Копенгаген" ) break
     console.log ( x )
@@ -167,7 +197,7 @@ _____________________
 
 ### ![ico-25 cap] Пример
 
-~~~javascript
+~~~js
 var iteratedObject = {
     name: "Begemot",
     animal: true,
@@ -179,17 +209,17 @@ for ( var x in iteratedObject ) {
 }
 ~~~
 
-В консоль будут выведены имена свойств объекта *name*, *animal* и *age*
+В консоль будут выведены имена свойств объекта _name_, _animal_ и _age_
 
 Если немного подправить код внутри цикла:
 
-~~~javascript
+~~~js
 for ( var x in iteratedObject ) {
     console.log ( iteratedObject [ x ] )
 }
 ~~~
 
-то мы получим в консоли значения свойств объекта *iteratedObject*:
+то мы получим в консоли значения свойств объекта _iteratedObject_:
 
 ~~~js
 Begemot, true, 3
@@ -197,7 +227,7 @@ Begemot, true, 3
 
 Давайте выведем в консоль и имя свойства, и значение:
 
-~~~javascript
+~~~js
 for ( var x in iteratedObject ) {
     console.log ( x, " : ",  iteratedObject [ x ] )
 }
@@ -221,7 +251,7 @@ _____________________________
 
 ### ![ico-25 cap] Пример 1
 
-~~~javascript
+~~~js
 iteratedArray = [ 7, 8, 9 ]
 
 for ( var x in iteratedArray ) {
@@ -241,7 +271,7 @@ __________________________
 
 ### ![ico-20 icon] for...in со строками
 
-~~~javascript
+~~~js
 iteratedString = "Котенок"
 for ( var x in iteratedString ) {
     console.log ( x, " : ",  iteratedString [ x ] )
@@ -269,7 +299,7 @@ _____________________________________________
 
 ### ![ico-25 cap] Пример 2
 
-~~~javascript
+~~~js
 var article = {
     title: "Canvas",
     text: "We will also look into how image smoothing",
@@ -281,15 +311,15 @@ for ( var prop in article ) {
 }
 ~~~
 
-^^В консоль будет выведено сначала значение свойства *title*,^^
-^^затем - значение свойства *text*,^^
-^^затем - значение свойства *likes*^^
+^^В консоль будет выведено сначала значение свойства _title_,^^
+^^затем - значение свойства _text_,^^
+^^затем - значение свойства _likes_^^
 
 _______________________________
 
 ### ![ico-25 cap] Пример 3
 
-~~~javascript
+~~~js
 var obj = {
     11: "Canvas",
     2: "Now we haven't looked at the actual pixels of our canvas",
@@ -317,7 +347,7 @@ _________________________________
 
 Посмотрим, как действует оператор ~continue~ с циклом ~for...in~
 
-~~~javascript
+~~~js
 var obj = {
     "11": "Canvas",
     "01": "How to save images from your canvas",
@@ -345,7 +375,7 @@ __________________________
 
 При использовании же оператора ~break~
 
-~~~javascript
+~~~js
 for ( var prop in obj ) {
     if ( prop == 1 ) break
     console.log ( prop )
@@ -362,7 +392,7 @@ for ( var prop in obj ) {
 
 Давайте дальше поиграем с массивом
 
-~~~javascript
+~~~js
 var cities = [
     "Киев",
     "Львов",
@@ -387,13 +417,13 @@ var cities = [
 
 Добавить свойство проще простого - используем обычный оператор присваивания:
 
-~~~javascript
+~~~js
 cities.whereYouLive = "Париж"
 ~~~
 
 Выведем массив **cities** в консоль
 
-~~~javascript
+~~~js
 console.log ( cities )
 ~~~
 
@@ -418,7 +448,7 @@ console.log ( cities )
 
 **Начнем с оператора ~for...of~**
 
-~~~javascript
+~~~js
 for ( var x of cities ) {
     console.log ( x )
 }
@@ -439,7 +469,7 @@ for ( var x of cities ) {
 
 **Теперь используем оператор ~for ... in~**
 
-~~~javascript
+~~~js
 for ( var x in cities ) {
     console.log ( x )
 }
@@ -459,17 +489,17 @@ for ( var x in cities ) {
 whereYouLive
 ~~~
 
-Свойство  *~cities.length~*  по-прежнему выдает нам  8
+Свойство  _~cities.length~_  по-прежнему выдает нам  8
 
 Т.е. по индексу элемента мы можем получить только один из элементов
 
 "Киев", "Львов", "Харьков", "Одесса", "Монреаль", "Копенгаген", "Вена", "Лондон"...
 
-А как же теперь добраться до *~whereYouLive~* ?
+А как же теперь добраться до _~whereYouLive~_ ?
 
-Нам нужно указать не индекс элемента, а имя, под которым мы "внесли" этот элемент в массив *cities*:
+Нам нужно указать не индекс элемента, а имя, под которым мы "внесли" этот элемент в массив _cities_:
 
-~~~javascript
+~~~js
 cities [ 'whereYouLive' ]
 ~~~
 

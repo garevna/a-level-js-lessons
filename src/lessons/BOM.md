@@ -4,6 +4,28 @@ _____________________________
 
 ## ![ico-25 icon] Объект window
 
+Если в разметке у вас есть элементы с атрибутом **id**
+
+~~~html
+&lt;body>
+  &lt;main id="main-page">
+    &lt;section id="commodities">
+      &lt;figure id="phone">&lt;/figure>
+    &lt;/section>
+  &lt;/main>
+&lt;/body>
+~~~
+
+то с использованием BOM получить ссылку на нужный элемент очень просто
+
+~~~js
+window["main-page"]    //  ► &lt;main id="main-page>...&lt;/main>"
+window["commodities"]  //  ► &lt;section id="commodities">...&lt;/section>
+window["phone"]        //  ► &lt;figure id="phone">&lt;/figure>
+~~~
+
+________________________________________________
+
 **_viewport_** - часть окна браузера, где отображается веб-страница
 ^^( без панелей и элементов управления самого браузера )^^
 
@@ -30,6 +52,8 @@ _____________________________
 
 ^^Проверим это:^^
 
+◘◘![ico-20 cap] ** 1**◘◘
+
 ~~~js
 var props = [
   "console",
@@ -47,6 +71,7 @@ for ( var prop of props )
 ^^**Результат в консоли:**^^
 
 ~~~console
+
 ► console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
 ► #document
 ► Location {replace: ƒ, href: "about:blank", ancestorOrigins: DOMStringList, origin: "null", protocol: "about:", …}
@@ -55,9 +80,81 @@ for ( var prop of props )
 ► Navigator {vendorSub: "", productSub: "20030107", vendor: "Google Inc.", maxTouchPoints: 0, hardwareConcurrency: 8, …}
 ~~~
 
-_____________________________________
 
 У каждого из этих объектов есть свои свойства и методы
+
+_____________________________________
+
+### ![ico-20 icon] navigator
+
+#### navigator.geolocation
+
+◘◘geolocation◘◘
+
+~~~console
+▼ Geolocation {}
+  ▼ __proto__: Geolocation
+      ► clearWatch: ƒ clearWatch()
+      ► getCurrentPosition: ƒ getCurrentPosition()
+      ► watchPosition: ƒ watchPosition()
+      ► constructor: ƒ Geolocation()
+        Symbol(Symbol.toStringTag): "Geolocation"
+      ► __proto__: Object
+~~~
+
+Метод **getCurrentPosition** имеет три формальных параметра
+
+Первый формальный параметр ( обязательный ) - это функция, которая будет вызвана в случае благополучного завершения операции
+Она получит в качестве аргумента объект следующей структуры:
+
+◘◘Position◘◘
+
+~~~console
+▼ Position {coords: Coordinates, timestamp: 1564355238231}
+  ▼ coords: Coordinates
+        accuracy: 30
+        altitude: null
+        altitudeAccuracy: null
+        heading: null
+        latitude: 50.0159007
+        longitude: 36.2216816
+        speed: null
+      ► __proto__: Coordinates
+    timestamp: 1564355238231
+  ► __proto__: Position
+~~~
+
+Второй формальный параметр ( опциональный ) - тоже функция, которая будет вызвана в случае неудачного завершения геолокации
+
+Третий ( опциональный ) формальный параметр - это объект опций запроса
+
+◘◘![ico-20 cap] ** 2**◘◘
+
+~~~js
+const status = document.body.appendChild(
+    document.createElement ('p')
+)
+
+if (!navigator.geolocation) {
+  status.textContent = 'Geolocation is not supported by your browser'
+} else {
+  status.textContent = 'Locating…'
+
+  navigator.geolocation.getCurrentPosition (
+      position => {
+        const coord = [ position.coords.latitude, position.coords.longitude ]
+        status.textContent = `https://www.openstreetmap.org/#map=40/${coord[0]}/${coord[1]}`
+        window.open (
+            `https://www.openstreetmap.org/#map=40/${coord[0]}/${coord[1]}`,
+            "_blank"
+        )
+      },
+      () => status.textContent = 'Unable to retrieve your location'
+  )
+}
+~~~
+
+{{{BOM-geolocation.js}}}
 
 _____________________________________
 
@@ -199,12 +296,12 @@ ______________________________________
 
 ![ico-20 green-ok] С помощью метода **history._go()_** ( ^^если аргумент метода - целое число^^ ) можно перейти на заданное число страниц вперед ( ^^положительное значение аргумента^^ ) или назад ( ^^отрицательное значение аргумента^^ )
 
-~~~javascript
+~~~js
 window.history.go(-2)
 ~~~
 
 ^^В HTML5 были введены методы **history._pushState()_** и **history._replaceState()_**, которые позволяют добавлять и изменять записи истории^^
-[![ico-20 link] MDN](https://developer.mozilla.org/ru/docs/Web/API/History_API)
+[%%%MDN%%%](https://developer.mozilla.org/ru/docs/Web/API/History_API)
 
 Обратите внимание, что свойство **~history.&#95;&#95;proto&#95;&#95;~** является ссылкой на **~History()~**, а свойство **~history.&#95;&#95;proto&#95;&#95;.&#95;&#95;proto&#95;&#95;~** является ссылкой на  **~Object~**
 

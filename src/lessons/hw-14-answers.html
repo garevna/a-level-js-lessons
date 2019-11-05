@@ -25,58 +25,47 @@
     <h1>1</h1>
     <pre>
       <code language="js">
-        function printString ( text, container ) {
-            printLetter = ( letter, index ) => new Promise (
-                resolve => setTimeout (
-                    () => resolve ( letter ),
-                    1000*index
-                )
-            )
-            let demo = container && container.nodeType === 1 ?
-                container : document.body.appendChild (
-                    document.createElement ( "div" )
-                )
-            text.split("")
-                .forEach (
-                    async ( letter, index ) => demo.appendChild (
-                        document.createTextNode(
-                            await printLetter ( letter, index )
-                        )
-                    )
-                )
-        }
+...
       </code>
     </pre>
 
     <h1>2</h1>
     <pre>
       <code language="js">
-...
+const typeMessage = async ( message, container ) => {
+    while ( message.length ) {
+        var [ letter, message ] = [ message.slice ( 0, 1 ), message.slice ( 1 ) ];
+        container.textContent += await new Promise (
+            resolve => setTimeout ( () => resolve ( letter ), 1000 )
+        )
+    }
+}
+
+typeMessage (
+     "Hello, students!", 
+    document.body.appendChild (
+        document.createElement ( "p" )
+    )
+)
     </code>
   </pre>
     <h1>3</h1>
     <pre>
       <code language="js">
-        function printString ( text, container ) {
-            printLetter = ( letter, index ) => new Promise (
-                resolve => setTimeout (
-                    () => resolve ( letter ),
-                    1000*index
-                )
-            )
-            let demo = container && container.nodeType === 1 ?
-                container : document.body.appendChild (
-                    document.createElement ( "div" )
-                )
-            let tmp = text.split("")
-            let index = 0;
-            ( async function () {
-                demo.appendChild ( document.createTextNode(
-                    await printLetter ( tmp.shift(), index++ )
-                ))
-                while ( tmp.length ) arguments.callee ()
-            })()
-        }
+const typeMessage = async ( message, container ) => {
+    var [ letter, message ] = [ message.slice ( 0, 1 ), message.slice ( 1 ) ];
+    container.textContent += await new Promise (
+        resolve => setTimeout ( () => resolve ( letter ), 1000 )
+    )
+    return message.length && typeMessage ( message, container )
+}
+
+typeMessage (
+     "Hello, students!", 
+    document.body.appendChild (
+        document.createElement ( "p" )
+    )
+)
       </code>
     </pre>
   </body>

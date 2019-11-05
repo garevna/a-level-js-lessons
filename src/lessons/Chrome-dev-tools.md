@@ -8,7 +8,7 @@ _____________________________________________________________
 
 Слева видим панель навигации, справа - панель дебаггера
 
-![](https://raw.githubusercontent.com/garevna/js-course/master/images/lessons/01.png)
+![](createPath( "illustrations", "lesson-01-1.png" ) )
 
 Для просмотра кода загруженной страницы используем кнопку **~>>~** и открываем **_Pages_**
 
@@ -31,7 +31,7 @@ _________________________________________________________
 • сохранить сниппет ( Ctrl+S )
 • запустить код сниппета ( правая кнопка мышки ⇾ контекстное меню ⇾ Run )
 
-![](https://raw.githubusercontent.com/garevna/js-course/master/images/lessons/02.png)
+![](createPath("illustrations", "lesson-01-2.png"))
 
 ________________________________________________________________________
 
@@ -101,6 +101,6 @@ _____________________________________________________________________________
 ^^^
 
 
-[![ico-50 youtube]](https://youtu.be/PQYG2aJf6uI)
+[![ico-70 youtube]](https://youtu.be/PQYG2aJf6uI)
 
 [![ico-20 link] google](https://developers.google.com/web/tools/chrome-devtools/)

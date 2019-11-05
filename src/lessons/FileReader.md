@@ -57,11 +57,11 @@ ______________________________________
 
 ^^^
 
-![ico-25 hw] **sample 1**
-
 Разберите работу кода в Chrome DevTools:
 
-~~~~js
+◘◘![ico-25 hw] **sample 1**◘◘
+
+~~~js
 var selector = document.body.appendChild ( document.createElement ( 'input' ) )
 selector.type = 'file'
 
@@ -77,7 +77,7 @@ var picture = document.body.appendChild (
 )
 
 var fileReader = new FileReader ()
-~~~~
+~~~
 
 Сравните с уже знакомым методом  **URL.createObjectURL**:
 
@@ -85,12 +85,13 @@ var fileReader = new FileReader ()
 picture.src = URL.createObjectURL( selected )
 ~~~
 
-
-![ico-25 hw] **sample 2**
+____________________________________________________________
 
 Разберите работу кода в Chrome DevTools:
 
-~~~~js
+◘◘![ico-25 hw] **sample 2**◘◘
+
+~~~js
 var selector = document.body.appendChild (
     document.createElement ( 'input' )
 )
@@ -137,14 +138,15 @@ var demo = document.body.appendChild (
     document.createElement ( 'pre' )
 )
 var fileReader = new FileReader ()
-~~~~
+~~~
 
-
-![ico-25 hw] **sample 3**
+_____________________________________________________
 
 Разберите работу кода в Chrome DevTools:
 
-~~~~js
+◘◘![ico-25 hw] **sample 3**◘◘
+
+~~~js
 var selector = document.body.appendChild (
     document.createElement ( 'input' )
 )
@@ -173,4 +175,4 @@ selector.onchange = function ( event ) {
         fileReader.readAsDataURL ( file )
     }
 }
-~~~~
+~~~

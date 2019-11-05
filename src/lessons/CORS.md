@@ -152,7 +152,7 @@ Access to fetch at 'http://humor.fm/uploads/posts/2016-03/17/umndflr0wjc.jpg' fr
 
 Во вкладке **Network** отладчика можно посмотреть заголовки ответа:
 
-~~~Headers
+~~~console
 ▼ Response Headers
     Accept-Ranges: bytes
     Cache-Control: max-age=604800
@@ -182,7 +182,7 @@ fetch ( "https://cors-anywhere.herokuapp.com/http://humor.fm/uploads/posts/2016-
 
 Теперь наш запрос благополучно проходит, на странице появляется картинка, а во вкладке **Network** можно увидеть такие заголовки ответа:
 
-~~~~Headers
+~~~~console
 ▼ Response Headers
     Accept-Ranges: bytes
     Access-Control-Allow-Origin: *

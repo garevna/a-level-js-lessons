@@ -1,0 +1,69 @@
+.maket-01 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/01.png);
+}
+.maket-02 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/02.png);
+}
+.maket-03 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/03.png);
+}
+.maket-04 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/04.png);
+}
+.maket-05 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/05.png);
+}
+.maket-06 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/06.png);
+}
+.maket-07 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/07.png);
+}
+.maket-08 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/08.png);
+}
+.maket-09 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/09.png);
+}
+.maket-10 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/10.png);
+}
+.maket-11 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/11.png);
+}
+.maket-12 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/12.png);
+}
+.maket-13 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/13.png);
+}
+.maket-14 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/14.png);
+}
+.maket-15 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/15.png);
+}
+.maket-16 {
+  background-image: url(https://garevna.github.io/a-level-js-lessons/src/images/project/16.png);
+}
+
+.maket-01, .maket-02, .maket-03, .maket-04, .maket-05, .maket-06,
+.maket-07, .maket-08, .maket-09, .maket-10, .maket-11, .maket-12,
+.maket-13, .maket-14, .maket-15, .maket-16 {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    min-width: 320px;
+    max-width: 100vw;
+    min-height: 150px;
+    max-height: 30vh;
+    width: 320px;
+    height: 30vh;
+}
+
+.project > div > a {
+    display: block;
+    width: inherit;
+    height: inherit;
+}

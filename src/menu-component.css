@@ -1,0 +1,107 @@
+* { user-select: none; outline: none; }
+
+li {
+  padding: 0;
+}
+li > a {
+    text-decoration: none;
+    color: var(--menu-color);
+    display: block;
+    padding: 10px 0 0 10px;
+    margin: 0;
+}
+
+li:hover > a {
+    background-color: var(--menu-highlight-background);
+    color: var(--menu-highlight-color);
+    cursor: pointer;
+}
+
+#navigation {
+    background-image: var(--icon-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul, li, a {
+    font-family: Poppins, Montserrat, Arial;
+}
+
+ul {
+    position: absolute;
+    list-style: none;
+    margin-left: -40px;
+    animation: hide-submenu 0s forwards;
+}
+#top-level {
+    margin-left: var(--margin-left);
+}
+
+ul > li {
+    position: relative;
+    list-style-type: none;
+    background: var(--menu-background);
+    font-size: 12px;
+    height: 36px;
+    width: var(--item-width);
+    white-space: nowrap;
+    border: solid 0.5px white;
+    animation: hide-submenu-item 0s forwards;
+}
+
+#navigation:hover > ul > li {
+    animation: show-submenu-item 0.5s forwards;
+}
+
+li:hover > ul {
+    animation: show-submenu 0.5s forwards;
+}
+
+li:hover > ul {
+    animation: show-submenu 0.5s forwards;
+}
+
+nav:hover > ul {
+    animation: show-submenu 0.5s forwards;
+}
+
+#top-level:hover > li,
+li > ul > li,
+li:hover > ul > li > ul > li,
+li:hover > ul > li:hover > ul > li > ul > li {
+    animation: hide-submenu-item 0s forwards;
+    animation-delay: 0;
+}
+
+li:hover > ul > li,
+li:hover > ul > li:hover > ul > li,
+li:hover > ul > li:hover > ul > li:hover > ul > li {
+    animation: show-submenu-item 0.5s ease forwards;
+}
+
+ul:hover > li:hover,
+ul:hover > li:hover > ul:hover > li:hover,
+ul:hover > li:hover > ul:hover > li:hover > ul:hover > li:hover {
+    background-color: var(--menu-highlight-background);
+    cursor: pointer;
+}
+
+@keyframes show-submenu-item {
+  0%   { position: absolute; left: -1000%; opacity: 0; }
+  100% { position: relative; left: 100%; opacity: 1;  }
+}
+@keyframes hide-submenu-item {
+  0%   { position: relative; left: 100%; opacity: 1;  }
+  100% { position: absolute; left: -1000%; opacity: 0; }
+}
+
+@keyframes show-submenu {
+  0% { position: absolute; left: 0; opacity: 0; }
+  100% { top: 0; left: 0; opacity: 1; }
+}
+
+@keyframes hide-submenu {
+  0% { left: 0; }
+  100% { left: -1000%; }
+}

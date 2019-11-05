@@ -16,22 +16,24 @@ _____________________________________________
 **Конструкторы**
      ^^Array^^
      ^^Boolean^^
+     ^^Number^^
+     ^^String^^
+     ^^Function^^
+     ^^Object^^
      ^^Date^^
      ^^Error^^
-     ^^Function^^
      ^^Map^^
-     ^^Number^^
-     ^^Object^^
+     ^^Set^^
+     ^^FormData^^
      ^^Promise^^
      ^^Proxy^^
      ^^RegExp^^
-     ^^String^^
      ...
 ^^^
 
 и объектами, которые создаются в процессе работы кода
 
-~~~javascript
+~~~js
 var obj = {
     name: "Google",
     show: false
@@ -59,7 +61,7 @@ var obj = {
 
 ![ico-20 warn] ^^Поскольку конструкторы - это функции, для получения дерева их свойств нужно использовать метод **~console.dir~** ( а не ~console.log~ )^^
 
-~~~javascript
+~~~js
 console.dir ( Promise )
 console.dir ( XMLHttpRequest )
 ~~~
@@ -77,7 +79,7 @@ _________________________________
 
 ![ico-25 cap]
 
-~~~javascript
+~~~js
 var figure = {
   type: "Окружность",
   size: 100,
@@ -87,7 +89,7 @@ var figure = {
 
 Все эти свойства доступны извне:
 
-~~~javascript
+~~~js
 console.log ( figure.type )
 console.log ( figure.size )
 console.log ( figure.color )
@@ -95,7 +97,7 @@ console.log ( figure.color )
 
 или так:
 
-~~~javascript
+~~~js
 console.log ( figure [ "type" ] )
 console.log ( figure [ "size" ] )
 console.log ( figure [ "color" ] )
@@ -107,7 +109,7 @@ console.log ( figure [ "color" ] )
 
 ^^^[Closure]
 
-~~~javascript
+~~~js
 var sample = {
     path: "https://garevna.github.io/a-level-js-lessons/src/icons/",
     testToken: ( function ( token ) {
@@ -134,6 +136,8 @@ sample.page()
 
 ^^^
 
+____________________________________________
+
 
 ### ![ico-20 icon] Собственные свойства
 
@@ -143,13 +147,13 @@ sample.page()
 
 Можно создать объект  **~figure2~**  с таким же набором свойств, но с другими значениями этих свойств:
 
-![ico-25 cap]
+◘◘![ico-25 cap] 1◘◘
 
-~~~javascript
+~~~js
 var figure2 = {
-        type: "Треугольник",
-        size: 150,
-        color: "blue"
+    type: "Треугольник",
+    size: 150,
+    color: "blue"
 }
 ~~~
 
@@ -161,7 +165,7 @@ var figure2 = {
 
 ^^свойства  **_~type~_**,  **_~size~_**  и  **_~color~_**  являются **собственными** свойствами экземпляров  **~figure~**  и  **~figure2~** потому, что их значения локализованы внутри "капсюлы" под именем экземпляра )^^
 
-~~~javascript
+~~~js
 figure.type       // "Окружность"
 figure2.type      // "Треугольник"
 ~~~
@@ -182,7 +186,7 @@ for ( var x in figure )
 
 В консоль будут выведены
 
-~~~js
+~~~console
 type
 size
 color
@@ -200,19 +204,19 @@ ________________________
 
 ### ![ico-20 icon] Унаследованные свойства
 
-![ico-25 cap]
+◘◘![ico-25 cap] 2◘◘
 
-~~~javascript
+~~~js
 var figure = {
-        type: "Окружность",
-        size: 100,
-        color: "red"
+    type: "Окружность",
+    size: 100,
+    color: "red"
 }
 ~~~
 
 Если "развернуть" экземпляр **figure** в консоли, то помимо собственных перечислимых свойств ~color~, ~size~ и ~type~ мы увидим свойство **~&#95;&#95;proto&#95;&#95;~**, которое не было выведено в консоль, когда мы итерировали объект оператором ~for...in~
 
-~~~javascript
+~~~console
 ▼{ type: "Окружность", size: 100, color: "red" }
     color:"red"
     size:100
@@ -228,8 +232,10 @@ var figure = {
 
 Если развернуть свойство **~&#95;&#95;proto&#95;&#95;~**, то в консоли мы увидим следующую картину:
 
-~~~~__proto__
-▼ __proto__:
+^^^[__proto__]
+
+~~~console
+▼ __proto__
    ► constructor: ƒ Object()
    ► hasOwnProperty: ƒ hasOwnProperty()
    ► isPrototypeOf: ƒ isPrototypeOf()
@@ -237,13 +243,15 @@ var figure = {
    ► toLocaleString: ƒ toLocaleString()
    ► toString: ƒ toString()
    ► valueOf: ƒ valueOf()
-   ► _defineGetter__: ƒ __defineGetter__()
-   ► __defineSetter__: ƒ __defineSetter__()
-   ► __lookupGetter__: ƒ __lookupGetter__()
+   ► __defineGetter__ ƒ __defineGetter__)
+   ► __defineSetter__ ƒ __defineSetter__)
+   ► __lookupGetter__ ƒ __lookupGetter__)
    ► __lookupSetter__: ƒ __lookupSetter__()
    ► get __proto__: ƒ __proto__()
    ► set __proto__: ƒ __proto__()
-~~~~
+~~~
+
+^^^
 
 Первое, что обращает внимание - наш экземпляр создан конструктором **~Object~**:
 
@@ -251,7 +259,7 @@ var figure = {
 
 Давайте развернем **~Object~** в консоли
 
-^^для этого используем метод ~console.dir~, поскольку **~Object()~** - это конструктор, т.е. функция, и метод ~console.log()~ вернет нам ~ƒ Object() { [native code] }~^^
+^^для этого используем метод ~console.dir~, поскольку **~Object()~** - это конструктор, т.е. функция, и метод ~console.log()~ вернет нам ••_ ƒ_ Object() { [native code] }••^^
 
 Обратите внимание на свойство **_~prototype~_** конструктора **~Object~**
 
@@ -259,22 +267,22 @@ var figure = {
 
 Развернем этот объект, и посмотрим на его содержимое:
 
-~~~~Object.prototype
+~~~console
 ▼ prototype:
-   ▶ constructor: ƒ Object()
-   ▶ hasOwnProperty: ƒ hasOwnProperty()
-   ▶ isPrototypeOf: ƒ isPrototypeOf()
-   ▶ propertyIsEnumerable: ƒ propertyIsEnumerable()
-   ▶ toLocaleString: ƒ toLocaleString()
-   ▶ toString: ƒ toString()
-   ▶ valueOf: ƒ valueOf()
-   ▶ _defineGetter__: ƒ __defineGetter__()
-   ▶ __defineSetter__: ƒ __defineSetter__()
-   ▶ __lookupGetter__: ƒ __lookupGetter__()
-   ▶ __lookupSetter__: ƒ __lookupSetter__()
-   ▶ get __proto__: ƒ __proto__()
-   ▶ set __proto__: ƒ __proto__()
-~~~~
+   ► constructor: ƒ Object()
+   ► hasOwnProperty: ƒ hasOwnProperty()
+   ► isPrototypeOf: ƒ isPrototypeOf()
+   ► propertyIsEnumerable: ƒ propertyIsEnumerable()
+   ► toLocaleString: ƒ toLocaleString()
+   ► toString: ƒ toString()
+   ► valueOf: ƒ valueOf()
+   ► __defineGetter__: ƒ __defineGetter__()
+   ► __defineSetter__: ƒ __defineSetter__()
+   ► __lookupGetter__: ƒ __lookupGetter__()
+   ► __lookupSetter__: ƒ __lookupSetter__()
+   ► get __proto__: ƒ __proto__()
+   ► set __proto__: ƒ __proto__()
+~~~
 
 ![ico-20 warn] оно полностью совпадает с тем, что мы обнаружили ранее в свойстве **~&#95;&#95;proto&#95;&#95;~** экземпляра **figure**
 
@@ -286,7 +294,7 @@ var figure = {
 
 Создадим пустой объект
 
-~~~javascript
+~~~js
 var obj = {}
 ~~~
 
@@ -304,7 +312,7 @@ var obj = {}
 
 Разверните в консоли объект **Array**
 
-~~~javascript
+~~~js
 console.dir ( Array )
 ~~~
 
@@ -312,7 +320,7 @@ console.dir ( Array )
 
 Последним "звеном" в цепочке прототипов всегда будет **~Object~**
 
-~~~javascript
+~~~js
 console.dir ( Array.__proto__.__proto__ )  // Object
 ~~~
 
@@ -346,9 +354,9 @@ _________________________
 
 ___________________________________
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] 3◘◘
 
-~~~javascript
+~~~js
 function Sample ( params ) {}
 
 var obj = new Sample()
@@ -356,7 +364,7 @@ var obj = new Sample()
 
 Выведем в консоль экземпляр **obj**:
 
-~~~js
+~~~console
 ▼ Sample {}
     ▼ __proto__:
         ► constructor: ƒ Sample( params )
@@ -372,11 +380,11 @@ var obj = new Sample()
 • это вложенное свойство **~&#95;&#95;proto&#95;&#95;~** - следующее "звено" в цепочке прототипов
 • оно является ссылкой на **Object**
 
-~~~javascript
+~~~js
 Sample.prototype
 ~~~
 
-~~~js
+~~~console
 ▼ {constructor: ƒ}
     ► constructor: ƒ Sample( params )
     ► __proto__: Object
@@ -384,7 +392,7 @@ Sample.prototype
 
 Мы можем добавить свойства в **~prototype~** конструктора **Sample**
 
-~~~javascript
+~~~js
 Sample.prototype.setNewProperty = function ( propName, propValue ) {
     this [ propName ] = propValue
 }
@@ -394,11 +402,11 @@ Sample.prototype.setNewProperty = function ( propName, propValue ) {
 
 Вызовем этот метод:
 
-~~~javascript
+~~~js
 obj.setNewProperty ( "name", "Petro" )
 ~~~
 
-и обнаружим, что у экземпляра **obj** появилось новое *собственное перечислимое* свойство **name**
+и обнаружим, что у экземпляра **obj** появилось новое _собственное перечислимое_ свойство **name**
 
 ![ico-20 warn] При обращении к свойству сначала оно ищется среди собственных свойств экземпляра, и если не будет найдено, то поиск будет продолжен среди свойств прототипа, и так далее, пока не закончится цепочка прототипов
 
@@ -406,9 +414,11 @@ obj.setNewProperty ( "name", "Petro" )
 
 ___________________________________________
 
-![ico-20 cap] **Конструктор Function**
+**Конструктор Function**
 
-~~~javascript
+◘◘![ico-20 cap] 4◘◘
+
+~~~js
 var func = new Function (
     `
         var x = "Hello"
@@ -456,15 +466,15 @@ ___________________________________
 
 Они не отображаются в консоли при выводе объекта
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] 5◘◘
 
-~~~javascript
+~~~js
 var  Girl = function ( name, age ) {
 
     var defaultName = "Jane"
 
-    this.name = name || defaultName
-    this.age = age || 25
+    this.name = name &#124;&#124; defaultName
+    this.age = age &#124;&#124; 25
 
     function showName ( name ) {
         console.log ( `Меня зовут ${ name }` )
@@ -490,21 +500,22 @@ lena.changeName
 
 ( т.е. внутри метода **_~showName~_** **~this~**  будет ссылкой на объект **~window~** )
 
-![ico-25 cap] ** 2**
+___________________________________
 
-~~~javascript
+◘◘![ico-25 cap] 6◘◘
+
+~~~js
 var girls = []
 
 girls [ 0 ] = new Girl ( "Лена", 18 )
 girls [ 1 ] = new Girl ( "Марина", 20 )
 ~~~
 
-![ico-25 cap] ** 3**
+◘◘![ico-25 cap] 7◘◘
 
-~~~~js
+~~~js
 var Bag = function ( keyword ) {
    var money = 3000
-   //var keyword = key
    var documents = [
        "Паспорт",
        "Водительские права",
@@ -544,52 +555,52 @@ var Bag = function ( keyword ) {
 }
 
 var myCase = new Bag ( 'это я, твоя хозяйка' )
-~~~~
+~~~
 
-Конструктор **~Bag~**  создает объект с приватными свойствами  **~money~**,  **~documents~** и  **~accessories~**
+^^Конструктор **~Bag~**  создает объект с приватными свойствами  **~money~**,  **~documents~** и  **~accessories~**^^
 
-С его помощью создаем экземпляр **myCase**
+^^С его помощью создаем экземпляр **myCase**^^
 
-При создании экземпляра передаем ему ключевую фразу для доступа к содержимому сумочки '_это я, твоя хозяйка_'
+^^При создании экземпляра передаем ему ключевую фразу для доступа к содержимому сумочки '_это я, твоя хозяйка_'^^
 
-Поскольку свойства  **~money~**,  **~documents~** и  **~accessories~** приватные,  "сумка закрыта"
+^^Поскольку свойства  **~money~**,  **~documents~** и  **~accessories~** приватные,  "сумка закрыта"^^
 
-Посторонним нет доступа к ее содержимому
+^^Посторонним нет доступа к ее содержимому^^
 
-Публичное свойство **~content~** изначально имеет значение  **~null~**
+^^Публичное свойство **~content~** изначально имеет значение  **~null~**^^
 
-Это все, что вы можете увидеть в закрытой сумке
+^^Это все, что вы можете увидеть в закрытой сумке^^
 
-Если хозяин сумки согласится показать ее содержимое, то оно будет помещено в публичное свойство **~content~** для обозрения
+^^Если хозяин сумки согласится показать ее содержимое, то оно будет помещено в публичное свойство **~content~** для обозрения^^
 
-Функция **~getMoney()~** доступа к деньгам  ( приватному свойству **~money~** ) также является приватной, поскольку никто, кроме хозяина, не должен иметь возможность взять деньги из сумки
+^^Функция **~getMoney()~** доступа к деньгам  ( приватному свойству **~money~** ) также является приватной, поскольку никто, кроме хозяина, не должен иметь возможность взять деньги из сумки^^
 
-И есть два публичных метода:
+^^И есть два публичных метода:^^
 
-• **payment ( _sum_, _key_ )** - оплата
-• **rummage ()** - таможенный досмотр
+^^• **payment ( _sum_, _key_ )** - оплата^^
+^^• **rummage ()** - таможенный досмотр^^
 
-В случае совершения платежа с помощью публичного метода  **payment**
+^^В случае совершения платежа с помощью публичного метода  **payment**^^
 
-~~~javascript
+~~~js
 console.log ( myCase.payment ( 2000 ) )
 ~~~
 
-запрашивается ключевая фраза, сверяется с установленной при создании экземпляра, и если значения совпали, то вызывается приватный метод **~getMoney~**, который уменьшает приватное свойство **~money~** на сумму платежа,  после  чего публичный метод **~pay()~** с чистой совестью возвращает изъятую сумму
+^^запрашивается ключевая фраза, сверяется с установленной при создании экземпляра, и если значения совпали, то вызывается приватный метод **~getMoney~**, который уменьшает приватное свойство **~money~** на сумму платежа,  после  чего публичный метод **~pay()~** с чистой совестью возвращает изъятую сумму^^
 
-Если будет введена неправильная ключевая фраза, то запрос будет отклонен с возвратом ![ico-20 err]
+^^Если будет введена неправильная ключевая фраза, то запрос будет отклонен с возвратом ![ico-20 err]^^
 
-В случае таможенного досмотра вызывается публичный метод **rummage()**
+^^В случае таможенного досмотра вызывается публичный метод **rummage()**^^
 
-~~~javascript
+~~~js
 myCase.rummage ()
 ~~~
 
-который "выкладывает на обозрение" содержимое сумочки ( помещает его в публичное свойство **~content~** )
+^^который "выкладывает на обозрение" содержимое сумочки ( помещает его в публичное свойство **~content~** )^^
 
-Теперь работники таможни могут посмотреть содержимое:
+^^Теперь работники таможни могут посмотреть содержимое:^^
 
-~~~javascript
+~~~js
 console.log ( myCase.content )
 ~~~
 

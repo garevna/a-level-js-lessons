@@ -26,18 +26,18 @@ _______________________
 
 ^^^[Примеры значений Content-Type]
 
-![ico-20 pin] **application/~msword~**
-![ico-20 pin] **application/~pdf~**
-![ico-20 pin] **application/~json~**
-![ico-20 pin] **image/~gif~**
-![ico-20 pin] **image/~jpeg~**
-![ico-20 pin] **image/~png~**
-![ico-20 pin] **video/~mpeg~**
-![ico-20 pin] **text/~plain~**
-![ico-20 pin] **text/~html~**
-![ico-20 pin] **text/~html~; ^^charset=utf-8^^**
-![ico-20 pin] **multipart/~form-data~**
-![ico-20 pin] **multipart/~mixed~;** ^^boundary="&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;^^"
+^^• **application/msword**^^
+^^• **application/pdf**^^
+^^• **application/json**^^
+^^• **image/gif**^^
+^^• **image/jpeg**^^
+^^• **image/png**^^
+^^• **video/mpeg**^^
+^^• **text/plain**^^
+^^• **text/html**^^
+^^• **text/html**; _charset=utf-8_^^
+^^• **multipart/form-data**^^
+^^• **multipart/mixed;** boundary="&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"^^
 
 ___________________
 
@@ -117,11 +117,8 @@ success
 _______________________________
 
 
-![ico-25 warn]
+![ico-50 toilet]
 Прежде, чем приступить к выполнению следующих упражнений, создайте свой [![ico-20 toilet]](http://ptsv2.com)
-
-![](src/images/lessons/ptsv2.png)
-
 ^^![ico-20 warn] Вместо **_garevna_** в своих запросах вставляйте название своего ![ico-20 toilet]^^
 ^^![ico-20 warn] Дальнейший код  нужно выполнять в консоли того же окна, где будет открыт ![ico-20 toilet]^^
 
@@ -210,7 +207,7 @@ __________________________________________
 
 ### ![ico-25 cap] text/plain
 
-~~~~javascript
+~~~~js
 var transport = new XMLHttpRequest()
 transport.open (
     "POST",

@@ -12,7 +12,9 @@ ________________________
 
 ![ico-25 pin] Блочная область видимости - это ограничение области видимости в пределах фигурных скобок
 
-~~~javascript
+◘◘![ico-25 cap] ** 1**◘◘
+
+~~~js
 var x = 5
 
 {
@@ -27,7 +29,7 @@ console.log ( x )  // 5
 
 ![ico-25 pin] Следствием блочной области видимости переменных, объявленных с помощью директивы **_let_**, является замыкание значения переменной цикла на каждой итерации блока _for_:
 
-![ico-25 cap] ** 1**
+◘◘![ico-25 cap] ** 2**◘◘
 
 ~~~js
 for ( let i of [ 1, 2, 3, 4, 5 ] ) {
@@ -35,11 +37,11 @@ for ( let i of [ 1, 2, 3, 4, 5 ] ) {
 }
 ~~~
 
-![ico-25 cap] ** 2**
+__________________________________________________________
 
-Обратите внимание, что отсутствие явных фигурных скобок не меняет принцип поведения переменных, объявленных с помощью директивы **_let_**
+![ico-20 warn] Обратите внимание, что отсутствие явных фигурных скобок не меняет принцип поведения переменных, объявленных с помощью директивы **_let_**
 
-**var**
+◘◘![ico-25 cap] **var**◘◘
 
 ~~~js
 var res = []
@@ -52,7 +54,7 @@ res[1]()  // omega
 res[2]()  // omega
 ~~~
 
-**let**
+◘◘![ico-25 cap] **let**◘◘
 
 ~~~js
 var res = []
@@ -76,9 +78,9 @@ _______________________
 
 Так появляется **_временная мёртвая зона_**
 
-![ico-25 cap] ** 3**
-
 Поэтому в результате выполнения кода:
+
+◘◘![ico-25 cap] ** 3**◘◘
 
 ~~~js
 {
@@ -90,14 +92,16 @@ _______________________
 
 будет сгенерировано исключение:
 
-![ico-25 err] ~ ReferenceError: Cannot access 'x' before initialization~
+••![ico-25 err] ReferenceError: Cannot access 'x' before initialization••
 
 _________________________
 
 
 ![ico-25 pin] Невозможно повторно объявить переменную с таким же идентификатором в той же области видимости:
 
-~~~javascript
+◘◘![ico-25 cap] ** 4**◘◘
+
+~~~js
 function sample () {
     let figure = {
         name: "Radius",
@@ -116,7 +120,7 @@ sample ()
 
 в цикле сработает, потому что явно присутствует блок {...}
 
-~~~javascript
+~~~js
 let sample = { a: 'img', b: 'div', c: 'p' }
 for ( let prop in sample ) {
     let elem = document.body.appendChild (
@@ -128,7 +132,9 @@ for ( let prop in sample ) {
 
 ![ico-25 pin] ~let~ не создает свойств в глобальном объекте
 
-~~~javascript
+◘◘![ico-25 cap] ** 5**◘◘
+
+~~~js
 var x = 25
 let z = 15
 window.x    //  25
@@ -144,7 +150,9 @@ ______________________
 ![ico-20 pin] В общем, все, как у ~let~, только:
 ![ico-20 warn] Изменить значение нельзя
 
-~~~javascript
+◘◘![ico-25 cap] ** 6**◘◘
+
+~~~js
 const XXX = 11
 XXX = 55
 ~~~
@@ -155,17 +163,21 @@ XXX = 55
 
 ![ico-20 warn] Обязательно при объявлении инициализировать значение
 
-~~~javascript
+◘◘![ico-25 cap] ** 7**◘◘
+
+~~~js
 const XXX
 ~~~
 
 Будет сгенерировано исключение:
 
-![ico-20 err] ~Uncaught SyntaxError: Missing initializer in const declaration~
+••![ico-20 err] Uncaught SyntaxError: Missing initializer in const declaration••
 
 Если константа является объектом, то значения ее свойств могут быть изменены:
 
-~~~javascript
+◘◘![ico-25 cap] ** 8**◘◘
+
+~~~js
 const USER = {
     login: "admin",
     role: "admin",
@@ -180,7 +192,9 @@ USER.rights = [ "read" ]
 
 Аналогично с массивами:
 
-~~~javascript
+◘◘![ico-25 cap] ** 9**◘◘
+
+~~~js
 const RIGHTS = [ "read", "write", "delete" ]
 RIGHTS [ 1 ] = null
 RIGHTS [ 2 ] = null
