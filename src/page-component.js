@@ -19,7 +19,13 @@ class PageComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    let startPath = `${createPath("lessons", location.pathname === "/" ? "start-page" : location.pathname.slice(1))}`;
+    
+    let path = location.host === "garevna.github.io" ? "/js-lessons/" : "/"
+    let pathNew = location.pathname.split( location.host === "garevna.github.io" ? "/js-lessons/" : "/" ).join ("");
+    console.log ( pathNew );
+    let startPath = `${createPath("lessons", location.pathname === path ? "start-page" : location.pathname.slice(1))}`;
+    // let startPath = `${createPath("lessons", location.pathname === "/" ? "start-page" : location.pathname.slice(1))}`;
+    console.log ( startPath )
     this.setAttribute("src", `${startPath}.md`);
     this.styleSheet = this.appendChild(document.createElement("style"));
     Promise.all([
