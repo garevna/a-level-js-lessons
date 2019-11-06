@@ -141,7 +141,7 @@ class MainMenuComponent extends HTMLElement {
                   event.preventDefault();
                   this.checkbox.checked = !this.checkbox.checked;
                   this.checkbox.dispatchEvent ( new Event ( "click" ) );
-                  let ref = "js-lessons.glitch.me" ? event.target.href : `?${event.target.fileName}`;
+                  let ref = location.host === "js-lessons.glitch.me" ? event.target.href : `?${event.target.fileName}`;
                   window.history.pushState( { route: ref }, event.target.innerText, ref );
 
                   let shutter = this.addElem ( "shutter-element", document.body );
