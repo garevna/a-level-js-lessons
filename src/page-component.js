@@ -19,14 +19,15 @@ class PageComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    
-    let path = location.host === "garevna.github.io" ? "/js-lessons/" : "/"
-    let pathNew = location.pathname.split( location.host === "garevna.github.io" ? "/js-lessons/" : "/" ).join ("");
-    console.log ( pathNew );
-    let startPath = `${createPath("lessons", location.pathname === path ? "start-page" : location.pathname.slice(1))}`;
+
+    // let path = location.host === "garevna.github.io" ? "/js-lessons/" : "/";
+
+    let path = location.pathname.split( "/js-lessons" ).join ("");
+    let fileName = location.search ? location.search.slice (1) :
+        path === "/" ? "start-page" : location.pathname.slice(1);
+    let srcURL = `${createPath( "lessons", fileName )}.md`;
     // let startPath = `${createPath("lessons", location.pathname === "/" ? "start-page" : location.pathname.slice(1))}`;
-    console.log ( startPath )
-    this.setAttribute("src", `${startPath}.md`);
+    this.setAttribute( "src", srcURL );
     this.styleSheet = this.appendChild(document.createElement("style"));
     Promise.all([
       fetch(createPath("src", "for-rainbow.css")).then(response => response.text()),
@@ -87,9 +88,11 @@ class PageComponent extends HTMLElement {
     this.pageContent.length ? this.parseTextFragment(this.pageContent) : null;
     this.menu.setAttribute("options", JSON.stringify(this.pageContentList));
     this.pageContent = this.createTables(this.pageContent);
-    document.querySelector("page-element").querySelectorAll("div", "pre").forEach(elem => elem.innerHTML.trim() ? this.insertTable(elem) : elem.remove());
-  } // Block level
+    document.querySelector("page-element").querySelectorAll("div", "pre")
+        .forEach(elem => elem.innerHTML.trim() ? this.insertTable(elem) : elem.remove());
+  }
 
+  // Block level
 
   insertTable(elem) {
     let cont = elem.innerHTML.match(/\[{3}\d\]{3}/);

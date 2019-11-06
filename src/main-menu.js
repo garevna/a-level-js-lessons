@@ -48,10 +48,11 @@ class MainMenuComponent extends HTMLElement {
       }.bind (this)
 
       this.shadow.querySelector ( ".home" ).onclick = function ( event ) {
-          event.preventDefault()
-          this.checkbox.checked = !this.checkbox.checked
-          this.checkbox.dispatchEvent ( new Event ( "click" ) )
-          window.history.pushState( { route: event.target.href }, "home", event.target.href )
+          event.preventDefault();
+          this.checkbox.checked = !this.checkbox.checked;
+          this.checkbox.dispatchEvent ( new Event ( "click" ) );
+          if ( location.host === "js-lessons.glitch.me" )
+              window.history.pushState( { route: event.target.href }, "home", event.target.href )
           this.view.setAttribute ( "src", `${createPath( "lessons", "start-page.md" )}` )
       }.bind ( this )
 
@@ -120,31 +121,33 @@ class MainMenuComponent extends HTMLElement {
       const topLevel = this.shadow.querySelector ( "#menu" )
 
       for ( let lesson of this.menuData ) {
-          let lessonItem = this.addElem ( "li", topLevel )
-          this.menuOptions.push ( lessonItem )
-          this.setListeners ( lessonItem )
-          lessonItem.innerHTML = this.getLessonTemplate ( lesson.id )
-          lessonItem.subLevel = lessonItem.querySelector ( "ul.sub-level" )
-          let index = 0
+          let lessonItem = this.addElem ( "li", topLevel );
+          this.menuOptions.push ( lessonItem );
+          this.setListeners ( lessonItem );
+          lessonItem.innerHTML = this.getLessonTemplate ( lesson.id );
+          lessonItem.subLevel = lessonItem.querySelector ( "ul.sub-level" );
+          let index = 0;
           for ( let item of lesson.items ) {
-              let elem = this.addElem ( "li", lessonItem.subLevel )
-              this.submenuOptions.push ( elem )
-              this.setListeners ( elem )
-              elem.style["animation-delay"] = index++ < 10 ? `0.${index}s` : `1.${index - 9}s`
-              let anchor = this.addElem ( "a", elem )
-              anchor.href = item.ref
-              anchor.textContent = item.title
-              anchor.fileName = item.ref
+              let elem = this.addElem ( "li", lessonItem.subLevel );
+              this.submenuOptions.push ( elem );
+              this.setListeners ( elem );
+              elem.style["animation-delay"] = index++ < 10 ? `0.${index}s` : `1.${index - 9}s`;
+              let anchor = this.addElem ( "a", elem );
+              anchor.href = item.ref;
+              anchor.textContent = item.title;
+              anchor.fileName = item.ref;
 
               anchor.onclick = function ( event ) {
-                  event.preventDefault()
-                  this.checkbox.checked = !this.checkbox.checked
-                  this.checkbox.dispatchEvent ( new Event ( "click" ) )
-                  window.history.pushState( { route: event.target.href }, event.target.innerText, event.target.href )
-                  let shutter = this.addElem ( "shutter-element", document.body )
-                  shutter.style = `position: absolute; top: 0; left: 0;`
-                  setTimeout ( () => shutter.remove(), 1000 )
-                  this.view.setAttribute ( "src",  `${createPath( "lessons", event.target.fileName + ".md" )}` )
+                  event.preventDefault();
+                  this.checkbox.checked = !this.checkbox.checked;
+                  this.checkbox.dispatchEvent ( new Event ( "click" ) );
+                  let ref = "js-lessons.glitch.me" ? event.target.href : `?${event.target.fileName}`;
+                  window.history.pushState( { route: ref }, event.target.innerText, ref );
+
+                  let shutter = this.addElem ( "shutter-element", document.body );
+                  shutter.style = `position: absolute; top: 0; left: 0;`;
+                  setTimeout ( () => shutter.remove(), 1000 );
+                  this.view.setAttribute ( "src",  `${createPath( "lessons", event.target.fileName + ".md" )}` );
               }.bind ( this )
 
               for ( let keyword of item.keywords )
