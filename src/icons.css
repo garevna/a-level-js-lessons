@@ -1,12 +1,15 @@
 :root {
   /* --icon:        url(https://garevna.github.io/a-level-js-lessons/src/icons/a-level-ico.png); */
   /*--icon:        url(../src/images/cat.gif);*/
+  /* for glitch.me */
+  /*
   --icon:        url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fpersonage-to-right.gif);
   --stars:       url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fstars-5.gif);
   --bash:        url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fbash.png);
   --git:         url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fgithub.png);
   --git-ver:     url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fgit.png);
   --reload:      url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Freload.png);
+  --node:        url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fnode.png);
   --npm:         url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fnpm.png);
   --youtube:     url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fyoutube.png);
   --debug-but:   url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fdebug-button.png);
@@ -18,6 +21,28 @@
   --database:    url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fdb.png);
   --atom:        url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fatom.png);
   --sublime:     url(https://cdn.glitch.com/a4e0a9fd-ea7b-47cf-b52a-48fd6359c559%2Fsublime.png);
+  */
+
+  /* for garevna.github.io */
+
+  --icon:        url(https://garevna.github.io/js-lessons/src/images/personage-to-right.gif);
+  --stars:       url(https://garevna.github.io/js-lessons/src/images/stars-5.gif);
+  --bash:        url(https://garevna.github.io/js-lessons/src/icons/bash.png);
+  --git:         url(https://garevna.github.io/js-lessons/src/icons/github.png);
+  --git-ver:     url(https://garevna.github.io/js-lessons/src/icons/git.png);
+  --reload:      url(https://garevna.github.io/js-lessons/src/icons/reload.png);
+  --node:        url(https://garevna.github.io/js-lessons/src/icons/node.png);
+  --npm:         urlhttps://garevna.github.io/js-lessons/src/icons/npm.png);
+  --youtube:     url(https://garevna.github.io/js-lessons/src/icons/youtube.png);
+  --debug-but:   url(https://garevna.github.io/js-lessons/src/icons/debug-button.png);
+  --debug-pause: url(https://garevna.github.io/js-lessons/src/icons/debug-paused.png);
+  --curl:        url(https://garevna.github.io/js-lessons/src/icons/curl.svg);
+  --slider-1:    url(https://garevna.github.io/js-lessons/src/icons/slider-5.png);
+  --slider-2:    url(https://garevna.github.io/js-lessons/src/icons/slider-3.png);
+  --main-page:   url(https://garevna.github.io/js-lessons/src/icons/js-cup-512.png);
+  --database:    url(https://garevna.github.io/js-lessons/src/icons/db.png);
+  --atom:        url(https://garevna.github.io/js-lessons/src/icons/atom.png);
+  --sublime:     url(https://garevna.github.io/js-lessons/src/icons/sublime.png);
 }
 
 .house, .home {
@@ -143,6 +168,11 @@
 .db {
   background-image: var(--database);
 }
+
+.node {
+  background-image: var(--node);
+}
+
 .npm {
   background-image: var(--npm);
 }

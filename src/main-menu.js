@@ -1,6 +1,7 @@
 'use strict'
 
 class MainMenuComponent extends HTMLElement {
+
   constructor () {
     super()
     this.shadow = this.attachShadow( { mode: "closed" } )
@@ -11,6 +12,7 @@ class MainMenuComponent extends HTMLElement {
     this.submenuOptions = []
     this.state = "close"
   }
+
   connectedCallback () {
     this.shadow.innerHTML += `
 
@@ -31,7 +33,7 @@ class MainMenuComponent extends HTMLElement {
               <div id="search-result"></div>
             </div>
 
-            <h3><a href="/" class="home">Lessons</a></h3>
+            <h3><a href="${location.host === 'garevna.github.io' ? '/js-lessons/' : '/'}" class="home">Lessons</a></h3>
             <hr>
           </ul>
         </div>
@@ -51,8 +53,10 @@ class MainMenuComponent extends HTMLElement {
           event.preventDefault();
           this.checkbox.checked = !this.checkbox.checked;
           this.checkbox.dispatchEvent ( new Event ( "click" ) );
+          console.log ( event.target.href );
           if ( location.host === "js-lessons.glitch.me" )
               window.history.pushState( { route: event.target.href }, "home", event.target.href )
+          else window.history.pushState( { route: '/js-lessons/' }, "home", '/js-lessons/' )
           this.view.setAttribute ( "src", `${createPath( "lessons", "start-page.md" )}` )
       }.bind ( this )
 
@@ -61,6 +65,7 @@ class MainMenuComponent extends HTMLElement {
             .oninput = this.search.bind ( this )
       )
   }
+
   search ( event ) {
       let result = this.shadow.getElementById ( "search-result" )
       result.innerHTML = ""
